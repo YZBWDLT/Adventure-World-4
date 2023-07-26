@@ -1,0 +1,14 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.npc_netease.enable_chat_table": {
+            "loop": true,
+            "animation_length": 0.1,
+            "timeline": {
+                "0.0": [
+                    "/function entities/npc_ntes/npc_chat_table"
+                ]
+            }
+        }
+    }
+}

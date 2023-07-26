@@ -1,0 +1,13 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "aw:text_display",
+            "materials": { "default": "entity_alphatest" },
+            "textures": { "default": "textures/new_entities/text_display" },
+            "geometry": { "default": "geometry.text_display" },
+            "render_controllers": [ "controller.render.default" ],
+            "spawn_egg": { "base_color": "#FFFFFF", "overlay_color": "#000000" }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.npc_netease.get_tag_chatting": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "chatting": "query.skin_id == 1" }
+                    ]
+                },
+                "chatting": {
+                    "on_entry": [
+                        "/function entities/npc_ntes/controller_get_tag",
+                        "@s reset_skin_id"
+                    ],
+                    "transitions": [
+                        { "default": "query.skin_id == 0" }
+                    ]
+                }
+            }
+        }
+    }
+}

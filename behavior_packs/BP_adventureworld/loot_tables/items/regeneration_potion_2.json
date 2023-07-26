@@ -1,0 +1,22 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "name": "aw:regeneration_potion_2",
+                    "type": "item",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "§r§9+0.8 生命值/秒(§c♥§9*0.4/s)(0:45)",
+                                "§r§b缓慢回更长时间的血"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

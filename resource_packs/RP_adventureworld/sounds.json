@@ -1,0 +1,33 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "aw:skeleton_king": {
+                "events" : {
+                    "ambient" : "mob.skeleton.say",
+                    "death" : "mob.skeleton.death",
+                    "hurt" : {
+                        "sound" : "mob.skeleton.hurt",
+                        "volume" : 0.70
+                    },
+                    "step" : {
+                        "pitch" : 1.0,
+                        "sound" : "mob.skeleton.step",
+                        "volume" : 1.0
+                    }
+                },
+                "pitch" : [ 0.80, 1.20 ],
+                "volume" : 1.0
+            },
+            "aw:blaze_king" : {
+               "events" : {
+                  "ambient" : "mob.blaze.breathe",
+                  "death" : "mob.blaze.death",
+                  "hurt" : "mob.blaze.hit",
+                  "shoot" : "mob.blaze.shoot"
+               },
+               "pitch" : [ 0.80, 1.20 ],
+               "volume" : 1.0
+            }
+        }
+    }
+}

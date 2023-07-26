@@ -1,0 +1,22 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "name": "minecraft:apple",
+                    "type": "item",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "",
+                                "§r§a新鲜的苹果~"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

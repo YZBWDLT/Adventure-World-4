@@ -1,0 +1,24 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "aw:diamond_helmet",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:creative_category": { "parent": "itemGroup.name.helmet" },
+			"minecraft:enchantable": { "value": 10, "slot": "armor_head" },
+
+			"minecraft:icon": { "texture": "aw_diamond_helmet" },
+			"minecraft:display_name": { "value": "item.aw:diamond_helmet.name" },
+			"minecraft:max_stack_size": 1,
+			"minecraft:armor": { "protection": 3, "texture_type": "diamond" },
+			"minecraft:wearable": { "dispensable": true, "slot": "slot.armor.head" },
+			"minecraft:durability": { "max_durability": 17500, "damage_chance": { "max": 0, "min": 0 } },
+			"minecraft:on_use": { "on_use": { "event": "playsound", "target": "self" } }
+		},
+		"events": {
+			"playsound": { "run_command": { "command": [ "playsound armor.equip_diamond @a ~~~" ] } }
+		}
+	}
+}

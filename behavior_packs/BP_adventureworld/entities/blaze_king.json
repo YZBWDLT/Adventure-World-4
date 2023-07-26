@@ -1,0 +1,128 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "aw:blaze_king",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false,
+            "runtime_identifier": "minecraft:blaze",
+            "scripts": {
+                "animate": [
+                    "controller_regeneration",
+                    "controller_summon_monsters",
+                    "controller_teleport_randomly"
+                ]
+            },
+            "animations": {
+                "controller_regeneration": "controller.animation.blaze_king.regeneration",
+                "controller_summon_monsters": "controller.animation.blaze_king.summon_monsters",
+                "controller_teleport_randomly": "controller.animation.blaze_king.teleport_randomly",
+
+                "regeneration": "animation.blaze_king.regeneration",
+                "summon_monsters": "animation.blaze_king.summon_monsters",
+                "teleport_randomly": "animation.blaze_king.teleport_randomly"
+            }
+        },
+        "component_groups": {
+            "mode_switcher": {
+                
+            },
+            "ranged_mode": {
+                "minecraft:shooter": { "def": "minecraft:fireball" },
+                "minecraft:behavior.ranged_attack": {
+                    "priority": 3,
+                    "burst_shots": 6,
+                    "burst_interval": 0.3,
+                    "charge_charged_trigger": 0.0,
+                    "charge_shoot_trigger": 4.0,
+                    "attack_interval_min": 3.0,
+                    "attack_interval_max": 5.0,
+                    "attack_radius": 16.0
+                }
+            },
+            "melee_mode": {
+                "minecraft:attack": { "damage": 10 },
+                "minecraft:behavior.melee_attack": { "priority": 3 }
+            }
+        },
+        "components": {
+            "minecraft:physics": { },
+            "minecraft:type_family": { "family": [ "blaze", "monster", "mob", "boss" ] },
+            "minecraft:collision_box": { "width": 1, "height": 3.6 },
+            "minecraft:health": { "value": 300, "max": 300 },
+            "minecraft:nameable": { },
+            "minecraft:is_hidden_when_invisible": { },
+            "minecraft:conditional_bandwidth_optimization": { },
+            "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+            "minecraft:boss": { "hud_range": 55, "name": "entity.aw:blaze_king.name", "should_darken_sky": false },
+
+            "minecraft:movement": { "value": 0.18 },
+            "minecraft:navigation.walk": { "can_path_over_water": true, "avoid_water": true, "avoid_damage_blocks": true },
+            "minecraft:can_climb": { },
+            "minecraft:movement.basic": { },
+            "minecraft:jump.static": { },
+
+            "minecraft:fire_immune": { },
+            "minecraft:damage_sensor": { "triggers": { "cause": "fall", "deals_damage": false } },
+
+            "minecraft:follow_range": { "value": 48, "max": 48 },
+            "minecraft:behavior.float": { "priority": 0 },
+            "minecraft:behavior.hurt_by_target": { "priority": 1 },
+            "minecraft:behavior.random_stroll": { "priority": 4, "speed_multiplier": 1.0 },
+            "minecraft:behavior.random_look_around": { "priority": 5 },
+            "minecraft:on_hurt": { "event": "minecraft:on_hurt_event", "target": "self" },
+            "minecraft:on_hurt_by_player": { "event": "minecraft:on_hurt_event", "target": "self" },
+
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": { "test": "in_contact_with_water", "operator": "==", "value": true },
+                        "cause": "drowning",
+                        "damage_per_tick": 1
+                    }
+                ]
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 2,
+                "must_see": true,
+                "entity_types": [
+                    {
+                        "filters": { "test": "is_family", "subject": "other", "value": "player" },
+                        "max_dist": 48.0
+                    }
+                ]
+            },
+            "minecraft:target_nearby_sensor": {
+                "inside_range": 4.0,
+                "outside_range": 4.1,
+                "must_see":  true,
+                "on_inside_range": {
+                    "event": "switch_to_melee",
+                    "target": "self"
+                },
+                "on_outside_range": {
+                    "event": "switch_to_ranged",
+                    "target": "self"
+                }
+            }
+            
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": { "component_groups": [ "mode_switcher" ] }
+            },
+            "switch_to_melee": {
+                "remove": { "component_groups": [ "ranged_mode" ] },
+                "add": { "component_groups": [ "melee_mode" ] }
+            },
+            "switch_to_ranged": {
+                "remove": { "component_groups": [ "melee_mode" ] },
+                "add": { "component_groups": [ "ranged_mode" ] }
+            },
+            "minecraft:on_hurt_event": {
+                "add": { "component_groups": [ "mode_switcher" ] }
+            }
+        }
+    }
+}

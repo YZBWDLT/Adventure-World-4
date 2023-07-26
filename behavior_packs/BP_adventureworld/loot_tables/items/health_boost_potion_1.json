@@ -1,0 +1,22 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "name": "aw:health_boost_potion_1",
+                    "type": "item",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "§r§9+8 生命值(§c♥§9*4)上限(2:00)",
+                                "§r§a建议配合生命药水饮用"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

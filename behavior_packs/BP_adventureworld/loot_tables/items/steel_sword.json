@@ -1,0 +1,22 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "name": "aw:steel_sword",
+                    "type": "item",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "§r§b由钢铁铸造而成，伤害可见一斑",
+                                "§7§o无法破坏"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

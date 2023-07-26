@@ -1,0 +1,29 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:enchanted_book",
+                    "functions": [
+                        {
+                            "function": "specific_enchants",
+                            "enchants": {
+                                "id": "fire_aspect",
+                                "level": 2
+                            }
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "",
+                                "§r§b它不是打火石，但它能点火，神奇吗？"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

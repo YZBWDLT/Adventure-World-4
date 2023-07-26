@@ -1,0 +1,103 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "aw:npc_netease",
+            "is_experimental": false,
+            "is_spawnable": true,
+            "is_summonable": true,
+            "animations": {
+                "controller_chatting": "controller.animation.npc_netease.get_tag_chatting",
+                "enable_chat_table": "animation.npc_netease.enable_chat_table"
+            },
+            "scripts": {
+                "animate": [ "controller_chatting", "enable_chat_table" ]
+            }
+        },
+        "components": {
+            "minecraft:physics": { "has_collision": true, "has_gravity": true },
+            "minecraft:health": { "value": 1, "max": 1 },
+            "minecraft:knockback_resistance": { "value": 1 },
+            "minecraft:persistent": {},
+            "minecraft:movement": { "value": 0 },
+            "minecraft:nameable": { "allow_name_tag_renaming": true, "always_show": true },
+            "minecraft:type_family": { "family": [ "npc" ] },
+            "minecraft:collision_box": { "height": 1.8, "width": 0.6 },
+            "minecraft:interact": {
+                "interactions": [
+                    {
+                        "interact_text": "action.interact.chat",
+                        "on_interact": { "event": "get_tag" },
+                        "swing": true
+                    }
+                ]
+            },
+
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "on_damage": {
+                            "filters": [
+                                {
+                                    "none_of": [
+                                        { "test": "has_ability", "subject": "damager", "value": "mayfly" }
+                                    ]
+                                }
+                            ]
+                        },
+                        "deals_damage": false
+                    }
+                ]
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "randomize": [
+                    { "add": { "component_groups": [ "variant_0" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "variant_1" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "variant_2" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "variant_3" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "variant_4" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "variant_5" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "variant_6" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "variant_7" ] }, "weight": 1 }
+                ]
+            },
+            "get_tag": { "add": { "component_groups": [ "get_tag" ] } },
+            "reset_skin_id": { "add": { "component_groups": [ "reset_skin_id" ] } }
+        },
+        "component_groups": {
+            "variant_0": {
+                "minecraft:variant": { "value": 0 }
+            },
+            "variant_1": {
+                "minecraft:variant": { "value": 1 }
+            },
+            "variant_2": {
+                "minecraft:variant": { "value": 2 }
+            },
+            "variant_3": {
+                "minecraft:variant": { "value": 3 }
+            },
+            "variant_4": {
+                "minecraft:variant": { "value": 4 }
+            },
+            "variant_5": {
+                "minecraft:variant": { "value": 5 }
+            },
+            "variant_6": {
+                "minecraft:variant": { "value": 6 }
+            },
+            "variant_7": {
+                "minecraft:variant": { "value": 7 }
+            },
+
+            "get_tag": {
+                "minecraft:skin_id": { "value": 1 }
+            },
+            "reset_skin_id": {
+                "minecraft:skin_id": { "value": 0 }
+            }
+        }
+    }
+}

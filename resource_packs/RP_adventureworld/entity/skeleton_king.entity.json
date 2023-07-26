@@ -1,0 +1,61 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "aw:skeleton_king",
+            "materials": { "default": "skeleton" },
+            "textures": { "default": "textures/entity/skeleton/skeleton" },
+            "geometry": { "default": "geometry.skeleton.v1.8" },
+            "spawn_egg": { "base_color": "#dad0d0", "overlay_color": "#181616" },
+            "render_controllers": [ "controller.render.skeleton" ],
+            "enable_attachables": true,
+            "min_engine_version": "1.8.0",
+
+            "scripts": {
+                "pre_animation": [
+                    "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+                ],
+                "scale": "2.0",
+                "animate": [
+                    "controller.look_at_target",
+                    "controller.move",
+                    "controller.riding",
+                    "controller.holding",
+                    "controller.charging",
+                    "controller.attack",
+                    "controller.sneaking",
+                    "controller.bob",
+                    "controller.bow_and_arrow",
+                    "controller.skeleton_attack"
+                ]
+            },
+            "animations": {
+                "look_at_target_default": "animation.humanoid.look_at_target.default",
+                "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+                "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+                "move": "animation.humanoid.move",
+                "riding.arms": "animation.humanoid.riding.arms",
+                "riding.legs": "animation.humanoid.riding.legs",
+                "holding": "animation.humanoid.holding",
+                "charging": "animation.humanoid.charging",
+                "attack.rotations": "animation.humanoid.attack.rotations",
+                "sneaking": "animation.humanoid.sneaking",
+                "bob": "animation.humanoid.bob",
+                "bow_and_arrow": "animation.humanoid.bow_and_arrow",
+                "skeleton_attack": "animation.skeleton.attack",
+
+                "controller.look_at_target": "controller.animation.humanoid.look_at_target",
+                "controller.move": "controller.animation.humanoid.move",
+                "controller.riding": "controller.animation.humanoid.riding",
+                "controller.holding": "controller.animation.humanoid.holding",
+                "controller.charging": "controller.animation.humanoid.charging",
+                "controller.attack": "controller.animation.humanoid.attack",
+                "controller.sneaking": "controller.animation.humanoid.sneaking",
+                "controller.bob": "controller.animation.humanoid.bob",
+                "controller.bow_and_arrow": "controller.animation.humanoid.bow_and_arrow",
+                "controller.skeleton_attack": "controller.animation.skeleton.attack"
+            }
+        }
+    }
+}
+  

@@ -1,0 +1,36 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.aw_npc": {
+            "geometry": "array.models[query.variant]",
+            "materials": [ { "*": "material.default" } ],
+            "textures": [ "array.skins[query.variant]" ],
+            "arrays": {
+                "textures": {
+                    "array.skins": [
+                        "texture.npc_0",
+                        "texture.npc_1",
+                        "texture.npc_2",
+                        "texture.npc_3",
+                        "texture.miyunxi",
+                        "texture.linan",
+                        "texture.zhangyu",
+                        "texture.tianying"
+                    ]
+                },
+                "geometries": {
+                    "array.models": [
+                        "geometry.male",
+                        "geometry.male",
+                        "geometry.female",
+                        "geometry.female",
+                        "geometry.female",
+                        "geometry.male",
+                        "geometry.male",
+                        "geometry.male"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "name": "minecraft:arrow",
+                    "type": "item",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "",
+                                "§r§9上限 §r§712(无箭袋)/36(有箭袋)",
+                                "§r§c背包中多出的箭将自动清除",
+                                "§r§c每一波开始时都将为你补满箭"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

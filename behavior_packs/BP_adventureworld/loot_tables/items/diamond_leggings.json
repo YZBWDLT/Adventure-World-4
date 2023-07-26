@@ -1,0 +1,22 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "name": "aw:diamond_leggings",
+                    "type": "item",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "§r§9+6 护甲值",
+                                "§r§d属于最强勇士的钻石护腿，是荣耀的象征！"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

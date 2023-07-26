@@ -1,0 +1,32 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.blaze_king.regeneration": {
+            "loop": true,
+            "animation_length": 4,
+            "timeline": {
+                "0.0": [
+                    "/function entities/blaze_king/regeneration"
+                ]
+            }
+        },
+        "animation.blaze_king.summon_monsters": {
+            "loop": true,
+            "animation_length": 10.0,
+            "timeline": {
+                "0.0": [
+                    "/function entities/blaze_king/summon_monsters"
+                ]
+            }
+        },
+        "animation.blaze_king.teleport_randomly": {
+            "loop": true,
+            "animation_length": 20.0,
+            "timeline": {
+                "0.0": [
+                    "/function entities/blaze_king/teleport_randomly"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "name": "aw:iron_boots",
+                    "type": "item",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "§r§9+2 护甲值",
+                                "§r§b更坚硬，更安全的铁靴子"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+# 开发时游戏规则设置
+
+gamerule commandblockoutput true
+gamerule commandblocksenabled true
+gamerule dodaylightcycle false
+gamerule doentitydrops true
+gamerule dofiretick false
+gamerule doimmediaterespawn true
+gamerule doinsomnia false
+gamerule domobloot false
+gamerule domobspawning false
+gamerule dotiledrops true
+gamerule doweathercycle false
+gamerule drowningdamage true
+gamerule falldamage false
+gamerule firedamage true
+gamerule freezedamage true
+gamerule functioncommandlimit 10000
+gamerule keepinventory true
+gamerule maxcommandchainlength 65535
+gamerule mobgriefing false
+gamerule naturalregeneration true
+gamerule pvp false
+gamerule randomtickspeed 0
+gamerule respawnblocksexplode false
+gamerule sendcommandfeedback true
+gamerule showbordereffect true
+gamerule showcoordinates true
+gamerule showdeathmessages false
+gamerule showtags true
+gamerule spawnradius 0
+gamerule tntexplodes false

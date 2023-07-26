@@ -1,0 +1,25 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aw:hookshot",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:cooldown": { "duration": 2.5, "category": "hookshot" },
+            "minecraft:display_name": { "value": "item.aw:hookshot.name" },
+            "minecraft:durability": { "max_durability": 10, "damage_chance": { "max": 0, "min": 0 } },
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": { "texture": "hookshot" },
+            "minecraft:max_stack_size": 1,
+            "minecraft:on_use": { "on_use": { "event": "on_consume" } },
+            "minecraft:throwable": { "do_swing_animation": true },
+            "minecraft:weapon": { }
+        },
+        "events": {
+            "on_consume": {
+                "shoot": { "projectile": "aw:hookshot", "launch_power": 1.0 }
+            }
+        }
+    }
+}

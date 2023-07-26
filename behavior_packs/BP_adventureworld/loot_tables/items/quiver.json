@@ -1,0 +1,22 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "name": "aw:quiver",
+                    "type": "item",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "",
+                                "§r§d放在背包里，可提升背包里箭的上限"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

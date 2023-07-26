@@ -1,0 +1,38 @@
+{
+    "resource_pack_name": "vanilla",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "hookshot": { "textures": "textures/new_items/hookshot" },
+        "quiver": { "textures": "textures/new_items/quiver" },
+        "enable_crosshair": { "textures": "textures/new_items/enable_crosshair" },
+
+
+        "normal_sword": { "textures": "textures/new_items/normal_sword" },
+        "steel_sword": { "textures": "textures/new_items/steel_sword" },
+        "wild_sword": { "textures": "textures/new_items/wild_sword" },
+
+
+        "aw_diamond_helmet": { "textures": "textures/items/diamond_helmet" },
+        "aw_diamond_chestplate": { "textures": "textures/items/diamond_chestplate" },
+        "aw_diamond_leggings": { "textures": "textures/items/diamond_leggings" },
+        "aw_diamond_boots": { "textures": "textures/items/diamond_boots" },
+        "aw_iron_helmet": { "textures": "textures/items/iron_helmet" },
+        "aw_iron_chestplate": { "textures": "textures/items/iron_chestplate" },
+        "aw_iron_leggings": { "textures": "textures/items/iron_leggings" },
+        "aw_iron_boots": { "textures": "textures/items/iron_boots" },
+
+        
+        "health_potion_1": { "textures": "textures/new_items/potions/health_potion_1" },
+        "regeneration_potion_1": { "textures": "textures/new_items/potions/regeneration_potion_1" },
+        "resistance_potion_1": { "textures": "textures/new_items/potions/resistance_potion_1" },
+        "health_boost_potion_1": { "textures": "textures/new_items/potions/health_boost_potion_1" },
+        "boost_potion_1": { "textures": "textures/new_items/potions/boost_potion_1" },
+        "strength_potion_1": { "textures": "textures/new_items/potions/strength_potion_1" },
+        "health_potion_2": { "textures": "textures/new_items/potions/health_potion_2" },
+        "regeneration_potion_2": { "textures": "textures/new_items/potions/regeneration_potion_2" },
+        "resistance_potion_2": { "textures": "textures/new_items/potions/resistance_potion_2" },
+        "health_boost_potion_2": { "textures": "textures/new_items/potions/health_boost_potion_2" },
+        "boost_potion_2": { "textures": "textures/new_items/potions/boost_potion_2" },
+        "strength_potion_2": { "textures": "textures/new_items/potions/strength_potion_2" }
+    }
+}
