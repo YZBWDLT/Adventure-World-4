@@ -17,7 +17,6 @@
             "minecraft:can_destroy_in_creative": false,
 
             "minecraft:weapon": {  },
-            "minecraft:durability": { "max_durability": 600, "damage_chance": { "max": 0, "min": 0 } },
             "minecraft:display_name": { "value": "item.aw:normal_sword.name" },
             "minecraft:digger": { "destroy_speeds": [ { "block": "minecraft:web", "speed": 15 }, { "block": "minecraft:bamboo", "speed": 30 } ] },
             "minecraft:icon": { "texture": "normal_sword" },
