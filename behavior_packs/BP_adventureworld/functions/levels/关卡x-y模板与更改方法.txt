@@ -12,7 +12,7 @@
 # 开始游戏 - 第一波
 
 ## 设置level分数
-scoreboard players set @e[name=level] stats (x)(y)0
+scoreboard players set @e[name=level] background (x)(y)0
 
 ## 清除原始怪物，防止玩家死掉后重新开始还有多余的怪物
 kill @e[family=monster]
@@ -29,12 +29,12 @@ structure load (结构名) (读取的坐标位置)
 spawnpoint @a (3*3空间中心处)
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={stats=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={stats=(x)(y)0}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
-execute @e[name=level,scores={stats=(x)(y)0}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
-execute @e[name=level,scores={stats=(x)(y)0}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
-execute @e[name=level,scores={stats=(x)(y)0}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
-execute @e[name=level,scores={stats=(x)(y)0}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=(x)(y)0}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
+execute @e[name=level,scores={background=(x)(y)0}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
+execute @e[name=level,scores={background=(x)(y)0}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
+execute @e[name=level,scores={background=(x)(y)0}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
+execute @e[name=level,scores={background=(x)(y)0}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1
@@ -49,12 +49,12 @@ title @a subtitle §c(x)-(y)
 kill @e[family=monster]
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={stats=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={stats=(x)(y)(wave)}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
-execute @e[name=level,scores={stats=(x)(y)(wave)}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
-execute @e[name=level,scores={stats=(x)(y)(wave)}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
-execute @e[name=level,scores={stats=(x)(y)(wave)}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
-execute @e[name=level,scores={stats=(x)(y)(wave)}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=(x)(y)(wave)}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
+execute @e[name=level,scores={background=(x)(y)(wave)}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
+execute @e[name=level,scores={background=(x)(y)(wave)}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
+execute @e[name=level,scores={background=(x)(y)(wave)}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
+execute @e[name=level,scores={background=(x)(y)(wave)}] ~~~ execute @a[tag=alive] (生怪位置) function system/summon/(生怪类型)(等级)
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave_more
@@ -66,14 +66,14 @@ function levels/all_levels/start_wave_more
 # -----成功判定-----
 ## 当检测到没有怪物而玩家仍处于游玩状态时，认定玩家已经通过这一波
 ## 此时将对level记分板加分（表示已完成波数+1），并暂停关卡检测和玩家的游玩状态
-execute @a[tag=playing,c=1] ~~~ execute @e[name=monsterAmount,scores={stats=0}] ~~~ scoreboard players add @e[name=level] stats 1
-execute @a[tag=playing,c=1] ~~~ execute @e[name=monsterAmount,scores={stats=0}] ~~~ scoreboard players set @e[name=levelTesting] active 0
-execute @a[tag=playing,c=1] ~~~ execute @e[name=monsterAmount,scores={stats=0}] ~~~ tag @a remove playing
+execute @a[tag=playing,c=1] ~~~ execute @e[name=monsterAmount,scores={background=0}] ~~~ scoreboard players add @e[name=level] background 1
+execute @a[tag=playing,c=1] ~~~ execute @e[name=monsterAmount,scores={background=0}] ~~~ scoreboard players set @e[name=levelTesting] active 0
+execute @a[tag=playing,c=1] ~~~ execute @e[name=monsterAmount,scores={background=0}] ~~~ tag @a remove playing
 
 ## 当玩家结束战斗后（例如1-3总共2波），那么给予奖励
 ## 当玩家还未结束战斗（有剩余波数），那么触发下一波
-execute @e[name=level,scores={stats=(x)(y)(总波数)}] ~~~ execute @a[tag=!playing,c=1] ~~~ function levels/(x)_(y)/bonus
-execute @e[name=level,scores={stats=(x)(y)(wave)}] ~~~ execute @a[tag=!playing] ~~~ function levels/(x)_(y)/start_wave(前面指代的(wave)+1)
+execute @e[name=level,scores={background=(x)(y)(总波数)}] ~~~ execute @a[tag=!playing,c=1] ~~~ function levels/(x)_(y)/bonus
+execute @e[name=level,scores={background=(x)(y)(wave)}] ~~~ execute @a[tag=!playing] ~~~ function levels/(x)_(y)/start_wave(前面指代的(wave)+1)
 
 # -----失败判定-----
 
@@ -81,18 +81,18 @@ execute @e[name=level,scores={stats=(x)(y)(wave)}] ~~~ execute @a[tag=!playing] 
 execute @a[(x=...,y=...,z=...，位置为start_wave1中重生点的x,y,z坐标均-1的坐标),dx=2,dy=3,dz=2] ~~~ tag @s remove alive
 
 ## 当不存在标签为alive的玩家时，游戏失败
-execute @e[name=alivePlayersAmount,scores={stats=0}] ~~~ function levels/(x)_(y)/game_lose
+execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/(x)_(y)/game_lose
 
 ## 游戏失败后，停止关卡检测器的工作，并移除多余的绳枪
-execute @e[name=alivePlayersAmount,scores={stats=0}] ~~~ scoreboard players set @e[name=levelTesting] active 0
-execute @e[name=alivePlayersAmount,scores={stats=0}] ~~~ tag @a remove playing
-execute @e[name=alivePlayersAmount,scores={stats=0}] ~~~ kill @e[family=hookshot]
+execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ scoreboard players set @e[name=levelTesting] active 0
+execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ tag @a remove playing
+execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ kill @e[family=hookshot]
 
 ========== game_lose.mcfunction ==========
 # 游戏失败
 
 ## 降级level记分板
-scoreboard players set @e[name=level] stats (x)(上一关的y)(上一关的最大波数)
+scoreboard players set @e[name=level] background (x)(上一关的y)(上一关的最大波数)
 
 ## 传送到上一个关卡的重生点并重新设置重生点
 tp @a (上一关的某个合适位置)
@@ -130,14 +130,14 @@ function levels/all_levels/bonus
 
 function system/entity_amount_tester
 
-execute @e[name=level,scores={stats=(x)(y)0}] ~~~ execute @a[tag=alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 (x)-(y) §r§f| §b剩余怪物数目 §f%%s | §c■■","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=monsterAmount]"}}]}}]}
-execute @e[name=level,scores={stats=(x)(y)1}] ~~~ execute @a[tag=alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 (x)-(y) §r§f| §b剩余怪物数目 §f%%s | §a■§c■","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=monsterAmount]"}}]}}]}
-execute @e[name=level,scores={stats=(x)(y)2}] ~~~ execute @a ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 (x)-(y) §r§f| §a关卡已完成"}]}
+execute @e[name=level,scores={background=(x)(y)0}] ~~~ execute @a[tag=alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 (x)-(y) §r§f| §b剩余怪物数目 §f%%s | §c■■","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=monsterAmount]"}}]}}]}
+execute @e[name=level,scores={background=(x)(y)1}] ~~~ execute @a[tag=alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 (x)-(y) §r§f| §b剩余怪物数目 §f%%s | §a■§c■","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=monsterAmount]"}}]}}]}
+execute @e[name=level,scores={background=(x)(y)2}] ~~~ execute @a ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 (x)-(y) §r§f| §a关卡已完成"}]}
 
-execute @e[name=level,scores={stats=(x)(y)0}] ~~~ execute @a[tag=!alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 (x)-(y) §r§f| §b剩余怪物数目 §f%%s | §c■■ §r§f| §c你已死亡，现在正在观战","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=monsterAmount]"}}]}}]}
-execute @e[name=level,scores={stats=(x)(y)1}] ~~~ execute @a[tag=!alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 (x)-(y) §r§f| §b剩余怪物数目 §f%%s | §a■§c■ §r§f| §c你已死亡，现在正在观战","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=monsterAmount]"}}]}}]}
+execute @e[name=level,scores={background=(x)(y)0}] ~~~ execute @a[tag=!alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 (x)-(y) §r§f| §b剩余怪物数目 §f%%s | §c■■ §r§f| §c你已死亡，现在正在观战","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=monsterAmount]"}}]}}]}
+execute @e[name=level,scores={background=(x)(y)1}] ~~~ execute @a[tag=!alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 (x)-(y) §r§f| §b剩余怪物数目 §f%%s | §a■§c■ §r§f| §c你已死亡，现在正在观战","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=monsterAmount]"}}]}}]}
 
 ========== levels/system/into_level_tester.mcfunction (添加内容) ==========
-execute @e[name=level,scores={stats=(本章x)00..(本章x)(上一关的y)9}] ~~~ execute @a[(x=...,y=...,z=...，位置为关卡入口角落xyz最小值坐标),dx=4,dy=4,dz=4] ~~~ execute @s[tag=!playing,tag=!intoLevel] ~~~ tag @s add intoLevel
-execute @e[name=level,scores={stats=(本章x)00..(本章x)(上一关的y)9}] ~~~ execute @a[(x=...,y=...,z=...，位置为关卡入口角落xyz最小值坐标),dx=4,dy=4,dz=4] ~~~ execute @s[tag=intoLevel,tag=!playing] ~~~ function levels/(x)_(y)/start_wave1
-execute @e[name=level,scores={stats=(本章x)00..(本章x)(上一关的y)9}] ~~~ execute @e[family=hookshot,(x=...,y=...,z=...，位置为关卡入口角落xyz最小值坐标),dx=4,dy=4,dz=4] ~~~ kill @s
+execute @e[name=level,scores={background=(本章x)00..(本章x)(上一关的y)9}] ~~~ execute @a[(x=...,y=...,z=...，位置为关卡入口角落xyz最小值坐标),dx=4,dy=4,dz=4] ~~~ execute @s[tag=!playing,tag=!intoLevel] ~~~ tag @s add intoLevel
+execute @e[name=level,scores={background=(本章x)00..(本章x)(上一关的y)9}] ~~~ execute @a[(x=...,y=...,z=...，位置为关卡入口角落xyz最小值坐标),dx=4,dy=4,dz=4] ~~~ execute @s[tag=intoLevel,tag=!playing] ~~~ function levels/(x)_(y)/start_wave1
+execute @e[name=level,scores={background=(本章x)00..(本章x)(上一关的y)9}] ~~~ execute @e[family=hookshot,(x=...,y=...,z=...，位置为关卡入口角落xyz最小值坐标),dx=4,dy=4,dz=4] ~~~ kill @s

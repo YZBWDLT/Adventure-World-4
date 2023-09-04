@@ -6,7 +6,7 @@
 
 function system/entity_amount_tester
 
-execute @e[name=level,scores={stats=640}] ~~~ execute @a[tag=alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 6-4 §r§f| §b剩余怪物数目 §f%%s","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=monsterAmount]"}}]}}]}
-execute @e[name=level,scores={stats=641}] ~~~ execute @a ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 6-4 §r§f| §b关卡已完成"}]}
+execute @e[name=level,scores={background=640}] ~~~ execute @a[tag=alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 6-4 §r§f| §b剩余怪物数目 §f%%s","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=monsterAmount]"}}]}}]}
+execute @e[name=level,scores={background=641}] ~~~ execute @a ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 6-4 §r§f| §b关卡已完成"}]}
 
-execute @e[name=level,scores={stats=640}] ~~~ execute @a[tag=!alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 6-4 §r§f| §b剩余怪物数目 §f%%s §r§f| §c你已死亡，现在正在观战","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=monsterAmount]"}}]}}]}
+execute @e[name=level,scores={background=640}] ~~~ execute @a[tag=!alive] ~~~ titleraw @s actionbar {"rawtext": [{"translate": "§l关卡 6-4 §r§f| §b剩余怪物数目 §f%%s §r§f| §c你已死亡，现在正在观战","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=monsterAmount]"}}]}}]}

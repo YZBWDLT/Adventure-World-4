@@ -6,7 +6,7 @@
 ## 箭上限函数
 execute @a[hasitem={item=arrow},c=1] ~~~ function system/arrow_limit
 ## 药水上限函数
-execute @e[name=level,scores={stats=100..}] ~~~ function system/potion_limit
+execute @e[name=level,scores={background=100..}] ~~~ function system/potion_limit
 
 ## --- 遍历器函数 ---
 ## 奖励遍历器

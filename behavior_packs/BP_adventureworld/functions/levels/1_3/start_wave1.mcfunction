@@ -1,7 +1,7 @@
 # 开始游戏 - 第一波
 
 ## 设置level分数
-scoreboard players set @e[name=level] stats 130
+scoreboard players set @e[name=level] background 130
 
 ##【无需更改】 清除原始怪物，防止玩家死掉后重新开始还有多余的怪物
 kill @e[family=monster]
@@ -15,11 +15,11 @@ fill -121 18 25 -121 20 27 minecraft:cobblestone_wall["wall_block_type":"red_san
 spawnpoint @a -141 18 26
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={stats=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={stats=130}] ~~~ execute @a[tag=alive] -136 18 19 function system/summon/skeleton1
-execute @e[name=level,scores={stats=130}] ~~~ execute @a[tag=alive] -136 20 33 function system/summon/zombie1
-execute @e[name=level,scores={stats=130}] ~~~ execute @a[tag=alive] -124 16 19 function system/summon/zombie1
-execute @e[name=level,scores={stats=130}] ~~~ execute @a[tag=alive] -131 13 27 function system/summon/zombie1
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=130}] ~~~ execute @a[tag=alive] -136 18 19 function system/summon/skeleton1
+execute @e[name=level,scores={background=130}] ~~~ execute @a[tag=alive] -136 20 33 function system/summon/zombie1
+execute @e[name=level,scores={background=130}] ~~~ execute @a[tag=alive] -124 16 19 function system/summon/zombie1
+execute @e[name=level,scores={background=130}] ~~~ execute @a[tag=alive] -131 13 27 function system/summon/zombie1
 
 ##【无需更改】 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

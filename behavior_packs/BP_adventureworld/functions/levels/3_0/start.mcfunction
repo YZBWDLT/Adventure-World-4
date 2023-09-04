@@ -1,7 +1,7 @@
 # 开始游戏
 
 ## 设置level分数
-scoreboard players set @e[name=level] stats 300
+scoreboard players set @e[name=level] background 300
 
 function system/important_items_tester
 time set night

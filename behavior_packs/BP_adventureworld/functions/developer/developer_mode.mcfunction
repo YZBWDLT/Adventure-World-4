@@ -1,6 +1,6 @@
 # 开发者模式
 
-function init/markers
+function init/data_init
 scoreboard players set @e[name=developerMode] active 1
 function developer/gamerule
 kill @e[name=readyToStart]

@@ -1,7 +1,7 @@
 # 开始游戏 - 第一波
 
 ## 设置level分数
-scoreboard players set @e[name=level] stats 640
+scoreboard players set @e[name=level] background 640
 
 ## 清除原始怪物，防止玩家死掉后重新开始还有多余的怪物
 kill @e[family=monster]
@@ -14,13 +14,13 @@ fill -76 -39 20 -74 -37 20 minecraft:deepslate_brick_wall
 spawnpoint @a -75 -29 35
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={stats=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={stats=640}] ~~~ execute @a[tag=alive] -75 -37 35 function system/summon/blaze_king
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=640}] ~~~ execute @a[tag=alive] -75 -37 35 function system/summon/blaze_king
 
 ## 初始化岩浆刷新时间
 scoreboard players random @e[name=randomTick] time 20 40
 ## 初始化随机传送位置与时间
-scoreboard players set @e[name=randomLocation] stats 0
+scoreboard players set @e[name=randomLocation] background 0
 ## 初始化随机怪物刷新时间
 scoreboard players random @e[name=monsterRefreshLeft] time 15 30
 

@@ -1,7 +1,7 @@
 # 开始游戏
 
 ## 设置level分数
-scoreboard players set @e[name=level] stats 400
+scoreboard players set @e[name=level] background 400
 
 function system/important_items_tester
 
