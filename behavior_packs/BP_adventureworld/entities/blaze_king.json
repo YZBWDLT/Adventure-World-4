@@ -25,9 +25,6 @@
             }
         },
         "component_groups": {
-            "mode_switcher": {
-                
-            },
             "ranged_mode": {
                 "minecraft:shooter": { "def": "minecraft:fireball" },
                 "minecraft:behavior.ranged_attack": {
