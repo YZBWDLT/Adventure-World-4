@@ -1,30 +1,53 @@
-# 盔甲架初始化设置
+# ===== 地图数据初始化 =====
+# 本函数记录地图全体数据的初始化。数据以特定名称的标记实体（je:marker）记录。
+
+## --- 记分板 ---
+
+scoreboard objectives remove background
+scoreboard objectives remove stats
+scoreboard objectives remove time
+scoreboard objectives remove active
+scoreboard objectives remove crosshair
+
+scoreboard objectives add background dummy "后台数据"
+scoreboard objectives add stats dummy "统计数据"
+scoreboard objectives add time dummy "时间数据"
+scoreboard objectives add active dummy "激活数据"
+scoreboard objectives add crosshair dummy "准心数据"
+
+scoreboard players set allFailedTimes stats 0
+scoreboard players set @a crosshair 0
+
+## --- 标记分值 ---
 
 kill @e[type=je:marker]
 
-## === (just name) ===
+### (just name)
 summon je:marker "readyToStart" -82 1 -2
 
-## === stats ===
+### background 后台数据
 summon je:marker "level" -82 1 -2
 summon je:marker "monsterAmount" -82 1 -2
-summon je:marker "failedTimes" -82 1 -2
 summon je:marker "hookshotAmount" -82 1 -2
+summon je:marker "alivePlayersAmount" -82 1 -2
 summon je:marker "randomLocation" -82 1 -2
 summon je:marker "randomMonster" -82 1 -2
-summon je:marker "isNetease" -82 1 -2
-summon je:marker "alivePlayersAmount" -82 1 -2
 
-scoreboard players set @e[name=level] stats 0
+scoreboard players set @e[name=level] background 0
+scoreboard players set @e[name=monsterAmount] background 0
+scoreboard players set @e[name=hookshotAmount] background 0
+scoreboard players set @e[name=randomLocation] background 0
+scoreboard players set @e[name=randomMonster] background 0
+scoreboard players set @e[name=alivePlayersAmount] background 1
+
+### stats 统计数据
+summon je:marker "failedTimes" -82 1 -2
+summon je:marker "isNetease" -82 1 -2
+
 scoreboard players set @e[name=failedTimes] stats 0
 scoreboard players set @e[name=isNetease] stats 1
-scoreboard players set @e[name=hookshotAmount] stats 0
-scoreboard players set @e[name=monsterAmount] stats 0
-scoreboard players set @e[name=randomLocation] stats 0
-scoreboard players set @e[name=randomMonster] stats 0
-scoreboard players set @e[name=alivePlayersAmount] stats 1
 
-## === time ===
+### time
 summon je:marker "tick" -82 1 -2
 summon je:marker "playedSecond" -82 1 -2
 summon je:marker "playedMinute" -82 1 -2
@@ -49,7 +72,7 @@ scoreboard players set @e[name=soundBeaconTicker] time 0
 scoreboard players set @e[name=lavaWarningLeft] time 0
 scoreboard players set @e[name=timeline] time 0
 
-## === active ===
+### active
 summon je:marker "developerMode" -82 1 -2
 summon je:marker "levelTesting" -82 1 -2
 summon je:marker "arrowTraversing" -82 1 -2

@@ -1,8 +1,7 @@
 # 进行游戏初始化
 
 function init/gamerule_settings
-function init/scoreboards
-function init/markers
+function init/data_init
 
 gamemode adventure @a
 tp @s 43 21 132
