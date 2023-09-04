@@ -14,7 +14,7 @@ tp @a -117 1 -6
 title @a times 0 100 0
 title @a title §e§l沙 漠 神 殿
 title @a subtitle §c1-0
-scoreboard players set @e[name=soundBeaconTicker] active 1
+scoreboard players set @e[name=soundPlayer] active 14
 
 ## 设置重生点
 spawnpoint @a -117 1 -6

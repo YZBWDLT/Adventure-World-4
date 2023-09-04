@@ -38,7 +38,7 @@ function system/hookshot_judger
 ## 游玩时间记录器
 function system/time_played_recorder
 ## 音效控制器
-function system/sounds_controller
+function system/sound_player
 ## 永久饱和
 execute @e[name=saturationSecond] ~~~ function system/always_saturation
 ## 虚拟准星

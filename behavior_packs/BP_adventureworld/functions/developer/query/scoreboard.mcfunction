@@ -9,8 +9,7 @@ tellraw @s {"rawtext":[{"translate":"active.developerMode = %%s §7# 开发者�
 tellraw @s {"rawtext":[{"translate":"active.gameStartingTick = %%s §7# 激活游戏开幕状态","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=gameStartingTick]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.levelTesting = %%s §7# 关卡检测器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=levelTesting]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.potionTraversing = %%s §7# 药水遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=potionTraversing]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"active.soundAnvilTicker = %%s §7# 音效控制器：铁砧，为1时开始播放","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=soundAnvilTicker]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"active.soundBeaconTicker = %%s §7# 音效控制器：信标，为1时开始播放","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=soundBeaconTicker]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"active.soundPlayer = %%s §7# 音效播放器，0：不激活，不为0：根据本值决定播放何种音效","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=soundPlayer]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.timeline = %%s §7# 时间线控制器：为1时开始计时","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=timeline]"}}]}}]}
 
 ## === 后台数据 ===
@@ -38,8 +37,7 @@ tellraw @s {"rawtext":[{"translate":"time.playedMinute = %%s §7# 游玩时长�
 tellraw @s {"rawtext":[{"translate":"time.playedSecond = %%s §7# 游玩时长（秒），从试炼开始时开始计时","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=playedSecond]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.lavaWarningLeft = %%s §7# 用于设定岩浆溢出的剩余时间","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=lavaWarningLeft]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.saturationSecond = %%s §7# 饱和度刷新频率，每20秒给予1次饱和 256","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=saturationSecond]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"time.soundAnvilTicker = %%s §7# 音效播放器：铁砧，为2时播放音效","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=soundAnvilTicker]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"time.soundBeaconTicker = %%s §7# 音效播放器：信标，为2时播放音效","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=soundBeaconTicker]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"time.soundPlayer = %%s §7# 音效播放器，单位：刻","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=soundPlayer]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.tick = %%s §7# 每1刻加1分，每20刻归零","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=tick]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.timeLeft = %%s §7# 关卡剩余时间，单位秒","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeLeft]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.timeline = %%s §7# 时间线","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeline]"}}]}}]}

@@ -55,8 +55,7 @@ summon je:marker "saturationSecond" -82 1 -2
 summon je:marker "gameStartingTick" -82 1 -2
 summon je:marker "timeLeft" -82 1 -2
 summon je:marker "monsterRefreshLeft" -82 1 -2
-summon je:marker "soundAnvilTicker" -82 1 -2
-summon je:marker "soundBeaconTicker" -82 1 -2
+summon je:marker "soundPlayer" -82 1 -2
 summon je:marker "lavaWarningLeft" -82 1 -2
 summon je:marker "timeline" -82 1 -2
 
@@ -67,8 +66,7 @@ scoreboard players set @e[name=saturationSecond] time 0
 scoreboard players set @e[name=gameStartingTick] time 0
 scoreboard players set @e[name=timeLeft] time 0
 scoreboard players set @e[name=monsterRefreshLeft] time 0
-scoreboard players set @e[name=soundAnvilTicker] time 0
-scoreboard players set @e[name=soundBeaconTicker] time 0
+scoreboard players set @e[name=soundPlayer] time 0
 scoreboard players set @e[name=lavaWarningLeft] time 0
 scoreboard players set @e[name=timeline] time 0
 
@@ -80,11 +78,10 @@ summon je:marker "bonusTraversing" -82 1 -2
 summon je:marker "potionTraversing" -82 1 -2
 
 scoreboard players set @e[name=gameStartingTick] active 0
-scoreboard players set @e[name=soundAnvilTicker] active 0
-scoreboard players set @e[name=soundBeaconTicker] active 0
 scoreboard players set @e[name=developerMode] active 0
 scoreboard players set @e[name=levelTesting] active 0
 scoreboard players set @e[name=arrowTraversing] active 0
 scoreboard players set @e[name=bonusTraversing] active 0
 scoreboard players set @e[name=potionTraversing] active 0
 scoreboard players set @e[name=timeline] active 0
+scoreboard players set @e[name=soundPlayer] active 0
