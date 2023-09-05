@@ -17,6 +17,4 @@ tp @a 36 26 87
 
 ## 游戏开幕
 scoreboard players set @e[name=timeline] active 1
-
-## 清除标记
-kill @e[name=readyToStart]
+scoreboard players set @e[name=level] background 1
