@@ -19,10 +19,6 @@ execute @e[name=arrowTraversing,scores={active=1}] ~~~ execute @a[c=1,hasitem={i
 ## 药水遍历器
 execute @e[name=potionTraversing,scores={active=1}] ~~~ function system/traversers/potion
 
-## --- 开幕函数 ---
-## 开始游戏前检测器
-execute @e[name=readyToStart] ~~~ function system/start_game_tester
-
 ## --- 关卡函数 ---
 ## 进入房间检测器
 execute @a[tag=!playing,c=1] ~~~ function system/level_controllers/start_level

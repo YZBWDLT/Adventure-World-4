@@ -21,6 +21,3 @@ execute @e[name=level,scores={background=341}] ~~~ execute @a[tag=alive] -170 2 
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave_more
-
-scoreboard players set @e[name=timeline] active 0
-scoreboard players set @e[name=timeline] time 0

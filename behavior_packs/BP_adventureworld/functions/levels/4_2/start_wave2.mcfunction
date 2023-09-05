@@ -5,7 +5,7 @@ kill @e[family=monster]
 
 ## 生成生物
 ## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=421}] ~~~ execute @a[tag=alive] -148 7 12 function system/summon/drowned3
+execute @e[name=level,scores={background=421}] ~~~ execute @a[tag=alive] -149 7 12 function system/summon/drowned3
 execute @e[name=level,scores={background=421}] ~~~ execute @a[tag=alive] -148 7 2 function system/summon/drowned3
 execute @e[name=level,scores={background=421}] ~~~ execute @a[tag=alive] -156 7 5 function system/summon/drowned3
 execute @e[name=level,scores={background=421}] ~~~ execute @a[tag=alive] -159 7 10 function system/summon/stray2

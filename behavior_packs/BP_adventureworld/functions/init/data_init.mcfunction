@@ -24,9 +24,6 @@ scoreboard players set @a crosshair 0
 
 kill @e[type=je:marker]
 
-### (just name)
-summon je:marker "readyToStart" -82 1 -2
-
 ### background 后台数据
 summon je:marker "level" -82 1 -2
 summon je:marker "monsterAmount" -82 1 -2

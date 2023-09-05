@@ -1,4 +1,7 @@
-# 进入房间检测器（循环执行）
+# === 开始游戏控制器 ===
+
+## --- 开幕 ---
+execute @e[name=level,scores={background=0}] ~~~ function system/start_game_tester
 
 ## 当玩家进入对应检测区域时，检测他是否处于游玩状态，如果不是则给予其一个进入关卡(intolevel)的标签
 ## 检测范围需根据不同关卡的位置来调整

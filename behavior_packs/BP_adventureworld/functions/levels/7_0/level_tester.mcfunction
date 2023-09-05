@@ -44,7 +44,7 @@ execute @e[name=timeline,scores={time=760}] ~~~ fill -88 0 104 -86 0 106 minecra
 execute @e[name=timeline,scores={time=765}] ~~~ say (提醒玩家捡起神剑)
 
 ## 停止，直到有玩家捡起神剑
-execute @e[name=timeline,scores={time=770}] ~~~ scoreboard players set @e[name=timeline] active 0
+execute @e[name=timeline,scores={time=770}] ~~~ scoreboard players set @e[name=timeline] active 2
 execute @e[name=timeline,scores={time=760..770}] ~~~ execute @a[hasitem={item=aw:wild_sword}] ~~~ scoreboard players set @e[name=timeline] active 1
 execute @e[name=timeline,scores={time=760..770}] ~~~ execute @a[hasitem={item=aw:wild_sword}] ~~~ scoreboard players set @e[name=timeline] time 799
 
