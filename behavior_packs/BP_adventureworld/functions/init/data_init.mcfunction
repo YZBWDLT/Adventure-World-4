@@ -44,15 +44,15 @@ scoreboard players set @e[name=alivePlayersAmount] background 1
 
 ### settings 设置数据
 summon je:marker "developerMode" -82 1 -2
+summon je:marker "isNetease" -82 1 -2
 
 scoreboard players set @e[name=developerMode] settings 0
+scoreboard players set @e[name=isNetease] settings 1
 
 ### stats 统计数据
 summon je:marker "failedTimes" -82 1 -2
-summon je:marker "isNetease" -82 1 -2
 
 scoreboard players set @e[name=failedTimes] stats 0
-scoreboard players set @e[name=isNetease] stats 1
 
 ### time
 summon je:marker "tick" -82 1 -2

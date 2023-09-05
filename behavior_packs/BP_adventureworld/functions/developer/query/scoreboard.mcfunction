@@ -26,11 +26,11 @@ tellraw @s {"rawtext":[{"translate":"crosshair.@s = %%s §7# 准星启用状态"
 ## === 设置数据 settings ===
 
 tellraw @s {"rawtext":[{"translate":"settings.developerMode = %%s §7# 开发者模式","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=developerMode]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"settings.isNetease = %%s §7# 记录是否为netease版本","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=isNetease]"}}]}}]}
 
 ## === 后台数据 stats ===
 
 tellraw @s {"rawtext":[{"translate":"stats.failedTimes = %%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=failedTimes]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"stats.isNetease = %%s §7# 记录是否为netease版本","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=isNetease]"}}]}}]}
 
 ## === 时间数据 time ===
 
