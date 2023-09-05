@@ -1,5 +1,4 @@
-# 循环执行函数控制器
-# -----原理-----
+# ===== 循环执行函数控制器 =====
 # 循环执行需要的函数
 
 ## --- 上限函数 ---
@@ -48,4 +47,4 @@ execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.m
 ## 第3章泡泡（每1秒执行一次）
 execute @e[name=tick,scores={time=0}] ~~~ function system/bubble_controller
 ##（开发者模式）
-execute @e[name=developerMode,scores={active=1}] ~~~ function system/gamemode_switcher
+execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_switcher

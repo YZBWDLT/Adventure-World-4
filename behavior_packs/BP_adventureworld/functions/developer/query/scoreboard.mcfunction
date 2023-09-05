@@ -5,7 +5,6 @@ tellraw @s {"rawtext":[{"text":"下文反馈格式: (记分项).(标记名) = (�
 
 tellraw @s {"rawtext":[{"translate":"active.arrowTraversing = %%s §7# 箭遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=arrowTraversing]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.bonusTraversing = %%s §7# 奖励遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=bonusTraversing]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"active.developerMode = %%s §7# 开发者模式","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=developerMode]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.gameStartingTick = %%s §7# 激活游戏开幕状态","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=gameStartingTick]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.levelTesting = %%s §7# 关卡检测器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=levelTesting]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.potionTraversing = %%s §7# 药水遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=potionTraversing]"}}]}}]}
@@ -23,6 +22,10 @@ tellraw @s {"rawtext":[{"translate":"background.randomMonster = %%s §7# 随机�
 ## === crosshair ===
 
 tellraw @s {"rawtext":[{"translate":"crosshair.@s = %%s §7# 准星启用状态","with":{"rawtext":[{"score":{"objective":"crosshair","name":"@s"}}]}}]}
+
+## === 设置数据 settings ===
+
+tellraw @s {"rawtext":[{"translate":"settings.developerMode = %%s §7# 开发者模式","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=developerMode]"}}]}}]}
 
 ## === 后台数据 stats ===
 
