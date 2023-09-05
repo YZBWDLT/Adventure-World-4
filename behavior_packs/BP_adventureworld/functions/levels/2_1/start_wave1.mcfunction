@@ -15,7 +15,6 @@ fill -69 18 64 -69 20 66 minecraft:cobblestone_wall["wall_block_type":"diorite"]
 ## 请设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
 spawnpoint @a -83 18 64
 
-
 ## 生成生物
 ## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
 execute @e[name=level,scores={background=210}] ~~~ execute @a[tag=alive] -78 21 69 function system/summon/spider1

@@ -58,8 +58,6 @@ scoreboard players set @e[name=failedTimes] stats 0
 summon je:marker "tick" -82 1 -2
 summon je:marker "playedSecond" -82 1 -2
 summon je:marker "playedMinute" -82 1 -2
-summon je:marker "saturationSecond" -82 1 -2
-summon je:marker "gameStartingTick" -82 1 -2
 summon je:marker "timeLeft" -82 1 -2
 summon je:marker "monsterRefreshLeft" -82 1 -2
 summon je:marker "soundPlayer" -82 1 -2
@@ -69,8 +67,6 @@ summon je:marker "timeline" -82 1 -2
 scoreboard players set @e[name=tick] time 0
 scoreboard players set @e[name=playedSecond] time 0
 scoreboard players set @e[name=playedMinute] time 0
-scoreboard players set @e[name=saturationSecond] time 0
-scoreboard players set @e[name=gameStartingTick] time 0
 scoreboard players set @e[name=timeLeft] time 0
 scoreboard players set @e[name=monsterRefreshLeft] time 0
 scoreboard players set @e[name=soundPlayer] time 0
@@ -78,13 +74,10 @@ scoreboard players set @e[name=lavaWarningLeft] time 0
 scoreboard players set @e[name=timeline] time 0
 
 ### active
-summon je:marker "levelTesting" -82 1 -2
 summon je:marker "arrowTraversing" -82 1 -2
 summon je:marker "bonusTraversing" -82 1 -2
 summon je:marker "potionTraversing" -82 1 -2
 
-scoreboard players set @e[name=gameStartingTick] active 0
-scoreboard players set @e[name=levelTesting] active 0
 scoreboard players set @e[name=arrowTraversing] active 0
 scoreboard players set @e[name=bonusTraversing] active 0
 scoreboard players set @e[name=potionTraversing] active 0

@@ -1,10 +1,10 @@
 # 所有关卡通用的开始关卡函数
 
 ## 重要物品检测器
-function system/important_items_tester
+function methods/important_items_tester
 
 ## 开启关卡检测器(functions/levels/x_x/level_tester)并记录游玩状态
-scoreboard players set @e[name=levelTesting] active 1
+scoreboard players set @e[name=timeline] active 2
 tag @a add playing
 tag @a add alive
 

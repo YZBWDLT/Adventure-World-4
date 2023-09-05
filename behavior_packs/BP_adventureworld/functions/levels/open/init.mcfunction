@@ -4,7 +4,7 @@ function init/gamerule
 function init/data_init
 
 gamemode adventure @a
-tp @s 43 21 132
+tp @a 43 21 132
 clear @a
 setworldspawn 43 21 132
 

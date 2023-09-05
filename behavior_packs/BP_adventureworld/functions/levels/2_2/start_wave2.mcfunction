@@ -12,6 +12,5 @@ execute @e[name=level,scores={background=221}] ~~~ execute @a[tag=alive] -74 -11
 execute @e[name=level,scores={background=221}] ~~~ execute @a[tag=alive] -95 -1 68 function system/summon/spider1
 execute @e[name=level,scores={background=221}] ~~~ execute @a[tag=alive] -82 0 62 function system/summon/spider1
 
-
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave_more

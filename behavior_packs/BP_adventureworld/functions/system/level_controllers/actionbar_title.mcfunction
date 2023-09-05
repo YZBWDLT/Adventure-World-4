@@ -1,5 +1,7 @@
 # 快捷栏标题控制器
 
+function methods/entity_amount_tester
+
 execute @e[name=level,scores={background=100..109}] ~~~ function levels/1_0/actionbar_title
 execute @e[name=level,scores={background=110..119}] ~~~ function levels/1_1/actionbar_title
 execute @e[name=level,scores={background=120..129}] ~~~ function levels/1_2/actionbar_title

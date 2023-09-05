@@ -9,7 +9,7 @@ execute @a ~~~ playsound random.levelup @s ~~~ 0.5 1.25
 ## 启动奖励遍历器
 ### 因为loot give直接套execute @a会导致不能同时插入，所以此处必须使用遍历循环
 ### 使用bonusTraversing代表开启奖励遍历器，方便后续可以将这个循环执行的命令关闭
-### 奖励遍历器的路径：functions/system/bonus_traverser
+### 奖励遍历器的路径：functions/system/traversers/bonus
 tag @a remove bonusTraversing
 scoreboard players set @e[name=bonusTraversing] active 1
 

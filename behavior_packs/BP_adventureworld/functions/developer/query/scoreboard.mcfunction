@@ -5,8 +5,6 @@ tellraw @s {"rawtext":[{"text":"下文反馈格式: (记分项).(标记名) = (�
 
 tellraw @s {"rawtext":[{"translate":"active.arrowTraversing = %%s §7# 箭遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=arrowTraversing]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.bonusTraversing = %%s §7# 奖励遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=bonusTraversing]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"active.gameStartingTick = %%s §7# 激活游戏开幕状态","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=gameStartingTick]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"active.levelTesting = %%s §7# 关卡检测器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=levelTesting]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.potionTraversing = %%s §7# 药水遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=potionTraversing]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.soundPlayer = %%s §7# 音效播放器，0：不激活，不为0：根据本值决定播放何种音效","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=soundPlayer]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.timeline = %%s §7# 时间线控制器：为1时开始计时","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=timeline]"}}]}}]}
@@ -31,15 +29,14 @@ tellraw @s {"rawtext":[{"translate":"settings.isNetease = %%s §7# 记录是否�
 ## === 后台数据 stats ===
 
 tellraw @s {"rawtext":[{"translate":"stats.failedTimes = %%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=failedTimes]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"stats.allFailedTimes = %%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"stats","name":"allFailedTimes"}}]}}]}
 
 ## === 时间数据 time ===
 
-tellraw @s {"rawtext":[{"translate":"time.gameStartingTick = %%s §7# 游戏开幕时间轴","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=gameStartingTick]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.monsterRefreshLeft = %%s §7# 怪物刷新频率","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=monsterRefreshLeft]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.playedMinute = %%s §7# 游玩时长（分钟），从试炼开始时开始计时","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=playedMinute]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.playedSecond = %%s §7# 游玩时长（秒），从试炼开始时开始计时","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=playedSecond]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.lavaWarningLeft = %%s §7# 用于设定岩浆溢出的剩余时间","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=lavaWarningLeft]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"time.saturationSecond = %%s §7# 饱和度刷新频率，每20秒给予1次饱和 256","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=saturationSecond]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.soundPlayer = %%s §7# 音效播放器，单位：刻","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=soundPlayer]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.tick = %%s §7# 每1刻加1分，每20刻归零","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=tick]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.timeLeft = %%s §7# 关卡剩余时间，单位秒","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeLeft]"}}]}}]}
