@@ -1,9 +1,11 @@
-# 所有关卡通用的开始关卡函数
+# ===== 所有关卡通用的开始关卡函数 =====
 
-## 重要物品检测器
+## --- 重要物品检测器 ---
+## 用于给玩家补充缺少的重要物资
 function methods/important_items_tester
 
-## 开启关卡检测器(functions/levels/x_x/level_tester)并记录游玩状态
+## --- 开启关卡检测器 ---
+## (functions/levels/x_x/level_tester)并记录游玩状态
 scoreboard players set @e[name=timeline] active 2
 tag @a add playing
 tag @a add alive
