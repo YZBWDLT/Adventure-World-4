@@ -16,7 +16,7 @@ setworldspawn -27 6 -48
 tp @a 36 26 87
 
 ## 游戏开幕
-scoreboard players set @e[name=gameStartingTick] active 1
+scoreboard players set @e[name=timeline] active 1
 
 ## 清除标记
 kill @e[name=readyToStart]

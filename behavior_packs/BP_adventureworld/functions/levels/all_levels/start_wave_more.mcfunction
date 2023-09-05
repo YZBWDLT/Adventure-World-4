@@ -1,7 +1,7 @@
 # 所有关卡通用的开始关卡函数
 
 ## 开启关卡检测器(functions/levels/x_x/level_tester)并记录游玩状态
-scoreboard players set @e[name=levelTesting] active 1
+scoreboard players set @e[name=timeline] active 2
 tp @a[tag=!playing] @a[tag=playing,c=1]
 tag @a add playing
 
@@ -11,4 +11,4 @@ tag @e remove arrowTraversing
 execute @a[c=1,hasitem=[{item=bow},{item=arrow,quantity=..11}]] ~~~ scoreboard players set @e[name=arrowTraversing] active 1
 
 ## 玩家缺物品时，给予物品
-function system/important_items_tester
+function methods/important_items_tester

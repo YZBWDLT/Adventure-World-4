@@ -1,7 +1,7 @@
 # 开始游戏 - 第一波
 
 ## 设置level分数
-scoreboard players set @e[name=level] stats 410
+scoreboard players set @e[name=level] background 410
 
 ## 清除原始怪物，防止玩家死掉后重新开始还有多余的怪物
 kill @e[family=monster]
@@ -17,12 +17,12 @@ structure load 4_1_phase1 -168 16 -23
 spawnpoint @a -156 17 -23
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={stats=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={stats=410}] ~~~ execute @a[tag=alive] -165 17 -17 function system/summon/guardian1
-execute @e[name=level,scores={stats=410}] ~~~ execute @a[tag=alive] -162 17 -22 function system/summon/drowned3
-execute @e[name=level,scores={stats=410}] ~~~ execute @a[tag=alive] -161 17 -20 function system/summon/drowned2
-execute @e[name=level,scores={stats=410}] ~~~ execute @a[tag=alive] -162 17 -16 function system/summon/drowned2
-execute @e[name=level,scores={stats=410}] ~~~ execute @a[tag=alive] -165 17 -23 function system/summon/skeleton1
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=410}] ~~~ execute @a[tag=alive] -165 17 -17 function system/summon/guardian1
+execute @e[name=level,scores={background=410}] ~~~ execute @a[tag=alive] -162 17 -22 function system/summon/drowned3
+execute @e[name=level,scores={background=410}] ~~~ execute @a[tag=alive] -161 17 -20 function system/summon/drowned2
+execute @e[name=level,scores={background=410}] ~~~ execute @a[tag=alive] -162 17 -16 function system/summon/drowned2
+execute @e[name=level,scores={background=410}] ~~~ execute @a[tag=alive] -165 17 -23 function system/summon/skeleton1
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

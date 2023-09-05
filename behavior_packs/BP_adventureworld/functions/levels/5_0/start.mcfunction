@@ -1,9 +1,9 @@
 # 开始游戏
 
 ## 设置level分数
-scoreboard players set @e[name=level] stats 500
+scoreboard players set @e[name=level] background 500
 
-function system/important_items_tester
+function methods/important_items_tester
 
 ##【无需更改】 清除原始怪物，防止玩家死掉后重新开始还有多余的怪物
 kill @e[family=monster]
