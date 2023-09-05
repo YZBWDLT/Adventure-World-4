@@ -11,7 +11,7 @@ tag @a add playing
 tag @a add alive
 
 ## 改玩家为冒险模式
-gamemode adventure @a[tag=playing]
+execute @e[name=developerMode,scores={settings=0}] ~~~ gamemode adventure @a[tag=playing]
 
 ## 清除药效
 effect @a clear
