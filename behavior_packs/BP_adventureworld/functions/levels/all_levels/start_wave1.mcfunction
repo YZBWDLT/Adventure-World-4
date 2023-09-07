@@ -20,9 +20,7 @@ effect @a clear
 tp @a[tag=!intoLevel] @a[tag=intoLevel,c=1]
 
 ## 为玩家补充箭
-## 还是那个很烦人的/loot不能同时给予的问题，要用到遍历器，下面的这个标签是开遍历器用的
-tag @e remove arrowTraversing
-execute @a[c=1,hasitem={item=bow}] ~~~ scoreboard players set @e[name=arrowTraversing] active 1
+give @a arrow 64
 
 ## 为玩家补充药水
 ## 还是还是仍然是那个很烦人的/loot不能同时给予的问题，要用到遍历器，下面的这个标签是开遍历器用的

@@ -3,7 +3,6 @@ tellraw @s {"rawtext":[{"text":"下文反馈格式: (记分项).(标记名) = (�
 
 ## === 激活数据 active ===
 
-tellraw @s {"rawtext":[{"translate":"active.arrowTraversing = %%s §7# 箭遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=arrowTraversing]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.bonusTraversing = %%s §7# 奖励遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=bonusTraversing]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.potionTraversing = %%s §7# 药水遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=potionTraversing]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.soundPlayer = %%s §7# 音效播放器，0：不激活，不为0：根据本值决定播放何种音效","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=soundPlayer]"}}]}}]}
