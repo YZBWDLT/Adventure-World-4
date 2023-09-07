@@ -3,3 +3,4 @@ diagnostic.disable.minecraft.commands.execute.deprecated=true
 diagnostic.disable.minecraft.commands.summon.syntax=true
 diagnostic.disable.minecraft.commands.fill.syntax=true
 diagnostic.disable.behaviorpack.entity.component.missing=true
+diagnostic.disable.minecraft.animation.unused=true

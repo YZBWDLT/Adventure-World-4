@@ -1,5 +1,5 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.16.0",
     "minecraft:item": {
         "description": {
             "identifier": "aw:resistance_potion_2"
@@ -14,7 +14,7 @@
                     { "name": "resistance", "chance" : 1.0, "duration" : 20, "amplifier" : 3 }
                 ]
             },
-            "minecraft:use_duration": 24
+            "minecraft:use_duration": 32
         }
     }
 }
