@@ -14,7 +14,7 @@
                     { "name": "regeneration", "chance" : 1.0, "duration" : 45, "amplifier" : 1 }
                 ]
             },
-            "minecraft:use_duration": 32
+            "minecraft:use_duration": 48
         }
     }
 }
