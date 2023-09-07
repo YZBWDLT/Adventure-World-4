@@ -1,5 +1,5 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.16.0",
     "minecraft:item": {
         "description": {
             "identifier": "aw:health_boost_potion_1",

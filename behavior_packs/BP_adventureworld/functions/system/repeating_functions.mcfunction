@@ -14,8 +14,6 @@ execute @e[name=level,scores={background=100..}] ~~~ function system/item_limit/
 ## --- 遍历器函数 ---
 ## 奖励遍历器
 execute @e[name=bonusTraversing,scores={active=1}] ~~~ function system/traversers/bonus
-## 箭补充遍历器
-execute @e[name=arrowTraversing,scores={active=1}] ~~~ execute @a[c=1,hasitem={item=bow}] ~~~ function system/traversers/arrow
 ## 药水遍历器
 execute @e[name=potionTraversing,scores={active=1}] ~~~ function system/traversers/potion
 

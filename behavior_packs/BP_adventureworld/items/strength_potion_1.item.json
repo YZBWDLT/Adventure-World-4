@@ -1,5 +1,5 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.16.0",
     "minecraft:item": {
         "description": {
             "identifier": "aw:strength_potion_1"
@@ -14,7 +14,7 @@
                     { "name": "strength", "chance" : 1.0, "duration" : 30, "amplifier" : 0 }
                 ]
             },
-            "minecraft:use_duration": 24
+            "minecraft:use_duration": 32
         }
     }
 }
