@@ -4,7 +4,7 @@
 title @a times 0 100 0
 title @a title §c§l关 卡 失 败
 title @a subtitle 所有人已死亡！已返回上一个重生点。
-scoreboard players set @e[name=soundAnvilTicker] active 1
+scoreboard players set @e[name=soundPlayer] active 13
 
 ## 清理所有残余的怪物
 kill @e[family=monster]

@@ -1,7 +1,7 @@
 # 开始游戏 - 第一波
 
 ## 设置level分数
-scoreboard players set @e[name=level] stats 230
+scoreboard players set @e[name=level] background 230
 
 ## 清除原始怪物，防止玩家死掉后重新开始还有多余的怪物
 kill @e[family=monster]
@@ -15,11 +15,11 @@ fill -167 -21 60 -167 -19 62 minecraft:cobblestone_wall["wall_block_type":"diori
 spawnpoint @a -154 -21 46
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={stats=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={stats=230}] ~~~ execute @a[tag=alive] -159 -21 66 function system/summon/spider1
-execute @e[name=level,scores={stats=230}] ~~~ execute @a[tag=alive] -159 -21 56 function system/summon/spider1
-execute @e[name=level,scores={stats=230}] ~~~ execute @a[tag=alive] -149 -21 56 function system/summon/spider1
-execute @e[name=level,scores={stats=230}] ~~~ execute @a[tag=alive] -149 -21 66 function system/summon/spider1
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=230}] ~~~ execute @a[tag=alive] -159 -21 66 function system/summon/spider1
+execute @e[name=level,scores={background=230}] ~~~ execute @a[tag=alive] -159 -21 56 function system/summon/spider1
+execute @e[name=level,scores={background=230}] ~~~ execute @a[tag=alive] -149 -21 56 function system/summon/spider1
+execute @e[name=level,scores={background=230}] ~~~ execute @a[tag=alive] -149 -21 66 function system/summon/spider1
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

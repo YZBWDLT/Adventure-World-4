@@ -16,11 +16,11 @@ camerashake add @a[tag=alive] 1.00 2.50
 structure load 4_1_phase2 -168 16 -23 0_degrees none block_by_block 1.25
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={stats=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={stats=411}] ~~~ execute @a[tag=alive] -159 12 -22 function system/summon/stray2
-execute @e[name=level,scores={stats=411}] ~~~ execute @a[tag=alive] -165 17 -16 function system/summon/stray2
-execute @e[name=level,scores={stats=411}] ~~~ execute @a[tag=alive] -164 12 -17 function system/summon/drowned2
-execute @e[name=level,scores={stats=411}] ~~~ execute @a[tag=alive] -160 17 -25 function system/summon/drowned2
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=411}] ~~~ execute @a[tag=alive] -160 12 -22 function system/summon/stray2
+execute @e[name=level,scores={background=411}] ~~~ execute @a[tag=alive] -165 17 -16 function system/summon/stray2
+execute @e[name=level,scores={background=411}] ~~~ execute @a[tag=alive] -164 12 -17 function system/summon/drowned2
+execute @e[name=level,scores={background=411}] ~~~ execute @a[tag=alive] -160 17 -25 function system/summon/drowned2
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave_more

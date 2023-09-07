@@ -1,7 +1,7 @@
 # 开始游戏 - 第一波
 
 ## 设置level分数
-scoreboard players set @e[name=level] stats 320
+scoreboard players set @e[name=level] background 320
 
 ## 清除水
 fill -191 -21 0 -170 -18 21 minecraft:sponge[] replace minecraft:water
@@ -23,12 +23,12 @@ structure load 3_2_phase1 -192 -22 -1 0_degrees none false true
 spawnpoint @a -182 -15 21
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={stats=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={stats=320}] ~~~ execute @a[tag=alive] -180 -17 9 function system/summon/skeleton1
-execute @e[name=level,scores={stats=320}] ~~~ execute @a[tag=alive] -180 -21 2 function system/summon/drowned2
-execute @e[name=level,scores={stats=320}] ~~~ execute @a[tag=alive] -183 -21 10 function system/summon/drowned2
-execute @e[name=level,scores={stats=320}] ~~~ execute @a[tag=alive] -191 -21 10 function system/summon/drowned1
-execute @e[name=level,scores={stats=320}] ~~~ execute @a[tag=alive] -181 -17 12 function system/summon/drowned1
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=320}] ~~~ execute @a[tag=alive] -180 -17 9 function system/summon/skeleton1
+execute @e[name=level,scores={background=320}] ~~~ execute @a[tag=alive] -180 -21 2 function system/summon/drowned2
+execute @e[name=level,scores={background=320}] ~~~ execute @a[tag=alive] -183 -21 10 function system/summon/drowned2
+execute @e[name=level,scores={background=320}] ~~~ execute @a[tag=alive] -191 -21 10 function system/summon/drowned1
+execute @e[name=level,scores={background=320}] ~~~ execute @a[tag=alive] -181 -17 12 function system/summon/drowned1
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

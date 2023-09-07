@@ -1,0 +1,14 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aw:strength_potion_2",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:icon": "strength_potion_2",
+            "minecraft:render_offsets": "apple",
+            "minecraft:use_animation": "drink"
+        }
+    }
+}

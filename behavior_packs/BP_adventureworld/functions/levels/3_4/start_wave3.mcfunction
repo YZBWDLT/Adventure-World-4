@@ -12,12 +12,12 @@ title @a title §c§lBOSS 来 袭
 title @a subtitle §c注意！水位上涨！
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={stats=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={stats=342}] ~~~ execute @a[tag=alive] -174 -15 21 function system/summon/guardian1
-execute @e[name=level,scores={stats=342}] ~~~ execute @a[tag=alive] -172 0 19 function system/summon/guardian1
-execute @e[name=level,scores={stats=342}] ~~~ execute @a[tag=alive] -174 4 23 function system/summon/elder_guardian
-execute @e[name=level,scores={stats=342}] ~~~ execute @a[tag=alive] -169 2 23 function system/summon/creeper2
-execute @e[name=level,scores={stats=342}] ~~~ execute @a[tag=alive] -173 4 23 function system/summon/drowned2
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=342}] ~~~ execute @a[tag=alive] -174 -15 21 function system/summon/guardian1
+execute @e[name=level,scores={background=342}] ~~~ execute @a[tag=alive] -172 0 19 function system/summon/guardian1
+execute @e[name=level,scores={background=342}] ~~~ execute @a[tag=alive] -174 4 23 function system/summon/elder_guardian
+execute @e[name=level,scores={background=342}] ~~~ execute @a[tag=alive] -169 2 23 function system/summon/creeper2
+execute @e[name=level,scores={background=342}] ~~~ execute @a[tag=alive] -173 4 23 function system/summon/drowned2
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave_more

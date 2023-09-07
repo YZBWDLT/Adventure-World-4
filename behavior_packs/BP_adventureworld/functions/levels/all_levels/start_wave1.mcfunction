@@ -1,15 +1,17 @@
-# 所有关卡通用的开始关卡函数
+# ===== 所有关卡通用的开始关卡函数 =====
 
-## 重要物品检测器
-function system/important_items_tester
+## --- 重要物品检测器 ---
+## 用于给玩家补充缺少的重要物资
+function methods/important_items_tester
 
-## 开启关卡检测器(functions/levels/x_x/level_tester)并记录游玩状态
-scoreboard players set @e[name=levelTesting] active 1
+## --- 开启关卡检测器 ---
+## (functions/levels/x_x/level_tester)并记录游玩状态
+scoreboard players set @e[name=timeline] active 2
 tag @a add playing
 tag @a add alive
 
 ## 改玩家为冒险模式
-gamemode adventure @a[tag=playing]
+execute @e[name=developerMode,scores={settings=0}] ~~~ gamemode adventure @a[tag=playing]
 
 ## 清除药效
 effect @a clear

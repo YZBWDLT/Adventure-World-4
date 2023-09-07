@@ -14,7 +14,7 @@ execute @e[name=timeline,scores={time=280}] ~~~ fill -88 0 104 -86 0 106 minecra
 
 ## 进入剑之神殿
 execute @e[name=timeline,scores={time=360}] ~~~ tp @a -74 -40 105 facing -87 -37 105
-execute @e[name=timeline,scores={time=360}] ~~~ scoreboard players set @e[name=level] stats 700
+execute @e[name=timeline,scores={time=360}] ~~~ scoreboard players set @e[name=level] background 700
 execute @e[name=timeline,scores={time=360}] ~~~ title @a times 0 100 0
 execute @e[name=timeline,scores={time=400}] ~~~ title @a title §f§l剑 之 神 殿
 execute @e[name=timeline,scores={time=400}] ~~~ title @a subtitle §k6§r-§k5
@@ -44,7 +44,7 @@ execute @e[name=timeline,scores={time=760}] ~~~ fill -88 0 104 -86 0 106 minecra
 execute @e[name=timeline,scores={time=765}] ~~~ say (提醒玩家捡起神剑)
 
 ## 停止，直到有玩家捡起神剑
-execute @e[name=timeline,scores={time=770}] ~~~ scoreboard players set @e[name=timeline] active 0
+execute @e[name=timeline,scores={time=770}] ~~~ scoreboard players set @e[name=timeline] active 2
 execute @e[name=timeline,scores={time=760..770}] ~~~ execute @a[hasitem={item=aw:wild_sword}] ~~~ scoreboard players set @e[name=timeline] active 1
 execute @e[name=timeline,scores={time=760..770}] ~~~ execute @a[hasitem={item=aw:wild_sword}] ~~~ scoreboard players set @e[name=timeline] time 799
 
@@ -69,7 +69,7 @@ execute @e[name=timeline,scores={time=1100}] ~~~ title @a times 0 100 0
 execute @e[name=timeline,scores={time=1100}] ~~~ title @a title §l§c封 印 神 殿
 execute @e[name=timeline,scores={time=1100}] ~~~ title @a subtitle §cFINAL TEMPLE
 execute @e[name=timeline,scores={time=1100}] ~~~ execute @a ~~~ playsound beacon.power @s ~~~ 1 1 1
-execute @e[name=timeline,scores={time=1120}] ~~~ scoreboard players set @e[name=level] stats 701
+execute @e[name=timeline,scores={time=1120}] ~~~ scoreboard players set @e[name=level] background 701
 execute @e[name=timeline,scores={time=1120}] ~~~ effect @a clear
 
 execute @e[name=timeline,scores={time=1160}] ~~~ say (准备好了吗？这将是你最后的战场！)
