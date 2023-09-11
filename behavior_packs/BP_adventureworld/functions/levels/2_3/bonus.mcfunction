@@ -15,4 +15,4 @@ tellraw @a {"rawtext":[{"text":"§a已将您原来的剑替换为钢剑！"}]}
 spawnpoint @a -154 -21 61
 
 ## 【无需修改】调用所有关卡通用奖励功能
-function levels/all_levels/bonus
+function methods/all_levels/bonus

@@ -13,4 +13,4 @@ execute @e[name=level,scores={background=422}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=422}] ~~~ execute @a[scores={isAlive=1}] -153 7 1 function system/summon/stray2
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave_more
+function methods/all_levels/start_wave_more

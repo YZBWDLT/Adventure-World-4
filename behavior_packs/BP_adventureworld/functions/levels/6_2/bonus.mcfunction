@@ -18,4 +18,4 @@ clear @a minecraft:bow
 tellraw @a {"rawtext":[{"text":"§a已将您原来的弓替换为神弓！"}]}
 
 ## 【无需修改】调用所有关卡通用奖励功能
-function levels/all_levels/bonus
+function methods/all_levels/bonus

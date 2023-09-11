@@ -31,7 +31,7 @@ execute @e[name=level,scores={background=320}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=320}] ~~~ execute @a[scores={isAlive=1}] -181 -17 12 function system/summon/drowned1
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave1
+function methods/all_levels/start_wave1
 
 ## 标题
 title @a subtitle §c3-2

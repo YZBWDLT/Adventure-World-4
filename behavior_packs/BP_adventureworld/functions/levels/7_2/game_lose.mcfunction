@@ -12,4 +12,4 @@ fill -159 -18 109 -159 -16 111 minecraft:air
 fill -184 -18 98 -184 -16 96 minecraft:air
 
 ## 调用所有关卡通用的游戏失败函数
-function levels/all_levels/game_lose
+function methods/all_levels/game_lose

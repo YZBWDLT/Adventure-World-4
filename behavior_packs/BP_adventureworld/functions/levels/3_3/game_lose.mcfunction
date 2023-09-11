@@ -11,4 +11,4 @@ spawnpoint @a -173 -21 30
 fill -162 -21 26 -164 -19 26 minecraft:structure_void
 
 ## 调用所有关卡通用的游戏失败函数
-function levels/all_levels/game_lose
+function methods/all_levels/game_lose

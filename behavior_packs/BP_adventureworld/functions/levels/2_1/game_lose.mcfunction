@@ -13,4 +13,4 @@ setblock -75 20 58 minecraft:air
 fill -69 18 64 -69 20 66 minecraft:air
 
 ## 【无需修改】调用所有关卡通用的游戏失败函数
-function levels/all_levels/game_lose
+function methods/all_levels/game_lose

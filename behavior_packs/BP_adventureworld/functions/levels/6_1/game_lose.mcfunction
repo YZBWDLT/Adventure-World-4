@@ -15,6 +15,6 @@ fill -82 -29 -62 -83 -31 -64 air[] replace barrier[]
 fill -82 -29 -62 -83 -31 -64 air[] replace pointed_dripstone[]
 
 ## 调用所有关卡通用的游戏失败函数
-function levels/all_levels/game_lose
+function methods/all_levels/game_lose
 
 gamerule falldamage false

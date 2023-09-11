@@ -15,6 +15,6 @@ fill -82 -29 -62 -83 -31 -64 air[] replace pointed_dripstone[]
 spawnpoint @a -77 -31 -64
 
 ## 【无需修改】调用所有关卡通用奖励功能
-function levels/all_levels/bonus
+function methods/all_levels/bonus
 
 gamerule falldamage false

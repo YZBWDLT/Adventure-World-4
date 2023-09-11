@@ -33,7 +33,7 @@ execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -140 -10 105 function system/summon/zombified_piglin1
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave1
+function methods/all_levels/start_wave1
 
 ## 标题
 title @a subtitle §c7-1

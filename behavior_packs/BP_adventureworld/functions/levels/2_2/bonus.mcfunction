@@ -17,4 +17,4 @@ structure load 2_2_trap3 -124 -16 54
 structure load 2_2_trap4 -136 -10 54
 
 ## 【无需修改】调用所有关卡通用奖励功能
-function levels/all_levels/bonus
+function methods/all_levels/bonus

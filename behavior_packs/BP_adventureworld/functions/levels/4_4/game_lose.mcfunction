@@ -16,4 +16,4 @@ kill @e[family=monster]
 kill @e[type=item]
 
 ## 调用所有关卡通用的游戏失败函数
-function levels/all_levels/game_lose
+function methods/all_levels/game_lose

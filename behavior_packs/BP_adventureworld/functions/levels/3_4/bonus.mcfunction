@@ -11,4 +11,4 @@ fill -174 17 18 -172 19 18 minecraft:structure_void
 spawnpoint @a -173 -21 30
 
 ## 【无需修改】调用所有关卡通用奖励功能
-function levels/all_levels/bonus
+function methods/all_levels/bonus

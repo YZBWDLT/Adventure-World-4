@@ -22,4 +22,4 @@ execute @e[name=level,scores={background=411}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=411}] ~~~ execute @a[scores={isAlive=1}] -160 17 -25 function system/summon/drowned2
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave_more
+function methods/all_levels/start_wave_more

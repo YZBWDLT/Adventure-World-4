@@ -14,4 +14,4 @@ fill -76 -39 20 -74 -37 20 minecraft:structure_void
 fill -89 -40 49 -61 -39 21 minecraft:air[] replace minecraft:lava[]
 
 ## 调用所有关卡通用的游戏失败函数
-function levels/all_levels/game_lose
+function methods/all_levels/game_lose

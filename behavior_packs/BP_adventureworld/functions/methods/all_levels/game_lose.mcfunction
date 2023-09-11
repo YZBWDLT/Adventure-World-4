@@ -10,7 +10,7 @@ scoreboard players set @e[name=soundPlayer] active 13
 kill @e[family=monster]
 
 ## 给予所有人生存标签
-tag @a add alive
+scoreboard players set @a isAlive 1
 
 ## 记录失败次数
 scoreboard players add @e[name=failedTimes] stats 1

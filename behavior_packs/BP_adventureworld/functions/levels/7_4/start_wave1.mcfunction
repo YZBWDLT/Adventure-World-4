@@ -22,7 +22,7 @@ execute @e[name=level,scores={background=740}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=740}] ~~~ execute @a[scores={isAlive=1}] -236 -8 93 function system/summon/magma_cube_small2
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave1
+function methods/all_levels/start_wave1
 
 ## 标题
 title @a subtitle §c7-4

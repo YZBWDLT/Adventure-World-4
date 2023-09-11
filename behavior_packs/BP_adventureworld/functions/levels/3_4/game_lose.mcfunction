@@ -12,4 +12,4 @@ fill -168 -15 22 -168 -13 24 minecraft:structure_void
 fill -174 17 18 -172 19 18 minecraft:structure_void
 
 ## 调用所有关卡通用的游戏失败函数
-function levels/all_levels/game_lose
+function methods/all_levels/game_lose

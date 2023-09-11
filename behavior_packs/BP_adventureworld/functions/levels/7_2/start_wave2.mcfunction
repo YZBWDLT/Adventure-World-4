@@ -16,4 +16,4 @@ execute @e[name=level,scores={background=721}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=721}] ~~~ execute @a[scores={isAlive=1}] -181 -17 105 function system/summon/piglin4
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave_more
+function methods/all_levels/start_wave_more

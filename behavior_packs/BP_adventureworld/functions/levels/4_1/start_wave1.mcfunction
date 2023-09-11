@@ -25,7 +25,7 @@ execute @e[name=level,scores={background=410}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=410}] ~~~ execute @a[scores={isAlive=1}] -165 17 -23 function system/summon/skeleton1
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave1
+function methods/all_levels/start_wave1
 
 ## 标题
 title @a subtitle §c4-1

@@ -23,7 +23,7 @@ execute @e[name=level,scores={background=620}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=620}] ~~~ execute @a[scores={isAlive=1}] -77 -20 -34 function system/summon/cave_spider2
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave1
+function methods/all_levels/start_wave1
 
 ## 标题
 title @a subtitle §c6-2

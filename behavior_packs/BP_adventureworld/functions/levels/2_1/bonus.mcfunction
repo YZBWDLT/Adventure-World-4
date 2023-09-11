@@ -19,4 +19,4 @@ spawnpoint @a -75 18 65
 structure load 2_1_trap -60 10 71
 
 ## 【无需修改】调用所有关卡通用奖励功能
-function levels/all_levels/bonus
+function methods/all_levels/bonus

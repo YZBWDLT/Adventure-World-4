@@ -12,4 +12,4 @@ execute @e[name=level,scores={background=741}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=741}] ~~~ execute @a[scores={isAlive=1}] -224 -16 91 function system/summon/magma_cube_middle1
 execute @e[name=level,scores={background=740}] ~~~ execute @a[scores={isAlive=1}] -238 -8 103 function system/summon/skeleton1
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave_more
+function methods/all_levels/start_wave_more

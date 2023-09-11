@@ -11,4 +11,4 @@ fill -217 -18 98 -217 -16 100 minecraft:air
 spawnpoint @a -199 -17 94
 
 ## 【无需修改】调用所有关卡通用奖励功能
-function levels/all_levels/bonus
+function methods/all_levels/bonus

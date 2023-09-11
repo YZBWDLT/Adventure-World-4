@@ -26,7 +26,7 @@ scoreboard players set @e[name=timeLeft] time 180
 scoreboard players random @e[name=monsterRefreshLeft] time 3 10
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave1
+function methods/all_levels/start_wave1
 
 ## 标题
 title @a subtitle §c4-4

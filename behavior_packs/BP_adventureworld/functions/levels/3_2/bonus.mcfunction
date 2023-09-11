@@ -17,4 +17,4 @@ clear @a aw:iron_boots
 tellraw @a {"rawtext":[{"text":"§a已将您原来的铁靴子清理，记得尽快换上更好的装备哦！"}]}
 
 ## 【无需修改】调用所有关卡通用奖励功能
-function levels/all_levels/bonus
+function methods/all_levels/bonus

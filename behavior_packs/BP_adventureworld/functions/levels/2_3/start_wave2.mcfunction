@@ -11,4 +11,4 @@ execute @e[name=level,scores={background=231}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=231}] ~~~ execute @a[scores={isAlive=1}] -149 -21 61 function system/summon/creeper1
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave_more
+function methods/all_levels/start_wave_more

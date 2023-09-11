@@ -11,4 +11,4 @@ execute @e[name=level,scores={background=332}] ~~~ execute @a[scores={isAlive=1}
 execute @e[name=level,scores={background=332}] ~~~ execute @a[scores={isAlive=1}] -162 -32 29 function system/summon/drowned_with_trident2
 
 ## 开启所有关卡通用的开始关卡函数
-function levels/all_levels/start_wave_more
+function methods/all_levels/start_wave_more

@@ -11,4 +11,4 @@ spawnpoint @a -117 1 30
 fill -127 5 50 -125 7 50 minecraft:air
 
 ## 【无需修改】调用所有关卡通用的游戏失败函数
-function levels/all_levels/game_lose
+function methods/all_levels/game_lose
