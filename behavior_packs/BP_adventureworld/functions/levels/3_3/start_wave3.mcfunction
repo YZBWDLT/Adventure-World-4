@@ -4,11 +4,11 @@
 kill @e[family=monster]
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=332}] ~~~ execute @a[tag=alive] -167 -20 34 function system/summon/drowned3
-execute @e[name=level,scores={background=332}] ~~~ execute @a[tag=alive] -156 -24 30 function system/summon/drowned2
-execute @e[name=level,scores={background=332}] ~~~ execute @a[tag=alive] -162 -28 24 function system/summon/drowned2
-execute @e[name=level,scores={background=332}] ~~~ execute @a[tag=alive] -162 -32 29 function system/summon/drowned_with_trident2
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[scores={isAlive=1}] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=332}] ~~~ execute @a[scores={isAlive=1}] -167 -20 34 function system/summon/drowned3
+execute @e[name=level,scores={background=332}] ~~~ execute @a[scores={isAlive=1}] -156 -24 30 function system/summon/drowned2
+execute @e[name=level,scores={background=332}] ~~~ execute @a[scores={isAlive=1}] -162 -28 24 function system/summon/drowned2
+execute @e[name=level,scores={background=332}] ~~~ execute @a[scores={isAlive=1}] -162 -32 29 function system/summon/drowned_with_trident2
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave_more

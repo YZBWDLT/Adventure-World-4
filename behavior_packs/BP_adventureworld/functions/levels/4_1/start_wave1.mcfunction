@@ -17,12 +17,12 @@ structure load 4_1_phase1 -168 16 -23
 spawnpoint @a -156 17 -23
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=410}] ~~~ execute @a[tag=alive] -165 17 -17 function system/summon/guardian1
-execute @e[name=level,scores={background=410}] ~~~ execute @a[tag=alive] -162 17 -22 function system/summon/drowned3
-execute @e[name=level,scores={background=410}] ~~~ execute @a[tag=alive] -161 17 -20 function system/summon/drowned2
-execute @e[name=level,scores={background=410}] ~~~ execute @a[tag=alive] -162 17 -16 function system/summon/drowned2
-execute @e[name=level,scores={background=410}] ~~~ execute @a[tag=alive] -165 17 -23 function system/summon/skeleton1
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[scores={isAlive=1}] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=410}] ~~~ execute @a[scores={isAlive=1}] -165 17 -17 function system/summon/guardian1
+execute @e[name=level,scores={background=410}] ~~~ execute @a[scores={isAlive=1}] -162 17 -22 function system/summon/drowned3
+execute @e[name=level,scores={background=410}] ~~~ execute @a[scores={isAlive=1}] -161 17 -20 function system/summon/drowned2
+execute @e[name=level,scores={background=410}] ~~~ execute @a[scores={isAlive=1}] -162 17 -16 function system/summon/drowned2
+execute @e[name=level,scores={background=410}] ~~~ execute @a[scores={isAlive=1}] -165 17 -23 function system/summon/skeleton1
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

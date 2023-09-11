@@ -15,12 +15,12 @@ fill -72 -19 -32 -70 -17 -32 minecraft:stained_glass["color":"purple"]
 spawnpoint @a -78 -11 -30
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=620}] ~~~ execute @a[tag=alive] -80 -21 -43 function system/summon/zombie3
-execute @e[name=level,scores={background=620}] ~~~ execute @a[tag=alive] -73 -21 -41 function system/summon/zombie3
-execute @e[name=level,scores={background=620}] ~~~ execute @a[tag=alive] -81 -21 -39 function system/summon/skeleton2
-execute @e[name=level,scores={background=620}] ~~~ execute @a[tag=alive] -77 -21 -41 function system/summon/skeleton2
-execute @e[name=level,scores={background=620}] ~~~ execute @a[tag=alive] -77 -20 -34 function system/summon/cave_spider2
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[scores={isAlive=1}] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=620}] ~~~ execute @a[scores={isAlive=1}] -80 -21 -43 function system/summon/zombie3
+execute @e[name=level,scores={background=620}] ~~~ execute @a[scores={isAlive=1}] -73 -21 -41 function system/summon/zombie3
+execute @e[name=level,scores={background=620}] ~~~ execute @a[scores={isAlive=1}] -81 -21 -39 function system/summon/skeleton2
+execute @e[name=level,scores={background=620}] ~~~ execute @a[scores={isAlive=1}] -77 -21 -41 function system/summon/skeleton2
+execute @e[name=level,scores={background=620}] ~~~ execute @a[scores={isAlive=1}] -77 -20 -34 function system/summon/cave_spider2
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

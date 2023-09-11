@@ -18,12 +18,12 @@ fill -104 -17 69 -104 -15 67 minecraft:cobblestone_wall["wall_block_type":"diori
 spawnpoint @a -83 -12 81
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=220}] ~~~ execute @a[tag=alive] -88 0 72 function system/summon/spider1
-execute @e[name=level,scores={background=220}] ~~~ execute @a[tag=alive] -83 0 62 function system/summon/spider1
-execute @e[name=level,scores={background=220}] ~~~ execute @a[tag=alive] -81 -6 69 function system/summon/spider1
-execute @e[name=level,scores={background=220}] ~~~ execute @a[tag=alive] -93 -9 65 function system/summon/spider1
-execute @e[name=level,scores={background=220}] ~~~ execute @a[tag=alive] -92 -17 62 function system/summon/spider1
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[scores={isAlive=1}] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=220}] ~~~ execute @a[scores={isAlive=1}] -88 0 72 function system/summon/spider1
+execute @e[name=level,scores={background=220}] ~~~ execute @a[scores={isAlive=1}] -83 0 62 function system/summon/spider1
+execute @e[name=level,scores={background=220}] ~~~ execute @a[scores={isAlive=1}] -81 -6 69 function system/summon/spider1
+execute @e[name=level,scores={background=220}] ~~~ execute @a[scores={isAlive=1}] -93 -9 65 function system/summon/spider1
+execute @e[name=level,scores={background=220}] ~~~ execute @a[scores={isAlive=1}] -92 -17 62 function system/summon/spider1
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

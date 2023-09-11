@@ -16,21 +16,21 @@ kill @e[family=monster]
 spawnpoint @a -112 13 -103
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -130 -17 107 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -136 -17 99 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -144 -17 102 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -130 -17 112 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -132 -10 99 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -140 -8 106 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -125 -17 101 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -146 -17 98 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -118 -16 113 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -124 -18 96 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -121 -18 101 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -137 -18 98 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -145 -18 111 function system/summon/zombified_piglin1
-execute @e[name=level,scores={background=710}] ~~~ execute @a[tag=alive] -140 -10 105 function system/summon/zombified_piglin1
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[scores={isAlive=1}] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -130 -17 107 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -136 -17 99 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -144 -17 102 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -130 -17 112 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -132 -10 99 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -140 -8 106 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -125 -17 101 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -146 -17 98 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -118 -16 113 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -124 -18 96 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -121 -18 101 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -137 -18 98 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -145 -18 111 function system/summon/zombified_piglin1
+execute @e[name=level,scores={background=710}] ~~~ execute @a[scores={isAlive=1}] -140 -10 105 function system/summon/zombified_piglin1
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

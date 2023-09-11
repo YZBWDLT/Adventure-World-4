@@ -11,5 +11,5 @@ setworldspawn 43 21 132
 kill @e[type=aw:text_display]
 summon aw:text_display "§l§6开 始 游 戏" 44 29 86
 setblock 44 26 86 minecraft:beacon
-tag @a add alive
+scoreboard players set @a isAlive 1
 time set 6000

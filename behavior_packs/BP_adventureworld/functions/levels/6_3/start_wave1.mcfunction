@@ -15,10 +15,10 @@ fill -74 -39 8 -76 -37 8 minecraft:deepslate_brick_wall
 spawnpoint @a -82 -34 -16
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=630}] ~~~ execute @a[tag=alive] -74 -35 -2 function system/summon/drowned_with_trident2
-execute @e[name=level,scores={background=630}] ~~~ execute @a[tag=alive] -79 -39 3 function system/summon/drowned_with_trident2
-execute @e[name=level,scores={background=630}] ~~~ execute @a[tag=alive] -71 -37 -13 function system/summon/drowned_with_trident2
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[scores={isAlive=1}] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=630}] ~~~ execute @a[scores={isAlive=1}] -74 -35 -2 function system/summon/drowned_with_trident2
+execute @e[name=level,scores={background=630}] ~~~ execute @a[scores={isAlive=1}] -79 -39 3 function system/summon/drowned_with_trident2
+execute @e[name=level,scores={background=630}] ~~~ execute @a[scores={isAlive=1}] -71 -37 -13 function system/summon/drowned_with_trident2
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

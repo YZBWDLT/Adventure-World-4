@@ -21,7 +21,7 @@ execute @e[name=level,scores={background=343}] ~~~ execute @a[tag=!playing] ~~~ 
 # -----失败判定-----
 
 ## 对在重生点的玩家移除alive标签
-execute @a[x=-175,y=-4,z=29,dx=4,dy=5,dz=2] ~~~ tag @s remove alive
+execute @a[x=-175,y=-4,z=29,dx=4,dy=5,dz=2] ~~~ scoreboard players set @s isAlive 0
 
 ## 当不存在标签为alive的玩家时，游戏失败
 execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/3_4/game_lose

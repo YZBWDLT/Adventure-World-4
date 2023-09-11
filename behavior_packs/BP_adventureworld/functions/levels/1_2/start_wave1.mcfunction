@@ -14,10 +14,10 @@ fill -127 5 50 -125 7 50 minecraft:cobblestone_wall["wall_block_type":"sandstone
 spawnpoint @a -136 9 58
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=120}] ~~~ execute @a[tag=alive] -120 11 64 function system/summon/skeleton1
-execute @e[name=level,scores={background=120}] ~~~ execute @a[tag=alive] -132 8 64 function system/summon/zombie1
-execute @e[name=level,scores={background=120}] ~~~ execute @a[tag=alive] -126 7 58 function system/summon/zombie1
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[scores={isAlive=1}] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=120}] ~~~ execute @a[scores={isAlive=1}] -120 11 64 function system/summon/skeleton1
+execute @e[name=level,scores={background=120}] ~~~ execute @a[scores={isAlive=1}] -132 8 64 function system/summon/zombie1
+execute @e[name=level,scores={background=120}] ~~~ execute @a[scores={isAlive=1}] -126 7 58 function system/summon/zombie1
 
 ##【无需更改】 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

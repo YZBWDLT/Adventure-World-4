@@ -15,10 +15,10 @@ fill -117 -31 7 -117 -29 5 minecraft:ice
 spawnpoint @a -145 -23 6
 
 ## 生成守卫者
-execute @e[name=level,scores={background=440}] ~~~ execute @a[tag=alive,c=1] -138 -30 -2 function system/summon/guardian1
-execute @e[name=level,scores={background=440}] ~~~ execute @a[tag=alive,c=1] -122 -30 -2 function system/summon/guardian1
-execute @e[name=level,scores={background=440}] ~~~ execute @a[tag=alive,c=1] -122 -30 14 function system/summon/guardian1
-execute @e[name=level,scores={background=440}] ~~~ execute @a[tag=alive,c=1] -138 -30 14 function system/summon/guardian1
+execute @e[name=level,scores={background=440}] ~~~ execute @a[scores={isAlive=1},c=1] -138 -30 -2 function system/summon/guardian1
+execute @e[name=level,scores={background=440}] ~~~ execute @a[scores={isAlive=1},c=1] -122 -30 -2 function system/summon/guardian1
+execute @e[name=level,scores={background=440}] ~~~ execute @a[scores={isAlive=1},c=1] -122 -30 14 function system/summon/guardian1
+execute @e[name=level,scores={background=440}] ~~~ execute @a[scores={isAlive=1},c=1] -138 -30 14 function system/summon/guardian1
 effect @e[type=guardian] resistance 1000 20 true
 
 ## 初始化剩余时间数值

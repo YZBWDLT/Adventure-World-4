@@ -15,12 +15,12 @@ fill -174 17 18 -172 19 18 minecraft:cobblestone_wall["wall_block_type":"prismar
 spawnpoint @a -172 -1 30
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=340}] ~~~ execute @a[tag=alive] -175 -14 25 function system/summon/drowned2
-execute @e[name=level,scores={background=340}] ~~~ execute @a[tag=alive] -176 -9 19 function system/summon/drowned2
-execute @e[name=level,scores={background=340}] ~~~ execute @a[tag=alive] -172 -6 26 function system/summon/drowned2
-execute @e[name=level,scores={background=340}] ~~~ execute @a[tag=alive] -169 -3 25 function system/summon/skeleton1
-execute @e[name=level,scores={background=340}] ~~~ execute @a[tag=alive] -169 -14 21 function system/summon/creeper2
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[scores={isAlive=1}] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=340}] ~~~ execute @a[scores={isAlive=1}] -175 -14 25 function system/summon/drowned2
+execute @e[name=level,scores={background=340}] ~~~ execute @a[scores={isAlive=1}] -176 -9 19 function system/summon/drowned2
+execute @e[name=level,scores={background=340}] ~~~ execute @a[scores={isAlive=1}] -172 -6 26 function system/summon/drowned2
+execute @e[name=level,scores={background=340}] ~~~ execute @a[scores={isAlive=1}] -169 -3 25 function system/summon/skeleton1
+execute @e[name=level,scores={background=340}] ~~~ execute @a[scores={isAlive=1}] -169 -14 21 function system/summon/creeper2
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

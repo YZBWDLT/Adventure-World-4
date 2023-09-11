@@ -15,13 +15,13 @@ fill -184 -18 98 -184 -16 96 minecraft:nether_brick_fence
 spawnpoint @a -160 -12 92
 
 ## 生成生物
-## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=720}] ~~~ execute @a[tag=alive] -162 -18 108 function system/summon/piglin1
-execute @e[name=level,scores={background=720}] ~~~ execute @a[tag=alive] -169 -17 113 function system/summon/piglin1
-execute @e[name=level,scores={background=720}] ~~~ execute @a[tag=alive] -162 -18 105 function system/summon/piglin1
-execute @e[name=level,scores={background=720}] ~~~ execute @a[tag=alive] -170 -17 102 function system/summon/piglin2
-execute @e[name=level,scores={background=720}] ~~~ execute @a[tag=alive] -162 -18 113 function system/summon/piglin2
-execute @e[name=level,scores={background=720}] ~~~ execute @a[tag=alive] -164 -18 93 function system/summon/piglin3
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[scores={isAlive=1}] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=720}] ~~~ execute @a[scores={isAlive=1}] -162 -18 108 function system/summon/piglin1
+execute @e[name=level,scores={background=720}] ~~~ execute @a[scores={isAlive=1}] -169 -17 113 function system/summon/piglin1
+execute @e[name=level,scores={background=720}] ~~~ execute @a[scores={isAlive=1}] -162 -18 105 function system/summon/piglin1
+execute @e[name=level,scores={background=720}] ~~~ execute @a[scores={isAlive=1}] -170 -17 102 function system/summon/piglin2
+execute @e[name=level,scores={background=720}] ~~~ execute @a[scores={isAlive=1}] -162 -18 113 function system/summon/piglin2
+execute @e[name=level,scores={background=720}] ~~~ execute @a[scores={isAlive=1}] -164 -18 93 function system/summon/piglin3
 
 ## 开启所有关卡通用的开始关卡函数
 function levels/all_levels/start_wave1

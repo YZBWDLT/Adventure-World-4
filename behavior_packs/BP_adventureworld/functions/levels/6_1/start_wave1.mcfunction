@@ -24,13 +24,13 @@ fill -83 -31 -62 -83 -29 -64 barrier[] keep
 spawnpoint @a -66 -30 -54
 
 ## --- 生成生物 ---
-## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[tag=alive] 生成位置 function 生成的怪物
-execute @e[name=level,scores={background=610}] ~~~ execute @a[tag=alive] -72 -31 -48 function system/summon/zombie2
-execute @e[name=level,scores={background=610}] ~~~ execute @a[tag=alive] -76 -31 -52 function system/summon/zombie2
-execute @e[name=level,scores={background=610}] ~~~ execute @a[tag=alive] -74 -31 -59 function system/summon/zombie2
-execute @e[name=level,scores={background=610}] ~~~ execute @a[tag=alive] -78 -31 -62 function system/summon/cave_spider1
-execute @e[name=level,scores={background=610}] ~~~ execute @a[tag=alive] -83 -27 -52 function system/summon/creeper1
-execute @e[name=level,scores={background=610}] ~~~ execute @a[tag=alive] -69 -27 -59 function system/summon/skeleton2
+## 格式：execute @e[name=level,scores={background=关卡代码}] ~~~ execute @a[scores={isAlive=1}] 生成位置 function 生成的怪物
+execute @e[name=level,scores={background=610}] ~~~ execute @a[scores={isAlive=1}] -72 -31 -48 function system/summon/zombie2
+execute @e[name=level,scores={background=610}] ~~~ execute @a[scores={isAlive=1}] -76 -31 -52 function system/summon/zombie2
+execute @e[name=level,scores={background=610}] ~~~ execute @a[scores={isAlive=1}] -74 -31 -59 function system/summon/zombie2
+execute @e[name=level,scores={background=610}] ~~~ execute @a[scores={isAlive=1}] -78 -31 -62 function system/summon/cave_spider1
+execute @e[name=level,scores={background=610}] ~~~ execute @a[scores={isAlive=1}] -83 -27 -52 function system/summon/creeper1
+execute @e[name=level,scores={background=610}] ~~~ execute @a[scores={isAlive=1}] -69 -27 -59 function system/summon/skeleton2
 
 ## --- 开启所有关卡通用的开始关卡函数 ---
 function levels/all_levels/start_wave1
