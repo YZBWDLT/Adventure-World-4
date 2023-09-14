@@ -1,5 +1,5 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.16.0",
     "minecraft:item": {
         "description": {
             "identifier": "aw:regeneration_potion_1"
@@ -14,7 +14,7 @@
                     { "name": "regeneration", "chance" : 1.0, "duration" : 15, "amplifier" : 1 }
                 ]
             },
-            "minecraft:use_duration": 24
+            "minecraft:use_duration": 32
         }
     }
 }

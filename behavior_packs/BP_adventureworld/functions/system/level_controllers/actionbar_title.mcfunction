@@ -32,3 +32,5 @@ execute @e[name=level,scores={background=720..729}] ~~~ function levels/7_2/acti
 execute @e[name=level,scores={background=730..739}] ~~~ function levels/7_3/actionbar_title
 execute @e[name=level,scores={background=740..749}] ~~~ function levels/7_4/actionbar_title
 execute @e[name=level,scores={background=750..759}] ~~~ function levels/7_5/actionbar_title
+
+function items/actionbar_title
