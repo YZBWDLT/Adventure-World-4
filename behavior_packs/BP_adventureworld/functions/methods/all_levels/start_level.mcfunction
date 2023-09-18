@@ -7,12 +7,13 @@ scoreboard players set @e[name=wave] background 0
 scoreboard players set @e[name=lastWaveCompleted] background 0
 
 ## --- 开启关卡检测器 ---
-## (functions/levels/x_x/level_tester)并记录游玩状态
 scoreboard players set @e[name=timeline] active 2
+
+## --- 更改全体玩家的存活状态 ---
 scoreboard players set @a isAlive 1
 
 ## --- 改玩家为冒险模式 ---
-execute @e[name=developerMode,scores={settings=0}] ~~~ gamemode adventure @a[tag=playing]
+execute @e[name=developerMode,scores={settings=0}] ~~~ gamemode adventure @a[scores={isAlive=0..1}]
 
 ## --- 清除药效 ---
 effect @a clear

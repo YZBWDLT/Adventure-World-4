@@ -21,7 +21,7 @@ tag @a add playing
 scoreboard players set @a isAlive 1
 
 ## --- 改玩家为冒险模式 ---
-execute @e[name=developerMode,scores={settings=0}] ~~~ gamemode adventure @a[tag=playing]
+execute @e[name=developerMode,scores={settings=0}] ~~~ gamemode adventure @a[scores={isAlive=0..1}]
 
 ## --- 清除药效 ---
 effect @a clear
@@ -30,7 +30,7 @@ effect @a clear
 tp @a[tag=!intoLevel] @a[tag=intoLevel,c=1]
 
 ## --- 为玩家补充箭 ---
-give @a arrow 64
+give @a[hasitem={item=bow}] arrow 64
 
 ## --- 为玩家补充药水 ---
 ## --- 还是还是仍然是那个很烦人的/loot不能同时给予的问题，要用到遍历器，下面的这个标签是开遍历器用的 ---

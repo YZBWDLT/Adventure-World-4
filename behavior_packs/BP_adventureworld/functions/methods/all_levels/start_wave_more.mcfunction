@@ -14,7 +14,7 @@ tag @a add playing
 scoreboard players set @a isAlive 1
 
 ## --- 为玩家补充箭 ---
-give @a arrow 64
+give @a[hasitem={item=bow}] arrow 64
 
 ## --- 玩家缺物品时，给予物品 ---
 function methods/important_items_tester
