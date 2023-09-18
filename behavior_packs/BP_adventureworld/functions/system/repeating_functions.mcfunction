@@ -19,9 +19,9 @@ execute @e[name=potionTraversing,scores={active=1}] ~~~ function system/traverse
 
 ## --- 关卡函数 ---
 ## 进入房间检测器
-execute @a[tag=!playing,c=1] ~~~ function system/level_controllers/start_level
+execute @a[scores={isAlive=2},c=1] ~~~ function system/level_controllers/start_level
 ## 各关关卡检测器 - 加上exe @e[type=player] ~是为了防止玩家重新进入时因为实体未加载而错误的判定为关卡失败从而卡关的问题
-execute @e[type=player,c=1] ~~~ execute @e[name=timeline,scores={active=1..}] ~~~ function system/level_controllers/level_tester
+execute @e[type=player,c=1] ~~~ execute @e[name=timeline,scores={active=1..}] ~~~ function system/level_controllers/timeline
 ## 快捷栏标题控制器
 function system/level_controllers/actionbar_title
 
@@ -32,6 +32,8 @@ function system/hookshot_judger
 function system/time_played_recorder
 ## 音效控制器
 function system/sound_player
+## 头盔与靴子手持检测器
+execute @e[name=level,scores={background=311..}] ~~~ function system/helmet_holding_tester
 ## 虚拟准星
 execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ titleraw @s times 0 3 0
 execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ titleraw @s title {"rawtext":[{"text":"§1"}]}
