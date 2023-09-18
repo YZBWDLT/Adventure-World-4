@@ -18,4 +18,4 @@ spawnpoint @a -117 1 30
 function methods/all_levels/bonus
 
 ## --- 给予奖励 ---
-give @a aw:health_boost_potion_1 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @a aw:health_potion_1 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
