@@ -22,7 +22,8 @@
             "minecraft:icon": { "texture": "wild_sword" },
             "minecraft:max_stack_size": 1,
             "minecraft:foil": true,
-            "minecraft:hand_equipped": true
+            "minecraft:hand_equipped": true,
+            "minecraft:hover_text_color": "yellow"
         }
     }
 }
