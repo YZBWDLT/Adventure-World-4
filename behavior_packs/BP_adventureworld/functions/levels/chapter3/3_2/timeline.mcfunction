@@ -48,7 +48,7 @@ execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveComplete
 ### 生成怪物后，令水位上涨
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ structure load 3_2_phase2 -192 -22 -1 0_degrees none layer_by_layer 4.00 false true
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ function methods/title
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c注意！水位上涨！","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=wave]"}}]}}]}
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c注意！水位上涨！"}]}
 
 ## --- 设置上一波完成标记为0 ---
 execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ scoreboard players set @s background 0
