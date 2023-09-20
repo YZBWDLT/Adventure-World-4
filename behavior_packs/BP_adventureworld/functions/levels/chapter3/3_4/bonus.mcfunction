@@ -18,5 +18,5 @@ spawnpoint @a -173 -21 30
 function methods/all_levels/bonus
 
 ## --- 给予奖励 ---
-give @a shield 1 0 {"item_lock": { "mode": "lock_in_slot" } }
-give @a aw:strength_potion_1 1 0 {"item_lock": { "mode": "lock_in_slot" } }
+give @a shield 1 0 {"item_lock": { "mode": "lock_in_inventory" } }
+give @a aw:strength_potion_1 1 0 {"item_lock": { "mode": "lock_in_inventory" } }
