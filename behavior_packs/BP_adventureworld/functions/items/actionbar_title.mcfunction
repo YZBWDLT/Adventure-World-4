@@ -21,6 +21,9 @@ execute @e[name=level,scores={background=231..}] ~~~ titleraw @a[hasitem={item=a
 ## --- 全提升药水 I ---
 execute @e[name=level,scores={background=321..}] ~~~ titleraw @a[hasitem={item=aw:boost_potion_1,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6抗性提升 III (0:20)，+8 生命值 (♥*4) 上限 (2:00) §7| §6药水上限 §a1"}]}
 
+## --- 力量药水 I ---
+execute @e[name=level,scores={background=341..}] ~~~ titleraw @a[hasitem={item=aw:strength_potion_1,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6力量 I (0:30) §7| §6药水上限 §a1"}]}
+
 ## --- 绳枪 ---
 titleraw @a[hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6右键（或手机版长按）使用，可以钩住一定范围内的木板方块，从而把自己拉过去"}]}
 
