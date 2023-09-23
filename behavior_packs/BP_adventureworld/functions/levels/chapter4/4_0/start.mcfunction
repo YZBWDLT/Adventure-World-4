@@ -19,6 +19,3 @@ fill -155 7 -3 -157 9 -3 minecraft:ice
 
 ## 初始化4-1
 structure load 4_1_phase1 -168 16 -23
-
-## 调成晚上
-time set 18000

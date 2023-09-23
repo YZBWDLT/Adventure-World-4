@@ -20,3 +20,6 @@ scoreboard players set @a[hasitem={item=aw:diamond_boots,location=slot.weapon.ma
 ## --- 为手持钻石头盔和钻石靴子的玩家附魔 ---
 enchant @a[hasitem={item=aw:diamond_helmet,location=slot.weapon.mainhand}] respiration 3
 enchant @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand}] depth_strider 3
+
+## --- 为手持弓的玩家附魔 ---
+execute @e[name=level,scores={background=411..}] ~~~ enchant @a flame 1

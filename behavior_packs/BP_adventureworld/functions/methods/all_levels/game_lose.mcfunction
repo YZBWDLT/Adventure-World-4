@@ -6,9 +6,6 @@ title @a title §c§l关 卡 失 败
 title @a subtitle 所有人已死亡！已返回上一个重生点。
 scoreboard players set @e[name=soundPlayer] active 13
 
-## --- 清理所有残余的怪物 ---
-kill @e[family=monster]
-
 ## --- 更改全体玩家的存活状态 ---
 scoreboard players set @a isAlive 2
 
@@ -21,3 +18,7 @@ execute @e[name=failedTimes,scores={stats=5}] ~~~ tellraw @a {"rawtext":[{"text"
 ## --- 游戏失败后，停止关卡检测器的工作，并移除多余的绳枪 ---
 function methods/timeline/disable
 kill @e[family=hookshot]
+
+## --- 清除所有的怪物和怪物生成器 ---
+kill @e[family=summoner]
+kill @e[family=monster]

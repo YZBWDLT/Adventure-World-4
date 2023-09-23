@@ -47,7 +47,7 @@ execute @e[name=level,scores={background=300..349}] ~~~ execute @a[x=-175,y=16,z
 execute @e[name=level,scores={background=400..409}] ~~~ execute @a[x=-169,y=16,z=-22,dx=4,dy=4,dz=4] ~~~ execute @s[tag=intoLevel,scores={isAlive=2}] ~~~ function levels/chapter4/4_1/start_level
 execute @e[name=level,scores={background=400..419}] ~~~ execute @a[x=-158,y=6,z=-2,dx=4,dy=4,dz=4] ~~~ execute @s[tag=intoLevel,scores={isAlive=2}] ~~~ function levels/chapter4/4_2/start_level
 execute @e[name=level,scores={background=400..429}] ~~~ execute @a[x=-158,y=-13,z=11,dx=4,dy=4,dz=4] ~~~ execute @s[tag=intoLevel,scores={isAlive=2}] ~~~ function levels/chapter4/4_3/start_level
-execute @e[name=level,scores={background=400..439}] ~~~ execute @a[x=-142,y=-32,z=4,dx=4,dy=4,dz=4] ~~~ execute @s[tag=intoLevel,scores={isAlive=2}] ~~~ function levels/chapter4/4_4/start
+execute @e[name=level,scores={background=400..439}] ~~~ execute @a[x=-142,y=-32,z=4,dx=4,dy=4,dz=4] ~~~ execute @s[tag=intoLevel,scores={isAlive=2}] ~~~ function levels/chapter4/4_4/start_level
 execute @e[name=level,scores={background=400..449}] ~~~ execute @a[x=-97,y=-32,z=-9,dx=4,dy=4,dz=4] ~~~ execute @s[tag=intoLevel,scores={isAlive=2}] ~~~ function levels/chapter5/start
 execute @e[name=level,scores={background=500..509}] ~~~ execute @a[x=-82,y=-32,z=-30,dx=4,dy=4,dz=4] ~~~ execute @s[tag=intoLevel,scores={isAlive=2}] ~~~ function levels/chapter6/6_0/start
 execute @e[name=level,scores={background=600..609}] ~~~ execute @a[x=-77,y=-32,z=-51,dx=4,dy=4,dz=4] ~~~ execute @s[tag=intoLevel,scores={isAlive=2}] ~~~ function levels/chapter6/6_1/start_level

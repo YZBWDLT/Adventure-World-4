@@ -18,3 +18,7 @@ scoreboard players set @e[name=failedTimes] stats 0
 ## --- 清除所有的状态效果并回满血 ---
 effect @a clear
 effect @a instant_health 1 20 true
+
+## --- 清除所有的怪物和怪物生成器 ---
+kill @e[family=summoner]
+kill @e[family=monster]
