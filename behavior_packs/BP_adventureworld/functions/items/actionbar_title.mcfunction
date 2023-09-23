@@ -11,7 +11,8 @@ execute @e[name=level,scores={background=221..410}] ~~~ titleraw @a[hasitem={ite
 execute @e[name=level,scores={background=411..}] ~~~ titleraw @a[hasitem={item=aw:health_potion_2,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6+64 生命值 (♥*32) §7| §6药水上限 §a2"}]}
 
 ## --- 生命恢复药水 I ---
-execute @e[name=level,scores={background=121..}] ~~~ titleraw @a[hasitem={item=aw:regeneration_potion_1,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6生命恢复 II (0:15) §7| §6药水上限 §a1"}]}
+execute @e[name=level,scores={background=121..610}] ~~~ titleraw @a[hasitem={item=aw:regeneration_potion_1,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6生命恢复 II (0:15) "}]}
+execute @e[name=level,scores={background=611..}] ~~~ titleraw @a[hasitem={item=aw:regeneration_potion_2,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6生命恢复 II (0:45) "}]}
 
 ## --- 抗性提升药水 I & II ---
 execute @e[name=level,scores={background=131..420}] ~~~ titleraw @a[hasitem={item=aw:resistance_potion_1,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6抗性提升 III (0:20)"}]}
@@ -21,11 +22,13 @@ execute @e[name=level,scores={background=421..}] ~~~ titleraw @a[hasitem={item=a
 execute @e[name=level,scores={background=231..440}] ~~~ titleraw @a[hasitem={item=aw:health_boost_potion_1,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6+8 生命值 (♥*4) 上限 (2:00)"}]}
 execute @e[name=level,scores={background=441..}] ~~~ titleraw @a[hasitem={item=aw:health_boost_potion_2,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6+20 生命值 (♥*4) 上限 (2:00)"}]}
 
-## --- 全提升药水 I ---
-execute @e[name=level,scores={background=321..}] ~~~ titleraw @a[hasitem={item=aw:boost_potion_1,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6抗性提升 III (0:20)，+8 生命值 (♥*4) 上限 (2:00) §7| §6药水上限 §a1"}]}
+## --- 全提升药水 I & II ---
+execute @e[name=level,scores={background=321..620}] ~~~ titleraw @a[hasitem={item=aw:boost_potion_1,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6抗性提升 III (0:20)，+8 生命值 (♥*4) 上限 (2:00)"}]}
+execute @e[name=level,scores={background=621..}] ~~~ titleraw @a[hasitem={item=aw:boost_potion_2,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6抗性提升 IV (0:20)，+20 生命值 (♥*4) 上限 (2:00)"}]}
 
 ## --- 力量药水 I ---
-execute @e[name=level,scores={background=341..}] ~~~ titleraw @a[hasitem={item=aw:strength_potion_1,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6力量 I (0:30) §7| §6药水上限 §a1"}]}
+execute @e[name=level,scores={background=341..640}] ~~~ titleraw @a[hasitem={item=aw:strength_potion_1,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6力量 I (0:30)"}]}
+execute @e[name=level,scores={background=641..}] ~~~ titleraw @a[hasitem={item=aw:strength_potion_2,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6力量 I (1:00)"}]}
 
 ## --- 绳枪 ---
 titleraw @a[hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6右键（或手机版长按）使用，可以钩住一定范围内的木板方块，从而把自己拉过去"}]}
