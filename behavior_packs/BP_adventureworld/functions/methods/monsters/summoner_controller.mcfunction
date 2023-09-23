@@ -65,6 +65,12 @@ execute @e[name=creeper2Summoner,c=1] ~~~ function methods/monsters/creeper/leve
 execute @e[name=creeper3Summoner,c=1] ~~~ function methods/monsters/creeper/level3
 execute @e[name=creeper4Summoner,c=1] ~~~ function methods/monsters/creeper/level4
 
+## --- 女巫 ---
+execute @e[name=witch1Summoner,c=1] ~~~ function methods/monsters/witch/level1
+execute @e[name=witch2Summoner,c=1] ~~~ function methods/monsters/witch/level2
+execute @e[name=witch3Summoner,c=1] ~~~ function methods/monsters/witch/level3
+execute @e[name=witch4Summoner,c=1] ~~~ function methods/monsters/witch/level4
+
 ## --- 守卫者 ---
 execute @e[name=guardian1Summoner,c=1] ~~~ function methods/monsters/guardian
 
