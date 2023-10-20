@@ -40,10 +40,10 @@ execute @e[name=timeline,scores={time=565}] ~~~ particle aw:wild_sword4 -87 -10 
 
 execute @e[name=timeline,scores={time=760}] ~~~ particle aw:explosion -87 0 105
 execute @e[name=timeline,scores={time=760}] ~~~ execute @a ~~~ playsound random.explode @s
-execute @e[name=timeline,scores={time=760}] ~~~ loot spawn -87 0 105 loot "items/wild_sword"
+execute @e[name=timeline,scores={time=760}] ~~~ give @a aw:wild_sword
 execute @e[name=timeline,scores={time=760}] ~~~ structure load 7_0_boomed -91 -1 99
 
-execute @e[name=timeline,scores={time=765}] ~~~ say (提醒玩家捡起神剑)
+execute @e[name=timeline,scores={time=765}] ~~~ say (这个版本先直接这么给神剑了，后面的版本会专门做个实体搞个剑的模型插进去 :P )
 
 ## 停止，直到有玩家捡起神剑
 execute @e[name=timeline,scores={time=770}] ~~~ scoreboard players set @e[name=timeline] active 2

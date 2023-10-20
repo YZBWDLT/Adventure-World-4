@@ -18,5 +18,9 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePla
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=creeper4Summoner] ~~~ summon minecraft:creeper ~~~ aw:level_4 "苦力怕 | lv.4"
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=creeper4Summoner] ~~~ summon minecraft:creeper ~~~ aw:level_4 "苦力怕 | lv.4"
 
+## --- 附加效果 ---
+### 水下呼吸
+execute @e[name=creeper4Summoner] ~~~ effect @e[type=creeper,r=2] water_breathing 1000 0 true
+
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=creeper4Summoner]

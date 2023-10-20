@@ -29,7 +29,7 @@ execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/ch
 execute @e[name=wave,scores={background=1..2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ function methods/title
 execute @e[name=wave,scores={background=1..2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c7-3§f | 第§a%%s§f波","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=wave]"}}]}}]}
 ### 召唤生成器
-execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -200 -18 98 "aw:as_summoner" "skeleton1Summoner"
+execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -200 -16 98 "aw:as_summoner" "skeleton1Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -195 -18 96 "aw:as_summoner" "skeleton1Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -203 -17 104 "aw:as_summoner" "zombifiedPiglin2Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -202 -16 96 "aw:as_summoner" "zombifiedPiglin2Summoner"
@@ -44,7 +44,7 @@ execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveComplete
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -197 -10 103 "aw:as_summoner" "ghastSummoner"
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -210 -6 98 "aw:as_summoner" "ghastSummoner"
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -202 -16 96 "aw:as_summoner" "zombifiedPiglin2Summoner"
-execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -200 -18 98 "aw:as_summoner" "skeleton2Summoner"
+execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -200 -16 98 "aw:as_summoner" "skeleton2Summoner"
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -195 -18 96 "aw:as_summoner" "skeleton3Summoner"
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -203 -17 104 "aw:as_summoner" "skeleton4Summoner"
 
