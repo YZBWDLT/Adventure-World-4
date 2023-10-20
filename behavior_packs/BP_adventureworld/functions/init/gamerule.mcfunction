@@ -27,6 +27,6 @@ gamerule sendcommandfeedback false
 gamerule showbordereffect false
 gamerule showcoordinates false
 gamerule showdeathmessages false
-gamerule showtags true
+gamerule showtags false
 gamerule spawnradius 0
 gamerule tntexplodes false

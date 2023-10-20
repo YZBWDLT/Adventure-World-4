@@ -11,7 +11,6 @@
 		"components": {
 			"minecraft:type_family": { "family": [ "spider", "monster", "mob", "arthropod" ] },
 			"minecraft:collision_box": { "width": 1.4, "height": 0.9 },
-			"minecraft:health": { "value": 16, "max": 16 },
 			"minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
 			"minecraft:nameable": { "always_show": true },
 			"minecraft:is_hidden_when_invisible": { },
@@ -29,7 +28,6 @@
 				]
 			},
 
-			"minecraft:movement": { "value": 0.3 },
 			"minecraft:movement.basic": { },
 			"minecraft:jump.static": { },
 			"minecraft:navigation.climb": { "can_path_over_water": true },
@@ -39,7 +37,6 @@
 			"minecraft:behavior.look_at_player": { "priority": 7, "look_distance": 6.0, "probability": 0.02 },
 			"minecraft:behavior.random_look_around": { "priority": 7 },
 
-			"minecraft:attack": { "damage": 2 },
 			"minecraft:behavior.hurt_by_target": { "priority": 1 },
 			"minecraft:behavior.melee_attack": { "priority": 3, "track_target": true, "reach_multiplier": 0.8 },
 			"minecraft:behavior.nearest_attackable_target": {
@@ -59,11 +56,42 @@
 					}
 				]
 			},
-			"minecraft:behavior.leap_at_target": { "priority": 4, "yd": 0.4, "must_be_on_ground": false }
+			"minecraft:behavior.leap_at_target": { "priority": 4, "yd": 0.4, "must_be_on_ground": false },
+
+			"minecraft:health": { "value": 16, "max": 16 },
+			"minecraft:attack": { "damage": 2 },
+			"minecraft:movement": { "value": 0.3 }
 
 		},
 
-      	"events": { },
-		"component_groups": { }
+      	"events": {
+			"minecraft:entity_spawned": { "add": { "component_groups": [ "level_1" ] } },
+			"aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
+			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
+			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } }
+		},
+		"component_groups": {
+			"level_1": {
+				"minecraft:health": { "value": 12, "max": 12 },
+				"minecraft:attack": { "damage": [ 1, 2 ] },
+				"minecraft:movement": { "value": 0.28 }
+			},
+			"level_2": {
+				"minecraft:health": { "value": 16, "max": 16 },
+				"minecraft:attack": { "damage": 2 },
+				"minecraft:movement": { "value": 0.3 }
+			},
+			"level_3": {
+				"minecraft:health": { "value": 20, "max": 20 },
+				"minecraft:attack": { "damage": [ 2, 3 ] },
+				"minecraft:movement": { "value": 0.32 }
+			},
+			"level_4": {
+				"minecraft:health": { "value": 24, "max": 24 },
+				"minecraft:attack": { "damage": 3 },
+				"minecraft:movement": { "value": 0.35 }
+			}
+		}
     }
 }

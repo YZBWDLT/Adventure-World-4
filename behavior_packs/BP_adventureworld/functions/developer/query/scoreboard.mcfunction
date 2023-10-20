@@ -3,22 +3,25 @@ tellraw @s {"rawtext":[{"text":"下文反馈格式: (记分项).(标记名) = (�
 
 ## === 激活数据 active ===
 
-tellraw @s {"rawtext":[{"translate":"active.bonusTraversing = %%s §7# 奖励遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=bonusTraversing]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"active.potionTraversing = %%s §7# 药水遍历器","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=potionTraversing]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.soundPlayer = %%s §7# 音效播放器，0：不激活，不为0：根据本值决定播放何种音效","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=soundPlayer]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"active.timeline = %%s §7# 时间线控制器：为1时开始计时","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=timeline]"}}]}}]}
 
 ## === 后台数据 ===
 tellraw @s {"rawtext":[{"translate":"background.alivePlayersAmount = %%s §7# 记录存活玩家数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=alivePlayersAmount]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.hookshotAmount = %%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=hookshotAmount]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"background.level = %%s §7# 记录关卡数据，三位数分别为(章节)(关卡)(已完成波数)","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=level]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"background.lastWaveCompleted = %%s §7# 上一波是否已完成","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=lastWaveCompleted]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"background.level = %%s §7# 记录关卡数据，三位数分别为(章节)(关卡)(是否已完成)","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=level]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.monsterAmount = %%s §7# 记录怪物数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=monsterAmount]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.randomLocation = %%s §7# 随机怪物刷新位置","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=randomLocation]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.randomMonster = %%s §7# 随机怪物种类","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=randomMonster]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"background.wave = %%s §7# 记录波数数据","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=wave]"}}]}}]}
 
 ## === crosshair ===
 
 tellraw @s {"rawtext":[{"translate":"crosshair.@s = %%s §7# 准星启用状态","with":{"rawtext":[{"score":{"objective":"crosshair","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"isAlive.@s = %%s §7# 玩家存活状态，0=游戏时死亡，1=游戏时存活，2=未在游戏中","with":{"rawtext":[{"score":{"objective":"isAlive","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"isHoldingHelmet.@s = %%s §7# 玩家是否手持过钻石头盔，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingHelmet","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"isHoldingBoots.@s = %%s §7# 玩家是否手持过钻石靴子，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingBoots","name":"@s"}}]}}]}
 
 ## === 设置数据 settings ===
 
@@ -33,6 +36,7 @@ tellraw @s {"rawtext":[{"translate":"stats.allFailedTimes = %%s §7# 记录失�
 ## === 时间数据 time ===
 
 tellraw @s {"rawtext":[{"translate":"time.monsterRefreshLeft = %%s §7# 怪物刷新频率","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=monsterRefreshLeft]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"time.monsterSummonDelay = %%s §7# 怪物生成延迟","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=monsterSummonDelay]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.playedMinute = %%s §7# 游玩时长（分钟），从试炼开始时开始计时","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=playedMinute]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.playedSecond = %%s §7# 游玩时长（秒），从试炼开始时开始计时","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=playedSecond]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.lavaWarningLeft = %%s §7# 用于设定岩浆溢出的剩余时间","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=lavaWarningLeft]"}}]}}]}

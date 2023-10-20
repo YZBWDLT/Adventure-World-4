@@ -31,8 +31,8 @@ execute @e[name=soundPlayer,scores={active=8,time=2}] ~~~ execute @a ~~~ playsou
 ## 9 | smithing_table.use | 音调1
 execute @e[name=soundPlayer,scores={active=9,time=2}] ~~~ execute @a ~~~ playsound smithing_table.use @s ~~~ 1 1
 
-## 10 |  | 
-## execute @e[name=soundPlayer,scores={active=10,time=2}] ~~~ execute @a ~~~ playsound hard_achievement_complete @s ~~~ 0.5 1
+## 10 | random.levelup | 音调1.25
+execute @e[name=soundPlayer,scores={active=10,time=2}] ~~~ execute @a ~~~ playsound random.levelup @s ~~~ 1 1.25
 
 ## 11 | random.pop | 音调1
 execute @e[name=soundPlayer,scores={active=11,time=2}] ~~~ execute @a ~~~ playsound random.pop @s ~~~ 1 1

@@ -7,27 +7,6 @@
 			"is_summonable": true,
 			"is_experimental": false
 		},
-		"component_groups": {
-			"minecraft:exploding": {
-				"minecraft:explode": { "fuse_length": 1.5, "fuse_lit": true, "power": 3, "causes_fire": false, "destroy_affected_by_griefing": true }
-			},
-			"minecraft:charged_creeper": {
-				"minecraft:is_charged": { }
-			},
-			"minecraft:charged_exploding": {
-				"minecraft:explode": { "fuse_length": 1.5, "fuse_lit": true, "power": 6, "causes_fire": false, "destroy_affected_by_griefing": true }
-			},
-			"minecraft:forced_exploding": {
-				"minecraft:target_nearby_sensor": { },
-				"minecraft:explode": { "fuse_length": 1.5, "fuse_lit": true, "power": 3, "causes_fire": false, "destroy_affected_by_griefing": true },
-				"minecraft:on_target_escape": { }
-			},
-			"minecraft:forced_charged_exploding": {
-				"minecraft:target_nearby_sensor": { },
-				"minecraft:explode": { "fuse_length": 1.5, "fuse_lit": true, "power": 6, "causes_fire": false, "destroy_affected_by_griefing": true },
-				"minecraft:on_target_escape": { }
-			}
-		},
 
 		"components": {
 			"minecraft:is_hidden_when_invisible": { },
@@ -36,12 +15,10 @@
 			"minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
 			"minecraft:nameable": { "always_show": true },
 			"minecraft:collision_box": { "width": 0.6, "height": 1.8 },
-			"minecraft:movement": { "value": 0.2 },
 			"minecraft:navigation.walk": { "can_path_over_water": true },
 			"minecraft:movement.basic": { },
 			"minecraft:jump.static": { },
 			"minecraft:can_climb": { },
-			"minecraft:health": { "value": 20, "max": 20 },
 			"minecraft:hurt_on_condition": {
 				"damage_conditions": [
 					{
@@ -125,10 +102,19 @@
 			"minecraft:physics": { },
 			"minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
 			"minecraft:on_target_escape": { "event": "minecraft:stop_exploding", "target": "self" },
-			"minecraft:conditional_bandwidth_optimization": { }
+			"minecraft:conditional_bandwidth_optimization": { },
+			
+			"minecraft:movement": { "value": 0.2 },
+			"minecraft:health": { "value": 20, "max": 20 }
 		},
 
 		"events": {
+			"minecraft:entity_spawned": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
+			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
+			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } },
+
 			"minecraft:start_exploding_forced": {
 				"sequence": [
 					{
@@ -137,7 +123,7 @@
 					},
 					{
 						"filters": { "test": "has_component", "value": "minecraft:is_charged" },
-                        "add": { "component_groups": [ "minecraft:forced_charged_exploding" ] }
+						"add": { "component_groups": [ "minecraft:forced_charged_exploding" ] }
 					}
 				]
 			},
@@ -160,6 +146,44 @@
 				"remove": { "component_groups": [ "minecraft:exploding" ] },
 				"add": { "component_groups": [ "minecraft:charged_creeper" ] }
 			}
-		}
+	  	},
+	  	"component_groups": {
+			"level_1": {
+				"minecraft:health": { "value": 16, "max": 16 },
+				"minecraft:movement": { "value": 0.16 }
+			},
+			"level_2": {
+				"minecraft:health": { "value": 20, "max": 20 },
+				"minecraft:movement": { "value": 0.2 }
+			},
+			"level_3": {
+				"minecraft:health": { "value": 24, "max": 24 },
+				"minecraft:movement": { "value": 0.24 }
+			},
+			"level_4": {
+				"minecraft:health": { "value": 28, "max": 28 },
+				"minecraft:movement": { "value": 0.28 }
+			},
+
+			"minecraft:exploding": {
+				"minecraft:explode": { "fuse_length": 1.5, "fuse_lit": true, "power": 3, "causes_fire": false, "destroy_affected_by_griefing": true }
+			},
+			"minecraft:charged_creeper": {
+				"minecraft:is_charged": { }
+			},
+			"minecraft:charged_exploding": {
+				"minecraft:explode": { "fuse_length": 1.5, "fuse_lit": true, "power": 6, "causes_fire": false, "destroy_affected_by_griefing": true }
+			},
+			"minecraft:forced_exploding": {
+				"minecraft:target_nearby_sensor": { },
+				"minecraft:explode": { "fuse_length": 1.5, "fuse_lit": true, "power": 3, "causes_fire": false, "destroy_affected_by_griefing": true },
+				"minecraft:on_target_escape": { }
+			},
+			"minecraft:forced_charged_exploding": {
+				"minecraft:target_nearby_sensor": { },
+				"minecraft:explode": { "fuse_length": 1.5, "fuse_lit": true, "power": 6, "causes_fire": false, "destroy_affected_by_griefing": true },
+				"minecraft:on_target_escape": { }
+			}
+	  	}
 	}
 }
