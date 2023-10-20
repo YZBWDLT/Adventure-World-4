@@ -25,8 +25,9 @@ tp @a[tag=!intoLevel] @a[tag=intoLevel,c=1]
 ## 当玩家有弓时才进行给予
 give @a[hasitem={item=bow}] arrow 64
 
-## --- 为玩家补充药水 ---
+## --- 为玩家补充药水和残留的重要装备 ---
 function methods/potion_bonus
+function methods/important_items_tester
 
 ## --- 失败多次后，给予药效 ---
 execute @e[name=failedTimes,scores={stats=3..}] ~~~ effect @a strength 1000 1 true
