@@ -15,6 +15,10 @@ scoreboard players set @e[name=soundPlayer] active 10
 ## --- 本关的失败次数归零 ---
 scoreboard players set @e[name=failedTimes] stats 0
 
+## --- 补满药水 ---
+function methods/potion_bonus
+tellraw @a {"rawtext":[{"translate":"药水已补满。"}]}
+
 ## --- 清除所有的状态效果并回满血 ---
 effect @a clear
 effect @a instant_health 1 20 true

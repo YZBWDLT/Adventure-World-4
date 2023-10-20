@@ -26,9 +26,7 @@ tp @a[tag=!intoLevel] @a[tag=intoLevel,c=1]
 give @a[hasitem={item=bow}] arrow 64
 
 ## --- 为玩家补充药水 ---
-## --- 还是还是仍然是那个很烦人的/loot不能同时给予的问题，要用到遍历器，下面的这个标签是开遍历器用的 ---
-tag @a remove potionTraversing
-scoreboard players set @e[name=potionTraversing] active 1
+function methods/potion_bonus
 
 ## --- 失败多次后，给予药效 ---
 execute @e[name=failedTimes,scores={stats=3..}] ~~~ effect @a strength 1000 1 true

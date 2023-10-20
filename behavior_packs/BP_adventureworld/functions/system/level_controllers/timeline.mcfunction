@@ -25,7 +25,7 @@ execute @e[name=level,scores={background=610}] ~~~ function levels/chapter6/6_1/
 execute @e[name=level,scores={background=620}] ~~~ function levels/chapter6/6_2/timeline 
 execute @e[name=level,scores={background=630}] ~~~ function levels/chapter6/6_3/timeline 
 execute @e[name=level,scores={background=640}] ~~~ function levels/chapter6/6_4/timeline 
-execute @e[name=level,scores={background=641}] ~~~ function levels/chapter7/7_0/timeline 
+execute @e[name=level,scores={background=641..709}] ~~~ function levels/chapter7/7_0/timeline 
 execute @e[name=level,scores={background=710}] ~~~ function levels/chapter7/7_1/timeline 
 execute @e[name=level,scores={background=720}] ~~~ function levels/chapter7/7_2/timeline 
 execute @e[name=level,scores={background=730}] ~~~ function levels/chapter7/7_3/timeline 
