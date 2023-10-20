@@ -1,6 +1,9 @@
 # ===== 关卡奖励 =====
 # 关卡完成后执行
 
+## --- 设置level分值 ---
+scoreboard players set @e[name=level] background 731
+
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§a7-3已完成！"}]}
 
