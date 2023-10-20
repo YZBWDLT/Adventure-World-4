@@ -30,6 +30,8 @@ execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveComplete
 
 ### 设在重生点的玩家的isAlive.@s=0，以标记该玩家已死亡
 scoreboard players set @a[x=-75,y=-29,z=35,r=2,scores={isAlive=1}] isAlive 0
+### 为死亡玩家添加抗火
+effect @a[scores={isAlive=0}] fire_resistance 30 0 true
 ### 当不存在isAlive.@s=1的玩家时，游戏失败
 execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/chapter6/6_4/game_lose
 
