@@ -16,3 +16,7 @@ spawnpoint @a -95 -31 -13
 
 ## --- 清除玩家的皮革靴子 ---
 clear @a leather_boots
+
+## --- 清除4-4可能在最后生成的生成器 ---
+## 在6-1发现了来自4-4的怪物，理论上来说生成器是应当被销毁的
+kill @e[family=summoner]
