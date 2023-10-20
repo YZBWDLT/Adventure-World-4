@@ -11,12 +11,6 @@ execute @a[hasitem={item=arrow},c=1] ~~~ function system/item_limit/arrows
 ## 药水上限函数
 execute @e[name=level,scores={background=100..}] ~~~ function system/item_limit/potions
 
-## --- 遍历器函数 ---
-## 奖励遍历器
-execute @e[name=bonusTraversing,scores={active=1}] ~~~ function system/traversers/bonus
-## 药水遍历器
-execute @e[name=potionTraversing,scores={active=1}] ~~~ function system/traversers/potion
-
 ## --- 关卡函数 ---
 ## 进入房间检测器
 execute @a[scores={isAlive=2},c=1] ~~~ function system/level_controllers/start_level

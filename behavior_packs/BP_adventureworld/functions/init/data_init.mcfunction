@@ -87,11 +87,7 @@ scoreboard players set @e[name=timeline] time 0
 scoreboard players set @e[name=monsterSummonDelay] time 0
 
 ### active
-summon je:marker "bonusTraversing" -82 1 -2
-summon je:marker "potionTraversing" -82 1 -2
 
-scoreboard players set @e[name=bonusTraversing] active 0
-scoreboard players set @e[name=potionTraversing] active 0
 scoreboard players set @e[name=timeline] active 2
 scoreboard players set @e[name=soundPlayer] active 0
 
