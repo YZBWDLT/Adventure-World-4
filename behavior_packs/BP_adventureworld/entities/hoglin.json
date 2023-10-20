@@ -17,28 +17,12 @@
                 "priority": 4,
                 "within_radius": 16.0,
                 "entity_types": [
-                    {
-                        "filters": {
-                            "all_of": [
-                                { "test": "is_family", "subject": "other", "value": "player" },
-                                { "test": "has_component", "subject": "self", "operator": "!=", "value": "minecraft:attack_cooldown" }
-                            ]
-                        },
-                        "max_dist": 16
-                    }
+                    { "filters": { "all_of": [ { "test": "is_family", "subject": "other", "value": "player" } ] }, "max_dist": 16 }
                 ],
                 "must_see": true
             },
             "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
-            "minecraft:hurt_on_condition": {
-                "damage_conditions": [
-                    {
-                        "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
-                        "cause": "lava",
-                        "damage_per_tick": 4
-                    }
-                ]
-            },
+            "minecraft:hurt_on_condition": { "damage_conditions": [ { "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true }, "cause": "lava", "damage_per_tick": 4 } ] },
             "minecraft:behavior.avoid_block": {
                 "priority": 1,
                 "tick_interval": 5,
@@ -64,63 +48,29 @@
             "minecraft:balloonable": { },
             "minecraft:physics": { },
             "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
-            "minecraft:conditional_bandwidth_optimization": { }
+            "minecraft:conditional_bandwidth_optimization": { },
+            "minecraft:collision_box": { "width": 1.4, "height": 1.4 },
+            "minecraft:custom_hit_test": { "hitboxes": [ { "width": 2.0, "height": 1.75, "pivot": [ 0, 1, 0 ] } ] },
+            "minecraft:behavior.hurt_by_target": { "priority": 2 },
+            "minecraft:behavior.melee_attack": { "priority": 4, "speed_multiplier": 1, "track_target": true, "reach_multiplier": 2.15, "cooldown_time": 2 },
+            "minecraft:type_family": { "family": [ "hoglin", "hoglin_adult", "mob", "monster" ] }
         },
   
         "events": {
-            "minecraft:entity_spawned": {
-                "randomize": [
-                    { "weight": 95, "trigger": "spawn_adult" },
-                    { "weight": 5, "trigger": "spawn_baby" }
-                ]
-            },
-            "spawn_adult": {
-                "add": { "component_groups": [ "minecraft:hoglin_adult" ] }
-            },
-            "spawn_baby": {
-                "add": { "component_groups": [ "minecraft:hoglin_baby" ] }
-            },
+            "minecraft:entity_spawned": { "add": { "component_groups": [ "level_1" ] } },
+			"aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
+			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
+			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } },
+
             "escaped_event": {
                 "add": { "component_groups": [ "attack_cooldown" ] },
                 "remove": { "component_groups": [ "angry_hoglin" ] }
             },
-            "attack_cooldown_complete_event": {
-                "add": { "component_groups": [ "angry_hoglin" ] },
-                "remove": { "component_groups": [ "attack_cooldown" ] }
-            }
+            "attack_cooldown_complete_event": { "remove": { "component_groups": [ "attack_cooldown" ] } }
         },
 
         "component_groups": {
-            "minecraft:hoglin_baby": {
-                "minecraft:type_family": { "family": [ "hoglin", "hoglin_baby", "mob", "monster" ] },
-                "minecraft:is_baby": { },
-                "minecraft:movement": { "value": 0.36 },
-                "minecraft:behavior.melee_attack": { "priority": 4, "speed_multiplier": 1, "track_target": true, "reach_multiplier": 1.0, "cooldown_time": 0.75 },
-                "minecraft:attack": { "damage": 1.0 },
-                "minecraft:scale": { "value": 0.5 },
-                "minecraft:collision_box": { "width": 0.85, "height": 0.85 },
-                "minecraft:custom_hit_test": { "hitboxes": [ { "width": 1.0, "height": 0.85, "pivot": [ 0, 0.5, 0 ] } ] },
-                "minecraft:behavior.panic": { "priority": 1, "speed_multiplier": 1 }
-            },
-            "minecraft:hoglin_adult": {
-                "minecraft:collision_box": { "width": 1.4, "height": 1.4 },
-                "minecraft:movement": { "value": 0.3 },
-                "minecraft:custom_hit_test": { "hitboxes": [ { "width": 2.0, "height": 1.75, "pivot": [ 0, 1, 0 ] } ] },
-                "minecraft:group_size": {
-                    "radius": 32,
-                    "filters": {
-                        "all_of": [
-                            { "test": "has_component", "operator": "!=", "value": "minecraft:is_baby" },
-                            { "test": "is_family", "value": "hoglin" }
-                        ]
-                    } 
-                },
-                "minecraft:behavior.hurt_by_target": { "priority": 2 },
-                "minecraft:on_target_acquired": { "event": "become_angry_event", "target": "self" },        
-                "minecraft:behavior.melee_attack": { "priority": 4, "speed_multiplier": 1, "track_target": true, "reach_multiplier": 2.15, "cooldown_time": 2 },
-                "minecraft:attack": { "damage": [ 3, 9 ] },
-                "minecraft:type_family": { "family": [ "hoglin", "hoglin_adult", "mob", "monster" ] }
-            },
             "attack_cooldown": {
                 "minecraft:attack_cooldown": {
                     "attack_cooldown_time": [ 10.0, 15.0 ],
@@ -129,7 +79,29 @@
             },
             "angry_hoglin": {
                 "minecraft:angry": { "duration": 10, "broadcast_anger": true, "broadcast_range": 16, "angry_sound": "angry", "sound_interval": { "range_min": 2.0, "range_max": 5.0 } }
-            }
+            },
+
+            "level_1": {
+				"minecraft:health": { "value": 35, "max": 35 },
+				"minecraft:attack": { "damage": [ 2, 6 ] },
+				"minecraft:movement": { "value": 0.28 }
+			},
+			"level_2": {
+				"minecraft:health": { "value": 40, "max": 40 },
+                "minecraft:attack": { "damage": [ 3, 9 ] },
+                "minecraft:movement": { "value": 0.3 }
+			},
+			"level_3": {
+				"minecraft:health": { "value": 45, "max": 45 },
+				"minecraft:attack": { "damage": [ 4, 11 ] },
+				"minecraft:movement": { "value": 0.32 }
+			},
+			"level_4": {
+				"minecraft:health": { "value": 50, "max": 50 },
+				"minecraft:attack": { "damage": [ 6, 13 ] },
+				"minecraft:movement": { "value": 0.35 }
+			}
+
         }
     }
 } 

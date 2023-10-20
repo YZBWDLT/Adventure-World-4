@@ -48,6 +48,17 @@ execute @e[name=drownedWithTridentSummoner,c=1] ~~~ function methods/monsters/dr
 execute @e[name=husk1Summoner,c=1] ~~~ function methods/monsters/husk
 execute @e[name=huskBaby1Summoner,c=1] ~~~ function methods/monsters/husk_baby
 
+## --- 猪灵&疣猪兽 ---
+execute @e[name=piglin1Summoner,c=1] ~~~ function methods/monsters/piglin/level1
+execute @e[name=piglin2Summoner,c=1] ~~~ function methods/monsters/piglin/level2
+execute @e[name=piglin3Summoner,c=1] ~~~ function methods/monsters/piglin/level3
+execute @e[name=piglin4Summoner,c=1] ~~~ function methods/monsters/piglin/level4
+
+execute @e[name=hoglin1Summoner,c=1] ~~~ function methods/monsters/hoglin/level1
+execute @e[name=hoglin2Summoner,c=1] ~~~ function methods/monsters/hoglin/level2
+execute @e[name=hoglin3Summoner,c=1] ~~~ function methods/monsters/hoglin/level3
+execute @e[name=hoglin4Summoner,c=1] ~~~ function methods/monsters/hoglin/level4
+
 ## --- 蜘蛛&洞穴蜘蛛 ---
 execute @e[name=spider1Summoner,c=1] ~~~ function methods/monsters/spider/level1
 execute @e[name=spider2Summoner,c=1] ~~~ function methods/monsters/spider/level2
@@ -74,6 +85,14 @@ execute @e[name=witch4Summoner,c=1] ~~~ function methods/monsters/witch/level4
 ## --- 守卫者 ---
 execute @e[name=guardian1Summoner,c=1] ~~~ function methods/monsters/guardian
 
+## --- 恶魂 ---
+execute @e[name=ghastSummoner,c=1] ~~~ function methods/monsters/ghast
+
+## --- 岩浆怪 ---
+execute @e[name=magmaCubeSmallSummoner,c=1] ~~~ function methods/monsters/magma_cube/small
+execute @e[name=magmaCubeMediumSummoner,c=1] ~~~ function methods/monsters/magma_cube/medium
+execute @e[name=magmaCubeLargeSummoner,c=1] ~~~ function methods/monsters/magma_cube/large
+
 ## --- BOSS | 骷髅王 ---
 execute @e[name=skeletonKingSummoner,c=1] ~~~ function methods/monsters/skeleton_king
 
@@ -82,3 +101,6 @@ execute @e[name=elderGuardianSummoner,c=1] ~~~ function methods/monsters/elder_g
 
 ## --- BOSS | 烈焰之魂 ---
 execute @e[name=blazeKingSummoner,c=1] ~~~ function methods/monsters/blaze_king
+
+## --- BOSS | 猪灵蛮兵 ---
+execute @e[name=piglinBruteBossSummoner,c=1] ~~~ function methods/monsters/piglin_brute_boss
