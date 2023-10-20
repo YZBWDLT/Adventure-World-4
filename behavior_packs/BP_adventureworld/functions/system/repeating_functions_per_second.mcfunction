@@ -5,3 +5,6 @@ effect @a saturation 1 10 true
 
 ## --- 第3章泡泡 ---
 function system/bubble_controller
+
+## --- 当玩家穿着皮革靴子时，补全耐久 ---
+replaceitem entity @a[hasitem={item=leather_boots,location=slot.armor.feet}] slot.armor.feet 0 minecraft:leather_boots
