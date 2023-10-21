@@ -27,7 +27,7 @@ function system/time_played_recorder
 ## 音效控制器
 function system/sound_player
 ## 头盔与靴子手持检测器
-execute @e[name=level,scores={background=311..}] ~~~ function system/helmet_holding_tester
+execute @e[name=level,scores={background=311..}] ~~~ function system/armor_tester
 ## 虚拟准星
 execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ titleraw @s times 0 3 0
 execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ titleraw @s title {"rawtext":[{"text":"§1"}]}
