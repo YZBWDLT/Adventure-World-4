@@ -15,6 +15,9 @@ scoreboard players set @e[name=soundPlayer] active 10
 ## --- 本关的失败次数归零 ---
 scoreboard players set @e[name=failedTimes] stats 0
 
+## --- 为玩家补充残留的重要装备 ---
+## function methods/important_items_tester
+
 ## --- 补满药水 ---
 function methods/potion_bonus
 tellraw @a {"rawtext":[{"translate":"药水已补满。"}]}

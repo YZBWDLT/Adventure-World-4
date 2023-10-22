@@ -15,7 +15,7 @@ execute @e[name=timeline,scores={time=280}] ~~~ tp @a -87 -40 85
 execute @e[name=timeline,scores={time=280}] ~~~ fill -88 0 104 -86 0 106 quartz_block["chisel_type":"smooth"]
 
 ## 进入剑之神殿
-execute @e[name=timeline,scores={time=360}] ~~~ tp @a -74 -40 105 facing -87 -37 105
+execute @e[name=timeline,scores={time=360}] ~~~ tp @a -79 -39 105 facing -87 -37 105
 execute @e[name=timeline,scores={time=360}] ~~~ scoreboard players set @e[name=level] background 700
 execute @e[name=timeline,scores={time=360}] ~~~ title @a times 0 100 0
 execute @e[name=timeline,scores={time=400}] ~~~ title @a title §f§l剑 之 神 殿

@@ -41,15 +41,15 @@ execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveComplete
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -124 -18 96 "aw:as_summoner" "zombifiedPiglin1Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -121 -18 101 "aw:as_summoner" "zombifiedPiglin1Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -137 -18 98 "aw:as_summoner" "zombifiedPiglin1Summoner"
-execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -145 -18 111 "aw:as_summoner" "zombifiedPiglin1Summoner"
-execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -140 -10 105 "aw:as_summoner" "zombifiedPiglin1Summoner"
+execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -145 -17 111 "aw:as_summoner" "zombifiedPiglin1Summoner"
+execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -140 -11 105 "aw:as_summoner" "zombifiedPiglin1Summoner"
 
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -143 -17 100 "aw:as_summoner" "zombifiedPiglin2Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -130 -18 109 "aw:as_summoner" "zombifiedPiglin2Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -126 -17 112 "aw:as_summoner" "zombifiedPiglin2Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -126 -17 112 "aw:as_summoner" "zombifiedPiglin2Summoner"
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -118 -17 107 "aw:as_summoner" "zombifiedPiglin3Summoner"
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -118 -17 107 "aw:as_summoner" "zombifiedPiglin3Summoner"
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -118 -16 107 "aw:as_summoner" "zombifiedPiglin3Summoner"
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -118 -16 107 "aw:as_summoner" "zombifiedPiglin3Summoner"
 
 ## --- 设置上一波完成标记为0 ---
 execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ scoreboard players set @s background 0

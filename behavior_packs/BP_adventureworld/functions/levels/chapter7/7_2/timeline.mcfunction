@@ -34,15 +34,15 @@ execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveComplete
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -162 -18 105 "aw:as_summoner" "piglin1Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -170 -17 102 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -162 -18 113 "aw:as_summoner" "piglin2Summoner"
-execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -164 -18 93  "aw:as_summoner" "piglin3Summoner"
+execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -165 -18 94  "aw:as_summoner" "piglin3Summoner"
 
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -163 -18 108 "aw:as_summoner" "hoglin2Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -164 -18 104 "aw:as_summoner" "hoglin2Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -165 -17 114 "aw:as_summoner" "hoglin2Summoner"
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -161 -18 103 "aw:as_summoner" "hoglin3Summoner"
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -162 -18 103 "aw:as_summoner" "hoglin3Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -180 -18 111 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -177 -17 109 "aw:as_summoner" "piglin2Summoner"
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -177 -18 114 "aw:as_summoner" "piglin2Summoner"
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -177 -17 114 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -177 -16 107 "aw:as_summoner" "piglin3Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -181 -17 105 "aw:as_summoner" "piglin4Summoner"
 
