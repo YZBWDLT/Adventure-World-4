@@ -39,10 +39,12 @@ summon je:marker "level" -82 1 -2
 summon je:marker "monsterAmount" -82 1 -2
 summon je:marker "hookshotAmount" -82 1 -2
 summon je:marker "alivePlayersAmount" -82 1 -2
+summon je:marker "allPlayersAmount" -82 1 -2
 summon je:marker "randomLocation" -82 1 -2
 summon je:marker "randomMonster" -82 1 -2
 summon je:marker "wave" -82 1 -2
 summon je:marker "lastWaveCompleted" -82 1 -2
+summon je:marker "maxWave" -82 1 -2
 
 scoreboard players set @e[name=level] background 0
 scoreboard players set @e[name=monsterAmount] background 0
@@ -50,8 +52,10 @@ scoreboard players set @e[name=hookshotAmount] background 0
 scoreboard players set @e[name=randomLocation] background 0
 scoreboard players set @e[name=randomMonster] background 0
 scoreboard players set @e[name=alivePlayersAmount] background 1
+scoreboard players set @e[name=allPlayersAmount] background 1
 scoreboard players set @e[name=wave] background 0
 scoreboard players set @e[name=lastWaveCompleted] background 0
+scoreboard players set @e[name=maxWave] background 0
 
 ### settings 设置数据
 summon je:marker "developerMode" -82 1 -2

@@ -31,3 +31,6 @@ execute @e[name=level,scores={background=720}] ~~~ function levels/chapter7/7_2/
 execute @e[name=level,scores={background=730}] ~~~ function levels/chapter7/7_3/timeline 
 execute @e[name=level,scores={background=740}] ~~~ function levels/chapter7/7_4/timeline 
 execute @e[name=level,scores={background=750}] ~~~ function levels/chapter7/7_5/timeline 
+
+## --- 截取一次最大怪物数目 ---
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ function methods/get_max_monster_amount

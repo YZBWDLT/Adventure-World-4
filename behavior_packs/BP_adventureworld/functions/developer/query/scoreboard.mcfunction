@@ -1,5 +1,5 @@
 # 反馈
-tellraw @s {"rawtext":[{"text":"下文反馈格式: (记分项).(标记名) = (值)，并反馈注释"}]}
+tellraw @s {"rawtext":[{"text":"下文反馈格式: (记分项).(标记名) = (值)，并反馈注释\n标黄的为假名变量而非标记实体变量"}]}
 
 ## === 激活数据 active ===
 
@@ -8,9 +8,14 @@ tellraw @s {"rawtext":[{"translate":"active.timeline = %%s §7# 时间线控制�
 
 ## === 后台数据 ===
 tellraw @s {"rawtext":[{"translate":"background.alivePlayersAmount = %%s §7# 记录存活玩家数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=alivePlayersAmount]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"background.allPlayersAmount = %%s §7# 记录所有玩家数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=allPlayersAmount]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§ebackground.chapter = %%s §7# 记录章节数，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"chapter"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.hookshotAmount = %%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=hookshotAmount]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.lastWaveCompleted = %%s §7# 上一波是否已完成","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=lastWaveCompleted]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.level = %%s §7# 记录关卡数据，三位数分别为(章节)(关卡)(是否已完成)","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=level]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§ebackground.levelInChapter = %%s §7# 记录关卡号，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"levelInChapter"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§ebackground.maxMonsterAmount = %%s §7# 记录怪物数目","with":{"rawtext":[{"score":{"objective":"background","name":"maxMonsterAmount"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"background.maxWave = %%s §7# 记录该关卡最大波数，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=maxWave]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.monsterAmount = %%s §7# 记录怪物数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=monsterAmount]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.randomLocation = %%s §7# 随机怪物刷新位置","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=randomLocation]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.randomMonster = %%s §7# 随机怪物种类","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=randomMonster]"}}]}}]}
@@ -31,7 +36,7 @@ tellraw @s {"rawtext":[{"translate":"settings.isNetease = %%s §7# 记录是否�
 ## === 后台数据 stats ===
 
 tellraw @s {"rawtext":[{"translate":"stats.failedTimes = %%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=failedTimes]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"stats.allFailedTimes = %%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"stats","name":"allFailedTimes"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§estats.allFailedTimes = %%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"stats","name":"allFailedTimes"}}]}}]}
 
 ## === 时间数据 time ===
 

@@ -26,3 +26,6 @@ function methods/all_levels/start_level
 ## --- 其他附加功能 ---
 gamerule falldamage true
 tellraw @a {"rawtext":[{"text":"§c注意，本关有摔落伤害！"}]}
+
+## --- 设置本关最大波数 ---
+scoreboard players set @e[name=maxWave] background 2

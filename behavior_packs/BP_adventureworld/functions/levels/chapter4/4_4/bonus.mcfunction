@@ -24,3 +24,6 @@ give @a aw:health_boost_potion_2 1 0 {"item_lock": { "mode": "lock_in_inventory"
 ## --- 清除所有怪物 ---
 kill @e[family=monster]
 kill @e[type=item]
+
+## --- 设置当前完成波数为2 ---
+scoreboard players set @e[name=wave] background 2

@@ -13,3 +13,6 @@ spawnpoint @a -136 9 58
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
 function methods/all_levels/start_level
+
+## --- 设置本关最大波数 ---
+scoreboard players set @e[name=maxWave] background 1
