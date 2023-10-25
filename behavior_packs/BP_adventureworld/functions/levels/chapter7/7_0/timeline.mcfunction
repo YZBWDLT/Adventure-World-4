@@ -60,10 +60,11 @@ execute @e[name=timeline,scores={time=900}] ~~~ say (准备直接开始下一关
 execute @e[name=timeline,scores={time=950}] ~~~ effect @a blindness 30 0 true
 
 execute @e[name=timeline,scores={time=1000}] ~~~ tp @a -87 -40 85
+execute @e[name=timeline,scores={time=1000}] ~~~ kill @e[family=summoner]
 
 ## 7-1 开始
-execute @e[name=timeline,scores={time=1060}] ~~~ tp @a -120 -18 105
-execute @e[name=timeline,scores={time=1060}] ~~~ spawnpoint @a -120 -18 105
+execute @e[name=timeline,scores={time=1060}] ~~~ tp @a -120 -17 105
+execute @e[name=timeline,scores={time=1060}] ~~~ spawnpoint @a -120 -17 105
 execute @e[name=timeline,scores={time=1060}] ~~~ fill -150 -18 102 -150 -16 100 nether_brick_fence
 
 execute @e[name=timeline,scores={time=1100}] ~~~ title @a times 0 100 0
