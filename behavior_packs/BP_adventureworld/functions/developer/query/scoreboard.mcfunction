@@ -11,6 +11,7 @@ tellraw @s {"rawtext":[{"translate":"background.alivePlayersAmount = %%s §7# �
 tellraw @s {"rawtext":[{"translate":"background.allPlayersAmount = %%s §7# 记录所有玩家数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=allPlayersAmount]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"§ebackground.chapter = %%s §7# 记录章节数，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"chapter"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.hookshotAmount = %%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=hookshotAmount]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"background.isCompleted = %%s §7# 记录该关卡是否已完成，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=isCompleted]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.lastWaveCompleted = %%s §7# 上一波是否已完成","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=lastWaveCompleted]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.level = %%s §7# 记录关卡数据，三位数分别为(章节)(关卡)(是否已完成)","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=level]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"§ebackground.levelInChapter = %%s §7# 记录关卡号，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"levelInChapter"}}]}}]}
