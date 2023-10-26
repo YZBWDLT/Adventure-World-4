@@ -44,3 +44,6 @@ function methods/get_level_completed_bit
 
 ### 当关卡未完成时，检测玩家和重生点的距离，过近则判定为玩家已死亡
 execute @e[name=isCompleted,scores={background=0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players set @a[r=2,scores={isAlive=1}] isAlive 0
+
+## --- 测试器 ---
+# execute @e[family=summoner] ~~~ say 1
