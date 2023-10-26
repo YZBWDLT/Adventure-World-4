@@ -27,23 +27,23 @@ execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/ch
 
 ### 当刷新倒计时为0时，先指定刷新位置（randomLocation=1~5）
 execute @e[name=monsterRefreshLeft,scores={time=0}] ~~~ scoreboard players random @e[name=randomLocation] background 1 5
-execute @e[name=randomLocation,scores={background=1}] ~~~ summon je:marker -122 -31 6 "as_summoner" "summonLocation"
-execute @e[name=randomLocation,scores={background=2}] ~~~ summon je:marker -130 -31 -2 "as_summoner" "summonLocation"
-execute @e[name=randomLocation,scores={background=3}] ~~~ summon je:marker -130 -31 14 "as_summoner" "summonLocation"
-execute @e[name=randomLocation,scores={background=4}] ~~~ summon je:marker -130 -31 6 "as_summoner" "summonLocation"
-execute @e[name=randomLocation,scores={background=5}] ~~~ summon je:marker -138 -31 6 "as_summoner" "summonLocation"
+execute @e[name=randomLocation,scores={background=1}] ~~~ summon je:marker -122 -31 6 "aw:as_summoner" "summonLocation"
+execute @e[name=randomLocation,scores={background=2}] ~~~ summon je:marker -130 -31 -2 "aw:as_summoner" "summonLocation"
+execute @e[name=randomLocation,scores={background=3}] ~~~ summon je:marker -130 -31 14 "aw:as_summoner" "summonLocation"
+execute @e[name=randomLocation,scores={background=4}] ~~~ summon je:marker -130 -31 6 "aw:as_summoner" "summonLocation"
+execute @e[name=randomLocation,scores={background=5}] ~~~ summon je:marker -138 -31 6 "aw:as_summoner" "summonLocation"
 execute @e[name=randomLocation,scores={background=1..5}] ~~~ scoreboard players set @s background 0
 
 ### 指定刷新位置后指定刷新何种怪物
 execute @e[name=monsterRefreshLeft,scores={time=0}] ~~~ scoreboard players random @e[name=randomMonster] background 1 8
-execute @e[name=randomMonster,scores={background=1}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "as_summoner" "creeper2Summoner"
-execute @e[name=randomMonster,scores={background=2}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "as_summoner" "drowned2Summoner"
-execute @e[name=randomMonster,scores={background=3}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "as_summoner" "drownedWithTridentSummoner"
-execute @e[name=randomMonster,scores={background=4}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "as_summoner" "skeleton2Summoner"
-execute @e[name=randomMonster,scores={background=5}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "as_summoner" "spider2Summoner"
-execute @e[name=randomMonster,scores={background=6}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "as_summoner" "stray2Summoner"
-execute @e[name=randomMonster,scores={background=7}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "as_summoner" "zombie2Summoner"
-execute @e[name=randomMonster,scores={background=8}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "as_summoner" "zombieBaby2Summoner"
+execute @e[name=randomMonster,scores={background=1}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "creeper2Summoner"
+execute @e[name=randomMonster,scores={background=2}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "drowned2Summoner"
+execute @e[name=randomMonster,scores={background=3}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "drownedWithTridentSummoner"
+execute @e[name=randomMonster,scores={background=4}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "skeleton2Summoner"
+execute @e[name=randomMonster,scores={background=5}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "spider2Summoner"
+execute @e[name=randomMonster,scores={background=6}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "stray2Summoner"
+execute @e[name=randomMonster,scores={background=7}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "zombie2Summoner"
+execute @e[name=randomMonster,scores={background=8}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "zombieBaby2Summoner"
 execute @e[name=randomMonster,scores={background=1..8}] ~~~ function methods/title
 execute @e[name=randomMonster,scores={background=1..8}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c注意！某个随机位置即将生成怪物！"}]}
 execute @e[name=randomMonster,scores={background=1..8}] ~~~ scoreboard players set @e[name=monsterSummonDelay] time 40
