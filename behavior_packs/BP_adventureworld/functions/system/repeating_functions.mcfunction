@@ -21,7 +21,7 @@ function system/level_controllers/actionbar_title
 
 ## --- 其他 ---
 ## 绳枪判定器
-function methods/entity_amount_tester
+function methods/get_entity_amount
 function system/hookshot_judger
 
 ## 游玩时间记录器
