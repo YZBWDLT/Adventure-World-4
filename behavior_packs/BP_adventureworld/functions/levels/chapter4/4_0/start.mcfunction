@@ -12,7 +12,7 @@ title @a subtitle §c4-0
 execute @a ~~~ playsound beacon.power @s ~~~ 1 1 1
 
 ## --- 设置重生点 ---
-spawnpoint @a -172 17 -6
+tp @e[family=respawner] -172 17 -6
 
 ## 封堵4-2入口
 fill -155 7 -3 -157 9 -3 minecraft:ice

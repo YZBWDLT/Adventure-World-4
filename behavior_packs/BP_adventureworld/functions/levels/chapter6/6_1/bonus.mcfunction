@@ -15,7 +15,7 @@ fill -82 -29 -62 -83 -31 -64 air[] replace barrier[]
 fill -82 -29 -62 -83 -31 -64 air[] replace pointed_dripstone[]
 
 ## --- 设置重生点 ---
-spawnpoint @a -77 -31 -64
+tp @e[family=respawner] -77 -31 -64
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus

@@ -37,5 +37,5 @@ execute @e[name=timeline,scores={time=820}] ~~~ tellraw @a {"rawtext":[{"text":"
 ### 游戏部分
 execute @e[name=timeline,scores={time=880}] ~~~ function levels/chapter1/1_0/start
 
-## 时间轴结束，清理timeline盔甲架
-execute @e[name=timeline,scores={time=881..}] ~~~ scoreboard players set @s active 0
+## 时间轴结束
+execute @e[name=timeline,scores={time=881..}] ~~~ function methods/timeline/disable

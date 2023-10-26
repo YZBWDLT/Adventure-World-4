@@ -5,7 +5,7 @@ scoreboard players set @e[name=level] background 700
 
 ## --- 传送到上一个关卡的重生点并重新设置重生点 ---
 tp @a -120 -18 105
-spawnpoint @a -120 -18 105
+tp @e[family=respawner] -120 -18 105
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
 function methods/all_levels/game_lose

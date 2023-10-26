@@ -18,7 +18,7 @@ structure load 3_2_phase1 -192 -22 -1 0_degrees none false true
 
 ## --- 设置重生点 ---
 ## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
-spawnpoint @a -182 -15 21
+tp @e[family=respawner] -182 -15 21
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
 function methods/all_levels/start_level

@@ -11,7 +11,7 @@ tellraw @a {"rawtext":[{"text":"§a1-2已完成！\n§b+1 绳枪，+1 生命恢�
 fill -127 5 50 -125 7 50 air
 
 ## --- 设置重生点 ---
-spawnpoint @a -126 7 58
+tp @e[family=respawner] -126 7 58
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus

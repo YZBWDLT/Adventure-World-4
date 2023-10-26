@@ -34,3 +34,13 @@ execute @e[name=level,scores={background=750}] ~~~ function levels/chapter7/7_5/
 
 ## --- 截取一次最大怪物数目 ---
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ function methods/get_max_monster_amount
+
+## --- 重生点机制 ---
+### 将玩家的重生点设置在respawner标记实体上
+execute @e[family=respawner] ~~~ spawnpoint @a ~~~
+
+### 检测关卡完成状态
+function methods/get_level_completed_bit
+
+### 当关卡未完成时，检测玩家和重生点的距离，过近则判定为玩家已死亡
+execute @e[name=isCompleted,scores={background=0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players set @a[r=2,scores={isAlive=1}] isAlive 0

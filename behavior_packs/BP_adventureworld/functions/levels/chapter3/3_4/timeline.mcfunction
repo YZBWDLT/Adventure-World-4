@@ -18,8 +18,6 @@ execute @e[name=wave,scores={background=5}] ~~~ execute @e[name=lastWaveComplete
 
 ## --- 失败判定 ---
 
-### 设在重生点的玩家的isAlive.@s=0，以标记该玩家已死亡
-scoreboard players set @a[x=-172,y=-1,z=30,r=2,scores={isAlive=1}] isAlive 0
 ### 当不存在isAlive.@s=1的玩家时，游戏失败
 execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/chapter3/3_4/game_lose
 

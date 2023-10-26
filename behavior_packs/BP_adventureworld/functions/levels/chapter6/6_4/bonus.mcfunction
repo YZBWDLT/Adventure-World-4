@@ -11,7 +11,7 @@ tellraw @a {"rawtext":[{"text":"§a6-4已完成！\n§b+1 力量药水 II\n§a[�
 fill -76 -39 20 -74 -37 20 structure_void
 
 ## --- 设置重生点 ---
-spawnpoint @a -75 -38 30
+tp @e[family=respawner] -75 -38 30
 
 ## --- 清除残余岩浆 ---
 fill -89 -40 49 -61 -39 21 air[] replace lava[]
