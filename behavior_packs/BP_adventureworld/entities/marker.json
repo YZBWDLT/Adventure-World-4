@@ -18,11 +18,15 @@
             "minecraft:nameable": { }
         },
         "events": {
-            "aw:as_summoner": { "add": { "component_groups": [ "as_summoner" ] } }
+            "aw:as_summoner": { "add": { "component_groups": [ "as_summoner" ] } },
+            "aw:as_respawner": { "add": { "component_groups": [ "as_respawner" ] } }
         },
         "component_groups": {
             "as_summoner": {
                 "minecraft:type_family": { "family": [ "inanimate", "marker", "summoner" ] }
+            },
+            "as_respawner": {
+                "minecraft:type_family": { "family": [ "inanimate", "marker", "respawner" ] }
             }
         }
     }
