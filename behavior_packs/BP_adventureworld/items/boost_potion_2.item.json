@@ -15,7 +15,7 @@
                     { "name": "health_boost", "chance" : 1.0, "duration" : 120, "amplifier" : 4 }
                 ]
             },
-            "minecraft:use_duration": 48
+            "minecraft:use_duration": 36
         }
     }
 }
