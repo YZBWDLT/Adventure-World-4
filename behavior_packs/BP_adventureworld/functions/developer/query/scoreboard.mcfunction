@@ -25,6 +25,7 @@ tellraw @s {"rawtext":[{"translate":"background.wave = %%s §7# 记录波数数�
 ## === crosshair ===
 
 tellraw @s {"rawtext":[{"translate":"crosshair.@s = %%s §7# 准星启用状态","with":{"rawtext":[{"score":{"objective":"crosshair","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"deathTimes.@s = %%s §7# 玩家死亡次数","with":{"rawtext":[{"score":{"objective":"deathTimes","name":"@s"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"isAlive.@s = %%s §7# 玩家存活状态，0=游戏时死亡，1=游戏时存活，2=未在游戏中","with":{"rawtext":[{"score":{"objective":"isAlive","name":"@s"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"isHoldingHelmet.@s = %%s §7# 玩家是否手持过钻石头盔，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingHelmet","name":"@s"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"isHoldingBoots.@s = %%s §7# 玩家是否手持过钻石靴子，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingBoots","name":"@s"}}]}}]}
