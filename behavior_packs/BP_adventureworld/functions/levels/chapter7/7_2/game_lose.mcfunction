@@ -4,8 +4,8 @@
 scoreboard players set @e[name=level] background 711
 
 ## --- 传送到上一个关卡的重生点并重新设置重生点 ---
-tp @a -120 -18 105
-tp @e[family=respawner] -120 -18 105
+tp @a -120 -17 105
+tp @e[family=respawner] -120 -17 105
 
 ## --- 打开入口与出口 ---
 fill -159 -18 109 -159 -16 111 air
