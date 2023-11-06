@@ -26,7 +26,7 @@ tp @a[tag=!intoLevel] @a[tag=intoLevel,c=1]
 give @a[hasitem={item=bow}] arrow 64
 
 ## --- 为玩家补充药水和残留的重要装备 ---
-function methods/potion_bonus
+function methods/potion_supplier
 function methods/important_items_tester
 
 ## --- 失败多次后，给予药效 ---

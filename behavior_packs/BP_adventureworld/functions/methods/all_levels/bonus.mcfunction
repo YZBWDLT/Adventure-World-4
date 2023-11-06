@@ -19,7 +19,7 @@ scoreboard players set @e[name=failedTimes] stats 0
 ## function methods/important_items_tester
 
 ## --- 补满药水 ---
-function methods/potion_bonus
+function methods/potion_supplier
 tellraw @a {"rawtext":[{"translate":"药水已补满。"}]}
 
 ## --- 清除所有的状态效果并回满血 ---
