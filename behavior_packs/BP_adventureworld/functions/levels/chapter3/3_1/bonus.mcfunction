@@ -14,7 +14,7 @@ fill -199 -21 29 -197 -19 29 air
 fill -173 -21 13 -171 -19 13 minecraft:structure_void
 
 ## --- 设置重生点 ---
-spawnpoint @a -188 -21 29
+tp @e[family=respawner] -188 -21 29
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus

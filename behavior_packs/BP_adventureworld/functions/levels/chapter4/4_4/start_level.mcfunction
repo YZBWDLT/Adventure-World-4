@@ -10,7 +10,7 @@ fill -117 -31 7 -117 -29 5 minecraft:ice
 
 ## --- 设置重生点 ---
 ## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
-spawnpoint @a -145 -23 6
+tp @e[family=respawner] -145 -23 6
 
 ## 初始化剩余时间数值
 scoreboard players set @e[name=timeLeft] time 180

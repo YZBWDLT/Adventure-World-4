@@ -12,7 +12,7 @@ title @a subtitle §c5-0
 execute @a ~~~ playsound beacon.power @s ~~~ 1 1 1
 
 ## --- 设置重生点 ---
-spawnpoint @a -95 -31 -13
+tp @e[family=respawner] -95 -31 -13
 
 ## --- 清除玩家的皮革靴子 ---
 clear @a leather_boots

@@ -12,7 +12,7 @@ fill -118 1 14 -116 3 14 air
 fill -118 1 32 -116 3 32 air
 
 ## --- 设置重生点 ---
-spawnpoint @a -117 1 30
+tp @e[family=respawner] -117 1 30
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus
