@@ -10,7 +10,7 @@ fill -156 -18 5 -158 -18 7 ice[] replace structure_void[]
 
 ## --- 设置重生点 ---
 ## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
-spawnpoint @a -151 -7 -5
+tp @e[family=respawner] -151 -7 -5
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
 function methods/all_levels/start_level

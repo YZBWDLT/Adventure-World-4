@@ -48,8 +48,7 @@
                         "stick_in_ground": {
                             "shake_time" : 0.35
                         },
-                        "arrow_effect": { },
-                        "remove_on_hit": { }
+                        "arrow_effect": { }
                     },
                     "hit_sound": "bow.hit",
                     "power": 5.0,

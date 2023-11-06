@@ -11,6 +11,7 @@ tellraw @s {"rawtext":[{"translate":"background.alivePlayersAmount = %%s §7# �
 tellraw @s {"rawtext":[{"translate":"background.allPlayersAmount = %%s §7# 记录所有玩家数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=allPlayersAmount]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"§ebackground.chapter = %%s §7# 记录章节数，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"chapter"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.hookshotAmount = %%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=hookshotAmount]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"background.isCompleted = %%s §7# 记录该关卡是否已完成，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=isCompleted]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.lastWaveCompleted = %%s §7# 上一波是否已完成","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=lastWaveCompleted]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.level = %%s §7# 记录关卡数据，三位数分别为(章节)(关卡)(是否已完成)","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=level]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"§ebackground.levelInChapter = %%s §7# 记录关卡号，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"levelInChapter"}}]}}]}
@@ -24,6 +25,7 @@ tellraw @s {"rawtext":[{"translate":"background.wave = %%s §7# 记录波数数�
 ## === crosshair ===
 
 tellraw @s {"rawtext":[{"translate":"crosshair.@s = %%s §7# 准星启用状态","with":{"rawtext":[{"score":{"objective":"crosshair","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"deathTimes.@s = %%s §7# 玩家死亡次数","with":{"rawtext":[{"score":{"objective":"deathTimes","name":"@s"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"isAlive.@s = %%s §7# 玩家存活状态，0=游戏时死亡，1=游戏时存活，2=未在游戏中","with":{"rawtext":[{"score":{"objective":"isAlive","name":"@s"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"isHoldingHelmet.@s = %%s §7# 玩家是否手持过钻石头盔，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingHelmet","name":"@s"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"isHoldingBoots.@s = %%s §7# 玩家是否手持过钻石靴子，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingBoots","name":"@s"}}]}}]}

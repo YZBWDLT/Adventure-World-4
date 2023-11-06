@@ -1,6 +1,19 @@
 # ===== 关卡时间线 =====
 # 循环执行，需在active.timeline>=1时运行，否则检测器不工作。
 
+## --- 重生点机制 ---
+
+### 每秒随机设定一次重生点
+execute @e[name=tick,scores={time=0}] ~~~ scoreboard players random @e[family=respawner] temp 0 1
+### 按照temp.@s随机设定重生点
+execute @e[name=tick,scores={time=0}] ~~~ tp @e[family=respawner,scores={temp=0}] -178 -8 104
+execute @e[name=tick,scores={time=0}] ~~~ tp @e[family=respawner,scores={temp=1}] -164 -7 101
+
+### 将诡异巨型菌上的玩家传送到绯红巨型菌上
+tp @a[scores={isAlive=0},x=-181,y=-10,z=101,dx=5,dy=5,dz=5,rx=-85,rxm=-90] -164 -7 101 ~180 45
+### 将绯红巨型菌上的玩家传送到诡异巨型菌上
+tp @a[scores={isAlive=0},x=-167,y=-8,z=98,dx=5,dy=5,dz=5,rx=-85,rxm=-90] -178 -8 104 ~180 45
+
 ## --- 实体数目判定 ---
 
 ### 检测当前怪物数目
@@ -18,8 +31,6 @@ execute @e[name=wave,scores={background=4}] ~~~ execute @e[name=lastWaveComplete
 
 ## --- 失败判定 ---
 
-### 设在重生点的玩家的isAlive.@s=0，以标记该玩家已死亡
-scoreboard players set @a[x=-160,y=-12,z=92,r=2,scores={isAlive=1}] isAlive 0
 ### 当不存在isAlive.@s=1的玩家时，游戏失败
 execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/chapter7/7_2/game_lose
 

@@ -14,7 +14,7 @@ fill -171 -21 13 -173 -19 13 structure_void
 fill -162 -21 26 -164 -19 26 structure_void
 
 ## --- 设置重生点 ---
-spawnpoint @a -173 -21 30
+tp @e[family=respawner] -173 -21 30
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus

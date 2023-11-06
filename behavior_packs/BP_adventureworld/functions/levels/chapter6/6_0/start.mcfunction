@@ -12,7 +12,7 @@ title @a subtitle §c6-0
 execute @a ~~~ playsound beacon.power @s ~~~ 1 1 1
 
 ## --- 设置重生点 ---
-spawnpoint @a -78 -31 -29
+tp @e[family=respawner] -78 -31 -29
 
 ## 封堵6-3
 fill -74 -32 -23 -77 -32 -22 minecraft:obsidian[] keep

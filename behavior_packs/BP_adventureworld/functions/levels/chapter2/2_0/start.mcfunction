@@ -12,4 +12,4 @@ title @a subtitle §c2-0
 execute @a ~~~ playsound beacon.power @s ~~~ 1 1 1
 
 ## --- 设置重生点 ---
-spawnpoint @a -77 18 26
+tp @e[family=respawner] -77 18 26

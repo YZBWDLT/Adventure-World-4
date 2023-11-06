@@ -13,7 +13,7 @@ title @a subtitle §c3-0
 execute @a ~~~ playsound beacon.power @s ~~~ 1 1 1
 
 ## --- 设置重生点 ---
-spawnpoint @a -173 -21 30
+tp @e[family=respawner] -173 -21 30
 
 ## 封堵各关入口
 fill -186 -21 30 -186 -19 28 minecraft:cobblestone_wall["wall_block_type":"prismarine"]

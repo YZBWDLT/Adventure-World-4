@@ -11,7 +11,7 @@ tellraw @a {"rawtext":[{"text":"§a7-4已完成！"}]}
 fill -223 -18 98 -223 -16 100 air
 
 ## --- 设置重生点 ---
-spawnpoint @a -225 -18 99
+tp @e[family=respawner] -225 -18 99
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus
