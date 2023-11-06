@@ -19,7 +19,7 @@ function methods/all_levels/bonus
 
 ## --- 给予奖励 ---
 give @a bow 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
-give @a[hasitem={item=bow}] arrow 12 0 {"item_lock": { "mode": "lock_in_inventory" }}
+function methods/supplier/arrow
 give @a aw:health_potion_1 2 0 {"item_lock": { "mode": "lock_in_inventory" }}
 
 ## --- 设置陷阱 ---

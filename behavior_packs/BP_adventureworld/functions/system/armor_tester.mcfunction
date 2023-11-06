@@ -24,3 +24,4 @@ enchant @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand}] depth_
 ## --- 为手持弓的玩家附魔 ---
 execute @e[name=level,scores={background=411..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] flame 1
 execute @e[name=level,scores={background=621..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] power 4
+execute @e[name=level,scores={background=421..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] unbreaking 3
