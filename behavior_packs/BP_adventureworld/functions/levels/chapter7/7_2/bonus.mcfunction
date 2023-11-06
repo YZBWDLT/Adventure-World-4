@@ -16,3 +16,6 @@ tp @e[family=respawner] -163 -18 106
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus
+
+## --- 移除重生点的temp数据 ---
+scoreboard players reset @e[family=respawner] temp
