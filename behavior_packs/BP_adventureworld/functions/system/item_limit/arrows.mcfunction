@@ -4,11 +4,11 @@
 ## --- 当没有箭袋时，上限为12 ---
 scoreboard players set @a[hasitem=[{item=aw:quiver,quantity=0},{item=arrow,quantity=13..}]] temp 1
 clear @a[scores={temp=1}] arrow
-give @a[scores={temp=1}] arrow 12
+give @a[scores={temp=1}] arrow 12 0 {"item_lock": { "mode": "lock_in_inventory" }}
 
 ## --- 当有箭袋时，上限为36 ---
 scoreboard players set @a[hasitem=[{item=aw:quiver},{item=arrow,quantity=37..}]] temp 2
 clear @a[scores={temp=2}] arrow
-give @a[scores={temp=2}] arrow 36
+give @a[scores={temp=2}] arrow 36 0 {"item_lock": { "mode": "lock_in_inventory" }}
 
 scoreboard players set @a temp 0
