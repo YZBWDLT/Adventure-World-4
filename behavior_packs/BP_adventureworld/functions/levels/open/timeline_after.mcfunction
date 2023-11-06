@@ -26,16 +26,12 @@ execute @e[name=timeline,scores={time=390}] ~~~ title @a subtitle §o剑之试�
 
 execute @e[name=timeline,scores={time=490}] ~~~ tellraw @a {"rawtext":[{"text":"* §7为感谢各位玩家对地图《冒险世界：苏醒》的支持，我们制作了此PVE地图作为外传。欢迎大家支持前作，对剧情不了解的玩家也可以放心游玩。"}]}
 
-execute @e[name=timeline,scores={time=640}] ~~~ tellraw @a {"rawtext":[{"text":"我叫§e林乐§f。"}]}
+execute @e[name=timeline,scores={time=640}] ~~~ tellraw @a {"rawtext":[{"text":"* 一位老者和你说，有一把传说的武器藏在了某个试炼之中。"}]}
 
-execute @e[name=timeline,scores={time=700}] ~~~ tellraw @a {"rawtext":[{"text":"我有两个好朋友，§e田英§f和§e米云溪§f。"}]}
-
-execute @e[name=timeline,scores={time=760}] ~~~ tellraw @a {"rawtext":[{"text":"我们曾经一起消灭了邪恶的恶魔。"}]}
-
-execute @e[name=timeline,scores={time=820}] ~~~ tellraw @a {"rawtext":[{"text":"今天，村里发生了一件奇特的事……"}]}
+execute @e[name=timeline,scores={time=700}] ~~~ tellraw @a {"rawtext":[{"text":"* 你顺着线索找到了试炼，走了进去……"}]}
 
 ### 游戏部分
-execute @e[name=timeline,scores={time=880}] ~~~ function levels/chapter1/1_0/start
+execute @e[name=timeline,scores={time=760}] ~~~ function levels/chapter1/1_0/start
 
 ## 时间轴结束
-execute @e[name=timeline,scores={time=881..}] ~~~ function methods/timeline/disable
+execute @e[name=timeline,scores={time=761..}] ~~~ function methods/timeline/disable
