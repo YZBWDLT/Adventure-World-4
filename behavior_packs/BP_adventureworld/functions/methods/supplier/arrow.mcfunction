@@ -2,8 +2,10 @@
 # 当无箭袋的玩家少于11根箭，或有箭袋的玩家少于35根箭时
 # 在合适的时间段调用此函数即可按需补充合理数目的箭
 
-# give @a[hasitem=[{item=bow},{item=arrow,quantity=..11},{item=aw:quiver,quantity=0}]] arrow 12 0 {"item_lock":{"mode":"lock_in_inventory"}}
+## --- 清除当前场上的箭 ---
+kill @e[type=arrow]
 
+## --- 当玩家无箭袋时，给予12根箭 ---
 give @a[hasitem=[{item=bow},{item=arrow,quantity=11},{item=aw:quiver,quantity=0}]] arrow 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 give @a[hasitem=[{item=bow},{item=arrow,quantity=10},{item=aw:quiver,quantity=0}]] arrow 2 0 {"item_lock":{"mode":"lock_in_inventory"}}
 give @a[hasitem=[{item=bow},{item=arrow,quantity=9},{item=aw:quiver,quantity=0}]] arrow 3 0 {"item_lock":{"mode":"lock_in_inventory"}}
@@ -17,8 +19,7 @@ give @a[hasitem=[{item=bow},{item=arrow,quantity=2},{item=aw:quiver,quantity=0}]
 give @a[hasitem=[{item=bow},{item=arrow,quantity=1},{item=aw:quiver,quantity=0}]] arrow 11 0 {"item_lock":{"mode":"lock_in_inventory"}}
 give @a[hasitem=[{item=bow},{item=arrow,quantity=0},{item=aw:quiver,quantity=0}]] arrow 12 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
-# give @a[hasitem=[{item=bow},{item=arrow,quantity=..35},{item=aw:quiver}]] arrow 36 0 {"item_lock":{"mode":"lock_in_inventory"}}
-
+## --- 当玩家有箭袋时，给予36根箭 ---
 give @a[hasitem=[{item=bow},{item=arrow,quantity=35},{item=aw:quiver}]] arrow 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 give @a[hasitem=[{item=bow},{item=arrow,quantity=34},{item=aw:quiver}]] arrow 2 0 {"item_lock":{"mode":"lock_in_inventory"}}
 give @a[hasitem=[{item=bow},{item=arrow,quantity=33},{item=aw:quiver}]] arrow 3 0 {"item_lock":{"mode":"lock_in_inventory"}}
