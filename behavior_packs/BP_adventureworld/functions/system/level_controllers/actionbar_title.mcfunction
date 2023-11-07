@@ -105,8 +105,8 @@ execute @e[name=level,scores={background=700}] ~~~ execute @a ~~~ titleraw @s ac
 function items/actionbar_title
 
 ### 玩家手持物品提示
-execute @e[name=level,scores={background=311..}] ~~~ titleraw @a[scores={isHoldingHelmet=0}] actionbar {"rawtext":[{"text":"§c请手持钻石头盔以获取附魔！"}]}
-execute @e[name=level,scores={background=321..}] ~~~ titleraw @a[scores={isHoldingBoots=0}] actionbar {"rawtext":[{"text":"§c请手持钻石靴子以获取附魔！"}]}
+execute @e[name=level,scores={background=311..}] ~~~ titleraw @a[scores={isHoldingHelmet=0}] actionbar {"rawtext":[{"text":"§c您刚刚获得了一个钻石头盔，请手持钻石头盔以获取附魔！"}]}
+execute @e[name=level,scores={background=321..}] ~~~ titleraw @a[scores={isHoldingBoots=0}] actionbar {"rawtext":[{"text":"§c您刚刚获得了一个钻石靴子，请手持钻石靴子以获取附魔！"}]}
 
 ### 调试性内容
 # titleraw @a actionbar {"rawtext":[{"translate":"wave=%%s | lastWaveCompleted=%%s | monsterSummonDelay=%%s","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=wave]"}},{"score":{"objective":"background","name":"@e[name=lastWaveCompleted]"}},{"score":{"objective":"time","name":"@e[name=monsterSummonDelay]"}}]}}]}
