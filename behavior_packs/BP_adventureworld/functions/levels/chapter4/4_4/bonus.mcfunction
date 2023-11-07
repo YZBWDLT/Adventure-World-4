@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] background 441
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a4-4已完成！\n§b+1 钻石胸甲，+1 生命提升药水 II\n§a[生命提升药水 I]§f已升级到§a[生命提升药水 II]§f"}]}
+tellraw @a {"rawtext":[{"text":"§a4-4已完成！\n§b+1 钻石胸甲\n§a[生命提升药水 I]§f已升级到§a[生命提升药水 II]§f"}]}
 
 ## --- 打开入口与出口 ---
 fill -143 -31 7 -143 -29 5 air
@@ -19,7 +19,6 @@ function methods/all_levels/bonus
 
 ## --- 给予奖励 ---
 replaceitem entity @a slot.armor.chest 0 aw:diamond_chestplate 1 0 {"item_lock": { "mode": "lock_in_slot" } }
-give @a aw:health_boost_potion_2 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 
 ## --- 清除所有怪物 ---
 kill @e[family=monster]

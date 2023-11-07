@@ -43,6 +43,7 @@ execute @e[family=respawner] ~~~ spawnpoint @a ~~~
 function methods/get_level_completed_bit
 
 ### 当关卡未完成时，检测玩家和重生点的距离，过近则判定为玩家已死亡
+### 仅当玩家数目大于等于2人时才能播报死亡消息
 function methods/get_player_amount
 execute @e[name=allPlayersAmount,scores={background=2..}] ~~~ execute @e[name=isCompleted,scores={background=0}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ function methods/death_message_announcer
 execute @e[name=isCompleted,scores={background=0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players add @a[r=2,scores={isAlive=1}] deathTimes 1
