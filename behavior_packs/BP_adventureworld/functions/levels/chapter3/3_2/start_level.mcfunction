@@ -4,12 +4,6 @@
 ## --- 设置level ---
 scoreboard players set @e[name=level] background 320
 
-## --- 清除水 ---
-fill -191 -21 0 -170 -18 21 minecraft:sponge[] replace minecraft:water
-fill -191 -21 0 -170 -18 21 minecraft:sponge[] replace minecraft:flowing_water
-fill -191 -21 0 -170 -18 21 air[] replace sponge["sponge_type":"wet"]
-fill -191 -21 0 -170 -18 21 air[] replace sponge["sponge_type":"dry"]
-
 ## --- 封闭入口与出口 ---
 fill -171 -21 13 -173 -19 13 minecraft:cobblestone_wall["wall_block_type":"prismarine"]
 

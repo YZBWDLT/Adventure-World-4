@@ -57,3 +57,6 @@ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ scoreboard players 
 scoreboard players add @e[name=monsterSummonDelay,scores={time=0..}] time -1
 ### 调用相关生成器并循环执行
 execute @e[name=wave,scores={background=!0}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0..}] ~~~ function methods/monsters/summoner_controller
+
+## --- 第一波时，清除水 ---
+execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=tick,scores={time=0}] ~~~ function levels/chapter3/3_2/water_clear
