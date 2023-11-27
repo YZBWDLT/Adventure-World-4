@@ -1,0 +1,21 @@
+{
+    "format_version": "1.14.0",
+    "sound_definitions": {
+        "aw.draw_sword": {
+            "sounds": [ "sounds/adventure_world/draw_sword" ],
+            "category": "ui"
+        },
+        "aw.swing_sword_1": {
+            "sounds": [ "sounds/adventure_world/swing_sword_1" ],
+            "category": "ui"
+        },
+        "aw.swing_sword_2": {
+            "sounds": [ "sounds/adventure_world/swing_sword_2" ],
+            "category": "ui"
+        },
+        "aw.sword_turn_to_light": {
+            "sounds": [ "sounds/adventure_world/sword_turn_to_light" ],
+            "category": "ui"
+        }
+    }
+}

@@ -14,13 +14,13 @@ execute @e[name=timeline,scores={time=101..999}] ~~~ scoreboard players set @s t
 ## --- 阶段1 | 25s ---
 ## 动画开始前。给予失明，然后将玩家传送到黑屋之中。
 execute @e[name=timeline,scores={time=1060}] ~~~ tellraw @a {"rawtext":[{"translate":"* 你突然感觉轻飘飘的，眼前开始模糊......"}]}
-execute @e[name=timeline,scores={time=1060}] ~~~ effect @a blindness 30 0 true
+#<- execute @e[name=timeline,scores={time=1060}] ~~~ effect @a blindness 30 0 true
 
-execute @e[name=timeline,scores={time=1120}] ~~~ tp @a -87 -40 85
+#<- execute @e[name=timeline,scores={time=1120}] ~~~ tp @a -87 -40 85
 
 ## 进入剑之神殿
 execute @e[name=timeline,scores={time=1180}] ~~~ tp @a -79 -39 105 facing -87 -37 105
-execute @e[name=timeline,scores={time=1180}] ~~~ scoreboard players set @e[name=level] background 700
+#<- execute @e[name=timeline,scores={time=1180}] ~~~ scoreboard players set @e[name=level] background 700
 execute @e[name=timeline,scores={time=1180}] ~~~ title @a times 0 100 0
 
 execute @e[name=timeline,scores={time=1240}] ~~~ title @a title §f§l剑 之 神 殿
@@ -43,7 +43,6 @@ execute @e[name=timeline,scores={time=2000}] ~~~ structure load 7_0_boomed -91 -
 execute @e[name=timeline,scores={time=2000}] ~~~ tellraw @a {"rawtext":[{"translate":"* 突然间，天上一束光照了下来，落在了台座上。"}]}
 
 execute @e[name=timeline,scores={time=2060}] ~~~ event entity @e[type=aw:wild_sword] aw:stage_2
-execute @e[name=timeline,scores={time=2065}] ~~~ execute @a ~~~ playsound random.levelup @s ~~~ 1 0.25
 execute @e[name=timeline,scores={time=2065}] ~~~ particle aw:wild_sword1 -87 -39 105
 execute @e[name=timeline,scores={time=2065}] ~~~ particle aw:wild_sword2 -87 -39 105
 execute @e[name=timeline,scores={time=2065}] ~~~ particle aw:wild_sword3 -87 -39 105
@@ -63,7 +62,6 @@ execute @e[name=timeline,scores={time=2495}] ~~~ event entity @e[type=aw:wild_sw
 
 ### (6) 剑化为光
 execute @e[name=timeline,scores={time=2660}] ~~~ execute @e[type=aw:wild_sword] ~~~ tp @s ~~-64~
-execute @e[name=timeline,scores={time=2660}] ~~~ execute @a ~~~ playsound aw.sword_turn_to_light @s ~~~
 execute @e[name=timeline,scores={time=2661}] ~~~ particle aw:wild_sword_disappear -87 -37 105
 execute @e[name=timeline,scores={time=2665}] ~~~ kill @e[type=aw:wild_sword]
 execute @e[name=timeline,scores={time=2666}] ~~~ scoreboard players set @s time 3000
@@ -78,24 +76,24 @@ execute @e[name=timeline,scores={time=3200}] ~~~ tellraw @a {"rawtext":[{"transl
 
 
 execute @e[name=timeline,scores={time=3300}] ~~~ tellraw @a {"rawtext":[{"translate":"* 你感觉身体再次变轻，听到了一个声音......"}]}
-execute @e[name=timeline,scores={time=3300}] ~~~ effect @a blindness 30 0 true
+#<- execute @e[name=timeline,scores={time=3300}] ~~~ effect @a blindness 30 0 true
 
-execute @e[name=timeline,scores={time=3450}] ~~~ tp @a -87 -40 85
-execute @e[name=timeline,scores={time=3450}] ~~~ kill @e[family=summoner]
+#<- execute @e[name=timeline,scores={time=3450}] ~~~ tp @a -87 -40 85
+#<- execute @e[name=timeline,scores={time=3450}] ~~~ kill @e[family=summoner]
 
 ### 7-1 开始
-execute @e[name=timeline,scores={time=3600}] ~~~ tp @a -120 -17 105
-execute @e[name=timeline,scores={time=3600}] ~~~ tp @e[family=respawner] -120 -17 105
-execute @e[name=timeline,scores={time=3600}] ~~~ fill -150 -18 102 -150 -16 100 nether_brick_fence
+#<- execute @e[name=timeline,scores={time=3600}] ~~~ tp @a -120 -17 105
+#<- execute @e[name=timeline,scores={time=3600}] ~~~ tp @e[family=respawner] -120 -17 105
+#<- execute @e[name=timeline,scores={time=3600}] ~~~ fill -150 -18 102 -150 -16 100 nether_brick_fence
 
 ## （如果玩家失败，从这里开始）
 execute @e[name=timeline,scores={time=3650}] ~~~ title @a times 0 100 0
 execute @e[name=timeline,scores={time=3650}] ~~~ title @a title §l§c封 印 神 殿
 execute @e[name=timeline,scores={time=3650}] ~~~ title @a subtitle §cFINAL TEMPLE
 execute @e[name=timeline,scores={time=3650}] ~~~ execute @a ~~~ playsound beacon.power @s ~~~ 1 1 1
-execute @e[name=timeline,scores={time=3650}] ~~~ scoreboard players set @e[name=level] background 701
-execute @e[name=timeline,scores={time=3670}] ~~~ effect @a clear
+#<- execute @e[name=timeline,scores={time=3650}] ~~~ scoreboard players set @e[name=level] background 701
+#<- execute @e[name=timeline,scores={time=3670}] ~~~ effect @a clear
 
 execute @e[name=timeline,scores={time=3800}] ~~~ tellraw @a {"rawtext":[{"translate":"§c* 准备好了吗？这是你最后的试炼。"}]}
 
-execute @e[name=timeline,scores={time=3950}] ~~~ function levels/chapter7/7_1/start_level
+#<- execute @e[name=timeline,scores={time=3950}] ~~~ function levels/chapter7/7_1/start_level
