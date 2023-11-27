@@ -21,10 +21,8 @@ effect @a clear
 ## --- 传送玩家到已经进入房间的玩家处 ---
 tp @a[tag=!intoLevel] @a[tag=intoLevel,c=1]
 
-## --- 为玩家补充箭 ---
+## --- 为玩家补充箭、药水和残留的重要装备 ---
 function methods/supplier/arrow
-
-## --- 为玩家补充药水和残留的重要装备 ---
 function methods/supplier/potion
 function methods/important_items_tester
 
