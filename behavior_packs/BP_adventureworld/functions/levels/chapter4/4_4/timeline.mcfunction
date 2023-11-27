@@ -56,12 +56,6 @@ execute @e[name=monsterRefreshLeft,scores={time=0}] ~~~ scoreboard players rando
 ## --- 设置上一波完成标记为0 ---
 execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ scoreboard players set @s background 0
 
-## --- 怪物延迟生成器计时 ---
-
-### 每刻为变量time.monsterSummonDelay -= 1
-scoreboard players add @e[name=monsterSummonDelay,scores={time=0..}] time -1
-### 调用相关生成器并循环执行
-execute @e[name=monsterSummonDelay,scores={time=0..}] ~~~ function methods/monsters/summoner_controller
 
 ## --- 给予守卫者药效 ---
 execute @e[name=tick,scores={time=0}] ~~~ effect @e[type=guardian] resistance 30 10 true

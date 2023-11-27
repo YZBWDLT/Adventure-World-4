@@ -49,5 +49,12 @@ execute @e[name=allPlayersAmount,scores={background=2..}] ~~~ execute @e[name=is
 execute @e[name=isCompleted,scores={background=0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players add @a[r=2,scores={isAlive=1}] deathTimes 1
 execute @e[name=isCompleted,scores={background=0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players set @a[r=2,scores={isAlive=1}] isAlive 0
 
+## --- 怪物延迟生成器计时 ---
+
+### 每刻为变量time.monsterSummonDelay -= 1
+scoreboard players add @e[name=monsterSummonDelay,scores={time=0..}] time -1
+### 调用相关生成器并循环执行
+execute @e[name=wave,scores={background=!0}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0..}] ~~~ function methods/monsters/summoner_controller
+
 ## --- 测试器 ---
 # execute @e[family=summoner] ~~~ say 1
