@@ -1,0 +1,80 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.wild_sword.particle": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions":[
+                        { "particle_stage_1": "query.variant == 1" },
+                        { "particle_stage_2": "query.variant == 2" },
+                        { "particle_stage_3": "query.variant == 3" },
+                        { "particle_stage_4": "query.variant == 4" },
+                        { "particle_stage_5": "query.variant == 5" }
+                    ]
+                },
+                "particle_stage_1": {
+                    "animations": [ "particle_stage_1" ],
+                    "transitions":[
+                        { "particle_stage_2": "query.variant == 2" },
+                        { "particle_stage_3": "query.variant == 3" },
+                        { "particle_stage_4": "query.variant == 4" },
+                        { "particle_stage_5": "query.variant == 5" }
+                    ]
+                },
+                "particle_stage_2": {
+                    "animations": [ "particle_stage_2" ],
+                    "transitions":[
+                        { "particle_stage_1": "query.variant == 1" },
+                        { "particle_stage_3": "query.variant == 3" },
+                        { "particle_stage_4": "query.variant == 4" },
+                        { "particle_stage_5": "query.variant == 5" }
+                    ]
+                },
+                "particle_stage_3": {
+                    "animations": [ "particle_stage_3_1", "particle_stage_3_2" ],
+                    "transitions":[
+                        { "particle_stage_1": "query.variant == 1" },
+                        { "particle_stage_2": "query.variant == 2" },
+                        { "particle_stage_4": "query.variant == 4" },
+                        { "particle_stage_5": "query.variant == 5" }
+                    ]
+                },
+                "particle_stage_4": {
+                    "animations": [ "particle_stage_4" ],
+                    "transitions":[
+                        { "particle_stage_1": "query.variant == 1" },
+                        { "particle_stage_2": "query.variant == 2" },
+                        { "particle_stage_3": "query.variant == 3" },
+                        { "particle_stage_5": "query.variant == 5" }
+                    ]
+                },
+                "particle_stage_5": {
+                    "animations": [ "particle_stage_4" ],
+                    "transitions":[
+                        { "particle_stage_1": "query.variant == 1" },
+                        { "particle_stage_2": "query.variant == 2" },
+                        { "particle_stage_3": "query.variant == 3" },
+                        { "particle_stage_4": "query.variant == 4" }
+                    ]
+                }
+            }
+        },
+        "controller.animation.wild_sword.obtain": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "in_animation": "query.variant >= 2 && query.variant <= 5" }
+                    ]
+                },
+                "in_animation": {
+                    "animations": [ "animation" ],
+                    "transitions": [
+                        { "default": "query.variant < 2 || query.variant > 5" }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -70,6 +70,11 @@ execute @e[name=caveSpider2Summoner,c=1] ~~~ function methods/monsters/cave_spid
 execute @e[name=caveSpider3Summoner,c=1] ~~~ function methods/monsters/cave_spider/level3
 execute @e[name=caveSpider4Summoner,c=1] ~~~ function methods/monsters/cave_spider/level4
 
+execute @e[name=silverfish1Summoner,c=1] ~~~ function methods/monsters/silverfish/level1
+execute @e[name=silverfish2Summoner,c=1] ~~~ function methods/monsters/silverfish/level2
+execute @e[name=silverfish3Summoner,c=1] ~~~ function methods/monsters/silverfish/level3
+execute @e[name=silverfish4Summoner,c=1] ~~~ function methods/monsters/silverfish/level4
+
 ## --- 苦力怕 ---
 execute @e[name=creeper1Summoner,c=1] ~~~ function methods/monsters/creeper/level1
 execute @e[name=creeper2Summoner,c=1] ~~~ function methods/monsters/creeper/level2

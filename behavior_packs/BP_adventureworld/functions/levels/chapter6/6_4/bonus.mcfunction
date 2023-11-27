@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] background 641
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a6-4已完成！\n§b+1 力量药水 II\n§a[力量药水 I]§f已升级到§a[力量药水 II]§f"}]}
+tellraw @a {"rawtext":[{"text":"§a6-4已完成！\n§a[力量药水 I]§f已升级到§a[力量药水 II]§f"}]}
 
 ## --- 打开入口与出口 ---
 fill -76 -39 20 -74 -37 20 structure_void
@@ -19,9 +19,6 @@ fill -89 -40 49 -61 -39 21 air[] replace flowing_lava[]
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus
-
-## --- 给予奖励 ---
-give @a aw:strength_potion_2 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 
 ## --- 将旷野之剑动画的时间线数据初始化 ---
 function methods/timeline/enable

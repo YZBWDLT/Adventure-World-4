@@ -55,7 +55,7 @@ execute @e[name=level,scores={background=211..}] ~~~ give @a[hasitem={item=bow,q
 ### 在补偿前，先提醒玩家手持一次钻石头盔和钻石靴子
 
 execute @e[name=level,scores={background=311..}] ~~~ scoreboard players set @a[hasitem={item=aw:diamond_helmet,quantity=0}] isHoldingHelmet 0
-execute @e[name=level,scores={background=321..}] ~~~ scoreboard players set @a[hasitem={item=aw:diamond_helmet,quantity=0}] isHoldingBoots 0
+execute @e[name=level,scores={background=321..}] ~~~ scoreboard players set @a[hasitem={item=aw:diamond_boots,quantity=0}] isHoldingBoots 0
 
 execute @e[name=level,scores={background=311..}] ~~~ replaceitem entity @a[hasitem={item=aw:diamond_helmet,quantity=0}] slot.armor.head 0 aw:diamond_helmet 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 execute @e[name=level,scores={background=441..}] ~~~ replaceitem entity @a[hasitem={item=aw:diamond_chestplate,quantity=0}] slot.armor.chest 0 aw:diamond_chestplate 1 0 {"item_lock": { "mode": "lock_in_slot" } }

@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] background 131
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a1-3已完成！\n§b+1 铁制全套装备，+1 抗性提升药水 I\n§a[抗性提升药水 I]§f上限+1，当前为1。"}]}
+tellraw @a {"rawtext":[{"text":"§a1-3已完成！\n§b+1 铁制全套装备\n§a[抗性提升药水 I]§f上限+1，当前为1。"}]}
 
 ## --- 打开入口与出口 ---
 fill -139 11 34 -139 13 32 air
@@ -28,4 +28,3 @@ replaceitem entity @a slot.armor.legs 0 aw:iron_leggings 1 0 {"item_lock":{"mode
 replaceitem entity @a slot.armor.feet 0 aw:iron_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 give @a minecraft:leather_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 tellraw @a {"rawtext":[{"text":"§7已自动装备铁装备，皮革靴子已自动卸下"}]}
-give @a aw:resistance_potion_1 1 0 {"item_lock": { "mode": "lock_in_inventory" }}

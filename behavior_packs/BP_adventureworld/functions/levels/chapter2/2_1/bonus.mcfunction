@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] background 211
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a2-1已完成！\n§b+1 弓，+12 箭，+2 生命药水 I\n§a[生命药水 I]§f上限+1，当前为2。"}]}
+tellraw @a {"rawtext":[{"text":"§a2-1已完成！\n§b+1 弓，+12 箭\n§a[生命药水 I]§f上限+1，当前为2。"}]}
 
 ## --- 打开入口与出口 ---
 fill -74 20 58 -76 18 58 air
@@ -20,7 +20,6 @@ function methods/all_levels/bonus
 ## --- 给予奖励 ---
 give @a bow 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 function methods/supplier/arrow
-give @a aw:health_potion_1 2 0 {"item_lock": { "mode": "lock_in_inventory" }}
 
 ## --- 设置陷阱 ---
 ##<!> 计划在未来加入全域检测功能
