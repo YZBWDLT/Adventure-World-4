@@ -4,7 +4,6 @@
 scoreboard players set @e[name=level] background 300
 
 function methods/important_items_tester
-time set night
 
 ## --- 标题&音效 ---
 title @a times 0 100 0
