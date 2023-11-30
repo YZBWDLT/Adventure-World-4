@@ -13,10 +13,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=zombie1S
 ### 生成怪物，怪物生成数将根据玩家数目而非线性增长
 ### 玩家数目  1   2~3 4~6 7~10
 ### 怪物倍率  1   2   3   4
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1..}] ~~~ execute @e[name=zombie1Summoner] ~~~ summon minecraft:zombie ~~~ minecraft:as_adult "僵尸 | lv.1"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..}] ~~~ execute @e[name=zombie1Summoner] ~~~ summon minecraft:zombie ~~~ minecraft:as_adult "僵尸 | lv.1"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=zombie1Summoner] ~~~ summon minecraft:zombie ~~~ minecraft:as_adult "僵尸 | lv.1"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=zombie1Summoner] ~~~ summon minecraft:zombie ~~~ minecraft:as_adult "僵尸 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1..}] ~~~ execute @e[name=zombie1Summoner] ~~~ summon minecraft:zombie ~~~ aw:level_1 "僵尸 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..}] ~~~ execute @e[name=zombie1Summoner] ~~~ summon minecraft:zombie ~~~ aw:level_1 "僵尸 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=zombie1Summoner] ~~~ summon minecraft:zombie ~~~ aw:level_1 "僵尸 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=zombie1Summoner] ~~~ summon minecraft:zombie ~~~ aw:level_1 "僵尸 | lv.1"
 
 ### 替换装备
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=zombie1Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=zombie] slot.armor.head 0 air

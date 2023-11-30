@@ -13,10 +13,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=zombieBa
 ### 生成怪物，怪物生成数将根据玩家数目而非线性增长
 ### 玩家数目  1   2~3 4~6 7~10
 ### 怪物倍率  1   2   3   4
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1..}] ~~~ execute @e[name=zombieBaby4Summoner] ~~~ summon zombie ~~~ minecraft:as_baby "小僵尸 | lv.4"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..}] ~~~ execute @e[name=zombieBaby4Summoner] ~~~ summon zombie ~~~ minecraft:as_baby "小僵尸 | lv.4"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=zombieBaby4Summoner] ~~~ summon zombie ~~~ minecraft:as_baby "小僵尸 | lv.4"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=zombieBaby4Summoner] ~~~ summon zombie ~~~ minecraft:as_baby "小僵尸 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1..}] ~~~ execute @e[name=zombieBaby4Summoner] ~~~ summon zombie ~~~ aw:level_4_baby "小僵尸 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..}] ~~~ execute @e[name=zombieBaby4Summoner] ~~~ summon zombie ~~~ aw:level_4_baby "小僵尸 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=zombieBaby4Summoner] ~~~ summon zombie ~~~ aw:level_4_baby "小僵尸 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=zombieBaby4Summoner] ~~~ summon zombie ~~~ aw:level_4_baby "小僵尸 | lv.4"
 
 ### 替换装备
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=zombieBaby4Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=zombie] slot.armor.head 0 diamond_helmet
