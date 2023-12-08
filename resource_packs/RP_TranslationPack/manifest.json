@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "No longer need to bear terrible translations.",
+        "name": "BE Translation Patch",
+        "uuid": "0cc7cab2-62ae-472b-8539-185f4e194752",
+        "version": [1, 19, 80],
+        "min_engine_version": [1, 18, 30]
+    },
+    "modules": [
+        {
+            "description": "No longer need to bear terrible translations.",
+            "type": "resources",
+            "uuid": "0395e238-3a48-4524-8b4a-97c485cc8c79",
+            "version": [1, 19, 60]
+        }
+    ]
+}
