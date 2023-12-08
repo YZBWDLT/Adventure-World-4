@@ -1,5 +1,5 @@
 # 反馈
-tellraw @s {"rawtext":[{"text":"下文反馈格式: (记分项).(标记名) = (值)，并反馈注释\n标黄的为假名变量而非标记实体变量"}]}
+tellraw @s {"rawtext":[{"text":"下文反馈格式: (记分项).(标记名) = (值)，并反馈注释\n§e*黄色：假名（即非标记实体）变量 §b*蓝色：玩家个人数据"}]}
 
 ## === 激活数据 active ===
 
@@ -22,13 +22,14 @@ tellraw @s {"rawtext":[{"translate":"background.randomLocation = %%s §7# 随机
 tellraw @s {"rawtext":[{"translate":"background.randomMonster = %%s §7# 随机怪物种类","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=randomMonster]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.wave = %%s §7# 记录波数数据","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=wave]"}}]}}]}
 
-## === crosshair ===
+## === 玩家个人数据 ===
 
-tellraw @s {"rawtext":[{"translate":"crosshair.@s = %%s §7# 准星启用状态","with":{"rawtext":[{"score":{"objective":"crosshair","name":"@s"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"deathTimes.@s = %%s §7# 玩家死亡次数","with":{"rawtext":[{"score":{"objective":"deathTimes","name":"@s"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"isAlive.@s = %%s §7# 玩家存活状态，0=游戏时死亡，1=游戏时存活，2=未在游戏中","with":{"rawtext":[{"score":{"objective":"isAlive","name":"@s"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"isHoldingHelmet.@s = %%s §7# 玩家是否手持过钻石头盔，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingHelmet","name":"@s"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"isHoldingBoots.@s = %%s §7# 玩家是否手持过钻石靴子，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingBoots","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§bcrosshair.@s = %%s §7# 准星启用状态","with":{"rawtext":[{"score":{"objective":"crosshair","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§bdeathTimes.@s = %%s §7# 玩家死亡次数","with":{"rawtext":[{"score":{"objective":"deathTimes","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§binLevelArea.@s = %%s §7# 玩家所在的关卡区域","with":{"rawtext":[{"score":{"objective":"inLevelArea","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§bisAlive.@s = %%s §7# 玩家存活状态，0=游戏时死亡，1=游戏时存活，2=未在游戏中","with":{"rawtext":[{"score":{"objective":"isAlive","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§bisHoldingHelmet.@s = %%s §7# 玩家是否手持过钻石头盔，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingHelmet","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§bisHoldingBoots.@s = %%s §7# 玩家是否手持过钻石靴子，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingBoots","name":"@s"}}]}}]}
 
 ## === 设置数据 settings ===
 

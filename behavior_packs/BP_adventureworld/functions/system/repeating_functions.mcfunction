@@ -28,11 +28,16 @@ function system/hookshot_judger
 function system/time_played_recorder
 ## 音效控制器
 function system/sound_player
-## 头盔与靴子手持检测器
+## 装备检测器
 execute @e[name=level,scores={background=311..}] ~~~ function system/armor_tester
 ## 虚拟准星
 execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ titleraw @s times 0 3 0
 execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ titleraw @s title {"rawtext":[{"text":"§1"}]}
 execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ titleraw @s subtitle {"rawtext":[{"text":"+\n\n\n"}]}
-##（开发者模式）
+
+## --- 开发者模式 ---
+## 游戏模式切换器
 execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_switcher
+## 开发中使用
+# execute @e[name=developerMode,scores={settings=1}] ~~~ function system/level_area_tester
+# execute @e[name=developerMode,scores={settings=1}] ~~~ titleraw @a actionbar {"rawtext":[{"score":{"objective":"inLevelArea","name":"@a"} } ] }
