@@ -40,6 +40,7 @@ tellraw @s {"rawtext":[{"translate":"§estats.allFailedTimes = %%s §7# 记录�
 
 ## === 缓存数据 temp&temp2&temp3 ===
 tellraw @s {"rawtext":[{"translate":"temp.level = %%s §7# 通过位数分离器获取的章节数据","with":{"rawtext":[{"score":{"objective":"temp","name":"@e[name=level]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"temp.respawner = %%s §7# 重生点随机数据","with":{"rawtext":[{"score":{"objective":"temp","name":"@e[name=respawner]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"§btemp.@s = %%s §7# 不定意义","with":{"rawtext":[{"score":{"objective":"temp","name":"@s"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"temp2.level = %%s §7# 通过位数分离器获取的关卡数据","with":{"rawtext":[{"score":{"objective":"temp2","name":"@e[name=level]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"§btemp2.@s = %%s §7# 通过位数分离器获取的当前所在关卡章节","with":{"rawtext":[{"score":{"objective":"temp2","name":"@s"}}]}}]}
