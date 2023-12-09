@@ -94,7 +94,7 @@ execute @e[name=level,scores={temp3=1}] ~~~ execute @a[scores={temp2=3,temp3=0}]
 execute @e[name=level,scores={temp3=1}] ~~~ execute @a[scores={temp2=4,temp3=0}] ~~~ titleraw @s actionbar {"rawtext":[{"translate":"§l%%s §r§f| §3§l寒 冰 神 殿","with":{"rawtext":[{"score":{"objective":"temp2","name":"@s"}}]}}]}
 execute @e[name=level,scores={temp3=1}] ~~~ execute @a[scores={temp2=5,temp3=0}] ~~~ titleraw @s actionbar {"rawtext":[{"translate":"§l%%s §r§f| §f§l红 石 神 殿","with":{"rawtext":[{"score":{"objective":"temp2","name":"@s"}}]}}]}
 execute @e[name=level,scores={temp3=1}] ~~~ execute @a[scores={temp2=6,temp3=0}] ~~~ titleraw @s actionbar {"rawtext":[{"translate":"§l%%s §r§f| §7§l山 峦 神 殿","with":{"rawtext":[{"score":{"objective":"temp2","name":"@s"}}]}}]}
-execute @e[name=level,scores={temp3=1}] ~~~ execute @a[scores={temp2=6,temp3=9}] ~~~ titleraw @s actionbar {"rawtext":[{"translate":"§l%%s §r§f| §f§l剑 之 神 殿","with":{"rawtext":[{"score":{"objective":"temp2","name":"@s"}}]}}]}
+execute @e[name=level,scores={temp3=1}] ~~~ execute @a[scores={temp2=6,temp3=9}] ~~~ titleraw @s actionbar {"rawtext":[{"translate":"§f§l剑 之 神 殿","with":{"rawtext":[{"score":{"objective":"temp2","name":"@s"}}]}}]}
 execute @e[name=level,scores={temp3=1}] ~~~ execute @a[scores={temp2=7,temp3=0}] ~~~ titleraw @s actionbar {"rawtext":[{"translate":"§l%%s §r§f| §c§l封 印 神 殿","with":{"rawtext":[{"score":{"objective":"temp2","name":"@s"}}]}}]}
 
 ## --- 特殊快捷栏标题 ---
