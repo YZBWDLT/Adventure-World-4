@@ -55,11 +55,12 @@ effect @a[scores={isAlive=0}] resistance 30 9 true
 
 
 ## --- 怪物延迟生成器计时 ---
+## 仅当在关卡内（temp3.level=0）时执行
 
 ### 每刻为变量time.monsterSummonDelay -= 1
-scoreboard players add @e[name=monsterSummonDelay,scores={time=0..}] time -1
+execute @e[name=level,scores={temp3=0}] ~~~ scoreboard players add @e[name=monsterSummonDelay,scores={time=0..}] time -1
 ### 调用相关生成器并循环执行
-execute @e[name=wave,scores={background=!0}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0..}] ~~~ function methods/monsters/summoner_controller
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=wave,scores={background=!0}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0..}] ~~~ function methods/monsters/summoner_controller
 
 ## --- 测试器 ---
 # execute @e[family=summoner] ~~~ say 1

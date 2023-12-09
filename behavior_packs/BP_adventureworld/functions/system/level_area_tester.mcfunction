@@ -114,8 +114,8 @@ scoreboard players set @a[x=-89,y=-41,z=21,dx=28,dy=22,dz=28] inLevelArea 64
 
 ## --- 第七章 ---
 ### 7-0
+scoreboard players set @a[x=-89,y=-41,z=83,dx=4,dy=4,dz=4] inLevelArea 68
 scoreboard players set @a[x=-104,y=-41,z=88,dx=34,dy=42,dz=34] inLevelArea 69
-scoreboard players set @a[x=-89,y=-41,z=83,dx=4,dy=4,dz=4] inLevelArea 69
 ### 7-1
 scoreboard players set @a[x=-149,y=-20,z=93,dx=38,dy=15,dz=24] inLevelArea 71
 scoreboard players set @a[x=-150,y=-20,z=107,dx=0,dy=15,dz=4] inLevelArea 71
