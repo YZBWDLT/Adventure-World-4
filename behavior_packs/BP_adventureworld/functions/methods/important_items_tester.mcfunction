@@ -36,7 +36,7 @@ clear @a[hasitem={item=aw:quiver,quantity=2..}] aw:quiver
 execute @e[name=level,scores={background=100..130}] ~~~ replaceitem entity @a[hasitem={item=leather_helmet,quantity=0}] slot.armor.head 0 leather_helmet 1 0 {"item_lock": { "mode": "lock_in_slot" } }
 execute @e[name=level,scores={background=100..130}] ~~~ replaceitem entity @a[hasitem={item=leather_chestplate,quantity=0}] slot.armor.chest 0 leather_chestplate 1 0 {"item_lock": { "mode": "lock_in_slot" } }
 execute @e[name=level,scores={background=100..130}] ~~~ replaceitem entity @a[hasitem={item=leather_leggings,quantity=0}] slot.armor.legs 0 leather_leggings 1 0 {"item_lock": { "mode": "lock_in_slot" } }
-execute @e[name=level,scores={background=100..440}] ~~~ replaceitem entity @a[hasitem={item=leather_boots,quantity=0}] slot.armor.feet 0 leather_boots 1 0 {"item_lock": { "mode": "lock_in_inventory" } }
+execute @e[name=level,scores={background=100..440}] ~~~ give @a[hasitem={item=leather_boots,quantity=0}] leather_boots 1 0 {"item_lock": { "mode": "lock_in_inventory" } }
 ### 绳枪 | 1-2通关后~
 execute @e[name=level,scores={background=121..}] ~~~ give @a[hasitem={item=aw:hookshot,quantity=0}] aw:hookshot 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 execute @e[name=level,scores={background=121..}] ~~~ give @a[hasitem={item=aw:enable_crosshair,quantity=0}] aw:enable_crosshair 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
@@ -44,7 +44,7 @@ execute @e[name=level,scores={background=121..}] ~~~ give @a[hasitem={item=aw:en
 execute @e[name=level,scores={background=131..310}] ~~~ replaceitem entity @a[hasitem={item=aw:iron_helmet,quantity=0}] slot.armor.head 0 aw:iron_helmet 1 0 {"item_lock": { "mode": "lock_in_slot" } }
 execute @e[name=level,scores={background=131..440}] ~~~ replaceitem entity @a[hasitem={item=aw:iron_chestplate,quantity=0}] slot.armor.chest 0 aw:iron_chestplate 1 0 {"item_lock": { "mode": "lock_in_slot" } }
 execute @e[name=level,scores={background=131..430}] ~~~ replaceitem entity @a[hasitem={item=aw:iron_leggings,quantity=0}] slot.armor.legs 0 aw:iron_leggings 1 0 {"item_lock": { "mode": "lock_in_slot" } }
-execute @e[name=level,scores={background=131..320}] ~~~ replaceitem entity @a[hasitem={item=aw:iron_boots,quantity=0}] slot.armor.feet 0 aw:iron_boots 1 0 {"item_lock": { "mode": "lock_in_inventory" } }
+execute @e[name=level,scores={background=131..320}] ~~~ give @a[hasitem={item=aw:iron_boots,quantity=0}] aw:iron_boots 1 0 {"item_lock": { "mode": "lock_in_inventory" } }
 ### 普通剑 | 1-0~2-3
 execute @e[name=level,scores={background=100..230}] ~~~ give @a[hasitem={item=aw:normal_sword,quantity=0}] aw:normal_sword 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 ### 钢剑 | 2-3通关后~6-4
@@ -60,7 +60,7 @@ execute @e[name=level,scores={background=321..}] ~~~ scoreboard players set @a[h
 execute @e[name=level,scores={background=311..}] ~~~ replaceitem entity @a[hasitem={item=aw:diamond_helmet,quantity=0}] slot.armor.head 0 aw:diamond_helmet 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 execute @e[name=level,scores={background=441..}] ~~~ replaceitem entity @a[hasitem={item=aw:diamond_chestplate,quantity=0}] slot.armor.chest 0 aw:diamond_chestplate 1 0 {"item_lock": { "mode": "lock_in_slot" } }
 execute @e[name=level,scores={background=431..}] ~~~ replaceitem entity @a[hasitem={item=aw:diamond_leggings,quantity=0}] slot.armor.legs 0 aw:diamond_leggings 1 0 {"item_lock": { "mode": "lock_in_slot" } }
-execute @e[name=level,scores={background=321..}] ~~~ replaceitem entity @a[hasitem={item=aw:diamond_boots,quantity=0}] slot.armor.feet 0 aw:diamond_boots 1 0 {"item_lock": { "mode": "lock_in_inventory" } }
+execute @e[name=level,scores={background=321..}] ~~~ give @a[hasitem={item=aw:diamond_boots,quantity=0}] aw:diamond_boots 1 0 {"item_lock": { "mode": "lock_in_inventory" } }
 
 ### 脊柱之盾 | 3-4通关后~
 execute @e[name=level,scores={background=341..}] ~~~ give @a[hasitem={item=shield,quantity=0}] shield 1 0 {"item_lock": { "mode": "lock_in_inventory" }}

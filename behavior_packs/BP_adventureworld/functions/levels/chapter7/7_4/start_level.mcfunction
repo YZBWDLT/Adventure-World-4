@@ -6,13 +6,16 @@ scoreboard players set @e[name=level] background 740
 
 ## --- 封闭入口与出口 ---
 fill -223 -18 98 -223 -16 100 cobblestone_wall["wall_block_type":"nether_brick"]
+fill -235 -30 97 -233 -30 99 stained_glass["color":"red"]
 
 ## --- 设置重生点 ---
-## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
-tp @e[family=respawner] -247 -5 101
+tp @e[family=respawner] -248 -5 104
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
 function methods/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] background 5
+
+## --- 添加岩浆 ---
+fill -224 -27 111 -244 -29 85 lava[] keep

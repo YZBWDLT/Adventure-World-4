@@ -17,9 +17,6 @@ tp @e[family=respawner] -130 -31 6
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus
 
-## --- 给予奖励 ---
-replaceitem entity @a slot.armor.chest 0 aw:diamond_chestplate 1 0 {"item_lock": { "mode": "lock_in_slot" } }
-
 ## --- 清除所有怪物 ---
 kill @e[family=monster]
 kill @e[type=item]

@@ -46,9 +46,3 @@ execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveComplete
 ## --- 设置上一波完成标记为0 ---
 execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ scoreboard players set @s background 0
 
-## --- 怪物延迟生成器计时 ---
-
-### 每刻为变量time.monsterSummonDelay -= 1
-scoreboard players add @e[name=monsterSummonDelay,scores={time=0..}] time -1
-### 调用相关生成器并循环执行
-execute @e[name=wave,scores={background=!0}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0..}] ~~~ function methods/monsters/summoner_controller

@@ -10,5 +10,4 @@ function system/bubble_controller
 replaceitem entity @a[hasitem={item=leather_boots,location=slot.armor.feet}] slot.armor.feet 0 minecraft:leather_boots
 
 ## --- 当未进行游戏时，清除summoner标记 ---
-function methods/get_level_completed_bit
-execute @e[name=isCompleted,scores={background=1}] ~~~ kill @e[family=summoner]
+execute @e[name=level,scores={temp3=1}] ~~~ kill @e[family=summoner]

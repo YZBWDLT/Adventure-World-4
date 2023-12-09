@@ -65,23 +65,59 @@
   
         "events": {
             "minecraft:entity_spawned": {
-                "trigger": "spawn_adult"
-            },
-            "spawn_adult": {
                 "randomize": [
-                    { "weight": 1, "trigger": "spawn_adult_ranged" },
-                    { "weight": 1, "trigger": "spawn_adult_melee" }
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_2" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_2" ] } }
                 ]
             },
-            "spawn_adult_ranged": {
-                "add": { "component_groups": [ "ranged_unit" ] }
+            "aw:level_1": { 
+                "randomize": [
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_1" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_1" ] } }
+                ] 
             },
-            "spawn_adult_melee": {
-                "add": { "component_groups": [ "melee_unit" ] }
+            "aw:level_2": { 
+                "randomize": [
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_2" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_2" ] } }
+                ] 
+            },
+            "aw:level_3": { 
+                "randomize": [
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_3" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_3" ] } }
+                ] 
+            },
+            "aw:level_4": { 
+                "randomize": [
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_4" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_4" ] } }
+                ] 
             }
         },
 
         "component_groups": {
+            "level_1": {
+                "minecraft:attack": { "damage": 5 },
+                "minecraft:health": { "value": 16, "max": 16 },
+                "minecraft:movement": { "value": 0.35 }
+			},
+			"level_2": {
+                "minecraft:attack": { "damage": 5 },
+                "minecraft:health": { "value": 16, "max": 16 },
+                "minecraft:movement": { "value": 0.35 }
+			},
+			"level_3": {
+                "minecraft:attack": { "damage": 5 },
+                "minecraft:health": { "value": 16, "max": 16 },
+                "minecraft:movement": { "value": 0.35 }
+			},
+			"level_4": {
+                "minecraft:attack": { "damage": 5 },
+                "minecraft:health": { "value": 16, "max": 16 },
+                "minecraft:movement": { "value": 0.35 }
+			},
+
             "ranged_unit": {
                 "minecraft:behavior.ranged_attack": { "priority": 8, "attack_interval_min": 1, "attack_interval_max": 1, "attack_radius": 8, "attack_radius_min": 4, "speed_multiplier": 1.0, "target_in_sight_time": 0.1 },
                 "minecraft:shooter": { "def": "minecraft:arrow" },
@@ -91,7 +127,6 @@
             },
             "melee_unit": {
                 "minecraft:behavior.melee_attack": { "priority": 8, "speed_multiplier": 1.0, "track_target": true },
-                "minecraft:attack": { "damage": 5 },
                 "minecraft:equipment": { "table": "loot_tables/entities/piglin_gear_melee.json" },
                 "minecraft:variant": { "value": 1 }
             }

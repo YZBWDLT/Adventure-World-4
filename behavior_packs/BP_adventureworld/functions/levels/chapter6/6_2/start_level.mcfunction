@@ -9,7 +9,6 @@ fill -81 -19 -48 -79 -17 -48 stained_glass["color":"purple"]
 fill -72 -19 -32 -70 -17 -32 stained_glass["color":"purple"]
 
 ## --- 设置重生点 ---
-## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
 tp @e[family=respawner] -78 -11 -30
 
 ## --- 调用所有关卡通用的开始关卡函数 ---

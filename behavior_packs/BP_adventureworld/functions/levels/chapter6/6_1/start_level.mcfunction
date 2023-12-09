@@ -17,7 +17,6 @@ fill -82 -31 -64 -82 -31 -64 pointed_dripstone["hanging":false,"dripstone_thickn
 fill -83 -31 -62 -83 -29 -64 barrier[] keep
 
 ## --- 设置重生点 ---
-## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
 tp @e[family=respawner] -66 -30 -54
 
 ## --- 调用所有关卡通用的开始关卡函数 ---

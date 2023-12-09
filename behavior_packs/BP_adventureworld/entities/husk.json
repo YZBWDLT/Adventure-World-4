@@ -65,27 +65,85 @@
 				"sequence": [
 					{
 						"randomize": [
-							{ "weight": 38, "remove": {}, "add": { "component_groups": [ "minecraft:zombie_husk_adult" ] } },
-							{ "weight": 2, "remove": { }, "add": { "component_groups": [ "minecraft:zombie_husk_baby" ] } }
+							{ "weight": 38, "add": { "component_groups": [ "adult_level_2" ] } },
+							{ "weight": 2, "add": { "component_groups": [ "baby_level_2" ] } }
 						]
 					}
 				]
 			},
-			"minecraft:as_adult": { "add": { "component_groups": [ "minecraft:zombie_husk_adult" ] } },
-			"minecraft:as_baby": { "add": { "component_groups": [ "minecraft:zombie_husk_baby" ] } }
+            "aw:level_1": { "add": { "component_groups": [ "adult_level_1" ] } },
+			"aw:level_2": { "add": { "component_groups": [ "adult_level_2" ] } },
+			"aw:level_3": { "add": { "component_groups": [ "adult_level_3" ] } },
+			"aw:level_4": { "add": { "component_groups": [ "adult_level_4" ] } },
+            "aw:level_1_baby": { "add": { "component_groups": [ "baby_level_1" ] } },
+			"aw:level_2_baby": { "add": { "component_groups": [ "baby_level_2" ] } },
+			"aw:level_3_baby": { "add": { "component_groups": [ "baby_level_3" ] } },
+			"aw:level_4_baby": { "add": { "component_groups": [ "baby_level_4" ] } }
         },
         
         "component_groups": {
-            "minecraft:zombie_husk_baby": {
-                "minecraft:is_baby": {},
-                "minecraft:scale": { "value": 0.53125 },
-                "minecraft:movement": { "value": 0.35 }
+            "adult_level_1": {
+                "minecraft:scale": { "value": 1.0625 },
+
+                "minecraft:attack": { "damage": 3 },
+                "minecraft:health": { "value": 20, "max": 20 },
+                "minecraft:movement": { "value": 0.23 }
+            },
+            "adult_level_2": {
+                "minecraft:scale": { "value": 1.0625 },
+
+                "minecraft:attack": { "damage": 3 },
+                "minecraft:health": { "value": 20, "max": 20 },
+                "minecraft:movement": { "value": 0.23 }
+            },
+            "adult_level_3": {
+                "minecraft:scale": { "value": 1.0625 },
+
+                "minecraft:attack": { "damage": 3 },
+                "minecraft:health": { "value": 20, "max": 20 },
+                "minecraft:movement": { "value": 0.23 }
+            },
+            "adult_level_4": {
+                "minecraft:scale": { "value": 1.0625 },
+
+                "minecraft:attack": { "damage": 3 },
+                "minecraft:health": { "value": 20, "max": 20 },
+                "minecraft:movement": { "value": 0.23 }
             },
 
-            "minecraft:zombie_husk_adult": {
-                "minecraft:movement": { "value": 0.23 },
-                "minecraft:scale": { "value": 1.0625 }
+            "baby_level_1": {
+                "minecraft:scale": { "value": 0.53125 },
+                "minecraft:is_baby": {},
+
+                "minecraft:attack": { "damage": 3 },
+                "minecraft:health": { "value": 20, "max": 20 },
+                "minecraft:movement": { "value": 0.35 }
+            },
+            "baby_level_2": {
+                "minecraft:scale": { "value": 0.53125 },
+                "minecraft:is_baby": {},
+
+                "minecraft:attack": { "damage": 3 },
+                "minecraft:health": { "value": 20, "max": 20 },
+                "minecraft:movement": { "value": 0.35 }
+            },
+            "baby_level_3": {
+                "minecraft:scale": { "value": 0.53125 },
+                "minecraft:is_baby": {},
+
+                "minecraft:attack": { "damage": 3 },
+                "minecraft:health": { "value": 20, "max": 20 },
+                "minecraft:movement": { "value": 0.35 }
+            },
+            "baby_level_4": {
+                "minecraft:scale": { "value": 0.53125 },
+                "minecraft:is_baby": {},
+
+                "minecraft:attack": { "damage": 3 },
+                "minecraft:health": { "value": 20, "max": 20 },
+                "minecraft:movement": { "value": 0.35 }
             }
+
         }
     }
 }

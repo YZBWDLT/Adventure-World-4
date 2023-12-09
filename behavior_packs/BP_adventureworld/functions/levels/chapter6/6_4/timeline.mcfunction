@@ -28,8 +28,6 @@ execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveComplete
 
 ## --- 失败判定 ---
 
-### 为死亡玩家添加抗火
-effect @a[scores={isAlive=0}] fire_resistance 30 0 true
 ### 当不存在isAlive.@s=1的玩家时，游戏失败
 execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/chapter6/6_4/game_lose
 
@@ -45,9 +43,3 @@ execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveComplete
 ## --- 设置上一波完成标记为0 ---
 execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ scoreboard players set @s background 0
 
-## --- 怪物延迟生成器计时 ---
-
-### 每刻为变量time.monsterSummonDelay -= 1
-scoreboard players add @e[name=monsterSummonDelay,scores={time=0..}] time -1
-### 调用相关生成器并循环执行
-execute @e[name=wave,scores={background=!0}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0..}] ~~~ function methods/monsters/summoner_controller

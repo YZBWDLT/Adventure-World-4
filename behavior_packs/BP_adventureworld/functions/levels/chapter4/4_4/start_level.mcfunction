@@ -9,7 +9,6 @@ fill -143 -31 7 -143 -29 5 minecraft:ice
 fill -117 -31 7 -117 -29 5 minecraft:ice
 
 ## --- 设置重生点 ---
-## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
 tp @e[family=respawner] -145 -23 6
 
 ## 初始化剩余时间数值
@@ -31,3 +30,4 @@ summon guardian -138 -30 14
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] background 1
+scoreboard players set @e[name=wave] background 1

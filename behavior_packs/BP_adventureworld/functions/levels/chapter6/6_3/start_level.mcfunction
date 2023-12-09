@@ -9,7 +9,6 @@ fill -76 -37 -17 -74 -35 -17 minecraft:deepslate_brick_wall
 fill -74 -39 8 -76 -37 8 minecraft:deepslate_brick_wall
 
 ## --- 设置重生点 ---
-## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
 tp @e[family=respawner] -82 -34 -16
 
 ## --- 调用所有关卡通用的开始关卡函数 ---

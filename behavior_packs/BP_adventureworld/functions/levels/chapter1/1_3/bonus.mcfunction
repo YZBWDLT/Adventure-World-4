@@ -14,17 +14,12 @@ fill -121 18 25 -121 20 27 air
 ## --- 设置重生点 ---
 tp @e[family=respawner] -134 11 27
 
-## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
-
-## --- 给予奖励 ---
+## --- 清除旧装备 ---
 clear @a leather_helmet
 clear @a leather_chestplate
 clear @a leather_leggings
 clear @a leather_boots
-replaceitem entity @a slot.armor.head 0 aw:iron_helmet 1 0 {"item_lock":{"mode":"lock_in_slot"}}
-replaceitem entity @a slot.armor.chest 0 aw:iron_chestplate 1 0 {"item_lock":{"mode":"lock_in_slot"}}
-replaceitem entity @a slot.armor.legs 0 aw:iron_leggings 1 0 {"item_lock":{"mode":"lock_in_slot"}}
-replaceitem entity @a slot.armor.feet 0 aw:iron_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
-give @a minecraft:leather_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 tellraw @a {"rawtext":[{"text":"§7已自动装备铁装备，皮革靴子已自动卸下"}]}
+
+## --- 调用所有关卡通用奖励功能 ---
+function methods/all_levels/bonus

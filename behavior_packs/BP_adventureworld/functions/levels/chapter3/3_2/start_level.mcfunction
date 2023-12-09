@@ -11,7 +11,6 @@ fill -171 -21 13 -173 -19 13 minecraft:cobblestone_wall["wall_block_type":"prism
 structure load 3_2_phase1 -192 -22 -1 0_degrees none false true
 
 ## --- 设置重生点 ---
-## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
 tp @e[family=respawner] -182 -15 21
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
