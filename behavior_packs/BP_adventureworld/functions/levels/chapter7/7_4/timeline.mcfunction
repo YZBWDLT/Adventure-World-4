@@ -3,7 +3,7 @@
 
 ## --- 特殊内容 ---
 ### 当生物坠入岩浆海中时，清除之
-execute @e[type=!player] ~~~ execute @s[x=~,y=-29,z=~,dx=0,dy=5,dz=0] ~~~ detect ~~~ lava -1 kill @s
+# execute @e[type=!player] ~~~ execute @s[x=~,y=-29,z=~,dx=0,dy=5,dz=0] ~~~ detect ~~~ lava -1 kill @s
 
 ## --- 重生点机制 ---
 ### 每秒随机设定一次重生点

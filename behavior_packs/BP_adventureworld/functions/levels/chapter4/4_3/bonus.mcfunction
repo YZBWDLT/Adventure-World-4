@@ -16,6 +16,3 @@ tp @e[family=respawner] -156 -12 14
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus
-
-## --- 给予奖励 ---
-replaceitem entity @a slot.armor.legs 0 aw:diamond_leggings 1 0 {"item_lock": { "mode": "lock_in_slot" } }
