@@ -20,6 +20,13 @@ execute @e[type=player,c=1] ~~~ execute @e[name=timeline,scores={active=1..}] ~~
 function system/level_controllers/actionbar_title
 
 ## --- 其他 ---
+
+### 获取background.level值并分别读取百位数、十位数、个位数到temp.level，temp2.level和temp3.level上
+scoreboard players operation @e[name=level] temp = @e[name=level] background
+execute @e[name=level] ~~~ function methods/3_digit_seperator
+### 获取玩家的位置
+function system/level_area_tester
+
 ## 绳枪判定器
 function methods/get_entity_amount
 function system/hookshot_judger
@@ -38,6 +45,3 @@ execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.m
 ## --- 开发者模式 ---
 ## 游戏模式切换器
 execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_switcher
-## 开发中使用
-# execute @e[name=developerMode,scores={settings=1}] ~~~ function system/level_area_tester
-# execute @e[name=developerMode,scores={settings=1}] ~~~ titleraw @a actionbar {"rawtext":[{"score":{"objective":"inLevelArea","name":"@a"} } ] }

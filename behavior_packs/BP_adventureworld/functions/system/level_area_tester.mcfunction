@@ -133,3 +133,8 @@ scoreboard players set @a[x=-192,y=-18,z=96,dx=8,dy=2,dz=2] inLevelArea 70
 scoreboard players set @a[x=-223,y=-18,z=98,dx=6,dy=2,dz=2] inLevelArea 70
 
 scoreboard players set @a[x=-236,y=-64,z=96,dx=4,dy=34,dz=4] inLevelArea 79
+
+## --- 为temp记分板赋值 ---
+## 获取到玩家位置信息后，利用位数分离器标定玩家的位置信息
+execute @a ~~~ scoreboard players operation @s temp = @s inLevelArea
+execute @a ~~~ function methods/3_digit_seperator

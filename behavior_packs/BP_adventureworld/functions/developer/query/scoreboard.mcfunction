@@ -9,12 +9,9 @@ tellraw @s {"rawtext":[{"translate":"active.timeline = %%s §7# 时间线控制�
 ## === 后台数据 ===
 tellraw @s {"rawtext":[{"translate":"background.alivePlayersAmount = %%s §7# 记录存活玩家数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=alivePlayersAmount]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.allPlayersAmount = %%s §7# 记录所有玩家数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=allPlayersAmount]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"§ebackground.chapter = %%s §7# 记录章节数，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"chapter"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.hookshotAmount = %%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=hookshotAmount]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"background.isCompleted = %%s §7# 记录该关卡是否已完成，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=isCompleted]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.lastWaveCompleted = %%s §7# 上一波是否已完成","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=lastWaveCompleted]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.level = %%s §7# 记录关卡数据，三位数分别为(章节)(关卡)(是否已完成)","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=level]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"§ebackground.levelInChapter = %%s §7# 记录关卡号，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"levelInChapter"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"§ebackground.maxMonsterAmount = %%s §7# 记录怪物数目","with":{"rawtext":[{"score":{"objective":"background","name":"maxMonsterAmount"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.maxWave = %%s §7# 记录该关卡最大波数，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=maxWave]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"background.monsterAmount = %%s §7# 记录怪物数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=monsterAmount]"}}]}}]}
@@ -40,6 +37,14 @@ tellraw @s {"rawtext":[{"translate":"settings.isNetease = %%s §7# 记录是否�
 
 tellraw @s {"rawtext":[{"translate":"stats.failedTimes = %%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"stats","name":"@e[name=failedTimes]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"§estats.allFailedTimes = %%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"stats","name":"allFailedTimes"}}]}}]}
+
+## === 缓存数据 temp&temp2&temp3 ===
+tellraw @s {"rawtext":[{"translate":"temp.level = %%s §7# 通过位数分离器获取的章节数据","with":{"rawtext":[{"score":{"objective":"temp","name":"@e[name=level]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§btemp.@s = %%s §7# 不定意义","with":{"rawtext":[{"score":{"objective":"temp","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"temp2.level = %%s §7# 通过位数分离器获取的关卡数据","with":{"rawtext":[{"score":{"objective":"temp2","name":"@e[name=level]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§btemp2.@s = %%s §7# 通过位数分离器获取的当前所在关卡章节","with":{"rawtext":[{"score":{"objective":"temp2","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"temp3.level = %%s §7# 通过位数分离器获取的游玩状态数据，1=已完成关卡，0=未完成关卡","with":{"rawtext":[{"score":{"objective":"temp3","name":"@e[name=level]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"§btemp3.@s = %%s §7# 通过位数分离器获取的当前所在关卡数","with":{"rawtext":[{"score":{"objective":"temp3","name":"@s"}}]}}]}
 
 ## === 时间数据 time ===
 
