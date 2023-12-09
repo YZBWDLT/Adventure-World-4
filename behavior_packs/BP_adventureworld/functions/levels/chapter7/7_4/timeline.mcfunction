@@ -1,9 +1,21 @@
 # ===== 关卡时间线 =====
 # 循环执行，需在active.timeline>=1时运行，否则检测器不工作。
 
-## -----特殊内容-----
+## --- 特殊内容 ---
 ### 当生物坠入岩浆海中时，清除之
-execute @e[type=!player] ~~~ execute @s[x=~,y=-29,z=~,dx=0,dy=5,dz=0] ~~~ detect ~~~ lava -1 kill @s
+# execute @e[type=!player] ~~~ execute @s[x=~,y=-29,z=~,dx=0,dy=5,dz=0] ~~~ detect ~~~ lava -1 kill @s
+
+## --- 重生点机制 ---
+### 每秒随机设定一次重生点
+execute @e[name=tick,scores={time=0}] ~~~ scoreboard players random @e[family=respawner] temp 0 1
+### 按照temp.@s随机设定重生点
+execute @e[name=tick,scores={time=0}] ~~~ tp @e[family=respawner,scores={temp=0}] -248 -5 104
+execute @e[name=tick,scores={time=0}] ~~~ tp @e[family=respawner,scores={temp=1}] -222 -12 86
+
+### 将高位重生点上的玩家传送到低位重生点上
+tp @a[scores={isAlive=0},x=-251,y=-11,z=99,dx=12,dy=10,dz=17,rx=-85,rxm=-90] -222 -12 86 ~180 45
+### 将低位重生点上的玩家传送到高位重生点上
+tp @a[scores={isAlive=0},x=-229,y=-13,z=81,dx=10,dy=7,dz=10,rx=-85,rxm=-90] -248 -5 104 ~180 0
 
 ## --- 实体数目判定 ---
 
@@ -65,9 +77,3 @@ execute @e[name=wave,scores={background=5}] ~~~ execute @e[name=lastWaveComplete
 ## --- 设置上一波完成标记为0 ---
 execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ scoreboard players set @s background 0
 
-## --- 怪物延迟生成器计时 ---
-
-### 每刻为变量time.monsterSummonDelay -= 1
-scoreboard players add @e[name=monsterSummonDelay,scores={time=0..}] time -1
-### 调用相关生成器并循环执行
-execute @e[name=wave,scores={background=!0}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0..}] ~~~ function methods/monsters/summoner_controller

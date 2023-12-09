@@ -1,7 +1,7 @@
 # 开始游戏
 
 ## --- 设置level ---
-scoreboard players set @e[name=level] background 300
+scoreboard players set @e[name=level] background 301
 
 function methods/important_items_tester
 

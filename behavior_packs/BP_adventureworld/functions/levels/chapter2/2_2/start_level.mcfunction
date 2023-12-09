@@ -9,7 +9,6 @@ fill -70 0 68 -70 3 70 cobblestone_wall["wall_block_type":"diorite"]
 fill -104 -17 69 -104 -15 67 cobblestone_wall["wall_block_type":"diorite"]
 
 ## --- 设置重生点 ---
-## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
 tp @e[family=respawner] -83 -12 81
 
 ## --- 调用所有关卡通用的开始关卡函数 ---

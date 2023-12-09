@@ -1,7 +1,7 @@
 # ===== 开始游戏 =====
 
 ## --- 设置level ---
-scoreboard players set @e[name=level] background 100
+scoreboard players set @e[name=level] background 101
 
 ## --- 标题&音效 ---
 title @a times 0 100 0

@@ -14,6 +14,9 @@ scoreboard objectives remove isAlive
 scoreboard objectives remove isHoldingHelmet
 scoreboard objectives remove isHoldingBoots
 scoreboard objectives remove deathTimes
+scoreboard objectives remove inLevelArea
+scoreboard objectives remove temp2
+scoreboard objectives remove temp3
 
 scoreboard objectives add background dummy "后台数据"
 scoreboard objectives add stats dummy "统计数据"
@@ -26,12 +29,16 @@ scoreboard objectives add isAlive dummy "存活数据"
 scoreboard objectives add isHoldingHelmet dummy "手持头盔"
 scoreboard objectives add isHoldingBoots dummy "手持靴子"
 scoreboard objectives add deathTimes dummy "§l§c死亡次数"
+scoreboard objectives add inLevelArea dummy "玩家所在关卡区域ID"
+scoreboard objectives add temp2 dummy "临时数据2"
+scoreboard objectives add temp3 dummy "临时数据3"
 
 scoreboard players set allFailedTimes stats 0
 scoreboard players set @a crosshair 0
 scoreboard players set @a isHoldingHelmet 0
 scoreboard players set @a isHoldingBoots 0
 scoreboard players set @a deathTimes 0
+scoreboard players set @a inLevelArea 0
 
 ## --- 标记分值 ---
 
@@ -48,7 +55,6 @@ summon je:marker "randomMonster" -82 1 -2
 summon je:marker "wave" -82 1 -2
 summon je:marker "lastWaveCompleted" -82 1 -2
 summon je:marker "maxWave" -82 1 -2
-summon je:marker "isCompleted" -82 1 -2
 
 scoreboard players set @e[name=level] background 0
 scoreboard players set @e[name=monsterAmount] background 0
@@ -60,7 +66,6 @@ scoreboard players set @e[name=allPlayersAmount] background 1
 scoreboard players set @e[name=wave] background 0
 scoreboard players set @e[name=lastWaveCompleted] background 0
 scoreboard players set @e[name=maxWave] background 0
-scoreboard players set @e[name=isCompleted] background 0
 
 ### settings 设置数据
 summon je:marker "developerMode" -82 1 -2

@@ -13,10 +13,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeleton
 ### 生成怪物，怪物生成数将根据玩家数目而非线性增长
 ### 玩家数目  1   2~3 4~6 7~10
 ### 怪物倍率  1   2   3   4
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton "骷髅 | lv.4" ~~~
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton "骷髅 | lv.4" ~~~
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton "骷髅 | lv.4" ~~~
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton "骷髅 | lv.4" ~~~
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_4 "骷髅 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_4 "骷髅 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_4 "骷髅 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_4 "骷髅 | lv.4"
 
 ### 替换装备
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeleton4Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.armor.head 0 diamond_helmet

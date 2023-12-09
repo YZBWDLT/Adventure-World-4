@@ -8,7 +8,6 @@ scoreboard players set @e[name=level] background 640
 fill -76 -39 20 -74 -37 20 deepslate_brick_wall
 
 ## --- 设置重生点 ---
-## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
 tp @e[family=respawner] -75 -29 35
 
 ## --- 时间数据初始化 ---

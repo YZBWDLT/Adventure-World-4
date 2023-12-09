@@ -16,9 +16,6 @@ tp @e[family=respawner] -75 18 65
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus
-
-## --- 给予奖励 ---
-give @a bow 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 function methods/supplier/arrow
 
 ## --- 设置陷阱 ---

@@ -15,9 +15,6 @@ fill -167 -21 60 -167 -19 62 air
 tp @e[family=respawner] -154 -21 61
 
 ## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
-
-## --- 给予奖励 ---
 clear @a aw:normal_sword
-give @a aw:steel_sword 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+function methods/all_levels/bonus
 tellraw @a {"rawtext":[{"text":"§a已将您原来的剑替换为钢剑！"}]}

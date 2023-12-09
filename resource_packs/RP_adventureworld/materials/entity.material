@@ -1,0 +1,14 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "entity_blend_on_top:entity_alphatest": {
+      "+states": ["Blending","DisableCulling"],
+      "+defines": ["USE_EMISSIVE"],
+      "depthFunc": "Always",
+      "depthBias": 100.0,
+      "slopeScaledDepthBias": 0.1,
+      "depthBiasOGL": 0.5,
+      "slopeScaledDepthBiasOGL": 0.5
+    }
+  }
+}

@@ -17,9 +17,6 @@ fill -173 -21 13 -171 -19 13 minecraft:structure_void
 tp @e[family=respawner] -188 -21 29
 
 ## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
-
-## --- 给予奖励 ---
 clear @a aw:iron_helmet
-give @a aw:diamond_helmet 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 scoreboard players set @a isHoldingHelmet 0
+function methods/all_levels/bonus
