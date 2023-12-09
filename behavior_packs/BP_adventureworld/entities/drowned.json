@@ -57,10 +57,10 @@
                 "remove": { "component_groups": [ "minecraft:melee_mode" ] },
                 "add": { "component_groups": [ "minecraft:ranged_mode" ] }
             },
-            "aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
-			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
-			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
-			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } }
+            "aw:level_1": { "add": { "component_groups": [ "minecraft:melee_mode", "level_1" ] } },
+			"aw:level_2": { "add": { "component_groups": [ "minecraft:melee_mode", "level_2" ] } },
+			"aw:level_3": { "add": { "component_groups": [ "minecraft:melee_mode", "level_3" ] } },
+			"aw:level_4": { "add": { "component_groups": [ "minecraft:melee_mode", "level_4" ] } }
         },
         "component_groups": {
             "level_1": {
