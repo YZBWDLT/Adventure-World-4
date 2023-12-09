@@ -28,8 +28,6 @@ execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveComplete
 
 ## --- 失败判定 ---
 
-### 为死亡玩家添加抗火
-effect @a[scores={isAlive=0}] fire_resistance 30 0 true
 ### 当不存在isAlive.@s=1的玩家时，游戏失败
 execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/chapter6/6_4/game_lose
 

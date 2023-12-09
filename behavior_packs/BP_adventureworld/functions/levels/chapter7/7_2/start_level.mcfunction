@@ -9,7 +9,6 @@ fill -159 -18 109 -159 -16 111 nether_brick_fence
 fill -184 -18 98 -184 -16 96 nether_brick_fence
 
 ## --- 设置重生点 ---
-## 设置到关卡内密闭的3*3空间内，以便死亡玩家旁观
 tp @e[family=respawner] -178 -8 104
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
