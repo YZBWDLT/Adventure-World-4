@@ -45,3 +45,6 @@ execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.m
 ## --- 开发者模式 ---
 ## 游戏模式切换器
 execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_switcher
+
+tellraw @a[x=-235,y=-63,z=97,dx=2,dy=10,dz=2,m=!spectator] {"rawtext":[{"text":"感谢您游玩Alpha 4.0_08，下个版本再见！"}]}
+gamemode spectator @a[x=-235,y=-63,z=97,dx=2,dy=10,dz=2,m=!spectator]
