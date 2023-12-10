@@ -33,6 +33,13 @@
         "resistance_potion_2": { "textures": "textures/new_items/potions/resistance_potion_2" },
         "health_boost_potion_2": { "textures": "textures/new_items/potions/health_boost_potion_2" },
         "boost_potion_2": { "textures": "textures/new_items/potions/boost_potion_2" },
-        "strength_potion_2": { "textures": "textures/new_items/potions/strength_potion_2" }
+        "strength_potion_2": { "textures": "textures/new_items/potions/strength_potion_2" },
+        "potion_health": { "textures": "textures/new_items/potions/potion_health" },
+        "potion_growth": { "textures": "textures/new_items/potions/potion_growth" },
+        "potion_thrill": { "textures": "textures/new_items/potions/potion_thrill" },
+        "potion_turtle": { "textures": "textures/new_items/potions/potion_turtle" },
+        "potion_rebirth": { "textures": "textures/new_items/potions/potion_rebirth" },
+        "potion_purification": { "textures": "textures/new_items/potions/potion_purification" },
+        "potion_hibernation": { "textures": "textures/new_items/potions/potion_hibernation" }
     }
 }

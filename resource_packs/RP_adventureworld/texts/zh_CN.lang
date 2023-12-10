@@ -27,6 +27,13 @@ item.aw:regeneration_potion_1.name=生命恢复药水 I
 item.aw:regeneration_potion_2.name=生命恢复药水 II
 item.aw:boost_potion_1.name=全提升药水 I
 item.aw:boost_potion_2.name=全提升药水 II
+item.aw:potion_health.name=治疗药水
+item.aw:potion_growth.name=生长药水
+item.aw:potion_thrill.name=亢奋药水
+item.aw:potion_turtle.name=神龟药水
+item.aw:potion_rebirth.name=重生药水
+item.aw:potion_purification.name=净化药水
+item.aw:potion_hibernation.name=休眠药水
 
 ### 实体类
 entity.aw:hookshot.name=绳枪

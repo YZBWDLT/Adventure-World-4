@@ -27,6 +27,13 @@ item.aw:regeneration_potion_1.name=Health Regeneration Potion I
 item.aw:regeneration_potion_2.name=Health Regeneration Potion II
 item.aw:boost_potion_1.name=All Boost Potion I
 item.aw:boost_potion_2.name=All Boost Potion II
+item.aw:potion_health.name=Health Potion
+item.aw:potion_growth.name=Growth Potion
+item.aw:potion_thrill.name=Thrill Potion
+item.aw:potion_turtle.name=Turtle Potion
+item.aw:potion_rebirth.name=Rebirth Potion
+item.aw:potion_purification.name=Purification Potion
+item.aw:potion_hibernation.name=Hibernation Potion
 
 ### Entities
 entity.aw:hookshot.name=Hookshot
