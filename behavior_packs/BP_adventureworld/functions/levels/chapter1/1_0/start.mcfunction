@@ -20,4 +20,4 @@ give @a aw:normal_sword 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 tp @a -117 1 -6
 tp @e[family=respawner] -117 1 -6
 
-function methods/important_items_tester
+function methods/supplier/items

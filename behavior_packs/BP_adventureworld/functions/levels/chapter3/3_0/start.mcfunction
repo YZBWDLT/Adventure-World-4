@@ -3,7 +3,7 @@
 ## --- 设置level ---
 scoreboard players set @e[name=level] background 301
 
-function methods/important_items_tester
+function methods/supplier/items
 
 ## --- 标题&音效 ---
 title @a times 0 100 0

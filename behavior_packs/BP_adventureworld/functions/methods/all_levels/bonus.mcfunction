@@ -16,7 +16,7 @@ scoreboard players set @e[name=soundPlayer] active 10
 scoreboard players set @e[name=failedTimes] stats 0
 
 ## --- 为玩家补充残留的重要装备 ---
-function methods/important_items_tester
+function methods/supplier/items
 
 ## --- 补满药水 ---
 function methods/supplier/potion

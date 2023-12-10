@@ -24,7 +24,7 @@ tp @a[tag=!intoLevel] @a[tag=intoLevel,c=1]
 ## --- 为玩家补充箭、药水和残留的重要装备 ---
 function methods/supplier/arrow
 function methods/supplier/potion
-function methods/important_items_tester
+function methods/supplier/items
 
 ## --- 失败多次后，给予药效 ---
 execute @e[name=failedTimes,scores={stats=3..}] ~~~ effect @a strength 1000 1 true
