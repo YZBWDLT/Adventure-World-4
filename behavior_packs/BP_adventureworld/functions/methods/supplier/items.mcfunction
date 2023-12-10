@@ -64,7 +64,7 @@ execute @e[name=level,scores={background=321..}] ~~~ give @a[hasitem={item=aw:di
 
 ### 脊柱之盾 | 3-4通关后~
 execute @e[name=level,scores={background=341..}] ~~~ give @a[hasitem={item=shield,quantity=0}] shield 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
-### 箭袋 | 4-2通关后~
-execute @e[name=level,scores={background=421..}] ~~~ give @a[hasitem={item=aw:quiver,quantity=0}] aw:quiver 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
+### 箭袋 | 4-2通关后~ | 锁定到物品栏25号槽位
+execute @e[name=level,scores={background=421..}] ~~~ replaceitem entity @a[hasitem={item=aw:quiver,quantity=0,location=slot.inventory,slot=25}] slot.inventory 25 aw:quiver 1 0 {"item_lock": { "mode": "lock_in_slot" }}
 ### 旷野之剑 | 7-1~
 execute @e[name=level,scores={background=710..}] ~~~ give @a[hasitem={item=aw:wild_sword,quantity=0}] aw:wild_sword 1 0 {"item_lock": { "mode": "lock_in_inventory" }}

@@ -7,7 +7,7 @@ execute @e[name=tick,scores={time=0}] ~~~ function system/repeating_functions_pe
 
 ## --- 上限函数 ---
 ## 箭上限函数
-execute @a[hasitem={item=arrow},c=1] ~~~ function system/item_limit/arrows
+function system/item_limit/arrows
 ## 药水上限函数
 execute @e[name=level,scores={background=100..}] ~~~ function system/item_limit/potions
 

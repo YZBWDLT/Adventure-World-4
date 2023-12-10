@@ -2,6 +2,8 @@
 
 ### 标题部分
 execute @e[name=timeline,scores={time=1}] ~~~ title @a times 10 30 10
+execute @e[name=timeline,scores={time=1}] ~~~ replaceitem entity @a slot.inventory 25 barrier 1 0 {"item_lock": { "mode": "lock_in_slot" } }
+execute @e[name=timeline,scores={time=1}] ~~~ replaceitem entity @a slot.inventory 26 barrier 1 0 {"item_lock": { "mode": "lock_in_slot" } }
 
 execute @e[name=timeline,scores={time=40}] ~~~ title @a title §1
 execute @e[name=timeline,scores={time=40}] ~~~ title @a subtitle §3制作 §b狂野巴豆
