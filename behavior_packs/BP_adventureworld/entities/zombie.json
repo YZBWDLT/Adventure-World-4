@@ -82,57 +82,57 @@
 
 		"component_groups": {
             "adult_level_1": {
-                "minecraft:attack": { "damage": 3 },
-                "minecraft:health": { "value": 20, "max": 20 },
-                "minecraft:movement": { "value": 0.23 }
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 10, "max": 10 },
+                "minecraft:movement": { "value": 0.16 }
             },
             "adult_level_2": {
-                "minecraft:attack": { "damage": 3 },
-                "minecraft:health": { "value": 20, "max": 20 },
-                "minecraft:movement": { "value": 0.23 }
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 18, "max": 18 },
+                "minecraft:movement": { "value": 0.16 }
             },
             "adult_level_3": {
-                "minecraft:attack": { "damage": 3 },
-                "minecraft:health": { "value": 20, "max": 20 },
-                "minecraft:movement": { "value": 0.23 }
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 25, "max": 25 },
+                "minecraft:movement": { "value": 0.16 }
             },
             "adult_level_4": {
-                "minecraft:attack": { "damage": 3 },
-                "minecraft:health": { "value": 20, "max": 20 },
-                "minecraft:movement": { "value": 0.23 }
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 32, "max": 32 },
+                "minecraft:movement": { "value": 0.16 }
             },
 
             "baby_level_1": {
                 "minecraft:scale": { "value": 0.5 },
                 "minecraft:is_baby": {},
 
-                "minecraft:attack": { "damage": 3 },
-                "minecraft:health": { "value": 20, "max": 20 },
-                "minecraft:movement": { "value": 0.35 }
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 10, "max": 10 },
+                "minecraft:movement": { "value": 0.25 }
             },
             "baby_level_2": {
                 "minecraft:scale": { "value": 0.5 },
                 "minecraft:is_baby": {},
 
-                "minecraft:attack": { "damage": 3 },
-                "minecraft:health": { "value": 20, "max": 20 },
-                "minecraft:movement": { "value": 0.35 }
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 18, "max": 18 },
+                "minecraft:movement": { "value": 0.25 }
             },
             "baby_level_3": {
                 "minecraft:scale": { "value": 0.5 },
                 "minecraft:is_baby": {},
 
-                "minecraft:attack": { "damage": 3 },
-                "minecraft:health": { "value": 20, "max": 20 },
-                "minecraft:movement": { "value": 0.35 }
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 25, "max": 25 },
+                "minecraft:movement": { "value": 0.25 }
             },
             "baby_level_4": {
                 "minecraft:scale": { "value": 0.5 },
                 "minecraft:is_baby": {},
 
-                "minecraft:attack": { "damage": 3 },
-                "minecraft:health": { "value": 20, "max": 20 },
-                "minecraft:movement": { "value": 0.35 }
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 32, "max": 32 },
+                "minecraft:movement": { "value": 0.25 }
             }
 		}
 	}
