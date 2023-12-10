@@ -19,6 +19,7 @@ clear @a leather_helmet
 clear @a leather_chestplate
 clear @a leather_leggings
 clear @a leather_boots
+replaceitem entity @a slot.armor.feet 0 aw:iron_boots 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 tellraw @a {"rawtext":[{"text":"§7已自动装备铁装备，皮革靴子已自动卸下"}]}
 
 ## --- 调用所有关卡通用奖励功能 ---
