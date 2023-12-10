@@ -9,7 +9,7 @@
             "minecraft:creative_category": {
 				"parent": "itemGroup.name.sword"
 			},
-            "minecraft:damage": 10,
+            "minecraft:damage": 25,
             "minecraft:enchantaable": {
 				"value": 10,
 				"slot": "sword"
