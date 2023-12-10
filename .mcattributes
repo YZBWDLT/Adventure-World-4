@@ -6,3 +6,4 @@ diagnostic.disable.behaviorpack.entity.component.missing=true
 diagnostic.disable.minecraft.animation.unused=true
 diagnostic.disable.minecraft.commands.enchant.syntax=true
 diagnostic.disable.minecraft.language.duplicate=true
+diagnostic.disable.minecraft.language.duplicate=true
