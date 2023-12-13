@@ -42,8 +42,6 @@ function system/hookshot_judger
 function system/sound_player
 ## 装备检测器
 execute @e[name=level,scores={background=311..}] ~~~ function system/equipment_tester
-## 虚拟准星
-execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ function methods/virtual_crosshair
 
 ## --- 开发者模式 ---
 ## 游戏模式切换器
