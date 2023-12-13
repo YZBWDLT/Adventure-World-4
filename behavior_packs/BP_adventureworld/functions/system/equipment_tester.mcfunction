@@ -18,10 +18,15 @@ scoreboard players set @a[hasitem={item=aw:diamond_helmet,location=slot.weapon.m
 scoreboard players set @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand,quantity=0},scores={isHoldingBoots=!1..2}] isHoldingBoots 0
 
 ## --- 为手持钻石头盔和钻石靴子的玩家附魔 ---
+### 3-1解锁水下呼吸III
 enchant @a[hasitem={item=aw:diamond_helmet,location=slot.weapon.mainhand}] respiration 3
+### 3-2解锁深海探索者III
 enchant @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand}] depth_strider 3
 
 ## --- 为手持弓的玩家附魔 ---
-execute @e[name=level,scores={background=411..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] flame 1
-execute @e[name=level,scores={background=621..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] power 5
-execute @e[name=level,scores={background=421..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] unbreaking 3
+### 2-1解锁耐久III
+execute @e[name=level,scores={background=211..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] unbreaking 3
+### 4-2解锁火矢
+execute @e[name=level,scores={background=421..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] flame 1
+### 6-1解锁力量V
+execute @e[name=level,scores={background=611..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] power 5

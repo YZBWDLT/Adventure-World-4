@@ -6,17 +6,14 @@
 
 ## 游玩时间记录器
 function system/time_played_recorder
-
-
-## --- 其他循环执行函数 ---
 ## 每秒执行的函数
 execute @e[name=tick,scores={time=0}] ~~~ function system/repeating_functions_per_second
 
 ## --- 上限函数 ---
 ## 箭上限函数
 function system/item_limit/arrows
-## 药水上限函数
-execute @e[name=level,scores={background=100..}] ~~~ function system/item_limit/potions
+## 药水上限函数 | 在秒制循环函数中执行
+## 物品上限函数 | 在秒制循环函数中执行
 
 ## --- 关卡函数 ---
 ## 进入房间检测器

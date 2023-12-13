@@ -4,7 +4,12 @@
 ## --- 七大药水 ---
 
 ### 治疗药水
-titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§a生命 ↑ §7| §6药水上限 §a1"}]}
+execute @e[name=level,scores={background=111..120}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§a生命 ↑ §7| §6药水上限 §a1"}]}
+execute @e[name=level,scores={background=121..130}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§a生命 ↑ §7| §6药水上限 §a2"}]}
+execute @e[name=level,scores={background=131..310}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§a生命 ↑ §7| §6药水上限 §a3"}]}
+execute @e[name=level,scores={background=311..320}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§a生命 ↑ §7| §6药水上限 §a4"}]}
+execute @e[name=level,scores={background=321..330}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§a生命 ↑ §7| §6药水上限 §a5"}]}
+execute @e[name=level,scores={background=331..}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§a生命 ↑ §7| §6药水上限 §a6"}]}
 ### 生长药水
 titleraw @a[hasitem={item=aw:potion_growth,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§a生命上限 ↑ 生命恢复 ↑ §c攻击伤害 ↓ §7| §c× 亢奋药水 × 神龟药水"}]}
 ### 亢奋药水
@@ -23,3 +28,8 @@ titleraw @a[hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] actionbar 
 
 ## --- 物品准星 ---
 titleraw @a[hasitem={item=aw:enable_crosshair,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§6右键（或手机版长按）使用，在手持绳枪时启用虚拟准星，建议未启用准星的手机版玩家使用\n§c注意：启用虚拟准星可能阻挡屏幕中央文字"}]}
+
+## --- 钻石靴子 & 钻石头盔 ---
+## 当玩家还没有附魔的时候，强制提醒玩家附魔
+execute @e[name=level,scores={background=311..640}] ~~~ titleraw @a[scores={isHoldingHelmet=0}] actionbar {"rawtext":[{"text":"§c您刚刚获得了一个钻石头盔，请手持钻石头盔以获取附魔！"}]}
+execute @e[name=level,scores={background=321..640}] ~~~ titleraw @a[scores={isHoldingBoots=0}] actionbar {"rawtext":[{"text":"§c您刚刚获得了一个钻石靴子，请手持钻石靴子以获取附魔！"}]}

@@ -33,10 +33,6 @@ execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] 
 ### 物品快捷栏标题
 function system/level_controllers/actionbar_items
 
-### 玩家手持物品提示
-execute @e[name=level,scores={background=311..}] ~~~ titleraw @a[scores={isHoldingHelmet=0}] actionbar {"rawtext":[{"text":"§c您刚刚获得了一个钻石头盔，请手持钻石头盔以获取附魔！"}]}
-execute @e[name=level,scores={background=321..}] ~~~ titleraw @a[scores={isHoldingBoots=0}] actionbar {"rawtext":[{"text":"§c您刚刚获得了一个钻石靴子，请手持钻石靴子以获取附魔！"}]}
-
 ### 无效位置提示 | 仅开发版
 execute @e[name=developerMode,scores={settings=1}] ~~~ execute @a[scores={inLevelArea=-1}] ~~~ titleraw @s actionbar {"rawtext":[{"translate":"§c错误：无法检测的位置"}]}
 
