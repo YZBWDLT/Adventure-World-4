@@ -1,6 +1,13 @@
 # ===== 循环执行函数控制器 =====
 # 循环执行需要的函数
 
+## --- 初始化型函数 ---
+## 将函数放在这里以代表优先级高于其它任何函数执行，一般是某些函数的前置执行函数
+
+## 游玩时间记录器
+function system/time_played_recorder
+
+
 ## --- 其他循环执行函数 ---
 ## 每秒执行的函数
 execute @e[name=tick,scores={time=0}] ~~~ function system/repeating_functions_per_second
@@ -31,20 +38,13 @@ function system/level_area_tester
 function methods/get_entity_amount
 function system/hookshot_judger
 
-## 游玩时间记录器
-function system/time_played_recorder
 ## 音效控制器
 function system/sound_player
 ## 装备检测器
-execute @e[name=level,scores={background=311..}] ~~~ function system/armor_tester
+execute @e[name=level,scores={background=311..}] ~~~ function system/equipment_tester
 ## 虚拟准星
-execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ titleraw @s times 0 3 0
-execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ titleraw @s title {"rawtext":[{"text":"§1"}]}
-execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ titleraw @s subtitle {"rawtext":[{"text":"+\n\n\n"}]}
+execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ function methods/virtual_crosshair
 
 ## --- 开发者模式 ---
 ## 游戏模式切换器
 execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_switcher
-
-tellraw @a[x=-235,y=-63,z=97,dx=2,dy=10,dz=2,m=!spectator] {"rawtext":[{"text":"感谢您游玩Alpha 4.0_08，下个版本再见！"}]}
-gamemode spectator @a[x=-235,y=-63,z=97,dx=2,dy=10,dz=2,m=!spectator]
