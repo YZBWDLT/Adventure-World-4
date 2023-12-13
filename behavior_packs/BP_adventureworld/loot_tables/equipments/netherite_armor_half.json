@@ -1,0 +1,16 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:netherite_chestplate", "type": "item" }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:netherite_boots", "type": "item" }
+            ]
+        }
+    ]
+}

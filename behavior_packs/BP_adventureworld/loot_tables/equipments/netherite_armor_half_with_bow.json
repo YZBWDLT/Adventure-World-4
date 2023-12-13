@@ -1,0 +1,16 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [ { "name": "loot_tables/equipments/diamond_armor.json", "type": "loot_table" } ]
+        },
+        {
+            "rolls": 1,
+            "entries": [ { "name": "loot_tables/equipments/netherite_armor_half.json", "type": "loot_table" } ]
+        },
+        {
+            "rolls": 1,
+            "entries": [ { "name": "minecraft:bow", "type": "item" } ]
+        }
+    ]
+}
