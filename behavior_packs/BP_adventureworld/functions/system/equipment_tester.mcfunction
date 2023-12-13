@@ -1,5 +1,5 @@
-# ===== 盔甲手持检测器与附魔器 =====
-# 检测玩家是否手持过（钻石）头盔或靴子，以保证玩家的盔甲拥有应有的附魔
+# ===== 装备检测器 =====
+# 检测玩家是否手持过装备（钻石头盔、钻石靴子、弓），以保证玩家的装备拥有应有的附魔
 # 未手持过=0 手持=1 手持过=2
 
 ## --- 对不存在isHoldingHelmet.@s和isHoldingBoots.@s变量的玩家强制赋予 ---
@@ -23,5 +23,5 @@ enchant @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand}] depth_
 
 ## --- 为手持弓的玩家附魔 ---
 execute @e[name=level,scores={background=411..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] flame 1
-execute @e[name=level,scores={background=621..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] power 4
+execute @e[name=level,scores={background=621..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] power 5
 execute @e[name=level,scores={background=421..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] unbreaking 3
