@@ -31,7 +31,7 @@ execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] 
 ## --- 特殊快捷栏标题 ---
 
 ### 物品快捷栏标题
-function items/actionbar_title
+function system/level_controllers/actionbar_items
 
 ### 玩家手持物品提示
 execute @e[name=level,scores={background=311..}] ~~~ titleraw @a[scores={isHoldingHelmet=0}] actionbar {"rawtext":[{"text":"§c您刚刚获得了一个钻石头盔，请手持钻石头盔以获取附魔！"}]}
