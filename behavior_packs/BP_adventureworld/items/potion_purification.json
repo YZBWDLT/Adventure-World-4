@@ -14,7 +14,7 @@
                     { "name": "absorption", "chance" : 1.0, "duration" : 60, "amplifier" : 2 }
                 ],
                 "remove_effects": [
-                "poison"
+                    "poison"
                 ]
             },
             "minecraft:use_duration": 16

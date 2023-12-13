@@ -11,8 +11,8 @@
                 "saturation_modifier": "poor",
                 "can_always_eat": true,
                 "effects": [
-                    { "name": "instant_health", "chance" : 1.0, "duration" : 1, "amplifier" : 0 },
-                    { "name": "weakness", "chance" : 1.0, "duration" : 5, "amplifier" : 4 }
+                    { "name": "instant_health", "chance" : 1.0, "duration" : 1, "amplifier" : 9 },
+                    { "name": "weakness", "chance" : 1.0, "duration" : 10, "amplifier" : 4 }
                 ]
             },
             "minecraft:use_duration": 16
