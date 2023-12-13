@@ -13,17 +13,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeleton
 ### 生成怪物，怪物生成数将根据玩家数目而非线性增长
 ### 玩家数目  1   2~3 4~6 7~10
 ### 怪物倍率  1   2   3   4
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1..}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_3 "骷髅 | lv.3"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_3 "骷髅 | lv.3"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_3 "骷髅 | lv.3"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_3 "骷髅 | lv.3"
-
-### 替换装备
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.armor.head 0 iron_helmet
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.armor.chest 0 iron_chestplate
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.armor.legs 0 iron_leggings
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.armor.feet 0 iron_boots
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.weapon.mainhand 0 iron_sword
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1..}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_3_sword "骷髅 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_3_sword "骷髅 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_3_sword "骷髅 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=skeletonWithSword3Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_3_sword "骷髅 | lv.3"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=skeletonWithSword3Summoner]

@@ -18,12 +18,5 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePla
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=stray1Summoner] ~~~ summon minecraft:stray ~~~ aw:level_1 "流浪者 | lv.1"
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=stray1Summoner] ~~~ summon minecraft:stray ~~~ aw:level_1 "流浪者 | lv.1"
 
-### 替换装备
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=stray1Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=stray] slot.armor.head 0 air
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=stray1Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=stray] slot.armor.chest 0 air
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=stray1Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=stray] slot.armor.legs 0 air
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=stray1Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=stray] slot.armor.feet 0 air
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=stray1Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=stray] slot.weapon.mainhand 0 minecraft:bow
-
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=stray1Summoner]

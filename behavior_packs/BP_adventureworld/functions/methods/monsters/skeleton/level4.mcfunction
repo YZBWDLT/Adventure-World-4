@@ -18,12 +18,5 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePla
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_4 "骷髅 | lv.4"
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_4 "骷髅 | lv.4"
 
-### 替换装备
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeleton4Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.armor.head 0 diamond_helmet
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeleton4Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.armor.chest 0 diamond_chestplate
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeleton4Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.armor.legs 0 diamond_leggings
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeleton4Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.armor.feet 0 diamond_boots
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeleton4Summoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=skeleton] slot.weapon.mainhand 0 bow
-
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=skeleton4Summoner]
