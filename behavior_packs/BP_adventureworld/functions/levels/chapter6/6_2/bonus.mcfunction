@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] background 621
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a6-2已完成！\n§a§a[全提升药水 I]§f已升级到§a[全提升药水 II]§f\n§b你的弓似乎有了一些独特的魔力..."}]}
+tellraw @a {"rawtext":[{"text":"§l§a6-2已完成！§r"}]}
 
 ## --- 打开入口与出口 ---
 fill -81 -19 -48 -79 -17 -48 air

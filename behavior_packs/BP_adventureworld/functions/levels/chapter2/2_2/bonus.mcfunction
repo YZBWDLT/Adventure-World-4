@@ -5,7 +5,8 @@
 scoreboard players set @e[name=level] background 221
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a2-2已完成！\n§a[生命药水 II]§f上限+1，当前为1。"}]}
+tellraw @a {"rawtext":[{"text":"§l§a2-2已完成！§r\n§f你已获得 §b[铁护腿] §f！"}]}
+clear @a leather_leggings
 
 ## --- 打开入口与出口 ---
 fill -70 0 68 -70 3 70 air

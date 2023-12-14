@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] background 741
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a7-4已完成！"}]}
+tellraw @a {"rawtext":[{"text":"§l§a7-4已完成！§r"}]}
 
 ## --- 打开入口与出口 ---
 fill -223 -18 98 -223 -16 100 air

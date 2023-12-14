@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] background 331
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a3-3已完成！"}]}
+tellraw @a {"rawtext":[{"text":"§l§a3-3已完成！§r\n§f你已获得 §a[治疗药水] §d[箭袋] §f！\n§7现在您的箭的上限数目已经提升至36根了！"}]}
 
 ## --- 打开入口与出口 ---
 fill -162 -21 26 -164 -19 26 structure_void

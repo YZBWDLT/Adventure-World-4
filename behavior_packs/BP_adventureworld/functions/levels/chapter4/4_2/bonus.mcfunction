@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] background 421
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a4-2已完成！\n§b+1 箭袋\n§a[抗性提升药水 I]§f已升级到§a[抗性提升药水 II]§f！"}]}
+tellraw @a {"rawtext":[{"text":"§l§a4-2已完成！§r\n§f你已获得 §e[净化药水] §d[火焰弓] §f！\n§7手持弓可获取附魔"}]}
 
 ## --- 打开入口与出口 ---
 fill -155 7 -3 -157 9 -3 air

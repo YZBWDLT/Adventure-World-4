@@ -5,7 +5,8 @@
 scoreboard players set @e[name=level] background 341
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a3-4已完成！\n§b+1 脊柱之盾\n§a[力量药水 I]§f上限+1，当前为1。"}]}
+tellraw @a {"rawtext":[{"text":"§l§a3-4已完成！§r\n§f你已获得 §d[钢剑] §f！"}]}
+clear @a aw:normal_sword
 
 ## --- 打开入口与出口 ---
 fill -168 -15 22 -168 -13 24 structure_void
