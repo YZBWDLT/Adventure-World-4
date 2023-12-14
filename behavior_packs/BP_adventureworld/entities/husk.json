@@ -92,8 +92,10 @@
                 "minecraft:scale": { "value": 1.0625 },
 
                 "minecraft:attack": { "damage": 8 },
-                "minecraft:health": { "value": 10, "max": 10 },
-                "minecraft:movement": { "value": 0.16 }
+                "minecraft:health": { "value": 18, "max": 18 },
+                "minecraft:movement": { "value": 0.16 },
+				"minecraft:knockback_resistance": { "value":0.1 },
+				"minecraft:equipment": { "table": "loot_tables/equipments/leather_armor.json" }
             },
             "adult_level_3": {
                 "minecraft:scale": { "value": 1.0625 },
@@ -123,8 +125,9 @@
                 "minecraft:is_baby": {},
 
                 "minecraft:attack": { "damage": 8 },
-                "minecraft:health": { "value": 10, "max": 10 },
-                "minecraft:movement": { "value": 0.25 }
+                "minecraft:health": { "value": 18, "max": 18 },
+                "minecraft:movement": { "value": 0.25 },
+				"minecraft:equipment": { "table": "loot_tables/equipments/leather_armor.json" }
             },
             "baby_level_3": {
                 "minecraft:scale": { "value": 0.53125 },

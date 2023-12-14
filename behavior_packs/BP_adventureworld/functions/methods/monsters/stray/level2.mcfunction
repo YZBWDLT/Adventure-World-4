@@ -1,5 +1,5 @@
 # ===== 生成流浪者 =====
-# 等级 2 | 弓 + 皮革套
+# 等级 2
 
 ## --- 生成前2s ---
 
@@ -10,13 +10,11 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=stray2Su
 
 ## --- 正式生成 ---
 
-### 生成怪物，怪物生成数将根据玩家数目而非线性增长
-### 玩家数目  1   2~3 4~6 7~10
-### 怪物倍率  1   2   3   4
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1..}] ~~~ execute @e[name=stray2Summoner] ~~~ summon minecraft:stray ~~~ aw:level_2 "流浪者 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..}] ~~~ execute @e[name=stray2Summoner] ~~~ summon minecraft:stray ~~~ aw:level_2 "流浪者 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..}] ~~~ execute @e[name=stray2Summoner] ~~~ summon minecraft:stray ~~~ aw:level_2 "流浪者 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=stray2Summoner] ~~~ summon minecraft:stray ~~~ aw:level_2 "流浪者 | lv.2"
+### 生成怪物
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1}] ~~~ execute @e[name=stray2Summoner] ~~~ summon minecraft:stray ~~~ aw:level_2 "流浪者 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..3}] ~~~ execute @e[name=stray2Summoner] ~~~ summon minecraft:stray ~~~ aw:level_3 "流浪者 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..6}] ~~~ execute @e[name=stray2Summoner] ~~~ summon minecraft:stray ~~~ aw:level_4 "流浪者 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=stray2Summoner] ~~~ summon minecraft:stray ~~~ aw:level_5 "流浪者 | lv.5"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=stray2Summoner]

@@ -14,10 +14,10 @@
             "minecraft:projectile": {
                 "on_hit": { "impact_damage": { "damage": [ 1, 4 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
                 "hit_sound": "bow.hit",
-                "power": 1.6,
+                "power": 0.3,
                 "gravity": 0.05,
-                "uncertainty_base": 16,
-                "uncertainty_multiplier": 4,
+                "uncertainty_base": 0,
+                "uncertainty_multiplier": 0,
                 "anchor": 1,
                 "should_bounce": true,
                 "offset": [ 0, -0.1, 0 ]
@@ -50,10 +50,10 @@
                 "minecraft:projectile": {
                     "on_hit": { "impact_damage": { "damage": [ 1, 5 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
                     "hit_sound": "bow.hit",
-                    "power": 1.6,
+                    "power": 0.3,
                     "gravity": 0.05,
-                    "uncertainty_base": 16,
-                    "uncertainty_multiplier": 4,
+                    "uncertainty_base": 0,
+                    "uncertainty_multiplier": 0,
                     "anchor": 1,
                     "should_bounce": true,
                     "offset": [ 0, -0.1, 0 ]
@@ -76,10 +76,10 @@
                 "minecraft:projectile": {
                     "on_hit": { "impact_damage": { "damage": [ 3, 6 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time": 0.35 }, "arrow_effect": { } },
                     "hit_sound": "bow.hit",
-                    "power": 1.6,
-                    "gravity": 0.05,
-                    "uncertainty_base": 16,
-                    "uncertainty_multiplier": 4,
+                    "power": 0.3,
+                    "gravity": 0,
+                    "uncertainty_base": 0,
+                    "uncertainty_multiplier": 0,
                     "anchor": 1,
                     "should_bounce": true,
                     "offset": [ 0, -0.1, 0 ]
@@ -90,9 +90,9 @@
                     "on_hit": { "impact_damage": { "damage": [ 10, 15 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time": 0.35 }, "arrow_effect": { } },
                     "hit_sound": "bow.hit",
                     "power": 2.0,
-                    "gravity": 0.05,
-                    "uncertainty_base": 16,
-                    "uncertainty_multiplier": 4,
+                    "gravity": 0,
+                    "uncertainty_base": 0,
+                    "uncertainty_multiplier": 0,
                     "anchor": 1,
                     "should_bounce": true,
                     "offset": [ 0, -0.1, 0 ]
@@ -101,44 +101,44 @@
             },
             "aw:skeleton_arrow_level_1": {
                 "minecraft:projectile": {
-                    "on_hit": { "impact_damage": { "damage": [ 1, 4 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
-                    "hit_sound": "bow.hit", "power": 1.6, "gravity": 0.05, "uncertainty_base": 16, "uncertainty_multiplier": 4, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ]
+                    "on_hit": { "impact_damage": { "damage": 10, "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
+                    "hit_sound": "bow.hit", "power": 0.3, "gravity": 0, "uncertainty_base": 0, "uncertainty_multiplier": 0, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ], "inertia": 1
                 }
             },
             "aw:skeleton_arrow_level_2": {
                 "minecraft:projectile": {
-                    "on_hit": { "impact_damage": { "damage": [ 1, 4 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
-                    "hit_sound": "bow.hit", "power": 1.6, "gravity": 0.05, "uncertainty_base": 16, "uncertainty_multiplier": 4, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ]
+                    "on_hit": { "impact_damage": { "damage": 13, "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
+                    "hit_sound": "bow.hit", "power": 0.3, "gravity": 0, "uncertainty_base": 0, "uncertainty_multiplier": 0, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ], "inertia": 1
                 }
             },
             "aw:skeleton_arrow_level_3": {
                 "minecraft:projectile": {
-                    "on_hit": { "impact_damage": { "damage": [ 1, 4 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
-                    "hit_sound": "bow.hit", "power": 1.6, "gravity": 0.05, "uncertainty_base": 16, "uncertainty_multiplier": 4, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ]
+                    "on_hit": { "impact_damage": { "damage": 16, "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
+                    "hit_sound": "bow.hit", "power": 0.3, "gravity": 0, "uncertainty_base": 0, "uncertainty_multiplier": 0, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ], "inertia": 1
                 }
             },
             "aw:skeleton_arrow_level_4": {
                 "minecraft:projectile": {
-                    "on_hit": { "impact_damage": { "damage": [ 1, 4 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
-                    "hit_sound": "bow.hit", "power": 1.6, "gravity": 0.05, "uncertainty_base": 16, "uncertainty_multiplier": 4, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ]
+                    "on_hit": { "impact_damage": { "damage": 19, "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
+                    "hit_sound": "bow.hit", "power": 0.3, "gravity": 0, "uncertainty_base": 0, "uncertainty_multiplier": 0, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ], "inertia": 1
                 }
             },
             "aw:skeleton_arrow_level_5": {
                 "minecraft:projectile": {
-                    "on_hit": { "impact_damage": { "damage": [ 1, 4 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
-                    "hit_sound": "bow.hit", "power": 1.6, "gravity": 0.05, "uncertainty_base": 16, "uncertainty_multiplier": 4, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ]
+                    "on_hit": { "impact_damage": { "damage": 22, "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
+                    "hit_sound": "bow.hit", "power": 0.3, "gravity": 0, "uncertainty_base": 0, "uncertainty_multiplier": 0, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ], "inertia": 1
                 }
             },
             "aw:skeleton_arrow_level_6": {
                 "minecraft:projectile": {
-                    "on_hit": { "impact_damage": { "damage": [ 1, 4 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
-                    "hit_sound": "bow.hit", "power": 1.6, "gravity": 0.05, "uncertainty_base": 16, "uncertainty_multiplier": 4, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ]
+                    "on_hit": { "impact_damage": { "damage": 25, "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
+                    "hit_sound": "bow.hit", "power": 0.3, "gravity": 0, "uncertainty_base": 0, "uncertainty_multiplier": 0, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ], "inertia": 1
                 }
             },
             "aw:skeleton_arrow_level_7": {
                 "minecraft:projectile": {
-                    "on_hit": { "impact_damage": { "damage": [ 1, 4 ], "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
-                    "hit_sound": "bow.hit", "power": 1.6, "gravity": 0.05, "uncertainty_base": 16, "uncertainty_multiplier": 4, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ]
+                    "on_hit": { "impact_damage": { "damage": 99, "knockback": true, "semi_random_diff_damage": false, "destroy_on_hit": true }, "stick_in_ground": { "shake_time" : 0.35 }, "arrow_effect": { } },
+                    "hit_sound": "bow.hit", "power": 0.3, "gravity": 0, "uncertainty_base": 0, "uncertainty_multiplier": 0, "anchor": 1, "should_bounce": true, "offset": [ 0, -0.1, 0 ], "inertia": 1
                 }
             }
         }
