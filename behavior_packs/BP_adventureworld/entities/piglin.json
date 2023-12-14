@@ -70,10 +70,30 @@
                     { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_2" ] } }
                 ]
             },
-            "aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
-			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
-			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
-			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } }
+            "aw:level_1": { 
+                "randomize": [
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_1" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_1" ] } }
+                ] 
+            },
+            "aw:level_2": { 
+                "randomize": [
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_2" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_2" ] } }
+                ] 
+            },
+            "aw:level_3": { 
+                "randomize": [
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_3" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_3" ] } }
+                ] 
+            },
+            "aw:level_4": { 
+                "randomize": [
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_4" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_4" ] } }
+                ] 
+            }
         },
 
         "component_groups": {
