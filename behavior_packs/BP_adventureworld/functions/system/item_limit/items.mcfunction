@@ -59,6 +59,10 @@ clear @a[scores={temp=1}] aw:normal_sword
 scoreboard players set @a[hasitem={item=aw:hookshot,quantity=2..}] temp 1
 clear @a[scores={temp=1}] aw:hookshot
 
+### 启用准星
+scoreboard players set @a[hasitem={item=aw:enable_crosshair,quantity=2..}] temp 1
+clear @a[scores={temp=1}] aw:enable_crosshair
+
 ### 弓
 scoreboard players set @a[hasitem={item=bow,quantity=2..}] temp 1
 clear @a[scores={temp=1}] bow
@@ -78,8 +82,6 @@ clear @a[scores={temp=1}] shield
 ### 旷野之剑
 scoreboard players set @a[hasitem={item=aw:wild_sword,quantity=2..}] temp 1
 clear @a[scores={temp=1}] aw:wild_sword
-
-
 
 ## --- 重新给予玩家缺少的装备 ---
 execute @a[scores={temp=1}] ~~~ function methods/supplier/items

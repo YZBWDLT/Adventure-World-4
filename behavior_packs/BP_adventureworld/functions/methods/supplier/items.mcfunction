@@ -29,7 +29,9 @@ execute @e[name=level,scores={background=111..320}] ~~~ give @a[hasitem={item=aw
 
 ## --- 绳枪 ---
 ## 1-2结束后给予，始终保留
+## 配套给予启用准星物品
 execute @e[name=level,scores={background=121..}] ~~~ give @a[hasitem={item=aw:hookshot,quantity=0}] aw:hookshot 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+execute @e[name=level,scores={background=121..}] ~~~ give @a[hasitem={item=aw:enable_crosshair,quantity=0}] aw:enable_crosshair 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 ## --- 铁头盔 ---
 ## 1-3结束后给予，保留到3-1结束前 | 锁定到槽位上
