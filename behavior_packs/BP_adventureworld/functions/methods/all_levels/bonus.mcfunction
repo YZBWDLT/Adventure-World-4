@@ -17,10 +17,8 @@ scoreboard players set @e[name=failedTimes] stats 0
 
 ## --- 为玩家补充残留的重要装备 ---
 function methods/supplier/items
-
-## --- 补满药水 ---
 function methods/supplier/potion
-tellraw @a {"rawtext":[{"translate":"药水已补满。"}]}
+function methods/supplier/arrow
 
 ## --- 清除所有的状态效果并回满血 ---
 effect @a clear
