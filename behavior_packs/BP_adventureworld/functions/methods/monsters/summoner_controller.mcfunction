@@ -16,8 +16,8 @@ execute @e[name=skeleton1Summoner,c=1] ~~~ function methods/monsters/skeleton/le
 execute @e[name=skeleton2Summoner,c=1] ~~~ function methods/monsters/skeleton/level2
 execute @e[name=skeleton3Summoner,c=1] ~~~ function methods/monsters/skeleton/level3
 execute @e[name=skeleton4Summoner,c=1] ~~~ function methods/monsters/skeleton/level4
-execute @e[name=skeletonWithSword3Summoner,c=1] ~~~ function methods/monsters/skeleton/level3_with_sword
-execute @e[name=skeletonWithSword4Summoner,c=1] ~~~ function methods/monsters/skeleton/level4_with_sword
+execute @e[name=skeletonWithSword1Summoner,c=1] ~~~ function methods/monsters/skeleton/level1_with_sword
+execute @e[name=skeletonWithSword2Summoner,c=1] ~~~ function methods/monsters/skeleton/level2_with_sword
 
 execute @e[name=stray1Summoner,c=1] ~~~ function methods/monsters/stray/level1
 execute @e[name=stray2Summoner,c=1] ~~~ function methods/monsters/stray/level2
