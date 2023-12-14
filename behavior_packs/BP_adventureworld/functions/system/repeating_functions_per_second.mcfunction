@@ -13,7 +13,7 @@ replaceitem entity @a[hasitem={item=leather_boots,location=slot.armor.feet}] slo
 execute @e[name=level,scores={temp3=1}] ~~~ kill @e[family=summoner]
 
 ## --- 虚拟准星 ---
-execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ function system/virtual_crosshair
+execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ function methods/virtual_crosshair
 
 ## --- 物品&药水上限检测 ---
 function system/item_limit/items
