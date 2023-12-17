@@ -8,6 +8,8 @@
 function system/time_played_recorder
 ## 每秒执行的函数
 execute @e[name=tick,scores={time=0}] ~~~ function system/repeating_functions_per_second
+## 每5秒执行的函数
+execute @e[name=10SecondsCycle,scores={time=!0..3,time=!5..8}] ~~~ function system/repeating_functions_per_5_seconds
 
 ## --- 上限函数 ---
 ## 箭上限函数
