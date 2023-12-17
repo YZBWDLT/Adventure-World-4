@@ -35,7 +35,7 @@ scoreboard players set @a[x=-175,y=-22,z=52,dx=8,dy=4,dz=16] inLevelArea 20
 ### 2-1
 scoreboard players set @a[x=-84,y=18,z=59,dx=14,dy=6,dz=12] inLevelArea 21
 ### 2-2
-scoreboard players set @a[x=-103,y=-17,z=57,dx=32,dy=28,dz=25] inLevelArea 22
+scoreboard players set @a[x=-103,y=-18,z=57,dx=32,dy=29,dz=25] inLevelArea 22
 ### 2-3
 scoreboard players set @a[x=-166,y=-22,z=44,dx=24,dy=11,dz=31] inLevelArea 23
 
