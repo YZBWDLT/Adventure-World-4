@@ -58,3 +58,4 @@ tellraw @s {"rawtext":[{"translate":"time.soundPlayer = %%s §7# 音效播放器
 tellraw @s {"rawtext":[{"translate":"time.tick = %%s §7# 每1刻加1分，每20刻归零","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=tick]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.timeLeft = %%s §7# 关卡剩余时间，单位秒","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeLeft]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"time.timeline = %%s §7# 时间线","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeline]"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"time.10SecondsCycle = %%s §7# 每1秒加1分，每10秒归零","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=10SecondsCycle]"}}]}}]}
