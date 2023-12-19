@@ -18,15 +18,7 @@
 			"minecraft:physics": { },
 			"minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
 			"minecraft:conditional_bandwidth_optimization": { },
-			"minecraft:hurt_on_condition": {
-				"damage_conditions": [
-					{
-						"filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
-						"cause": "lava",
-						"damage_per_tick": 4
-					}
-				]
-			},
+			"minecraft:hurt_on_condition": { "damage_conditions": [ { "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true }, "cause": "lava", "damage_per_tick": 4 } ] },
 
 			"minecraft:movement.basic": { },
 			"minecraft:jump.static": { },
@@ -39,21 +31,7 @@
 
 			"minecraft:behavior.hurt_by_target": { "priority": 1 },
 			"minecraft:behavior.melee_attack": { "priority": 3, "track_target": true, "reach_multiplier": 0.8 },
-			"minecraft:behavior.nearest_attackable_target": {
-				"priority": 2,
-				"must_see": true,
-				"attack_interval": 5,
-				"entity_types": [
-					{
-						"filters": {
-							"any_of": [
-								{ "test": "is_family", "subject": "other", "value": "player" }
-							]
-						},
-						"max_dist": 40
-					}
-				]
-			},
+			"minecraft:behavior.nearest_attackable_target": { "priority": 2, "must_see": true, "attack_interval": 5, "entity_types": [ { "filters": { "test": "is_family", "subject": "other", "value": "player" }, "max_dist": 40 } ] },
 			"minecraft:behavior.leap_at_target": { "priority": 4, "yd": 0.4, "must_be_on_ground": false },
 
 			"minecraft:health": { "value": 16, "max": 16 },
@@ -74,27 +52,32 @@
 			"level_1": {
 				"minecraft:health": { "value": 7, "max": 7 },
 				"minecraft:attack": { "damage": 2 , "effect_name": "nausea", "effect_duration": 10 },
-				"minecraft:movement": { "value": 0.2 }
+				"minecraft:movement": { "value": 0.2 },
+				"minecraft:type_family": { "family": [ "level_1", "spider", "monster", "mob", "arthropod" ] }
 			},
 			"level_2": {
 				"minecraft:health": { "value": 21, "max": 21 },
 				"minecraft:attack": { "damage": 4 , "effect_name": "nausea", "effect_duration": 12 },
-				"minecraft:movement": { "value": 0.23 }
+				"minecraft:movement": { "value": 0.23 },
+				"minecraft:type_family": { "family": [ "level_2", "spider", "monster", "mob", "arthropod" ] }
 			},
 			"level_3": {
 				"minecraft:health": { "value": 42, "max": 42 },
 				"minecraft:attack": { "damage": 6 , "effect_name": "nausea", "effect_duration": 14 },
-				"minecraft:movement": { "value": 0.26 }
+				"minecraft:movement": { "value": 0.26 },
+				"minecraft:type_family": { "family": [ "level_3", "spider", "monster", "mob", "arthropod" ] }
 			},
 			"level_4": {
 				"minecraft:health": { "value": 70, "max": 70 },
 				"minecraft:attack": { "damage": 8 , "effect_name": "nausea", "effect_duration": 16 },
-				"minecraft:movement": { "value": 0.29 }
+				"minecraft:movement": { "value": 0.29 },
+				"minecraft:type_family": { "family": [ "level_4", "spider", "monster", "mob", "arthropod" ] }
 			},
 			"level_5": {
 				"minecraft:health": { "value": 100, "max": 100 },
 				"minecraft:attack": { "damage": 10 , "effect_name": "nausea", "effect_duration": 18 },
-				"minecraft:movement": { "value": 0.32 }
+				"minecraft:movement": { "value": 0.32 },
+				"minecraft:type_family": { "family": [ "level_5", "spider", "monster", "mob", "arthropod" ] }
 			}
 		}
     }

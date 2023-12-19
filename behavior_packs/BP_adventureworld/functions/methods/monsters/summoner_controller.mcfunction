@@ -76,10 +76,10 @@ execute @e[name=silverfish3Summoner,c=1] ~~~ function methods/monsters/silverfis
 execute @e[name=silverfish4Summoner,c=1] ~~~ function methods/monsters/silverfish/level4
 
 ## --- 苦力怕 ---
-execute @e[name=creeper0Summoner,c=1] ~~~ function methods/monsters/creeper/level0
-execute @e[name=creeperESummoner,c=1] ~~~ function methods/monsters/creeper/levelE
-execute @e[name=creeperHSummoner,c=1] ~~~ function methods/monsters/creeper/levelH
-execute @e[name=creeperSSummoner,c=1] ~~~ function methods/monsters/creeper/levelS
+execute @e[name=creeperNormalSummoner,c=1] ~~~ function methods/monsters/creeper/normal_creeper
+execute @e[name=creeperEnergySummoner,c=1] ~~~ function methods/monsters/creeper/energy_creeper
+execute @e[name=creeperHardSummoner,c=1] ~~~ function methods/monsters/creeper/hard_creeper
+execute @e[name=creeperSpeedSummoner,c=1] ~~~ function methods/monsters/creeper/speed_creeper
 
 ## --- 女巫 ---
 execute @e[name=witch1Summoner,c=1] ~~~ function methods/monsters/witch/level1

@@ -31,7 +31,7 @@ execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveComplete
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -76 -31 -52 "aw:as_summoner" "zombie2Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -74 -31 -59 "aw:as_summoner" "zombie2Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -78 -31 -62 "aw:as_summoner" "caveSpider1Summoner"
-execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -83 -27 -52 "aw:as_summoner" "creeper0Summoner"
+execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -83 -27 -52 "aw:as_summoner" "creeperNormalSummoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -69 -27 -59 "aw:as_summoner" "skeleton2Summoner"
 
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -77 -31 -47 "aw:as_summoner" "skeleton2Summoner"
@@ -40,7 +40,7 @@ execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveComplete
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -71 -31 -58 "aw:as_summoner" "caveSpider2Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -75 -31 -62 "aw:as_summoner" "zombie2Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -80 -27 -58 "aw:as_summoner" "zombie2Summoner"
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -70 -30 -49 "aw:as_summoner" "creeper0Summoner"
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -70 -30 -49 "aw:as_summoner" "creeperNormalSummoner"
 
 
 ## --- 设置上一波完成标记为0 ---

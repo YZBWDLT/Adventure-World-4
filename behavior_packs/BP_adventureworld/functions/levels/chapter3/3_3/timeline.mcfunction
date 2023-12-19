@@ -27,8 +27,8 @@ execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/ch
 execute @e[name=wave,scores={background=1..3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ function methods/title
 execute @e[name=wave,scores={background=1..3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c3-3§f | 第§a%%s§f波","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=wave]"}}]}}]}
 ### 召唤生成器
-execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -169 -32 29 "aw:as_summoner" "creeper0Summoner"
-execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -163 -28 24 "aw:as_summoner" "creeper0Summoner"
+execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -169 -32 29 "aw:as_summoner" "creeperNormalSummoner"
+execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -163 -28 24 "aw:as_summoner" "creeperNormalSummoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -157 -24 29 "aw:as_summoner" "guardian1Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -163 -32 33 "aw:as_summoner" "guardian1Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -163 -32 25 "aw:as_summoner" "drowned2Summoner"
@@ -39,7 +39,7 @@ execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveComplete
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -163 -22 34 "aw:as_summoner" "drowned2Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -162 -31 34 "aw:as_summoner" "guardian1Summoner"
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -162 -32 29 "aw:as_summoner" "guardian1Summoner"
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -157 -20 33 "aw:as_summoner" "creeper0Summoner"
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -157 -20 33 "aw:as_summoner" "creeperNormalSummoner"
 
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -167 -20 34 "aw:as_summoner" "drowned3Summoner"
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -156 -24 30 "aw:as_summoner" "drowned2Summoner"
