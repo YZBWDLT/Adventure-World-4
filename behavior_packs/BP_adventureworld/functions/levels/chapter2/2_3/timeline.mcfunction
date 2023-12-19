@@ -34,10 +34,10 @@ execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveComplete
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -149 -21 56 "aw:as_summoner" "spider1Summoner"
 execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -149 -21 66 "aw:as_summoner" "spider1Summoner"
 
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -154 -21 66 "aw:as_summoner" "creeper1Summoner"
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -154 -21 56 "aw:as_summoner" "creeper1Summoner"
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -159 -21 61 "aw:as_summoner" "creeper1Summoner"
-execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -149 -21 61 "aw:as_summoner" "creeper1Summoner"
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -154 -21 66 "aw:as_summoner" "creeper0Summoner"
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -154 -21 56 "aw:as_summoner" "creeper0Summoner"
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -159 -21 61 "aw:as_summoner" "creeper0Summoner"
+execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -149 -21 61 "aw:as_summoner" "creeper0Summoner"
 
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -154 -21 66 "aw:as_summoner" "zombie2Summoner"
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -154 -21 56 "aw:as_summoner" "zombie2Summoner"

@@ -7,12 +7,12 @@
             "is_summonable": true,
             "is_experimental": false
         },
-        "component_groups": { },
         "components": {
             "minecraft:collision_box": { "width": 1.2, "height": 3.8 },
             "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "boss", "skeleton_king" ] },
             "minecraft:health": { "value": 150, "max": 150 },
-            "minecraft:movement": { "value": 0.10 },
+            "minecraft:movement": { "value": 0.15 },
+            "minecraft:knockback_resistance": { "value": 1 },
             "minecraft:persistent": { },
             "minecraft:physics": { },
             "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
@@ -21,7 +21,8 @@
             "minecraft:conditional_bandwidth_optimization": { },
 
             "minecraft:boss": { "hud_range": 70, "name": "entity.aw:skeleton_king.name", "should_darken_sky": false },
-            "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval_min": 3.0, "attack_interval_max": 6.0, "attack_radius": 15.0},
+            "minecraft:follow_range": { "value": 64, "max": 64 },
+            "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 3 , "burst_interval" : 0.3 , "attack_interval" : 4 , "attack_radius": 40},
             "minecraft:shooter": { "def": "minecraft:arrow" },
             "minecraft:behavior.nearest_attackable_target": {
                 "priority": 2,
@@ -30,7 +31,7 @@
                 "entity_types": [
                     {
                       "filters": { "test": "is_family", "subject": "other", "value": "player" },
-                      "max_dist": 16
+                      "max_dist": 40
                     }
                 ]
             },
@@ -45,6 +46,30 @@
             "minecraft:behavior.look_at_player": { "priority": 7, "look_distance": 8 },
             "minecraft:behavior.random_look_around": { "priority": 8 }
         },
-        "events": { }
+        "events": {
+			"minecraft:entity_spawned": { "add": { "component_groups": [ "level_1" ] } },
+			"aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
+			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
+			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } }
+		},
+        "component_groups": {
+			"level_1": {
+				"minecraft:health": { "value": 150, "max": 150 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 3 , "burst_interval" : 0.3 , "attack_interval" : 4 , "attack_radius": 40}
+			},
+			"level_2": {
+				"minecraft:health": { "value": 250, "max": 250 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 5 , "burst_interval" : 0.3 , "attack_interval" : 3 , "attack_radius": 40}
+			},
+			"level_3": {
+				"minecraft:health": { "value": 350, "max": 350 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 7 , "burst_interval" : 0.3 , "attack_interval" : 2 , "attack_radius": 40}
+			},
+			"level_4": {
+				"minecraft:health": { "value": 450, "max": 450 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval": 0.6 , "attack_radius": 40}
+			}
+		}
     }
 }
