@@ -15,7 +15,7 @@
                 "animate": [
                     "move"
                 ],
-                "scale": "1 + query.variant"
+                "scale": "1 + query.variant*0.2"
             },
             "render_controllers": [ "controller.render.arrow" ]
         }

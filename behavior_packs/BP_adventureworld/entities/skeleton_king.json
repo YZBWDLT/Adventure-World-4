@@ -8,9 +8,9 @@
             "is_experimental": false
         },
         "components": {
-            "minecraft:collision_box": { "width": 1.2, "height": 3.8 },
+            "minecraft:collision_box": { "width": 0.9, "height": 3.0 },
             "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "boss", "skeleton_king" ] },
-            "minecraft:health": { "value": 150, "max": 150 },
+            "minecraft:health": { "value": 100, "max": 100 },
             "minecraft:movement": { "value": 0.15 },
             "minecraft:knockback_resistance": { "value": 1 },
             "minecraft:persistent": { },
@@ -55,20 +55,20 @@
 		},
         "component_groups": {
 			"level_1": {
-				"minecraft:health": { "value": 150, "max": 150 },
-                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 3 , "burst_interval" : 0.3 , "attack_interval" : 4 , "attack_radius": 40}
+				"minecraft:health": { "value": 100, "max": 100 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 3 , "burst_interval" : 0.3 , "attack_interval" : 4 , "attack_radius": 40 }
 			},
 			"level_2": {
-				"minecraft:health": { "value": 250, "max": 250 },
-                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 5 , "burst_interval" : 0.3 , "attack_interval" : 3 , "attack_radius": 40}
+				"minecraft:health": { "value": 150, "max": 150 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 5 , "burst_interval" : 0.3 , "attack_interval" : 3 , "attack_radius": 40 }
 			},
 			"level_3": {
-				"minecraft:health": { "value": 350, "max": 350 },
-                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 7 , "burst_interval" : 0.3 , "attack_interval" : 2 , "attack_radius": 40}
+				"minecraft:health": { "value": 200, "max": 200 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 7 , "burst_interval" : 0.3 , "attack_interval" : 2 , "attack_radius": 40 }
 			},
 			"level_4": {
-				"minecraft:health": { "value": 450, "max": 450 },
-                "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval": 0.6 , "attack_radius": 40}
+				"minecraft:health": { "value": 400, "max": 400 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval": 0.6 , "attack_radius": 40 }
 			}
 		}
     }
