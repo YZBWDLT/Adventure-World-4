@@ -17,10 +17,3 @@ tp @e[family=respawner] -92 -17 67
 
 ## --- 调用所有关卡通用奖励功能 ---
 function methods/all_levels/bonus
-
-## --- 设置陷阱 ---
-##<!> 计划在未来加入全域检测功能
-structure load 2_2_trap1 -120 -16 67
-structure load 2_2_trap2 -119 -16 53
-structure load 2_2_trap3 -124 -16 54
-structure load 2_2_trap4 -136 -10 54
