@@ -9,6 +9,22 @@
     },
 
     "component_groups": {
+      "level_1": {
+				"minecraft:health": { "value": 30, "max": 30 },
+                "minecraft:attack": { "damage": 6 }
+			},
+			"level_2": {
+				"minecraft:health": { "value": 45, "max": 45 },
+                "minecraft:attack": { "damage": 9 }
+			},
+			"level_3": {
+				"minecraft:health": { "value": 60, "max": 60 },
+                "minecraft:attack": { "damage": 12 }
+			},
+			"level_4": {
+				"minecraft:health": { "value": 75, "max": 75 },
+                "minecraft:attack": { "damage": 15 }
+            },
       "minecraft:guardian_aggressive": {
         "minecraft:behavior.nearest_attackable_target": {
           "priority": 1,
@@ -96,7 +112,7 @@
         "value": 0.12
       },
       "minecraft:attack": {
-        "damage": 5
+        "damage": 6
       },
       "minecraft:follow_range": {
         "value": 16,

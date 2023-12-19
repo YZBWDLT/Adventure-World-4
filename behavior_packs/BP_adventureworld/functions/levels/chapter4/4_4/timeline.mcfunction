@@ -36,7 +36,7 @@ execute @e[name=randomLocation,scores={background=1..5}] ~~~ scoreboard players 
 
 ### 指定刷新位置后指定刷新何种怪物
 execute @e[name=monsterRefreshLeft,scores={time=0}] ~~~ scoreboard players random @e[name=randomMonster] background 1 8
-execute @e[name=randomMonster,scores={background=1}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "creeper2Summoner"
+execute @e[name=randomMonster,scores={background=1}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "creeper0Summoner"
 execute @e[name=randomMonster,scores={background=2}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "drowned2Summoner"
 execute @e[name=randomMonster,scores={background=3}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "drownedWithTridentSummoner"
 execute @e[name=randomMonster,scores={background=4}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "skeleton2Summoner"
