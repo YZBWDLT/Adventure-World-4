@@ -61,8 +61,8 @@ execute @e[name=wave,scores={background=4}] ~~~ execute @e[name=lastWaveComplete
 execute @e[name=wave,scores={background=4}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -163 -7 -0 "aw:as_summoner" "drowned3Summoner"
 execute @e[name=wave,scores={background=4}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -153 -14 2 "aw:as_summoner" "guardian1Summoner"
 execute @e[name=wave,scores={background=4}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -163 -14 11 "aw:as_summoner" "guardian1Summoner"
-execute @e[name=wave,scores={background=4}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -152 -6 7 "aw:as_summoner" "stray2Summoner"
-execute @e[name=wave,scores={background=4}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -148 -9 -0 "aw:as_summoner" "stray2Summoner"
+execute @e[name=wave,scores={background=4}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -152 -6 7 "aw:as_summoner" "stray4Summoner"
+execute @e[name=wave,scores={background=4}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -148 -9 -0 "aw:as_summoner" "stray4Summoner"
 
 ## --- 设置上一波完成标记为0 ---
 execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ scoreboard players set @s background 0

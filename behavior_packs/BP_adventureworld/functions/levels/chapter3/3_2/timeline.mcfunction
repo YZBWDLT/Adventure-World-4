@@ -41,8 +41,8 @@ execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=lastWaveComplete
 
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -186 -21 15 "aw:as_summoner" "guardian1Summoner"
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -185 -21 5  "aw:as_summoner" "guardian1Summoner"
-execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -175 -21 5  "aw:as_summoner" "guardian1Summoner"
-execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -180 -21 12 "aw:as_summoner" "guardian1Summoner"
+execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ summon je:marker -180 -17 10  "aw:as_summoner" "drownedWithTridentSummoner"
+
 ### 生成怪物后，令水位上涨
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ structure load 3_2_phase2 -192 -22 -1 0_degrees none layer_by_layer 4.00 false true
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ function methods/title

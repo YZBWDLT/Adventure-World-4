@@ -8,11 +8,11 @@
             "is_experimental": false
         },
         "components": {
-            "minecraft:collision_box": { "width": 0.9, "height": 3.0 },
-            "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "boss", "skeleton_king" ] },
+            "minecraft:collision_box": { "width": 1.0, "height": 1.6 },
+            "minecraft:type_family": { "family": [ "undead", "monster", "mob", "boss", "skeleton_king" ] },
             "minecraft:health": { "value": 100, "max": 100 },
             "minecraft:movement": { "value": 0.15 },
-            "minecraft:knockback_resistance": { "value": 1 },
+            "minecraft:knockback_resistance": { "value": 0.8 },
             "minecraft:persistent": { },
             "minecraft:physics": { },
             "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
@@ -45,22 +45,22 @@
 			"level_1": {
 				"minecraft:health": { "value": 100, "max": 100 },
                 "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 3 , "burst_interval" : 0.3 , "attack_interval" : 4 , "attack_radius": 40 },
-                "minecraft:type_family": { "family": [ "level_1", "skeleton", "undead", "monster", "mob", "boss", "skeleton_king" ] }
+                "minecraft:type_family": { "family": [ "level_1", "undead", "monster", "mob", "boss", "skeleton_king" ] }
 			},
 			"level_2": {
 				"minecraft:health": { "value": 150, "max": 150 },
                 "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 5 , "burst_interval" : 0.3 , "attack_interval" : 3 , "attack_radius": 40 },
-                "minecraft:type_family": { "family": [ "level_2", "skeleton", "undead", "monster", "mob", "boss", "skeleton_king" ] }
+                "minecraft:type_family": { "family": [ "level_2", "undead", "monster", "mob", "boss", "skeleton_king" ] }
 			},
 			"level_3": {
 				"minecraft:health": { "value": 200, "max": 200 },
                 "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 7 , "burst_interval" : 0.3 , "attack_interval" : 2 , "attack_radius": 40 },
-                "minecraft:type_family": { "family": [ "level_3", "skeleton", "undead", "monster", "mob", "boss", "skeleton_king" ] }
+                "minecraft:type_family": { "family": [ "level_3", "undead", "monster", "mob", "boss", "skeleton_king" ] }
 			},
 			"level_4": {
 				"minecraft:health": { "value": 400, "max": 400 },
                 "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval": 0.6 , "attack_radius": 40 },
-                "minecraft:type_family": { "family": [ "level_4", "skeleton", "undead", "monster", "mob", "boss", "skeleton_king" ] }
+                "minecraft:type_family": { "family": [ "level_4", "undead", "monster", "mob", "boss", "skeleton_king" ] }
 			}
 		}
     }
