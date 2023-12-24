@@ -90,6 +90,7 @@ summon je:marker "lavaWarningLeft" -82 1 -2
 summon je:marker "timeline" -82 1 -2
 summon je:marker "monsterSummonDelay" -82 1 -2
 summon je:marker "10SecondsCycle" -82 1 -2
+summon je:marker "levelCompleteDelay" -82 1 -2
 
 scoreboard players set @e[name=tick] time 0
 scoreboard players set @e[name=playedSecond] time 0
@@ -101,11 +102,15 @@ scoreboard players set @e[name=lavaWarningLeft] time 0
 scoreboard players set @e[name=timeline] time 0
 scoreboard players set @e[name=monsterSummonDelay] time 0
 scoreboard players set @e[name=10SecondsCycle] time 0
+scoreboard players set @e[name=levelCompleteDelay] time 0
 
 ### active
 
 scoreboard players set @e[name=timeline] active 2
 scoreboard players set @e[name=soundPlayer] active 0
+scoreboard players set @e[name=levelCompleteDelay] active 0
+scoreboard players set @e[name=alivePlayersAmount] active 1
+scoreboard players set @e[name=allPlayersAmount] active 1
 
 ### isAlive
 scoreboard players set @a isAlive 2
