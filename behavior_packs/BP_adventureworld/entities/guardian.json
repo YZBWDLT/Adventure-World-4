@@ -53,12 +53,12 @@
 
         "component_groups": {
             "level_1": {
-				"minecraft:health": { "value": 30, "max": 30 },
+				"minecraft:health": { "value": 20, "max": 20 },
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:type_family": { "family": [ "level_1", "guardian", "monster", "mob" ] }
 			},
 			"level_2": {
-				"minecraft:health": { "value": 45, "max": 45 },
+				"minecraft:health": { "value": 40, "max": 40 },
                 "minecraft:attack": { "damage": 8 },
                 "minecraft:type_family": { "family": [ "level_2", "guardian", "monster", "mob" ] }
 			},
@@ -68,7 +68,7 @@
                 "minecraft:type_family": { "family": [ "level_3", "guardian", "monster", "mob" ] }
 			},
 			"level_4": {
-				"minecraft:health": { "value": 75, "max": 75 },
+				"minecraft:health": { "value": 80, "max": 80 },
                 "minecraft:attack": { "damage": 12 },
                 "minecraft:type_family": { "family": [ "level_4", "guardian", "monster", "mob" ] }
             },
