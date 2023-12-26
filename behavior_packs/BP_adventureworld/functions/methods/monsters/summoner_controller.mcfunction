@@ -82,10 +82,7 @@ execute @e[name=creeperHardSummoner,c=1] ~~~ function methods/monsters/creeper/h
 execute @e[name=creeperSpeedSummoner,c=1] ~~~ function methods/monsters/creeper/speed_creeper
 
 ## --- 女巫 ---
-execute @e[name=witch1Summoner,c=1] ~~~ function methods/monsters/witch/level1
-execute @e[name=witch2Summoner,c=1] ~~~ function methods/monsters/witch/level2
-execute @e[name=witch3Summoner,c=1] ~~~ function methods/monsters/witch/level3
-execute @e[name=witch4Summoner,c=1] ~~~ function methods/monsters/witch/level4
+execute @e[name=witchSummoner,c=1] ~~~ function methods/monsters/witch
 
 ## --- 守卫者 ---
 execute @e[name=guardian1Summoner,c=1] ~~~ function methods/monsters/guardian

@@ -93,29 +93,44 @@
                     { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_4" ] } },
                     { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_4" ] } }
                 ] 
+            },
+            "aw:level_5": { 
+                "randomize": [
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_5" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_5" ] } }
+                ] 
             }
         },
 
         "component_groups": {
             "level_1": {
-                "minecraft:attack": { "damage": 5 },
-                "minecraft:health": { "value": 16, "max": 16 },
-                "minecraft:movement": { "value": 0.35 }
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 10, "max": 10 },
+                "minecraft:movement": { "value": 0.32 }
 			},
 			"level_2": {
-                "minecraft:attack": { "damage": 5 },
-                "minecraft:health": { "value": 16, "max": 16 },
-                "minecraft:movement": { "value": 0.35 }
+                "minecraft:attack": { "damage": 10 },
+                "minecraft:health": { "value": 18, "max": 18 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/leather_armor.json" }
 			},
 			"level_3": {
-                "minecraft:attack": { "damage": 5 },
-                "minecraft:health": { "value": 16, "max": 16 },
-                "minecraft:movement": { "value": 0.35 }
+                "minecraft:attack": { "damage": 12 },
+                "minecraft:health": { "value": 25, "max": 25 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/iron_armor.json" }
 			},
 			"level_4": {
-                "minecraft:attack": { "damage": 5 },
-                "minecraft:health": { "value": 16, "max": 16 },
-                "minecraft:movement": { "value": 0.35 }
+                "minecraft:attack": { "damage": 14 },
+                "minecraft:health": { "value": 32, "max": 32 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/diamond_armor.json" }
+			},
+            "level_5": {
+                "minecraft:attack": { "damage": 16 },
+                "minecraft:health": { "value": 48, "max": 48 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/netherite_armor.json" }
 			},
 
             "ranged_unit": {
