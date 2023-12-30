@@ -7,9 +7,8 @@ scoreboard players set @e[name=level] background 721
 tp @a -163 -18 106
 tp @e[family=respawner] -163 -18 106
 
-## --- 打开入口与出口 ---
+## --- 打开入口 ---
 fill -192 -18 96 -192 -16 98 air
-fill -217 -18 98 -217 -16 100 air
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
 function methods/all_levels/game_lose

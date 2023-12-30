@@ -7,7 +7,7 @@ scoreboard players set @e[name=level] background 631
 tp @a -76 -38 -2
 tp @e[family=respawner] -76 -38 -2
 
-## --- 打开入口与出口 ---
+## --- 打开入口 ---
 fill -76 -39 20 -74 -37 20 structure_void
 
 ## --- 清除残余岩浆 ---

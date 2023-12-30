@@ -9,7 +9,6 @@ tp @e[family=respawner] -172 17 -6
 
 ## --- 打开入口与出口 ---
 fill -155 7 -3 -157 9 -3 air
-fill -155 7 16 -157 9 16 air
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
 function methods/all_levels/game_lose
