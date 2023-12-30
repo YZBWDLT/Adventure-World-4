@@ -1,16 +1,6 @@
 # ===== 怪物生成控制器 =====
 # 当存在特定的生成器时，循环调用其中的方法
 
-## --- 播放音效 ---
-## 2s前 | 生成粒子，播放音效警示玩家有怪物产生
-execute @e[name=monsterSummonDelay,scores={time=0..5}] ~~~ execute @a ~~~ playsound random.orb @s ~~~ 1 1
-execute @e[name=monsterSummonDelay,scores={time=10}] ~~~ execute @a ~~~ playsound random.orb @s ~~~ 1 1
-execute @e[name=monsterSummonDelay,scores={time=15}] ~~~ execute @a ~~~ playsound random.orb @s ~~~ 1 1
-execute @e[name=monsterSummonDelay,scores={time=20}] ~~~ execute @a ~~~ playsound random.orb @s ~~~ 1 1
-execute @e[name=monsterSummonDelay,scores={time=25}] ~~~ execute @a ~~~ playsound random.orb @s ~~~ 1 1
-## 0s时 | 播放召唤音效
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[family=summoner] ~~~ playsound mob.evocation_illager.prepare_attack @a ~~~ 1
-
 ## --- 骷髅 ---
 execute @e[name=skeleton1Summoner,c=1] ~~~ function methods/monsters/skeleton/level1
 execute @e[name=skeleton2Summoner,c=1] ~~~ function methods/monsters/skeleton/level2
