@@ -1,3 +1,5 @@
+# ===== 虚拟准星函数 =====
+
 scoreboard players add @s crosshair 1
 scoreboard players set @s[scores={crosshair=2}] crosshair 0
 
