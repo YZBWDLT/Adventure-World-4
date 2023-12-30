@@ -5,10 +5,6 @@
 scoreboard players add @e[name=tick] time 1
 scoreboard players remove @e[name=tick,scores={time=20..}] time 20
 
-## --- time.10SecondsCycle 每10秒刷新1次 ---
-execute @e[name=tick,scores={time=19}] ~~~ scoreboard players add @e[name=10SecondsCycle] time 1
-scoreboard players remove @e[name=10SecondsCycle,scores={time=10..}] time 0
-
 ## --- 记录玩家游玩时间 ---
 ## 更改time.playedSecond，time.playedMinute的值，以记录玩家的游玩时间
 execute @e[name=level,scores={background=100..}] ~~~ execute @e[name=tick,scores={time=19..}] ~~~ scoreboard players add @e[name=playedSecond] time 1
