@@ -18,7 +18,6 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"active.timeline = %%s §7#
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"background.alivePlayersAmount = %%s §7# 记录存活玩家数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=alivePlayersAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"background.allPlayersAmount = %%s §7# 记录所有玩家数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=allPlayersAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"background.hookshotAmount = %%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=hookshotAmount]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"background.lastWaveCompleted = %%s §7# 上一波是否已完成","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=lastWaveCompleted]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"background.level = %%s §7# 记录关卡数据，三位数分别为(章节)(关卡)(是否已完成)","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=level]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§ebackground.maxMonsterAmount = %%s §7# 记录怪物数目","with":{"rawtext":[{"score":{"objective":"background","name":"maxMonsterAmount"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"background.maxWave = %%s §7# 记录该关卡最大波数，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=maxWave]"}}]}}]}
@@ -38,8 +37,13 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bisHoldingBoots.@s = %%s
 
 ## === 设置数据 settings ===
 
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.alivePlayersAmount = %%s §7# 存活玩家数目是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=alivePlayersAmount]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.allPlayersAmount = %%s §7# 所有玩家数目是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=allPlayersAmount]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.arrowLimitTest = %%s §7# 箭上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=arrowLimitTest]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.developerMode = %%s §7# 开发者模式","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=developerMode]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.isNetease = %%s §7# 记录是否为netease版本","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=isNetease]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.itemLimitTest = %%s §7# 物品上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=itemLimitTest]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.potionLimitTest = %%s §7# 药水上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=potionLimitTest]"}}]}}]}
 
 ## === 后台数据 stats ===
 
@@ -67,6 +71,5 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.soundPlayer = %%s §7
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.tick = %%s §7# 每1刻加1分，每20刻归零","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=tick]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.timeLeft = %%s §7# 关卡剩余时间，单位秒","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeLeft]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.timeline = %%s §7# 时间线","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeline]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.10SecondsCycle = %%s §7# 每1秒加1分，每10秒归零","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=10SecondsCycle]"}}]}}]}
 
 scoreboard players set @s temp 0
