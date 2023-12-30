@@ -4,14 +4,6 @@
 ## --- 令时间流逝 ---
 execute @e[name=tick,scores={time=0}] ~~~ scoreboard players remove @e[name=timeLeft] time 1
 execute @e[name=tick,scores={time=0}] ~~~ scoreboard players remove @e[name=monsterRefreshLeft] time 1
-
-## --- 实体数目判定 ---
-
-### 检测当前怪物数目
-function methods/get_monster_amount
-### 检测当前存活玩家数目
-function methods/get_player_amount
-
 ## --- 成功判定 ---
 
 ### 检测到时间结束后，结束关卡
@@ -52,10 +44,6 @@ execute @e[name=randomMonster,scores={background=1..8}] ~~~ scoreboard players s
 
 ### 刷新完成后重新指定刷新倒计时
 execute @e[name=monsterRefreshLeft,scores={time=0}] ~~~ scoreboard players random @s time 4 12
-
-## --- 设置上一波完成标记为0 ---
-execute @e[name=lastWaveCompleted,scores={background=1}] ~~~ scoreboard players set @s background 0
-
 
 ## --- 给予守卫者药效 ---
 execute @e[name=tick,scores={time=0}] ~~~ effect @e[type=guardian] resistance 30 10 true
