@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] background 120
 
 ## --- 封闭入口与出口 ---
-fill -127 5 50 -125 7 50 minecraft:cobblestone_wall["wall_block_type":"sandstone"]
+fill -127 5 50 -125 7 50 cobblestone_wall["wall_block_type":"sandstone"]
 
 ## --- 设置重生点 ---
 tp @e[family=respawner] -136 9 58
