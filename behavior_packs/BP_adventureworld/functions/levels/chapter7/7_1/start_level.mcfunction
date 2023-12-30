@@ -17,3 +17,11 @@ function methods/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] background 2
+
+## --- 封闭7-2~7-5的出口 ---
+## 7-2
+fill -184 -18 98 -184 -16 96 nether_brick_fence
+## 7-3
+fill -217 -18 98 -217 -16 100 cobblestone_wall["wall_block_type":"nether_brick"]
+## 7-4
+fill -235 -30 97 -233 -30 99 stained_glass["color":"red"]
