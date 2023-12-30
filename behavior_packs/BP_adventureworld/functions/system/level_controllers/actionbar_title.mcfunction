@@ -8,6 +8,12 @@ function methods/get_player_amount
 ## --- 正在进行的关卡 ---
 ## temp3.level=0 | 每5tick显示一次
 
+execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @a ~~~ function methods/get_entity_location
+execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
+execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @e[name=level] ~~~ function methods/3_digit_seperator
+execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @a ~~~ scoreboard players operation @s temp = @s inLevelArea
+execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @a ~~~ function methods/3_digit_seperator
+
 ### 玩家数为1时，不显示玩家数量
 execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @e[name=allPlayersAmount,scores={background=1}] ~~~ function system/level_controllers/actionbar_singleplayer
 ### 玩家数大于1时，显示玩家数量
@@ -35,6 +41,3 @@ function system/level_controllers/actionbar_items
 
 ### 无效位置提示 | 仅开发版
 execute @e[name=developerMode,scores={settings=1}] ~~~ execute @a[scores={inLevelArea=-1}] ~~~ titleraw @s actionbar {"rawtext":[{"translate":"§c错误：无法检测的位置"}]}
-
-### 调试性内容
-# titleraw @a actionbar {"rawtext":[{"translate":"wave=%%s | lastWaveCompleted=%%s | monsterSummonDelay=%%s","with":{"rawtext":[{"score":{"objective":"background","name":"@e[name=wave]"}},{"score":{"objective":"background","name":"@e[name=lastWaveCompleted]"}},{"score":{"objective":"time","name":"@e[name=monsterSummonDelay]"}}]}}]}
