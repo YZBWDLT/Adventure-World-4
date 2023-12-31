@@ -2,7 +2,6 @@
 # 调用此函数以用于标记上一波处于已完成状态，并重置怪物刷新计时
 
 scoreboard players add @e[name=wave] background 1
-function methods/monster_summon_delay/enable_40ticks
 
 ## --- 补充箭 ---
 function methods/supplier/arrow

@@ -24,3 +24,6 @@ kill @e[type=item]
 
 ## --- 设置当前完成波数为2 ---
 scoreboard players set @e[name=wave] background 2
+
+# --- 关卡结束或失败后，回归正常关卡完成检测 ---
+function methods/level_complete_delay/disable

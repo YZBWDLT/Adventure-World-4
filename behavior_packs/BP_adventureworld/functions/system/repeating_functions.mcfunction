@@ -11,7 +11,8 @@ function system/time_played_recorder
 function system/respawn_controller
 
 ## 防退出控制器
-function system/antileave
+#<!> 还需要优化
+# function system/antileave
 
 ## 音效控制器
 ## 仅当音效播放器处于激活状态下执行。
@@ -38,14 +39,14 @@ function system/equipment_tester
 
 ## 箭上限函数
 ## 仅当箭上限检测启用状态下执行。
-execute @e[name=arrowLimitTest,scores={settings=!1}] ~~~ function system/item_limit/arrows
+execute @e[name=arrowLimitTest,scores={settings=1}] ~~~ function system/item_limit/arrows
 
 ## 药水上限函数
 ## 每秒执行一次，仅当药水上限检测启用状态下执行。
-execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=potionLimitTest,scores={settings=!1}] ~~~ function system/item_limit/potions
+execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=potionLimitTest,scores={settings=1}] ~~~ function system/item_limit/potions
 
 ## 物品上限函数
-execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=itemLimitTest,scores={settings=!1}] ~~~ function system/item_limit/items
+execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=itemLimitTest,scores={settings=1}] ~~~ function system/item_limit/items
 
 # --- 关卡函数 ---
 # 这些函数是地图关卡需要用到的循环型函数。
@@ -81,12 +82,16 @@ execute @e[name=monsterSummonDelay,scores={active=1}] ~~~ function system/level_
 function system/level_controllers/actionbar_title
 
 ## 关卡与波潮完成检测器
-## 仅当时间线处于激活状态下执行。
-execute @e[name=timeline,scores={active=1..}] ~~~ function system/level_controllers/level_complete
+## 该函数仅在关卡进度处于“正在游戏中”状态下执行，因此需要获取当前关卡状态。
+execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
+execute @e[name=level] ~~~ function methods/3_digit_seperator
+execute @e[name=level,scores={temp3=0}] ~~~ function system/level_controllers/level_complete
 
 ## 关卡失败检测器
-## 仅当时间线处于激活状态下执行。
-execute @e[name=timeline,scores={active=1..}] ~~~ function system/level_controllers/game_lose
+## 该函数仅在关卡进度处于“正在游戏中”状态下执行，因此需要获取当前关卡状态。
+execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
+execute @e[name=level] ~~~ function methods/3_digit_seperator
+execute @e[name=level,scores={temp3=0}] ~~~ function system/level_controllers/game_lose
 
 # --- 开发者模式 ---
 

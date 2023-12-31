@@ -3,7 +3,7 @@
 # ---绳枪判定---
 ## 绳枪判定将仅保留一个绳枪。如此做是为了防止多绳枪判定出现问题。
 
-execute @e[name=hookshotAmount,scores={background=2..}] ~~~ execute @e[family=hookshot,tag=!firstHookshot] ~~~ tellraw @p { "rawtext": [ { "text": "§c正在有人使用绳枪哦！请稍后再试。" } ] }
+execute @e[name=hookshotAmount,scores={background=2..}] ~~~ execute @e[family=hookshot,tag=!firstHookshot] ~~~ tellraw @p { "rawtext": [ { "text": "§c正在有人使用绳枪哦！请稍后再试。\n§7别骂了别骂了，会优化的，我们已经知道这东西运行很烂了。" } ] }
 execute @e[name=hookshotAmount,scores={background=2..}] ~~~ kill @e[family=hookshot,tag=!firstHookshot]
 tag @e[family=hookshot] add firstHookshot
 

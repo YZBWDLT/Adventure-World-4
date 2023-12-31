@@ -1,10 +1,10 @@
 # ===== 第一章 =====
 
-# --- 通用函数 ---
-function methods/all_levels/start_chapter
-
 # --- 设置level ---
 scoreboard players set @e[name=level] background 101
+
+# --- 通用函数 ---
+function methods/all_levels/start_chapter
 
 # --- 标题 ---
 title @a title §e§l沙 漠 神 殿

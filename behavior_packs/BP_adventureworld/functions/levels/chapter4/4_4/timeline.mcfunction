@@ -4,15 +4,10 @@
 ## --- 令时间流逝 ---
 execute @e[name=tick,scores={time=0}] ~~~ scoreboard players remove @e[name=timeLeft] time 1
 execute @e[name=tick,scores={time=0}] ~~~ scoreboard players remove @e[name=monsterRefreshLeft] time 1
-## --- 成功判定 ---
 
+## --- 成功判定 ---
 ### 检测到时间结束后，结束关卡
 execute @e[name=timeLeft,scores={time=..0}] ~~~ function levels/chapter4/4_4/bonus
-
-## --- 失败判定 ---
-
-### 当不存在isAlive.@s=1的玩家时，游戏失败
-execute @e[name=alivePlayersAmount,scores={background=0}] ~~~ function levels/chapter4/4_4/game_lose
 
 ## --- 召唤怪物 ---
 ## 当time.monsterRefreshLeft = 0时代表该生成怪物了
@@ -38,7 +33,7 @@ execute @e[name=randomMonster,scores={background=7}] ~~~ execute @e[name=summonL
 execute @e[name=randomMonster,scores={background=8}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "zombieBaby2Summoner"
 execute @e[name=randomMonster,scores={background=1..8}] ~~~ function methods/title
 execute @e[name=randomMonster,scores={background=1..8}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c注意！某个随机位置即将生成怪物！"}]}
-execute @e[name=randomMonster,scores={background=1..8}] ~~~ scoreboard players set @e[name=monsterSummonDelay] time 40
+execute @e[name=randomMonster,scores={background=1..8}] ~~~ function methods/monster_summon_delay/enable_40ticks
 execute @e[name=randomMonster,scores={background=1..8}] ~~~ kill @e[name=summonLocation]
 execute @e[name=randomMonster,scores={background=1..8}] ~~~ scoreboard players set @s background 0
 

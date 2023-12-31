@@ -16,3 +16,6 @@ function methods/all_levels/game_lose
 ## --- 清除所有怪物 ---
 kill @e[family=monster]
 kill @e[type=item]
+
+# --- 关卡结束或失败后，回归正常关卡完成检测 ---
+function methods/level_complete_delay/disable

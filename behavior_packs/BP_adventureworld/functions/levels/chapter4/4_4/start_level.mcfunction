@@ -31,3 +31,6 @@ summon guardian -138 -30 14
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] background 1
 scoreboard players set @e[name=wave] background 1
+
+# --- 阻止本关以常规方式检测 ---
+function methods/level_complete_delay/never_complete

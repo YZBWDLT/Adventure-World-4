@@ -56,10 +56,11 @@ scoreboard players set @s[x=-178,y=-22,z=15,dx=0,dy=10,dz=0] inLevelArea 32
 scoreboard players set @s[x=-184,y=-16,z=23,dx=4,dy=4,dz=1] inLevelArea 32
 ### 3-3
 scoreboard players set @s[x=-175,y=-33,z=21,dx=22,dy=10,dz=16] inLevelArea 33
-scoreboard players set @s[x=-169,y=-21,z=32,dx=13,dy=6,dz=3] inLevelArea 33
+scoreboard players set @s[x=-169,y=-22,z=32,dx=13,dy=6,dz=3] inLevelArea 33
 scoreboard players set @s[x=-166,y=-22,z=27,dx=12,dy=6,dz=4] inLevelArea 33
 scoreboard players set @s[x=-161,y=-22,z=22,dx=6,dy=4,dz=4] inLevelArea 33
 scoreboard players set @s[x=-166,y=-15,z=27,dx=6,dy=4,dz=5] inLevelArea 33
+
 ### 3-4
 scoreboard players set @s[x=-177,y=-15,z=19,dx=8,dy=39,dz=13] inLevelArea 34
 

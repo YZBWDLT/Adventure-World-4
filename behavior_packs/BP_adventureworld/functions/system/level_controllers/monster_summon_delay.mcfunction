@@ -30,7 +30,11 @@ execute @e[name=level,scores={temp3=0,background=100..,background=!641..701}] ~~
 
 # --- 调用生成器函数 ---
 # 启用生成器的条件与前文一致。
-execute @e[name=level,scores={temp3=0,background=100..,background=!641..701}] ~~~ execute @e[name=monsterSummonDelay,scores={active=1,time=0}] ~~~ function methods/monsters/summoner_controller
+
+## 召唤怪物
+execute @e[name=level,scores={temp3=0,background=100..,background=!641..701}] ~~~ execute @e[name=monsterSummonDelay,scores={active=1,time=0..}] ~~~ function methods/monsters/summoner_controller
+## 在完成召唤后，获取当前最大怪物数
+execute @e[name=level,scores={temp3=0,background=100..,background=!641..701}] ~~~ execute @e[name=monsterSummonDelay,scores={active=1,time=0}] ~~~ function methods/get_max_monster_amount
 
 # --- 倒计时结束后取消激活状态 ---
 # （写在最后面，是因为其它函数需要在active.monsterSummonDelay=1时执行）

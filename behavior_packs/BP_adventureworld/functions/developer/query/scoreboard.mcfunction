@@ -11,6 +11,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"text":"下文反馈格式: (记分项)
 ## === 激活数据 active ===
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"active.levelCompleteDelay = %%s §7# 关卡完成延迟（启用值），0：无延迟完成关卡，大于0：按照该值延迟完成关卡，-1：永远不按照怪物数目完成关卡","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=levelCompleteDelay]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"active.monsterSummonDelay = %%s §7# 怪物生成延迟（启用值），0：无延迟，1：有延迟","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=monsterSummonDelay]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"active.soundPlayer = %%s §7# 音效播放器，0：不激活，不为0：根据本值决定播放何种音效","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=soundPlayer]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"active.timeline = %%s §7# 时间线控制器：为1时开始计时","with":{"rawtext":[{"score":{"objective":"active","name":"@e[name=timeline]"}}]}}]}
 
