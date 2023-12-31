@@ -5,7 +5,7 @@
 scoreboard players operation @e[name=level] temp = @e[name=level] background
 execute @e[name=level] ~~~ function methods/3_digit_seperator
 function methods/title
-titleraw @a subtitle {"rawtext":[{"translate":"§c%%s-%%s§f | 第§a%%s§f波","with":{"rawtext":[{"score":{"objective":"temp","name":"@e[name=level]"}},{"score":{"objective":"temp2","name":"@e[name=level]"},{"score":{"objective":"background","name":"@e[name=wave]"}}]}}]}
+titleraw @a subtitle {"rawtext":[{"translate":"§c%%s-%%s§f | 第§a%%s§f波","with":{"rawtext":[{"score":{"objective":"temp","name":"@e[name=level]"}},{"score":{"objective":"temp2","name":"@e[name=level]"}},{"score":{"objective":"background","name":"@e[name=wave]"}}]}}]}
 
 ### BOSS关卡
 execute @e[name=level,scores={background=230}] ~~~ execute @e[name=wave,scores={background=4}] ~~~ titleraw @a title {"rawtext":[{"translate":"§l§cBOSS 来 袭"}]}
