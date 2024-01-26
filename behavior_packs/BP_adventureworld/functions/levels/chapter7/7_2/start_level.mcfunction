@@ -5,8 +5,8 @@
 scoreboard players set @e[name=level] background 720
 
 ## --- 封闭入口与出口 ---
-fill -159 -18 109 -159 -16 111 nether_brick_fence
-fill -184 -18 98 -184 -16 96 nether_brick_fence
+fill -159 -18 109 -159 -16 111 nether_brick
+fill -184 -18 98 -184 -16 96 nether_brick
 
 ## --- 设置重生点 ---
 tp @e[family=respawner] -178 -8 104

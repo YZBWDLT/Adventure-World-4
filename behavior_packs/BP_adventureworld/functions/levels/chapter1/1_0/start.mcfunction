@@ -16,6 +16,8 @@ tp @e[family=respawner] -117 1 -6
 
 # --- 先行封闭各关卡出口 ---
 # 1-1出口
-fill -118 1 32 -116 3 32 cobblestone_wall["wall_block_type":"sandstone"]
+fill -118 1 32 -116 3 32 sandstone["sand_stone_type":"cut"]
+fill -117 2 32 -117 2 32 sandstone["sand_stone_type":"heiroglyphs"]
 # 1-3出口
-fill -121 18 25 -121 20 27 cobblestone_wall["wall_block_type":"red_sandstone"]
+fill -121 18 25 -121 20 27 red_sandstone["sand_stone_type":"cut"]
+fill -121 19 26 -121 19 26 red_sandstone["sand_stone_type":"heiroglyphs"]

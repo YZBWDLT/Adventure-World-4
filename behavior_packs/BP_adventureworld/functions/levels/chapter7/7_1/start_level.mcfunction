@@ -7,7 +7,7 @@ scoreboard players set @e[name=monsterAmount] background 14
 ## --- 设置level ---
 scoreboard players set @e[name=level] background 710
 
-fill -150 -18 102 -150 -16 100 nether_brick_fence
+fill -150 -18 102 -150 -16 100 nether_brick
 
 ## --- 设置重生点 ---
 tp @e[family=respawner] -112 -13 103
@@ -20,8 +20,8 @@ scoreboard players set @e[name=maxWave] background 2
 
 ## --- 封闭7-2~7-5的出口 ---
 ## 7-2
-fill -184 -18 98 -184 -16 96 nether_brick_fence
+fill -184 -18 98 -184 -16 96 nether_brick
 ## 7-3
-fill -217 -18 98 -217 -16 100 cobblestone_wall["wall_block_type":"nether_brick"]
+fill -217 -18 98 -217 -16 100 nether_brick
 ## 7-4
 fill -235 -30 97 -233 -30 99 stained_glass["color":"red"]

@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] background 740
 
 ## --- 封闭入口与出口 ---
-fill -223 -18 98 -223 -16 100 cobblestone_wall["wall_block_type":"nether_brick"]
+fill -223 -18 98 -223 -16 100 nether_brick
 fill -235 -30 97 -233 -30 99 stained_glass["color":"red"]
 
 ## --- 设置重生点 ---

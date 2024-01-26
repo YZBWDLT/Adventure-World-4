@@ -5,8 +5,10 @@
 scoreboard players set @e[name=level] background 210
 
 ## --- 封闭入口与出口 ---
-fill -74 20 58 -76 18 58 cobblestone_wall["wall_block_type":"diorite"]
-fill -69 18 64 -69 20 66 cobblestone_wall["wall_block_type":"diorite"]
+## 入口
+fill -74 20 58 -76 18 58 stone["stone_type":"diorite_smooth"]
+## 出口
+fill -69 18 64 -69 20 66 stone["stone_type":"diorite_smooth"]
 
 ## --- 设置重生点 ---
 tp @e[family=respawner] -83 18 64

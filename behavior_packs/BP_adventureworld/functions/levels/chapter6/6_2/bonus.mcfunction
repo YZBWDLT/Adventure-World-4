@@ -9,7 +9,7 @@ tellraw @a {"rawtext":[{"text":"§l§a6-2已完成！§r"}]}
 
 ## --- 打开入口与出口 ---
 fill -81 -19 -48 -79 -17 -48 air
-fill -72 -19 -32 -70 -17 -32 air
+fill -72 -19 -30 -70 -17 -30 air
 
 ## --- 打开6-3 ---
 fill -74 -32 -23 -77 -32 -22 air[] replace obsidian[]

@@ -22,6 +22,6 @@ fill -82 -31 -63 -82 -30 -63 pointed_dripstone["hanging":false]
 fill -82 -31 -64 -82 -31 -64 pointed_dripstone["hanging":false,"dripstone_thickness":"merge"]
 fill -83 -31 -62 -83 -29 -64 barrier[] keep
 ## 6-2
-fill -72 -19 -32 -70 -17 -32 stained_glass["color":"purple"]
+fill -72 -19 -30 -70 -17 -30 stained_glass["color":"purple"]
 ## 6-3
-fill -74 -39 8 -76 -37 8 deepslate_brick_wall
+fill -74 -39 8 -76 -37 8 deepslate_bricks

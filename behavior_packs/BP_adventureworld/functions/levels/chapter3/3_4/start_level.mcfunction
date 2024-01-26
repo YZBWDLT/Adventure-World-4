@@ -5,8 +5,8 @@
 scoreboard players set @e[name=level] background 340
 
 ## --- 封闭入口与出口 ---
-fill -168 -15 22 -168 -13 24 cobblestone_wall["wall_block_type":"prismarine"]
-fill -174 17 18 -172 19 18 cobblestone_wall["wall_block_type":"prismarine"]
+fill -168 -15 22 -168 -13 24 prismarine
+fill -174 17 18 -172 19 18 prismarine
 
 ## --- 设置重生点 ---
 tp @e[family=respawner] -172 -1 30

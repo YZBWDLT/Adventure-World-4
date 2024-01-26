@@ -5,8 +5,8 @@
 scoreboard players set @e[name=level] background 630
 
 ## --- 封闭入口与出口 ---
-fill -76 -37 -17 -74 -35 -17 deepslate_brick_wall
-fill -74 -39 8 -76 -37 8 deepslate_brick_wall
+fill -76 -37 -17 -74 -35 -17 deepslate_bricks
+fill -74 -39 8 -76 -37 8 deepslate_bricks
 
 ## --- 设置重生点 ---
 tp @e[family=respawner] -82 -34 -16

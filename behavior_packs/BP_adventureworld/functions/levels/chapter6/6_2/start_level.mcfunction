@@ -6,7 +6,7 @@ scoreboard players set @e[name=level] background 620
 
 ## --- 封闭入口与出口 ---
 fill -81 -19 -48 -79 -17 -48 stained_glass["color":"purple"]
-fill -72 -19 -32 -70 -17 -32 stained_glass["color":"purple"]
+fill -72 -19 -30 -70 -17 -30 stained_glass["color":"purple"]
 
 ## --- 设置重生点 ---
 tp @e[family=respawner] -78 -11 -30
