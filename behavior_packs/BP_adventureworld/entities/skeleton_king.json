@@ -5,7 +5,13 @@
             "identifier": "aw:skeleton_king",
             "is_spawnable": true,
             "is_summonable": true,
-            "is_experimental": false
+            "is_experimental": false,
+            "animations": {
+                "controller_extra_damage": "controller.animation.skeleton_king.extra_damage"
+            },
+            "scripts": {
+                "animate": [ "controller_extra_damage" ]
+            }
         },
         "components": {
             "minecraft:collision_box": { "width": 1.0, "height": 1.6 },
@@ -19,6 +25,9 @@
             "minecraft:nameable": { },
             "minecraft:can_climb": { },
             "minecraft:conditional_bandwidth_optimization": { },
+
+            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "is_family", "subject": "damager", "value": "arrow", "operator": "==" }, "event": "extra_damage" } } ] },
+            "minecraft:scale": { "value": 1.2 },
 
             "minecraft:boss": { "hud_range": 70, "name": "entity.aw:skeleton_king.name", "should_darken_sky": false },
             "minecraft:follow_range": { "value": 64, "max": 64 },
@@ -39,7 +48,9 @@
 			"aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
 			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
 			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
-			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } }
+			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } },
+            "aw:extra_damage": { "add": { "component_groups": [ "extra_damage" ] } },
+            "aw:stop_extra_damage": { "add": { "component_groups": [ "stop_extra_damage" ] } }
 		},
         "component_groups": {
 			"level_1": {
@@ -61,7 +72,13 @@
 				"minecraft:health": { "value": 400, "max": 400 },
                 "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval": 0.6 , "attack_radius": 40 },
                 "minecraft:type_family": { "family": [ "level_4", "undead", "monster", "mob", "boss", "skeleton_king" ] }
-			}
+			},
+            "extra_damage": {
+                "minecraft:variant": { "value": 1 }
+            },
+            "stop_extra_damage": {
+                "minecraft:variant": { "value": 0 }
+            }
 		}
     }
 }
