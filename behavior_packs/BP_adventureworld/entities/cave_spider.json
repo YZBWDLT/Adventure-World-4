@@ -72,28 +72,28 @@
 		},
 		"component_groups": {
 			"level_1": {
-				"minecraft:health": { "value": 7, "max": 7 },
-				"minecraft:attack": { "damage": 2 , "effect_name": "blindness", "effect_duration": 3 },
+				"minecraft:health": { "value": 6, "max": 6 },
+				"minecraft:attack": { "damage": 2 , "effect_name": "blindness", "effect_duration": 2 },
 				"minecraft:movement": { "value": 0.2 }
 			},
 			"level_2": {
-				"minecraft:health": { "value": 21, "max": 21 },
-				"minecraft:attack": { "damage": 4 , "effect_name": "blindness", "effect_duration": 4 },
+				"minecraft:health": { "value": 16, "max": 16 },
+				"minecraft:attack": { "damage": 3 , "effect_name": "blindness", "effect_duration": 3 },
 				"minecraft:movement": { "value": 0.23 }
 			},
 			"level_3": {
-				"minecraft:health": { "value": 42, "max": 42 },
-				"minecraft:attack": { "damage": 6 , "effect_name": "blindness", "effect_duration": 5 },
+				"minecraft:health": { "value": 31, "max": 31 },
+				"minecraft:attack": { "damage": 4 , "effect_name": "blindness", "effect_duration": 4 },
 				"minecraft:movement": { "value": 0.26 }
 			},
 			"level_4": {
-				"minecraft:health": { "value": 70, "max": 70 },
-				"minecraft:attack": { "damage": 8 , "effect_name": "blindness", "effect_duration": 6 },
+				"minecraft:health": { "value": 46, "max": 46 },
+				"minecraft:attack": { "damage": 5 , "effect_name": "blindness", "effect_duration": 5 },
 				"minecraft:movement": { "value": 0.29 }
 			},
 			"level_5": {
-				"minecraft:health": { "value": 100, "max": 100 },
-				"minecraft:attack": { "damage": 10 , "effect_name": "blindness", "effect_duration": 7 },
+				"minecraft:health": { "value": 71, "max": 71 },
+				"minecraft:attack": { "damage": 6 , "effect_name": "blindness", "effect_duration": 6 },
 				"minecraft:movement": { "value": 0.32 }
 			}
 		}

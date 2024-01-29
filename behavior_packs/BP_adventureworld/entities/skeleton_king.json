@@ -31,9 +31,9 @@
 
             "minecraft:boss": { "hud_range": 70, "name": "entity.aw:skeleton_king.name", "should_darken_sky": false },
             "minecraft:follow_range": { "value": 64, "max": 64 },
-            "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 3 , "burst_interval" : 0.3 , "attack_interval" : 4 , "attack_radius": 40},
+            "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 3 , "burst_interval" : 0.3 , "attack_interval_min" : 4 ,"attack_interval_max" : 5 , "attack_radius": 40},
             "minecraft:shooter": { "def": "minecraft:arrow" },
-            "minecraft:behavior.nearest_attackable_target": { "priority": 2, "must_see": true, "reselect_targets": true, "entity_types": [ { "filters": { "test": "is_family", "subject": "other", "value": "player" }, "max_dist": 40 } ] },
+            "minecraft:behavior.nearest_attackable_target": { "priority": 2, "must_see": false, "reselect_targets": false, "entity_types": [ { "filters": { "test": "is_family", "subject": "other", "value": "player" }, "max_dist": 40 } ] },
             "minecraft:equipment": { "table": "loot_tables/entities/skeleton_king_equipment.json" },
 
             "minecraft:navigation.walk": { "is_amphibious": true },
@@ -51,26 +51,27 @@
 			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } },
             "aw:extra_damage": { "add": { "component_groups": [ "extra_damage" ] } },
             "aw:stop_extra_damage": { "add": { "component_groups": [ "stop_extra_damage" ] } }
+
 		},
         "component_groups": {
 			"level_1": {
 				"minecraft:health": { "value": 100, "max": 100 },
-                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 3 , "burst_interval" : 0.3 , "attack_interval" : 4 , "attack_radius": 40 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 3 , "burst_interval" : 0.3 , "attack_interval_min" : 4 ,"attack_interval_max" : 6 , "attack_radius": 40 },
                 "minecraft:type_family": { "family": [ "level_1", "undead", "monster", "mob", "boss", "skeleton_king" ] }
 			},
 			"level_2": {
 				"minecraft:health": { "value": 150, "max": 150 },
-                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 5 , "burst_interval" : 0.3 , "attack_interval" : 3 , "attack_radius": 40 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 5 , "burst_interval" : 0.3 , "attack_interval_min" : 3 ,"attack_interval_max" : 5 , "attack_radius": 40 },
                 "minecraft:type_family": { "family": [ "level_2", "undead", "monster", "mob", "boss", "skeleton_king" ] }
 			},
 			"level_3": {
 				"minecraft:health": { "value": 200, "max": 200 },
-                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 7 , "burst_interval" : 0.3 , "attack_interval" : 2 , "attack_radius": 40 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 7 , "burst_interval" : 0.3 , "attack_interval_min" : 2 ,"attack_interval_max" : 4 , "attack_radius": 40 },
                 "minecraft:type_family": { "family": [ "level_3", "undead", "monster", "mob", "boss", "skeleton_king" ] }
 			},
 			"level_4": {
 				"minecraft:health": { "value": 400, "max": 400 },
-                "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval": 0.6 , "attack_radius": 40 },
+                "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval_min" : 1.0 ,"attack_interval_max" : 1.2 , "attack_radius": 40 },
                 "minecraft:type_family": { "family": [ "level_4", "undead", "monster", "mob", "boss", "skeleton_king" ] }
 			},
             "extra_damage": {

@@ -39,7 +39,7 @@
             },
             "minecraft:despawn": { "despawn_from_distance": {} },
             "minecraft:follow_range": { "value": 64, "max": 64 },
-            "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval": 3.0 , "attack_radius": 40 },
+            "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval_min": 4.0 , "attack_interval_max": 6.0 ,"attack_radius": 40 },
             "minecraft:behavior.hurt_by_target": { "priority": 1 },
             "minecraft:behavior.nearest_attackable_target": { "priority": 2, "must_see": true, "reselect_targets": true, "entity_types": [ { "filters": { "test": "is_family", "subject": "other", "value": "player" }, "max_dist": 40 } ] },
             "minecraft:behavior.equip_item": { "priority": 3 },
@@ -92,79 +92,79 @@
 			},
 			"level_2": {
                 "minecraft:attack": { "damage": 2 },
-                "minecraft:health": { "value": 5, "max": 5 },
+                "minecraft:health": { "value": 10, "max": 10 },
                 "minecraft:movement": { "value": 0.2 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_2" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/leather_armor_half_with_bow.json" }
 			},
 			"level_3": {
                 "minecraft:attack": { "damage": 2 },
-                "minecraft:health": { "value": 9, "max": 9 },
+                "minecraft:health": { "value": 20, "max": 20 },
                 "minecraft:movement": { "value": 0.2 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_3" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/leather_armor_with_bow.json" }
 			},
 			"level_4": {
                 "minecraft:attack": { "damage": 2 },
-                "minecraft:health": { "value": 11, "max": 11 },
+                "minecraft:health": { "value": 20, "max": 20 },
                 "minecraft:movement": { "value": 0.2 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_4" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/iron_armor_half_with_bow.json" }
 			},
 			"level_5": {
                 "minecraft:attack": { "damage": 2 },
-                "minecraft:health": { "value": 16, "max": 16 },
+                "minecraft:health": { "value": 22, "max": 22 },
                 "minecraft:movement": { "value": 0.2 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_5" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/iron_armor_with_bow.json" }
 			},
 			"level_6": {
                 "minecraft:attack": { "damage": 2 },
-                "minecraft:health": { "value": 20, "max": 20 },
+                "minecraft:health": { "value": 19, "max": 19 },
                 "minecraft:movement": { "value": 0.2 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_6" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/diamond_armor_half_with_bow.json" }
 			},
 			"level_7": {
                 "minecraft:attack": { "damage": 2 },
-                "minecraft:health": { "value": 999, "max": 999 },
+                "minecraft:health": { "value": 666, "max": 666 },
                 "minecraft:movement": { "value": 0.2 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_7" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/diamond_armor_with_bow.json" }
 			},
 
             "level_1_sword": {
-                "minecraft:attack": { "damage": 8 },
+                "minecraft:attack": { "damage": 4 },
                 "minecraft:health": { "value": 1, "max": 1 },
                 "minecraft:movement": { "value": 0.24 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_1_sword" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/wooden_sword.json" }
 			},
 			"level_2_sword": {
-                "minecraft:attack": { "damage": 11 },
+                "minecraft:attack": { "damage": 5 },
                 "minecraft:health": { "value": 1, "max": 1 },
-                "minecraft:movement": { "value": 0.27 },
+                "minecraft:movement": { "value": 0.26 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_2_sword" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/stone_sword.json" }
 			},
 			"level_3_sword": {
-                "minecraft:attack": { "damage": 14 },
+                "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 1, "max": 1 },
-                "minecraft:movement": { "value": 0.30 },
+                "minecraft:movement": { "value": 0.28 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_3_sword" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/iron_sword.json" }
 			},
 			"level_4_sword": {
-                "minecraft:attack": { "damage": 17 },
+                "minecraft:attack": { "damage": 7 },
                 "minecraft:health": { "value": 1, "max": 1 },
-                "minecraft:movement": { "value": 0.33 },
+                "minecraft:movement": { "value": 0.30 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_4_sword" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/diamond_sword.json" }
 			},
 			"level_5_sword": {
-                "minecraft:attack": { "damage": 20 },
+                "minecraft:attack": { "damage": 8 },
                 "minecraft:health": { "value": 1, "max": 1 },
-                "minecraft:movement": { "value": 0.36 },
+                "minecraft:movement": { "value": 0.32 },
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_5_sword" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/netherite_sword.json" }
 			},
