@@ -1,1 +1,0 @@
-execute @p ~~~ tp @s ^^^0.4 facing @e[type=aw:hookshot,tag=hitPlanks,c=1]

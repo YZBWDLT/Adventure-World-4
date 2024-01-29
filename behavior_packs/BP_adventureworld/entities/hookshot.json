@@ -6,17 +6,7 @@
             "is_experimental": false,
             "is_spawnable": false,
             "is_summonable": true,
-            "runtime_identifier": "minecraft:snowball",
-            "scripts": {
-                "animate": [
-                    "controller_hit_block_or_entity_test",
-                    "killentity"
-                ]
-            },
-            "animations": {
-                "controller_hit_block_or_entity_test": "controller.animation.hookshot.hit_block_or_entity_test",
-                "killentity": "animation.hookshot.killentity"
-            }
+            "runtime_identifier": "minecraft:snowball"
         },
         "components": {
             "minecraft:type_family": { "family": [ "hookshot" ] },
@@ -26,15 +16,8 @@
 
             "minecraft:projectile": {
                 "on_hit": {
-                    "definition_event": {
-                        "affect_projectile": true,
-                        "event_trigger": { "event": "aw:hit_block_or_entity", "target": "self" }
-                    },
-                    "impact_damage": {
-                        "knockback": true,
-                        "damage": 0
-                    },
-                    "stick_in_ground": {  }
+                    "impact_damage": { "knockback": true, "damage": 0 },
+                    "remove_on_hit": {}
                 },
                 "anchor": 1,
                 "power": 1.0,
@@ -48,16 +31,6 @@
                     "max_dropped_ticks": 7,
                     "use_motion_prediction_hints": true
                 }
-            }
-        },
-        "events": {
-            "aw:hit_block_or_entity": {
-                "add": { "component_groups": [ "aw:hit_block_or_entity" ]               }
-            }
-        },
-        "component_groups": {
-            "aw:hit_block_or_entity": {
-                "minecraft:variant": { "value": 1 }
             }
         }
     }

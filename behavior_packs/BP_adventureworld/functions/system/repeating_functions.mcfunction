@@ -11,8 +11,7 @@ function system/time_played_recorder
 function system/respawn_controller
 
 ## 防退出控制器
-#<!> 还需要优化
-# function system/antileave
+function system/antileave
 
 ## 音效控制器
 ## 仅当音效播放器处于激活状态下执行。
@@ -26,9 +25,7 @@ execute @e[name=tick,scores={time=0}] ~~~ effect @a saturation 1 10 true
 # 这些函数是部分物品的特殊功能。
 
 ## 绳枪判定器
-##<!> 亟需优化
-function methods/get_entity_amount
-function items/hookshot
+function entities/hookshot/hookshot
 
 ## 虚拟准星
 ## 每秒执行一次，当玩家手持绳枪时，由其调用对应函数。
