@@ -10,8 +10,8 @@
 		},
 		"components": {
 			"minecraft:emitter_rate_steady": {
-				"spawn_rate": 8,
-				"max_particles": 8
+				"spawn_rate": 2,
+				"max_particles": 2
 			},
 			"minecraft:emitter_lifetime_looping": {
 				"active_time": 10
