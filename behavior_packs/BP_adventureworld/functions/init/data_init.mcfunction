@@ -32,6 +32,7 @@ scoreboard objectives add deathTimes dummy "§l§c死亡次数"
 scoreboard objectives add inLevelArea dummy "玩家所在关卡区域ID"
 scoreboard objectives add temp2 dummy "临时数据2"
 scoreboard objectives add temp3 dummy "临时数据3"
+scoreboard objectives add hookshot dummy "绳枪数据"
 
 scoreboard players set allFailedTimes stats 0
 scoreboard players set @a crosshair 0
@@ -39,6 +40,7 @@ scoreboard players set @a isHoldingHelmet 0
 scoreboard players set @a isHoldingBoots 0
 scoreboard players set @a deathTimes 0
 scoreboard players set @a inLevelArea 0
+scoreboard players set @a hookshot -1
 
 ## --- 标记分值 ---
 
@@ -55,7 +57,7 @@ summon je:marker "randomMonster" -82 1 -2
 summon je:marker "wave" -82 1 -2
 summon je:marker "maxWave" -82 1 -2
 
-scoreboard players set @e[name=level] background 0
+scoreboard players set @e[name=level] background 1
 scoreboard players set @e[name=monsterAmount] background 0
 scoreboard players set @e[name=hookshotAmount] background 0
 scoreboard players set @e[name=randomLocation] background 0
