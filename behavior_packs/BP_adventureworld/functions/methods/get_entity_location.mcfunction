@@ -95,14 +95,14 @@ scoreboard players set @s[x=-103,y=-31,z=-21,dx=16,dy=12,dz=16] inLevelArea 50
 ### 5和6的过道
 scoreboard players set @s[x=-97,y=-32,z=-30,dx=14,dy=4,dz=8] inLevelArea 59
 ### 6-0
-scoreboard players set @s[x=-82,y=-38,z=-46,dx=17,dy=22,dz=29] inLevelArea 60
+scoreboard players set @s[x=-82,y=-38,z=-44,dx=17,dy=22,dz=27] inLevelArea 60
 scoreboard players set @s[x=-88,y=-32,z=-65,dx=10,dy=16,dz=17] inLevelArea 60
 scoreboard players set @s[x=-76,y=-39,z=8,dx=2,dy=2,dz=12] inLevelArea 60
 ### 6-1
-scoreboard players set @s[x=-81,y=-31,z=-65,dx=16,dy=8,dz=18] inLevelArea 61
-scoreboard players set @s[x=-83,y=-31,z=-55,dx=1,dy=7,dz=8] inLevelArea 61
+scoreboard players set @s[x=-81,y=-32,z=-65,dx=16,dy=9,dz=18] inLevelArea 61
+scoreboard players set @s[x=-83,y=-32,z=-55,dx=1,dy=8,dz=8] inLevelArea 61
 ### 6-2
-scoreboard players set @s[x=-84,y=-21,z=-47,dx=14,dy=14,dz=14] inLevelArea 62
+scoreboard players set @s[x=-84,y=-22,z=-47,dx=14,dy=15,dz=16] inLevelArea 62
 scoreboard players set @s[x=-80,y=-11,z=-32,dx=3,dy=2,dz=4] inLevelArea 62
 ### 6-3
 scoreboard players set @s[x=-82,y=-40,z=-16,dx=14,dy=9,dz=23] inLevelArea 63
