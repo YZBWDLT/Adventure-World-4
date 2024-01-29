@@ -20,7 +20,7 @@ execute @e[name=timeline,scores={time=1120}] ~~~ tp @a -87 -40 85
 
 ## 进入剑之神殿
 execute @e[name=timeline,scores={time=1180}] ~~~ tp @a -79 -39 105 facing -87 -37 105
-execute @e[name=timeline,scores={time=1180}] ~~~ scoreboard players set @e[name=level] background 700
+execute @e[name=timeline,scores={time=1180}] ~~~ scoreboard players set @e[name=level] background 701
 execute @e[name=timeline,scores={time=1180}] ~~~ title @a times 0 100 0
 
 execute @e[name=timeline,scores={time=1240}] ~~~ title @a title §f§l剑 之 神 殿
@@ -93,7 +93,6 @@ execute @e[name=timeline,scores={time=3650}] ~~~ title @a times 0 100 0
 execute @e[name=timeline,scores={time=3650}] ~~~ title @a title §l§c封 印 神 殿
 execute @e[name=timeline,scores={time=3650}] ~~~ title @a subtitle §cFINAL TEMPLE
 execute @e[name=timeline,scores={time=3650}] ~~~ execute @a ~~~ playsound beacon.power @s ~~~ 1 1 1
-execute @e[name=timeline,scores={time=3650}] ~~~ scoreboard players set @e[name=level] background 701
 execute @e[name=timeline,scores={time=3670}] ~~~ effect @a clear
 
 execute @e[name=timeline,scores={time=3800}] ~~~ tellraw @a {"rawtext":[{"translate":"§c* 准备好了吗？这是你最后的试炼。"}]}
