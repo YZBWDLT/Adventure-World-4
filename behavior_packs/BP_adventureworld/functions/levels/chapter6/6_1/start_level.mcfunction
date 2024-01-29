@@ -6,15 +6,9 @@ scoreboard players set @e[name=level] background 610
 
 ## --- 封闭入口与出口 ---
 ### 入口
-fill -75 -31 -46 -77 -29 -46 pointed_dripstone["hanging":false]
-fill -75 -29 -46 -75 -30 -46 pointed_dripstone["hanging":true]
-fill -77 -29 -46 -77 -29 -46 pointed_dripstone["hanging":true,"dripstone_thickness":"merge"]
-fill -75 -31 -45 -77 -29 -45 barrier[] keep
+fill -75 -31 -46 -77 -29 -46 dripstone_block
 ### 出口
-fill -82 -31 -64 -82 -29 -62 pointed_dripstone["hanging":true]
-fill -82 -31 -63 -82 -30 -63 pointed_dripstone["hanging":false]
-fill -82 -31 -64 -82 -31 -64 pointed_dripstone["hanging":false,"dripstone_thickness":"merge"]
-fill -83 -31 -62 -83 -29 -64 barrier[] keep
+fill -82 -31 -62 -82 -29 -64 dripstone_block
 
 ## --- 设置重生点 ---
 tp @e[family=respawner] -66 -30 -54

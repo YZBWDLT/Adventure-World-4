@@ -17,10 +17,12 @@ tp @e[family=respawner] -78 -31 -29
 fill -74 -32 -23 -77 -32 -22 obsidian[] keep
 ## 封堵各个关卡的出口
 ## 6-1
-fill -82 -31 -64 -82 -29 -62 pointed_dripstone["hanging":true]
-fill -82 -31 -63 -82 -30 -63 pointed_dripstone["hanging":false]
-fill -82 -31 -64 -82 -31 -64 pointed_dripstone["hanging":false,"dripstone_thickness":"merge"]
-fill -83 -31 -62 -83 -29 -64 barrier[] keep
+### 入口
+fill -75 -31 -46 -77 -29 -46 pointed_dripstone["hanging":false]
+fill -75 -29 -46 -75 -30 -46 pointed_dripstone["hanging":true]
+fill -77 -29 -46 -77 -29 -46 pointed_dripstone["hanging":true,"dripstone_thickness":"merge"]
+### 出口
+fill -82 -31 -62 -82 -29 -64 dripstone_block
 ## 6-2
 fill -72 -19 -30 -70 -17 -30 stained_glass["color":"purple"]
 ## 6-3

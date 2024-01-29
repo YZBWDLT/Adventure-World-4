@@ -8,11 +8,14 @@ scoreboard players set @e[name=level] background 611
 tellraw @a {"rawtext":[{"text":"§l§a6-1已完成！§r\n§f你已获得 §e[力量弓] §f！\n§7手持弓可获取附魔"}]}
 
 ## --- 打开入口与出口 ---
-fill -75 -31 -46 -77 -29 -45 air[] replace barrier[]
-fill -75 -31 -46 -77 -29 -45 air[] replace pointed_dripstone[]
-
-fill -82 -29 -62 -83 -31 -64 air[] replace barrier[]
-fill -82 -29 -62 -83 -31 -64 air[] replace pointed_dripstone[]
+### 入口
+fill -75 -31 -46 -77 -29 -46 pointed_dripstone["hanging":false]
+fill -75 -29 -46 -75 -30 -46 pointed_dripstone["hanging":true]
+fill -77 -29 -46 -77 -29 -46 pointed_dripstone["hanging":true,"dripstone_thickness":"merge"]
+### 出口
+fill -82 -31 -64 -82 -29 -62 pointed_dripstone["hanging":true]
+fill -82 -31 -63 -82 -30 -63 pointed_dripstone["hanging":false]
+fill -82 -31 -64 -82 -31 -64 pointed_dripstone["hanging":false,"dripstone_thickness":"merge"]
 
 ## --- 设置重生点 ---
 tp @e[family=respawner] -77 -31 -64
