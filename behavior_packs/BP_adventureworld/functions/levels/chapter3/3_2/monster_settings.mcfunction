@@ -19,7 +19,7 @@ execute @e[name=wave,scores={background=2}] ~~~ summon je:marker -183 -17 11 "aw
 # --- 第3波 ---
 execute @e[name=wave,scores={background=3}] ~~~ summon je:marker -186 -21 15 "aw:as_summoner" "guardian1Summoner"
 execute @e[name=wave,scores={background=3}] ~~~ summon je:marker -185 -21 5  "aw:as_summoner" "guardian1Summoner"
-execute @e[name=wave,scores={background=3}] ~~~ summon je:marker -180 -17 10  "aw:as_summoner" "drownedWithTridentSummoner"
+execute @e[name=wave,scores={background=3}] ~~~ summon je:marker -180 -17 10  "aw:as_summoner" "drowned2Summoner"
 
 # --- 第4波 ---
 

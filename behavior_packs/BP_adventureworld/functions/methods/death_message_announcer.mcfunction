@@ -10,6 +10,4 @@ execute @s[scores={temp=4}] ~~~ tellraw @a {"rawtext":[{"translate":"§e%%s §c�
 execute @s[scores={temp=5}] ~~~ tellraw @a {"rawtext":[{"translate":"§e%%s §c倒在了怪物的脚下...","with":{"rawtext":[{"selector":"@s"}]}}]}
 execute @s[scores={temp=6}] ~~~ tellraw @a {"rawtext":[{"translate":"§e%%s §c在与怪物们搏斗中失败了","with":{"rawtext":[{"selector":"@s"}]}}]}
 
-tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！但不要着急，您在下一波就会被解救出来。"}]}
-
 scoreboard players set @s temp 0

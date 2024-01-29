@@ -16,15 +16,18 @@ execute @e[name=level] ~~~ function methods/3_digit_seperator
 # 当玩家距离respawner过近的时候证明其已死亡
 
 ## 播报死亡信息 | 仅在人数大于等于2人时播报
-execute @e[name=level,scores={background=100..,temp3=0}] ~~~ function methods/get_player_amount
-execute @e[name=level,scores={background=100..,temp3=0}] ~~~ execute @e[name=allPlayersAmount,scores={background=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ function methods/death_message_announcer
+execute @e[name=level,scores={temp3=0}] ~~~ function methods/get_player_amount
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=allPlayersAmount,scores={background=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ function methods/death_message_announcer
+
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=respawnInNewWave,scores={settings=0}] ~~~ execute @e[name=allPlayersAmount,scores={background=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！关卡结束后您将被释放。"}]}
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=respawnInNewWave,scores={settings=1}] ~~~ execute @e[name=allPlayersAmount,scores={background=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！但不要着急，您在下一波就会被解救出来。"}]}
 
 ## 距离过近则判定为玩家已死亡
-execute @e[name=level,scores={background=100..,temp3=0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players add @a[r=2,scores={isAlive=1}] deathTimes 1
-execute @e[name=level,scores={background=100..,temp3=0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players set @a[r=2,scores={isAlive=1}] isAlive 0
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players add @a[r=2,scores={isAlive=1}] deathTimes 1
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players set @a[r=2,scores={isAlive=1}] isAlive 0
 
 # --- 为死亡玩家添加buff ---
 # 例如防火等，防止玩家在重生点内死掉 ={
 # 仅当在关卡中时执行
-execute @e[name=level,scores={background=100..,temp3=0}] ~~~ effect @a[scores={isAlive=0}] fire_resistance 30 0 true
-execute @e[name=level,scores={background=100..,temp3=0}] ~~~ effect @a[scores={isAlive=0}] resistance 30 9 true
+execute @e[name=level,scores={temp3=0}] ~~~ effect @a[scores={isAlive=0}] fire_resistance 30 0 true
+execute @e[name=level,scores={temp3=0}] ~~~ effect @a[scores={isAlive=0}] resistance 30 9 true

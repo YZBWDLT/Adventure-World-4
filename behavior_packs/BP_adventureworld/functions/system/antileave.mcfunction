@@ -30,8 +30,11 @@ execute @e[name=level,scores={temp3=1}] ~~~ scoreboard players set @a[scores={is
 
 # --- 对第二种情况的修正 ---
 # 当检测到有玩家处于“未在游戏”状态时（isAlive.@s=2），将该玩家传送到观战区域，进行提示并修正游戏状态
-execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=2}] {"rawtext":[{"translate":"§e检测到您重新进入游戏，当前处于游戏状态，您将暂时观战，本波结束后您将被释放。"}]}
+
+execute @e[name=respawnInNewWave,scores={settings=0}] ~~~ execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=2}] {"rawtext":[{"translate":"§e检测到您重新进入游戏，当前处于游戏状态，您将暂时观战，本关结束后您将被释放。"}]}
+execute @e[name=respawnInNewWave,scores={settings=1}] ~~~ execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=2}] {"rawtext":[{"translate":"§e检测到您重新进入游戏，当前处于游戏状态，您将暂时观战，本波结束后您将被释放。"}]}
 execute @e[name=developerMode,scores={settings=1}] ~~~ execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=2}] {"rawtext":[{"translate":"§c错误 ANTILEAVE_SYSTEM_TYPE_2"}]}
+
 execute @e[name=level,scores={temp3=0}] ~~~ tp @a[scores={isAlive=2}] @e[family=respawner,c=1]
 execute @e[name=level,scores={temp3=0}] ~~~ scoreboard players set @a[scores={isAlive=2}] isAlive 0
 
@@ -40,12 +43,16 @@ execute @e[name=level,scores={temp3=0}] ~~~ scoreboard players set @a[scores={is
 # 【这里修改了temp2.@s和temp3.@s的数据，如需再次使用这两个值，请将命令写到这个模块的前面】
 execute @e[name=level,scores={temp3=0}] ~~~ execute @a[scores={isAlive=0..1}] ~~~ scoreboard players operation @s temp2 -= @e[name=level] temp
 execute @e[name=level,scores={temp3=0}] ~~~ execute @a[scores={isAlive=0..1}] ~~~ scoreboard players operation @s temp3 -= @e[name=level] temp2
-# 将出现不匹配的玩家传送到最近的玩家附近
-# 检测关卡状态为“游玩状态”（temp3.level=0），然后
-execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=0..1,temp2=!0}] {"rawtext":[{"translate":"§e检测到您重新进入游戏，当前处于游戏状态，您将暂时观战，本波结束后您将被释放。"}]}
+# 将出现不匹配的玩家传送到观战区
+# 检测关卡状态为“游玩状态”（temp3.level=0）
+execute @e[name=respawnInNewWave,scores={settings=0}] ~~~ execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=0..1,temp2=!0}] {"rawtext":[{"translate":"§e检测到您重新进入游戏，当前处于游戏状态，您将暂时观战，本关结束后您将被释放。"}]}
+execute @e[name=respawnInNewWave,scores={settings=1}] ~~~ execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=0..1,temp2=!0}] {"rawtext":[{"translate":"§e检测到您重新进入游戏，当前处于游戏状态，您将暂时观战，本波结束后您将被释放。"}]}
 execute @e[name=developerMode,scores={settings=1}] ~~~ execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=0..1,temp2=!0}] {"rawtext":[{"translate":"§c错误 ANTILEAVE_SYSTEM_TYPE_3"}]}
+
 execute @e[name=level,scores={temp3=0}] ~~~ execute @a[scores={isAlive=0..1,temp2=!0}] ~~~ tp @s @e[family=respawner,c=1]
 
-execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=0..1,temp3=!0}] {"rawtext":[{"translate":"§e检测到您重新进入游戏，当前处于游戏状态，您将暂时观战，本波结束后您将被释放。"}]}
+execute @e[name=respawnInNewWave,scores={settings=0}] ~~~ execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=0..1,temp3=!0}] {"rawtext":[{"translate":"§e检测到您重新进入游戏，当前处于游戏状态，您将暂时观战，本关结束后您将被释放。"}]}
+execute @e[name=respawnInNewWave,scores={settings=1}] ~~~ execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=0..1,temp3=!0}] {"rawtext":[{"translate":"§e检测到您重新进入游戏，当前处于游戏状态，您将暂时观战，本波结束后您将被释放。"}]}
 execute @e[name=developerMode,scores={settings=1}] ~~~ execute @e[name=level,scores={temp3=0}] ~~~ tellraw @a[scores={isAlive=0..1,temp3=!0}] {"rawtext":[{"translate":"§c错误 ANTILEAVE_SYSTEM_TYPE_4"}]}
+
 execute @e[name=level,scores={temp3=0}] ~~~ execute @a[scores={isAlive=0..1,temp3=!0}] ~~~ tp @s @e[family=respawner,c=1]

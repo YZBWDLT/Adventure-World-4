@@ -45,6 +45,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.developerMode = %
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.isNetease = %%s §7# 记录是否为netease版本","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=isNetease]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.itemLimitTest = %%s §7# 物品上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=itemLimitTest]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.potionLimitTest = %%s §7# 药水上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=potionLimitTest]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.respawnInNewWave = %%s §7# 是否在新的波次下复活玩家，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=respawnInNewWave]"}}]}}]}
 
 ## === 后台数据 stats ===
 
