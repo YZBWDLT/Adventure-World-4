@@ -16,7 +16,7 @@ fill -117 -31 7 -117 -29 5 air
 tp @e[family=respawner] -130 -31 6
 
 ## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
+function lib/all_levels/bonus
 
 ## --- 清除所有怪物 ---
 kill @e[family=monster]
@@ -26,4 +26,4 @@ kill @e[type=item]
 scoreboard players set @e[name=wave] background 2
 
 # --- 关卡结束或失败后，回归正常关卡完成检测 ---
-function methods/level_complete_delay/disable
+function lib/level_complete_delay/disable

@@ -21,7 +21,7 @@ fill -82 -31 -64 -82 -31 -64 pointed_dripstone["hanging":false,"dripstone_thickn
 tp @e[family=respawner] -77 -31 -64
 
 ## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
+function lib/all_levels/bonus
 
 ## --- 解除摔落伤害 ---
 gamerule falldamage false

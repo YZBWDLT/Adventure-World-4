@@ -18,4 +18,4 @@ fill -173 -21 13 -171 -19 13 structure_void
 tp @e[family=respawner] -188 -21 29
 
 ## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
+function lib/all_levels/bonus

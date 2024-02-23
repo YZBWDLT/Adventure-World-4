@@ -6,7 +6,7 @@
 
 # --- 获取关卡进度数据 ---
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
-execute @e[name=level] ~~~ function methods/3_digit_seperator
+execute @e[name=level] ~~~ function lib/3_digit_seperator
 
 # --- 倒计时 ---
 # 启用倒计时的条件：
@@ -32,9 +32,9 @@ execute @e[name=level,scores={temp3=0,background=100..}] ~~~ execute @e[name=mon
 # 启用生成器的条件与前文一致。
 
 ## 召唤怪物
-execute @e[name=level,scores={temp3=0,background=100..}] ~~~ execute @e[name=monsterSummonDelay,scores={active=1,time=0..}] ~~~ function methods/monsters/summoner_controller
+execute @e[name=level,scores={temp3=0,background=100..}] ~~~ execute @e[name=monsterSummonDelay,scores={active=1,time=0..}] ~~~ function lib/monsters/summoner_controller
 ## 在完成召唤后，获取当前最大怪物数
-execute @e[name=level,scores={temp3=0,background=100..}] ~~~ execute @e[name=monsterSummonDelay,scores={active=1,time=0}] ~~~ function methods/get_max_monster_amount
+execute @e[name=level,scores={temp3=0,background=100..}] ~~~ execute @e[name=monsterSummonDelay,scores={active=1,time=0}] ~~~ function lib/get_max_monster_amount
 
 # --- 倒计时结束后取消激活状态 ---
 # （写在最后面，是因为其它函数需要在active.monsterSummonDelay=1时执行）

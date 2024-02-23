@@ -8,7 +8,7 @@ execute @a[scores={isAlive=0}] ~~~ tp @s @a[scores={isAlive=1},c=1]
 scoreboard players set @a isAlive 2
 
 ## --- 标题与音效 ---
-function methods/title
+function lib/title
 title @a subtitle §a关卡已完成！
 scoreboard players set @e[name=soundPlayer] active 10
 
@@ -16,9 +16,9 @@ scoreboard players set @e[name=soundPlayer] active 10
 scoreboard players set @e[name=failedTimes] stats 0
 
 ## --- 为玩家补充残留的重要装备 ---
-function methods/supplier/items
-function methods/supplier/potion
-function methods/supplier/arrow
+function lib/supplier/items
+function lib/supplier/potion
+function lib/supplier/arrow
 
 ## --- 清除所有的状态效果并回满血 ---
 effect @a clear

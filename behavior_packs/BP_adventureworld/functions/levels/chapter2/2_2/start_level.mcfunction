@@ -12,7 +12,7 @@ fill -104 -17 69 -104 -15 67 stone["stone_type":"diorite_smooth"]
 tp @e[family=respawner] -83 -12 81
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
-function methods/all_levels/start_level
+function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] background 3

@@ -11,4 +11,4 @@ tp @e[family=respawner] -173 -21 30
 fill -168 -15 22 -168 -13 24 structure_void
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
-function methods/all_levels/game_lose
+function lib/all_levels/game_lose

@@ -84,5 +84,5 @@ scoreboard players set @a[hasitem={item=aw:wild_sword,quantity=2..}] temp 1
 clear @a[scores={temp=1}] aw:wild_sword
 
 ## --- 重新给予玩家缺少的装备 ---
-execute @a[scores={temp=1}] ~~~ function methods/supplier/items
+execute @a[scores={temp=1}] ~~~ function lib/supplier/items
 scoreboard players set @a[scores={temp=!0}] temp 0

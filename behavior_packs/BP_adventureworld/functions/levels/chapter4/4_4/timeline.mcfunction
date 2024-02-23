@@ -31,9 +31,9 @@ execute @e[name=randomMonster,scores={background=5}] ~~~ execute @e[name=summonL
 execute @e[name=randomMonster,scores={background=6}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "stray2Summoner"
 execute @e[name=randomMonster,scores={background=7}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "zombie2Summoner"
 execute @e[name=randomMonster,scores={background=8}] ~~~ execute @e[name=summonLocation] ~~~ summon je:marker ~~~ "aw:as_summoner" "zombieBaby2Summoner"
-execute @e[name=randomMonster,scores={background=1..8}] ~~~ function methods/title
+execute @e[name=randomMonster,scores={background=1..8}] ~~~ function lib/title
 execute @e[name=randomMonster,scores={background=1..8}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c注意！某个随机位置即将生成怪物！"}]}
-execute @e[name=randomMonster,scores={background=1..8}] ~~~ function methods/monster_summon_delay/enable_40ticks
+execute @e[name=randomMonster,scores={background=1..8}] ~~~ function lib/monster_summon_delay/enable_40ticks
 execute @e[name=randomMonster,scores={background=1..8}] ~~~ kill @e[name=summonLocation]
 execute @e[name=randomMonster,scores={background=1..8}] ~~~ scoreboard players set @s background 0
 

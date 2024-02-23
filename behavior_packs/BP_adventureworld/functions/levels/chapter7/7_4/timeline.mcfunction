@@ -23,4 +23,4 @@ execute @e[name=level,scores={background=741}] ~~~ execute @e[name=timeline,scor
 execute @e[name=level,scores={background=741}] ~~~ execute @e[name=timeline,scores={time=80}] ~~~ fill -224 -28 111 -244 -28 85 air[] replace lava[]
 execute @e[name=level,scores={background=741}] ~~~ execute @e[name=timeline,scores={time=120}] ~~~ fill -224 -29 111 -244 -29 85 air[] replace lava[]
 ### 时间结束后，停止时间线运行
-execute @e[name=level,scores={background=741}] ~~~ execute @e[name=timeline,scores={time=!0..121}] ~~~ function methods/timeline/disable
+execute @e[name=level,scores={background=741}] ~~~ execute @e[name=timeline,scores={time=!0..121}] ~~~ function lib/timeline/disable

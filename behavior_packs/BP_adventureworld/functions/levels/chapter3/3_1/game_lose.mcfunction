@@ -11,4 +11,4 @@ tp @e[family=respawner] -173 -21 30
 ## （因为入口始终不封闭，因此不特意写打开出口了）
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
-function methods/all_levels/game_lose
+function lib/all_levels/game_lose

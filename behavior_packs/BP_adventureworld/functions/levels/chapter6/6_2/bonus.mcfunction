@@ -18,4 +18,4 @@ fill -74 -32 -23 -77 -32 -22 air[] replace obsidian[]
 tp @e[family=respawner] -75 -21 -36
 
 ## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
+function lib/all_levels/bonus

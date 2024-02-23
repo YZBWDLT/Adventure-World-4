@@ -36,4 +36,4 @@ execute @e[name=timeline,scores={time=700}] ~~~ tellraw @a {"rawtext":[{"text":"
 execute @e[name=timeline,scores={time=760}] ~~~ function levels/chapter1/1_0/start
 
 ## 时间轴结束
-execute @e[name=timeline,scores={time=761..}] ~~~ function methods/timeline/disable
+execute @e[name=timeline,scores={time=761..}] ~~~ function lib/timeline/disable

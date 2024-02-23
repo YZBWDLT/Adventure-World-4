@@ -16,4 +16,4 @@ fill -156 -18 5 -158 -18 7 air[] replace ice
 tp @e[family=respawner] -156 -12 14
 
 ## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
+function lib/all_levels/bonus

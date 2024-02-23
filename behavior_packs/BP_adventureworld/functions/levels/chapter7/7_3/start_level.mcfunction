@@ -12,7 +12,7 @@ fill -217 -18 98 -217 -16 100 nether_brick
 tp @e[family=respawner] -203 -12 114
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
-function methods/all_levels/start_level
+function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] background 4

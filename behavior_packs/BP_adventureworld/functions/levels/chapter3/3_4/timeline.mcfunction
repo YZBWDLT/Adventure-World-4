@@ -8,5 +8,5 @@ execute @e[name=wave,scores={background=1}] ~~~ execute @e[name=tick,scores={tim
 execute @e[name=wave,scores={background=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ structure load 3_4_layer1_water -178 -16 18 0_degrees none layer_by_layer 5.00
 execute @e[name=wave,scores={background=3}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ structure load 3_4_layer2 -178 -4 18 0_degrees none layer_by_layer 5.00
 execute @e[name=wave,scores={background=4}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ structure load 3_4_layer3 -178 6 18 0_degrees none layer_by_layer 5.00
-execute @e[name=wave,scores={background=2..4}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ function methods/title
+execute @e[name=wave,scores={background=2..4}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ function lib/title
 execute @e[name=wave,scores={background=2..4}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c注意！水位上涨！"}]}

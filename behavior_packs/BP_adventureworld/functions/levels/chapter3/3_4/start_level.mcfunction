@@ -12,7 +12,7 @@ fill -174 17 18 -172 19 18 prismarine
 tp @e[family=respawner] -172 -1 30
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
-function methods/all_levels/start_level
+function lib/all_levels/start_level
 
 ## --- 加载结构 ---
 function levels/chapter3/3_4/water_clear

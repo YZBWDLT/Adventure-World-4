@@ -11,16 +11,16 @@ tp @a[scores={isAlive=!3}] @a[scores={isAlive=3},c=1]
 scoreboard players set @a isAlive 1
 
 # --- 启用怪物延迟生成并生成怪物生成器 ---
-function methods/monster_summon_delay/enable_40ticks
+function lib/monster_summon_delay/enable_40ticks
 function levels/monster_settings_functions
 
 # --- 启用时间线 ---
-function methods/timeline/enable_without_flowing
+function lib/timeline/enable_without_flowing
 
 ## --- 为玩家补充物资 ---
-function methods/supplier/arrow
-function methods/supplier/potion
-function methods/supplier/items
+function lib/supplier/arrow
+function lib/supplier/potion
+function lib/supplier/items
 
 # --- 更改玩家游戏模式 ---
 # 开发者模式下不更新游戏模式

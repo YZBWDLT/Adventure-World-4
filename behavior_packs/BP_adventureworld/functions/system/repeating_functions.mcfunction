@@ -29,7 +29,7 @@ function entities/hookshot/hookshot
 
 ## 虚拟准星
 ## 每秒执行一次，当玩家手持绳枪时，由其调用对应函数。
-execute @e[name=tick,scores={time=0}] ~~~ execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ function methods/virtual_crosshair
+execute @e[name=tick,scores={time=0}] ~~~ execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ function lib/virtual_crosshair
 
 ## 装备检测器
 function system/equipment_tester
@@ -52,7 +52,7 @@ execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=itemLimitTest,scores={
 ## 进入房间检测器
 ## 该函数仅在关卡进度处于“未在游戏中”状态下执行，因此需要获取当前关卡状态。
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
-execute @e[name=level] ~~~ function methods/3_digit_seperator
+execute @e[name=level] ~~~ function lib/3_digit_seperator
 ## 当处于“未在游戏中”状态下时，每秒一次地清除怪物生成器
 execute @e[name=level,scores={temp3=1}] ~~~ execute @e[name=tick,scores={time=0}] ~~~ kill @e[family=summoner]
 execute @e[name=level,scores={temp3=1}] ~~~ function system/level_controllers/start_level
@@ -63,7 +63,7 @@ execute @e[name=playedSecond,scores={time=0..59,time=!1..4,time=!6..9,time=!11..
 
 ## 第二章陷阱更新
 ## 每10秒执行一次。当玩家处于第二章过道区域时执行。
-execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21..29,time=!31..39,time=!41..49,time=!51..59}] ~~~ execute @a ~~~ function methods/get_entity_location
+execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21..29,time=!31..39,time=!41..49,time=!51..59}] ~~~ execute @a ~~~ function lib/get_entity_location
 execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21..29,time=!31..39,time=!41..49,time=!51..59}] ~~~ execute @a[scores={inLevelArea=20}] ~~~ function levels/chapter2/traps
 
 ## 时间线控制器
@@ -81,13 +81,13 @@ function system/level_controllers/actionbar_title
 ## 关卡与波潮完成检测器
 ## 该函数仅在关卡进度处于“正在游戏中”状态下执行，因此需要获取当前关卡状态。
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
-execute @e[name=level] ~~~ function methods/3_digit_seperator
+execute @e[name=level] ~~~ function lib/3_digit_seperator
 execute @e[name=level,scores={temp3=0}] ~~~ function system/level_controllers/level_complete
 
 ## 关卡失败检测器
 ## 该函数仅在关卡进度处于“正在游戏中”状态下执行，因此需要获取当前关卡状态。
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
-execute @e[name=level] ~~~ function methods/3_digit_seperator
+execute @e[name=level] ~~~ function lib/3_digit_seperator
 execute @e[name=level,scores={temp3=0}] ~~~ function system/level_controllers/game_lose
 
 # --- 开发者模式 ---

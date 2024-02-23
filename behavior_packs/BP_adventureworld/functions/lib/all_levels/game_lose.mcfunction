@@ -18,12 +18,12 @@ execute @e[name=failedTimes,scores={stats=3}] ~~~ tellraw @a {"rawtext":[{"text"
 execute @e[name=failedTimes,scores={stats=5}] ~~~ tellraw @a {"rawtext":[{"text":"§7你（们）已经失败5次了！下一次进入关卡时将给予力量II、生命提升V和抗性提升I效果。\n如果还是过不去的话，请自行作弊解决吧=_="}]}
 
 ## --- 为玩家补充物资 ---
-function methods/supplier/arrow
-function methods/supplier/potion
-function methods/supplier/items
+function lib/supplier/arrow
+function lib/supplier/potion
+function lib/supplier/items
 
 ## --- 游戏失败后，停止关卡检测器的工作，并移除多余的绳枪 ---
-function methods/timeline/disable
+function lib/timeline/disable
 
 ## --- 清除多余实体 ---
 kill @e[family=summoner]

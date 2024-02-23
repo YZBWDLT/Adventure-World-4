@@ -21,7 +21,7 @@ fill -89 -40 49 -61 -39 21 air[] replace lava[]
 fill -89 -40 49 -61 -39 21 air[] replace flowing_lava[]
 
 ## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
+function lib/all_levels/bonus
 
 ## --- 将旷野之剑动画的时间线数据初始化 ---
-function methods/timeline/enable
+function lib/timeline/enable

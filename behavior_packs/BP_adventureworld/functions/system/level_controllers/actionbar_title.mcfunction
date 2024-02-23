@@ -2,17 +2,17 @@
 
 ## --- 初始化 ---
 ### 获取怪物和玩家数目
-function methods/get_monster_amount
-function methods/get_player_amount
+function lib/get_monster_amount
+function lib/get_player_amount
 
 ## --- 正在进行的关卡 ---
 ## temp3.level=0 | 每5tick显示一次
 
-execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @a ~~~ function methods/get_entity_location
+execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @a ~~~ function lib/get_entity_location
 execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
-execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @e[name=level] ~~~ function methods/3_digit_seperator
+execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @e[name=level] ~~~ function lib/3_digit_seperator
 execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @a ~~~ scoreboard players operation @s temp = @s inLevelArea
-execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @a ~~~ function methods/3_digit_seperator
+execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @a ~~~ function lib/3_digit_seperator
 
 ### 玩家数为1时，不显示玩家数量
 execute @e[name=tick,scores={time=!0..4,time=!6..10,time=!11..15,time=!16..20}] ~~~ execute @e[name=allPlayersAmount,scores={background=1}] ~~~ function system/level_controllers/actionbar_singleplayer

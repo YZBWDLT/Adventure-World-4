@@ -15,4 +15,4 @@ fill -89 -40 49 -61 -39 21 air[] replace lava[]
 fill -89 -40 49 -61 -39 21 air[] replace flowing_lava[]
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
-function methods/all_levels/game_lose
+function lib/all_levels/game_lose

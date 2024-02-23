@@ -12,7 +12,7 @@ fill -235 -30 97 -233 -30 99 stained_glass["color":"red"]
 tp @e[family=respawner] -248 -5 104
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
-function methods/all_levels/start_level
+function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] background 5

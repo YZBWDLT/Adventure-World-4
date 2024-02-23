@@ -14,4 +14,4 @@ fill -150 -18 102 -150 -16 100 air
 tp @e[family=respawner] -120 -17 105
 
 ## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
+function lib/all_levels/bonus

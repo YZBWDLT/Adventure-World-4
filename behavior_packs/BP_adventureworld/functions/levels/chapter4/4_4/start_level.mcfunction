@@ -16,10 +16,10 @@ scoreboard players set @e[name=timeLeft] time 180
 scoreboard players random @e[name=monsterRefreshLeft] time 3 10
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
-function methods/all_levels/start_level
+function lib/all_levels/start_level
 
 ## --- 标题 ---
-function methods/title
+function lib/title
 titleraw @a subtitle {"rawtext":[{"translate":"§c4-4 | 随机位置生成随机怪物"}]}
 
 ## --- 生成守卫者 ---
@@ -33,4 +33,4 @@ scoreboard players set @e[name=maxWave] background 1
 scoreboard players set @e[name=wave] background 1
 
 # --- 阻止本关以常规方式检测 ---
-function methods/level_complete_delay/never_complete
+function lib/level_complete_delay/never_complete

@@ -11,7 +11,7 @@ tp @e[family=respawner] -199 -17 94
 fill -223 -18 98 -223 -16 100 air
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
-function methods/all_levels/game_lose
+function lib/all_levels/game_lose
 
 ## --- 移除重生点的temp数据 ---
 scoreboard players reset @e[family=respawner] temp

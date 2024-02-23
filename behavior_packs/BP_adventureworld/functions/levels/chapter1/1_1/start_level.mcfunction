@@ -16,7 +16,7 @@ fill -117 2 32 -117 2 32 sandstone["sand_stone_type":"heiroglyphs"]
 tp @e[family=respawner] -117 9 22
 
 # --- 调用所有关卡通用的开始关卡函数 ---
-function methods/all_levels/start_level
+function lib/all_levels/start_level
 
 # --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] background 1

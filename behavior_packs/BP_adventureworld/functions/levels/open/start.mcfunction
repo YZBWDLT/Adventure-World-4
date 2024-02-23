@@ -17,5 +17,5 @@ tp @a 36 26 87
 tp @e[family=respawner] 36 26 87
 
 ## --- 游戏开幕 ---
-function methods/timeline/enable
+function lib/timeline/enable
 scoreboard players set @e[name=level] background 2

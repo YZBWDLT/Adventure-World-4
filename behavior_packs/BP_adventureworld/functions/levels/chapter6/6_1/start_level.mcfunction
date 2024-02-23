@@ -14,7 +14,7 @@ fill -82 -31 -62 -82 -29 -64 dripstone_block
 tp @e[family=respawner] -66 -30 -54
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
-function methods/all_levels/start_level
+function lib/all_levels/start_level
 
 ## --- 其他附加功能 ---
 gamerule falldamage true

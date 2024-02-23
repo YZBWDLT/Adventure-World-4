@@ -11,11 +11,11 @@ tp @e[family=respawner] -156 -12 14
 fill -143 -31 7 -143 -29 5 air
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
-function methods/all_levels/game_lose
+function lib/all_levels/game_lose
 
 ## --- 清除所有怪物 ---
 kill @e[family=monster]
 kill @e[type=item]
 
 # --- 关卡结束或失败后，回归正常关卡完成检测 ---
-function methods/level_complete_delay/disable
+function lib/level_complete_delay/disable

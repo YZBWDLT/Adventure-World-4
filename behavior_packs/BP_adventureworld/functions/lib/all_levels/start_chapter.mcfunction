@@ -11,6 +11,6 @@ title @a times 0 100 0
 scoreboard players set @e[name=soundPlayer] active 14
 
 # --- 为玩家补充必要物资 ---
-function methods/supplier/arrow
-function methods/supplier/items
-function methods/supplier/potion
+function lib/supplier/arrow
+function lib/supplier/items
+function lib/supplier/potion
