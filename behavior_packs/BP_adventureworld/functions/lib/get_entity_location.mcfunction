@@ -24,14 +24,14 @@ scoreboard players set @s[x=-143,y=17,z=24,dx=4,dy=4,dz=4] inLevelArea 13
 ## --- 第二章 ---
 ### 过道判断 | 第2章的结构适合将过道分离判断，而不是在一个区域内统一判断
 ### 1和2的过道
-scoreboard players set @s[x=-106,y=17,z=24,dx=25,dy=4,dz=4] inLevelArea 19
+scoreboard players set @s[x=-106,y=17,z=24,dx=25,dy=4,dz=4] inLevelArea 10
 ### 2-X过道
 scoreboard players set @s[x=-80,y=11,z=21,dx=10,dy=17,dz=37] inLevelArea 20
 scoreboard players set @s[x=-70,y=-1,z=63,dx=14,dy=26,dz=10] inLevelArea 20
 scoreboard players set @s[x=-141,y=-22,z=53,dx=37,dy=12,dz=17] inLevelArea 20
 scoreboard players set @s[x=-175,y=-22,z=52,dx=8,dy=4,dz=16] inLevelArea 20
 ### 2-1
-scoreboard players set @s[x=-84,y=18,z=59,dx=14,dy=6,dz=12] inLevelArea 21
+scoreboard players set @s[x=-84,y=17,z=59,dx=14,dy=7,dz=12] inLevelArea 21
 ### 2-2
 scoreboard players set @s[x=-103,y=-18,z=57,dx=32,dy=29,dz=25] inLevelArea 22
 ### 2-3
@@ -42,7 +42,7 @@ scoreboard players set @s[x=-166,y=-22,z=44,dx=24,dy=11,dz=31] inLevelArea 23
 scoreboard players set @s[x=-200,y=-22,z=13,dx=31,dy=15,dz=20] inLevelArea 30
 scoreboard players set @s[x=-168,y=-21,z=18,dx=8,dy=11,dz=14] inLevelArea 30
 ### 2和3的过道 | 写在3-0的后面是因为上面第一行代表的区域包括了一小部分的过道区域
-scoreboard players set @s[x=-175,y=-22,z=32,dx=4,dy=4,dz=19] inLevelArea 29
+scoreboard players set @s[x=-175,y=-22,z=32,dx=4,dy=4,dz=19] inLevelArea 20
 ### 3-1
 scoreboard players set @s[x=-204,y=-21,z=30,dx=17,dy=7,dz=11] inLevelArea 31
 scoreboard players set @s[x=-194,y=-21,z=23,dx=7,dy=6,dz=6] inLevelArea 31
@@ -70,14 +70,14 @@ scoreboard players set @s[x=-182,y=6,z=-30,dx=31,dy=18,dz=27] inLevelArea 40
 scoreboard players set @s[x=-163,y=-13,z=16,dx=13,dy=29,dz=9] inLevelArea 40
 scoreboard players set @s[x=-163,y=-32,z=1,dx=20,dy=14,dz=10] inLevelArea 40
 ### 3和4的过道 | 写在4-0的后面是因为上面第一行代表的区域包括了一小部分的过道区域
-scoreboard players set @s[x=-175,y=16,z=-6,dx=4,dy=4,dz=24] inLevelArea 39
+scoreboard players set @s[x=-175,y=16,z=-6,dx=4,dy=4,dz=24] inLevelArea 30
 ### 4-1
 scoreboard players set @s[x=-169,y=11,z=-30,dx=17,dy=14,dz=15] inLevelArea 41
 scoreboard players set @s[x=-170,y=17,z=-17,dx=0,dy=1,dz=0] inLevelArea 41
 ### 4-2
 scoreboard players set @s[x=-168,y=7,z=-2,dx=22,dy=14,dz=17] inLevelArea 42
 ### 4-3
-scoreboard players set @s[x=-165,y=-17,z=-6,dx=22,dy=22,dz=21] inLevelArea 43
+scoreboard players set @s[x=-166,y=-17,z=-6,dx=23,dy=22,dz=21] inLevelArea 43
 #### 4-2的这部分写在4-3后面是因为4-2和4-3有重叠部分
 scoreboard players set @s[x=-163,y=0,z=4,dx=0,dy=6,dz=0] inLevelArea 42
 scoreboard players set @s[x=-151,y=1,z=5,dx=0,dy=5,dz=0] inLevelArea 42
@@ -87,13 +87,13 @@ scoreboard players set @s[x=-146,y=-23,z=5,dx=3,dy=2,dz=2] inLevelArea 44
 
 ## --- 第五章 ---
 ### 4和5的过道
-scoreboard players set @s[x=-117,y=-32,z=-4,dx=24,dy=4,dz=13] inLevelArea 49
+scoreboard players set @s[x=-117,y=-32,z=-4,dx=24,dy=4,dz=13] inLevelArea 40
 ### 5-0
 scoreboard players set @s[x=-103,y=-31,z=-21,dx=16,dy=12,dz=16] inLevelArea 50
 
 ## --- 第六章 ---
 ### 5和6的过道
-scoreboard players set @s[x=-97,y=-32,z=-30,dx=14,dy=4,dz=8] inLevelArea 59
+scoreboard players set @s[x=-97,y=-32,z=-30,dx=14,dy=4,dz=8] inLevelArea 50
 ### 6-0
 scoreboard players set @s[x=-82,y=-38,z=-44,dx=17,dy=22,dz=27] inLevelArea 60
 scoreboard players set @s[x=-88,y=-32,z=-65,dx=10,dy=16,dz=17] inLevelArea 60
