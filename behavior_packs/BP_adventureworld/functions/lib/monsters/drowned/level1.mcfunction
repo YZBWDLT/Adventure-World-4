@@ -11,10 +11,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=drowned1
 ## --- 正式生成 ---
 
 ### 生成怪物
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=1}] ~~~ execute @e[name=drowned1Summoner] ~~~ summon minecraft:drowned ~~~ aw:level_1 "溺尸 | lv.1"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=2..}] ~~~ execute @e[name=drowned1Summoner] ~~~ summon minecraft:drowned ~~~ aw:level_2 "溺尸 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=4..6}] ~~~ execute @e[name=drowned1Summoner] ~~~ summon minecraft:drowned ~~~ aw:level_1 "溺尸 | lv.1"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={background=7..}] ~~~ execute @e[name=drowned1Summoner] ~~~ summon minecraft:drowned ~~~ aw:level_2 "溺尸 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=drowned1Summoner] ~~~ summon minecraft:drowned ~~~ aw:level_1 "溺尸 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..}] ~~~ execute @e[name=drowned1Summoner] ~~~ summon minecraft:drowned ~~~ aw:level_2 "溺尸 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=drowned1Summoner] ~~~ summon minecraft:drowned ~~~ aw:level_1 "溺尸 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=drowned1Summoner] ~~~ summon minecraft:drowned ~~~ aw:level_2 "溺尸 | lv.2"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=drowned1Summoner]

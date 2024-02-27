@@ -2,7 +2,7 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] background 721
+scoreboard players set @e[name=level] data 721
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a7-2已完成！§r"}]}

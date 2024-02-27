@@ -51,7 +51,7 @@ execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=itemLimitTest,scores={
 
 ## 进入房间检测器
 ## 该函数仅在关卡进度处于“未在游戏中”状态下执行，因此需要获取当前关卡状态。
-execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
+execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/3_digit_seperator
 ## 当处于“未在游戏中”状态下时，每秒一次地清除怪物生成器
 execute @e[name=level,scores={temp3=1}] ~~~ execute @e[name=tick,scores={time=0}] ~~~ kill @e[family=summoner]
@@ -80,13 +80,13 @@ function system/level_controllers/actionbar_title
 
 ## 关卡与波潮完成检测器
 ## 该函数仅在关卡进度处于“正在游戏中”状态下执行，因此需要获取当前关卡状态。
-execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
+execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/3_digit_seperator
 execute @e[name=level,scores={temp3=0}] ~~~ function system/level_controllers/level_complete
 
 ## 关卡失败检测器
 ## 该函数仅在关卡进度处于“正在游戏中”状态下执行，因此需要获取当前关卡状态。
-execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
+execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/3_digit_seperator
 execute @e[name=level,scores={temp3=0}] ~~~ function system/level_controllers/game_lose
 

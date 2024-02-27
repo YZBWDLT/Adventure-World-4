@@ -4,7 +4,7 @@
 function lib/all_levels/start_chapter
 
 # --- 设置level ---
-scoreboard players set @e[name=level] background 401
+scoreboard players set @e[name=level] data 401
 
 # --- 标题 ---
 title @a title §3§l寒 冰 神 殿

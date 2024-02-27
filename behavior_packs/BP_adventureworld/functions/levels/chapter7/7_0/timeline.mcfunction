@@ -20,7 +20,7 @@ execute @e[name=timeline,scores={time=1120}] ~~~ tp @a -87 -40 85
 
 ## 进入剑之神殿
 execute @e[name=timeline,scores={time=1180}] ~~~ tp @a -79 -39 105 facing -87 -37 105
-execute @e[name=timeline,scores={time=1180}] ~~~ scoreboard players set @e[name=level] background 701
+execute @e[name=timeline,scores={time=1180}] ~~~ scoreboard players set @e[name=level] data 701
 execute @e[name=timeline,scores={time=1180}] ~~~ title @a times 0 100 0
 
 execute @e[name=timeline,scores={time=1240}] ~~~ title @a title §f§l剑 之 神 殿

@@ -2,7 +2,7 @@
 # 对本关进行一定的初始化
 
 ## --- 设置level ---
-scoreboard players set @e[name=level] background 440
+scoreboard players set @e[name=level] data 440
 
 ## --- 封闭入口与出口 ---
 fill -143 -31 7 -143 -29 5 ice
@@ -29,8 +29,8 @@ summon guardian -122 -30 14
 summon guardian -138 -30 14
 
 ## --- 设置本关最大波数 ---
-scoreboard players set @e[name=maxWave] background 1
-scoreboard players set @e[name=wave] background 1
+scoreboard players set @e[name=maxWave] data 1
+scoreboard players set @e[name=wave] data 1
 
 # --- 阻止本关以常规方式检测 ---
 function lib/level_complete_delay/never_complete

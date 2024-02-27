@@ -3,12 +3,12 @@
 
 ## --- 治疗药水 ---
 ## 治疗药水的上限随关卡进度而动态变化。
-execute @e[name=level,scores={background=111..120}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=2..}] temp 1
-execute @e[name=level,scores={background=121..130}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=3..}] temp 2
-execute @e[name=level,scores={background=131..310}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=4..}] temp 3
-execute @e[name=level,scores={background=311..320}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=5..}] temp 4
-execute @e[name=level,scores={background=321..330}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=6..}] temp 5
-execute @e[name=level,scores={background=331..}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=7..}] temp 6
+execute @e[name=level,scores={data=111..120}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=2..}] temp 1
+execute @e[name=level,scores={data=121..130}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=3..}] temp 2
+execute @e[name=level,scores={data=131..310}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=4..}] temp 3
+execute @e[name=level,scores={data=311..320}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=5..}] temp 4
+execute @e[name=level,scores={data=321..330}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=6..}] temp 5
+execute @e[name=level,scores={data=331..}] ~~~ scoreboard players set @a[hasitem={item=aw:potion_health,quantity=7..}] temp 6
 clear @a[scores={temp=1..6}] aw:potion_health
 give @a[scores={temp=1}] aw:potion_health 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 give @a[scores={temp=2}] aw:potion_health 2 0 {"item_lock":{"mode":"lock_in_inventory"}}

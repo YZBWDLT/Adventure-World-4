@@ -13,7 +13,7 @@ title @a subtitle §a关卡已完成！
 scoreboard players set @e[name=soundPlayer] active 10
 
 ## --- 本关的失败次数归零 ---
-scoreboard players set @e[name=failedTimes] stats 0
+scoreboard players set @e[name=failedTimes] data 0
 
 ## --- 为玩家补充残留的重要装备 ---
 function lib/supplier/items

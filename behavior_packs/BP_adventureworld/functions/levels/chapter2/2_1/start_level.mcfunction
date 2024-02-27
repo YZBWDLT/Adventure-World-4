@@ -2,7 +2,7 @@
 # 对本关进行一定的初始化
 
 ## --- 设置level ---
-scoreboard players set @e[name=level] background 210
+scoreboard players set @e[name=level] data 210
 
 ## --- 封闭入口与出口 ---
 ## 入口
@@ -17,4 +17,4 @@ tp @e[family=respawner] -83 18 64
 function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
-scoreboard players set @e[name=maxWave] background 2
+scoreboard players set @e[name=maxWave] data 2

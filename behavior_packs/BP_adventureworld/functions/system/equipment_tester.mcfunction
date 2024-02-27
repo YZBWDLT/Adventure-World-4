@@ -11,13 +11,13 @@ enchant @a[hasitem={item=aw:diamond_helmet,location=slot.weapon.mainhand}] respi
 enchant @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand}] depth_strider 3
 
 ## 弓 | 2-1解锁耐久III
-execute @e[name=level,scores={background=211..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] unbreaking 3
+execute @e[name=level,scores={data=211..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] unbreaking 3
 
 ## 弓 | 4-2解锁火矢
-execute @e[name=level,scores={background=421..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] flame 1
+execute @e[name=level,scores={data=421..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] flame 1
 
 ## 弓 | 6-1解锁力量V
-execute @e[name=level,scores={background=611..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] power 5
+execute @e[name=level,scores={data=611..}] ~~~ enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] power 5
 
 # --- 装备修复 ---
 # 主要用于修复皮革靴子，10秒执行1次

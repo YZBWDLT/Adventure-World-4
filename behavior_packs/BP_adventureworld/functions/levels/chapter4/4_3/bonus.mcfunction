@@ -2,7 +2,7 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] background 431
+scoreboard players set @e[name=level] data 431
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a4-3已完成！§r\n§f你已获得 §d[休眠药水] §e[钻石护腿] §f！\n§7温馨提示，不要混用生长药水和休眠药水"}]}

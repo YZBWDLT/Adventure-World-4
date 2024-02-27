@@ -4,7 +4,7 @@
 function lib/all_levels/start_chapter
 
 # --- 设置level ---
-scoreboard players set @e[name=level] background 501
+scoreboard players set @e[name=level] data 501
 
 # --- 标题 ---
 title @a title §f§l红 石 神 殿

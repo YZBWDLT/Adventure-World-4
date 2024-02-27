@@ -2,7 +2,7 @@
 # 对本关进行一定的初始化
 
 ## --- 设置level ---
-scoreboard players set @e[name=level] background 740
+scoreboard players set @e[name=level] data 740
 
 ## --- 封闭入口与出口 ---
 fill -223 -18 98 -223 -16 100 nether_brick
@@ -15,7 +15,7 @@ tp @e[family=respawner] -248 -5 104
 function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
-scoreboard players set @e[name=maxWave] background 5
+scoreboard players set @e[name=maxWave] data 5
 
 ## --- 添加岩浆 ---
 fill -224 -27 111 -244 -29 85 lava[] keep

@@ -5,8 +5,8 @@
 execute @e[type=aw:hookshot] ~~~ particle minecraft:endrod ^^^-1
 
 # --- 判定绳枪数量 ---
-scoreboard players set @e[name=hookshotAmount] background 0
-execute @e[type=aw:hookshot] ~~~ scoreboard players add @e[name=hookshotAmount] background 1
+scoreboard players set @e[name=hookshotAmount] data 0
+execute @e[type=aw:hookshot] ~~~ scoreboard players add @e[name=hookshotAmount] data 1
 
 # --- 出现绳枪后为玩家激活加分 ---
 
@@ -15,7 +15,7 @@ execute @e[type=aw:hookshot] ~~~ scoreboard players add @e[name=hookshotAmount] 
 scoreboard players add @e[type=aw:hookshot] active 1
 
 ## 让绳枪为最近的玩家激活
-execute @e[name=hookshotAmount,scores={background=1..}] ~~~ execute @e[type=aw:hookshot,scores={active=1}] ~~~ scoreboard players add @p[scores={hookshot=-1}] hookshot 1
+execute @e[name=hookshotAmount,scores={data=1..}] ~~~ execute @e[type=aw:hookshot,scores={active=1}] ~~~ scoreboard players add @p[scores={hookshot=-1}] hookshot 1
 
 ## 取消绳枪的激活状态，避免连续给不相关的玩家激活 | 设置为-1，这样在下一次循环+1分时就可以将active.~改为0
 scoreboard players set @e[type=aw:hookshot] active -1
@@ -58,4 +58,4 @@ execute @e[type=aw:hookshot] ~~~ detect ~~~ minecraft:flowing_water -1 kill @s
 execute @p ~~~ kill @e[type=aw:hookshot,rm=50]
 
 # --- 当不存在绳枪时，将所有玩家的激活状态归零 ---
-execute @e[name=hookshotAmount,scores={background=0}] ~~~ scoreboard players set @a hookshot -1
+execute @e[name=hookshotAmount,scores={data=0}] ~~~ scoreboard players set @a hookshot -1

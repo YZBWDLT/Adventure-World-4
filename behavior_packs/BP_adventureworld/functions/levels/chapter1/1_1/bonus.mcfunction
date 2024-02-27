@@ -2,7 +2,7 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] background 111
+scoreboard players set @e[name=level] data 111
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a1-1已完成！§r\n§f你已获得 §a[治疗药水] §b[铁靴子] §f！\n§7皮革靴子已自动卸下。"}]}

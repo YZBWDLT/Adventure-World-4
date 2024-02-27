@@ -3,8 +3,7 @@
 
 ## --- 记分板 ---
 
-scoreboard objectives remove background
-scoreboard objectives remove stats
+scoreboard objectives remove data
 scoreboard objectives remove time
 scoreboard objectives remove active
 scoreboard objectives remove crosshair
@@ -17,9 +16,9 @@ scoreboard objectives remove deathTimes
 scoreboard objectives remove inLevelArea
 scoreboard objectives remove temp2
 scoreboard objectives remove temp3
+scoreboard objectives remove killAmount
 
-scoreboard objectives add background dummy "后台数据"
-scoreboard objectives add stats dummy "统计数据"
+scoreboard objectives add data dummy "后台数据"
 scoreboard objectives add time dummy "时间数据"
 scoreboard objectives add active dummy "激活数据"
 scoreboard objectives add crosshair dummy "准心数据"
@@ -33,20 +32,22 @@ scoreboard objectives add inLevelArea dummy "玩家所在关卡区域ID"
 scoreboard objectives add temp2 dummy "临时数据2"
 scoreboard objectives add temp3 dummy "临时数据3"
 scoreboard objectives add hookshot dummy "绳枪数据"
+scoreboard objectives add killAmount dummy "击杀数据"
 
-scoreboard players set allFailedTimes stats 0
+scoreboard players set allFailedTimes data 0
 scoreboard players set @a crosshair 0
 scoreboard players set @a isHoldingHelmet 0
 scoreboard players set @a isHoldingBoots 0
 scoreboard players set @a deathTimes 0
 scoreboard players set @a inLevelArea 0
 scoreboard players set @a hookshot -1
+scoreboard players set @a killAmount 0
 
 ## --- 标记分值 ---
 
 kill @e[type=je:marker]
 
-### background 后台数据
+### data 后台数据
 summon je:marker "level" -82 1 -2
 summon je:marker "monsterAmount" -82 1 -2
 summon je:marker "hookshotAmount" -82 1 -2
@@ -56,16 +57,19 @@ summon je:marker "randomLocation" -82 1 -2
 summon je:marker "randomMonster" -82 1 -2
 summon je:marker "wave" -82 1 -2
 summon je:marker "maxWave" -82 1 -2
+summon je:marker "failedTimes" -82 1 -2
 
-scoreboard players set @e[name=level] background 1
-scoreboard players set @e[name=monsterAmount] background 0
-scoreboard players set @e[name=hookshotAmount] background 0
-scoreboard players set @e[name=randomLocation] background 0
-scoreboard players set @e[name=randomMonster] background 0
-scoreboard players set @e[name=alivePlayersAmount] background 1
-scoreboard players set @e[name=allPlayersAmount] background 1
-scoreboard players set @e[name=wave] background 0
-scoreboard players set @e[name=maxWave] background 0
+scoreboard players set @e[name=level] data 1
+scoreboard players set @e[name=monsterAmount] data 0
+scoreboard players set maxMonsterAmount data 0
+scoreboard players set @e[name=hookshotAmount] data 0
+scoreboard players set @e[name=randomLocation] data 0
+scoreboard players set @e[name=randomMonster] data 0
+scoreboard players set @e[name=alivePlayersAmount] data 1
+scoreboard players set @e[name=allPlayersAmount] data 1
+scoreboard players set @e[name=wave] data 0
+scoreboard players set @e[name=maxWave] data 0
+scoreboard players set @e[name=failedTimes] data 0
 
 ### settings 设置数据
 summon je:marker "developerMode" -82 1 -2
@@ -82,10 +86,7 @@ scoreboard players set @e[name=potionLimitTest] settings 1
 scoreboard players set @e[name=itemLimitTest] settings 1
 scoreboard players set @e[name=respawnInNewWave] settings 1
 
-### stats 统计数据
-summon je:marker "failedTimes" -82 1 -2
 
-scoreboard players set @e[name=failedTimes] stats 0
 
 ### time
 summon je:marker "tick" -82 1 -2

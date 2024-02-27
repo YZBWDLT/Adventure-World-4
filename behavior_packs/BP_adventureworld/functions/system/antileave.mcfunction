@@ -14,7 +14,7 @@ execute @a ~~~ function lib/get_entity_location
 # --- 获取玩家的章节关卡数和现在的关卡进度数据 ---
 # 关卡进度：章节、关卡数、状态（0正在游戏，1未在游戏） -> temp.level、temp2.level、temp3.level
 # 玩家位置：章节、关卡数、状态（01正在游戏，2未在游戏） -> temp2.@s、temp3.@s、isAlive.@s
-execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
+execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/3_digit_seperator
 execute @a ~~~ scoreboard players operation @s temp = @s inLevelArea
 execute @a ~~~ function lib/3_digit_seperator

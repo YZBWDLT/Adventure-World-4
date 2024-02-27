@@ -8,7 +8,7 @@
 execute @e[family=respawner] ~~~ spawnpoint @a ~~~
 
 # --- 获取关卡进度数据 ---
-execute @e[name=level] ~~~ scoreboard players operation @s temp = @s background
+execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/3_digit_seperator
 
 # --- 第二种情况 ---
@@ -17,10 +17,10 @@ execute @e[name=level] ~~~ function lib/3_digit_seperator
 
 ## 播报死亡信息 | 仅在人数大于等于2人时播报
 execute @e[name=level,scores={temp3=0}] ~~~ function lib/get_player_amount
-execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=allPlayersAmount,scores={background=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ function lib/death_message_announcer
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=allPlayersAmount,scores={data=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ function lib/death_message_announcer
 
-execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=respawnInNewWave,scores={settings=0}] ~~~ execute @e[name=allPlayersAmount,scores={background=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！关卡结束后您将被释放。"}]}
-execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=respawnInNewWave,scores={settings=1}] ~~~ execute @e[name=allPlayersAmount,scores={background=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！但不要着急，您在下一波就会被解救出来。"}]}
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=respawnInNewWave,scores={settings=0}] ~~~ execute @e[name=allPlayersAmount,scores={data=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！关卡结束后您将被释放。"}]}
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=respawnInNewWave,scores={settings=1}] ~~~ execute @e[name=allPlayersAmount,scores={data=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！但不要着急，您在下一波就会被解救出来。"}]}
 
 ## 距离过近则判定为玩家已死亡
 execute @e[name=level,scores={temp3=0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players add @a[r=2,scores={isAlive=1}] deathTimes 1

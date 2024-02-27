@@ -2,7 +2,7 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] background 211
+scoreboard players set @e[name=level] data 211
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a2-1已完成！§r\n§f你已获得 §b[弓] §f！\n§7和药水供应不同，每一波开始之前你都能获得12根箭！\n§7试试尽量用弓箭射杀骷髅，有奇效哦！"}]}

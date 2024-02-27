@@ -2,7 +2,7 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] background 321
+scoreboard players set @e[name=level] data 321
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a3-2已完成！§r\n§f你已获得 §a[治疗药水] §e[钻石靴子] §f！\n§7不要忘记手持钻石靴子获取附魔！"}]}
