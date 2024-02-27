@@ -41,6 +41,7 @@ execute @e[name=arrowLimitTest,scores={settings=1}] ~~~ function system/item_lim
 ## 药水上限函数
 ## 每秒执行一次，仅当药水上限检测启用状态下执行。
 execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=potionLimitTest,scores={settings=1}] ~~~ function system/item_limit/potions
+function system/item_limit/potions2
 
 ## 物品上限函数
 execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=itemLimitTest,scores={settings=1}] ~~~ function system/item_limit/items
