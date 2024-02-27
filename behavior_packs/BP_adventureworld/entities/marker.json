@@ -19,7 +19,9 @@
         },
         "events": {
             "aw:as_summoner": { "add": { "component_groups": [ "as_summoner" ] } },
-            "aw:as_respawner": { "add": { "component_groups": [ "as_respawner" ] } }
+            "aw:as_respawner": { "add": { "component_groups": [ "as_respawner" ] } },
+            "aw:as_wave_name": { "add": { "component_groups": [ "as_wave_name" ] } },
+            "aw:as_chapter_name": { "add": { "component_groups": [ "as_chapter_name" ] } }
         },
         "component_groups": {
             "as_summoner": {
@@ -27,6 +29,12 @@
             },
             "as_respawner": {
                 "minecraft:type_family": { "family": [ "inanimate", "marker", "respawner" ] }
+            },
+            "as_wave_name": {
+                "minecraft:type_family": { "family": [ "inanimate", "marker", "wave_name", "scoreboard_display" ] }
+            },
+            "as_chapter_name": {
+                "minecraft:type_family": { "family": [ "inanimate", "marker", "chapter_name", "scoreboard_display" ] }
             }
         }
     }

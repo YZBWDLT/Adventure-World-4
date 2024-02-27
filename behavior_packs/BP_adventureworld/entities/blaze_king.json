@@ -61,7 +61,6 @@
             "minecraft:jump.static": { },
 
             "minecraft:fire_immune": { },
-            "minecraft:damage_sensor": { "triggers": { "cause": "fall", "deals_damage": false } },
 
             "minecraft:follow_range": { "value": 48, "max": 48 },
             "minecraft:behavior.float": { "priority": 0 },
@@ -102,6 +101,13 @@
                     "event": "switch_to_ranged",
                     "target": "self"
                 }
+            },
+            
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    { "cause": "fall", "deals_damage": false },
+                    { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } }
+                ]
             }
             
         },

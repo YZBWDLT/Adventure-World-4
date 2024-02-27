@@ -31,7 +31,9 @@
             "minecraft:behavior.look_at_player": { "priority": 8, "look_distance": 12.0, "probability": 0.01 },
             "minecraft:behavior.random_look_around": { "priority": 9 },
             "minecraft:conditional_bandwidth_optimization": { },
-            "minecraft:boss": { "hud_range": 55, "name": "entity.elder_guardian.name", "should_darken_sky": false }
+            "minecraft:boss": { "hud_range": 55, "name": "entity.elder_guardian.name", "should_darken_sky": false },
+
+            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } } ] }
         },
 
         "events": {

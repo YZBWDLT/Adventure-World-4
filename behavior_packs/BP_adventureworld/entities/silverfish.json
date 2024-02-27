@@ -30,7 +30,9 @@
             "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
             "minecraft:conditional_bandwidth_optimization": { },
             "minecraft:block_climber": { },
-            "minecraft:behavior.melee_attack": { "priority": 4, "track_target": true }
+            "minecraft:behavior.melee_attack": { "priority": 4, "track_target": true },
+
+            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } } ] }
         },
 
         "events": {

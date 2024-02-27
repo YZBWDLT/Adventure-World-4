@@ -47,7 +47,9 @@
                 ]
             },
             "minecraft:behavior.mount_pathing": { "priority": 2, "target_dist": 0, "track_target": true },
-            "minecraft:angry": { "duration": 9999, "broadcast_anger": true, "broadcast_range": 50, "calm_event": { "event": "minecraft:on_calm", "target": "self" } }
+            "minecraft:angry": { "duration": 9999, "broadcast_anger": true, "broadcast_range": 50, "calm_event": { "event": "minecraft:on_calm", "target": "self" } },
+
+            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } } ] }
 
         },
         "events": {

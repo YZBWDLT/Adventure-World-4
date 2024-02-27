@@ -26,7 +26,6 @@
             "minecraft:can_climb": { },
             "minecraft:conditional_bandwidth_optimization": { },
 
-            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "is_family", "subject": "damager", "value": "arrow", "operator": "==" }, "event": "extra_damage" } } ] },
             "minecraft:scale": { "value": 1.2 },
 
             "minecraft:boss": { "hud_range": 70, "name": "entity.aw:skeleton_king.name", "should_darken_sky": false },
@@ -41,7 +40,14 @@
             "minecraft:jump.static": { },
             "minecraft:behavior.random_stroll": { "priority": 6, "speed_multiplier": 1 },
             "minecraft:behavior.look_at_player": { "priority": 7, "look_distance": 8 },
-            "minecraft:behavior.random_look_around": { "priority": 8 }
+            "minecraft:behavior.random_look_around": { "priority": 8 },
+
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    { "on_damage": { "filters": { "test": "is_family", "subject": "damager", "value": "arrow", "operator": "==" }, "event": "extra_damage" } },
+                    { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } }
+                ]
+            }
         },
         "events": {
 			"minecraft:entity_spawned": { "add": { "component_groups": [ "level_1" ] } },

@@ -22,7 +22,6 @@
             "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0, "breathes_water": true },
             "minecraft:health": { "value": 20, "max": 20 },
             "minecraft:hurt_on_condition": { "damage_conditions": [ { "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true }, "cause": "lava", "damage_per_tick": 4 } ] },
-            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "is_family", "subject": "damager", "value": "arrow", "operator": "==" }, "event": "kill_self" } } ] },
             "minecraft:movement": { "value": 0.2 },
             "minecraft:navigation.walk": { "is_amphibious": true, "avoid_sun": true, "avoid_water": true },
             "minecraft:movement.basic": { },
@@ -48,7 +47,14 @@
             "minecraft:behavior.random_look_around": { "priority": 8 },
             "minecraft:physics": { },
             "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
-            "minecraft:conditional_bandwidth_optimization": { }
+            "minecraft:conditional_bandwidth_optimization": { },
+
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    { "on_damage": { "filters": { "test": "is_family", "subject": "damager", "value": "arrow", "operator": "==" }, "event": "kill_self" } },
+                    { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } }
+                ]
+            }
         },
 
         "events": {
