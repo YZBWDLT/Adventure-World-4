@@ -78,6 +78,7 @@ summon je:marker "arrowLimitTest" -82 1 -2
 summon je:marker "potionLimitTest" -82 1 -2
 summon je:marker "itemLimitTest" -82 1 -2
 summon je:marker "respawnInNewWave" -82 1 -2
+summon je:marker "shouldForceSummonMonster" -82 1 -2
 
 scoreboard players set @e[name=developerMode] settings 0
 scoreboard players set @e[name=isNetease] settings 1
@@ -85,8 +86,7 @@ scoreboard players set @e[name=arrowLimitTest] settings 1
 scoreboard players set @e[name=potionLimitTest] settings 1
 scoreboard players set @e[name=itemLimitTest] settings 1
 scoreboard players set @e[name=respawnInNewWave] settings 1
-
-
+scoreboard players set @e[name=shouldForceSummonMonster] settings 0
 
 ### time
 summon je:marker "tick" -82 1 -2
