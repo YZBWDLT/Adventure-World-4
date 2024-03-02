@@ -52,14 +52,14 @@ execute @e[name=level,scores={data=231..440}] ~~~ replaceitem entity @a[hasitem=
 ## --- 钻石头盔 ---
 ## 3-1结束后给予，始终保留 | 在6-4结束后锁定到槽位上
 ## 补充时需要更改isHoldingHelmet.@s=0
-execute @e[name=level,scores={data=311..640}] ~~~ scoreboard players set @a[hasitem={item=aw:diamond_helmet,quantity=0}] isHoldingHelmet 0
+execute @e[name=level,scores={data=311..640}] ~~~ tag @a[hasitem={item=aw:diamond_helmet,quantity=0}] remove helmetHeld
 execute @e[name=level,scores={data=311..640}] ~~~ replaceitem entity @a[hasitem={item=aw:diamond_helmet,quantity=0}] slot.armor.head 0 aw:diamond_helmet 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 execute @e[name=level,scores={data=641..}] ~~~ replaceitem entity @a[hasitem={item=aw:diamond_helmet,quantity=0,location=slot.armor.head}] slot.armor.head 0 aw:diamond_helmet 1 0 {"item_lock":{"mode":"lock_in_slot"}}
 
 ## --- 钻石靴子 ---
 ## 3-2结束后给予，始终保留 | 在6-4结束后锁定到槽位上
 ## 补充时需要更改isHoldingBoots.@s=0
-execute @e[name=level,scores={data=321..640}] ~~~ scoreboard players set @a[hasitem={item=aw:diamond_boots,quantity=0}] isHoldingBoots 0
+execute @e[name=level,scores={data=321..640}] ~~~ tag @a[hasitem={item=aw:diamond_boots,quantity=0}] remove bootsHeld
 execute @e[name=level,scores={data=321..640}] ~~~ replaceitem entity @a[hasitem={item=aw:diamond_boots,quantity=0}] slot.armor.feet 0 aw:diamond_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 execute @e[name=level,scores={data=641..}] ~~~ replaceitem entity @a[hasitem={item=aw:diamond_boots,quantity=0,location=slot.armor.feet}] slot.armor.feet 0 aw:diamond_boots 1 0 {"item_lock":{"mode":"lock_in_slot"}}
 

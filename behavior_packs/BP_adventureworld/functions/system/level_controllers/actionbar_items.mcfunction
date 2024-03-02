@@ -31,5 +31,5 @@ titleraw @a[hasitem={item=aw:enable_crosshair,location=slot.weapon.mainhand}] ac
 
 ## --- 钻石靴子 & 钻石头盔 ---
 ## 当玩家还没有附魔的时候，强制提醒玩家附魔
-execute @e[name=level,scores={data=311..640}] ~~~ titleraw @a[scores={isHoldingHelmet=0}] actionbar {"rawtext":[{"text":"§l§c温馨提示\n\n§r§f您刚刚获得了一个钻石头盔\n请手持钻石头盔以获取附魔！"}]}
-execute @e[name=level,scores={data=321..640}] ~~~ titleraw @a[scores={isHoldingBoots=0}] actionbar {"rawtext":[{"text":"§l§c温馨提示\n\n§r§f您刚刚获得了一个钻石靴子\n请手持钻石靴子以获取附魔！"}]}
+execute @e[name=level,scores={data=311..640}] ~~~ titleraw @a[tag=!helmetHeld] actionbar {"rawtext":[{"text":"§l§c温馨提示\n\n§r§f您刚刚获得了一个钻石头盔\n请手持钻石头盔以获取附魔！"}]}
+execute @e[name=level,scores={data=321..640}] ~~~ titleraw @a[tag=!bootsHeld] actionbar {"rawtext":[{"text":"§l§c温馨提示\n\n§r§f您刚刚获得了一个钻石靴子\n请手持钻石靴子以获取附魔！"}]}

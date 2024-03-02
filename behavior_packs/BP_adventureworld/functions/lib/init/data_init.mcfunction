@@ -6,12 +6,9 @@
 scoreboard objectives remove data
 scoreboard objectives remove time
 scoreboard objectives remove active
-scoreboard objectives remove crosshair
 scoreboard objectives remove settings
 scoreboard objectives remove temp
 scoreboard objectives remove isAlive
-scoreboard objectives remove isHoldingHelmet
-scoreboard objectives remove isHoldingBoots
 scoreboard objectives remove deathTimes
 scoreboard objectives remove inLevelArea
 scoreboard objectives remove temp2
@@ -22,12 +19,9 @@ scoreboard objectives remove isOnline
 scoreboard objectives add data dummy "后台数据"
 scoreboard objectives add time dummy "时间数据"
 scoreboard objectives add active dummy "激活数据"
-scoreboard objectives add crosshair dummy "准心数据"
 scoreboard objectives add settings dummy "设置数据"
 scoreboard objectives add temp dummy "临时数据"
 scoreboard objectives add isAlive dummy "存活数据"
-scoreboard objectives add isHoldingHelmet dummy "手持头盔"
-scoreboard objectives add isHoldingBoots dummy "手持靴子"
 scoreboard objectives add deathTimes dummy "§l§c死亡次数"
 scoreboard objectives add inLevelArea dummy "玩家所在关卡区域ID"
 scoreboard objectives add temp2 dummy "临时数据2"
@@ -37,9 +31,6 @@ scoreboard objectives add killAmount dummy "击杀数据"
 scoreboard objectives add isOnline dummy "在线数据"
 
 scoreboard players set allFailedTimes data 0
-scoreboard players set @a crosshair 0
-scoreboard players set @a isHoldingHelmet 0
-scoreboard players set @a isHoldingBoots 0
 scoreboard players set @a deathTimes 0
 scoreboard players set @a inLevelArea 0
 scoreboard players set @a hookshot -1

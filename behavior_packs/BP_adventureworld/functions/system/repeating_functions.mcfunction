@@ -29,7 +29,7 @@ function entities/hookshot/hookshot
 
 ## 虚拟准星
 ## 每秒执行一次，当玩家手持绳枪时，由其调用对应函数。
-execute @e[name=tick,scores={time=0}] ~~~ execute @a[scores={crosshair=1},hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ function lib/virtual_crosshair
+execute @e[name=tick,scores={time=0}] ~~~ execute @a[tag=virtualCrosshairEnabled,hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ function lib/virtual_crosshair
 
 ## 装备检测器
 function system/equipment_tester

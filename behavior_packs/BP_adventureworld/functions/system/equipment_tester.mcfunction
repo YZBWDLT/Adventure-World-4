@@ -25,19 +25,8 @@ execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21
 
 # --- 装备手持检测 ---
 # 检测玩家是否手持过钻石头盔、钻石靴子，以保证玩家的装备拥有应有的附魔
-# 未手持过=0 手持=1 手持过=2
 
-## 对不存在isHoldingHelmet.@s和isHoldingBoots.@s变量的玩家强制赋予
-scoreboard players add @a isHoldingHelmet 0
-scoreboard players add @a isHoldingBoots 0
-
-## 设置isHoldingHelmet.@s和isHoldingBoots.@s
-## 手持时设为1
-scoreboard players set @a[hasitem={item=aw:diamond_helmet,location=slot.weapon.mainhand}] isHoldingHelmet 1
-scoreboard players set @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand}] isHoldingBoots 1
-## 未手持时，若以前手持过（1..2）则设为2
-scoreboard players set @a[hasitem={item=aw:diamond_helmet,location=slot.weapon.mainhand,quantity=0},scores={isHoldingHelmet=1..2}] isHoldingHelmet 2
-scoreboard players set @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand,quantity=0},scores={isHoldingBoots=1..2}] isHoldingBoots 2
-## 未手持时，若以前未手持过（!1..2）则设为0
-scoreboard players set @a[hasitem={item=aw:diamond_helmet,location=slot.weapon.mainhand,quantity=0},scores={isHoldingHelmet=!1..2}] isHoldingHelmet 0
-scoreboard players set @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand,quantity=0},scores={isHoldingBoots=!1..2}] isHoldingBoots 0
+## 设置标签
+## 手持时设为helmetHeld和bootsHeld
+tag @a[hasitem={item=aw:diamond_helmet,location=slot.weapon.mainhand}] add helmetHeld
+tag @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand}] add bootsHeld
