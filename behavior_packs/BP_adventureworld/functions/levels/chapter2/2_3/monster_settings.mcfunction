@@ -11,17 +11,18 @@ execute @e[name=wave,scores={data=1}] ~~~ summon je:marker -149 -21 66 "aw:as_su
 # --- 第2波 ---
 execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -154 -21 66 "aw:as_summoner" "creeperNormalSummoner"
 execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -154 -21 56 "aw:as_summoner" "creeperEnergySummoner"
-execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -159 -21 61 "aw:as_summoner" "creeperHardSummoner"
-execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -149 -21 61 "aw:as_summoner" "creeperSpeedSummoner"
+execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -159 -21 61 "aw:as_summoner" "creeperNormalSummoner"
+execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -149 -21 61 "aw:as_summoner" "creeperEnergySummoner"
+
+execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -148.0 -21 56.0 "aw:as_summoner" "zombie2Summoner"
+execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -159.0 -21 67.0 "aw:as_summoner" "zombie2Summoner"
+execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -154 -21 61 "aw:as_summoner" "zombieBaby1Summoner"
+execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -148.0 -21 67.0 "aw:as_summoner" "zombie2Summoner"
+execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -159.0 -21 56.0 "aw:as_summoner" "zombie2Summoner"
 
 # --- 第3波 ---
-execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -154 -21 66 "aw:as_summoner" "zombie2Summoner"
-execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -154 -21 56 "aw:as_summoner" "zombie2Summoner"
-execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -159 -21 61 "aw:as_summoner" "zombieBaby1Summonerr"
-execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -154 -15 59 "aw:as_summoner" "skeleton3Summoner"
-execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -154 -15 65 "aw:as_summoner" "skeleton3Summoner"
+execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -154 -21 61 "aw:as_summoner" "skeletonKingSummoner"
 
 # --- 第4波 ---
-execute @e[name=wave,scores={data=4}] ~~~ summon je:marker -154 -21 61 "aw:as_summoner" "skeletonKingSummoner"
 
 # --- 第5波 ---

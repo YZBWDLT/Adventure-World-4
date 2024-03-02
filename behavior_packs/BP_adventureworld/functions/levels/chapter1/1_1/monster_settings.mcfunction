@@ -4,7 +4,6 @@
 
 # --- 第1波 ---
 execute @e[name=wave,scores={data=1}] ~~~ summon je:marker -123 1 28 "aw:as_summoner" "husk1Summoner"
-execute @e[name=wave,scores={data=1}] ~~~ summon je:marker -118 1 28 "aw:as_summoner" "husk1Summoner"
 execute @e[name=wave,scores={data=1}] ~~~ summon je:marker -110 1 28 "aw:as_summoner" "husk1Summoner"
 
 # --- 第2波 ---

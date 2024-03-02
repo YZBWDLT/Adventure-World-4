@@ -19,8 +19,8 @@ execute @e[name=wave,scores={data=2}] ~~~ summon je:marker -162 -32 29 "aw:as_su
 
 # --- 第3波 ---
 execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -167 -20 34 "aw:as_summoner" "drowned3Summoner"
-execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -156 -24 30 "aw:as_summoner" "drowned3Summoner"
-execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -162 -28 24 "aw:as_summoner" "drowned3Summoner"
+execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -156 -24 30 "aw:as_summoner" "drowned2Summoner"
+execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -162 -28 24 "aw:as_summoner" "drowned2Summoner"
 execute @e[name=wave,scores={data=3}] ~~~ summon je:marker -162 -32 29 "aw:as_summoner" "drownedWithTridentSummoner"
 
 # --- 第4波 ---

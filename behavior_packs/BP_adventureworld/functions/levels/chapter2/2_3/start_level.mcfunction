@@ -15,4 +15,4 @@ tp @e[family=respawner] -154 -21 46
 function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
-scoreboard players set @e[name=maxWave] data 4
+scoreboard players set @e[name=maxWave] data 3
