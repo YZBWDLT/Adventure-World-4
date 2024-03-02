@@ -5,13 +5,34 @@
             "states": {
                 "default": {
                     "transitions": [
-                        { "is_using_enable_crosshair": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:enable_crosshair') && query.is_using_item" }
+                        { "is_using_enable_crosshair": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:enable_crosshair') && query.is_using_item" },
+                        { "is_using_toggle_wave": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:toggle_wave') && query.is_using_item" },
+                        { "is_using_summon_monsters": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:summon_monsters') && query.is_using_item" },
+                        { "is_using_kill_monsters": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:kill_monsters') && query.is_using_item" }
                     ]
                 },
                 "is_using_enable_crosshair": {
                     "on_entry": [ "/function entities/player/using_enable_crosshair" ],
                     "transitions": [
                         { "default": "!query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:enable_crosshair') || !query.is_using_item" }
+                    ]
+                },
+                "is_using_toggle_wave": {
+                    "on_entry": [ "/function entities/player/using_toggle_wave" ],
+                    "transitions": [
+                        { "default": "!query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:toggle_wave') || !query.is_using_item" }
+                    ]
+                },
+                "is_using_summon_monsters": {
+                    "on_entry": [ "/function entities/player/using_summon_monsters" ],
+                    "transitions": [
+                        { "default": "!query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:summon_monsters') || !query.is_using_item" }
+                    ]
+                },
+                "is_using_kill_monsters": {
+                    "on_entry": [ "/function entities/player/using_kill_monsters" ],
+                    "transitions": [
+                        { "default": "!query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:kill_monsters') || !query.is_using_item" }
                     ]
                 }
             }

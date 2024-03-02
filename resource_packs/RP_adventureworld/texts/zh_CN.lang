@@ -23,6 +23,10 @@ item.aw:potion_rebirth.name=重生药水
 item.aw:potion_purification.name=净化药水
 item.aw:potion_hibernation.name=休眠药水
 
+item.aw:toggle_wave.name=调整波数
+item.aw:summon_monsters.name=生成怪物
+item.aw:kill_monsters.name=清除怪物
+
 ### 实体类
 entity.aw:hookshot.name=绳枪
 entity.aw:npc.name=NPC
