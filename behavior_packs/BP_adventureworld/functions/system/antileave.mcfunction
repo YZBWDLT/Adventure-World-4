@@ -9,15 +9,15 @@
 #<!> 可能会出现当玩家贴门边的时候，出现误判行为
 
 # --- 获取玩家位置 ---
-execute @a ~~~ function lib/get_entity_location
+execute @a ~~~ function lib/get_data/entity_location
 
 # --- 获取玩家的章节关卡数和现在的关卡进度数据 ---
 # 关卡进度：章节、关卡数、状态（0正在游戏，1未在游戏） -> temp.level、temp2.level、temp3.level
 # 玩家位置：章节、关卡数、状态（01正在游戏，2未在游戏） -> temp2.@s、temp3.@s、isAlive.@s
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
-execute @e[name=level] ~~~ function lib/3_digit_seperator
+execute @e[name=level] ~~~ function lib/get_data/3_digit_seperator
 execute @a ~~~ scoreboard players operation @s temp = @s inLevelArea
-execute @a ~~~ function lib/3_digit_seperator
+execute @a ~~~ function lib/get_data/3_digit_seperator
 
 # --- 对第一种情况的修正 ---
 # 为防止玩家在死亡状态下退出重进从而导致被困在重生点里，先将死亡的玩家传送到最近的玩家附近，并进行提示

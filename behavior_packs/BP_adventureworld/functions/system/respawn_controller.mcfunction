@@ -9,14 +9,14 @@ execute @e[family=respawner] ~~~ spawnpoint @a ~~~
 
 # --- 获取关卡进度数据 ---
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
-execute @e[name=level] ~~~ function lib/3_digit_seperator
+execute @e[name=level] ~~~ function lib/get_data/3_digit_seperator
 
 # --- 第二种情况 ---
 # 仅当游戏正式开始后才能判定。可以发现只有第二种情况才导致特殊功能。
 # 当玩家距离respawner过近的时候证明其已死亡
 
 ## 播报死亡信息 | 仅在人数大于等于2人时播报
-execute @e[name=level,scores={temp3=0}] ~~~ function lib/get_player_amount
+execute @e[name=level,scores={temp3=0}] ~~~ function lib/get_data/player_amount
 execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=allPlayersAmount,scores={data=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ function lib/death_message_announcer
 
 execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=respawnInNewWave,scores={settings=0}] ~~~ execute @e[name=allPlayersAmount,scores={data=2..}] ~~~ execute @e[family=respawner] ~~~ execute @a[r=2,scores={isAlive=1}] ~~~ tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！关卡结束后您将被释放。"}]}

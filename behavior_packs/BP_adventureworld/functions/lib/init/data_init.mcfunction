@@ -17,6 +17,7 @@ scoreboard objectives remove inLevelArea
 scoreboard objectives remove temp2
 scoreboard objectives remove temp3
 scoreboard objectives remove killAmount
+scoreboard objectives remove isOnline
 
 scoreboard objectives add data dummy "后台数据"
 scoreboard objectives add time dummy "时间数据"
@@ -33,6 +34,7 @@ scoreboard objectives add temp2 dummy "临时数据2"
 scoreboard objectives add temp3 dummy "临时数据3"
 scoreboard objectives add hookshot dummy "绳枪数据"
 scoreboard objectives add killAmount dummy "击杀数据"
+scoreboard objectives add isOnline dummy "在线数据"
 
 scoreboard players set allFailedTimes data 0
 scoreboard players set @a crosshair 0
@@ -42,6 +44,7 @@ scoreboard players set @a deathTimes 0
 scoreboard players set @a inLevelArea 0
 scoreboard players set @a hookshot -1
 scoreboard players set @a killAmount 0
+scoreboard players set @a isOnline 1
 
 ## --- 标记分值 ---
 
@@ -58,6 +61,7 @@ summon je:marker "randomMonster" -82 1 -2
 summon je:marker "wave" -82 1 -2
 summon je:marker "maxWave" -82 1 -2
 summon je:marker "failedTimes" -82 1 -2
+summon je:marker "isNetease" -82 1 -2
 
 scoreboard players set @e[name=level] data 1
 scoreboard players set @e[name=monsterAmount] data 0
@@ -70,10 +74,10 @@ scoreboard players set @e[name=allPlayersAmount] data 1
 scoreboard players set @e[name=wave] data 0
 scoreboard players set @e[name=maxWave] data 0
 scoreboard players set @e[name=failedTimes] data 0
+scoreboard players set @e[name=isNetease] data 1
 
 ### settings 设置数据
 summon je:marker "developerMode" -82 1 -2
-summon je:marker "isNetease" -82 1 -2
 summon je:marker "arrowLimitTest" -82 1 -2
 summon je:marker "potionLimitTest" -82 1 -2
 summon je:marker "itemLimitTest" -82 1 -2
@@ -81,7 +85,6 @@ summon je:marker "respawnInNewWave" -82 1 -2
 summon je:marker "shouldForceSummonMonster" -82 1 -2
 
 scoreboard players set @e[name=developerMode] settings 0
-scoreboard players set @e[name=isNetease] settings 1
 scoreboard players set @e[name=arrowLimitTest] settings 1
 scoreboard players set @e[name=potionLimitTest] settings 1
 scoreboard players set @e[name=itemLimitTest] settings 1

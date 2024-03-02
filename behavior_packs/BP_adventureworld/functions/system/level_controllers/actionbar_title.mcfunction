@@ -2,15 +2,15 @@
 
 # --- 初始化 ---
 ## 获取怪物和玩家数目
-function lib/get_monster_amount
-function lib/get_player_amount
+function lib/get_data/monster_amount
+function lib/get_data/player_amount
 
 # --- 获取玩家当前位置和当前关卡进度 ---
-execute @a ~~~ function lib/get_entity_location
+execute @a ~~~ function lib/get_data/entity_location
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
-execute @e[name=level] ~~~ function lib/3_digit_seperator
+execute @e[name=level] ~~~ function lib/get_data/3_digit_seperator
 execute @a ~~~ scoreboard players operation @s temp = @s inLevelArea
-execute @a ~~~ function lib/3_digit_seperator
+execute @a ~~~ function lib/get_data/3_digit_seperator
 
 # --- 显示关卡进度标记 ---
 execute @e[name=tick,scores={time=5}] ~~~ function lib/show_wave

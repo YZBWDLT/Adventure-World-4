@@ -1,7 +1,7 @@
 # 进行游戏初始化
 
-function init/gamerule
-function init/data_init
+function lib/init/gamerule
+function lib/init/data_init
 
 gamemode adventure @a
 tp @a 43 21 132

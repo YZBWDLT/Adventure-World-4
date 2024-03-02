@@ -1,6 +1,6 @@
 # ===== 开发者模式的游戏规则设置 =====
 
-function init/gamerule
+function lib/init/gamerule
 
 gamerule commandblockoutput true
 gamerule doentitydrops true

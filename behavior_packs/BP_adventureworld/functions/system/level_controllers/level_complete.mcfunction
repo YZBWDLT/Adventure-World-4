@@ -3,14 +3,14 @@
 # 判断逻辑：判断怪物数目，如果怪物数目为0时则开启关卡延迟倒计时，当满足一定条件后通过本波潮；若本波潮通过后wave的值大于最大波数则玩家通过这关
 
 # --- 判定怪物数目 & 关卡延迟倒计时 ---
-function lib/get_monster_amount
+function lib/get_data/monster_amount
 ## 如果存在怪物，则令time.levelCompleteDelay = active.levelCompleteDelay | 这样做可以保证当延迟时间内出现怪物时，可以重置这个时间
 execute @e[name=monsterAmount,scores={data=!0}] ~~~ execute @e[name=levelCompleteDelay] ~~~ scoreboard players operation @s time = @s active
 ## 判定怪物数目为0后，开始关卡延迟倒计时
 execute @e[name=monsterAmount,scores={data=0}] ~~~ scoreboard players add @e[name=levelCompleteDelay,scores={active=0..,time=1..}] time -1
 
 # --- 判定玩家数目 ---
-function lib/get_player_amount
+function lib/get_data/player_amount
 
 # --- 判定玩家通过本波 ---
 # 检测到以下几个条件同时满足时，表明玩家已经通过本波：

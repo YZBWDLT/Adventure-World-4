@@ -17,6 +17,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§binLevelArea.@s = %%s §
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bisAlive.@s = %%s §7# 玩家存活状态，0=游戏时死亡，1=游戏时存活，2=未在游戏中","with":{"rawtext":[{"score":{"objective":"isAlive","name":"@s"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bisHoldingHelmet.@s = %%s §7# 玩家是否手持过钻石头盔，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingHelmet","name":"@s"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bisHoldingBoots.@s = %%s §7# 玩家是否手持过钻石靴子，0=未手持过，1=正在手持，2=手持过","with":{"rawtext":[{"score":{"objective":"isHoldingBoots","name":"@s"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bisOnline.@s = %%s §7# 玩家是否为在线的玩家，0：不在线，1：在线","with":{"rawtext":[{"score":{"objective":"isOnline","name":"@s"}}]}}]}
 
 ## === 激活数据 active ===
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== active记分项 ====="}]}
@@ -32,6 +33,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.allPlayersAmount = %%
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§edata.allFailedTimes = %%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"data","name":"allFailedTimes"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.failedTimes = %%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=failedTimes]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.hookshotAmount = %%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=hookshotAmount]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.isNetease = %%s §7# 记录是否为netease版本","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=isNetease]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.level = %%s §7# 记录关卡数据，三位数分别为(章节)(关卡)(是否已完成)","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=level]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§edata.maxMonsterAmount = %%s §7# 记录怪物数目","with":{"rawtext":[{"score":{"objective":"data","name":"maxMonsterAmount"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.maxWave = %%s §7# 记录该关卡最大波数，仅在需要时获取","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=maxWave]"}}]}}]}
@@ -47,7 +49,6 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.alivePlayersAmoun
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.allPlayersAmount = %%s §7# 所有玩家数目是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=allPlayersAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.arrowLimitTest = %%s §7# 箭上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=arrowLimitTest]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.developerMode = %%s §7# 开发者模式","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=developerMode]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.isNetease = %%s §7# 记录是否为netease版本","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=isNetease]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.itemLimitTest = %%s §7# 物品上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=itemLimitTest]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.potionLimitTest = %%s §7# 药水上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=potionLimitTest]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.respawnInNewWave = %%s §7# 是否在新的波次下复活玩家，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=respawnInNewWave]"}}]}}]}
