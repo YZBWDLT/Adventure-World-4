@@ -16,8 +16,5 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePla
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=drownedWithTridentSummoner] ~~~ summon minecraft:drowned ~~~ aw:level_3_with_trident "§c三叉戟溺尸"
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=drownedWithTridentSummoner] ~~~ summon minecraft:drowned ~~~ aw:level_4_with_trident "§c三叉戟溺尸"
 
-### 额外添加生成事件
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=drownedWithTridentSummoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=drowned] slot.weapon.mainhand 0 trident
-
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=drownedWithTridentSummoner]

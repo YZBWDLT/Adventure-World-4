@@ -108,21 +108,21 @@
                 "minecraft:health": { "value": 18, "max": 18 },
                 "minecraft:underwater_movement": { "value": 0.12 },
                 "minecraft:movement": { "value": 0.16 },
-                "minecraft:equipment": { "table": "loot_tables/equipments/leather_armor.json" }
+                "minecraft:equipment": { "table": "loot_tables/equipments/leather_armor_half_with_trident.json" }
             },
             "level_3_with_trident": {
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 18, "max": 18 },
                 "minecraft:underwater_movement": { "value": 0.12 },
                 "minecraft:movement": { "value": 0.16 },
-                "minecraft:equipment": { "table": "loot_tables/equipments/iron_armor.json" }
+                "minecraft:equipment": { "table": "loot_tables/equipments/leather_armor_with_trident.json" }
             },
             "level_4_with_trident": {
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 20, "max": 20 },
                 "minecraft:underwater_movement": { "value": 0.12 },
                 "minecraft:movement": { "value": 0.16 },
-                "minecraft:equipment": { "table": "loot_tables/equipments/diamond_armor.json" }
+                "minecraft:equipment": { "table": "loot_tables/equipments/iron_armor_half_with_trident.json" }
             },
 
             "minecraft:mode_switcher": {
