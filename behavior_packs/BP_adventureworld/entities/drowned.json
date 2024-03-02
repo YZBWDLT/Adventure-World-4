@@ -101,7 +101,8 @@
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 10, "max": 10 },
                 "minecraft:underwater_movement": { "value": 0.12 },
-                "minecraft:movement": { "value": 0.16 }
+                "minecraft:movement": { "value": 0.16 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/trident.json" }
             },
             "level_2_with_trident": {
                 "minecraft:attack": { "damage": 6 },

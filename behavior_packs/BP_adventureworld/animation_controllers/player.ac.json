@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player.item_using_test": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "is_using_enable_crosshair": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:enable_crosshair') && query.is_using_item" }
+                    ]
+                },
+                "is_using_enable_crosshair": {
+                    "on_entry": [ "/function entities/player/using_enable_crosshair" ],
+                    "transitions": [
+                        { "default": "!query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:enable_crosshair') || !query.is_using_item" }
+                    ]
+                }
+            }
+        }
+    }
+}

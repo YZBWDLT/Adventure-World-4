@@ -8,11 +8,13 @@
             "is_experimental": false,
             "scripts": {
                 "animate": [
-                    { "kill_test": "query.is_sheared" }
+                    { "kill_test": "query.is_sheared" },
+                    "controller_item_using_test"
                 ]
             },
             "animations": {
-                "kill_test": "animation.player.kill_test"
+                "kill_test": "animation.player.kill_test",
+                "controller_item_using_test": "controller.animation.player.item_using_test"
             }
         },
 
