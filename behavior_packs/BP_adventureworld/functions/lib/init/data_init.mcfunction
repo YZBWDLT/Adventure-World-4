@@ -1,5 +1,5 @@
 # ===== 地图数据初始化 =====
-# 本函数记录地图全体数据的初始化。数据以特定名称的标记实体（je:marker）记录。
+# 本函数记录地图全体数据的初始化。数据以特定名称的标记实体（aw:marker）记录。
 
 ## --- 记分板 ---
 
@@ -39,20 +39,20 @@ scoreboard players set @a isOnline 1
 
 ## --- 标记分值 ---
 
-kill @e[type=je:marker]
+kill @e[type=aw:marker]
 
 ### data 后台数据
-summon je:marker "level" -82 1 -2
-summon je:marker "monsterAmount" -82 1 -2
-summon je:marker "hookshotAmount" -82 1 -2
-summon je:marker "alivePlayersAmount" -82 1 -2
-summon je:marker "allPlayersAmount" -82 1 -2
-summon je:marker "randomLocation" -82 1 -2
-summon je:marker "randomMonster" -82 1 -2
-summon je:marker "wave" -82 1 -2
-summon je:marker "maxWave" -82 1 -2
-summon je:marker "failedTimes" -82 1 -2
-summon je:marker "isNetease" -82 1 -2
+summon aw:marker "level" -82 1 -2
+summon aw:marker "monsterAmount" -82 1 -2
+summon aw:marker "hookshotAmount" -82 1 -2
+summon aw:marker "alivePlayersAmount" -82 1 -2
+summon aw:marker "allPlayersAmount" -82 1 -2
+summon aw:marker "randomLocation" -82 1 -2
+summon aw:marker "randomMonster" -82 1 -2
+summon aw:marker "wave" -82 1 -2
+summon aw:marker "maxWave" -82 1 -2
+summon aw:marker "failedTimes" -82 1 -2
+summon aw:marker "isNetease" -82 1 -2
 
 scoreboard players set @e[name=level] data 1
 scoreboard players set @e[name=monsterAmount] data 0
@@ -68,11 +68,11 @@ scoreboard players set @e[name=failedTimes] data 0
 scoreboard players set @e[name=isNetease] data 1
 
 ### settings 设置数据
-summon je:marker "developerMode" -82 1 -2
-summon je:marker "arrowLimitTest" -82 1 -2
-summon je:marker "potionLimitTest" -82 1 -2
-summon je:marker "itemLimitTest" -82 1 -2
-summon je:marker "respawnInNewWave" -82 1 -2
+summon aw:marker "developerMode" -82 1 -2
+summon aw:marker "arrowLimitTest" -82 1 -2
+summon aw:marker "potionLimitTest" -82 1 -2
+summon aw:marker "itemLimitTest" -82 1 -2
+summon aw:marker "respawnInNewWave" -82 1 -2
 
 scoreboard players set @e[name=developerMode] settings 0
 scoreboard players set @e[name=arrowLimitTest] settings 1
@@ -81,16 +81,16 @@ scoreboard players set @e[name=itemLimitTest] settings 1
 scoreboard players set @e[name=respawnInNewWave] settings 1
 
 ### time
-summon je:marker "tick" -82 1 -2
-summon je:marker "playedSecond" -82 1 -2
-summon je:marker "playedMinute" -82 1 -2
-summon je:marker "timeLeft" -82 1 -2
-summon je:marker "monsterRefreshLeft" -82 1 -2
-summon je:marker "soundPlayer" -82 1 -2
-summon je:marker "lavaWarningLeft" -82 1 -2
-summon je:marker "timeline" -82 1 -2
-summon je:marker "monsterSummonDelay" -82 1 -2
-summon je:marker "levelCompleteDelay" -82 1 -2
+summon aw:marker "tick" -82 1 -2
+summon aw:marker "playedSecond" -82 1 -2
+summon aw:marker "playedMinute" -82 1 -2
+summon aw:marker "timeLeft" -82 1 -2
+summon aw:marker "monsterRefreshLeft" -82 1 -2
+summon aw:marker "soundPlayer" -82 1 -2
+summon aw:marker "lavaWarningLeft" -82 1 -2
+summon aw:marker "timeline" -82 1 -2
+summon aw:marker "monsterSummonDelay" -82 1 -2
+summon aw:marker "levelCompleteDelay" -82 1 -2
 
 scoreboard players set @e[name=tick] time 0
 scoreboard players set @e[name=playedSecond] time 0
@@ -115,4 +115,4 @@ scoreboard players set @e[name=allPlayersAmount] active 1
 scoreboard players set @a isAlive 2
 
 ## --- 重生点标记 ---
-summon je:marker -82 1 -2 "aw:as_respawner" "respawner"
+summon aw:marker -82 1 -2 "aw:as_respawner" "respawner"

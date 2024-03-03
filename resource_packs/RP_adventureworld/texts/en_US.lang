@@ -30,7 +30,7 @@ entity.aw:npc_netease.name=NPC (Netease Version)
 entity.aw:text_display.name=Floating Text
 entity.aw:skeleton_king.name=Skeleton King
 entity.aw:blaze_king.name=Blaze King
-entity.je:marker.name=Marker
+entity.aw:marker.name=Marker
 
 ### Spawn Eggs
 item.spawn_egg.entity.aw:npc.name=Spawn NPC
