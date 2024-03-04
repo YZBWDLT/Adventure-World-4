@@ -2,7 +2,7 @@
     "pools": [
         {
             "rolls": 1,
-            "entries": [ { "name": "loot_tables/equipments/leather_armor.json", "type": "loot_table" } ]
+            "entries": [ { "name": "loot_tables/equipments/armor/leather_armor_half.json", "type": "loot_table" } ]
         },
         {
             "rolls": 1,

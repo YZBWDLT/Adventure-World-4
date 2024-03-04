@@ -2,7 +2,7 @@
     "pools": [
         {
             "rolls": 1,
-            "entries": [ { "name": "loot_tables/equipments/netherite_armor.json", "type": "loot_table" } ]
+            "entries": [ { "name": "loot_tables/equipments/armor/iron_armor.json", "type": "loot_table" } ]
         },
         {
             "rolls": 1,
