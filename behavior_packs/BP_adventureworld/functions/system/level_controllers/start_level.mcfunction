@@ -8,7 +8,7 @@
 # --- 获取玩家的章节关卡数和现在的关卡进度数据大小 ---
 # （其中判断关卡进度数据已在该函数执行之前予以检测）
 execute @a ~~~ function lib/get_data/entity_location
-execute @a ~~~ scoreboard players operation @s temp = @s inLevelArea
+execute @a ~~~ scoreboard players operation @s temp = @s position
 execute @a ~~~ function lib/get_data/3_digit_seperator
 
 # --- 判断玩家的区域是否超前于关卡进度 ---

@@ -9,7 +9,7 @@ function lib/get_data/player_amount
 execute @a ~~~ function lib/get_data/entity_location
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/get_data/3_digit_seperator
-execute @a ~~~ scoreboard players operation @s temp = @s inLevelArea
+execute @a ~~~ scoreboard players operation @s temp = @s position
 execute @a ~~~ function lib/get_data/3_digit_seperator
 
 # --- 显示关卡进度标记 ---

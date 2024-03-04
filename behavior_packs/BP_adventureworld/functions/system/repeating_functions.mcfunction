@@ -65,7 +65,7 @@ execute @e[name=playedSecond,scores={time=0..59,time=!1..4,time=!6..9,time=!11..
 ## 第二章陷阱更新
 ## 每10秒执行一次。当玩家处于第二章过道区域时执行。
 execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21..29,time=!31..39,time=!41..49,time=!51..59}] ~~~ execute @a ~~~ function lib/get_data/entity_location
-execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21..29,time=!31..39,time=!41..49,time=!51..59}] ~~~ execute @a[scores={inLevelArea=20}] ~~~ function levels/chapter2/traps
+execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21..29,time=!31..39,time=!41..49,time=!51..59}] ~~~ execute @a[scores={position=20}] ~~~ function levels/chapter2/traps
 
 ## 时间线控制器
 ## 仅当时间线处于激活状态下执行。一般而言，“在游戏中”的关卡都会默认开启时间线，而“未在游戏中”时的时间线一般是关闭的。

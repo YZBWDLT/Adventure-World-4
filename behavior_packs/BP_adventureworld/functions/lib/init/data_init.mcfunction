@@ -10,7 +10,7 @@ scoreboard objectives remove settings
 scoreboard objectives remove temp
 scoreboard objectives remove isAlive
 scoreboard objectives remove deathTimes
-scoreboard objectives remove inLevelArea
+scoreboard objectives remove position
 scoreboard objectives remove temp2
 scoreboard objectives remove temp3
 scoreboard objectives remove killAmount
@@ -23,7 +23,7 @@ scoreboard objectives add settings dummy "设置数据"
 scoreboard objectives add temp dummy "临时数据"
 scoreboard objectives add isAlive dummy "存活数据"
 scoreboard objectives add deathTimes dummy "§l§c死亡次数"
-scoreboard objectives add inLevelArea dummy "玩家所在关卡区域ID"
+scoreboard objectives add position dummy "玩家所在关卡区域ID"
 scoreboard objectives add temp2 dummy "临时数据2"
 scoreboard objectives add temp3 dummy "临时数据3"
 scoreboard objectives add hookshot dummy "绳枪数据"
@@ -32,7 +32,7 @@ scoreboard objectives add isOnline dummy "在线数据"
 
 scoreboard players set allFailedTimes data 0
 scoreboard players set @a deathTimes 0
-scoreboard players set @a inLevelArea 0
+scoreboard players set @a position 0
 scoreboard players set @a hookshot -1
 scoreboard players set @a killAmount 0
 scoreboard players set @a isOnline 1

@@ -16,7 +16,7 @@ execute @a ~~~ function lib/get_data/entity_location
 # 玩家位置：章节、关卡数、状态（01正在游戏，2未在游戏） -> temp2.@s、temp3.@s、isAlive.@s
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/get_data/3_digit_seperator
-execute @a ~~~ scoreboard players operation @s temp = @s inLevelArea
+execute @a ~~~ scoreboard players operation @s temp = @s position
 execute @a ~~~ function lib/get_data/3_digit_seperator
 
 # --- 对第一种情况的修正 ---
