@@ -14,7 +14,7 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=skeleton
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_4 "骷髅 | lv.4"
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..3}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_5 "骷髅 | lv.5"
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_6 "骷髅 | lv.6"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_7 "骷髅 | lv.7"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=skeleton4Summoner] ~~~ summon minecraft:skeleton ~~~ aw:level_7 "§c骷髅 | lv.7"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=skeleton4Summoner]

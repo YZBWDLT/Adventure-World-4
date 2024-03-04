@@ -13,10 +13,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=piglinBr
 ### 生成怪物，怪物生成数将根据玩家数目而非线性增长
 ### 玩家数目  1   2~3 4~6 7~10
 ### 怪物倍率  1   2   3   4
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "猪灵蛮兵" ~~~
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "猪灵蛮兵" ~~~
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "猪灵蛮兵" ~~~
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "猪灵蛮兵" ~~~
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§c猪灵蛮兵" ~~~
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§c猪灵蛮兵" ~~~
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§c猪灵蛮兵" ~~~
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§c猪灵蛮兵" ~~~
 
 ### 替换装备
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=piglin_brute] slot.armor.head 0 diamond_helmet
