@@ -93,28 +93,28 @@
                 "minecraft:health": { "value": 18, "max": 18 },
                 "minecraft:movement": { "value": 0.16 },
 				"minecraft:knockback_resistance": { "value":0.1 },
-				"minecraft:equipment": { "table": "loot_tables/equipments/leather_armor.json" }
+				"minecraft:equipment": { "table": "loot_tables/equipments/armor/leather_armor.json" }
             },
             "adult_level_3": {
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 18, "max": 18 },
                 "minecraft:movement": { "value": 0.16 },
 				"minecraft:knockback_resistance": { "value":0.2 },
-				"minecraft:equipment": { "table": "loot_tables/equipments/iron_armor.json" }
+				"minecraft:equipment": { "table": "loot_tables/equipments/armor/iron_armor.json" }
             },
             "adult_level_4": {
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 20, "max": 20 },
                 "minecraft:movement": { "value": 0.16 },
 				"minecraft:knockback_resistance": { "value":0.4 },
-				"minecraft:equipment": { "table": "loot_tables/equipments/diamond_armor.json" }
+				"minecraft:equipment": { "table": "loot_tables/equipments/armor/diamond_armor.json" }
             },
             "adult_level_5": {
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 30, "max": 30 },
                 "minecraft:movement": { "value": 0.16 },
 				"minecraft:knockback_resistance": { "value":1 },
-				"minecraft:equipment": { "table": "loot_tables/equipments/netherite_armor.json" }
+				"minecraft:equipment": { "table": "loot_tables/equipments/armor/netherite_armor.json" }
             },
             "baby_level_1": {
                 "minecraft:scale": { "value": 0.5 },
@@ -131,7 +131,7 @@
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 18, "max": 18 },
                 "minecraft:movement": { "value": 0.25 },
-				"minecraft:equipment": { "table": "loot_tables/equipments/leather_armor.json" }
+				"minecraft:equipment": { "table": "loot_tables/equipments/armor/leather_armor.json" }
             },
             "baby_level_3": {
                 "minecraft:scale": { "value": 0.5 },
@@ -140,7 +140,7 @@
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 18, "max": 18 },
                 "minecraft:movement": { "value": 0.25 },
-				"minecraft:equipment": { "table": "loot_tables/equipments/iron_armor.json" }
+				"minecraft:equipment": { "table": "loot_tables/equipments/armor/iron_armor.json" }
             },
             "baby_level_4": {
                 "minecraft:scale": { "value": 0.5 },
@@ -149,7 +149,7 @@
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 20, "max": 20 },
                 "minecraft:movement": { "value": 0.25 },
-				"minecraft:equipment": { "table": "loot_tables/equipments/diamond_armor.json" }
+				"minecraft:equipment": { "table": "loot_tables/equipments/armor/diamond_armor.json" }
             },
             "baby_level_5": {
                 "minecraft:scale": { "value": 0.5 },
@@ -158,7 +158,7 @@
                 "minecraft:attack": { "damage": 6 },
                 "minecraft:health": { "value": 30, "max": 30 },
                 "minecraft:movement": { "value": 0.25 },
-				"minecraft:equipment": { "table": "loot_tables/equipments/netherite_armor.json" }
+				"minecraft:equipment": { "table": "loot_tables/equipments/armor/netherite_armor.json" }
             }
 		}
 	}

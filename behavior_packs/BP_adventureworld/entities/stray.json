@@ -96,42 +96,42 @@
                 "minecraft:health": { "value": 10, "max": 10 },
                 "minecraft:movement": { "value": 0.25 },
                 "minecraft:type_family": { "family": [ "stray", "skeleton", "undead", "monster", "mob", "level_2" ] },
-                "minecraft:equipment": { "table": "loot_tables/equipments/leather_armor_half_with_bow.json" }
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_bow/leather_armor_half.json" }
 			},
 			"level_3": {
                 "minecraft:attack": { "damage": 3, "effect_name": "slowness", "effect_duration": 10 },
                 "minecraft:health": { "value": 20, "max": 20 },
                 "minecraft:movement": { "value": 0.25 },
                 "minecraft:type_family": { "family": [ "stray", "skeleton", "undead", "monster", "mob", "level_3" ] },
-                "minecraft:equipment": { "table": "loot_tables/equipments/leather_armor_with_bow.json" }
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_bow/leather_armor.json" }
 			},
 			"level_4": {
                 "minecraft:attack": { "damage": 3, "effect_name": "slowness", "effect_duration": 10 },
                 "minecraft:health": { "value": 20, "max": 20 },
                 "minecraft:movement": { "value": 0.25 },
                 "minecraft:type_family": { "family": [ "stray", "skeleton", "undead", "monster", "mob", "level_4" ] },
-                "minecraft:equipment": { "table": "loot_tables/equipments/iron_armor_half_with_bow.json" }
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_bow/iron_armor_half.json" }
 			},
 			"level_5": {
                 "minecraft:attack": { "damage": 3, "effect_name": "slowness", "effect_duration": 10 },
                 "minecraft:health": { "value": 22, "max": 22 },
                 "minecraft:movement": { "value": 0.25 },
                 "minecraft:type_family": { "family": [ "stray", "skeleton", "undead", "monster", "mob", "level_5" ] },
-                "minecraft:equipment": { "table": "loot_tables/equipments/iron_armor_with_bow.json" }
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_bow/iron_armor.json" }
 			},
 			"level_6": {
                 "minecraft:attack": { "damage": 3, "effect_name": "slowness", "effect_duration": 10 },
                 "minecraft:health": { "value": 19, "max": 19 },
                 "minecraft:movement": { "value": 0.25 },
                 "minecraft:type_family": { "family": [ "stray", "skeleton", "undead", "monster", "mob", "level_6" ] },
-                "minecraft:equipment": { "table": "loot_tables/equipments/diamond_armor_half_with_bow.json" }
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_bow/diamond_armor_half.json" }
 			},
 			"level_7": {
                 "minecraft:attack": { "damage": 3, "effect_name": "slowness", "effect_duration": 10 },
                 "minecraft:health": { "value": 666, "max": 666 },
                 "minecraft:movement": { "value": 0.25 },
                 "minecraft:type_family": { "family": [ "stray", "skeleton", "undead", "monster", "mob", "level_7" ] },
-                "minecraft:equipment": { "table": "loot_tables/equipments/diamond_armor_with_bow.json" }
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_bow/diamond_armor.json" }
 			},
 
             "level_1_sword": {
