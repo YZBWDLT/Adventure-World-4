@@ -24,13 +24,13 @@
             "minecraft:collision_box": { "width": 0.4, "height": 0.3 },
             "minecraft:despawn": { "despawn_from_distance": {} },
             "minecraft:behavior.float": { "priority": 1 },
-            "minecraft:behavior.nearest_attackable_target": { "priority": 2, "attack_interval": 10, "entity_types": [ { "filters": { "test": "is_family", "subject" : "other", "value": "player" }, "max_dist": 8 } ] },
+            "minecraft:behavior.nearest_attackable_target": { "priority": 0, "attack_interval": 10, "entity_types": [ { "filters": { "test": "is_family", "subject" : "other", "value": "player" }, "max_dist": 8 } ] },
             "minecraft:behavior.hurt_by_target": { "priority": 1, "alert_same_type": true },
             "minecraft:physics": { },
             "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
             "minecraft:conditional_bandwidth_optimization": { },
             "minecraft:block_climber": { },
-            "minecraft:behavior.melee_attack": { "priority": 4, "track_target": true },
+            "minecraft:behavior.melee_attack": { "priority": 0, "track_target": true },
 
             "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } } ] }
         },

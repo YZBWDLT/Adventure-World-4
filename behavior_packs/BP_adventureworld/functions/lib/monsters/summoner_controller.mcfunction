@@ -49,7 +49,7 @@ execute @e[name=hoglin2Summoner,c=1] ~~~ function lib/monsters/hoglin/level2
 execute @e[name=hoglin3Summoner,c=1] ~~~ function lib/monsters/hoglin/level3
 execute @e[name=hoglin4Summoner,c=1] ~~~ function lib/monsters/hoglin/level4
 
-## --- 蜘蛛&洞穴蜘蛛 ---
+## --- 蜘蛛&洞穴蜘蛛&蠹虫 ---
 execute @e[name=spider1Summoner,c=1] ~~~ function lib/monsters/spider/level1
 execute @e[name=spider2Summoner,c=1] ~~~ function lib/monsters/spider/level2
 execute @e[name=spider3Summoner,c=1] ~~~ function lib/monsters/spider/level3
