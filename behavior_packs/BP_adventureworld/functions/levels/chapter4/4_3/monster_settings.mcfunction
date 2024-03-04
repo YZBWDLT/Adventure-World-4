@@ -40,7 +40,6 @@ execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -160 -15 0 "aw:as_sum
 
 # --- 第4波 ---
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -150 -10 0 "aw:as_summoner" "drownedWithTridentSummoner"
-execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -163 -8 0 "aw:as_summoner" "drownedWithTridentSummoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -163 -9 14 "aw:as_summoner" "drownedWithTridentSummoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -151 -8 13 "aw:as_summoner" "drownedWithTridentSummoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -157 -17 6 "aw:as_summoner" "drownedWithTridentSummoner"
