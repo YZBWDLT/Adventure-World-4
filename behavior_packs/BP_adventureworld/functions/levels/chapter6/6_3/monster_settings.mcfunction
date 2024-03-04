@@ -20,7 +20,7 @@ execute @e[name=wave,scores={data=2}] ~~~ summon aw:marker -70 -34 -3 "aw:as_sum
 # --- 第3波 ---
 execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -79 -38 -4 "aw:as_summoner" "silverfish1Summoner"
 execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -77 -38 -4 "aw:as_summoner" "silverfish1Summoner"
-execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -75 -38 -4 "aw:as_summoner" "silverfish1Summoner"
+execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -75 -38 -4 "aw:as_summoner" "skeletonWithSword2Summoner"
 execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -73 -38 -4 "aw:as_summoner" "silverfish1Summoner"
 execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -71 -38 -4 "aw:as_summoner" "silverfish1Summoner"
 execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -81 -38 4 "aw:as_summoner" "witchSummoner"

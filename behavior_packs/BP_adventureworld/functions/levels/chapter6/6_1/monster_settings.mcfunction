@@ -4,8 +4,7 @@
 
 # --- 第1波 ---
 execute @e[name=wave,scores={data=1}] ~~~ summon aw:marker -72 -31 -48 "aw:as_summoner" "zombie3Summoner"
-execute @e[name=wave,scores={data=1}] ~~~ summon aw:marker -76 -31 -52 "aw:as_summoner" "zombie3Summoner"
-execute @e[name=wave,scores={data=1}] ~~~ summon aw:marker -74 -31 -59 "aw:as_summoner" "zombie3Summoner"
+execute @e[name=wave,scores={data=1}] ~~~ summon aw:marker -76 -31 -52 "aw:as_summoner" "skeletonWithSword1Summoner"
 execute @e[name=wave,scores={data=1}] ~~~ summon aw:marker -78 -31 -62 "aw:as_summoner" "caveSpider1Summoner"
 execute @e[name=wave,scores={data=1}] ~~~ summon aw:marker -83 -27 -52 "aw:as_summoner" "creeperSpeedSummoner"
 execute @e[name=wave,scores={data=1}] ~~~ summon aw:marker -69 -27 -59 "aw:as_summoner" "skeleton3Summoner"

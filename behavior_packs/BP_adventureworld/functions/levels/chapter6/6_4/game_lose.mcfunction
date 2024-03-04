@@ -15,3 +15,6 @@ structure load 6_4_no_lava -89 -40 21
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
 function lib/all_levels/game_lose
+
+# --- 移除haveNoBoss标记 ---
+kill @e[name=haveNoBoss]

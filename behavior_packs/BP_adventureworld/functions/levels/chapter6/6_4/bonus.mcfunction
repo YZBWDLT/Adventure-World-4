@@ -24,3 +24,6 @@ function lib/all_levels/bonus
 
 ## --- 将旷野之剑动画的时间线数据初始化 ---
 function lib/timeline/enable
+
+# --- 移除haveNoBoss标记 ---
+kill @e[name=haveNoBoss]
