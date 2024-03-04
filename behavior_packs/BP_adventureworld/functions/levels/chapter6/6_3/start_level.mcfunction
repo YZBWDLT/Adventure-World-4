@@ -16,3 +16,6 @@ function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] data 4
+
+## --- 上涨岩浆 ---
+structure load 6_3_lava_2 -82 -40 -7

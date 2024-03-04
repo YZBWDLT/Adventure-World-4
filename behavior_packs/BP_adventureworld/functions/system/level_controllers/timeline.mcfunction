@@ -11,6 +11,7 @@ execute @e[name=level,scores={data=320}] ~~~ function levels/chapter3/3_2/timeli
 execute @e[name=level,scores={data=340}] ~~~ function levels/chapter3/3_4/timeline 
 execute @e[name=level,scores={data=410}] ~~~ function levels/chapter4/4_1/timeline 
 execute @e[name=level,scores={data=440}] ~~~ function levels/chapter4/4_4/timeline 
+execute @e[name=level,scores={data=630}] ~~~ function levels/chapter6/6_3/timeline 
 execute @e[name=level,scores={data=640}] ~~~ function levels/chapter6/6_4/timeline 
 execute @e[name=level,scores={data=641..709}] ~~~ function levels/chapter7/7_0/timeline 
 execute @e[name=level,scores={data=720}] ~~~ function levels/chapter7/7_2/timeline 

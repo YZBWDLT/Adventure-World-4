@@ -87,7 +87,6 @@ summon aw:marker "playedMinute" -82 1 -2
 summon aw:marker "timeLeft" -82 1 -2
 summon aw:marker "monsterRefreshLeft" -82 1 -2
 summon aw:marker "soundPlayer" -82 1 -2
-summon aw:marker "lavaWarningLeft" -82 1 -2
 summon aw:marker "timeline" -82 1 -2
 summon aw:marker "monsterSummonDelay" -82 1 -2
 summon aw:marker "levelCompleteDelay" -82 1 -2
@@ -98,7 +97,6 @@ scoreboard players set @e[name=playedMinute] time 0
 scoreboard players set @e[name=timeLeft] time 0
 scoreboard players set @e[name=monsterRefreshLeft] time 0
 scoreboard players set @e[name=soundPlayer] time 0
-scoreboard players set @e[name=lavaWarningLeft] time 0
 scoreboard players set @e[name=timeline] time 0
 scoreboard players set @e[name=monsterSummonDelay] time 0
 scoreboard players set @e[name=levelCompleteDelay] time 0

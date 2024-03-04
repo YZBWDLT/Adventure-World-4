@@ -54,10 +54,13 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.respawnInNewWave 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== temp类记分项 ====="}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"temp.level = §a%%s §7# 通过位数分离器获取的章节数据","with":{"rawtext":[{"score":{"objective":"temp","name":"@e[name=level]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"temp.respawner = §a%%s §7# 重生点随机数据","with":{"rawtext":[{"score":{"objective":"temp","name":"@e[name=respawner]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"temp.@e[family=blaze_king] = §a%%s §7# 烈焰之魂试图生成怪物的倒计时，单位：秒","with":{"rawtext":[{"score":{"objective":"temp","name":"@e[family=blaze_king]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§btemp.@s = §a%%s §7# 不定意义","with":{"rawtext":[{"score":{"objective":"temp","name":"@s"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"temp2.level = §a%%s §7# 通过位数分离器获取的关卡数据","with":{"rawtext":[{"score":{"objective":"temp2","name":"@e[name=level]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"temp2.@e[family=blaze_king] = §a%%s §7# 烈焰之魂当前的血量情况，1：一阶段（血量2/3~3/3）；2：二阶段（血量1/3~2/3）；3：三阶段（血量0~1/3）","with":{"rawtext":[{"score":{"objective":"temp2","name":"@e[family=blaze_king]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§btemp2.@s = §a%%s §7# 通过位数分离器获取的当前所在关卡章节","with":{"rawtext":[{"score":{"objective":"temp2","name":"@s"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"temp3.level = §a%%s §7# 通过位数分离器获取的游玩状态数据，1：已完成关卡，0：未完成关卡","with":{"rawtext":[{"score":{"objective":"temp3","name":"@e[name=level]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"temp3.@e[family=blaze_king] = §a%%s §7# 烈焰之魂试图令岩浆涨落的倒计时，单位：秒","with":{"rawtext":[{"score":{"objective":"temp3","name":"@e[family=blaze_king]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§btemp3.@s = §a%%s §7# 通过位数分离器获取的当前所在关卡数","with":{"rawtext":[{"score":{"objective":"temp3","name":"@s"}}]}}]}
 
 ## === 时间数据 time ===
@@ -67,11 +70,11 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.monsterRefreshLeft = 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.monsterSummonDelay = §a%%s §7# 怪物生成延迟","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=monsterSummonDelay]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.playedMinute = §a%%s §7# 游玩时长（分钟），从试炼开始时开始计时","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=playedMinute]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.playedSecond = §a%%s §7# 游玩时长（秒），从试炼开始时开始计时","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=playedSecond]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.lavaWarningLeft = §a%%s §7# 用于设定岩浆溢出的剩余时间","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=lavaWarningLeft]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.soundPlayer = §a%%s §7# 音效播放器，单位：刻","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=soundPlayer]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.tick = §a%%s §7# 每1刻加1分，每20刻归零","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=tick]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.timeLeft = §a%%s §7# 关卡剩余时间，单位秒","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeLeft]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.timeline = §a%%s §7# 时间线","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeline]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.@e[family=blaze_king] = §a%%s §7# 烈焰之魂试图随机传送的倒计时，单位：秒","with":{"rawtext":[{"score":{"objective":"time","name":"@e[family=blaze_king]"}}]}}]}
 
 ## === 标签 ===
 tellraw @s {"rawtext":[{"translate":"§l===== 标签类型（tag）项 ====="}]}

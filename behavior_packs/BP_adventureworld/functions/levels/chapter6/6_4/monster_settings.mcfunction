@@ -3,7 +3,7 @@
 # 直接调用对应关卡的本函数会立即生成对应生成器
 
 # --- 第1波 ---
-execute @e[name=wave,scores={data=1}] ~~~ summon je:marker -74 -35 -2 "aw:as_summoner" "blazeKingSummoner"
+execute @e[name=wave,scores={data=1}] ~~~ summon aw:marker -75 -37 35 "aw:as_summoner" "blazeKingSummoner"
 # --- 第2波 ---
 
 # --- 第3波 ---

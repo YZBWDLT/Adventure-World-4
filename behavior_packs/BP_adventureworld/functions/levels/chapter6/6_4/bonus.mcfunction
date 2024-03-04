@@ -17,8 +17,7 @@ fill -76 -39 20 -74 -37 20 structure_void
 tp @e[family=respawner] -75 -38 30
 
 ## --- 清除残余岩浆 ---
-fill -89 -40 49 -61 -39 21 air[] replace lava[]
-fill -89 -40 49 -61 -39 21 air[] replace flowing_lava[]
+structure load 6_4_no_lava -89 -40 21
 
 ## --- 调用所有关卡通用奖励功能 ---
 function lib/all_levels/bonus
