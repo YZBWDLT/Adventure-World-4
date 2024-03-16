@@ -14,32 +14,32 @@ item.aw:iron_leggings.name=铁护腿
 item.aw:iron_boots.name=铁靴子
 item.aw:hookshot.name=绳枪
 item.aw:quiver.name=箭袋
+item.aw:acoustic_stone_crystal.name=传声石结晶
 item.aw:enable_crosshair.name=启用准星
-item.aw:health_potion_1.name=生命药水 I
-item.aw:health_potion_2.name=生命药水 II
-item.aw:health_boost_potion_1.name=生命提升药水 I
-item.aw:health_boost_potion_2.name=生命提升药水 II
-item.aw:resistance_potion_1.name=抗性提升药水 I
-item.aw:resistance_potion_2.name=抗性提升药水 II
-item.aw:strength_potion_1.name=力量药水 I
-item.aw:strength_potion_2.name=力量药水 II
-item.aw:regeneration_potion_1.name=生命恢复药水 I
-item.aw:regeneration_potion_2.name=生命恢复药水 II
-item.aw:boost_potion_1.name=全提升药水 I
-item.aw:boost_potion_2.name=全提升药水 II
+item.aw:potion_health.name=治疗药水
+item.aw:potion_growth.name=生长药水
+item.aw:potion_thrill.name=亢奋药水
+item.aw:potion_turtle.name=神龟药水
+item.aw:potion_rebirth.name=重生药水
+item.aw:potion_purification.name=净化药水
+item.aw:potion_hibernation.name=休眠药水
+
+item.aw:toggle_wave.name=调整波数
+item.aw:summon_monsters.name=生成怪物
+item.aw:kill_monsters.name=清除怪物
+item.aw:get_equipment.name=获取装备
 
 ### 实体类
 entity.aw:hookshot.name=绳枪
 entity.aw:npc.name=NPC
-entity.aw:npc_netease.name=NPC(Netease版)
+entity.aw:npc.name=NPC(Netease版)
 entity.aw:text_display.name=悬浮文本
 entity.aw:skeleton_king.name=骷髅王
 entity.aw:blaze_king.name=烈焰之魂
-entity.je:marker.name=标记
+entity.aw:marker.name=标记
 
 ### 刷怪蛋类
 item.spawn_egg.entity.aw:npc.name=NPC 刷怪蛋
-item.spawn_egg.entity.aw:npc_netease.name=NPC(Netease版) 刷怪蛋
 item.spawn_egg.entity.aw:text_display.name=悬浮文本 刷怪蛋
 item.spawn_egg.entity.aw:skeleton_king.name=骷髅王 刷怪蛋
 item.spawn_egg.entity.aw:blaze_king.name=烈焰之魂 刷怪蛋

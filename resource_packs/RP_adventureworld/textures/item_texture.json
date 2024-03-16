@@ -21,18 +21,17 @@
         "aw_iron_leggings": { "textures": "textures/items/iron_leggings" },
         "aw_iron_boots": { "textures": "textures/items/iron_boots" },
 
-        
-        "health_potion_1": { "textures": "textures/new_items/potions/health_potion_1" },
-        "regeneration_potion_1": { "textures": "textures/new_items/potions/regeneration_potion_1" },
-        "resistance_potion_1": { "textures": "textures/new_items/potions/resistance_potion_1" },
-        "health_boost_potion_1": { "textures": "textures/new_items/potions/health_boost_potion_1" },
-        "boost_potion_1": { "textures": "textures/new_items/potions/boost_potion_1" },
-        "strength_potion_1": { "textures": "textures/new_items/potions/strength_potion_1" },
-        "health_potion_2": { "textures": "textures/new_items/potions/health_potion_2" },
-        "regeneration_potion_2": { "textures": "textures/new_items/potions/regeneration_potion_2" },
-        "resistance_potion_2": { "textures": "textures/new_items/potions/resistance_potion_2" },
-        "health_boost_potion_2": { "textures": "textures/new_items/potions/health_boost_potion_2" },
-        "boost_potion_2": { "textures": "textures/new_items/potions/boost_potion_2" },
-        "strength_potion_2": { "textures": "textures/new_items/potions/strength_potion_2" }
+        "potion_health": { "textures": "textures/new_items/potions/potion_health" },
+        "potion_growth": { "textures": "textures/new_items/potions/potion_growth" },
+        "potion_thrill": { "textures": "textures/new_items/potions/potion_thrill" },
+        "potion_turtle": { "textures": "textures/new_items/potions/potion_turtle" },
+        "potion_rebirth": { "textures": "textures/new_items/potions/potion_rebirth" },
+        "potion_purification": { "textures": "textures/new_items/potions/potion_purification" },
+        "potion_hibernation": { "textures": "textures/new_items/potions/potion_hibernation" },
+
+        "get_equipment": { "textures": "textures/items/diamond_chestplate" },
+
+        "acoustic_stone_crystal": { "textures": "textures/new_items/acoustic_stone_crystal" }
+
     }
 }

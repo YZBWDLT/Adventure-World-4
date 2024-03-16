@@ -1,0 +1,16 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:iron_chestplate", "type": "item" }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:iron_boots", "type": "item" }
+            ]
+        }
+    ]
+}

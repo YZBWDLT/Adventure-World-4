@@ -60,62 +60,111 @@
                 "filters": { "all_of": [ { "test": "is_family", "subject": "other", "operator": "!=", "value": "piglin" } ] },
                 "angry_sound": "angry",
                 "sound_interval": { "range_min": 2.0, "range_max": 5.0 }
-            }
+            },
+
+            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } } ] }
         },
   
         "events": {
             "minecraft:entity_spawned": {
                 "randomize": [
-                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_2" ] } },
-                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_2" ] } }
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_2_ranged" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_2_melee" ] } }
                 ]
             },
             "aw:level_1": { 
                 "randomize": [
-                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_1" ] } },
-                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_1" ] } }
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_1_ranged" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_1_melee" ] } }
                 ] 
             },
             "aw:level_2": { 
                 "randomize": [
-                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_2" ] } },
-                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_2" ] } }
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_2_ranged" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_2_melee" ] } }
                 ] 
             },
             "aw:level_3": { 
                 "randomize": [
-                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_3" ] } },
-                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_3" ] } }
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_3_ranged" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_3_melee" ] } }
                 ] 
             },
             "aw:level_4": { 
                 "randomize": [
-                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_4" ] } },
-                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_4" ] } }
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_4_ranged" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_4_melee" ] } }
+                ] 
+            },
+            "aw:level_5": { 
+                "randomize": [
+                    { "weight": 1, "add": { "component_groups": [ "ranged_unit", "level_5_ranged" ] } },
+                    { "weight": 1, "add": { "component_groups": [ "melee_unit", "level_5_melee" ] } }
                 ] 
             }
         },
 
         "component_groups": {
-            "level_1": {
-                "minecraft:attack": { "damage": 5 },
-                "minecraft:health": { "value": 16, "max": 16 },
-                "minecraft:movement": { "value": 0.35 }
+            "level_1_ranged": {
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 10, "max": 10 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/crossbow.json" }
 			},
-			"level_2": {
-                "minecraft:attack": { "damage": 5 },
-                "minecraft:health": { "value": 16, "max": 16 },
-                "minecraft:movement": { "value": 0.35 }
+			"level_2_ranged": {
+                "minecraft:attack": { "damage": 10 },
+                "minecraft:health": { "value": 18, "max": 18 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_crossbow/leather_armor.json" }
 			},
-			"level_3": {
-                "minecraft:attack": { "damage": 5 },
-                "minecraft:health": { "value": 16, "max": 16 },
-                "minecraft:movement": { "value": 0.35 }
+			"level_3_ranged": {
+                "minecraft:attack": { "damage": 12 },
+                "minecraft:health": { "value": 25, "max": 25 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_crossbow/iron_armor.json" }
 			},
-			"level_4": {
-                "minecraft:attack": { "damage": 5 },
-                "minecraft:health": { "value": 16, "max": 16 },
-                "minecraft:movement": { "value": 0.35 }
+			"level_4_ranged": {
+                "minecraft:attack": { "damage": 14 },
+                "minecraft:health": { "value": 32, "max": 32 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_crossbow/diamond_armor.json" }
+			},
+            "level_5_ranged": {
+                "minecraft:attack": { "damage": 16 },
+                "minecraft:health": { "value": 48, "max": 48 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_crossbow/netherite_armor.json" }
+			},
+
+            "level_1_melee": {
+                "minecraft:attack": { "damage": 8 },
+                "minecraft:health": { "value": 10, "max": 10 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/wooden_sword.json" }
+			},
+			"level_2_melee": {
+                "minecraft:attack": { "damage": 10 },
+                "minecraft:health": { "value": 18, "max": 18 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_sword/leather_armor.json" }
+			},
+			"level_3_melee": {
+                "minecraft:attack": { "damage": 12 },
+                "minecraft:health": { "value": 25, "max": 25 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_sword/iron_armor.json" }
+			},
+			"level_4_melee": {
+                "minecraft:attack": { "damage": 14 },
+                "minecraft:health": { "value": 32, "max": 32 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_sword/diamond_armor.json" }
+			},
+            "level_5_melee": {
+                "minecraft:attack": { "damage": 16 },
+                "minecraft:health": { "value": 48, "max": 48 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_sword/netherite_armor.json" }
 			},
 
             "ranged_unit": {

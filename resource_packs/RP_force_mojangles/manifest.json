@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "强制Mojangles",
+        "description": "Force Mojangles - by YZBWDLT",
+        "uuid": "b48479b2-9489-41ff-874e-b7c899c8bccc",
+        "min_engine_version": [ 1, 18, 0 ],
+        "version": [ 2, 0, 0 ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "1abb5913-4a27-4db4-a774-7948d88e791d",
+            "version": [ 1, 0, 0 ]
+        }
+    ]
+}

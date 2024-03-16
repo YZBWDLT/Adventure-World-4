@@ -2,14 +2,14 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] background 621
+scoreboard players set @e[name=level] data 621
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§a6-2已完成！\n§a§a[全提升药水 I]§f已升级到§a[全提升药水 II]§f\n§b你的弓似乎有了一些独特的魔力..."}]}
+tellraw @a {"rawtext":[{"text":"§l§a6-2已完成！§r"}]}
 
 ## --- 打开入口与出口 ---
 fill -81 -19 -48 -79 -17 -48 air
-fill -72 -19 -32 -70 -17 -32 air
+fill -72 -19 -30 -70 -17 -30 air
 
 ## --- 打开6-3 ---
 fill -74 -32 -23 -77 -32 -22 air[] replace obsidian[]
@@ -18,4 +18,4 @@ fill -74 -32 -23 -77 -32 -22 air[] replace obsidian[]
 tp @e[family=respawner] -75 -21 -36
 
 ## --- 调用所有关卡通用奖励功能 ---
-function methods/all_levels/bonus
+function lib/all_levels/bonus

@@ -1,0 +1,23 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aw:potion_thrill"
+        },
+        "components": {
+            "minecraft:max_stack_size": 16,
+            "minecraft:food": { 
+                "nutrition": 0,
+                "saturation_modifier": "poor",
+                "can_always_eat": true,
+                "using_converts_to": "glass_bottle",
+                "effects": [
+                    { "name": "strength", "chance" : 1.0, "duration" : 600, "amplifier" : 1 },
+                    { "name": "speed", "chance" : 1.0, "duration" : 600, "amplifier" : 1 },
+                    { "name": "poison", "chance" : 1.0, "duration" : 30, "amplifier" : 0 }
+                ]
+            },
+            "minecraft:use_duration": 32
+        }
+    }
+}

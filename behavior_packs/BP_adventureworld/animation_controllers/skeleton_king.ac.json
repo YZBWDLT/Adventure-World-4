@@ -1,0 +1,16 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.skeleton_king.extra_damage": {
+            "initial_state": "default",
+            "states": {
+                "default": { 
+                    "transitions": [ { "kill_self": "query.variant == 1" } ]
+                },
+                "kill_self": {
+                    "on_entry": [ "/function entities/skeleton_king/extra_damage", "@s aw:stop_extra_damage" ]
+                }
+            }
+        }
+    }
+}

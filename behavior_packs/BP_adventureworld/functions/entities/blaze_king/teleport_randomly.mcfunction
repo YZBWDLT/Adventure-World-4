@@ -1,7 +1,11 @@
-scoreboard players random @e[name=randomLocation] background 0 5
+# ===== 随机传送 =====
+# 将自己传送到任意的一个randomTeleporter上
 
-execute @e[name=randomLocation,scores={background=0}] ~~~ tp @e[type=aw:blaze_king] -75 -37 35
-execute @e[name=randomLocation,scores={background=1}] ~~~ tp @e[type=aw:blaze_king] -84 -38 26
-execute @e[name=randomLocation,scores={background=2}] ~~~ tp @e[type=aw:blaze_king] -66 -38 44
-execute @e[name=randomLocation,scores={background=3}] ~~~ tp @e[type=aw:blaze_king] -84 -38 44
-execute @e[name=randomLocation,scores={background=4}] ~~~ tp @e[type=aw:blaze_king] -66 -38 26
+## 倒计时
+scoreboard players remove @s time 1
+
+## 此处必须加上type，以指定@r指代的是标记实体而非玩家
+execute @s[scores={time=0}] ~~~ tp @s @r[type=aw:marker,family=random_teleporter]
+
+## 重置时间
+scoreboard players random @s[scores={time=!1..25}] time 20 25

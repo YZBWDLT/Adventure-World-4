@@ -1,0 +1,28 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:leather_helmet", "type": "item" }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:leather_chestplate", "type": "item" }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:leather_leggings", "type": "item" }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:leather_boots", "type": "item" }
+            ]
+        }
+    ]
+}
