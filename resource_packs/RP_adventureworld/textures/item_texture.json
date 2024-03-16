@@ -27,6 +27,11 @@
         "potion_turtle": { "textures": "textures/new_items/potions/potion_turtle" },
         "potion_rebirth": { "textures": "textures/new_items/potions/potion_rebirth" },
         "potion_purification": { "textures": "textures/new_items/potions/potion_purification" },
-        "potion_hibernation": { "textures": "textures/new_items/potions/potion_hibernation" }
+        "potion_hibernation": { "textures": "textures/new_items/potions/potion_hibernation" },
+
+        "get_equipment": { "textures": "textures/items/diamond_chestplate" },
+
+        "acoustic_stone_crystal": { "textures": "textures/new_items/acoustic_stone_crystal" }
+
     }
 }
