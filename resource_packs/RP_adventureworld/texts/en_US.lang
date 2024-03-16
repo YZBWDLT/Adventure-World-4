@@ -14,6 +14,7 @@ item.aw:iron_leggings.name=Iron Leggings
 item.aw:iron_boots.name=Iron Boots
 item.aw:hookshot.name=Hookshot
 item.aw:quiver.name=Quiver
+item.aw:acoustic_stone_crystal.name=Acoustic Stone Crystal
 item.aw:enable_crosshair.name=Enable Crosshair
 item.aw:potion_health.name=Health Potion
 item.aw:potion_growth.name=Growth Potion
@@ -23,10 +24,15 @@ item.aw:potion_rebirth.name=Rebirth Potion
 item.aw:potion_purification.name=Purification Potion
 item.aw:potion_hibernation.name=Hibernation Potion
 
+item.aw:toggle_wave.name=Toggle Wave
+item.aw:summon_monsters.name=Summon Monsters
+item.aw:kill_monsters.name=Kill Monsters
+item.aw:get_equipment.name=Get Equipment
+
 ### Entities
 entity.aw:hookshot.name=Hookshot
 entity.aw:npc.name=NPC
-entity.aw:npc_netease.name=NPC (Netease Version)
+entity.aw:npc.name=NPC (Netease Version)
 entity.aw:text_display.name=Floating Text
 entity.aw:skeleton_king.name=Skeleton King
 entity.aw:blaze_king.name=Blaze King
@@ -34,7 +40,6 @@ entity.aw:marker.name=Marker
 
 ### Spawn Eggs
 item.spawn_egg.entity.aw:npc.name=Spawn NPC
-item.spawn_egg.entity.aw:npc_netease.name=Spawn NPC (Netease Version)
 item.spawn_egg.entity.aw:text_display.name=Spawn Floating Text
 item.spawn_egg.entity.aw:skeleton_king.name=Spawn Skeleton King
 item.spawn_egg.entity.aw:blaze_king.name=Spawn Blaze King

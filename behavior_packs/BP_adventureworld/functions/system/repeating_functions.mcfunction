@@ -21,6 +21,10 @@ execute @e[name=soundPlayer,scores={active=!0}] ~~~ function system/sound_player
 ## 每秒执行一次。
 execute @e[name=tick,scores={time=0}] ~~~ effect @a saturation 1 10 true
 
+## NPC对话
+## 当强制视角对话正在启用时，不启用该命令
+execute @e[name=dialogue,scores={active=!2}] ~~~ execute @e[type=aw:npc,family=interacted] ~~~ function system/npc_chat_table
+
 # --- 物品函数 ---
 # 这些函数是部分物品的特殊功能。
 
@@ -71,6 +75,10 @@ execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21
 ## 仅当时间线处于激活状态下执行。一般而言，“在游戏中”的关卡都会默认开启时间线，而“未在游戏中”时的时间线一般是关闭的。
 ##<!> 需要测试玩家重新进入时是否会出现问题 | 原文【加上exe @e[type=player] ~是为了防止玩家重新进入时因为实体未加载而错误的判定为关卡失败从而卡关的问题】
 execute @e[name=timeline,scores={active=1..}] ~~~ function system/level_controllers/timeline
+
+## 对话控制器
+## 仅当对话处于激活状态下执行。
+execute @e[name=dialogue,scores={active=1..}] ~~~ function system/level_controllers/dialogue
 
 ## 怪物延迟生成控制器
 ## 仅当怪物延迟生成处于激活状态下执行。在每次生成怪物前，都需要先启用怪物延迟生成并设定延迟时长。

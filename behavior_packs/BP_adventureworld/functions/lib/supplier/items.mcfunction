@@ -2,6 +2,10 @@
 # 当玩家在某些关键进度无该物品时，调用此函数以给予之
 # 该供应器也用于在关卡完成后直接调用以给予玩家物品
 
+## --- 传声石晶体 ---
+## 1-0给予，一直保留 | 仅限剧情模式开启时
+execute @e[name=storyMode,scores={settings=1}] ~~~ give @a[hasitem={item=aw:acoustic_stone_crystal,quantity=0}] aw:acoustic_stone_crystal 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+
 ## --- 皮革头盔 ---
 ## 1-0给予，保留到1-3结束前 | 锁定到槽位上
 execute @e[name=level,scores={data=100..130}] ~~~ replaceitem entity @a[hasitem={item=leather_helmet,quantity=0,location=slot.armor.head}] slot.armor.head 0 leather_helmet 1 0 {"item_lock":{"mode":"lock_in_slot"}}

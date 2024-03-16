@@ -14,6 +14,7 @@ item.aw:iron_leggings.name=铁护腿
 item.aw:iron_boots.name=铁靴子
 item.aw:hookshot.name=绳枪
 item.aw:quiver.name=箭袋
+item.aw:acoustic_stone_crystal.name=传声石结晶
 item.aw:enable_crosshair.name=启用准星
 item.aw:potion_health.name=治疗药水
 item.aw:potion_growth.name=生长药水
@@ -26,11 +27,12 @@ item.aw:potion_hibernation.name=休眠药水
 item.aw:toggle_wave.name=调整波数
 item.aw:summon_monsters.name=生成怪物
 item.aw:kill_monsters.name=清除怪物
+item.aw:get_equipment.name=获取装备
 
 ### 实体类
 entity.aw:hookshot.name=绳枪
 entity.aw:npc.name=NPC
-entity.aw:npc_netease.name=NPC(Netease版)
+entity.aw:npc.name=NPC(Netease版)
 entity.aw:text_display.name=悬浮文本
 entity.aw:skeleton_king.name=骷髅王
 entity.aw:blaze_king.name=烈焰之魂
@@ -38,7 +40,6 @@ entity.aw:marker.name=标记
 
 ### 刷怪蛋类
 item.spawn_egg.entity.aw:npc.name=NPC 刷怪蛋
-item.spawn_egg.entity.aw:npc_netease.name=NPC(Netease版) 刷怪蛋
 item.spawn_egg.entity.aw:text_display.name=悬浮文本 刷怪蛋
 item.spawn_egg.entity.aw:skeleton_king.name=骷髅王 刷怪蛋
 item.spawn_egg.entity.aw:blaze_king.name=烈焰之魂 刷怪蛋
