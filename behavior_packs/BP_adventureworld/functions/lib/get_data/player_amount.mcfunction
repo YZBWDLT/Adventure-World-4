@@ -4,5 +4,5 @@
 execute @e[name=alivePlayersAmount,scores={active=1}] ~~~ scoreboard players set @s data 0
 execute @e[name=alivePlayersAmount,scores={active=1}] ~~~ execute @a[scores={isAlive=1..3}] ~~~ scoreboard players add @e[name=alivePlayersAmount] data 1
 
-execute @e[name=allPlayersAmount,scores={active=1}] ~~~ scoreboard players set @s data 0
-execute @e[name=allPlayersAmount,scores={active=1}] ~~~ execute @a ~~~ scoreboard players add @e[name=allPlayersAmount] data 1
+execute @e[name=maxPlayersAmount,scores={active=1}] ~~~ scoreboard players set @s data 0
+execute @e[name=maxPlayersAmount,scores={active=1}] ~~~ execute @a ~~~ scoreboard players add @e[name=maxPlayersAmount] data 1

@@ -17,12 +17,16 @@ execute @e[name=tick,scores={time=5}] ~~~ function lib/show_wave
 
 # --- 按玩家数显示记分板 ---
 
-## 玩家数为1时，不显示玩家数量
-execute @e[name=allPlayersAmount,scores={data=1}] ~~~ function system/level_controllers/actionbar_singleplayer
-## 玩家数大于1时，显示玩家数量
-execute @e[name=allPlayersAmount,scores={data=2..}] ~~~ function system/level_controllers/actionbar_multiplayer
+## 纯战斗模式、玩家数为1时
+execute @e[name=storyMode,scores={settings=0}] ~~~ execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ function lib/scoreboard/singleplayer_combat_mode
+## 纯战斗模式、玩家数大于2时
+execute @e[name=storyMode,scores={settings=0}] ~~~ execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ function lib/scoreboard/multiplayer_combat_mode
+## 剧情模式、玩家数为1时
+execute @e[name=storyMode,scores={settings=1}] ~~~ execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ function lib/scoreboard/singleplayer_story_mode
+## 剧情模式、玩家数大于2时
+execute @e[name=storyMode,scores={settings=1}] ~~~ execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ function lib/scoreboard/multiplayer_story_mode
 
 # --- 特殊快捷栏标题 ---
 
 ## 物品快捷栏标题
-function system/level_controllers/actionbar_items
+function lib/scoreboard/items
