@@ -46,7 +46,7 @@ summon aw:marker "level" -82 1 -2
 summon aw:marker "monsterAmount" -82 1 -2
 summon aw:marker "hookshotAmount" -82 1 -2
 summon aw:marker "alivePlayersAmount" -82 1 -2
-summon aw:marker "allPlayersAmount" -82 1 -2
+summon aw:marker "maxPlayersAmount" -82 1 -2
 summon aw:marker "randomLocation" -82 1 -2
 summon aw:marker "randomMonster" -82 1 -2
 summon aw:marker "wave" -82 1 -2
@@ -61,7 +61,7 @@ scoreboard players set @e[name=hookshotAmount] data 0
 scoreboard players set @e[name=randomLocation] data 0
 scoreboard players set @e[name=randomMonster] data 0
 scoreboard players set @e[name=alivePlayersAmount] data 1
-scoreboard players set @e[name=allPlayersAmount] data 1
+scoreboard players set @e[name=maxPlayersAmount] data 1
 scoreboard players set @e[name=wave] data 0
 scoreboard players set @e[name=maxWave] data 0
 scoreboard players set @e[name=failedTimes] data 0
@@ -73,12 +73,16 @@ summon aw:marker "arrowLimitTest" -82 1 -2
 summon aw:marker "potionLimitTest" -82 1 -2
 summon aw:marker "itemLimitTest" -82 1 -2
 summon aw:marker "respawnInNewWave" -82 1 -2
+summon aw:marker "storyMode" -82 1 -2
+summon aw:marker "simulatedLevel" -82 1 -2
 
 scoreboard players set @e[name=developerMode] settings 0
 scoreboard players set @e[name=arrowLimitTest] settings 1
 scoreboard players set @e[name=potionLimitTest] settings 1
 scoreboard players set @e[name=itemLimitTest] settings 1
 scoreboard players set @e[name=respawnInNewWave] settings 1
+scoreboard players set @e[name=storyMode] settings 1
+scoreboard players set @e[name=simulatedLevel] settings 0
 
 ### time
 summon aw:marker "tick" -82 1 -2
@@ -102,15 +106,19 @@ scoreboard players set @e[name=monsterSummonDelay] time 0
 scoreboard players set @e[name=levelCompleteDelay] time 0
 
 ### active
+summon aw:marker "dialogue" -82 1 -2
 
 scoreboard players set @e[name=timeline] active 2
 scoreboard players set @e[name=soundPlayer] active 0
 scoreboard players set @e[name=levelCompleteDelay] active 0
 scoreboard players set @e[name=alivePlayersAmount] active 1
-scoreboard players set @e[name=allPlayersAmount] active 1
+scoreboard players set @e[name=maxPlayersAmount] active 1
+scoreboard players set @e[name=dialogue] active 0
 
 ### isAlive
 scoreboard players set @a isAlive 2
 
 ## --- 重生点标记 ---
 summon aw:marker -82 1 -2 "aw:as_respawner" "respawner"
+summon aw:marker "playerPosition" -82 1 -2
+summon aw:marker "facingPosition" -82 1 -2

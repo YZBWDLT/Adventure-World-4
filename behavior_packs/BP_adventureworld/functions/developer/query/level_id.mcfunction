@@ -12,8 +12,8 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"text":"§l===== 关卡ID表 ====="}]}
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a1 §7开始游戏的模式选择"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a2 §7开始游戏开幕（剧情模式）"}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a3 §7开始游戏后进入村庄"}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a9 §7开始游戏开幕（战斗模式）"}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a3~9 §7村庄剧情"}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a99 §7开始游戏开幕（战斗模式）"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a101 §71-0 | §a110~111 §71-1 | §a120~121 §71-2 | §a130~131 §71-3"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a201 §72-0 | §a210~211 §72-1 | §a220~221 §72-2 | §a230~231 §72-3"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a301 §73-0 | §a310~311 §73-1 | §a320~321 §73-2 | §a330~331 §73-3 | §a340~341 §73-4"}]}
