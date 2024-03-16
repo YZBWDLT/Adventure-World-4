@@ -33,7 +33,7 @@
             "minecraft:behavior.ranged_attack": { "priority": 0, "burst_shots": 3 , "burst_interval" : 0.3 , "attack_interval_min" : 4 ,"attack_interval_max" : 5 , "attack_radius": 40},
             "minecraft:shooter": { "def": "minecraft:arrow" },
             "minecraft:behavior.nearest_attackable_target": { "priority": 2, "must_see": false, "reselect_targets": false, "entity_types": [ { "filters": { "test": "is_family", "subject": "other", "value": "player" }, "max_dist": 40 } ] },
-            "minecraft:equipment": { "table": "loot_tables/entities/skeleton_king_equipment.json" },
+            "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_bow/golden_armor.json" },
 
             "minecraft:navigation.walk": { "is_amphibious": true },
             "minecraft:movement.basic": { },
