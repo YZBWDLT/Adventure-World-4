@@ -7,8 +7,8 @@ tellraw @s[scores={temp=0}] {"rawtext":[{"translate":"§c该功能仅限在开�
 scoreboard players set @s temp 0
 
 ## --- 开启开发者模式时 ---
-execute @e[name=developerMode,scores={settings=1}] ~~~ scoreboard players add @e[name=alivePlayersAmount] active 1
-execute @e[name=developerMode,scores={settings=1}] ~~~ scoreboard players set @e[name=alivePlayersAmount,scores={active=!0..1}] active 0
+execute @e[name=developerMode,scores={settings=1}] ~~~ scoreboard players add @e[name=alivePlayersAmount] settings 1
+execute @e[name=developerMode,scores={settings=1}] ~~~ scoreboard players set @e[name=alivePlayersAmount,scores={settings=!0..1}] settings 0
 
-execute @e[name=alivePlayersAmount,scores={active=0}] ~~~ tellraw @a {"rawtext":[{"translate":"§e存活玩家检测已禁用，部分功能可能会失效"}]}
-execute @e[name=alivePlayersAmount,scores={active=1}] ~~~ tellraw @a {"rawtext":[{"translate":"存活玩家检测已启用"}]}
+execute @e[name=alivePlayersAmount,scores={settings=0}] ~~~ tellraw @a {"rawtext":[{"translate":"§e存活玩家检测已禁用，部分功能可能会失效"}]}
+execute @e[name=alivePlayersAmount,scores={settings=1}] ~~~ tellraw @a {"rawtext":[{"translate":"存活玩家检测已启用"}]}

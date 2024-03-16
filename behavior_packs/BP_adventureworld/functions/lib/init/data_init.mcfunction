@@ -83,6 +83,8 @@ scoreboard players set @e[name=itemLimitTest] settings 1
 scoreboard players set @e[name=respawnInNewWave] settings 1
 scoreboard players set @e[name=storyMode] settings 1
 scoreboard players set @e[name=simulatedLevel] settings 0
+scoreboard players set @e[name=maxPlayersAmount] settings 1
+scoreboard players set @e[name=alivePlayersAmount] settings 1
 
 ### time
 summon aw:marker "tick" -82 1 -2
@@ -111,8 +113,6 @@ summon aw:marker "dialogue" -82 1 -2
 scoreboard players set @e[name=timeline] active 2
 scoreboard players set @e[name=soundPlayer] active 0
 scoreboard players set @e[name=levelCompleteDelay] active 0
-scoreboard players set @e[name=alivePlayersAmount] active 1
-scoreboard players set @e[name=maxPlayersAmount] active 1
 scoreboard players set @e[name=dialogue] active 0
 
 ### isAlive
