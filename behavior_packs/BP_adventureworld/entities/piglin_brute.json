@@ -28,7 +28,7 @@
             "minecraft:annotation.open_door": { },
             "minecraft:movement.basic": {},
             "minecraft:jump.static": {},
-            "minecraft:nameable": {},
+            "minecraft:nameable": { "always_show": true },
             "minecraft:despawn": {},
             "minecraft:behavior.hurt_by_target": { "priority": 1 },
             "minecraft:behavior.random_stroll": { "priority": 7, "speed_multiplier": 0.6 },
@@ -56,7 +56,9 @@
                     { "filters": { "test": "is_family", "subject": "other", "value": "player" }, "max_dist": 16 },
                     { "filters": { "test": "is_family", "subject": "other", "value": "villager" }, "max_dist": 16 }
                 ]
-            }
+            },
+
+            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } } ] }
         },
   
         "events": { },

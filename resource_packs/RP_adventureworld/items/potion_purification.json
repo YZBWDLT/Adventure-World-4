@@ -1,0 +1,14 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aw:potion_purification",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:icon": "potion_purification",
+            "minecraft:render_offsets": "apple",
+            "minecraft:use_animation": "drink"
+        }
+    }
+}

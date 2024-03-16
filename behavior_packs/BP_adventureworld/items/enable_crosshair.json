@@ -1,18 +1,13 @@
 {
-    "format_version": "1.17.0",
+    "format_version": "1.16.0",
     "minecraft:item": {
         "description": {
             "identifier": "aw:enable_crosshair"
         },
         "components": {
-            "minecraft:display_name": { "value": "item.aw:enable_crosshair.name" },
-            "minecraft:icon": { "texture": "enable_crosshair" },
-            "minecraft:on_use": { "on_use": { "event": "enable_crosshair", "target": "self" } },
-            "minecraft:cooldown": { "duration": 0.5, "category": "enable_crosshair" },
-            "minecraft:max_stack_size": 1
-        },
-        "events": {
-            "enable_crosshair": { "run_command": { "command": [ "function system/settings_crosshair" ] } }
+            "minecraft:max_stack_size": 1,
+            "minecraft:food": { "can_always_eat": true, "nutrition": 0, "cooldown_time": 20, "cooldown_type": "enable_crosshair" },
+            "minecraft:use_duration": 9999999
         }
     }
 }

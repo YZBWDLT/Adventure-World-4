@@ -1,0 +1,8 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [ { "name": "minecraft:bow", "type": "item", "functions": [ { "function": "specific_enchants", "enchants": [ { "id": "flame", "level": 1 } ] } ] } ]
+        }
+    ]
+}

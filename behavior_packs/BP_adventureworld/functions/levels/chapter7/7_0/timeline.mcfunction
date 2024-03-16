@@ -20,7 +20,7 @@ execute @e[name=timeline,scores={time=1120}] ~~~ tp @a -87 -40 85
 
 ## 进入剑之神殿
 execute @e[name=timeline,scores={time=1180}] ~~~ tp @a -79 -39 105 facing -87 -37 105
-execute @e[name=timeline,scores={time=1180}] ~~~ scoreboard players set @e[name=level] background 700
+execute @e[name=timeline,scores={time=1180}] ~~~ scoreboard players set @e[name=level] data 701
 execute @e[name=timeline,scores={time=1180}] ~~~ title @a times 0 100 0
 
 execute @e[name=timeline,scores={time=1240}] ~~~ title @a title §f§l剑 之 神 殿
@@ -86,14 +86,13 @@ execute @e[name=timeline,scores={time=3450}] ~~~ kill @e[family=summoner]
 ### 7-1 开始
 execute @e[name=timeline,scores={time=3600}] ~~~ tp @a -120 -17 105
 execute @e[name=timeline,scores={time=3600}] ~~~ tp @e[family=respawner] -120 -17 105
-execute @e[name=timeline,scores={time=3600}] ~~~ fill -150 -18 102 -150 -16 100 nether_brick_fence
+execute @e[name=timeline,scores={time=3600}] ~~~ fill -150 -18 102 -150 -16 100 nether_brick
 
 ## （如果玩家失败，从这里开始）
 execute @e[name=timeline,scores={time=3650}] ~~~ title @a times 0 100 0
 execute @e[name=timeline,scores={time=3650}] ~~~ title @a title §l§c封 印 神 殿
 execute @e[name=timeline,scores={time=3650}] ~~~ title @a subtitle §cFINAL TEMPLE
 execute @e[name=timeline,scores={time=3650}] ~~~ execute @a ~~~ playsound beacon.power @s ~~~ 1 1 1
-execute @e[name=timeline,scores={time=3650}] ~~~ scoreboard players set @e[name=level] background 701
 execute @e[name=timeline,scores={time=3670}] ~~~ effect @a clear
 
 execute @e[name=timeline,scores={time=3800}] ~~~ tellraw @a {"rawtext":[{"translate":"§c* 准备好了吗？这是你最后的试炼。"}]}

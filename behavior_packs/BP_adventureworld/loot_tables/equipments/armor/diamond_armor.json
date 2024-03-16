@@ -1,0 +1,28 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:diamond_helmet", "type": "item" }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:diamond_chestplate", "type": "item" }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:diamond_leggings", "type": "item" }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                { "name": "minecraft:diamond_boots", "type": "item" }
+            ]
+        }
+    ]
+}

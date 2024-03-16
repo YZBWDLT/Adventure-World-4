@@ -3,6 +3,8 @@
 
 ## --- 当玩家超限后，temp.@s=1 ---
 
+scoreboard players set @a temp 0
+
 ### 无弓 - 有箭
 scoreboard players set @a[hasitem=[{item=bow,quantity=0},{item=arrow}]] temp 1
 ### 有弓无箭袋 - >=13箭

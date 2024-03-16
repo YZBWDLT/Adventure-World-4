@@ -50,12 +50,6 @@
 			"minecraft:nameable": { "always_show": true },
 			"minecraft:fire_immune": { },
 			"minecraft:burns_in_daylight": false,
-			"minecraft:damage_sensor": {
-				"triggers": {
-					"cause": "fall",
-					"deals_damage": false
-				}
-			},
 			"minecraft:navigation.walk": { "can_path_over_water": true, "avoid_water": true },
 			"minecraft:jump.static": { },
 			"minecraft:movement.jump": { "jump_delay": [ 2.0, 6.0 ] },
@@ -84,7 +78,14 @@
 			},
 			"minecraft:physics": { },
 			"minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
-			"minecraft:conditional_bandwidth_optimization": { }
+			"minecraft:conditional_bandwidth_optimization": { },
+
+            "minecraft:damage_sensor": {
+				"triggers": [
+					{ "cause": "fall", "deals_damage": false },
+					{ "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } }
+				]
+			}
 		},
 
 		"events": {

@@ -1,0 +1,12 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [ { "name": "loot_tables/equipments/armor/leather_armor.json", "type": "loot_table" } ]
+        },
+        {
+            "rolls": 1,
+            "entries": [ { "name": "minecraft:bow", "type": "item" } ]
+        }
+    ]
+}

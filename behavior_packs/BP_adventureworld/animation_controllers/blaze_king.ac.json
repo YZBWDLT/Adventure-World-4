@@ -1,0 +1,86 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.blaze_king.regeneration": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "regeneration": "query.health / query.max_health <= 1/3" }
+                    ]
+                },
+                "regeneration": {
+                    "animations": [ "regeneration" ],
+                    "transitions": [
+                        { "default": "query.health / query.max_health > 1/3" }
+                    ]
+                }
+            }
+        },
+        "controller.animation.blaze_king.summon_monsters": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "summon_monsters": "query.health / query.max_health <= 2/3" }
+                    ]
+                },
+                "summon_monsters": {
+                    "animations": [ "summon_monsters" ],
+                    "transitions": [
+                        { "default": "query.health / query.max_health > 2/3" }
+                    ]
+                }
+            }
+        },
+        "controller.animation.blaze_king.teleport_randomly": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "teleport_randomly": "query.health / query.max_health <= 1" }
+                    ]
+                },
+                "teleport_randomly": {
+                    "animations": [ "teleport_randomly" ],
+                    "transitions": [
+                        { "default": "query.health / query.max_health > 1" }
+                    ]
+                }
+            }
+        },
+        "controller.animation.blaze_king.get_health_phase": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "three_third_health_left": "query.health / query.max_health <= 1 && query.health / query.max_health > 2/3" },
+                        { "two_third_health_left": "query.health / query.max_health <= 2/3 && query.health / query.max_health > 1/3" },
+                        { "one_third_health_left": "query.health / query.max_health <= 1/3" }
+                    ]
+                },
+                "one_third_health_left": {
+                    "on_entry": [ "/scoreboard players set @s temp2 3" ],
+                    "transitions": [
+                        { "three_third_health_left": "query.health / query.max_health <= 1 && query.health / query.max_health > 2/3" },
+                        { "two_third_health_left": "query.health / query.max_health <= 2/3 && query.health / query.max_health > 1/3" }
+                    ]
+                },
+                "two_third_health_left": {
+                    "on_entry": [ "/scoreboard players set @s temp2 2" ],
+                    "transitions": [
+                        { "three_third_health_left": "query.health / query.max_health <= 1 && query.health / query.max_health > 2/3" },
+                        { "one_third_health_left": "query.health / query.max_health <= 1/3" }
+                    ]
+                },
+                "three_third_health_left": {
+                    "on_entry": [ "/scoreboard players set @s temp2 1" ],
+                    "transitions": [
+                        { "two_third_health_left": "query.health / query.max_health <= 2/3 && query.health / query.max_health > 1/3" },
+                        { "one_third_health_left": "query.health / query.max_health <= 1/3" }
+                    ]
+                }
+            }
+        }
+    }
+}

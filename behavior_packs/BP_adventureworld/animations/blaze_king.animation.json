@@ -12,7 +12,7 @@
         },
         "animation.blaze_king.summon_monsters": {
             "loop": true,
-            "animation_length": 10.0,
+            "animation_length": 1.0,
             "timeline": {
                 "0.0": [
                     "/function entities/blaze_king/summon_monsters"
@@ -21,7 +21,7 @@
         },
         "animation.blaze_king.teleport_randomly": {
             "loop": true,
-            "animation_length": 20.0,
+            "animation_length": 1.0,
             "timeline": {
                 "0.0": [
                     "/function entities/blaze_king/teleport_randomly"
