@@ -2,8 +2,8 @@
 
 scoreboard players set @e[name=level] data 9
 
-function lib/dialogue/enable
-function lib/timeline/enable
+function lib/states/dialogue/enable
+function lib/states/timeline/enable
 
 # 给予玩家缓慢失明效果
 effect @a slowness 10 100 true

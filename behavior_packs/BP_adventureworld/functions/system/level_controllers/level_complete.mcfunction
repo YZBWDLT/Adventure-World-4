@@ -31,7 +31,7 @@ execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummon
 execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=wave] ~~~ scoreboard players operation @s temp -= @e[name=maxWave] data
 ## 当当前波数小于或等于最大波数时，触发怪物设定函数以开启下一波
 execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=wave,scores={temp=..0}] ~~~ function levels/monster_settings_functions
-execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=wave,scores={temp=..0}] ~~~ function lib/monster_summon_delay/enable_40ticks
+execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=wave,scores={temp=..0}] ~~~ function lib/states/monster_summon_delay/enable_40ticks
 ## 当当前波数大于最大波数时，触发通关函数
 execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=wave,scores={temp=1..}] ~~~ function levels/bonus_functions
 

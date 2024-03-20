@@ -33,4 +33,4 @@ scoreboard players set @e[name=maxWave] data 1
 scoreboard players set @e[name=wave] data 1
 
 # --- 阻止本关以常规方式检测 ---
-function lib/level_complete_delay/never_complete
+function lib/states/level_complete_delay/never_complete

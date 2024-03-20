@@ -31,7 +31,7 @@ execute @e[name=randomMonster,scores={data=5}] ~~~ execute @e[name=summonLocatio
 execute @e[name=randomMonster,scores={data=6}] ~~~ execute @e[name=summonLocation] ~~~ summon aw:marker ~~~ "aw:as_summoner" "stray3Summoner"
 execute @e[name=randomMonster,scores={data=7}] ~~~ execute @e[name=summonLocation] ~~~ summon aw:marker ~~~ "aw:as_summoner" "zombie3Summoner"
 execute @e[name=randomMonster,scores={data=8}] ~~~ execute @e[name=summonLocation] ~~~ summon aw:marker ~~~ "aw:as_summoner" "zombieBaby3Summoner"
-execute @e[name=randomMonster,scores={data=1..8}] ~~~ function lib/monster_summon_delay/enable_40ticks
+execute @e[name=randomMonster,scores={data=1..8}] ~~~ function lib/states/monster_summon_delay/enable_40ticks
 execute @e[name=randomMonster,scores={data=1..8}] ~~~ kill @e[name=summonLocation]
 execute @e[name=randomMonster,scores={data=1..8}] ~~~ scoreboard players set @s data 0
 

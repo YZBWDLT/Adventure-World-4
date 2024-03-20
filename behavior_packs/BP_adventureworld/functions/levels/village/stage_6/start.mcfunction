@@ -2,8 +2,8 @@
 
 scoreboard players set @e[name=level] data 8
 
-function lib/dialogue/enable_lock_camera
-function lib/timeline/enable
+function lib/states/dialogue/enable_lock_camera
+function lib/states/timeline/enable
 
 # --- 将米云溪和田英传送到场景处 ---
 tp @e[name="田英"] -23 1 93 facing -19 2 96

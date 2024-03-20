@@ -19,4 +19,4 @@ execute @e[name=dialogue,scores={time=1560}] ~~~ tellraw @a {"rawtext":[{"text":
 execute @e[name=dialogue,scores={time=1660}] ~~~ tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7我这就过去，云儿你和他也讲讲刚才的发现。"}]}
 execute @e[name=dialogue,scores={time=1760}] ~~~ tellraw @a {"rawtext":[{"text":"你现在可以移动了！"}]}
 
-execute @e[name=dialogue,scores={time=1760}] ~~~ function lib/dialogue/disable
+execute @e[name=dialogue,scores={time=1760}] ~~~ function lib/states/dialogue/disable

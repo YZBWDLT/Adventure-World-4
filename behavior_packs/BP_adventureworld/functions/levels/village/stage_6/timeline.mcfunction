@@ -43,9 +43,9 @@ execute @e[name=timeline,scores={time=2360}] ~~~ scoreboard players set @e[name=
 execute @e[name=timeline,scores={time=3000..3059}] ~~~ execute @a ~~~ detect ~~1~ water -1 scoreboard players add @e[name=timeline] time 1
 
 # 触发剧情，并更改时间线状态
-execute @e[name=timeline,scores={time=3060}] ~~~ function lib/dialogue/enable
+execute @e[name=timeline,scores={time=3060}] ~~~ function lib/states/dialogue/enable
 execute @e[name=timeline,scores={time=3060}] ~~~ scoreboard players set @e[name=dialogue] time 3000
-execute @e[name=timeline,scores={time=3060}] ~~~ function lib/timeline/enable_without_flowing
+execute @e[name=timeline,scores={time=3060}] ~~~ function lib/states/timeline/enable_without_flowing
 
 # 当玩家进入神殿后进入下一阶段
 execute @a[x=-18,y=-3,z=99,dx=5,dy=1,dz=3] ~~~ function levels/village/stage_7/start

@@ -11,11 +11,11 @@ tp @a[scores={isAlive=!3}] @a[scores={isAlive=3},c=1]
 scoreboard players set @a isAlive 1
 
 # --- 启用怪物延迟生成并生成怪物生成器 ---
-function lib/monster_summon_delay/enable_40ticks
+function lib/states/monster_summon_delay/enable_40ticks
 function levels/monster_settings_functions
 
 # --- 启用时间线 ---
-function lib/timeline/enable_without_flowing
+function lib/states/timeline/enable_without_flowing
 
 ## --- 为玩家补充物资 ---
 function lib/supplier/arrow
@@ -37,3 +37,7 @@ execute @e[name=failedTimes,scores={data=5..}] ~~~ effect @a resistance 1000 0 t
 ## --- 清除多余实体 ---
 kill @e[type=aw:hookshot]
 kill @e[family=monster]
+
+# --- 当进入游戏时，玩家仍处于对话状态下，则中止这对话 ---
+execute @e[name=dialogue,scores={active=!0}] ~~~ tellraw @a {"rawtext":[{"translate":"§e你与试炼外的对话连接已被中断"}]}
+execute @e[name=dialogue,scores={active=!0}] ~~~ function lib/states/dialogue/disable

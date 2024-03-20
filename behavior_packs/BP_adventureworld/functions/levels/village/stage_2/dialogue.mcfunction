@@ -16,4 +16,4 @@ execute @e[name=dialogue,scores={time=860}] ~~~ tellraw @a {"rawtext":[{"text":"
 ## 当玩家还在田英4~10格范围内，说下面这句
 execute @e[name=dialogue,scores={time=1060}] ~~~ execute @e[type=aw:npc,name="田英"] ~~~ tellraw @a[r=6] {"rawtext":[{"text":"* §b田英： §7§o（小声）一提起她你就感兴趣，我就知道。"}]}
 
-execute @e[name=dialogue,scores={time=1160}] ~~~ function lib/dialogue/disable
+execute @e[name=dialogue,scores={time=1160}] ~~~ function lib/states/dialogue/disable

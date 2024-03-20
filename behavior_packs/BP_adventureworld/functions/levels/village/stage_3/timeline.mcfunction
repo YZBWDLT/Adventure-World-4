@@ -19,7 +19,7 @@ execute @e[name=timeline,scores={active=1,time=1300..1400}] ~~~ execute @e[name=
 execute @e[name=timeline,scores={active=1,time=1401}] ~~~ event entity @e[name="田英"] should_see_player
 
 # 剧情结束
-execute @e[name=timeline,scores={active=1,time=1760}] ~~~ function lib/timeline/enable_without_flowing
+execute @e[name=timeline,scores={active=1,time=1760}] ~~~ function lib/states/timeline/enable_without_flowing
 
 # --- 对话结束后 ---
 

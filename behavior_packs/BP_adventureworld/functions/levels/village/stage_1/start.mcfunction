@@ -5,8 +5,8 @@ scoreboard players set @e[name=level] data 3
 tp @a -26 6 -50 facing -27 6 -51
 effect @a blindness 5 0 true
 
-function lib/dialogue/enable
-function lib/timeline/enable
+function lib/states/dialogue/enable
+function lib/states/timeline/enable
 
 # --- 生成NPC ---
 kill @e[type=aw:npc]

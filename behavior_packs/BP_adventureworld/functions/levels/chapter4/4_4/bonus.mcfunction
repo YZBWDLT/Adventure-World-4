@@ -26,4 +26,4 @@ kill @e[type=item]
 scoreboard players set @e[name=wave] data 2
 
 # --- 关卡结束或失败后，回归正常关卡完成检测 ---
-function lib/level_complete_delay/disable
+function lib/states/level_complete_delay/disable

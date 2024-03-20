@@ -12,7 +12,7 @@ tp @e[family=respawner] -75 -29 35
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
 function lib/all_levels/start_level
-function lib/timeline/enable_without_flowing
+function lib/states/timeline/enable_without_flowing
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] data 1
