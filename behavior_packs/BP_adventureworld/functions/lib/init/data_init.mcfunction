@@ -1,7 +1,10 @@
 # ===== 地图数据初始化 =====
 # 本函数记录地图全体数据的初始化。数据以特定名称的标记实体（aw:marker）记录。
 
-## --- 记分板 ---
+# --- 常加载区域 ---
+tickingarea add -82 1 -2 -82 1 -2 commandSystem
+
+# --- 记分板 ---
 
 scoreboard objectives remove data
 scoreboard objectives remove time
