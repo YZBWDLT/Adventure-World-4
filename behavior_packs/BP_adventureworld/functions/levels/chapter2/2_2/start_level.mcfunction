@@ -16,3 +16,6 @@ function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] data 3
+
+# --- 重置本关拉杆 ---
+function levels/chapter2/2_2/reset_lever
