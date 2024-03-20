@@ -1,8 +1,5 @@
 # ===== 使用虚拟准星后 =====
 
-# --- 清除之 ---
-clear @s aw:summon_monsters
-
 # --- 数值操作 ---
 
 ## 先获取开发者模式情况
@@ -12,7 +9,7 @@ tellraw @s[scores={temp=0}] {"rawtext":[{"translate":"§c该功能无法在非�
 ## 开发者模式启用后执行
 
 ### 强制调用本关的怪物数据并强制立即生成
-execute @s[scores={temp=1}] ~~~ function lib/monster_summon_delay/disable
+execute @s[scores={temp=1}] ~~~ function lib/states/monster_summon_delay/disable
 execute @s[scores={temp=1,position=11}] ~~~ function levels/chapter1/1_1/monster_settings
 execute @s[scores={temp=1,position=12}] ~~~ function levels/chapter1/1_2/monster_settings
 execute @s[scores={temp=1,position=13}] ~~~ function levels/chapter1/1_3/monster_settings
@@ -41,6 +38,3 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"已尝试生成本关对�
 execute @s[scores={temp=1}] ~~~ playsound random.orb @s ~~~
 
 scoreboard players set @s temp 0
-
-# --- 给予之 ---
-replaceitem entity @s slot.weapon.mainhand 0 aw:summon_monsters 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
