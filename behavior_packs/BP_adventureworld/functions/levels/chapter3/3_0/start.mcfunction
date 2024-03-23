@@ -26,3 +26,7 @@ fill -168 -15 24 -168 -13 22 prismarine
 ## 简单清除3-2和3-4的水
 function levels/chapter3/3_2/water_clear
 function levels/chapter3/3_4/water_clear
+
+# --- 设定玩家镜头位置 ---
+tp @e[name=playerPosition] -170 -20 30
+tp @e[name=facingPosition] -172 -21 24 facing @e[name=playerPosition,c=1]

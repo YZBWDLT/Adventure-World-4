@@ -22,3 +22,7 @@ fill -155 7 -3 -157 9 -3 ice
 fill -155 7 16 -157 9 16 ice
 fill -156 -18 5 -158 -18 7 ice[] replace water[]
 fill -117 -31 7 -117 -29 5 ice
+
+# --- 设定玩家镜头位置 ---
+tp @e[name=playerPosition] -180 19 -10
+tp @e[name=facingPosition] -168 17 -10 facing @e[name=playerPosition,c=1]

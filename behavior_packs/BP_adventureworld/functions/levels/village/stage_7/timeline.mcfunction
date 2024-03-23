@@ -1,5 +1,7 @@
 # ===== 时间线 =====
 
+execute @e[name=timeline,scores={time=100}] ~~~ kill @e[type=aw:npc]
+
 # 失明5秒后，传送玩家到小黑屋
 execute @e[name=timeline,scores={time=100}] ~~~ tp @a 36 26 87
 execute @e[name=timeline,scores={time=100}] ~~~ effect @a clear

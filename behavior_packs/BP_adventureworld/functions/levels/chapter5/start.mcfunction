@@ -13,6 +13,6 @@ title @a subtitle §c5-0
 # --- 设置重生点 ---
 tp @e[family=respawner] -95 -31 -13
 
-# --- 清除4-4可能在最后生成的生成器 ---
-#<!> 在6-1发现了来自4-4的怪物，理论上来说生成器是应当被销毁的
-kill @e[family=summoner]
+# --- 设定玩家镜头位置 ---
+tp @e[name=playerPosition] -89 -25 -19
+tp @e[name=facingPosition] -101 -30 -7 facing @e[name=playerPosition,c=1]

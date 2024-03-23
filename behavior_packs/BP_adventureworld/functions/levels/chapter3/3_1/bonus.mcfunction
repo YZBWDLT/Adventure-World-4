@@ -19,3 +19,6 @@ tp @e[family=respawner] -188 -21 29
 
 ## --- 调用所有关卡通用奖励功能 ---
 function lib/all_levels/bonus
+
+scoreboard players set @e[name=timeline] active 3
+scoreboard players set @e[name=timeline] time 0

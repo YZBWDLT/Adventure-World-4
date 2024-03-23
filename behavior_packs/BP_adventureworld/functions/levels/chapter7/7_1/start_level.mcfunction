@@ -4,11 +4,6 @@
 ## 防止误判断为第一波已完成
 scoreboard players set @e[name=monsterAmount] data 14
 
-## --- 设置level ---
-scoreboard players set @e[name=level] data 710
-
-fill -150 -18 102 -150 -16 100 nether_brick
-
 ## --- 设置重生点 ---
 tp @e[family=respawner] -112 -13 103
 
@@ -25,3 +20,9 @@ fill -184 -18 98 -184 -16 96 nether_brick
 fill -217 -18 98 -217 -16 100 nether_brick
 ## 7-4
 fill -235 -30 97 -233 -30 99 stained_glass["color":"red"]
+
+# --- 关闭时间线 ---
+function lib/states/timeline/disable
+
+# --- 重新开启怪物检测 ---
+function lib/states/level_complete_delay/disable

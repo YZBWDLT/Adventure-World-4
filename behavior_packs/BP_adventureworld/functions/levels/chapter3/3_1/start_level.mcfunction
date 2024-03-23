@@ -15,3 +15,8 @@ function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] data 2
+
+# --- 设置两个临时常加载区域 ---
+# 关卡结束后使用
+tickingarea add -71 -16 57 -103 0 78 temp1
+tickingarea add -122 14 35 -138 17 17 temp2

@@ -16,9 +16,9 @@ execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={t
 execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp2=1..2,temp3=0}] ~~~ structure load 6_4_lava_1 -89 -40 21
 execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp2=3,temp3=0}] ~~~ structure load 6_4_lava_2 -89 -40 21
 
-## 当岩浆停留了5秒后，移除之并重置倒计时（随机在20~40s之间）
+## 当岩浆停留了5秒后，移除之并重置倒计时（随机在10~20s之间）
 execute @e[family=blaze_king,scores={temp3=..-6}] ~~~ structure load 6_4_no_lava -89 -40 21
-scoreboard players random @e[family=blaze_king,scores={temp3=..-6}] temp3 20 40
+scoreboard players random @e[family=blaze_king,scores={temp3=..-6}] temp3 10 20
 
 # --- 胜利判定 ---
 # 当Boss被击杀后，立即结束
