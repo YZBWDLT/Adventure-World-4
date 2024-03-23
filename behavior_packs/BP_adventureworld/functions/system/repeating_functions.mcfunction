@@ -103,3 +103,7 @@ execute @e[name=level,scores={temp3=0}] ~~~ function system/level_controllers/ga
 
 ## 游戏模式切换器
 execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_switcher
+
+## 暂定内容
+tellraw @a[x=-235,y=-63,z=97,r=5,m=!spectator] {"rawtext":[{"text":"游戏内容到此结束，感谢您游玩Alpha 4.0_09！"}]}
+gamemode spectator @a[x=-235,y=-63,z=97,r=5,m=!spectator]
