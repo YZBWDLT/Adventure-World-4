@@ -1,8 +1,7 @@
 # ===== 重生点机制 =====
 # 当玩家重生后，将出生到respawner的位置上。重生可能出现的情况：
-# 1. 玩家在“未游玩状态”下死亡并重生 -> 重生，不造成任何结果
+# 1. 玩家在“未游玩状态”下死亡并重生 -> 重生，并更改其存活状态为2
 # 2. 玩家在“游玩状态”下死亡并重生 -> 重生，且记录死亡次数，并更改其存活状态为0，给予这些玩家抗性提升和抗火buff
-# 3. 【特殊情况】当玩家在正式开始前死亡 -> 重生，不造成任何结果
 
 # --- 将玩家的重生点设置在respawner标记实体上 ---
 execute @e[family=respawner] ~~~ spawnpoint @a ~~~
@@ -10,6 +9,9 @@ execute @e[family=respawner] ~~~ spawnpoint @a ~~~
 # --- 获取关卡进度数据 ---
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/get_data/3_digit_seperator
+
+# --- 第一种情况 ---
+execute @e[name=level,scores={temp3=!0}] ~~~ execute @e[family=respawner] ~~~ scoreboard players set @a[r=2,scores={isAlive=0..1}] isAlive 2
 
 # --- 第二种情况 ---
 # 仅当游戏正式开始后才能判定。可以发现只有第二种情况才导致特殊功能。

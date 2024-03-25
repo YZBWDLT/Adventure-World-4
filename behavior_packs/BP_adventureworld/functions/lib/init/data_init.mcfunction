@@ -34,10 +34,7 @@ scoreboard objectives add killAmount dummy "击杀数据"
 scoreboard objectives add isOnline dummy "在线数据"
 
 scoreboard players set allFailedTimes data 0
-scoreboard players set @a deathTimes 0
-scoreboard players set @a position 0
-scoreboard players set @a hookshot -1
-scoreboard players set @a killAmount 0
+execute @a ~~~ function lib/init/player_data
 scoreboard players set @a isOnline 1
 
 ## --- 标记分值 ---
