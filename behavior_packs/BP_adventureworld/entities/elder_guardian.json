@@ -58,7 +58,7 @@
 			},
 			"level_4": {
 				"minecraft:health": { "value": 450, "max": 450 },
-                "minecraft:attack": { "damage": 20 }
+                "minecraft:attack": { "damage": 19 }
             }
 		}
     }
