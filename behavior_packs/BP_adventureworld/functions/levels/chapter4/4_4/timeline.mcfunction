@@ -36,7 +36,7 @@ execute @e[name=randomMonster,scores={data=1..8}] ~~~ kill @e[name=summonLocatio
 execute @e[name=randomMonster,scores={data=1..8}] ~~~ scoreboard players set @s data 0
 
 ### 刷新完成后重新指定刷新倒计时
-execute @e[name=monsterRefreshLeft,scores={time=0}] ~~~ scoreboard players random @s time 4 12
+execute @e[name=monsterRefreshLeft,scores={time=0}] ~~~ scoreboard players random @s time 3 10
 
 ## --- 给予守卫者药效 ---
 execute @e[name=tick,scores={time=0}] ~~~ effect @e[type=guardian] resistance 30 10 true
