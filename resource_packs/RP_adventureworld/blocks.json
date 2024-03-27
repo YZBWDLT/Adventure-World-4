@@ -1,0 +1,5 @@
+{
+    "aw:carved_stone_bricks": { "textures": "carved_stone_bricks", "sound": "stone" },
+    "aw:carved_cracked_stone_bricks": { "textures": "carved_cracked_stone_bricks", "sound": "stone" },
+    "aw:carved_mossy_stone_bricks": { "textures": "carved_mossy_stone_bricks", "sound": "stone" }
+}

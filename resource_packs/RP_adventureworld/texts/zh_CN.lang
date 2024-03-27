@@ -29,6 +29,11 @@ item.aw:summon_monsters.name=生成怪物
 item.aw:kill_monsters.name=清除怪物
 item.aw:get_equipment.name=获取装备
 
+### 方块类
+tile.aw:carved_stone_bricks.name=雕刻石砖
+tile.aw:carved_cracked_stone_bricks.name=雕刻裂纹石砖
+tile.aw:carved_mossy_stone_bricks.name=雕刻苔石砖
+
 ### 实体类
 entity.aw:hookshot.name=绳枪
 entity.aw:npc.name=NPC

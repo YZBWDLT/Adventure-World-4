@@ -29,6 +29,11 @@ item.aw:summon_monsters.name=Summon Monsters
 item.aw:kill_monsters.name=Kill Monsters
 item.aw:get_equipment.name=Get Equipment
 
+### Blocks
+tile.aw:carved_stone_bricks.name=Carved Stone Bricks
+tile.aw:carved_cracked_stone_bricks.name=Carved Cracked Stone Bricks
+tile.aw:carved_mossy_stone_bricks.name=Carved Mossy Stone Bricks
+
 ### Entities
 entity.aw:hookshot.name=Hookshot
 entity.aw:npc.name=NPC
