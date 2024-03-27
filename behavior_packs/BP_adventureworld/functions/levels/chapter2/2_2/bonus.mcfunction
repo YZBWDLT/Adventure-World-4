@@ -17,3 +17,6 @@ tp @e[family=respawner] -92 -17 67
 
 ## --- 调用所有关卡通用奖励功能 ---
 function lib/all_levels/bonus
+
+# --- 提示 ---
+tellraw @a {"rawtext":[{"translate":"§a非常好！使用弓可以对强力的骷髅类怪物造成致命伤害。"}]}

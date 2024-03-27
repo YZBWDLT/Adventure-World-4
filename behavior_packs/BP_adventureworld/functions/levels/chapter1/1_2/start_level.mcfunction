@@ -17,3 +17,6 @@ function lib/all_levels/start_level
 
 # --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] data 1
+
+# --- 提示药水的供应模式 ---
+tellraw @a {"rawtext":[{"translate":"§a药水将会在每关开始前自动供应充足！"}]}

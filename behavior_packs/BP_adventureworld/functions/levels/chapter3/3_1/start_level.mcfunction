@@ -20,3 +20,6 @@ scoreboard players set @e[name=maxWave] data 2
 # 关卡结束后使用
 tickingarea add -71 -16 57 -103 0 78 temp1
 tickingarea add -122 14 35 -138 17 17 temp2
+
+# --- 提示玩家 ---
+tellraw @a {"rawtext":[{"translate":"§a试试使用一种主药水吧！请谨慎选择，每关你只能选择一种。"}]}

@@ -23,3 +23,6 @@ summon aw:marker -66 -39 26 aw:as_random_teleporter "randomTeleporter"
 summon aw:marker -84 -39 44 aw:as_random_teleporter "randomTeleporter"
 summon aw:marker -66 -37 44 aw:as_random_teleporter "randomTeleporter"
 summon aw:marker -84 -37 26 aw:as_random_teleporter "randomTeleporter"
+
+# --- 提示玩家 ---
+tellraw @a {"rawtext":[{"translate":"§a本关击杀BOSS即可获胜！"}]}

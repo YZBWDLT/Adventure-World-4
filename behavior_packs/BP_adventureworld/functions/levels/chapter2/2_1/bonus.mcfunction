@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] data 211
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§l§a2-1已完成！§r\n§f你已获得 §b[弓] §f！\n§7和药水供应不同，每一波开始之前你都能获得12根箭！\n§7试试尽量用弓箭射杀骷髅，有奇效哦！"}]}
+tellraw @a {"rawtext":[{"text":"§l§a2-1已完成！§r\n§f你已获得 §b[弓] §f！"}]}
 
 ## --- 打开入口与出口 ---
 fill -74 20 58 -76 18 58 air
