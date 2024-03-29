@@ -11,7 +11,6 @@
 		"component_groups": {
 			"minecraft:slime_large": {
 				"minecraft:variant": { "value": 4 },
-                "minecraft:skin_id": { "value": 4 },
 				"minecraft:collision_box": { "width": 2.08, "height": 2.08 },
 				"minecraft:health": { "value": 16, "max": 16 },
 				"minecraft:movement": { "value": 0.75 },
@@ -21,7 +20,6 @@
 
 			"minecraft:slime_medium": {
 				"minecraft:variant": { "value": 2 },
-                "minecraft:skin_id": { "value": 2 },
 				"minecraft:collision_box": { "width": 1.04, "height": 1.02 },
 				"minecraft:health": { "value": 4, "max": 4 },
 				"minecraft:movement": { "value": 0.66 },
@@ -31,7 +29,6 @@
 
 			"minecraft:slime_small": {
 				"minecraft:variant": { "value": 1 },
-                "minecraft:skin_id": { "value": 1 },
                 "minecraft:collision_box": { "width": 0.52, "height": 0.52 },
 				"minecraft:health": { "value": 1, "max": 1 },
 				"minecraft:movement": { "value": 0.6 },
