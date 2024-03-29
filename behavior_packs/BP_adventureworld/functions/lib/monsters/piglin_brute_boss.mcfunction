@@ -13,17 +13,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=piglinBr
 ### 生成怪物，怪物生成数将根据玩家数目而非线性增长
 ### 玩家数目  1   2~3 4~6 7~10
 ### 怪物倍率  1   2   3   4
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§c猪灵蛮兵" ~~~
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§c猪灵蛮兵" ~~~
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§c猪灵蛮兵" ~~~
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§c猪灵蛮兵" ~~~
-
-### 替换装备
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=piglin_brute] slot.armor.head 0 diamond_helmet
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=piglin_brute] slot.armor.chest 0 diamond_chestplate
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=piglin_brute] slot.armor.legs 0 diamond_leggings
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=piglin_brute] slot.armor.feet 0 diamond_boots
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ replaceitem entity @e[x=~,y=~,z=~,r=1,type=piglin_brute] slot.weapon.mainhand 0 diamond_axe
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§b猪灵蛮兵 | lv.1" ~~~
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..3}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§d猪灵蛮兵 | lv.2" ~~~
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§6猪灵蛮兵 | lv.3" ~~~
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=piglinBruteBossSummoner] ~~~ summon piglin_brute "§c猪灵蛮兵 | lv.4" ~~~
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=piglinBruteBossSummoner]

@@ -13,7 +13,6 @@
             "minecraft:type_family": { "family": [ "piglin", "adult_piglin", "piglin_brute", "monster" ] },
             "minecraft:conditional_bandwidth_optimization": { },
             "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
-            "minecraft:health": { "value": 100, "max": 100 },
             "minecraft:hurt_on_condition": {
                 "damage_conditions": [
                     {
@@ -23,7 +22,6 @@
                     }
                 ]
             },
-            "minecraft:movement": { "value": 0.35 },
             "minecraft:navigation.walk": { "can_path_over_water": true, "can_open_doors": true },
             "minecraft:annotation.open_door": { },
             "minecraft:movement.basic": {},
@@ -61,7 +59,38 @@
             "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } } ] }
         },
   
-        "events": { },
-        "component_groups": { }
+        "events": {
+            "minecraft:entity_spawned": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
+			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
+			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } }
+        },
+        "component_groups": {
+			"level_1": {
+                "minecraft:attack": { "damage": 10 },
+                "minecraft:health": { "value": 200, "max": 200 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_axe/leather_armor.json" }
+			},
+			"level_2": {
+                "minecraft:attack": { "damage": 12 },
+                "minecraft:health": { "value": 300, "max": 300 },
+                "minecraft:movement": { "value": 0.35 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_axe/iron_armor.json" }
+			},
+			"level_3": {
+                "minecraft:attack": { "damage": 14 },
+                "minecraft:health": { "value": 400, "max": 400 },
+                "minecraft:movement": { "value": 0.38 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_axe/diamond_armor.json" }
+			},
+            "level_4": {
+                "minecraft:attack": { "damage": 16 },
+                "minecraft:health": { "value": 500, "max": 500 },
+                "minecraft:movement": { "value": 0.40 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_axe/netherite_armor.json" }
+			}
+        }
     }
 }
