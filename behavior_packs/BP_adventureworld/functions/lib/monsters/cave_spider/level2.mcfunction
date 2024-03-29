@@ -11,9 +11,9 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=caveSpid
 ## --- 正式生成 ---
 
 ### 生成怪物
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_2 "洞穴蜘蛛 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_2 "§a洞穴蜘蛛 | lv.2"
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_3 "洞穴蜘蛛 | lv.3"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_2 "洞穴蜘蛛 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_2 "§a洞穴蜘蛛 | lv.2"
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_3 "洞穴蜘蛛 | lv.3"
 
 ### 移除生成器

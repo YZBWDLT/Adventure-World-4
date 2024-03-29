@@ -12,10 +12,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=creeperS
 
 ### 生成怪物
 
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=creeperSpeedSummoner] ~~~ summon minecraft:creeper ~~~ aw:level_1_speed_creeper "速度苦力怕 | lv.1"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..3}] ~~~ execute @e[name=creeperSpeedSummoner] ~~~ summon minecraft:creeper ~~~ aw:level_2_speed_creeper "速度苦力怕 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=creeperSpeedSummoner] ~~~ summon minecraft:creeper ~~~ aw:level_3_speed_creeper "速度苦力怕 | lv.3"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=creeperSpeedSummoner] ~~~ summon minecraft:creeper ~~~ aw:level_4_speed_creeper "速度苦力怕 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=creeperSpeedSummoner] ~~~ summon minecraft:creeper ~~~ aw:level_1_speed_creeper "§a速度苦力怕 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..3}] ~~~ execute @e[name=creeperSpeedSummoner] ~~~ summon minecraft:creeper ~~~ aw:level_2_speed_creeper "§b速度苦力怕 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=creeperSpeedSummoner] ~~~ summon minecraft:creeper ~~~ aw:level_3_speed_creeper "§d速度苦力怕 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=creeperSpeedSummoner] ~~~ summon minecraft:creeper ~~~ aw:level_4_speed_creeper "§6速度苦力怕 | lv.4"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=creeperSpeedSummoner]
