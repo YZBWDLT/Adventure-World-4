@@ -84,6 +84,8 @@ execute @e[name=ghastSummoner,c=1] ~~~ function lib/monsters/ghast
 execute @e[name=magmaCubeSmallSummoner,c=1] ~~~ function lib/monsters/magma_cube/small
 execute @e[name=magmaCubeMediumSummoner,c=1] ~~~ function lib/monsters/magma_cube/medium
 execute @e[name=magmaCubeLargeSummoner,c=1] ~~~ function lib/monsters/magma_cube/large
+execute @e[family=medium_magma_cube,name=""] ~~~ function lib/monsters/magma_cube/medium_respawn
+execute @e[family=small_magma_cube,name=""] ~~~ function lib/monsters/magma_cube/small_respawn
 
 ## --- BOSS | 骷髅王 ---
 execute @e[name=skeletonKingSummoner,c=1] ~~~ function lib/monsters/skeleton_king
