@@ -11,11 +11,11 @@ execute @e[name=level,scores={data=311..320}] ~~~ titleraw @a[hasitem={item=aw:p
 execute @e[name=level,scores={data=321..330}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a5"}]}
 execute @e[name=level,scores={data=331..}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a6"}]}
 ### 生长药水
-titleraw @a[hasitem={item=aw:potion_growth,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§b生长药水§r\n\n§a生命上限 §l↑§r\n§a生命恢复 §l↑§r\n§c攻击伤害 §l↓§r\n\n§c和其他大药水冲突\n一局只能选择一类"}]}
+titleraw @a[hasitem={item=aw:potion_growth,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§b生长药水§r\n\n§a生命上限 §l↑§r\n§a生命恢复 §l↑§r\n§c攻击伤害 §l↓§r\n\n§c和其他主药水冲突\n一局只能选择一类"}]}
 ### 亢奋药水
-titleraw @a[hasitem={item=aw:potion_thrill,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§b亢奋药水§r\n\n§a攻击伤害 §l↑§r\n§a移动速度 §l↑§r\n§c生命 §l↓§r\n\n§c和其他大药水冲突\n一局只能选择一类"}]}
+titleraw @a[hasitem={item=aw:potion_thrill,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§b亢奋药水§r\n\n§a攻击伤害 §l↑§r\n§a移动速度 §l↑§r\n§c生命 §l↓§r\n\n§c和其他主药水冲突\n一局只能选择一类"}]}
 ### 神龟药水
-titleraw @a[hasitem={item=aw:potion_turtle,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§b神龟药水§r\n\n§a抗性 §l↑§r\n§a伤害吸收 §l↑↑§r\n§c移动速度 §l↓§r\n\n§c和其他大药水冲突\n一局只能选择一类"}]}
+titleraw @a[hasitem={item=aw:potion_turtle,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§b神龟药水§r\n\n§a抗性 §l↑§r\n§a伤害吸收 §l↑↑§r\n§c移动速度 §l↓§r\n\n§c和其他主药水冲突\n一局只能选择一类"}]}
 ### 重生药水
 titleraw @a[hasitem={item=aw:potion_rebirth,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§d重生药水§r\n\n§a生命 §l↑↑§r\n§c攻击伤害 §l↓↓§r§f[☹ 短时]"}]}
 ### 净化药水
