@@ -13,10 +13,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=magmaCub
 ### 生成怪物，怪物生成数将根据玩家数目而非线性增长
 ### 玩家数目  1   2~3 4~6 7~10
 ### 怪物倍率  1   2   3   4
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=magmaCubeLargeSummoner] ~~~ summon magma_cube ~~~ spawn_large "岩浆怪"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..}] ~~~ execute @e[name=magmaCubeLargeSummoner] ~~~ summon magma_cube ~~~ spawn_large "岩浆怪"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..}] ~~~ execute @e[name=magmaCubeLargeSummoner] ~~~ summon magma_cube ~~~ spawn_large "岩浆怪"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=magmaCubeLargeSummoner] ~~~ summon magma_cube ~~~ spawn_large "岩浆怪"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=magmaCubeLargeSummoner] ~~~ summon magma_cube ~~~ spawn_large "§d大型岩浆怪"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..}] ~~~ execute @e[name=magmaCubeLargeSummoner] ~~~ summon magma_cube ~~~ spawn_large "§d大型岩浆怪"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..}] ~~~ execute @e[name=magmaCubeLargeSummoner] ~~~ summon magma_cube ~~~ spawn_large "§d大型岩浆怪"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=magmaCubeLargeSummoner] ~~~ summon magma_cube ~~~ spawn_large "§d大型岩浆怪"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=magmaCubeLargeSummoner]

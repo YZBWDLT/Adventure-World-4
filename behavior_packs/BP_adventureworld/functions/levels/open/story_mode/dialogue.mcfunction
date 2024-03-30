@@ -9,4 +9,4 @@ execute @e[name=dialogue,scores={time=640}] ~~~ tellraw @a {"rawtext":[{"text":"
 execute @e[name=dialogue,scores={time=740}] ~~~ tellraw @a {"rawtext":[{"text":"* 其余贤者也接连觉醒，最终成功消灭了恶魔。"}]}
 execute @e[name=dialogue,scores={time=840}] ~~~ tellraw @a {"rawtext":[{"text":"* 但最初觉醒的空间贤者仍然不知去向，大家正在计划寻找......"}]}
 
-execute @e[name=dialogue,scores={time=900}] ~~~ function lib/dialogue/disable
+execute @e[name=dialogue,scores={time=900}] ~~~ function lib/states/dialogue/disable

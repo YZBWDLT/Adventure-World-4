@@ -73,7 +73,6 @@ execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21
 
 ## 时间线控制器
 ## 仅当时间线处于激活状态下执行。一般而言，“在游戏中”的关卡都会默认开启时间线，而“未在游戏中”时的时间线一般是关闭的。
-##<!> 需要测试玩家重新进入时是否会出现问题 | 原文【加上exe @e[type=player] ~是为了防止玩家重新进入时因为实体未加载而错误的判定为关卡失败从而卡关的问题】
 execute @e[name=timeline,scores={active=1..}] ~~~ function system/level_controllers/timeline
 
 ## 对话控制器
@@ -83,6 +82,8 @@ execute @e[name=dialogue,scores={active=1..}] ~~~ function system/level_controll
 ## 怪物延迟生成控制器
 ## 仅当怪物延迟生成处于激活状态下执行。在每次生成怪物前，都需要先启用怪物延迟生成并设定延迟时长。
 execute @e[name=monsterSummonDelay,scores={active=1}] ~~~ function system/level_controllers/monster_summon_delay
+## 当出现无名的岩浆怪后，重新生成
+execute @e[type=magma_cube,name=""] ~~~ function lib/monsters/summoner_controller
 
 ## 快捷栏标题控制器
 function system/level_controllers/actionbar_title
@@ -103,3 +104,10 @@ execute @e[name=level,scores={temp3=0}] ~~~ function system/level_controllers/ga
 
 ## 游戏模式切换器
 execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_switcher
+
+## 重生点判定器
+execute @e[name=developerMode,scores={settings=1}] ~~~ execute @e[name=tick,scores={time=14}] ~~~ execute @e[family=respawner] ~~~ particle aw:block_hint_gold ~~~
+
+## 暂定内容
+tellraw @a[x=-235,y=-63,z=97,r=5,m=!spectator] {"rawtext":[{"text":"游戏内容到此结束，感谢您游玩Alpha 4.0_09！"}]}
+gamemode spectator @a[x=-235,y=-63,z=97,r=5,m=!spectator]

@@ -22,4 +22,4 @@ scoreboard players reset @e[family=respawner] temp
 
 ## --- 激活timeline时间线 ---
 ## 当data.level=741时，会触发对应单独的时间线设定
-function lib/timeline/enable
+function lib/states/timeline/enable

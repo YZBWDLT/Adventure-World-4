@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] data 311
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§l§a3-1已完成！§r\n§f你已获得 §a[治疗药水] §e[钻石头盔] §f！\n§7不要忘记手持钻石头盔获取附魔！"}]}
+tellraw @a {"rawtext":[{"text":"§l§a3-1已完成！§r\n§f你已获得 §a[治疗药水] §e[钻石头盔] §f！\n§a非常好！灵活运用主药水可以帮助你更轻松地通过后面的关卡。\n请手持一次钻石头盔以获取附魔。"}]}
 clear @a aw:iron_helmet
 
 ## --- 打开入口与出口 ---
@@ -19,3 +19,6 @@ tp @e[family=respawner] -188 -21 29
 
 ## --- 调用所有关卡通用奖励功能 ---
 function lib/all_levels/bonus
+
+scoreboard players set @e[name=timeline] active 3
+scoreboard players set @e[name=timeline] time 0

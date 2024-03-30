@@ -13,7 +13,6 @@
 			"minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
 			"minecraft:fire_immune": { },
 			"minecraft:nameable": { "always_show": true },
-			"minecraft:health": { "value": 10, "max": 10 },
 			"minecraft:collision_box": { "width": 4.02, "height": 4 },
 			"minecraft:movement": {"value": 0.03 },
 			"minecraft:navigation.float": { "can_path_over_water": true },
@@ -25,7 +24,6 @@
 			"minecraft:jump.static": { },
 			"minecraft:despawn": { "despawn_from_distance": {} },
 			"minecraft:behavior.float": { "priority": 0 },
-			"minecraft:behavior.ranged_attack": { "priority": 1, "attack_radius": 64, "charge_shoot_trigger": 2, "charge_charged_trigger": 1 },
 			"minecraft:follow_range": { "value": 64, "max": 64 },
 			"minecraft:behavior.hurt_by_target": { "priority": 1 },
 			"minecraft:physics": { },
@@ -48,6 +46,40 @@
 					{ "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } }
 				]
 			}
-		}
+		},
+
+		"events": {
+			"minecraft:entity_spawned": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
+			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
+			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } }
+	  	},
+	  	"component_groups": {
+			"level_1": {
+				"minecraft:health": { "value": 10, "max": 10 },
+				"minecraft:movement": { "value": 0.03 },
+				"minecraft:behavior.ranged_attack": { "priority": 1, "attack_radius": 64, "charge_shoot_trigger": 2, "charge_charged_trigger": 1 },
+				"minecraft:scale": { "value": 1.0 }
+			},
+			"level_2": {
+				"minecraft:health": { "value": 25, "max": 25 },
+				"minecraft:movement": { "value": 0.03 },
+				"minecraft:behavior.ranged_attack": { "priority": 1, "attack_radius": 64, "charge_shoot_trigger": 1.5, "charge_charged_trigger": 0.75 },
+				"minecraft:scale": { "value": 0.8 }
+			},
+			"level_3": {
+				"minecraft:health": { "value": 40, "max": 40 },
+				"minecraft:movement": { "value": 0.05 },
+				"minecraft:behavior.ranged_attack": { "priority": 1, "attack_radius": 64, "charge_shoot_trigger": 1, "charge_charged_trigger": 0.5 },
+				"minecraft:scale": { "value": 0.65 }
+			},
+			"level_4": {
+				"minecraft:health": { "value": 40, "max": 40 },
+				"minecraft:movement": { "value": 0.05 },
+				"minecraft:behavior.ranged_attack": { "priority": 1, "attack_radius": 64, "charge_shoot_trigger": 0.5, "charge_charged_trigger": 0.25 },
+				"minecraft:scale": { "value": 0.5 }
+			}
+	  	}
 	}
 }

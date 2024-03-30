@@ -72,16 +72,16 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.timeLeft = §a%%s §7
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.timeline = §a%%s §7# 时间线，单位不定","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeline]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.@e[family=blaze_king] = §a%%s §7# 烈焰之魂试图随机传送的倒计时，单位：秒","with":{"rawtext":[{"score":{"objective":"time","name":"@e[family=blaze_king]"}}]}}]}
 
-tellraw @s {"rawtext":[{"translate":"§l===== 标签类型（tag）项 ====="}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== 标签类型（tag）项 ====="}]}
 
 tellraw @s[scores={temp=1},tag=!bootsHeld] {"rawtext":[{"translate":"§ebootsHeld = §afalse §7# 玩家是否手持过钻石靴子（aw:diamond_boots） | true=是，false=否"}]}
 tellraw @s[scores={temp=1},tag=bootsHeld] {"rawtext":[{"translate":"§ebootsHeld = §atrue §7# 玩家是否手持过钻石靴子（aw:diamond_boots） | true=是，false=否"}]}
 
+tellraw @s[scores={temp=1},tag=!dataInitiated] {"rawtext":[{"translate":"§edataInitiated = §afalse §7# 玩家是否重置过其记分板数据 | true=是，false=否"}]}
+tellraw @s[scores={temp=1},tag=dataInitiated] {"rawtext":[{"translate":"§edataInitiated = §atrue §7# 玩家是否重置过其记分板数据 | true=是，false=否"}]}
+
 tellraw @s[scores={temp=1},tag=!helmetHeld] {"rawtext":[{"translate":"§ehelmetHeld = §afalse §7# 玩家是否手持过钻石头盔（aw:diamond_helmet） | true=是，false=否"}]}
 tellraw @s[scores={temp=1},tag=helmetHeld] {"rawtext":[{"translate":"§ehelmetHeld = §atrue §7# 玩家是否手持过钻石头盔（aw:diamond_helmet） | true=是，false=否"}]}
-
-tellraw @s[scores={temp=1},tag=!matchLevelFailed] {"rawtext":[{"translate":"§ematchLevelFailed = §afalse §7# 判断退出重进的玩家的关卡数据是否和自己的位置一致 | true=是，false=否"}]}
-tellraw @s[scores={temp=1},tag=matchLevelFailed] {"rawtext":[{"translate":"§ematchLevelFailed = §atrue §7# 判断退出重进的玩家的关卡数据是否和自己的位置一致 | true=是，false=否"}]}
 
 tellraw @s[scores={temp=1},tag=!virtualCrosshairEnabled] {"rawtext":[{"translate":"§evirtualCrosshairEnabled = §afalse §7# 玩家是否启用了虚拟准星 | true=是，false=否"}]}
 tellraw @s[scores={temp=1},tag=virtualCrosshairEnabled] {"rawtext":[{"translate":"§evirtualCrosshairEnabled = §atrue §7# 玩家是否启用了虚拟准星 | true=是，false=否"}]}

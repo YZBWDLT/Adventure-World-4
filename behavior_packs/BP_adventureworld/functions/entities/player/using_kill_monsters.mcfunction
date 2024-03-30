@@ -1,7 +1,5 @@
 # ===== 使用虚拟准星后 =====
 
-# --- 清除之 ---
-clear @s aw:kill_monsters
 
 # --- 数值操作 ---
 
@@ -15,6 +13,3 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"已清除所有怪物"}]}
 execute @s[scores={temp=1}] ~~~ playsound random.orb @s ~~~
 
 scoreboard players set @s temp 0
-
-# --- 给予之 ---
-replaceitem entity @s slot.weapon.mainhand 0 aw:kill_monsters 1 0 {"item_lock":{"mode":"lock_in_inventory"}}

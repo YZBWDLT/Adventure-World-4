@@ -14,3 +14,10 @@ scoreboard players set @e[name=soundPlayer] active 14
 function lib/supplier/arrow
 function lib/supplier/items
 function lib/supplier/potion
+
+# --- 当玩家以剧情模式进入后，触发剧情 ---
+execute @e[name=storyMode,scores={settings=0}] ~~~ function lib/states/dialogue/disable
+execute @e[name=storyMode,scores={settings=0}] ~~~ function lib/states/timeline/disable
+
+execute @e[name=storyMode,scores={settings=1}] ~~~ function lib/states/dialogue/enable_lock_camera
+execute @e[name=storyMode,scores={settings=1}] ~~~ function lib/states/timeline/enable

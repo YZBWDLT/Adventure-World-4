@@ -11,10 +11,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=zombie2S
 ## --- 正式生成 ---
 
 ### 生成怪物
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=zombie2Summoner] ~~~ summon zombie ~~~ aw:level_2 "僵尸 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..}] ~~~ execute @e[name=zombie2Summoner] ~~~ summon zombie ~~~ aw:level_3 "僵尸 | lv.3"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=zombie2Summoner] ~~~ summon zombie ~~~ aw:level_2 "僵尸 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=zombie2Summoner] ~~~ summon zombie ~~~ aw:level_3 "僵尸 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=zombie2Summoner] ~~~ summon zombie ~~~ aw:level_2 "§a僵尸 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..}] ~~~ execute @e[name=zombie2Summoner] ~~~ summon zombie ~~~ aw:level_3 "§b僵尸 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=zombie2Summoner] ~~~ summon zombie ~~~ aw:level_2 "§a僵尸 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=zombie2Summoner] ~~~ summon zombie ~~~ aw:level_3 "§b僵尸 | lv.3"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=zombie2Summoner]

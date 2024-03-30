@@ -31,12 +31,12 @@ execute @e[name=randomMonster,scores={data=5}] ~~~ execute @e[name=summonLocatio
 execute @e[name=randomMonster,scores={data=6}] ~~~ execute @e[name=summonLocation] ~~~ summon aw:marker ~~~ "aw:as_summoner" "stray3Summoner"
 execute @e[name=randomMonster,scores={data=7}] ~~~ execute @e[name=summonLocation] ~~~ summon aw:marker ~~~ "aw:as_summoner" "zombie3Summoner"
 execute @e[name=randomMonster,scores={data=8}] ~~~ execute @e[name=summonLocation] ~~~ summon aw:marker ~~~ "aw:as_summoner" "zombieBaby3Summoner"
-execute @e[name=randomMonster,scores={data=1..8}] ~~~ function lib/monster_summon_delay/enable_40ticks
+execute @e[name=randomMonster,scores={data=1..8}] ~~~ function lib/states/monster_summon_delay/enable_40ticks
 execute @e[name=randomMonster,scores={data=1..8}] ~~~ kill @e[name=summonLocation]
 execute @e[name=randomMonster,scores={data=1..8}] ~~~ scoreboard players set @s data 0
 
 ### 刷新完成后重新指定刷新倒计时
-execute @e[name=monsterRefreshLeft,scores={time=0}] ~~~ scoreboard players random @s time 4 12
+execute @e[name=monsterRefreshLeft,scores={time=0}] ~~~ scoreboard players random @s time 3 10
 
 ## --- 给予守卫者药效 ---
 execute @e[name=tick,scores={time=0}] ~~~ effect @e[type=guardian] resistance 30 10 true

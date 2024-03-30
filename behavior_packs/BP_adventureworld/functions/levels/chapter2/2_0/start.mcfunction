@@ -20,3 +20,7 @@ fill -69 18 64 -69 20 66 stone["stone_type":"diorite_smooth"]
 fill -104 -17 69 -104 -15 67 stone["stone_type":"diorite_smooth"]
 ## 2-3
 fill -167 -21 60 -167 -19 62 stone["stone_type":"diorite_smooth"]
+
+# --- 设定玩家镜头位置 ---
+tp @e[name=playerPosition] -75 22 28
+tp @e[name=facingPosition] -70 18 40 facing @e[name=playerPosition,c=1]

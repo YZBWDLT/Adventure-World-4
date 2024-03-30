@@ -23,9 +23,12 @@ function lib/supplier/potion
 function lib/supplier/items
 
 ## --- 游戏失败后，停止关卡检测器的工作，并移除多余的绳枪 ---
-function lib/timeline/disable
+function lib/states/timeline/disable
 
 ## --- 清除多余实体 ---
 kill @e[family=summoner]
 kill @e[family=monster]
 kill @e[family=hookshot]
+
+# --- 将关卡完成模式改为立即完成 ---
+function lib/states/level_complete_delay/disable

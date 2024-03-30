@@ -38,7 +38,7 @@ execute @e[name=drownedWithTridentSummoner,c=1] ~~~ function lib/monsters/drowne
 execute @e[name=husk1Summoner,c=1] ~~~ function lib/monsters/husk
 execute @e[name=huskBaby1Summoner,c=1] ~~~ function lib/monsters/husk_baby
 
-## --- 猪灵&疣猪兽 ---
+## --- 猪灵&疣猪兽&猪灵蛮兵 ---
 execute @e[name=piglin1Summoner,c=1] ~~~ function lib/monsters/piglin/level1
 execute @e[name=piglin2Summoner,c=1] ~~~ function lib/monsters/piglin/level2
 execute @e[name=piglin3Summoner,c=1] ~~~ function lib/monsters/piglin/level3
@@ -48,6 +48,8 @@ execute @e[name=hoglin1Summoner,c=1] ~~~ function lib/monsters/hoglin/level1
 execute @e[name=hoglin2Summoner,c=1] ~~~ function lib/monsters/hoglin/level2
 execute @e[name=hoglin3Summoner,c=1] ~~~ function lib/monsters/hoglin/level3
 execute @e[name=hoglin4Summoner,c=1] ~~~ function lib/monsters/hoglin/level4
+
+execute @e[name=piglinBruteSummoner,c=1] ~~~ function lib/monsters/piglin/piglin_brute
 
 ## --- 蜘蛛&洞穴蜘蛛&蠹虫 ---
 execute @e[name=spider1Summoner,c=1] ~~~ function lib/monsters/spider/level1
@@ -84,6 +86,8 @@ execute @e[name=ghastSummoner,c=1] ~~~ function lib/monsters/ghast
 execute @e[name=magmaCubeSmallSummoner,c=1] ~~~ function lib/monsters/magma_cube/small
 execute @e[name=magmaCubeMediumSummoner,c=1] ~~~ function lib/monsters/magma_cube/medium
 execute @e[name=magmaCubeLargeSummoner,c=1] ~~~ function lib/monsters/magma_cube/large
+execute @e[family=medium_magma_cube,name=""] ~~~ function lib/monsters/magma_cube/medium_respawn
+execute @e[family=small_magma_cube,name=""] ~~~ function lib/monsters/magma_cube/small_respawn
 
 ## --- BOSS | 骷髅王 ---
 execute @e[name=skeletonKingSummoner,c=1] ~~~ function lib/monsters/skeleton_king
@@ -93,6 +97,3 @@ execute @e[name=elderGuardianSummoner,c=1] ~~~ function lib/monsters/elder_guard
 
 ## --- BOSS | 烈焰之魂 ---
 execute @e[name=blazeKingSummoner,c=1] ~~~ function lib/monsters/blaze_king
-
-## --- BOSS | 猪灵蛮兵 ---
-execute @e[name=piglinBruteBossSummoner,c=1] ~~~ function lib/monsters/piglin_brute_boss

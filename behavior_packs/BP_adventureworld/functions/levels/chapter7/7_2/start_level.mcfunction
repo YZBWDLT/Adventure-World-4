@@ -16,3 +16,7 @@ function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] data 3
+
+# --- 重新开启怪物检测 ---
+# 因为关卡有岩浆怪，因此启用延迟
+function lib/states/level_complete_delay/enable_60ticks

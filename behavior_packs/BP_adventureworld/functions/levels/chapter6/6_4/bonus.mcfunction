@@ -22,8 +22,10 @@ structure load 6_4_no_lava -89 -40 21
 ## --- 调用所有关卡通用奖励功能 ---
 function lib/all_levels/bonus
 
-## --- 将旷野之剑动画的时间线数据初始化 ---
-function lib/timeline/enable
+## --- 重新启用时间线 ---
+function lib/states/timeline/enable
+function lib/states/dialogue/enable
 
 # --- 移除haveNoBoss标记 ---
 kill @e[name=haveNoBoss]
+kill @e[family=random_teleporter]

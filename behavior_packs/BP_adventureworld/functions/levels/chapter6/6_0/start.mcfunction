@@ -27,3 +27,7 @@ fill -82 -31 -62 -82 -29 -64 dripstone_block
 fill -72 -19 -30 -70 -17 -30 stained_glass["color":"purple"]
 ## 6-3
 fill -74 -39 8 -76 -37 8 deepslate_bricks
+
+# --- 设定玩家镜头位置 ---
+tp @e[name=playerPosition] -71 -29 -20
+tp @e[name=facingPosition] -76 -31 -35 facing @e[name=playerPosition,c=1]

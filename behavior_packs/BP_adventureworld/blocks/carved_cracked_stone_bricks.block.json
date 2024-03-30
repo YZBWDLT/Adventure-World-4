@@ -1,0 +1,11 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "aw:carved_cracked_stone_bricks"
+        },
+        "components": {
+            
+        }
+    }
+}

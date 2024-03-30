@@ -13,8 +13,9 @@ execute @s[scores={temp=0}] ~~~ execute @e[name=randomMonster,scores={data=21..3
 execute @s[scores={temp=0}] ~~~ execute @e[name=randomMonster,scores={data=31..50}] ~~~ execute @r[type=aw:marker,family=random_teleporter] ~~~ summon aw:marker ~~~ "aw:as_summoner" "creeperHardSummoner"
 execute @s[scores={temp=0}] ~~~ execute @e[name=randomMonster,scores={data=51..75}] ~~~ execute @r[type=aw:marker,family=random_teleporter] ~~~ summon aw:marker ~~~ "aw:as_summoner" "zombie4Summoner"
 execute @s[scores={temp=0}] ~~~ execute @e[name=randomMonster,scores={data=76..100}] ~~~ execute @r[type=aw:marker,family=random_teleporter] ~~~ summon aw:marker ~~~ "aw:as_summoner" "skeleton3Summoner"
-execute @s[scores={temp=0}] ~~~ execute @e[name=randomMonster,scores={data=0..100}] ~~~ function lib/monster_summon_delay/enable_40ticks
+execute @s[scores={temp=0}] ~~~ execute @e[name=randomMonster,scores={data=0..100}] ~~~ function lib/states/monster_summon_delay/enable_40ticks
 
 ## 重置时间
-scoreboard players random @s[scores={temp=!1..20,temp2=1..2}] temp 10 20
-scoreboard players random @s[scores={temp=!1..20,temp2=3}] temp 5 10
+## 一二阶段时每5-10秒生成，三阶段时每3-5秒生成
+scoreboard players random @s[scores={temp=!1..10,temp2=1..2}] temp 5 10
+scoreboard players random @s[scores={temp=!1..5,temp2=3}] temp 3 5

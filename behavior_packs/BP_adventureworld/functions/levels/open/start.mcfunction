@@ -17,8 +17,8 @@ tp @a 36 26 87
 tp @e[family=respawner] 36 26 87
 
 # --- 游戏开幕 ---
-function lib/timeline/enable
-function lib/dialogue/enable
+function lib/states/timeline/enable
+function lib/states/dialogue/enable
 
 # --- 初始化标题时间 ---
 title @a times 10 30 10

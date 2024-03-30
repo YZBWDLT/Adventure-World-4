@@ -28,10 +28,10 @@ execute @e[name=dialogue,scores={time=2160}] ~~~ tellraw @a {"rawtext":[{"text":
 execute @e[name=dialogue,scores={time=2260}] ~~~ tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7没问题，你的解读进展也别忘了和我说说。"}]}
 execute @e[name=dialogue,scores={time=2360}] ~~~ tellraw @a {"rawtext":[{"text":"你现在可以移动了！"}]}
 
-execute @e[name=dialogue,scores={time=2361}] ~~~ function lib/dialogue/disable
+execute @e[name=dialogue,scores={time=2361}] ~~~ function lib/states/dialogue/disable
 
 # --- 玩家入水3秒后 ---
 execute @e[name=dialogue,scores={time=3001}] ~~~ tellraw @a {"rawtext":[{"text":"* §b田英： §7喂！喂！试炼入口不在水里啊！"}]}
 execute @e[name=dialogue,scores={time=3100}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7水下没有刻字，不过谢谢你，我自己研究就行。"}]}
 
-execute @e[name=dialogue,scores={time=3200}] ~~~ function lib/dialogue/disable
+execute @e[name=dialogue,scores={time=3200}] ~~~ function lib/states/dialogue/disable

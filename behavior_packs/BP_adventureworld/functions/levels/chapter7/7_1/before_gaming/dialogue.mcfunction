@@ -1,0 +1,9 @@
+# ===== 剧情线 =====
+
+# --- 剧情模式 ---
+execute @e[name=dialogue,scores={time=200}] ~~~ execute @e[name=storyMode,scores={settings=1}] ~~~ tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7§o（深吸一口气）§r§7放心吧......我可是勇气贤者啊！"}]}
+
+# --- 纯战斗模式 ---
+execute @e[name=dialogue,scores={time=200}] ~~~ execute @e[name=storyMode,scores={settings=0}] ~~~ tellraw @a {"rawtext":[{"translate":"§c* 准备好了吗？这是你最后的试炼。"}]}
+
+execute @e[name=dialogue,scores={time=349}] ~~~ function lib/states/dialogue/disable

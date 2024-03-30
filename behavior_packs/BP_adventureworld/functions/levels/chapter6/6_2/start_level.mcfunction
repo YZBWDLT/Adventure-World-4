@@ -16,3 +16,6 @@ function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] data 3
+
+# --- 提示玩家 ---
+execute @e[name=maxPlayersAmount,scores={data=7..}] ~~~ tellraw @a {"rawtext":[{"translate":"§c当心7级骷髅！！它们拥有极高的血量和一击必杀的伤害，但某些机制对它们仍然有效。"}]}
