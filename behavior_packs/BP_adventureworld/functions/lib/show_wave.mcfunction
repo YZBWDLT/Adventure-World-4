@@ -41,3 +41,10 @@ execute @e[name=level,scores={data=340}] ~~~ execute @e[name=wave,scores={data=1
 execute @e[name=level,scores={data=340}] ~~~ execute @e[name=wave,scores={data=2}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§b⚃§e⚀§e⚁"
 execute @e[name=level,scores={data=340}] ~~~ execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§a⚅§b⚂§e⚁"
 execute @e[name=level,scores={data=340}] ~~~ execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§a⚅§a⚄§b⚃"
+
+execute @e[name=level,scores={data=740}] ~~~ kill @e[family=wave_name]
+execute @e[name=level,scores={data=740}] ~~~ execute @e[name=wave,scores={data=1}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§b⚃§e⚀§e⚁§e⚀§e⚀"
+execute @e[name=level,scores={data=740}] ~~~ execute @e[name=wave,scores={data=2}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§b⚂§e⚁§e⚀§e⚀"
+execute @e[name=level,scores={data=740}] ~~~ execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§a⚄§b⚃§e⚀§e⚀"
+execute @e[name=level,scores={data=740}] ~~~ execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§a⚄§a⚅§b⚂§e⚀"
+execute @e[name=level,scores={data=740}] ~~~ execute @e[name=wave,scores={data=5}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§a⚄§a⚅§a⚄§b⚂"

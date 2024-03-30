@@ -19,3 +19,7 @@ scoreboard players set @e[name=maxWave] data 5
 
 ## --- 添加岩浆 ---
 fill -224 -27 111 -244 -29 85 lava[] keep
+
+# --- 重新开启怪物检测 ---
+# 因为关卡有岩浆怪，因此启用延迟
+function lib/states/level_complete_delay/enable_60ticks

@@ -11,6 +11,7 @@ titleraw @a subtitle {"rawtext":[{"translate":"§c%%s-%%s§f | 第§a%%s§f波",
 execute @e[name=level,scores={data=230}] ~~~ execute @e[name=wave,scores={data=4}] ~~~ titleraw @a title {"rawtext":[{"translate":"§l§cBOSS 来 袭"}]}
 execute @e[name=level,scores={data=340}] ~~~ execute @e[name=wave,scores={data=3}] ~~~ titleraw @a title {"rawtext":[{"translate":"§l§cBOSS 来 袭"}]}
 execute @e[name=level,scores={data=640}] ~~~ execute @e[name=wave,scores={data=1}] ~~~ titleraw @a title {"rawtext":[{"translate":"§l§cBOSS 来 袭"}]}
+execute @e[name=level,scores={data=740}] ~~~ execute @e[name=wave,scores={data=2..5,data=!3}] ~~~ titleraw @a title {"rawtext":[{"translate":"§l§cBOSS 来 袭"}]}
 
 ## --- 触发怪物生成函数 ---
 execute @e[name=level,scores={data=110}] ~~~ function levels/chapter1/1_1/monster_settings

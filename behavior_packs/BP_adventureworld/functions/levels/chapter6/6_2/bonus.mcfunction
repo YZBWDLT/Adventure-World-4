@@ -15,7 +15,7 @@ fill -72 -19 -30 -70 -17 -30 air
 fill -74 -32 -23 -77 -32 -22 air[] replace obsidian[]
 
 ## --- 设置重生点 ---
-tp @e[family=respawner] -75 -21 -36
+tp @e[family=respawner] -76 -21 -41
 
 ## --- 调用所有关卡通用奖励功能 ---
 function lib/all_levels/bonus

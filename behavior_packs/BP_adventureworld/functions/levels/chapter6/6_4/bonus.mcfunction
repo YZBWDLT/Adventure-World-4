@@ -28,3 +28,4 @@ function lib/states/dialogue/enable
 
 # --- 移除haveNoBoss标记 ---
 kill @e[name=haveNoBoss]
+kill @e[family=random_teleporter]

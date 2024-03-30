@@ -20,3 +20,6 @@ title @a times 0 100 0
 # --- 重置时间线和剧情线 ---
 function lib/states/timeline/enable
 function lib/states/dialogue/enable
+
+# --- 设置重生点 ---
+tp @e[family=respawner] -79 -40 105

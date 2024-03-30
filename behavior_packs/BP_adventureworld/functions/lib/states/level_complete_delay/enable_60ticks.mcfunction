@@ -3,3 +3,6 @@
 
 scoreboard players set @e[name=levelCompleteDelay] active 60
 scoreboard players set @e[name=levelCompleteDelay] time 60
+
+# --- 提示玩家 ---
+tellraw @a {"rawtext":[{"translate":"§7本关怪物全部清除后将在3秒后完成关卡。"}]}
