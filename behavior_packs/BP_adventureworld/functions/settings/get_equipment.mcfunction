@@ -108,4 +108,4 @@ loot give @s[scores={temp=16..}] loot "bow_with_flame_and_power"
 tellraw @s[scores={temp=17}] {"rawtext":[{"translate":"已将盔甲设定更改为%%s（7-1结束后）","with":{"rawtext":[{"score":{"name":"@s","objective":"temp"}}]}}]}
 give @s[scores={temp=17}] aw:wild_sword
 
-function lib/supplier/arrow
+execute @a ~~~ function lib/supplier/arrow

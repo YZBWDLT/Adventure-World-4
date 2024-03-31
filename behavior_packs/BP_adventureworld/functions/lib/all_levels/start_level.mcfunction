@@ -18,9 +18,9 @@ function levels/monster_settings_functions
 function lib/states/timeline/enable_without_flowing
 
 ## --- 为玩家补充物资 ---
-function lib/supplier/arrow
-function lib/supplier/potion
-function lib/supplier/items
+execute @a ~~~ function lib/supplier/arrow
+execute @a ~~~ function lib/supplier/potion
+execute @a ~~~ function lib/supplier/items
 
 # --- 更改玩家游戏模式 ---
 # 开发者模式下不更新游戏模式

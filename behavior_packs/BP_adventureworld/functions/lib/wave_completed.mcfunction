@@ -4,7 +4,7 @@
 scoreboard players add @e[name=wave] data 1
 
 # --- 补充箭 ---
-function lib/supplier/arrow
+execute @a ~~~ function lib/supplier/arrow
 
 # --- 释放玩家 ---
 

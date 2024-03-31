@@ -11,9 +11,9 @@ title @a times 0 100 0
 scoreboard players set @e[name=soundPlayer] active 14
 
 # --- 为玩家补充必要物资 ---
-function lib/supplier/arrow
-function lib/supplier/items
-function lib/supplier/potion
+execute @a ~~~ function lib/supplier/arrow
+execute @a ~~~ function lib/supplier/items
+execute @a ~~~ function lib/supplier/potion
 
 # --- 当玩家以剧情模式进入后，触发剧情 ---
 execute @e[name=storyMode,scores={settings=0}] ~~~ function lib/states/dialogue/disable
