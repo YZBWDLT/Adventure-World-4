@@ -23,8 +23,9 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"active.timeline = §a%%s �
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== data记分项 ====="}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.alivePlayersAmount = §a%%s §7# 记录存活玩家数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=alivePlayersAmount]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§edata.allFailedTimes = §a%%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"data","name":"allFailedTimes"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.failedTimes = §a%%s §7# 记录失败次数","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=failedTimes]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§edata.allFailedTimes = §a%%s §7# 记录所有关卡累计的失败次数","with":{"rawtext":[{"score":{"objective":"data","name":"allFailedTimes"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.difficulty = §a%%s §7# 记录难度。","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=difficulty]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.failedTimes = §a%%s §7# 记录单个关卡的失败次数，当失败次数过多时将给予buff辅助过关","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=failedTimes]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.hookshotAmount = §a%%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=hookshotAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.isNetease = §a%%s §7# 记录是否为netease版本","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=isNetease]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.level = §a%%s §7# 记录关卡数据，三位数分别为(章节)(关卡)(是否已完成)","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=level]"}}]}}]}
@@ -40,6 +41,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== settings记分项
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.alivePlayersAmount = §a%%s §7# 存活玩家数目是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=alivePlayersAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.arrowLimitTest = §a%%s §7# 箭上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=arrowLimitTest]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.developerMode = §a%%s §7# 开发者模式,0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=developerMode]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.difficultyAdder = §a%%s §7# 游戏难度加和，以difficulty+本值得到最终的难度值（data.difficulty）。","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=difficultyAdder]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.itemLimitTest = §a%%s §7# 物品上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=itemLimitTest]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.maxPlayersAmount = §a%%s §7# 所有玩家数目是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=maxPlayersAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.potionLimitTest = §a%%s §7# 药水上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=potionLimitTest]"}}]}}]}
