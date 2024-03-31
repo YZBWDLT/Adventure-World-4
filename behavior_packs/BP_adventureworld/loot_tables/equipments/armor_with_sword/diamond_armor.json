@@ -6,7 +6,7 @@
         },
         {
             "rolls": 1,
-            "entries": [ { "name": "minecraft:diamond_sword", "type": "item" } ]
+            "entries": [ { "name": "minecraft:golden_sword", "type": "item" } ]
         }
     ]
 }
