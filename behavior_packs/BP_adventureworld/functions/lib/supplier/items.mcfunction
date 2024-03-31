@@ -99,5 +99,6 @@ execute @e[name=level,scores={data=441..}] ~~~ replaceitem entity @a[hasitem={it
 execute @e[name=level,scores={data=710..}] ~~~ give @a[hasitem={item=aw:wild_sword,quantity=0}] aw:wild_sword 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 ## --- 传声石晶体 ---
-## 1-0给予，一直保留 | 仅限剧情模式开启时
-execute @e[name=storyMode,scores={settings=1}] ~~~ give @a[hasitem={item=aw:acoustic_stone_crystal,quantity=0}] aw:acoustic_stone_crystal 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+## 村庄剧情/1-0给予，一直保留 | 仅限剧情模式开启时
+execute @e[name=level,scores={data=8..9}] ~~~ execute @e[name=storyMode,scores={settings=1}] ~~~ give @a[hasitem={item=aw:acoustic_stone_crystal,quantity=0}] aw:acoustic_stone_crystal 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+execute @e[name=level,scores={data=100..}] ~~~ execute @e[name=storyMode,scores={settings=1}] ~~~ give @a[hasitem={item=aw:acoustic_stone_crystal,quantity=0}] aw:acoustic_stone_crystal 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
