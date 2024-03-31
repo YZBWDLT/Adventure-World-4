@@ -3,7 +3,9 @@
 ## 倒计时
 scoreboard players remove @s temp 1
 
-## 当时间结束后选取随机怪物值（如果怪物数目超过10个，阻止其生成）
+## 当时间结束后确定难度并选取随机怪物值（如果怪物数目超过10个，阻止其生成）
+execute @s[scores={temp=0}] ~~~ function lib/get_data/difficulty
+
 execute @s[scores={temp=0}] ~~~ execute @e[name=monsterAmount,scores={data=..9}] ~~~ scoreboard players random @e[name=randomMonster] data 0 100
 execute @s[scores={temp=0}] ~~~ execute @e[name=monsterAmount,scores={data=10..}] ~~~ scoreboard players set @e[name=randomMonster] data 101
 

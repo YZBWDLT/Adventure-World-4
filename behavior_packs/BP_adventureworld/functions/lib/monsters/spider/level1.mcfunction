@@ -11,10 +11,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=spider1S
 ## --- 正式生成 ---
 
 ### 生成怪物
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=spider1Summoner] ~~~ summon minecraft:spider ~~~ aw:level_1 "§a蜘蛛 | lv.1"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..}] ~~~ execute @e[name=spider1Summoner] ~~~ summon minecraft:spider ~~~ aw:level_2 "§a蜘蛛 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=spider1Summoner] ~~~ summon minecraft:spider ~~~ aw:level_1 "§a蜘蛛 | lv.1"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=spider1Summoner] ~~~ summon minecraft:spider ~~~ aw:level_2 "§a蜘蛛 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=1}] ~~~ execute @e[name=spider1Summoner] ~~~ summon minecraft:spider ~~~ aw:level_1 "§a蜘蛛 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=2..}] ~~~ execute @e[name=spider1Summoner] ~~~ summon minecraft:spider ~~~ aw:level_2 "§a蜘蛛 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=3}] ~~~ execute @e[name=spider1Summoner] ~~~ summon minecraft:spider ~~~ aw:level_1 "§a蜘蛛 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=4}] ~~~ execute @e[name=spider1Summoner] ~~~ summon minecraft:spider ~~~ aw:level_2 "§a蜘蛛 | lv.2"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=spider1Summoner]
