@@ -13,7 +13,7 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=piglinBr
 ### 生成怪物，怪物生成数将根据玩家数目而非线性增长
 ### 玩家数目  1   2~3 4~6 7~10
 ### 怪物倍率  1   2   3   4
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=piglinBruteSummoner] ~~~ summon piglin_brute "§b猪灵蛮兵 | lv.1" ~~~
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=piglinBruteSummoner] ~~~ summon piglin_brute "§b猪灵蛮兵 | lv.1" ~~~
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..3}] ~~~ execute @e[name=piglinBruteSummoner] ~~~ summon piglin_brute "§d猪灵蛮兵 | lv.2" ~~~
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=piglinBruteSummoner] ~~~ summon piglin_brute "§6猪灵蛮兵 | lv.3" ~~~
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=piglinBruteSummoner] ~~~ summon piglin_brute "§c猪灵蛮兵 | lv.4" ~~~
