@@ -15,7 +15,7 @@ function system/antileave
 
 ## 音效控制器
 ## 仅当音效播放器处于激活状态下执行。
-execute @e[name=soundPlayer,scores={active=!0}] ~~~ function system/sound_player
+execute @e[name=soundPlayer,scores={active=!0}] ~~~ function system/sound_controller
 
 ## 饱和效果
 ## 每秒执行一次。
