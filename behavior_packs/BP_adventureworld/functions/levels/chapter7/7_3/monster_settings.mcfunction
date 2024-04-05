@@ -32,17 +32,13 @@ execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -215 -6 95 "aw:as_sum
 
 # --- 第4波 ---
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -202 -7 107 "aw:as_summoner" "ghastSummoner"
-execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -201 -16 98 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -202 -16 97 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -203 -16 96 "aw:as_summoner" "piglin2Summoner"
-execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -204 -16 95 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -203 -16 93 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -201 -17 92 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -200 -15 94 "aw:as_summoner" "piglin2Summoner"
-execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -199 -17 94 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -198 -17 95 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -199 -17 96 "aw:as_summoner" "piglin2Summoner"
-execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -199 -17 97 "aw:as_summoner" "piglin2Summoner"
 execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -200 -16 97 "aw:as_summoner" "piglin2Summoner"
 
 # --- 第5波 ---
