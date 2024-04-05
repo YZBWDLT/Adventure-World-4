@@ -11,8 +11,8 @@
                 "saturation_modifier": "poor",
                 "can_always_eat": true,
                 "effects": [
-                    { "name": "regeneration", "chance" : 1.0, "duration" : 10, "amplifier" : 3 },
-                    { "name": "slowness", "chance" : 1.0, "duration" : 10, "amplifier" : 3 }
+                    { "name": "regeneration", "chance" : 1.0, "duration" : 15, "amplifier" : 3 },
+                    { "name": "slowness", "chance" : 1.0, "duration" : 4, "amplifier" : 3 }
                 ]
             },
             "minecraft:use_duration": 16
