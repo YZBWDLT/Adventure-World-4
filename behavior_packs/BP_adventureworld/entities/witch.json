@@ -47,22 +47,22 @@
 	  	},
 	  	"component_groups": {
 			"level_1": {
-				"minecraft:health": { "value": 40, "max": 40 },
+				"minecraft:health": { "value": 20, "max": 20 },
 				"minecraft:movement": { "value": 0.22 },
                 "minecraft:behavior.ranged_attack": { "priority": 2, "speed_multiplier": 1.0, "attack_interval": 3, "attack_radius": 20.0 }
 			},
 			"level_2": {
-				"minecraft:health": { "value": 60, "max": 60 },
+				"minecraft:health": { "value": 30, "max": 30 },
 				"minecraft:movement": { "value": 0.25 },
                 "minecraft:behavior.ranged_attack": { "priority": 2, "speed_multiplier": 1.0, "burst_shots": 2 , "burst_interval" : 0.5 , "attack_interval": 3, "attack_radius": 20.0 }
 			},
 			"level_3": {
-				"minecraft:health": { "value": 80, "max": 80 },
+				"minecraft:health": { "value": 40, "max": 40 },
 				"minecraft:movement": { "value": 0.28 },
                 "minecraft:behavior.ranged_attack": { "priority": 2, "speed_multiplier": 1.0, "burst_shots": 3 , "burst_interval" : 0.5 , "attack_interval": 3, "attack_radius": 20.0 }
 			},
 			"level_4": {
-				"minecraft:health": { "value": 100, "max": 100 },
+				"minecraft:health": { "value": 50, "max": 50 },
 				"minecraft:movement": { "value": 0.31 },
                 "minecraft:behavior.ranged_attack": { "priority": 2, "speed_multiplier": 1.0, "burst_shots": 4 , "burst_interval" : 0.5 , "attack_interval": 3, "attack_radius": 20.0 }
 			}
