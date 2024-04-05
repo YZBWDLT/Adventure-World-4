@@ -12,9 +12,9 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=caveSpid
 
 ### 生成怪物
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=1}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_2 "§a洞穴蜘蛛 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=2..}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_3 "洞穴蜘蛛 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=2..}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_3 "§b洞穴蜘蛛 | lv.3"
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=3}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_2 "§a洞穴蜘蛛 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=4}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_3 "洞穴蜘蛛 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=4}] ~~~ execute @e[name=caveSpider2Summoner] ~~~ summon cave_spider ~~~ aw:level_3 "§b洞穴蜘蛛 | lv.3"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=caveSpider2Summoner]
