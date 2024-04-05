@@ -23,3 +23,6 @@ function lib/states/dialogue/enable
 
 # --- 设置重生点 ---
 tp @e[family=respawner] -79 -40 105
+
+# --- 播放音乐 ---
+function lib/music_player

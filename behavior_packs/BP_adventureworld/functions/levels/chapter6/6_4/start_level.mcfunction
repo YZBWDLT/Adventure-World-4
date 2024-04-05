@@ -26,3 +26,6 @@ summon aw:marker -84 -37 26 aw:as_random_teleporter "randomTeleporter"
 
 # --- 提示玩家 ---
 tellraw @a {"rawtext":[{"translate":"§a本关击杀BOSS即可获胜！"}]}
+
+# --- 播放音乐 ---
+function lib/music_player

@@ -24,3 +24,6 @@ kill @e[type=item]
 
 ## --- 设置当前完成波数为2 ---
 scoreboard players set @e[name=wave] data 2
+
+# --- 播放音乐 ---
+function lib/music_player

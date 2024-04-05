@@ -16,3 +16,6 @@ execute @a[x=45,y=27,z=86,dx=0,dy=2,dz=0,c=1] ~~~ function levels/open/combat_mo
 
 # --- 给予玩家药效 ---
 execute @e[name=tick,scores={time=15}] ~~~ effect @a water_breathing 30 0 true
+
+# --- 停止音乐 ---
+execute @e[name=tick,scores={time=17}] ~~~ music stop

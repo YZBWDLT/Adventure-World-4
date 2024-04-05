@@ -12,3 +12,6 @@ fill -168 -15 22 -168 -13 24 structure_void
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
 function lib/all_levels/game_lose
+
+# --- 播放音乐 ---
+function lib/music_player

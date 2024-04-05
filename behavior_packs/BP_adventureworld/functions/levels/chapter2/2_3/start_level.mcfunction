@@ -16,3 +16,6 @@ function lib/all_levels/start_level
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] data 3
+
+# --- 播放音乐 ---
+function lib/music_player

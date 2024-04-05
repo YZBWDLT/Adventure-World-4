@@ -21,6 +21,8 @@ summon aw:text_display "§7为感谢各位玩家对地图§b§l冒险世界：�
 summon aw:text_display "§7我们制作了此PVE地图作为外传" 43 24.0 124
 summon aw:text_display "§a§l向前走，进入信标柱以开始游戏" 43 23.5 124
 
+summon aw:text_display "§7为保证游戏体验，请将§b设置 - 音频 - 音乐§7调至§b100§7" 43 26.0 108
+
 summon aw:text_display "§b§l剧情模式" 41 29.2 86
 summon aw:text_display "§7* 承接前作剧情，除战斗外也有较长剧情流程" 41 28.7 86
 summon aw:text_display "§7* 适合单人体验，适合玩过前作的玩家体验" 41 28.4 86
@@ -40,3 +42,6 @@ time set 6000
 
 # --- 移除常加载区域 ---
 tickingarea remove villageArea
+
+# --- 重置音乐 ---
+music stop

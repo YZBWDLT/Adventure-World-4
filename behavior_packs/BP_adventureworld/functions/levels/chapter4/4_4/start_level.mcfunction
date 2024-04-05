@@ -37,3 +37,6 @@ function lib/states/level_complete_delay/never_complete
 
 # --- 提示 ---
 tellraw @a {"rawtext":[{"translate":"§c本关怪物将在不同位置随机生成，守卫者不可击杀！坚持3分钟即可获胜！"}]}
+
+# --- 播放音乐 ---
+function lib/music_player

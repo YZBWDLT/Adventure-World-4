@@ -16,3 +16,6 @@ function lib/all_levels/game_lose
 ## --- 清除所有怪物 ---
 kill @e[family=monster]
 kill @e[type=item]
+
+# --- 播放音乐 ---
+function lib/music_player

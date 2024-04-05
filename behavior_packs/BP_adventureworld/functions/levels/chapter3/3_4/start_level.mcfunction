@@ -20,3 +20,6 @@ structure load 3_4_layer1_nowater -178 -16 18
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] data 4
+
+# --- 播放音乐 ---
+function lib/music_player

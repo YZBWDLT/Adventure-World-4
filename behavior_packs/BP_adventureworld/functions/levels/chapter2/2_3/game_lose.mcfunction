@@ -12,3 +12,6 @@ fill -141 -21 60 -141 -19 62 air
 
 ## --- 调用所有关卡通用的游戏失败函数 ---
 function lib/all_levels/game_lose
+
+# --- 播放音乐 ---
+function lib/music_player

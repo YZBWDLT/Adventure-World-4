@@ -11,3 +11,6 @@ function lib/states/timeline/enable
 
 # --- 开放商店 ---
 fill -21 0 37 -23 0 37 air
+
+# --- 播放音乐 ---
+function lib/music_player
