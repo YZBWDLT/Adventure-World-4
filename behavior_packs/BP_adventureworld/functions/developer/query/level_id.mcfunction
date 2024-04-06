@@ -22,7 +22,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a501 §75-0"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a601 §76-0 | §a610~611 §76-1 | §a620~621 §76-2 | §a630~631 §76-3 | §a640~641 §76-4"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a601 §76-0 | §a610~611 §76-1 | §a620~621 §76-2 | §a630~631 §76-3 | §a640~641 §76-4"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a701 §7剑之神殿动画进行时"}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a710~711 §77-1 | §a720~721 §77-2 | §a730~731 §77-3 | §a740~741 §77-4 | §a750~751 §77-5"}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a709~711 §77-1 | §a720~721 §77-2 | §a730~731 §77-3 | §a740~741 §77-4 | §a750~751 §77-5"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a801 §7"}]}
 
 scoreboard players set @s temp 0

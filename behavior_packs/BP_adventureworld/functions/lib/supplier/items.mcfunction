@@ -103,7 +103,7 @@ replaceitem entity @s[scores={temp=441..},hasitem={item=aw:diamond_chestplate,qu
 ## --- 旷野之剑 ---
 ## 7-1结束前给予，始终保留
 ## 设为7-1结束前是因为在动画效果中会给予旷野之剑
-give @s[scores={temp=710..},hasitem={item=aw:wild_sword,quantity=0}] aw:wild_sword 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[scores={temp=709..},hasitem={item=aw:wild_sword,quantity=0}] aw:wild_sword 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 ## --- 传声石晶体 ---
 ## 村庄剧情/1-0给予，一直保留 | 仅限剧情模式开启时

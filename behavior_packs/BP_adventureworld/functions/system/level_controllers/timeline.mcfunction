@@ -37,7 +37,7 @@ execute @e[name=level,scores={data=640}] ~~~ function levels/chapter6/6_4/gaming
 execute @e[name=level,scores={data=641}] ~~~ function levels/chapter6/6_4/after_gaming/timeline 
 execute @e[name=level,scores={data=701}] ~~~ execute @e[name=storyMode,scores={settings=0}] ~~~ function levels/chapter7/7_0/combat_mode/timeline 
 execute @e[name=level,scores={data=701}] ~~~ execute @e[name=storyMode,scores={settings=1}] ~~~ function levels/chapter7/7_0/story_mode/timeline 
-execute @e[name=level,scores={data=710}] ~~~ function levels/chapter7/7_1/before_gaming/timeline 
+execute @e[name=level,scores={data=709}] ~~~ function levels/chapter7/7_1/before_gaming/timeline 
 execute @e[name=level,scores={data=720}] ~~~ function levels/chapter7/7_2/timeline 
 execute @e[name=level,scores={data=740..741}] ~~~ function levels/chapter7/7_4/timeline 
 execute @e[name=level,scores={data=750}] ~~~ function levels/chapter7/7_5/timeline 

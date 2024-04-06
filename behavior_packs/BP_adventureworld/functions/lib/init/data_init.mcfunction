@@ -54,6 +54,7 @@ summon aw:marker "maxWave" -82 1 -2
 summon aw:marker "failedTimes" -82 1 -2
 summon aw:marker "isNetease" -82 1 -2
 summon aw:marker "difficulty" -82 1 -2
+summon aw:marker "realDeadPlayersAmount" -82 1 -2
 
 scoreboard players set @e[name=level] data 1
 scoreboard players set @e[name=monsterAmount] data 0
@@ -68,6 +69,7 @@ scoreboard players set @e[name=maxWave] data 0
 scoreboard players set @e[name=failedTimes] data 0
 scoreboard players set @e[name=isNetease] data 1
 scoreboard players set @e[name=difficulty] data 1
+scoreboard players set @e[name=realDeadPlayersAmount] data 0
 
 ### settings 设置数据
 summon aw:marker "developerMode" -82 1 -2
@@ -86,8 +88,6 @@ scoreboard players set @e[name=itemLimitTest] settings 1
 scoreboard players set @e[name=respawnInNewWave] settings 1
 scoreboard players set @e[name=storyMode] settings 1
 scoreboard players set @e[name=simulatedLevel] settings 0
-scoreboard players set @e[name=maxPlayersAmount] settings 1
-scoreboard players set @e[name=alivePlayersAmount] settings 1
 scoreboard players set @e[name=difficultyAdder] settings 0
 
 ### time
