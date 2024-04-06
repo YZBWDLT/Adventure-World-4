@@ -15,3 +15,6 @@ function lib/all_levels/game_lose
 
 ## --- 移除重生点的temp数据 ---
 scoreboard players reset @e[family=respawner] temp
+
+# --- 播放音乐 ---
+function lib/music_player

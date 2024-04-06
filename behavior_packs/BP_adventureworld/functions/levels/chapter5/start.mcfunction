@@ -1,10 +1,10 @@
 # ===== 第五章 =====
 
-# --- 通用函数 ---
-function lib/all_levels/start_chapter
-
 # --- 设置level ---
 scoreboard players set @e[name=level] data 501
+
+# --- 通用函数 ---
+function lib/all_levels/start_chapter
 
 # --- 标题 ---
 title @a title §f§l红 石 神 殿

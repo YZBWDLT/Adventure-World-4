@@ -74,12 +74,8 @@
 			},
             "aw:level_1": { "add": { "component_groups": [ "adult_level_1" ] } },
 			"aw:level_2": { "add": { "component_groups": [ "adult_level_2" ] } },
-			"aw:level_3": { "add": { "component_groups": [ "adult_level_3" ] } },
-			"aw:level_4": { "add": { "component_groups": [ "adult_level_4" ] } },
             "aw:level_1_baby": { "add": { "component_groups": [ "baby_level_1" ] } },
-			"aw:level_2_baby": { "add": { "component_groups": [ "baby_level_2" ] } },
-			"aw:level_3_baby": { "add": { "component_groups": [ "baby_level_3" ] } },
-			"aw:level_4_baby": { "add": { "component_groups": [ "baby_level_4" ] } }
+			"aw:level_2_baby": { "add": { "component_groups": [ "baby_level_2" ] } }
         },
         
         "component_groups": {

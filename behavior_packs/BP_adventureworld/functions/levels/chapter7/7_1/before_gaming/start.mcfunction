@@ -1,7 +1,7 @@
 # ===== 旷野之剑动画 7-1部分初始化 =====
 
 # --- 更改关卡ID ---
-scoreboard players set @e[name=level] data 710
+scoreboard players set @e[name=level] data 709
 
 # --- 封闭7-1的出口 ---
 fill -150 -18 102 -150 -16 100 nether_brick
@@ -16,3 +16,6 @@ function lib/states/dialogue/enable
 
 # --- 关闭怪物检测，防止判定为立刻通关 ---
 function lib/states/level_complete_delay/never_complete
+
+# --- 播放音乐 ---
+function lib/music_player

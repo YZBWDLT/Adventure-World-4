@@ -8,3 +8,6 @@ tp @e[name=facingPosition] @e[type=aw:npc,name="张宇"]
 function lib/states/dialogue/enable_lock_camera
 
 function lib/states/timeline/enable
+
+# --- 播放音乐 ---
+function lib/music_player

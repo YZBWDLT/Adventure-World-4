@@ -22,3 +22,6 @@ function lib/states/dialogue/enable
 
 # --- 初始化标题时间 ---
 title @a times 10 30 10
+
+# --- 提示玩家打开音乐 ---
+tellraw @a {"rawtext":[{"translate":"§7为保证游戏体验，请将§b设置 - 音频 - 音乐§7调至§b100§7"}]}

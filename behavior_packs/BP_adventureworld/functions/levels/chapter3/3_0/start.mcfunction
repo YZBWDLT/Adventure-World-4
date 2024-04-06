@@ -1,10 +1,10 @@
 # ===== 第三章 =====
 
-# --- 通用函数 ---
-function lib/all_levels/start_chapter
-
 # --- 设置level ---
 scoreboard players set @e[name=level] data 301
+
+# --- 通用函数 ---
+function lib/all_levels/start_chapter
 
 # --- 标题&音效 ---
 title @a title §b§l湖 泊 神 殿

@@ -8,5 +8,5 @@ scoreboard players remove @s time 1
 execute @s[scores={time=0}] ~~~ tp @s @r[type=aw:marker,family=random_teleporter]
 
 ## 重置时间
-## 每10-15秒尝试一次
-scoreboard players random @s[scores={time=!1..15}] time 10 15
+## 每6-10秒尝试一次
+scoreboard players random @s[scores={time=!1..15}] time 6 10

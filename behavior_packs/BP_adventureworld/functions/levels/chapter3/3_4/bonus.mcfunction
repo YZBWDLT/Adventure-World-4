@@ -17,3 +17,6 @@ tp @e[family=respawner] -173 -21 30
 
 ## --- 调用所有关卡通用奖励功能 ---
 function lib/all_levels/bonus
+
+# --- 播放音乐 ---
+function lib/music_player

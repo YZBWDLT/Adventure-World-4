@@ -15,7 +15,7 @@ function system/antileave
 
 ## 音效控制器
 ## 仅当音效播放器处于激活状态下执行。
-execute @e[name=soundPlayer,scores={active=!0}] ~~~ function system/sound_player
+execute @e[name=soundPlayer,scores={active=!0}] ~~~ function system/sound_controller
 
 ## 饱和效果
 ## 每秒执行一次。
@@ -59,17 +59,12 @@ execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=itemLimitTest,scores={
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/get_data/3_digit_seperator
 ## 当处于“未在游戏中”状态下时，每秒一次地清除怪物生成器 | 当强制生成怪物的设置启用后，不清除对应的summoner
-execute @e[name=level,scores={temp3=1}] ~~~ execute @e[name=tick,scores={time=0}] ~~~ kill @e[family=summoner]
-execute @e[name=level,scores={temp3=1}] ~~~ function system/level_controllers/start_level
+execute @e[name=level,scores={temp3=!0}] ~~~ execute @e[name=tick,scores={time=0}] ~~~ kill @e[family=summoner]
+execute @e[name=developerMode,scores={settings=0}] ~~~ execute @e[name=level,scores={temp3=!0}] ~~~ execute @e[name=tick,scores={time=0}] ~~~ kill @e[family=monster]
+execute @e[name=level,scores={temp3=!0}] ~~~ function system/level_controllers/start_level
 
-## 粒子控制器
-##<!> 每5秒执行1次。需要更新。 | 别吐槽我为什么写个5秒执行1次写的这么烂，我只是不想再额外搞个变量记录了而已，能看懂就行 =P
-execute @e[name=playedSecond,scores={time=0..59,time=!1..4,time=!6..9,time=!11..14,time=!16..19,time=!21..24,time=!26..29,time=!31..34,time=!36..39,time=!41..44,time=!46..49,time=!51..54,time=!56..59}] ~~~ function system/level_controllers/particles
-
-## 第二章陷阱更新
-## 每10秒执行一次。当玩家处于第二章过道区域时执行。
-execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21..29,time=!31..39,time=!41..49,time=!51..59}] ~~~ execute @a ~~~ function lib/get_data/entity_location
-execute @e[name=playedSecond,scores={time=0..59,time=!1..9,time=!11..19,time=!21..29,time=!31..39,time=!41..49,time=!51..59}] ~~~ execute @a[scores={position=20}] ~~~ function levels/chapter2/traps
+## 章节事件控制器
+function system/level_controllers/chapter_events
 
 ## 时间线控制器
 ## 仅当时间线处于激活状态下执行。一般而言，“在游戏中”的关卡都会默认开启时间线，而“未在游戏中”时的时间线一般是关闭的。
@@ -109,5 +104,5 @@ execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_
 execute @e[name=developerMode,scores={settings=1}] ~~~ execute @e[name=tick,scores={time=14}] ~~~ execute @e[family=respawner] ~~~ particle aw:block_hint_gold ~~~
 
 ## 暂定内容
-tellraw @a[x=-235,y=-63,z=97,r=5,m=!spectator] {"rawtext":[{"text":"游戏内容到此结束，感谢您游玩Alpha 4.0_09！"}]}
+tellraw @a[x=-235,y=-63,z=97,r=5,m=!spectator] {"rawtext":[{"text":"游戏内容到此结束，感谢您游玩Beta 4.0_01！"}]}
 gamemode spectator @a[x=-235,y=-63,z=97,r=5,m=!spectator]

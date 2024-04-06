@@ -24,3 +24,6 @@ fill -21 0 37 -23 0 37 border_block
 
 # --- 重置重生点 ---
 tp @e[family=respawner] -27 6 -48
+
+# --- 播放音乐 ---
+function lib/music_player

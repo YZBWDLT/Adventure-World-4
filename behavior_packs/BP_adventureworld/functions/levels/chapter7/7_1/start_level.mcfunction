@@ -1,6 +1,9 @@
 # ===== 开始游戏 =====
 # 对本关进行一定的初始化
 
+# --- 更改关卡ID ---
+scoreboard players set @e[name=level] data 710
+
 ## 防止误判断为第一波已完成
 scoreboard players set @e[name=monsterAmount] data 14
 

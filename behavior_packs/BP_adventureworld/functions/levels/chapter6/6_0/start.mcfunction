@@ -1,10 +1,10 @@
 # ===== 第六章开始 =====
 
-# --- 通用函数 ---
-function lib/all_levels/start_chapter
-
 # --- 设置level ---
 scoreboard players set @e[name=level] data 601
+
+# --- 通用函数 ---
+function lib/all_levels/start_chapter
 
 # --- 标题 ---
 title @a title §7§l山 峦 神 殿

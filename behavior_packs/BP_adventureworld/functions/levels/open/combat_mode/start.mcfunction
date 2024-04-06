@@ -8,3 +8,6 @@ scoreboard players set @e[name=storyMode] settings 0
 
 # --- 设定通用的开始函数 ---
 function levels/open/start
+
+# --- 播放音乐 ---
+function lib/music_player

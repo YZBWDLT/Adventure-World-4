@@ -31,6 +31,9 @@ execute @e[name=timeline,scores={time=460}] ~~~ particle aw:wild_sword4 -87 -20 
 execute @e[name=timeline,scores={time=465}] ~~~ particle aw:wild_sword4 -87 -15 105
 execute @e[name=timeline,scores={time=470}] ~~~ particle aw:wild_sword4 -87 -10 105
 
+# --- [760-8*20=600] 播放剑拔出的音乐 ---
+execute @e[name=timeline,scores={time=600}] ~~~ execute @a ~~~ playsound aw.sword_temple_drawing_sword @s ~~~ 0.5 1
+
 # --- [760]剑瞬间拔出 ---
 execute @e[name=timeline,scores={time=760}] ~~~ event entity @e[type=aw:wild_sword] aw:stage_3
 

@@ -10,10 +10,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=guardian
 ## --- 正式生成 ---
 
 ### 生成怪物
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=guardian1Summoner] ~~~ summon minecraft:guardian ~~~ aw:level_1 "§a守卫者 | lv.1"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..3}] ~~~ execute @e[name=guardian1Summoner] ~~~ summon minecraft:guardian ~~~ aw:level_2 "§b守卫者 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=guardian1Summoner] ~~~ summon minecraft:guardian ~~~ aw:level_3 "§d守卫者 | lv.3"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=guardian1Summoner] ~~~ summon minecraft:guardian ~~~ aw:level_4 "§6守卫者 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=1}] ~~~ execute @e[name=guardian1Summoner] ~~~ summon minecraft:guardian ~~~ aw:level_1 "§a守卫者 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=2}] ~~~ execute @e[name=guardian1Summoner] ~~~ summon minecraft:guardian ~~~ aw:level_2 "§b守卫者 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=3}] ~~~ execute @e[name=guardian1Summoner] ~~~ summon minecraft:guardian ~~~ aw:level_3 "§d守卫者 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=4}] ~~~ execute @e[name=guardian1Summoner] ~~~ summon minecraft:guardian ~~~ aw:level_4 "§6守卫者 | lv.4"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=guardian1Summoner]

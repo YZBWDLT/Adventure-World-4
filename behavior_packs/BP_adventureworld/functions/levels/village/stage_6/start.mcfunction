@@ -19,3 +19,6 @@ event entity @e[name="米云溪"] should_not_see_player
 
 # --- 重置重生点 ---
 tp @e[family=respawner] -16 1 82
+
+# --- 播放音乐 ---
+function lib/music_player

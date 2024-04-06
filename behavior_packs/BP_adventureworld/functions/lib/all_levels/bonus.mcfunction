@@ -16,9 +16,9 @@ scoreboard players set @e[name=soundPlayer] active 10
 scoreboard players set @e[name=failedTimes] data 0
 
 ## --- 为玩家补充残留的重要装备 ---
-function lib/supplier/items
-function lib/supplier/potion
-function lib/supplier/arrow
+execute @a ~~~ function lib/supplier/items
+execute @a ~~~ function lib/supplier/potion
+execute @a ~~~ function lib/supplier/arrow
 
 ## --- 清除所有的状态效果并回满血 ---
 effect @a clear

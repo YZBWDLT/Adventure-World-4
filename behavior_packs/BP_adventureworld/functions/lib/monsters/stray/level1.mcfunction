@@ -11,10 +11,10 @@ execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=stray1Su
 ## --- 正式生成 ---
 
 ### 生成怪物
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ execute @e[name=stray1Summoner] ~~~ summon minecraft:stray ~~~ aw:level_1 "§a流浪者 | lv.1"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..3}] ~~~ execute @e[name=stray1Summoner] ~~~ summon minecraft:stray ~~~ aw:level_2 "§a流浪者 | lv.2"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ execute @e[name=stray1Summoner] ~~~ summon minecraft:stray ~~~ aw:level_3 "§b流浪者 | lv.3"
-execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ execute @e[name=stray1Summoner] ~~~ summon minecraft:stray ~~~ aw:level_4 "§b流浪者 | lv.4"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=1}] ~~~ execute @e[name=stray1Summoner] ~~~ summon minecraft:stray ~~~ aw:level_1 "§a流浪者 | lv.1"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=2}] ~~~ execute @e[name=stray1Summoner] ~~~ summon minecraft:stray ~~~ aw:level_2 "§a流浪者 | lv.2"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=3}] ~~~ execute @e[name=stray1Summoner] ~~~ summon minecraft:stray ~~~ aw:level_3 "§b流浪者 | lv.3"
+execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ execute @e[name=difficulty,scores={data=4}] ~~~ execute @e[name=stray1Summoner] ~~~ summon minecraft:stray ~~~ aw:level_4 "§b流浪者 | lv.4"
 
 ### 移除生成器
 execute @e[name=monsterSummonDelay,scores={time=0}] ~~~ kill @e[name=stray1Summoner]
