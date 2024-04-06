@@ -23,8 +23,8 @@ execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -77 -38 -4 "aw:as_sum
 execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -75 -38 -4 "aw:as_summoner" "skeletonWithSword2Summoner"
 execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -73 -38 -4 "aw:as_summoner" "silverfish1Summoner"
 execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -71 -38 -4 "aw:as_summoner" "silverfish1Summoner"
-execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -81 -38 4 "aw:as_summoner" "caveSpider3Summoner"
-execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -69 -38 5 "aw:as_summoner" "caveSpider4Summoner"
+execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -81 -38 4 "aw:as_summoner" "skeleton3Summoner"
+execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -69 -38 5 "aw:as_summoner" "skeleton4Summoner"
 execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -75 -37 -14 "aw:as_summoner" "zombie4Summoner"
 execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -76 -37 -14 "aw:as_summoner" "zombie4Summoner"
 
