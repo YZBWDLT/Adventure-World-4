@@ -18,6 +18,6 @@ execute @s[scores={temp=0}] ~~~ execute @e[name=randomMonster,scores={data=76..1
 execute @s[scores={temp=0}] ~~~ execute @e[name=randomMonster,scores={data=0..100}] ~~~ function lib/states/monster_summon_delay/enable_40ticks
 
 ## 重置时间
-## 一二阶段时每5-10秒生成，三阶段时每3-5秒生成
-scoreboard players random @s[scores={temp=!1..10,temp2=1..2}] temp 5 10
+## 一二阶段时每3-7秒生成，三阶段时每3-5秒生成
+scoreboard players random @s[scores={temp=!1..10,temp2=1..2}] temp 3 7
 scoreboard players random @s[scores={temp=!1..5,temp2=3}] temp 3 5
