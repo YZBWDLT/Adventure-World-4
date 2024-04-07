@@ -34,7 +34,6 @@ scoreboard objectives add hookshot dummy "绳枪数据"
 scoreboard objectives add killAmount dummy "击杀数据"
 scoreboard objectives add isOnline dummy "在线数据"
 
-scoreboard players set allFailedTimes data 0
 execute @a ~~~ function lib/init/player_data
 scoreboard players set @a isOnline 1
 
@@ -53,6 +52,7 @@ summon aw:marker "randomMonster" -82 1 -2
 summon aw:marker "wave" -82 1 -2
 summon aw:marker "maxWave" -82 1 -2
 summon aw:marker "failedTimes" -82 1 -2
+summon aw:marker "allFailedTimes" -82 1 -2
 summon aw:marker "isNetease" -82 1 -2
 summon aw:marker "difficulty" -82 1 -2
 summon aw:marker "realDeadPlayersAmount" -82 1 -2
@@ -68,6 +68,7 @@ scoreboard players set @e[name=maxPlayersAmount] data 1
 scoreboard players set @e[name=wave] data 0
 scoreboard players set @e[name=maxWave] data 0
 scoreboard players set @e[name=failedTimes] data 0
+scoreboard players set @e[name=allFailedTimes] data 0
 scoreboard players set @e[name=isNetease] data 1
 scoreboard players set @e[name=difficulty] data 1
 scoreboard players set @e[name=realDeadPlayersAmount] data 0
