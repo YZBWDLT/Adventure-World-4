@@ -79,9 +79,6 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== 标签类型（ta
 tellraw @s[scores={temp=1},tag=!bootsHeld] {"rawtext":[{"translate":"§ebootsHeld = §afalse §7# 玩家是否手持过钻石靴子（aw:diamond_boots） | true=是，false=否"}]}
 tellraw @s[scores={temp=1},tag=bootsHeld] {"rawtext":[{"translate":"§ebootsHeld = §atrue §7# 玩家是否手持过钻石靴子（aw:diamond_boots） | true=是，false=否"}]}
 
-tellraw @s[scores={temp=1},tag=!dataInitiated] {"rawtext":[{"translate":"§edataInitiated = §afalse §7# 玩家是否重置过其记分板数据 | true=是，false=否"}]}
-tellraw @s[scores={temp=1},tag=dataInitiated] {"rawtext":[{"translate":"§edataInitiated = §atrue §7# 玩家是否重置过其记分板数据 | true=是，false=否"}]}
-
 tellraw @s[scores={temp=1},tag=!helmetHeld] {"rawtext":[{"translate":"§ehelmetHeld = §afalse §7# 玩家是否手持过钻石头盔（aw:diamond_helmet） | true=是，false=否"}]}
 tellraw @s[scores={temp=1},tag=helmetHeld] {"rawtext":[{"translate":"§ehelmetHeld = §atrue §7# 玩家是否手持过钻石头盔（aw:diamond_helmet） | true=是，false=否"}]}
 
