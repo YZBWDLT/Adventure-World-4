@@ -8,11 +8,15 @@ execute @e[family=respawner] ~~~ spawnpoint @a ~~~
 execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/get_data/3_digit_seperator
 
+# --- 获取玩家人数 ---
+function lib/get_data/player_amount
+
 # --- 1 玩家在“未游玩状态”下死亡并重生 ---
 # 此时做的事情：重生，并更改其存活状态为2
 
 ## 判定是否死亡
 execute @e[name=level,scores={temp3=!0}] ~~~ function lib/get_data/player_is_alive
+execute @e[name=level,scores={temp3=!0}] ~~~ execute @e[name=respawner] ~~~ tag @a[r=2] remove isAlive
 
 ## 更改存活状态并记录死亡次数
 execute @e[name=level,scores={temp3=!0}] ~~~ scoreboard players set @a[tag=!isAlive,scores={isAlive=0..1}] isAlive 2
@@ -22,11 +26,10 @@ execute @e[name=level,scores={temp3=!0}] ~~~ scoreboard players set @a[tag=!isAl
 
 ## 判定是否死亡
 execute @e[name=level,scores={temp3=0}] ~~~ function lib/get_data/player_is_alive
-# execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=respawner] ~~~ tag @a[r=2] remove isAlive
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=respawner] ~~~ tag @a[r=2] remove isAlive
 
 ## 播报死亡消息 | 仅在人数大于等于2人时播报
-execute @e[name=level,scores={temp3=0}] ~~~ function lib/get_data/player_amount
-execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a[tag=!isAlive,scores={isAlive=1}] ~~~ function lib/death_message_announcer
+execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a[tag=!isAlive,scores={isAlive=!0}] ~~~ function lib/death_message_announcer
 
 execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @e[name=respawnInNewWave,scores={settings=0}] ~~~ execute @a[tag=!isAlive,scores={isAlive=1}] ~~~ tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！关卡结束后您将被释放。"}]}
 execute @e[name=level,scores={temp3=0}] ~~~ execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @e[name=respawnInNewWave,scores={settings=1}] ~~~ execute @a[tag=!isAlive,scores={isAlive=1}] ~~~ tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！但不要着急，您在下一波就会被解救出来。"}]}
