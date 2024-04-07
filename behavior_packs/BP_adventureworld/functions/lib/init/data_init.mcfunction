@@ -2,7 +2,8 @@
 # 本函数记录地图全体数据的初始化。数据以特定名称的标记实体（aw:marker）记录。
 
 # --- 常加载区域 ---
-tickingarea add -82 1 -2 -82 1 -2 commandSystem
+tickingarea add -82 1 -2 -82 1 -2 "commandSystem"
+tickingarea add -55 0 -55 60 0 120 "villageArea"
 
 # --- 记分板 ---
 

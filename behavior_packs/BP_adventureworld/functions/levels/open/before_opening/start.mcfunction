@@ -40,8 +40,5 @@ setblock 45 25 86 beacon
 # --- 调整时间为白天 ---
 time set 6000
 
-# --- 移除常加载区域 ---
-tickingarea remove villageArea
-
 # --- 重置音乐 ---
 music stop
