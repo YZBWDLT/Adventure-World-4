@@ -5,7 +5,7 @@
 function lib/get_data/is_online_before
 
 # --- 判断中途进入的玩家是否拥有记分板的值，没有值的予以添加或更新 ---
-execute @a[scores={isOnline=0},tag=!dataInitiated] ~~~ function lib/init/player_data
+execute @a[scores={isOnline=0}] ~~~ function lib/init/player_data
 
 # --- 将中途进入的玩家传送到respawner上 ---
 execute @a[scores={isOnline=0}] ~~~ tp @s @e[family=respawner,c=1]

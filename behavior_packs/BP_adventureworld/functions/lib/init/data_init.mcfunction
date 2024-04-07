@@ -122,6 +122,12 @@ scoreboard players set @e[name=dialogue] active 0
 ### isAlive
 scoreboard players set @a isAlive 2
 
+scoreboard players set @a deathTimes 0
+scoreboard players set @a position 0
+scoreboard players set @a hookshot -1
+scoreboard players set @a killAmount 0
+scoreboard players set @a time 0
+
 ## --- 重生点标记 ---
 summon aw:marker -82 1 -2 "aw:as_respawner" "respawner"
 summon aw:marker "playerPosition" -82 1 -2
