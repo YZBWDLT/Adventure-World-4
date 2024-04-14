@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] data 321
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§l§a3-2已完成！§r\n§f你已获得 §a[治疗药水] §e[钻石靴子] §f！\n§7不要忘记手持钻石靴子获取附魔！"}]}
+tellraw @a {"rawtext":[{"text":"§l§a3-2已完成！§r\n§f你已获得 §a[治疗药水] §e[钻石靴子] §f！\n§c请手持一次钻石靴子以获取附魔。"}]}
 clear @a aw:iron_boots
 clear @a leather_boots
 
