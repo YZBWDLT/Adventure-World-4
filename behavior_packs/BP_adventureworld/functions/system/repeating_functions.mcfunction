@@ -102,7 +102,3 @@ execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_
 
 ## 重生点判定器
 execute @e[name=developerMode,scores={settings=1}] ~~~ execute @e[name=tick,scores={time=14}] ~~~ execute @e[family=respawner] ~~~ particle aw:block_hint_gold ~~~
-
-## 暂定内容
-tellraw @a[x=-235,y=-63,z=97,r=5,m=!spectator] {"rawtext":[{"text":"游戏内容到此结束，感谢您游玩Beta 4.0_02！"}]}
-gamemode spectator @a[x=-235,y=-63,z=97,r=5,m=!spectator]

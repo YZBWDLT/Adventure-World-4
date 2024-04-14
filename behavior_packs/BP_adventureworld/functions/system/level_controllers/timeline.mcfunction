@@ -39,5 +39,11 @@ execute @e[name=level,scores={data=701}] ~~~ execute @e[name=storyMode,scores={s
 execute @e[name=level,scores={data=701}] ~~~ execute @e[name=storyMode,scores={settings=1}] ~~~ function levels/chapter7/7_0/story_mode/timeline 
 execute @e[name=level,scores={data=709}] ~~~ function levels/chapter7/7_1/before_gaming/timeline 
 execute @e[name=level,scores={data=720}] ~~~ function levels/chapter7/7_2/timeline 
-execute @e[name=level,scores={data=740..741}] ~~~ function levels/chapter7/7_4/timeline 
+execute @e[name=level,scores={data=740}] ~~~ function levels/chapter7/7_4/timeline_gaming
+execute @e[name=level,scores={data=741}] ~~~ function levels/chapter7/7_4/timeline_after
 execute @e[name=level,scores={data=750}] ~~~ function levels/chapter7/7_5/timeline 
+
+execute @e[name=level,scores={data=1001}] ~~~ function levels/end/stage_1/timeline
+execute @e[name=level,scores={data=1002}] ~~~ function levels/end/stage_2/timeline
+execute @e[name=level,scores={data=1003}] ~~~ function levels/end/stage_3/timeline
+execute @e[name=level,scores={data=1004}] ~~~ function levels/end/stage_4/timeline

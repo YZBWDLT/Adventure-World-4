@@ -25,6 +25,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"active.timeline = §a%%s �
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== data记分项 ====="}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.alivePlayersAmount = §a%%s §7# 记录存活玩家数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=alivePlayersAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.allFailedTimes = §a%%s §7# 记录所有关卡累计的失败次数","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=allFailedTimes]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.achievement = §a%%s §7# 记录显示第几个成就","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=achievement]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.difficulty = §a%%s §7# 记录难度。","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=difficulty]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.failedTimes = §a%%s §7# 记录单个关卡的失败次数，当失败次数过多时将给予buff辅助过关","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=failedTimes]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.hookshotAmount = §a%%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=hookshotAmount]"}}]}}]}
@@ -38,6 +39,17 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.randomLocation = §a%
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.randomMonster = §a%%s §7# 随机怪物种类","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=randomMonster]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.realDeadPlayersAmount = §a%%s §7# 记录死亡玩家（游戏意义上）的数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=realDeadPlayersAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.wave = §a%%s §7# 记录波数数据","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=wave]"}}]}}]}
+
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== record记分项 ====="}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeMinute1 = §a%%s §7# 难度1下的最佳时间（分钟）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeMinute1"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeSecond1 = §a%%s §7# 难度1下的最佳时间（秒）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeSecond1"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeMinute2 = §a%%s §7# 难度2下的最佳时间（分钟）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeMinute2"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeSecond2 = §a%%s §7# 难度2下的最佳时间（秒）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeSecond2"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeMinute3 = §a%%s §7# 难度3下的最佳时间（分钟）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeMinute3"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeSecond3 = §a%%s §7# 难度3下的最佳时间（秒）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeSecond3"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeMinute4 = §a%%s §7# 难度4下的最佳时间（分钟）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeMinute4"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeSecond4 = §a%%s §7# 难度4下的最佳时间（秒）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeSecond4"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.mapCompletedTimes = §a%%s §7# 地图通关次数","with":{"rawtext":[{"score":{"objective":"record","name":"mapCompletedTimes"}}]}}]}
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== settings记分项 ====="}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.arrowLimitTest = §a%%s §7# 箭上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=arrowLimitTest]"}}]}}]}
