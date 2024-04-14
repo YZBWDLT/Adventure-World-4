@@ -23,7 +23,7 @@ execute @e[name=tick,scores={time=0}] ~~~ effect @a saturation 1 10 true
 
 ## NPC对话
 ## 当强制视角对话正在启用时，不启用该命令
-execute @e[name=dialogue,scores={active=!2}] ~~~ execute @e[type=aw:npc,family=interacted] ~~~ function system/npc_chat_table
+execute @e[name=dialogue,scores={active=!2}] ~~~ execute @e[type=aw:npc,family=interacted] ~~~ function system/npc_interact_tester
 
 # --- 物品函数 ---
 # 这些函数是部分物品的特殊功能。
