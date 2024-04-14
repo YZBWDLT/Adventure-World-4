@@ -28,3 +28,7 @@ execute @e[name=level,scores={data=340}] ~~~ music play aw.music.boss.elder_guar
 execute @e[name=level,scores={data=440}] ~~~ music play aw.music.boss.random_monster 1 0 loop
 execute @e[name=level,scores={data=640}] ~~~ music play aw.music.boss.blaze_king 1 0 loop
 execute @e[name=level,scores={data=750}] ~~~ music play aw.music.boss.final 1 0 loop
+
+## 结束后
+execute @e[name=level,scores={data=1001..1003}] ~~~ music play aw.music.end 1 0 loop
+execute @e[name=level,scores={data=1004}] ~~~ music play aw.music.village.sword_trial_entrance 1 0 loop
