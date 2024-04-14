@@ -11,7 +11,7 @@ execute @e[name=timeline,scores={time=460}] ~~~ event entity @e[name="米云溪"
 # 2秒后传送回来，并锁定视角
 # 此时令米云溪和田英传送并禁止看向玩家
 execute @e[name=timeline,scores={time=660}] ~~~ scoreboard players set @e[name=dialogue] active 1
-execute @e[name=timeline,scores={time=660}] ~~~ tp @a 36 26 87
+execute @e[name=timeline,scores={time=660}] ~~~ function lib/black_screen/default
 
 execute @e[name=timeline,scores={time=661}] ~~~ tp @e[name="米云溪"] -15 1.5 105 facing -16 1 103
 execute @e[name=timeline,scores={time=661}] ~~~ tp @e[name="田英"] -17 1 109 facing -16 1 103

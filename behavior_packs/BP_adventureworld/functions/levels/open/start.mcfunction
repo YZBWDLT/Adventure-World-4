@@ -9,12 +9,8 @@ fill 43 25 86 45 25 86 air [] replace beacon
 # --- 清除悬浮文本 ---
 kill @e[type=aw:text_display]
 
-# --- 重新设定出生点 ---
-setworldspawn 36 26 87
-
 # --- 传送玩家 ---
-tp @a 36 26 87
-tp @e[family=respawner] 36 26 87
+function lib/black_screen/teleport_respawner
 
 # --- 游戏开幕 ---
 function lib/states/timeline/enable

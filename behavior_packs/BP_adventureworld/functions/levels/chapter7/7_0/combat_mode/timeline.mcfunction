@@ -59,7 +59,7 @@ execute @e[name=timeline,scores={time=1045}] ~~~ give @a aw:wild_sword 1 0 {"ite
 execute @e[name=timeline,scores={time=1300}] ~~~ effect @a blindness 30 0 true
 
 # --- [1450]传送玩家到小黑屋 ---
-execute @e[name=timeline,scores={time=1450}] ~~~ tp @a -87 -40 85
+execute @e[name=timeline,scores={time=1450}] ~~~ function lib/black_screen/default
 
 # --- [1600]传送玩家到7-1 ---
 execute @e[name=timeline,scores={time=1600}] ~~~ function levels/chapter7/7_1/before_gaming/start
