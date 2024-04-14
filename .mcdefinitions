@@ -5,3 +5,4 @@ objective=background
 objective=crosshair
 objective=inLevelArea
 objective=stats
+tag=potionUsed
