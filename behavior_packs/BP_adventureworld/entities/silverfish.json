@@ -49,19 +49,19 @@
                 "minecraft:movement": { "value": 0.22 }
             },
             "level_2": {
-                "minecraft:health": { "value": 8, "max": 8 },
+                "minecraft:health": { "value": 6, "max": 6 },
                 "minecraft:attack": { "damage": 1 },
-                "minecraft:movement": { "value": 0.25 }
+                "minecraft:movement": { "value": 0.30 }
             },
             "level_3": {
-                "minecraft:health": { "value": 10, "max": 10 },
-                "minecraft:attack": { "damage": [ 1, 2 ] },
-                "minecraft:movement": { "value": 0.28 }
+                "minecraft:health": { "value": 6, "max": 6 },
+                "minecraft:attack": { "damage": 1 },
+                "minecraft:movement": { "value": 0.38 }
             },
             "level_4": {
-                "minecraft:health": { "value": 12, "max": 12 },
-                "minecraft:attack": { "damage": 2 },
-                "minecraft:movement": { "value": 0.32 }
+                "minecraft:health": { "value": 6, "max": 6 },
+                "minecraft:attack": { "damage": 1 },
+                "minecraft:movement": { "value": 0.46 }
             }
         }
     }
