@@ -12,7 +12,7 @@
                 "can_always_eat": true,
                 "using_converts_to": "glass_bottle",
                 "effects": [
-                    { "name": "resistance", "chance" : 1.0, "duration" : 600, "amplifier" : 1 },
+                    { "name": "resistance", "chance" : 1.0, "duration" : 600, "amplifier" : 2 },
                     { "name": "absorption", "chance" : 1.0, "duration" : 600, "amplifier" : 4 },
                     { "name": "slowness", "chance" : 1.0, "duration" : 600, "amplifier" : 0 }
                 ]

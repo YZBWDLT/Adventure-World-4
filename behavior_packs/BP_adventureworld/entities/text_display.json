@@ -23,6 +23,23 @@
             },
             "minecraft:nameable": { "allow_name_tag_renaming": true, "always_show": true },
             "minecraft:knockback_resistance": { "value": 1 }
+        },
+        "events": {
+            "as_achievement_text_display": { "add": { "component_groups": [ "as_achievement_text_display" ] } },
+            "as_difficulty_text_display": { "add": { "component_groups": [ "as_difficulty_text_display" ] } },
+            "as_mode_text_display": { "add": { "component_groups": [ "as_mode_text_display" ] } }
+
+        },
+        "component_groups": {
+            "as_achievement_text_display": {
+                "minecraft:type_family": { "family": [ "text_display", "inanimate", "achievement" ] }
+            },
+            "as_difficulty_text_display": {
+                "minecraft:type_family": { "family": [ "text_display", "inanimate", "difficulty" ] }
+            },
+            "as_mode_text_display": {
+                "minecraft:type_family": { "family": [ "text_display", "inanimate", "mode" ] }
+            }
         }
     }
 }

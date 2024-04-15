@@ -19,7 +19,7 @@ execute @e[name=level,scores={temp3=!0}] ~~~ function lib/get_data/player_is_ali
 execute @e[name=level,scores={temp3=!0}] ~~~ execute @e[name=respawner] ~~~ tag @a[r=2] remove isAlive
 
 ## 更改存活状态并记录死亡次数
-execute @e[name=level,scores={temp3=!0}] ~~~ scoreboard players set @a[tag=!isAlive,scores={isAlive=0..1}] isAlive 2
+execute @e[name=level,scores={temp3=!0}] ~~~ scoreboard players set @a[tag=!isAlive] isAlive 2
 
 # --- 2 玩家在“游玩状态”下死亡并重生 ---
 # 此时做的事情：重生，且记录死亡次数，并更改其存活状态为0

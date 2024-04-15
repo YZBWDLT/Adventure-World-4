@@ -30,30 +30,30 @@ give @s[hasitem={item=aw:potion_health,quantity=2},scores={temp=321..330}] aw:po
 give @s[hasitem={item=aw:potion_health,quantity=3},scores={temp=321..330}] aw:potion_health 2 0 {"item_lock":{"mode":"lock_in_inventory"}}
 give @s[hasitem={item=aw:potion_health,quantity=4},scores={temp=321..330}] aw:potion_health 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
-give @s[hasitem={item=aw:potion_health,quantity=0},scores={temp=331..}] aw:potion_health 6 0 {"item_lock":{"mode":"lock_in_inventory"}}
-give @s[hasitem={item=aw:potion_health,quantity=1},scores={temp=331..}] aw:potion_health 5 0 {"item_lock":{"mode":"lock_in_inventory"}}
-give @s[hasitem={item=aw:potion_health,quantity=2},scores={temp=331..}] aw:potion_health 4 0 {"item_lock":{"mode":"lock_in_inventory"}}
-give @s[hasitem={item=aw:potion_health,quantity=3},scores={temp=331..}] aw:potion_health 3 0 {"item_lock":{"mode":"lock_in_inventory"}}
-give @s[hasitem={item=aw:potion_health,quantity=4},scores={temp=331..}] aw:potion_health 2 0 {"item_lock":{"mode":"lock_in_inventory"}}
-give @s[hasitem={item=aw:potion_health,quantity=5},scores={temp=331..}] aw:potion_health 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_health,quantity=0},scores={temp=331..999}] aw:potion_health 6 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_health,quantity=1},scores={temp=331..999}] aw:potion_health 5 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_health,quantity=2},scores={temp=331..999}] aw:potion_health 4 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_health,quantity=3},scores={temp=331..999}] aw:potion_health 3 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_health,quantity=4},scores={temp=331..999}] aw:potion_health 2 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_health,quantity=5},scores={temp=331..999}] aw:potion_health 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 ## --- 生长药水 & 亢奋药水 & 神龟药水 ---
 ## 均在2-3给予
-give @s[hasitem={item=aw:potion_growth,quantity=0},scores={temp=231..}] aw:potion_growth 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
-give @s[hasitem={item=aw:potion_thrill,quantity=0},scores={temp=231..}] aw:potion_thrill 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
-give @s[hasitem={item=aw:potion_turtle,quantity=0},scores={temp=231..}] aw:potion_turtle 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_growth,quantity=0},scores={temp=231..999}] aw:potion_growth 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_thrill,quantity=0},scores={temp=231..999}] aw:potion_thrill 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_turtle,quantity=0},scores={temp=231..999}] aw:potion_turtle 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 ## --- 重生药水 ---
 ## 4-1给予
-give @s[hasitem={item=aw:potion_rebirth,quantity=0},scores={temp=411..}] aw:potion_rebirth 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_rebirth,quantity=0},scores={temp=411..999}] aw:potion_rebirth 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 ## --- 净化药水 ---
 ## 4-2给予
-give @s[hasitem={item=aw:potion_purification,quantity=0},scores={temp=421..}] aw:potion_purification 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_purification,quantity=0},scores={temp=421..999}] aw:potion_purification 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 ## --- 休眠药水 ---
 ## 4-3给予
-give @s[hasitem={item=aw:potion_hibernation,quantity=0},scores={temp=431..}] aw:potion_hibernation 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[hasitem={item=aw:potion_hibernation,quantity=0},scores={temp=431..999}] aw:potion_hibernation 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 # --- 输出temp.@s=0 ---
 scoreboard players set @s temp 0

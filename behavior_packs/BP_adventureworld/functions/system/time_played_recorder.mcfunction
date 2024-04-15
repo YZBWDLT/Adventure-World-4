@@ -7,6 +7,6 @@ scoreboard players remove @e[name=tick,scores={time=20..}] time 20
 
 ## --- 记录玩家游玩时间 ---
 ## 更改time.playedSecond，time.playedMinute的值，以记录玩家的游玩时间
-execute @e[name=level,scores={data=100..}] ~~~ execute @e[name=tick,scores={time=19..}] ~~~ scoreboard players add @e[name=playedSecond] time 1
-execute @e[name=level,scores={data=100..}] ~~~ execute @e[name=playedSecond,scores={time=60..}] ~~~ scoreboard players add @e[name=playedMinute] time 1
-execute @e[name=level,scores={data=100..}] ~~~ scoreboard players remove @e[name=playedSecond,scores={time=60..}] time 60
+execute @e[name=level,scores={data=100..999}] ~~~ execute @e[name=tick,scores={time=19..}] ~~~ scoreboard players add @e[name=playedSecond] time 1
+execute @e[name=level,scores={data=100..999}] ~~~ execute @e[name=playedSecond,scores={time=60..}] ~~~ scoreboard players add @e[name=playedMinute] time 1
+execute @e[name=level,scores={data=100..999}] ~~~ scoreboard players remove @e[name=playedSecond,scores={time=60..}] time 60

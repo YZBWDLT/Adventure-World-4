@@ -12,19 +12,22 @@
                 "scale": "0.5",
                 "animate": [
                     "particle_controller",
-                    "animation_controller"
+                    "animation_controller",
+                    "show_controller"
                 ]
             },
             "animations": {
                 "particle_controller": "controller.animation.wild_sword.particle",
                 "animation_controller": "controller.animation.wild_sword.obtain",
+                "show_controller": "controller.animation.wild_sword.show",
 
                 "animation": "animation.wild_sword.obtain",
                 "particle_stage_1": "animation.wild_sword.particle_stage_1",
                 "particle_stage_2": "animation.wild_sword.particle_stage_2",
                 "particle_stage_3_1": "animation.wild_sword.particle_stage_3_1",
                 "particle_stage_3_2": "animation.wild_sword.particle_stage_3_2",
-                "particle_stage_4": "animation.wild_sword.particle_stage_4"
+                "particle_stage_4": "animation.wild_sword.particle_stage_4",
+                "show": "animation.wild_sword.show"
 
             },
             "particle_effects": {

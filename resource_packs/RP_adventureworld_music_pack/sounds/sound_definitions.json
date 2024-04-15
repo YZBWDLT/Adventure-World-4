@@ -25,9 +25,7 @@
         "aw.music.village": {
             "sounds": [
                 { "name": "sounds/adventure_world/music/village_1", "volume": 0.2, "stream": true },
-                { "name": "sounds/adventure_world/music/village_2", "volume": 0.2, "stream": true },
-                { "name": "sounds/adventure_world/music/village_3", "volume": 0.2, "stream": true },
-                { "name": "sounds/adventure_world/music/village_4", "volume": 0.2, "stream": true }
+                { "name": "sounds/adventure_world/music/village_2", "volume": 0.2, "stream": true }
             ],
             "category": "music"
         },
@@ -40,6 +38,13 @@
         "aw.music.village.sword_trial_entrance": {
             "sounds": [
                 { "name": "sounds/adventure_world/music/village_sword_trial_entrance", "volume": 0.2, "stream": true }
+            ],
+            "category": "music"
+        },
+
+        "aw.music.end": {
+            "sounds": [
+                { "name": "sounds/adventure_world/music/end", "volume": 0.2, "stream": true }
             ],
             "category": "music"
         },

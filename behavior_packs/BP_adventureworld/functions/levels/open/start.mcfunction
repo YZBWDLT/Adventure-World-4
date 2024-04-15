@@ -9,12 +9,8 @@ fill 43 25 86 45 25 86 air [] replace beacon
 # --- 清除悬浮文本 ---
 kill @e[type=aw:text_display]
 
-# --- 重新设定出生点 ---
-setworldspawn 36 26 87
-
 # --- 传送玩家 ---
-tp @a 36 26 87
-tp @e[family=respawner] 36 26 87
+function lib/black_screen/teleport_respawner
 
 # --- 游戏开幕 ---
 function lib/states/timeline/enable
@@ -25,3 +21,7 @@ title @a times 10 30 10
 
 # --- 提示玩家打开音乐 ---
 tellraw @a {"rawtext":[{"translate":"§7为保证游戏体验，请将§b设置 - 音频 - 音乐§7调至§b100§7"}]}
+
+# --- 清除玩家物品 ---
+clear @a
+function lib/init/gamerule

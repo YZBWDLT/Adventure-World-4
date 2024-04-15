@@ -23,7 +23,7 @@ execute @e[name=tick,scores={time=0}] ~~~ effect @a saturation 1 10 true
 
 ## NPC对话
 ## 当强制视角对话正在启用时，不启用该命令
-execute @e[name=dialogue,scores={active=!2}] ~~~ execute @e[type=aw:npc,family=interacted] ~~~ function system/npc_chat_table
+execute @e[name=dialogue,scores={active=!2}] ~~~ execute @e[type=aw:npc,family=interacted] ~~~ function system/npc_interact_tester
 
 # --- 物品函数 ---
 # 这些函数是部分物品的特殊功能。
@@ -102,7 +102,3 @@ execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_
 
 ## 重生点判定器
 execute @e[name=developerMode,scores={settings=1}] ~~~ execute @e[name=tick,scores={time=14}] ~~~ execute @e[family=respawner] ~~~ particle aw:block_hint_gold ~~~
-
-## 暂定内容
-tellraw @a[x=-235,y=-63,z=97,r=5,m=!spectator] {"rawtext":[{"text":"游戏内容到此结束，感谢您游玩Beta 4.0_02！"}]}
-gamemode spectator @a[x=-235,y=-63,z=97,r=5,m=!spectator]

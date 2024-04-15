@@ -19,7 +19,8 @@
             "aw:stage_4": { "add": { "component_groups": [ "stage_4" ] } },
             "aw:stage_5": { "add": { "component_groups": [ "stage_5" ] } },
             "aw:stage_6": { "add": { "component_groups": [ "stage_6" ] } },
-            "aw:stage_7": { "add": { "component_groups": [ "stage_7" ] } }
+            "aw:stage_7": { "add": { "component_groups": [ "stage_7" ] } },
+            "aw:show": { "add": { "component_groups": [ "show" ] } }
         },
         "component_groups": {
             "stage_1": { "minecraft:variant": { "value": 1 } },
@@ -28,7 +29,8 @@
             "stage_4": { "minecraft:variant": { "value": 4 } },
             "stage_5": { "minecraft:variant": { "value": 5 } },
             "stage_6": { "minecraft:variant": { "value": 6 } },
-            "stage_7": { "minecraft:variant": { "value": 7 } }
+            "stage_7": { "minecraft:variant": { "value": 7 } },
+            "show": { "minecraft:is_sheared": { } }
         }
     }
 }

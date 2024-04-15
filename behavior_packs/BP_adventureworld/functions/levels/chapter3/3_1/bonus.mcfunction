@@ -5,7 +5,7 @@
 scoreboard players set @e[name=level] data 311
 
 ## --- tellraw提示 ---
-tellraw @a {"rawtext":[{"text":"§l§a3-1已完成！§r\n§f你已获得 §a[治疗药水] §e[钻石头盔] §f！\n§a非常好！灵活运用主药水可以帮助你更轻松地通过后面的关卡。\n请手持一次钻石头盔以获取附魔。"}]}
+tellraw @a {"rawtext":[{"text":"§l§a3-1已完成！§r\n§f你已获得 §a[治疗药水] §e[钻石头盔] §f！\n§a非常好！灵活运用主药水可以帮助你更轻松地通过后面的关卡。\n§c请手持一次钻石头盔以获取附魔。"}]}
 clear @a aw:iron_helmet
 
 ## --- 打开入口与出口 ---

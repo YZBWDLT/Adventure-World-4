@@ -63,3 +63,7 @@ execute @e[name=level,scores={data=721}] ~~~ function levels/chapter7/7_2/dialog
 execute @e[name=level,scores={data=731}] ~~~ function levels/chapter7/7_3/dialogue
 execute @e[name=level,scores={data=740..741}] ~~~ function levels/chapter7/7_4/dialogue
 
+execute @e[name=level,scores={data=1001}] ~~~ function levels/end/stage_1/dialogue
+execute @e[name=level,scores={data=1002}] ~~~ function levels/end/stage_2/dialogue
+execute @e[name=level,scores={data=1003}] ~~~ function levels/end/stage_3/dialogue
+execute @e[name=level,scores={data=1004}] ~~~ function levels/end/stage_4/dialogue

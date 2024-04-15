@@ -2,7 +2,7 @@
 
 # --- 重置游戏规则与地图数据 ---
 function lib/init/gamerule
-function lib/init/data_init
+function lib/init/basic_init
 
 # --- 调整所有玩家的游戏模式 ---
 gamemode adventure @a
@@ -39,9 +39,6 @@ setblock 45 25 86 beacon
 
 # --- 调整时间为白天 ---
 time set 6000
-
-# --- 移除常加载区域 ---
-tickingarea remove villageArea
 
 # --- 重置音乐 ---
 music stop

@@ -9,4 +9,4 @@
 scoreboard players operation @s temp = @e[name=dialogue] active
 scoreboard players operation @s temp2 = @e[name=level] data
 
-execute @s[scores={temp=0,temp2=100..,isAlive=2}] ~~~ function lib/states/dialogue/enable
+execute @s[scores={temp=0,temp2=100..999,isAlive=2}] ~~~ function lib/states/dialogue/enable

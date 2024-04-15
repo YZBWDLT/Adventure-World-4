@@ -8,3 +8,4 @@ diagnostic.disable.minecraft.commands.enchant.syntax=true
 diagnostic.disable.minecraft.language.duplicate=true
 diagnostic.disable.minecraft.language.duplicate=true
 diagnostic.disable.resourcepack.sound.missing=true
+diagnostic.disable.behaviorpack.block.states.invalid=true

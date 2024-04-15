@@ -11,7 +11,7 @@ fill -82 1 111 -91 -1 99 air
 fill -82 0 111 -91 0 99 quartz_block["chisel_type":"smooth"]
 
 # --- 将玩家传送到小黑屋并给予失明 ---
-tp @a -87 -40 85
+function lib/black_screen/default
 effect @a blindness 30 0 true
 
 # --- 初始化标题时间 ---
