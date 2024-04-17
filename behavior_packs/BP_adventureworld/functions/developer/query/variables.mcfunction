@@ -2,7 +2,7 @@
 # 调用此函数以查询所有记分板的值 | 仅限开发者模式下启用
 
 ## --- 未开启开发者模式时 ---
-scoreboard players operation @s temp = @e[name=developerMode] settings
+scoreboard players operation @s temp = @e[name=developerMode] data
 tellraw @s[scores={temp=0}] {"rawtext":[{"translate":"§c该功能仅限在开发者模式下使用"}]}
 
 ## --- 开启开发者模式时 ---
@@ -27,6 +27,8 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.alivePlayersAmount = 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.allFailedTimes = §a%%s §7# 记录所有关卡累计的失败次数","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=allFailedTimes]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.achievement = §a%%s §7# 记录显示第几个成就","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=achievement]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.difficulty = §a%%s §7# 记录难度。","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=difficulty]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.difficultyAdder = §a%%s §7# 游戏难度加和，以difficulty+本值得到最终的难度值（data.difficulty）。","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=difficultyAdder]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.developerMode = §a%%s §7# 开发者模式,0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=developerMode]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.failedTimes = §a%%s §7# 记录单个关卡的失败次数，当失败次数过多时将给予buff辅助过关","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=failedTimes]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.hookshotAmount = §a%%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=hookshotAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.isNetease = §a%%s §7# 记录是否为netease版本","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=isNetease]"}}]}}]}
@@ -38,6 +40,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.monsterAmount = §a%%
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.randomLocation = §a%%s §7# 随机怪物刷新位置","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=randomLocation]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.randomMonster = §a%%s §7# 随机怪物种类","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=randomMonster]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.realDeadPlayersAmount = §a%%s §7# 记录死亡玩家（游戏意义上）的数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=realDeadPlayersAmount]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.storyMode = §a%%s §7# 是否启用剧情模式，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=storyMode]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.wave = §a%%s §7# 记录波数数据","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=wave]"}}]}}]}
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== record记分项 ====="}]}
@@ -50,11 +53,6 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeSecond3 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeMinute4 = §a%%s §7# 难度4下的最佳时间（分钟）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeMinute4"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeSecond4 = §a%%s §7# 难度4下的最佳时间（秒）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeSecond4"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.mapCompletedTimes = §a%%s §7# 地图通关次数","with":{"rawtext":[{"score":{"objective":"record","name":"mapCompletedTimes"}}]}}]}
-
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== settings记分项 ====="}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.developerMode = §a%%s §7# 开发者模式,0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=developerMode]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.difficultyAdder = §a%%s §7# 游戏难度加和，以difficulty+本值得到最终的难度值（data.difficulty）。","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=difficultyAdder]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.storyMode = §a%%s §7# 是否启用剧情模式，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=storyMode]"}}]}}]}
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== temp类记分项 ====="}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"temp.level = §a%%s §7# 通过位数分离器获取的章节数据","with":{"rawtext":[{"score":{"objective":"temp","name":"@e[name=level]"}}]}}]}
@@ -94,7 +92,5 @@ tellraw @s[scores={temp=1},tag=isAlive] {"rawtext":[{"translate":"§eisAlive = �
 
 tellraw @s[scores={temp=1},tag=!virtualCrosshairEnabled] {"rawtext":[{"translate":"§evirtualCrosshairEnabled = §afalse §7# 玩家是否启用了虚拟准星 | true=是，false=否"}]}
 tellraw @s[scores={temp=1},tag=virtualCrosshairEnabled] {"rawtext":[{"translate":"§evirtualCrosshairEnabled = §atrue §7# 玩家是否启用了虚拟准星 | true=是，false=否"}]}
-
-
 
 scoreboard players set @s temp 0

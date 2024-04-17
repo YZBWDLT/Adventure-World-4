@@ -60,7 +60,7 @@ execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
 execute @e[name=level] ~~~ function lib/get_data/3_digit_seperator
 ## 当处于“未在游戏中”状态下时，每秒一次地清除怪物生成器 | 当强制生成怪物的设置启用后，不清除对应的summoner
 execute @e[name=level,scores={temp3=!0}] ~~~ execute @e[name=tick,scores={time=0}] ~~~ kill @e[family=summoner]
-execute @e[name=developerMode,scores={settings=0}] ~~~ execute @e[name=level,scores={temp3=!0}] ~~~ execute @e[name=tick,scores={time=0}] ~~~ kill @e[family=monster]
+execute @e[name=developerMode,scores={data=0}] ~~~ execute @e[name=level,scores={temp3=!0}] ~~~ execute @e[name=tick,scores={time=0}] ~~~ kill @e[family=monster]
 execute @e[name=level,scores={temp3=!0}] ~~~ function system/level_controllers/start_level
 
 ## 章节事件控制器
@@ -98,7 +98,7 @@ execute @e[name=level,scores={temp3=0}] ~~~ function system/level_controllers/ga
 # --- 开发者模式 ---
 
 ## 游戏模式切换器
-execute @e[name=developerMode,scores={settings=1}] ~~~ function system/gamemode_switcher
+execute @e[name=developerMode,scores={data=1}] ~~~ function system/gamemode_switcher
 
 ## 重生点判定器
-execute @e[name=developerMode,scores={settings=1}] ~~~ execute @e[name=tick,scores={time=14}] ~~~ execute @e[family=respawner] ~~~ particle aw:block_hint_gold ~~~
+execute @e[name=developerMode,scores={data=1}] ~~~ execute @e[name=tick,scores={time=14}] ~~~ execute @e[family=respawner] ~~~ particle aw:block_hint_gold ~~~

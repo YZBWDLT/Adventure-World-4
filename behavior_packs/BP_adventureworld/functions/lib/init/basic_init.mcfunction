@@ -9,7 +9,6 @@ tickingarea add -55 0 -55 60 0 120 "villageArea"
 scoreboard objectives remove data
 scoreboard objectives remove time
 scoreboard objectives remove active
-scoreboard objectives remove settings
 scoreboard objectives remove temp
 scoreboard objectives remove isAlive
 scoreboard objectives remove deathTimes
@@ -22,7 +21,6 @@ scoreboard objectives remove isOnline
 scoreboard objectives add data dummy "后台数据"
 scoreboard objectives add time dummy "时间数据"
 scoreboard objectives add active dummy "激活数据"
-scoreboard objectives add settings dummy "设置数据"
 scoreboard objectives add temp dummy "临时数据"
 scoreboard objectives add isAlive dummy "存活数据"
 scoreboard objectives add deathTimes dummy "§l§c死亡次数"
@@ -55,8 +53,6 @@ summon aw:marker "isNetease" -82 1 -2
 summon aw:marker "difficulty" -82 1 -2
 summon aw:marker "realDeadPlayersAmount" -82 1 -2
 summon aw:marker "achievement" -82 1 -2
-
-### settings 设置数据
 summon aw:marker "developerMode" -82 1 -2
 summon aw:marker "storyMode" -82 1 -2
 summon aw:marker "difficultyAdder" -82 1 -2

@@ -21,7 +21,7 @@ execute @e[name=level,scores={data=99}] ~~~ function levels/open/combat_mode/tim
 execute @e[name=level,scores={data=101}] ~~~ function levels/chapter1/1_0/timeline
 execute @e[name=level,scores={data=201}] ~~~ function levels/chapter2/2_0/timeline
 execute @e[name=level,scores={data=301}] ~~~ function levels/chapter3/3_0/timeline
-execute @e[name=storyMode,scores={settings=1}] ~~~ execute @e[name=level,scores={data=311}] ~~~ function levels/chapter3/3_1/timeline
+execute @e[name=storyMode,scores={data=1}] ~~~ execute @e[name=level,scores={data=311}] ~~~ function levels/chapter3/3_1/timeline
 execute @e[name=level,scores={data=401}] ~~~ function levels/chapter4/4_0/timeline
 execute @e[name=level,scores={data=501}] ~~~ function levels/chapter5/timeline
 execute @e[name=level,scores={data=601}] ~~~ function levels/chapter6/6_0/timeline
@@ -35,8 +35,8 @@ execute @e[name=level,scores={data=440}] ~~~ function levels/chapter4/4_4/timeli
 execute @e[name=level,scores={data=630}] ~~~ function levels/chapter6/6_3/timeline 
 execute @e[name=level,scores={data=640}] ~~~ function levels/chapter6/6_4/gaming/timeline 
 execute @e[name=level,scores={data=641}] ~~~ function levels/chapter6/6_4/after_gaming/timeline 
-execute @e[name=level,scores={data=701}] ~~~ execute @e[name=storyMode,scores={settings=0}] ~~~ function levels/chapter7/7_0/combat_mode/timeline 
-execute @e[name=level,scores={data=701}] ~~~ execute @e[name=storyMode,scores={settings=1}] ~~~ function levels/chapter7/7_0/story_mode/timeline 
+execute @e[name=level,scores={data=701}] ~~~ execute @e[name=storyMode,scores={data=0}] ~~~ function levels/chapter7/7_0/combat_mode/timeline 
+execute @e[name=level,scores={data=701}] ~~~ execute @e[name=storyMode,scores={data=1}] ~~~ function levels/chapter7/7_0/story_mode/timeline 
 execute @e[name=level,scores={data=709}] ~~~ function levels/chapter7/7_1/before_gaming/timeline 
 execute @e[name=level,scores={data=720}] ~~~ function levels/chapter7/7_2/timeline 
 execute @e[name=level,scores={data=740}] ~~~ function levels/chapter7/7_4/timeline_gaming

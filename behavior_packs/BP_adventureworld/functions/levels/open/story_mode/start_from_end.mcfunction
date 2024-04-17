@@ -10,5 +10,5 @@ kill @e[family=text_display]
 function levels/open/story_mode/start
 
 # --- 使用上周目的值 ---
-scoreboard players operation @e[name=difficultyAdder] settings = nextGame.difficultyAdder record
-scoreboard players operation @e[name=storyMode] settings = nextGame.storyMode record
+scoreboard players operation @e[name=difficultyAdder] data = nextGame.difficultyAdder record
+scoreboard players operation @e[name=storyMode] data = nextGame.storyMode record

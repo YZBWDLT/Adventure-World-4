@@ -1,7 +1,7 @@
 # ===== 发布地图 =====
 
 ## --- 未开启开发者模式时 ---
-scoreboard players operation @s temp = @e[name=developerMode] settings
+scoreboard players operation @s temp = @e[name=developerMode] data
 tellraw @s[scores={temp=0}] {"rawtext":[{"translate":"§c该功能仅限在开发者模式下使用"}]}
 
 ## --- 开启开发者模式时 ---

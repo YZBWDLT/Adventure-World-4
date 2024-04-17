@@ -24,7 +24,7 @@ execute @a ~~~ function lib/supplier/items
 
 # --- 更改玩家游戏模式 ---
 # 开发者模式下不更新游戏模式
-execute @e[name=developerMode,scores={settings=0}] ~~~ gamemode adventure @a
+execute @e[name=developerMode,scores={data=0}] ~~~ gamemode adventure @a
 
 ## --- 清除药效 ---
 effect @a clear

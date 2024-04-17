@@ -1,9 +1,9 @@
-# ===== 使用虚拟准星后 =====
+# ===== 使用召唤怪物后 =====
 
 # --- 数值操作 ---
 
 ## 先获取开发者模式情况
-scoreboard players operation @s temp = @e[name=developerMode] settings
+scoreboard players operation @s temp = @e[name=developerMode] data
 tellraw @s[scores={temp=0}] {"rawtext":[{"translate":"§c该功能无法在非开发者模式下使用"}]}
 
 ## 开发者模式启用后执行
