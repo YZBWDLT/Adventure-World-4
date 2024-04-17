@@ -3,7 +3,7 @@
 # 隐身模式：施加3秒的隐身
 
 # --- 传送玩家到小黑屋中 ---
-tp @a 36 26 87
+function lib/black_screen/default
 
 # --- 施加隐身 ---
 effect @a invisibility 3 0 true
