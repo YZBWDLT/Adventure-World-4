@@ -23,6 +23,8 @@ item.aw:potion_turtle.name=Turtle Potion
 item.aw:potion_rebirth.name=Rebirth Potion
 item.aw:potion_purification.name=Purification Potion
 item.aw:potion_hibernation.name=Hibernation Potion
+item.aw:main_potion_used.name=Main Potion Used
+item.aw:vice_potion_used.name=Vice Potion Used
 
 item.aw:toggle_wave.name=Toggle Wave
 item.aw:summon_monsters.name=Summon Monsters
