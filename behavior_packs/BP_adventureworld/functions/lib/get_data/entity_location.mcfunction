@@ -7,7 +7,7 @@ scoreboard players set @s position -1
 
 ## --- 开始游戏区域 ---
 scoreboard players set @s[x=33,y=20,z=80,dx=22,dy=24,dz=57] position 1
-scoreboard players set @s[x=34,y=25,z=85,dx=4,dy=4,dz=4] position 2
+scoreboard players set @s[x=-96,y=0,z=-16,dx=4,dy=4,dz=4] position 2
 
 ## --- 第一章 ---
 ### 先判断玩家是否在第1章的入口及过道部分
