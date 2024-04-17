@@ -51,7 +51,7 @@ execute @e[name=tick,scores={time=0}] ~~~ function system/item_limit/items
 ## 章节事件控制器
 function system/level_controllers/chapter_events
 
-## 进入房间检测器
+## 进入房间检测器 | 该函数仅在关卡进度处于“未在游戏中”状态下执行
 execute @e[name=levelCompleted,scores={data=!0}] ~~~ function system/level_controllers/start_level
 
 ## 时间线控制器 | 仅当时间线处于激活状态下执行。一般而言，“在游戏中”的关卡都会默认开启时间线，而“未在游戏中”时的时间线一般是关闭的。
@@ -70,8 +70,8 @@ function system/level_controllers/actionbar_title
 ## 关卡与波潮完成检测器 | 该函数仅在关卡进度处于“正在游戏中”状态下执行
 execute @e[name=levelCompleted,scores={data=0}] ~~~ function system/level_controllers/level_complete
 
-## 关卡失败检测器 | 该函数仅在关卡进度处于“正在游戏中”状态下执行
-execute @e[name=levelCompleted,scores={data=0}] ~~~ function system/level_controllers/game_lose
+## 关卡失败检测器 | 该函数仅在data.levelCompleted = 0时执行 | 该函数仅在data.maxPlayersAmount = 1..时执行（这样是为了防止出现部分命令不加载的情况发生）
+execute @e[name=levelCompleted,scores={data=0}] ~~~ execute @e[name=maxPlayersAmount,scores={data=1..}] ~~~ function system/level_controllers/game_lose
 
 # --- 开发者模式 ---
 
