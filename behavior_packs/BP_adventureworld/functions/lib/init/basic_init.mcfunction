@@ -58,12 +58,7 @@ summon aw:marker "achievement" -82 1 -2
 
 ### settings 设置数据
 summon aw:marker "developerMode" -82 1 -2
-summon aw:marker "arrowLimitTest" -82 1 -2
-summon aw:marker "potionLimitTest" -82 1 -2
-summon aw:marker "itemLimitTest" -82 1 -2
-summon aw:marker "respawnInNewWave" -82 1 -2
 summon aw:marker "storyMode" -82 1 -2
-summon aw:marker "simulatedLevel" -82 1 -2
 summon aw:marker "difficultyAdder" -82 1 -2
 
 ### time

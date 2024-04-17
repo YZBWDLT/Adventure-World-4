@@ -52,13 +52,8 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeSecond4 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.mapCompletedTimes = §a%%s §7# 地图通关次数","with":{"rawtext":[{"score":{"objective":"record","name":"mapCompletedTimes"}}]}}]}
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== settings记分项 ====="}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.arrowLimitTest = §a%%s §7# 箭上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=arrowLimitTest]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.developerMode = §a%%s §7# 开发者模式,0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=developerMode]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.difficultyAdder = §a%%s §7# 游戏难度加和，以difficulty+本值得到最终的难度值（data.difficulty）。","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=difficultyAdder]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.itemLimitTest = §a%%s §7# 物品上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=itemLimitTest]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.potionLimitTest = §a%%s §7# 药水上限是否启用检测，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=potionLimitTest]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.respawnInNewWave = §a%%s §7# 是否在新的波次下复活玩家，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=respawnInNewWave]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.simulatedLevel = §a%%s §7# 模拟关卡号，用于开发者模式下的怪物调试","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=simulatedLevel]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"settings.storyMode = §a%%s §7# 是否启用剧情模式，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"settings","name":"@e[name=storyMode]"}}]}}]}
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== temp类记分项 ====="}]}

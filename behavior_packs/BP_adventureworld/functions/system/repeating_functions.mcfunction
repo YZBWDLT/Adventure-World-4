@@ -40,15 +40,15 @@ function system/equipment_tester
 
 ## 箭上限函数
 ## 仅当箭上限检测启用状态下执行。
-execute @e[name=arrowLimitTest,scores={settings=1}] ~~~ function system/item_limit/arrows
+function system/item_limit/arrows
 
 ## 药水上限函数
 ## 每秒执行一次，仅当药水上限检测启用状态下执行。
-execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=potionLimitTest,scores={settings=1}] ~~~ function system/item_limit/potions
+execute @e[name=tick,scores={time=0}] ~~~ function system/item_limit/potions
 function system/item_limit/potions2
 
 ## 物品上限函数
-execute @e[name=tick,scores={time=0}] ~~~ execute @e[name=itemLimitTest,scores={settings=1}] ~~~ function system/item_limit/items
+execute @e[name=tick,scores={time=0}] ~~~ function system/item_limit/items
 
 # --- 关卡函数 ---
 # 这些函数是地图关卡需要用到的循环型函数。

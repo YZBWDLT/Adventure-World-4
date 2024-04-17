@@ -27,7 +27,6 @@ item.aw:potion_hibernation.name=休眠药水
 item.aw:toggle_wave.name=调整波数
 item.aw:summon_monsters.name=生成怪物
 item.aw:kill_monsters.name=清除怪物
-item.aw:get_equipment.name=获取装备
 
 ### 方块类
 tile.aw:carved_stone_bricks.name=雕刻石砖

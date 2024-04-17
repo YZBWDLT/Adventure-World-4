@@ -22,12 +22,7 @@ scoreboard players set @e[name=realDeadPlayersAmount] data 0
 scoreboard players set @e[name=achievement] data 0
 
 scoreboard players set @e[name=developerMode] settings 0
-scoreboard players set @e[name=arrowLimitTest] settings 1
-scoreboard players set @e[name=potionLimitTest] settings 1
-scoreboard players set @e[name=itemLimitTest] settings 1
-scoreboard players set @e[name=respawnInNewWave] settings 1
 scoreboard players set @e[name=storyMode] settings 1
-scoreboard players set @e[name=simulatedLevel] settings 0
 scoreboard players set @e[name=difficultyAdder] settings 0
 
 scoreboard players set @e[name=tick] time 0
