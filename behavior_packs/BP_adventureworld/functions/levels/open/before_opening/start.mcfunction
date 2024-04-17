@@ -2,7 +2,7 @@
 
 # --- 重置游戏规则与地图数据 ---
 function lib/init/gamerule
-function lib/init/basic_init
+function lib/init/data_reset_normal
 
 # --- 调整所有玩家的游戏模式 ---
 gamemode adventure @a
