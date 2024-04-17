@@ -96,8 +96,8 @@ execute @e[name=achievement,scores={data=9}] ~~~ summon aw:text_display -27 2.1 
 
 ## [多人] 躺赢 - 有玩家的击杀数小于50
 execute @e[name=achievement,scores={data=10}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.multiPlayer.killLessThan50 record
-execute @e[name=achievement,scores={data=10}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -89 2 -3 -89 2 -3 -27 3 -45
-execute @e[name=achievement,scores={data=10}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -89 1 -3 -89 1 -3 -27 3 -45
+execute @e[name=achievement,scores={data=10}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -87 2 -3 -87 2 -3 -27 3 -45
+execute @e[name=achievement,scores={data=10}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -87 1 -3 -87 1 -3 -27 3 -45
 execute @e[name=achievement,scores={data=10}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§b[多人] §l躺赢"
 execute @e[name=achievement,scores={data=10}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§c§l✘ §r§c未完成"
 execute @e[name=achievement,scores={data=10}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§a§l✔ §r§a已完成"
@@ -105,8 +105,8 @@ execute @e[name=achievement,scores={data=10}] ~~~ summon aw:text_display -27 2.1
 
 ## [多人] 全靠我带飞 - 有玩家的击杀数大于200
 execute @e[name=achievement,scores={data=11}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.multiPlayer.killMoreThan200 record
-execute @e[name=achievement,scores={data=11}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -90 2 -3 -90 2 -3 -27 3 -45
-execute @e[name=achievement,scores={data=11}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -90 1 -3 -90 1 -3 -27 3 -45
+execute @e[name=achievement,scores={data=11}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -88 2 -3 -88 2 -3 -27 3 -45
+execute @e[name=achievement,scores={data=11}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -88 1 -3 -88 1 -3 -27 3 -45
 execute @e[name=achievement,scores={data=11}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§b[多人] §l全靠我带飞"
 execute @e[name=achievement,scores={data=11}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§c§l✘ §r§c未完成"
 execute @e[name=achievement,scores={data=11}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§a§l✔ §r§a已完成"
@@ -114,8 +114,8 @@ execute @e[name=achievement,scores={data=11}] ~~~ summon aw:text_display -27 2.1
 
 ## [多人] 挑战极限 - 通过4级或更高难度的试炼
 execute @e[name=achievement,scores={data=12}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.multiPlayer.difficulty4 record
-execute @e[name=achievement,scores={data=12}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -91 2 -3 -91 2 -3 -27 3 -45
-execute @e[name=achievement,scores={data=12}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -91 1 -3 -91 1 -3 -27 3 -45
+execute @e[name=achievement,scores={data=12}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -89 2 -3 -89 2 -3 -27 3 -45
+execute @e[name=achievement,scores={data=12}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -89 1 -3 -89 1 -3 -27 3 -45
 execute @e[name=achievement,scores={data=12}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§d[多人][困难] §l挑战极限"
 execute @e[name=achievement,scores={data=12}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§c§l✘ §r§c未完成"
 execute @e[name=achievement,scores={data=12}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§a§l✔ §r§a已完成"
@@ -123,8 +123,8 @@ execute @e[name=achievement,scores={data=12}] ~~~ summon aw:text_display -27 2.1
 
 ## [多人] 势如破竹 - 在45分钟内通过试炼
 execute @e[name=achievement,scores={data=13}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.multiPlayer.speedrun record
-execute @e[name=achievement,scores={data=13}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -92 2 -3 -92 2 -3 -27 3 -45
-execute @e[name=achievement,scores={data=13}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -92 1 -3 -92 1 -3 -27 3 -45
+execute @e[name=achievement,scores={data=13}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -90 2 -3 -90 2 -3 -27 3 -45
+execute @e[name=achievement,scores={data=13}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -90 1 -3 -90 1 -3 -27 3 -45
 execute @e[name=achievement,scores={data=13}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§b[多人] §l势如破竹"
 execute @e[name=achievement,scores={data=13}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§c§l✘ §r§c未完成"
 execute @e[name=achievement,scores={data=13}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§a§l✔ §r§a已完成"
