@@ -2,7 +2,7 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] data 311
+scoreboard players set @e[name=gameId] data 311
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a3-1已完成！§r\n§f你已获得 §a[治疗药水] §e[钻石头盔] §f！\n§a非常好！灵活运用主药水可以帮助你更轻松地通过后面的关卡。\n§c请手持一次钻石头盔以获取附魔。"}]}

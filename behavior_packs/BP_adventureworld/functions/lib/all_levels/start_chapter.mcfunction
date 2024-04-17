@@ -23,4 +23,4 @@ execute @e[name=storyMode,scores={data=1}] ~~~ function lib/states/dialogue/enab
 execute @e[name=storyMode,scores={data=1}] ~~~ function lib/states/timeline/enable
 
 # --- 当玩家进入新的章节（除第五章之外），播放音乐 ---
-execute @e[name=level,scores={data=!501}] ~~~ function lib/music_player
+execute @e[name=gameId,scores={data=!501}] ~~~ function lib/music_player

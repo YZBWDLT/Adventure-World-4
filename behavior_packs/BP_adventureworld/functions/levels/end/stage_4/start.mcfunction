@@ -1,7 +1,7 @@
 # ===== 进入试炼门口 =====
 
 # --- 更改关卡ID ---
-scoreboard players set @e[name=level] data 1004
+scoreboard players set @e[name=gameId] data 1004
 
 # --- 触发对话 ---
 function lib/states/dialogue/enable

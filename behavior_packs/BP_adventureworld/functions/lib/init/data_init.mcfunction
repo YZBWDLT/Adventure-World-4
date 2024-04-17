@@ -4,7 +4,7 @@
 execute @a ~~~ function lib/init/player_data
 scoreboard players set @a isOnline 1
 
-scoreboard players set @e[name=level] data 1
+scoreboard players set @e[name=gameId] data 1
 scoreboard players set @e[name=monsterAmount] data 0
 scoreboard players set maxMonsterAmount data 0
 scoreboard players set @e[name=hookshotAmount] data 0
@@ -28,8 +28,6 @@ scoreboard players set @e[name=difficultyAdder] data 0
 scoreboard players set @e[name=tick] time 0
 scoreboard players set @e[name=playedSecond] time 0
 scoreboard players set @e[name=playedMinute] time 0
-scoreboard players set @e[name=timeLeft] time 0
-scoreboard players set @e[name=monsterRefreshLeft] time 0
 scoreboard players set @e[name=soundPlayer] time 0
 scoreboard players set @e[name=timeline] time 0
 scoreboard players set @e[name=monsterSummonDelay] time 0

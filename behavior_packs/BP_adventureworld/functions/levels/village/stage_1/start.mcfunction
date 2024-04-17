@@ -1,6 +1,6 @@
 # ===== 进入本状态时 =====
 
-scoreboard players set @e[name=level] data 3
+scoreboard players set @e[name=gameId] data 3
 
 tp @a -26 6 -50 facing -27 6 -51
 effect @a blindness 5 0 true

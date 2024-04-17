@@ -20,8 +20,8 @@ execute @a ~~~ function lib/get_data/3_digit_seperator
 
 ## 对玩家和关卡进度进行数据处理
 ## 将玩家的数据和对应的关卡进度数据做减法，如果玩家的数据大于等于1则是“超前”的
-execute @a ~~~ scoreboard players operation @s temp2 -= @e[name=level] temp
-execute @a ~~~ scoreboard players operation @s temp3 -= @e[name=level] temp2
+execute @a ~~~ scoreboard players operation @s temp2 -= @e[name=chapter] data
+execute @a ~~~ scoreboard players operation @s temp3 -= @e[name=level] data
 
 ## 第1类“超前”的判定
 scoreboard players set @a[scores={temp2=1}] isAlive 3
@@ -34,30 +34,30 @@ scoreboard players set @a[scores={temp2=0,temp3=1}] isAlive 3
 # 请注意：因为先于该函数执行的【防退出控制器】已对玩家状态值做了修正，因此无需担心过多的逻辑问题，
 # 假设在本模块运行时所有玩家的数据均为正常的（即玩家的章节关卡数据均落后或等于关卡进度的章节关卡数据，且均处于“未在游戏中”的状态）
 
-execute @e[name=level,scores={data=101..109}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter1/1_1/start_level
-execute @e[name=level,scores={data=111..119}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter1/1_2/start_level
-execute @e[name=level,scores={data=121..129}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter1/1_3/start_level
-execute @e[name=level,scores={data=131..139}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter2/2_0/start
-execute @e[name=level,scores={data=201..209}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter2/2_1/start_level
-execute @e[name=level,scores={data=211..219}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter2/2_2/start_level
-execute @e[name=level,scores={data=221..229}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter2/2_3/start_level
-execute @e[name=level,scores={data=231..239}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter3/3_0/start
-execute @e[name=level,scores={data=301..309}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter3/3_1/start_level
-execute @e[name=level,scores={data=311..319}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter3/3_2/start_level
-execute @e[name=level,scores={data=321..329}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter3/3_3/start_level
-execute @e[name=level,scores={data=331..339}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter3/3_4/start_level
-execute @e[name=level,scores={data=341..349}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter4/4_0/start
-execute @e[name=level,scores={data=401..409}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter4/4_1/start_level
-execute @e[name=level,scores={data=411..419}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter4/4_2/start_level
-execute @e[name=level,scores={data=421..429}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter4/4_3/start_level
-execute @e[name=level,scores={data=431..439}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter4/4_4/start_level
-execute @e[name=level,scores={data=441..449}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter5/start
-execute @e[name=level,scores={data=501..509}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter6/6_0/start
-execute @e[name=level,scores={data=601..609}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter6/6_1/start_level
-execute @e[name=level,scores={data=611..619}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter6/6_2/start_level
-execute @e[name=level,scores={data=621..629}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter6/6_3/start_level
-execute @e[name=level,scores={data=631..639}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter6/6_4/start_level
-execute @e[name=level,scores={data=711..719}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_2/start_level
-execute @e[name=level,scores={data=721..729}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_3/start_level
-execute @e[name=level,scores={data=731..739}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_4/start_level
-execute @e[name=level,scores={data=741..749}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_5/start_level
+execute @e[name=gameId,scores={data=101..109}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter1/1_1/start_level
+execute @e[name=gameId,scores={data=111..119}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter1/1_2/start_level
+execute @e[name=gameId,scores={data=121..129}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter1/1_3/start_level
+execute @e[name=gameId,scores={data=131..139}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter2/2_0/start
+execute @e[name=gameId,scores={data=201..209}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter2/2_1/start_level
+execute @e[name=gameId,scores={data=211..219}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter2/2_2/start_level
+execute @e[name=gameId,scores={data=221..229}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter2/2_3/start_level
+execute @e[name=gameId,scores={data=231..239}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter3/3_0/start
+execute @e[name=gameId,scores={data=301..309}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter3/3_1/start_level
+execute @e[name=gameId,scores={data=311..319}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter3/3_2/start_level
+execute @e[name=gameId,scores={data=321..329}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter3/3_3/start_level
+execute @e[name=gameId,scores={data=331..339}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter3/3_4/start_level
+execute @e[name=gameId,scores={data=341..349}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter4/4_0/start
+execute @e[name=gameId,scores={data=401..409}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter4/4_1/start_level
+execute @e[name=gameId,scores={data=411..419}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter4/4_2/start_level
+execute @e[name=gameId,scores={data=421..429}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter4/4_3/start_level
+execute @e[name=gameId,scores={data=431..439}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter4/4_4/start_level
+execute @e[name=gameId,scores={data=441..449}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter5/start
+execute @e[name=gameId,scores={data=501..509}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter6/6_0/start
+execute @e[name=gameId,scores={data=601..609}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter6/6_1/start_level
+execute @e[name=gameId,scores={data=611..619}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter6/6_2/start_level
+execute @e[name=gameId,scores={data=621..629}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter6/6_3/start_level
+execute @e[name=gameId,scores={data=631..639}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter6/6_4/start_level
+execute @e[name=gameId,scores={data=711..719}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_2/start_level
+execute @e[name=gameId,scores={data=721..729}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_3/start_level
+execute @e[name=gameId,scores={data=731..739}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_4/start_level
+execute @e[name=gameId,scores={data=741..749}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_5/start_level

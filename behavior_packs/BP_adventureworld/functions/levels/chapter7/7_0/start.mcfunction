@@ -1,7 +1,7 @@
 # ===== 进入剑之神殿 =====
 
 # --- 设置关卡ID ---
-scoreboard players set @e[name=level] data 701
+scoreboard players set @e[name=gameId] data 701
 
 # --- 召唤旷野之剑实体 ---
 summon aw:wild_sword -87 -38 105 aw:stage_1

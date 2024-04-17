@@ -3,7 +3,7 @@
 # 执行前需指定执行该命令的玩家
 
 # --- 获取当前的关卡进度 ---
-scoreboard players operation @s temp = @e[name=level] data
+scoreboard players operation @s temp = @e[name=gameId] data
 
 ## --- 治疗药水 ---
 ## 1-1，1-2，1-3，3-1，3-2，3-3分别给予1瓶

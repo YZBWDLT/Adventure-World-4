@@ -1,7 +1,7 @@
 # ===== NPC交互检测器 =====
 
 # --- 获取关卡数 ---
-scoreboard players operation @s temp = @e[name=level] data
+scoreboard players operation @s temp = @e[name=gameId] data
 
 # --- 人物对话 ---
 

@@ -2,7 +2,7 @@
 # 对本关进行一定的初始化
 
 ## --- 设置level ---
-scoreboard players set @e[name=level] data 440
+scoreboard players set @e[name=gameId] data 440
 
 ## --- 封闭入口与出口 ---
 fill -143 -31 7 -143 -29 5 ice
@@ -12,8 +12,9 @@ fill -117 -31 7 -117 -29 5 ice
 tp @e[family=respawner] -145 -23 6
 
 ## 初始化剩余时间数值
-scoreboard players set @e[name=timeLeft] time 180
-scoreboard players random @e[name=monsterRefreshLeft] time 3 10
+## temp.timeline = 关卡剩余时间 | temp2.timeline = 刷新怪物剩余时间
+scoreboard players set @e[name=timeline] temp 180
+scoreboard players random @e[name=timeline] temp2 3 10
 
 ## --- 调用所有关卡通用的开始关卡函数 ---
 function lib/all_levels/start_level

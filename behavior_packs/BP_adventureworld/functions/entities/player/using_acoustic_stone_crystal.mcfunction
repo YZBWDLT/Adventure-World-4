@@ -7,6 +7,6 @@
 # · 当前不处于游戏状态
 
 scoreboard players operation @s temp = @e[name=dialogue] active
-scoreboard players operation @s temp2 = @e[name=level] data
+scoreboard players operation @s temp2 = @e[name=gameId] data
 
 execute @s[scores={temp=0,temp2=100..999,isAlive=2}] ~~~ function lib/states/dialogue/enable

@@ -7,8 +7,6 @@ function lib/get_data/player_amount
 
 # --- 获取玩家当前位置和当前关卡进度 ---
 execute @a ~~~ function lib/get_data/entity_location
-execute @e[name=level] ~~~ scoreboard players operation @s temp = @s data
-execute @e[name=level] ~~~ function lib/get_data/3_digit_seperator
 execute @a ~~~ scoreboard players operation @s temp = @s position
 execute @a ~~~ function lib/get_data/3_digit_seperator
 

@@ -12,7 +12,7 @@ execute @e[name=dialogue,scores={active=4,time=41}] ~~~ function lib/states/dial
 execute @e[name=dialogue,scores={active=5,time=40}] ~~~ tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7天哪，这个刷怪位置...这里变得越来越反常了啊。"}]}
 execute @e[name=dialogue,scores={active=5,time=41}] ~~~ scoreboard players set @s active 6
 
-execute @e[name=level,scores={data=741}] ~~~ execute @e[name=dialogue,scores={active=6}] ~~~ function lib/states/dialogue/disable
+execute @e[name=gameId,scores={data=741}] ~~~ execute @e[name=dialogue,scores={active=6}] ~~~ function lib/states/dialogue/disable
 
 # --- 关卡结束后的对话 ---
 execute @e[name=dialogue,scores={active=1,time=1}] ~~~ tellraw @a {"rawtext":[{"text":"* §7§kahghiaojfkjasijfgnjan"}]}

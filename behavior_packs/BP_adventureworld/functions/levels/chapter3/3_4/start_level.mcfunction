@@ -2,7 +2,7 @@
 # 对本关进行一定的初始化
 
 ## --- 设置level ---
-scoreboard players set @e[name=level] data 340
+scoreboard players set @e[name=gameId] data 340
 
 ## --- 封闭入口与出口 ---
 fill -168 -15 22 -168 -13 24 prismarine

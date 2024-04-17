@@ -4,12 +4,12 @@
 ## --- 七大药水 ---
 
 ### 治疗药水
-execute @e[name=level,scores={data=111..120}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a1"}]}
-execute @e[name=level,scores={data=121..130}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a2"}]}
-execute @e[name=level,scores={data=131..310}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a3"}]}
-execute @e[name=level,scores={data=311..320}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a4"}]}
-execute @e[name=level,scores={data=321..330}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a5"}]}
-execute @e[name=level,scores={data=331..}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a6"}]}
+execute @e[name=gameId,scores={data=111..120}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a1"}]}
+execute @e[name=gameId,scores={data=121..130}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a2"}]}
+execute @e[name=gameId,scores={data=131..310}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a3"}]}
+execute @e[name=gameId,scores={data=311..320}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a4"}]}
+execute @e[name=gameId,scores={data=321..330}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a5"}]}
+execute @e[name=gameId,scores={data=331..}] ~~~ titleraw @a[hasitem={item=aw:potion_health,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§a治疗药水§r\n\n§a生命 §l↑§r\n\n§f药水上限 §a6"}]}
 ### 生长药水
 titleraw @a[hasitem={item=aw:potion_growth,location=slot.weapon.mainhand}] actionbar {"rawtext":[{"text":"§l§b生长药水§r\n\n§a生命上限 §l↑§r\n§a生命恢复 §l↑§r\n§c攻击伤害 §l↓§r\n\n§c和其他主药水冲突\n一局只能选择一类"}]}
 ### 亢奋药水
@@ -31,5 +31,5 @@ titleraw @a[hasitem={item=aw:enable_crosshair,location=slot.weapon.mainhand}] ac
 
 ## --- 钻石靴子 & 钻石头盔 ---
 ## 当玩家还没有附魔的时候，强制提醒玩家附魔
-execute @e[name=level,scores={data=311..640}] ~~~ titleraw @a[tag=!helmetHeld] actionbar {"rawtext":[{"text":"§l§c温馨提示\n\n§r§f您刚刚获得了一个钻石头盔\n请手持钻石头盔以获取附魔！"}]}
-execute @e[name=level,scores={data=321..640}] ~~~ titleraw @a[tag=!bootsHeld] actionbar {"rawtext":[{"text":"§l§c温馨提示\n\n§r§f您刚刚获得了一个钻石靴子\n请手持钻石靴子以获取附魔！"}]}
+execute @e[name=gameId,scores={data=311..640}] ~~~ titleraw @a[tag=!helmetHeld] actionbar {"rawtext":[{"text":"§l§c温馨提示\n\n§r§f您刚刚获得了一个钻石头盔\n请手持钻石头盔以获取附魔！"}]}
+execute @e[name=gameId,scores={data=321..640}] ~~~ titleraw @a[tag=!bootsHeld] actionbar {"rawtext":[{"text":"§l§c温馨提示\n\n§r§f您刚刚获得了一个钻石靴子\n请手持钻石靴子以获取附魔！"}]}

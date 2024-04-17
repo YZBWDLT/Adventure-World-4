@@ -1,7 +1,7 @@
 # ===== 第四章 =====
 
 # --- 设置level ---
-scoreboard players set @e[name=level] data 401
+scoreboard players set @e[name=gameId] data 401
 
 # --- 通用函数 ---
 function lib/all_levels/start_chapter

@@ -1,7 +1,7 @@
 # ===== 游戏失败 =====
 
 ## --- 降级level记分板 ---
-scoreboard players set @e[name=level] data 621
+scoreboard players set @e[name=gameId] data 621
 
 ## --- 传送到上一个关卡的重生点并重新设置重生点 ---
 tp @a -76 -21 -41

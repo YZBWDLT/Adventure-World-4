@@ -2,7 +2,7 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] data 741
+scoreboard players set @e[name=gameId] data 741
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a7-4已完成！§r"}]}
@@ -21,5 +21,5 @@ function lib/all_levels/bonus
 scoreboard players reset @e[family=respawner] temp
 
 ## --- 激活timeline时间线 ---
-## 当data.level=741时，会触发对应单独的时间线设定
+## 当data.gameId=741时，会触发对应单独的时间线设定
 function lib/states/timeline/enable

@@ -5,7 +5,7 @@
 # --- 获取所需数据 ---
 
 ## 关卡进度
-scoreboard players operation @s temp = @e[name=level] data
+scoreboard players operation @s temp = @e[name=gameId] data
 ## 剧情模式是否启用
 scoreboard players operation @s temp2 = @e[name=storyMode] data
 
