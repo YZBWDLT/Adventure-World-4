@@ -22,10 +22,10 @@ execute @e[name=level,scores={data=611..}] ~~~ enchant @a[hasitem={item=bow,loca
 # --- 装备修复 ---
 
 # 主要用于修复皮革靴子，1分钟执行1次
-execute @e[name=playedSecond,scores={time=1}] ~~~ replaceitem entity @a[hasitem={item=leather_boots,location=slot.armor.feet}] slot.armor.feet 0 leather_boots
+execute @e[name=playedSecond,scores={time=1}] ~~~ replaceitem entity @a[hasitem={item=leather_boots,location=slot.armor.feet}] slot.armor.feet 0 leather_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 # 主要用于修复盾，1分钟执行1次
-execute @e[name=playedSecond,scores={time=1}] ~~~ replaceitem entity @a[hasitem={item=shield,location=slot.weapon.offhand}] slot.weapon.offhand 0 shield
+execute @e[name=playedSecond,scores={time=1}] ~~~ replaceitem entity @a[hasitem={item=shield,location=slot.weapon.offhand}] slot.weapon.offhand 0 shield 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 # --- 装备手持检测 ---
 # 检测玩家是否手持过钻石头盔、钻石靴子，以保证玩家的装备拥有应有的附魔
