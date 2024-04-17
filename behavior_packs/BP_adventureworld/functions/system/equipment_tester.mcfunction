@@ -34,3 +34,7 @@ execute @e[name=playedSecond,scores={time=1}] ~~~ replaceitem entity @a[hasitem=
 ## 手持时设为helmetHeld和bootsHeld
 tag @a[hasitem={item=aw:diamond_helmet,location=slot.weapon.mainhand}] add helmetHeld
 tag @a[hasitem={item=aw:diamond_boots,location=slot.weapon.mainhand}] add bootsHeld
+
+## 虚拟准星
+## 每秒执行一次，当玩家手持绳枪时，由其调用对应函数
+execute @e[name=tick,scores={time=0}] ~~~ execute @a[tag=virtualCrosshairEnabled,hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ function lib/virtual_crosshair

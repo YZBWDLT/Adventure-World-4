@@ -1,6 +1,9 @@
 # ===== 章节事件控制器 =====
 # 本文件控制了各个章节将触发的固定事件。
 
+# --- 全局饱和 ---
+execute @e[name=tick,scores={time=0}] ~~~ effect @a saturation 1 10 true
+
 # --- 第二章陷阱更新 ---
 ## 每秒执行一次。当玩家处于第二章过道区域时执行。
 execute @e[name=tick,scores={time=18}] ~~~ execute @a ~~~ function lib/get_data/entity_location

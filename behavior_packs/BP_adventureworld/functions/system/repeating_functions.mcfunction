@@ -5,7 +5,7 @@
 # 这些函数是整个地图最底层的内容，因此优先于上层的【关卡函数】执行
 
 ## 游玩时间记录器
-function system/time_played_recorder
+function system/time_controller
 
 ## 重生判定控制器
 function system/respawn_controller
@@ -17,12 +17,7 @@ function system/antileave
 ## 仅当音效播放器处于激活状态下执行。
 execute @e[name=soundPlayer,scores={active=!0}] ~~~ function system/sound_controller
 
-## 饱和效果
-## 每秒执行一次。
-execute @e[name=tick,scores={time=0}] ~~~ effect @a saturation 1 10 true
-
-## NPC对话
-## 当强制视角对话正在启用时，不启用该命令
+## NPC对话 | 当强制视角对话正在启用时，不启用该命令
 execute @e[name=dialogue,scores={active=!2}] ~~~ execute @e[type=aw:npc,family=interacted] ~~~ function system/npc_interact_tester
 
 # --- 物品函数 ---
@@ -31,15 +26,10 @@ execute @e[name=dialogue,scores={active=!2}] ~~~ execute @e[type=aw:npc,family=i
 ## 绳枪判定器
 function entities/hookshot/hookshot
 
-## 虚拟准星
-## 每秒执行一次，当玩家手持绳枪时，由其调用对应函数。
-execute @e[name=tick,scores={time=0}] ~~~ execute @a[tag=virtualCrosshairEnabled,hasitem={item=aw:hookshot,location=slot.weapon.mainhand}] ~~~ function lib/virtual_crosshair
-
 ## 装备检测器
 function system/equipment_tester
 
-## 箭上限函数
-## 仅当箭上限检测启用状态下执行。
+## 箭上限函数 | 仅当箭上限检测启用状态下执行。
 function system/item_limit/arrows
 
 ## 药水上限函数
