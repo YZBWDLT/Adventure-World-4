@@ -17,6 +17,8 @@ tellraw @a {"rawtext":[{"translate":"§l===== 成就获取 =====\n"}]}
 function lib/get_data/achievements
 
 ## 显示统计数据
+function lib/get_data/difficulty
+scoreboard players operation @e[name=difficulty] temp = @e[name=difficulty] data
 execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a ~~~ function lib/get_data/stats_singleplayer
 execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a ~~~ function lib/get_data/stats_multiplayer
 
@@ -40,3 +42,4 @@ tellraw @a {"rawtext":[{"translate":"§a祝贺你通关本地图！\n这是剧�
 
 # --- 清除物品 ---
 clear @a
+effect @a clear
