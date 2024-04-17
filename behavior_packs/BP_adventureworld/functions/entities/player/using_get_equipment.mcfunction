@@ -8,7 +8,7 @@ tellraw @s[scores={temp=0}] {"rawtext":[{"translate":"§c该功能无法在非�
 
 ## 开发者模式启用后执行
 execute @s[scores={temp=1}] ~~~ playsound random.orb @s ~~~
-execute @s[scores={temp=1}] ~~~ function settings/get_equipment
+execute @s[scores={temp=1}] ~~~ function developer/get_equipment
 
 scoreboard players set @s temp 0
 

@@ -33,8 +33,8 @@ execute @e[name=achievement,scores={data=2}] ~~~ summon aw:text_display -27 2.1 
 
 ## [单人] 挑战自我 - 通过2级或更高难度的试炼
 execute @e[name=achievement,scores={data=3}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.singlePlayer.difficulty2 record
-execute @e[name=achievement,scores={data=3}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -89 5 -3 -89 5 -3 -27 3 -45
-execute @e[name=achievement,scores={data=3}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -89 4 -3 -89 4 -3 -27 3 -45
+execute @e[name=achievement,scores={data=3}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -87 5 -3 -87 5 -3 -27 3 -45
+execute @e[name=achievement,scores={data=3}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -87 4 -3 -87 4 -3 -27 3 -45
 execute @e[name=achievement,scores={data=3}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§b[单人] §l挑战自我"
 execute @e[name=achievement,scores={data=3}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§c§l✘ §r§c未完成"
 execute @e[name=achievement,scores={data=3}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§a§l✔ §r§a已完成"
@@ -42,8 +42,8 @@ execute @e[name=achievement,scores={data=3}] ~~~ summon aw:text_display -27 2.1 
 
 ## [单人] 举步维艰 - 通过3级或更高难度的试炼
 execute @e[name=achievement,scores={data=4}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.singlePlayer.difficulty3 record
-execute @e[name=achievement,scores={data=4}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -90 5 -3 -90 5 -3 -27 3 -45
-execute @e[name=achievement,scores={data=4}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -90 4 -3 -90 4 -3 -27 3 -45
+execute @e[name=achievement,scores={data=4}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -88 5 -3 -88 5 -3 -27 3 -45
+execute @e[name=achievement,scores={data=4}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -88 4 -3 -88 4 -3 -27 3 -45
 execute @e[name=achievement,scores={data=4}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§d[单人][困难] §l举步维艰"
 execute @e[name=achievement,scores={data=4}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§c§l✘ §r§c未完成"
 execute @e[name=achievement,scores={data=4}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§a§l✔ §r§a已完成"
@@ -51,8 +51,8 @@ execute @e[name=achievement,scores={data=4}] ~~~ summon aw:text_display -27 2.1 
 
 ## [单人] 这不可能！ - 通过4级或更高难度的试炼
 execute @e[name=achievement,scores={data=5}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.singlePlayer.difficulty4 record
-execute @e[name=achievement,scores={data=5}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -91 5 -3 -91 5 -3 -27 3 -45
-execute @e[name=achievement,scores={data=5}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -91 4 -3 -91 4 -3 -27 3 -45
+execute @e[name=achievement,scores={data=5}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -89 5 -3 -89 5 -3 -27 3 -45
+execute @e[name=achievement,scores={data=5}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -89 4 -3 -89 4 -3 -27 3 -45
 execute @e[name=achievement,scores={data=5}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§e[单人][传奇] §l这不可能！"
 execute @e[name=achievement,scores={data=5}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§c§l✘ §r§c未完成"
 execute @e[name=achievement,scores={data=5}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§a§l✔ §r§a已完成"
@@ -60,8 +60,8 @@ execute @e[name=achievement,scores={data=5}] ~~~ summon aw:text_display -27 2.1 
 
 ## [单人] 别挡道，我很急！ - 在45分钟内通过试炼
 execute @e[name=achievement,scores={data=6}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.singlePlayer.speedrun record
-execute @e[name=achievement,scores={data=6}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -92 5 -3 -92 5 -3 -27 3 -45
-execute @e[name=achievement,scores={data=6}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -92 4 -3 -92 4 -3 -27 3 -45
+execute @e[name=achievement,scores={data=6}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -90 5 -3 -90 5 -3 -27 3 -45
+execute @e[name=achievement,scores={data=6}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -90 4 -3 -90 4 -3 -27 3 -45
 execute @e[name=achievement,scores={data=6}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§b[单人] §l别挡道，我很急！"
 execute @e[name=achievement,scores={data=6}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§c§l✘ §r§c未完成"
 execute @e[name=achievement,scores={data=6}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§a§l✔ §r§a已完成"
@@ -69,8 +69,8 @@ execute @e[name=achievement,scores={data=6}] ~~~ summon aw:text_display -27 2.1 
 
 ## [单人] 纯天然 - 全程除了治疗药水之外，不使用其他药水通过试炼
 execute @e[name=achievement,scores={data=7}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.singlePlayer.speedrun record
-execute @e[name=achievement,scores={data=7}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -93 5 -3 -93 5 -3 -27 3 -45
-execute @e[name=achievement,scores={data=7}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -93 4 -3 -93 4 -3 -27 3 -45
+execute @e[name=achievement,scores={data=7}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -91 5 -3 -91 5 -3 -27 3 -45
+execute @e[name=achievement,scores={data=7}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -91 4 -3 -91 4 -3 -27 3 -45
 execute @e[name=achievement,scores={data=7}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§d[单人][困难] §l纯天然"
 execute @e[name=achievement,scores={data=7}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§c§l✘ §r§c未完成"
 execute @e[name=achievement,scores={data=7}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ summon aw:text_display -27 2.4 -45 as_achievement_text_display "§a§l✔ §r§a已完成"
