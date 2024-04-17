@@ -53,12 +53,12 @@ execute @e[name=gameId,scores={data=601}] ~~~ function levels/chapter6/6_0/dialo
 execute @e[name=gameId,scores={data=611}] ~~~ function levels/chapter6/6_1/dialogue
 execute @e[name=gameId,scores={data=621}] ~~~ function levels/chapter6/6_2/dialogue
 execute @e[name=gameId,scores={data=631}] ~~~ function levels/chapter6/6_3/dialogue
-execute @e[name=gameId,scores={data=641}] ~~~ function levels/chapter6/6_4/after_gaming/dialogue
+execute @e[name=gameId,scores={data=641}] ~~~ function levels/chapter6/6_4/dialogue
 
 execute @e[name=gameId,scores={data=701}] ~~~ execute @e[name=storyMode,scores={data=0}] ~~~ function levels/chapter7/7_0/combat_mode/dialogue
 execute @e[name=gameId,scores={data=701}] ~~~ execute @e[name=storyMode,scores={data=1}] ~~~ function levels/chapter7/7_0/story_mode/dialogue
-execute @e[name=gameId,scores={data=709}] ~~~ function levels/chapter7/7_1/before_gaming/dialogue
-execute @e[name=gameId,scores={data=711}] ~~~ function levels/chapter7/7_1/dialogue
+execute @e[name=gameId,scores={data=709}] ~~~ function levels/chapter7/7_1/dialogue_before
+execute @e[name=gameId,scores={data=711}] ~~~ function levels/chapter7/7_1/dialogue_after
 execute @e[name=gameId,scores={data=721}] ~~~ function levels/chapter7/7_2/dialogue
 execute @e[name=gameId,scores={data=731}] ~~~ function levels/chapter7/7_3/dialogue
 execute @e[name=gameId,scores={data=740..741}] ~~~ function levels/chapter7/7_4/dialogue
