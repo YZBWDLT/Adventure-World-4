@@ -4,6 +4,7 @@
 ## 倒计时
 scoreboard players remove @s time 1
 
+execute @s[scores={time=0}] ~~~ execute @a ~~~ playsound mob.shulker.teleport @s ~~~ 1 0.5
 ## 此处必须加上type，以指定@r指代的是标记实体而非玩家
 execute @s[scores={time=0}] ~~~ tp @s @r[type=aw:marker,family=random_teleporter]
 

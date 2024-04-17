@@ -3,9 +3,9 @@
     "animations": {
         "animation.blaze_king.regeneration": {
             "loop": true,
-            "animation_length": 4,
+            "animation_length": 3,
             "timeline": {
-                "0.0": [
+                "2.9": [
                     "/function entities/blaze_king/regeneration"
                 ]
             }

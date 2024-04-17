@@ -11,6 +11,7 @@ execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={t
 execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp3=5}] ~~~ particle aw:lava_warning -78 -40 35
 execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp2=1..2,temp3=5}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§6岩浆即将上涨，请尽快躲到高处！"}]}
 execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp2=3,temp3=5}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c岩浆即将上涨2层，请尽快躲到高处！！！"}]}
+execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp3=1..5}] ~~~ execute @a ~~~ playsound bucket.fill_lava @s ~~~ 1 2 
 
 ## 在岩浆上涨剩余0秒后，按照Boss的血量生成岩浆
 execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp2=1..2,temp3=0}] ~~~ structure load 6_4_lava_1 -89 -40 21

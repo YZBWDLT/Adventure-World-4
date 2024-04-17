@@ -25,3 +25,6 @@ scoreboard players set @e[name=maxWave] data 2
 
 # --- 提示玩家 ---
 tellraw @a {"rawtext":[{"translate":"§a当心骷髅敢死队！它们非常脆弱，但拥有非常高的近战伤害，务必要优先解决！"}]}
+
+# --- 清除悬浮文本 ---
+kill @e[family=text_display]

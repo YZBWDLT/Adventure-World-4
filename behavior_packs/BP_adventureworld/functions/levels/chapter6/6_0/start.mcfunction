@@ -31,3 +31,6 @@ fill -74 -39 8 -76 -37 8 deepslate_bricks
 # --- 设定玩家镜头位置 ---
 tp @e[name=playerPosition] -71 -29 -20
 tp @e[name=facingPosition] -76 -31 -35 facing @e[name=playerPosition,c=1]
+
+# --- 如果玩家是纯战斗模式，将时间线调为3 ---
+execute @e[name=storyMode,scores={data=0}] ~~~ scoreboard players set @e[name=timeline] active 3
