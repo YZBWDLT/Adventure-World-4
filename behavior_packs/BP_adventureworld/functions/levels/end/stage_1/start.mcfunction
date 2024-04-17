@@ -2,6 +2,7 @@
 
 # --- 清除玩家的物品 ---
 clear @a
+effect @a clear
 
 # --- 设置ID ---
 scoreboard players set @e[name=gameId] data 1001
