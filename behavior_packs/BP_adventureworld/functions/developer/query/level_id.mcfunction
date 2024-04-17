@@ -2,7 +2,7 @@
 # 调用此函数以查询所有关卡ID的值 | 仅限开发者模式下启用
 
 ## --- 未开启开发者模式时 ---
-scoreboard players operation @s temp = @e[name=developerMode] settings
+scoreboard players operation @s temp = @e[name=developerMode] data
 tellraw @s[scores={temp=0}] {"rawtext":[{"translate":"§c该功能仅限在开发者模式下使用"}]}
 
 ## --- 开启开发者模式时 ---

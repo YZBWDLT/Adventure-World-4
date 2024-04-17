@@ -27,7 +27,6 @@ item.aw:potion_hibernation.name=Hibernation Potion
 item.aw:toggle_wave.name=Toggle Wave
 item.aw:summon_monsters.name=Summon Monsters
 item.aw:kill_monsters.name=Kill Monsters
-item.aw:get_equipment.name=Get Equipment
 
 ### Blocks
 tile.aw:carved_stone_bricks.name=Carved Stone Bricks

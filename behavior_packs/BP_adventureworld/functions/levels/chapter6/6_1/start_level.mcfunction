@@ -2,7 +2,7 @@
 # 对本关进行一定的初始化
 
 ## --- 设置level分数 ---
-scoreboard players set @e[name=level] data 610
+scoreboard players set @e[name=gameId] data 610
 
 ## --- 封闭入口与出口 ---
 ### 入口

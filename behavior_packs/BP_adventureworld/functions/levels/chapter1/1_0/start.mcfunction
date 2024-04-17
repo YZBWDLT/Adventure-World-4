@@ -1,7 +1,7 @@
 # ===== 第一章 =====
 
 # --- 设置level ---
-scoreboard players set @e[name=level] data 101
+scoreboard players set @e[name=gameId] data 101
 
 # --- 清空玩家的物品 ---
 clear @a

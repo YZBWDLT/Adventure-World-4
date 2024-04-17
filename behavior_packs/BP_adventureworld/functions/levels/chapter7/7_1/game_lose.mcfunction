@@ -8,4 +8,4 @@ tp @e[family=respawner] -120 -17 105
 function lib/all_levels/game_lose
 
 # --- 重新开始调用动画 ---
-function levels/chapter7/7_1/before_gaming/start
+function levels/chapter7/7_1/start

@@ -14,7 +14,7 @@ scoreboard players add mapCompletedTimes record 1
 
 ## 获取成就
 tellraw @a {"rawtext":[{"translate":"§l===== 成就获取 =====\n"}]}
-function achievements/get/map_completed
+function lib/get_data/achievements
 
 ## 显示统计数据
 execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a ~~~ function lib/get_data/stats_singleplayer

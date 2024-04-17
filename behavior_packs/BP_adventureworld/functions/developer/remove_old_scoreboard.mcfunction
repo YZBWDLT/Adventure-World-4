@@ -7,4 +7,4 @@ scoreboard objectives remove background
 scoreboard objectives remove crosshair
 scoreboard objectives remove inLevelArea
 scoreboard objectives remove stats
-
+scoreboard objectives remove settings

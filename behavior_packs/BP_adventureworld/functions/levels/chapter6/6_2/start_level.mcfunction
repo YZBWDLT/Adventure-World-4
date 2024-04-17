@@ -2,7 +2,7 @@
 # 对本关进行一定的初始化
 
 ## --- 设置level ---
-scoreboard players set @e[name=level] data 620
+scoreboard players set @e[name=gameId] data 620
 
 ## --- 封闭入口与出口 ---
 fill -81 -19 -48 -79 -17 -48 stained_glass["color":"purple"]

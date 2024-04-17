@@ -5,9 +5,9 @@
 # --- 获取所需数据 ---
 
 ## 关卡进度
-scoreboard players operation @s temp = @e[name=level] data
+scoreboard players operation @s temp = @e[name=gameId] data
 ## 剧情模式是否启用
-scoreboard players operation @s temp2 = @e[name=storyMode] settings
+scoreboard players operation @s temp2 = @e[name=storyMode] data
 
 ## --- 皮革头盔 ---
 ## 1-0给予，保留到1-3结束前 | 锁定到槽位上

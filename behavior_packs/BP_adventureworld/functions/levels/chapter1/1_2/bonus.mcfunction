@@ -2,7 +2,7 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] data 121
+scoreboard players set @e[name=gameId] data 121
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a1-2已完成！§r\n§f你已获得 §a[治疗药水] §b[绳枪] §f！\n§a手机版玩家可以使用§f[虚拟准星]§a物品以在使用绳枪时启用准星，方便瞄准。"}]}

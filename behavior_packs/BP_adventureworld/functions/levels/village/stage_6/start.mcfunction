@@ -1,6 +1,6 @@
 # ===== 进入本状态时 =====
 
-scoreboard players set @e[name=level] data 8
+scoreboard players set @e[name=gameId] data 8
 
 function lib/states/dialogue/enable_lock_camera
 function lib/states/timeline/enable

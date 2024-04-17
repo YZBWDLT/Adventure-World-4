@@ -9,7 +9,6 @@
                         { "is_using_toggle_wave": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:toggle_wave') && query.is_using_item" },
                         { "is_using_summon_monsters": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:summon_monsters') && query.is_using_item" },
                         { "is_using_kill_monsters": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:kill_monsters') && query.is_using_item" },
-                        { "is_using_get_equipment": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:get_equipment') && query.is_using_item" },
                         { "is_using_acoustic_stone_crystal": "query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:acoustic_stone_crystal') && query.is_using_item" }
                     ]
                 },
@@ -35,12 +34,6 @@
                     "on_entry": [ "/function entities/player/using_kill_monsters" ],
                     "transitions": [
                         { "default": "!query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:kill_monsters') || !query.is_using_item" }
-                    ]
-                },
-                "is_using_get_equipment": {
-                    "on_entry": [ "/function entities/player/using_get_equipment" ],
-                    "transitions": [
-                        { "default": "!query.is_item_name_any('slot.weapon.mainhand', 0, 'aw:get_equipment') || !query.is_using_item" }
                     ]
                 },
                 "is_using_acoustic_stone_crystal": {

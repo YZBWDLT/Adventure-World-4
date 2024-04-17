@@ -2,9 +2,10 @@
 
 # --- 清除玩家的物品 ---
 clear @a
+effect @a clear
 
 # --- 设置ID ---
-scoreboard players set @e[name=level] data 1001
+scoreboard players set @e[name=gameId] data 1001
 
 # --- 生成一个已经拔出的旷野之剑 ---
 kill @e[type=aw:wild_sword]

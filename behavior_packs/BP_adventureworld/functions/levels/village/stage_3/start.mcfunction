@@ -1,6 +1,6 @@
 # ===== 进入本状态时 =====
 
-scoreboard players set @e[name=level] data 5
+scoreboard players set @e[name=gameId] data 5
 
 # --- 锁定玩家视角对话 ---
 tp @e[name=playerPosition] 36 1 -22

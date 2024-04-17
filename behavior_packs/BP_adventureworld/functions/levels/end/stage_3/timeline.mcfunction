@@ -6,12 +6,12 @@ scoreboard players add @e[name=dialogue,scores={active=3}] time 1
 # --- 切换成就 ---
 execute @a[c=1] ~~~ detect -25 2 -45 birch_button 10 scoreboard players remove @e[name=achievement] data 1
 execute @a[c=1] ~~~ detect -25 2 -45 birch_button 10 scoreboard players set @e[name=achievement,scores={data=!1..13}] data 13
-execute @a[c=1] ~~~ detect -25 2 -45 birch_button 10 function achievements/show
+execute @a[c=1] ~~~ detect -25 2 -45 birch_button 10 function lib/show_achievements
 execute @a[c=1] ~~~ detect -25 2 -45 birch_button 10 setblock -25 2 -45 birch_button ["button_pressed_bit":false,"facing_direction":2]
 
 execute @a[c=1] ~~~ detect -29 2 -45 birch_button 10 scoreboard players add @e[name=achievement] data 1
 execute @a[c=1] ~~~ detect -29 2 -45 birch_button 10 scoreboard players set @e[name=achievement,scores={data=!1..13}] data 1
-execute @a[c=1] ~~~ detect -29 2 -45 birch_button 10 function achievements/show
+execute @a[c=1] ~~~ detect -29 2 -45 birch_button 10 function lib/show_achievements
 execute @a[c=1] ~~~ detect -29 2 -45 birch_button 10 setblock -29 2 -45 birch_button ["button_pressed_bit":false,"facing_direction":2]
 
 # --- 显示统计数据 ---

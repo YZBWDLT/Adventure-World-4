@@ -1,7 +1,7 @@
 # ===== 通用内容 =====
 
 # --- 更改关卡ID ---
-scoreboard players set @e[name=level] data 1003
+scoreboard players set @e[name=gameId] data 1003
 
 # --- 重置重生点 ---
 tp @e[family=respawner] -27 6 -48
@@ -29,7 +29,7 @@ summon aw:text_display "§b查看米云溪翻译手稿、成就和统计数据" 
 summon aw:text_display "§b§l↓ ↓ ↓" -24 6.7 -48
 
 ## 显示成就
-function achievements/show
+function lib/show_achievements
 
 ## 重置讲台并显示悬浮文本
 structure load lecture_with_book -27 1 -45

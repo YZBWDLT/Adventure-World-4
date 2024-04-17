@@ -1,7 +1,7 @@
 # ===== 第二部分 =====
 
 # --- 更改关卡ID ---
-scoreboard players set @e[name=level] data 1002
+scoreboard players set @e[name=gameId] data 1002
 
 # --- 锁定玩家视角对话 ---
 tp @e[name="米云溪"] -25 1 -34

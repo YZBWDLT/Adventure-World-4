@@ -2,7 +2,7 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] data 331
+scoreboard players set @e[name=gameId] data 331
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a3-3已完成！§r\n§f你已获得 §a[治疗药水] §d[箭袋] §f！\n§7现在您的箭的上限数目已经提升至36根了！"}]}

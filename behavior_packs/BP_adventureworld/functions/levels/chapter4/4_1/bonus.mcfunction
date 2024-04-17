@@ -2,7 +2,7 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=level] data 411
+scoreboard players set @e[name=gameId] data 411
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a4-1已完成！§r\n§f你已获得 §d[重生药水] §e[脊柱之盾] §f！\n§a你刚刚获得了一瓶副药水！它们一般搭配主药水使用，注意合理分配！\n§7提示：手持物品时的§f☹§7代表该效果是短时的"}]}

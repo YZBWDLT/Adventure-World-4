@@ -5,10 +5,10 @@
 ## 玩家使用不同的模式时，触发不同的对话
 ## active.dialogue = 6代表该对话已触发过，阻止再次触发
 execute @e[name=wave,scores={data=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ function lib/states/dialogue/enable
-execute @e[name=wave,scores={data=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ execute @e[name=storyMode,scores={settings=1}] ~~~ scoreboard players set @e[name=dialogue] active 3
-execute @e[name=wave,scores={data=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ execute @e[name=storyMode,scores={settings=0}] ~~~ scoreboard players set @e[name=dialogue] active 4
-execute @e[name=wave,scores={data=5}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ execute @e[name=storyMode,scores={settings=1}] ~~~ scoreboard players set @e[name=dialogue] time 0
-execute @e[name=wave,scores={data=5}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ execute @e[name=storyMode,scores={settings=1}] ~~~ scoreboard players set @e[name=dialogue,scores={active=!6}] active 5
+execute @e[name=wave,scores={data=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ execute @e[name=storyMode,scores={data=1}] ~~~ scoreboard players set @e[name=dialogue] active 3
+execute @e[name=wave,scores={data=2}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ execute @e[name=storyMode,scores={data=0}] ~~~ scoreboard players set @e[name=dialogue] active 4
+execute @e[name=wave,scores={data=5}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ execute @e[name=storyMode,scores={data=1}] ~~~ scoreboard players set @e[name=dialogue] time 0
+execute @e[name=wave,scores={data=5}] ~~~ execute @e[name=monsterSummonDelay,scores={time=1}] ~~~ execute @e[name=storyMode,scores={data=1}] ~~~ scoreboard players set @e[name=dialogue,scores={active=!6}] active 5
 
 ## 当dialogue启用后，人为流逝时间
 scoreboard players add @e[name=dialogue,scores={active=3..,active=!6}] time 1
