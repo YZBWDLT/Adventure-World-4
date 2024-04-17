@@ -21,3 +21,7 @@ execute @e[name=tick,scores={time=13}] ~~~ function levels/chapter3/water_clear
 # --- 第三章气泡 ---
 ## 每5秒执行一次
 execute @e[name=gameId,scores={data=300..699}] ~~~ execute @e[name=playedSecond,scores={time=0..59,time=!1..4,time=!6..9,time=!11..14,time=!16..19,time=!21..24,time=!26..29,time=!31..34,time=!36..39,time=!41..44,time=!46..49,time=!51..54,time=!56..59}] ~~~ function levels/chapter3/particle
+
+# --- 地图重置 ---
+## 当检测到玩家在重置区后，重置地图
+execute @a[x=-90,y=0,z=-16,dx=4,dy=4,dz=4,c=1] ~~~ function levels/open/start_from_end
