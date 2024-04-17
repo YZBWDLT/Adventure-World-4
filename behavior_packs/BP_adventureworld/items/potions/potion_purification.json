@@ -10,6 +10,7 @@
                 "nutrition": 0,
                 "saturation_modifier": "poor",
                 "can_always_eat": true,
+                "using_converts_to": "aw:vice_potion_used",
                 "effects": [
                     { "name": "absorption", "chance" : 1.0, "duration" : 60, "amplifier" : 2 }
                 ],

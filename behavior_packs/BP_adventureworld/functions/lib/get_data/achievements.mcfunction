@@ -26,9 +26,9 @@ execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @e[name=difficulty
 execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @e[name=playedMinute,scores={time=..45}] ~~~ scoreboard players set achievement.singlePlayer.speedrun record 1
 execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @e[name=playedMinute,scores={time=..45}] ~~~ tellraw @a {"rawtext":[{"translate":"你已获得成就 §b[别挡道，我很急！]§f ！"}]}
 
-#<!> 纯天然 - 全程除了治疗药水之外，不使用其他药水通过试炼
-#<!> execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a[scores={usedPotion=0}] ~~~ scoreboard players set achievement.singlePlayer.noPotion record 1
-#<!> execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a[scores={usedPotion=0}] ~~~ tellraw @a {"rawtext":[{"translate":"你已获得困难成就 §d[纯天然]§f ！"}]}
+# 纯天然 - 全程除了治疗药水之外，不使用其他药水通过试炼
+execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a[tag=!potionUsed] ~~~ scoreboard players set achievement.singlePlayer.noPotion record 1
+execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a[tag=!potionUsed] ~~~ tellraw @a {"rawtext":[{"translate":"你已获得困难成就 §d[纯天然]§f ！"}]}
 
 # --- 多人时 ---
 # 齐心协力 - 通过剑之试炼

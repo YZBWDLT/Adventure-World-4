@@ -32,3 +32,6 @@ kill @e[family=hookshot]
 
 # --- 将关卡完成模式改为立即完成 ---
 function lib/states/level_complete_delay/disable
+
+# --- 移除玩家的药效 ---
+effect @a clear

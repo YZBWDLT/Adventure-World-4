@@ -68,7 +68,7 @@ execute @e[name=achievement,scores={data=6}] ~~~ execute @e[name=achievement,sco
 execute @e[name=achievement,scores={data=6}] ~~~ summon aw:text_display -27 2.1 -45 as_achievement_text_display "§a在45分钟内通过试炼"
 
 ## [单人] 纯天然 - 全程除了治疗药水之外，不使用其他药水通过试炼
-execute @e[name=achievement,scores={data=7}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.singlePlayer.speedrun record
+execute @e[name=achievement,scores={data=7}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.singlePlayer.noPotion record
 execute @e[name=achievement,scores={data=7}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -91 5 -3 -91 5 -3 -27 3 -45
 execute @e[name=achievement,scores={data=7}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -91 4 -3 -91 4 -3 -27 3 -45
 execute @e[name=achievement,scores={data=7}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§d[单人][困难] §l纯天然"

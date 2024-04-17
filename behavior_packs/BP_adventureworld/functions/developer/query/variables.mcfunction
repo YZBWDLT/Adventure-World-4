@@ -86,6 +86,9 @@ tellraw @s[scores={temp=1},tag=helmetHeld] {"rawtext":[{"translate":"§ehelmetHe
 tellraw @s[scores={temp=1},tag=!isAlive] {"rawtext":[{"translate":"§eisAlive = §afalse §7# 玩家是否存活 | true=是，false=否"}]}
 tellraw @s[scores={temp=1},tag=isAlive] {"rawtext":[{"translate":"§eisAlive = §atrue §7# 玩家是否存活 | true=是，false=否"}]}
 
+tellraw @s[scores={temp=1},tag=!potionUsed] {"rawtext":[{"translate":"§epotionUsed = §afalse §7# 玩家是否使用过除治疗药水以外的药水 | true=是，false=否"}]}
+tellraw @s[scores={temp=1},tag=potionUsed] {"rawtext":[{"translate":"§epotionUsed = §atrue §7# 玩家是否使用过除治疗药水以外的药水 | true=是，false=否"}]}
+
 tellraw @s[scores={temp=1},tag=!virtualCrosshairEnabled] {"rawtext":[{"translate":"§evirtualCrosshairEnabled = §afalse §7# 玩家是否启用了虚拟准星 | true=是，false=否"}]}
 tellraw @s[scores={temp=1},tag=virtualCrosshairEnabled] {"rawtext":[{"translate":"§evirtualCrosshairEnabled = §atrue §7# 玩家是否启用了虚拟准星 | true=是，false=否"}]}
 
