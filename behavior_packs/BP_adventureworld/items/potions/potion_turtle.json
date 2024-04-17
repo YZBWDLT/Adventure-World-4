@@ -14,7 +14,7 @@
                 "effects": [
                     { "name": "resistance", "chance" : 1.0, "duration" : 600, "amplifier" : 2 },
                     { "name": "absorption", "chance" : 1.0, "duration" : 600, "amplifier" : 4 },
-                    { "name": "slowness", "chance" : 1.0, "duration" : 600, "amplifier" : 0 }
+                    { "name": "slowness", "chance" : 1.0, "duration" : 600, "amplifier" : 1 }
                 ]
             },
             "minecraft:use_duration": 32
