@@ -6,6 +6,5 @@ tellraw @s[scores={temp=0}] {"rawtext":[{"translate":"§c该功能仅限在开�
 
 ## --- 开启开发者模式时 ---
 execute @s[scores={temp=1}] ~~~ kill @e[type=aw:npc]
-execute @s[scores={temp=1}] ~~~ function developer/remove_old_scoreboard
 execute @s[scores={temp=1}] ~~~ function lib/init/data_reset_stats
 execute @s[scores={temp=1}] ~~~ function levels/open/before_opening/start
