@@ -17,7 +17,7 @@ execute @e[name=gameId,scores={data=300..399,data=!340}] ~~~ music play aw.music
 execute @e[name=gameId,scores={data=400..599,data=!440}] ~~~ music play aw.music.temple.freeze 1 0 loop
 execute @e[name=gameId,scores={data=600..699,data=!640}] ~~~ music play aw.music.temple.mountain 1 0 loop
 execute @e[name=gameId,scores={data=709..731,data=!750}] ~~~ music play aw.music.temple.final 1 0 loop
-execute @e[name=gameId,scores={data=740..741,data=!750}] ~~~ music play aw.music.temple.final.level_4 1 0 loop
+execute @e[name=gameId,scores={data=740..751}] ~~~ music play aw.music.temple.final.level_4 1 0 loop
 
 ## 剑之神殿
 execute @e[name=gameId,scores={data=700..708,data=!750}] ~~~ music play aw.music.temple.sword 1 0 loop
@@ -27,7 +27,8 @@ execute @e[name=gameId,scores={data=230}] ~~~ music play aw.music.boss.skeleton_
 execute @e[name=gameId,scores={data=340}] ~~~ music play aw.music.boss.elder_guardian 1 0 loop
 execute @e[name=gameId,scores={data=440}] ~~~ music play aw.music.boss.random_monster 1 0 loop
 execute @e[name=gameId,scores={data=640}] ~~~ music play aw.music.boss.blaze_king 1 0 loop
-execute @e[name=gameId,scores={data=750}] ~~~ music play aw.music.boss.final 1 0 loop
+execute @e[name=gameId,scores={data=750}] ~~~ execute @e[name=wave,scores={data=2}] ~~~ music play aw.music.boss.final_prelude 1 0 play_once
+execute @e[name=gameId,scores={data=750}] ~~~ execute @e[name=wave,scores={data=2}] ~~~ music queue aw.music.boss.final 1 0 loop
 
 ## 结束后
 execute @e[name=gameId,scores={data=1001..1003}] ~~~ music play aw.music.end 1 0 loop
