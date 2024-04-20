@@ -125,6 +125,12 @@
                 { "name": "sounds/adventure_world/music/boss_final", "volume": 0.2, "stream": true }
             ],
             "category": "music"
+        },
+        "aw.music.boss.final_prelude": {
+            "sounds": [
+                { "name": "sounds/adventure_world/music/boss_final_prelude", "volume": 0.2, "stream": true }
+            ],
+            "category": "music"
         }
     }
 }
