@@ -12,6 +12,7 @@ execute @e[name=dialogue,scores={time=760}] ~~~ tellraw @a {"rawtext":[{"text":"
 ## 解除视角锁定
 execute @e[name=dialogue,scores={time=860}] ~~~ scoreboard players set @e[name=dialogue] active 1
 execute @e[name=dialogue,scores={time=860}] ~~~ tellraw @a {"rawtext":[{"text":"你现在可以移动了！右键NPC可以触发对话哦，聊的愉快！=w="}]}
+execute @e[name=dialogue,scores={time=860}] ~~~ effect @a invisibility 0 1 true
 
 ## 当玩家还在田英4~10格范围内，说下面这句
 execute @e[name=dialogue,scores={time=1060}] ~~~ execute @e[type=aw:npc,name="田英"] ~~~ tellraw @a[r=6] {"rawtext":[{"text":"* §b田英： §7§o（小声）一提起她你就感兴趣，我就知道。"}]}
