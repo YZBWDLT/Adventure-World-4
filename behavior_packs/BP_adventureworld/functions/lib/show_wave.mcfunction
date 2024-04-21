@@ -48,3 +48,7 @@ execute @e[name=gameId,scores={data=740}] ~~~ execute @e[name=wave,scores={data=
 execute @e[name=gameId,scores={data=740}] ~~~ execute @e[name=wave,scores={data=3}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§a⚄§b⚃§e⚀§e⚀"
 execute @e[name=gameId,scores={data=740}] ~~~ execute @e[name=wave,scores={data=4}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§a⚄§a⚅§b⚂§e⚀"
 execute @e[name=gameId,scores={data=740}] ~~~ execute @e[name=wave,scores={data=5}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§a⚄§a⚅§a⚄§b⚂"
+
+execute @e[name=gameId,scores={data=750}] ~~~ kill @e[family=wave_name]
+execute @e[name=gameId,scores={data=750}] ~~~ execute @e[name=wave,scores={data=1}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§b⚃§e⚀"
+execute @e[name=gameId,scores={data=750}] ~~~ execute @e[name=wave,scores={data=2}] ~~~ summon aw:marker -83 1 -2 aw:as_wave_name "§a⚅§b⚂"

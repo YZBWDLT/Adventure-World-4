@@ -60,4 +60,3 @@ execute @e[name=gameId,scores={data=631..639}] ~~~ execute @a[scores={isAlive=3}
 execute @e[name=gameId,scores={data=711..719}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_2/start_level
 execute @e[name=gameId,scores={data=721..729}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_3/start_level
 execute @e[name=gameId,scores={data=731..739}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_4/start_level
-execute @e[name=gameId,scores={data=741..749}] ~~~ execute @a[scores={isAlive=3},c=1] ~~~ function levels/chapter7/7_5/start_level

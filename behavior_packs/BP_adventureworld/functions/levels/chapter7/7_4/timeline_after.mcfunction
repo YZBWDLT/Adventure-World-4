@@ -24,5 +24,4 @@ execute @e[name=timeline,scores={active=3,time=60}] ~~~ function lib/black_scree
 
 ## 120刻后，进入7-5
 ## 目前是直接跳到结束界面
-execute @e[name=timeline,scores={active=3,time=120}] ~~~ execute @e[name=storyMode,scores={data=0}] ~~~ function levels/end/stage_3/start_from_combat_mode
-execute @e[name=timeline,scores={active=3,time=120}] ~~~ execute @e[name=storyMode,scores={data=1}] ~~~ function levels/end/stage_1/start
+execute @e[name=timeline,scores={active=3,time=120}] ~~~ function levels/chapter7/7_5/start_level

@@ -41,7 +41,8 @@ execute @e[name=gameId,scores={data=709}] ~~~ function levels/chapter7/7_1/timel
 execute @e[name=gameId,scores={data=720}] ~~~ function levels/chapter7/7_2/timeline 
 execute @e[name=gameId,scores={data=740}] ~~~ function levels/chapter7/7_4/timeline_gaming
 execute @e[name=gameId,scores={data=741}] ~~~ function levels/chapter7/7_4/timeline_after
-execute @e[name=gameId,scores={data=750}] ~~~ function levels/chapter7/7_5/timeline 
+execute @e[name=gameId,scores={data=750}] ~~~ function levels/chapter7/7_5/timeline_gaming
+execute @e[name=gameId,scores={data=751}] ~~~ function levels/chapter7/7_5/timeline_after
 
 execute @e[name=gameId,scores={data=1001}] ~~~ function levels/end/stage_1/timeline
 execute @e[name=gameId,scores={data=1002}] ~~~ function levels/end/stage_2/timeline

@@ -19,6 +19,7 @@ execute @e[name=zombie1Summoner,c=1] ~~~ function lib/monsters/zombie/level1
 execute @e[name=zombie2Summoner,c=1] ~~~ function lib/monsters/zombie/level2
 execute @e[name=zombie3Summoner,c=1] ~~~ function lib/monsters/zombie/level3
 execute @e[name=zombie4Summoner,c=1] ~~~ function lib/monsters/zombie/level4
+execute @e[name=zombie1ShieldSummoner,c=1] ~~~ function lib/monsters/zombie/level1_shield
 
 execute @e[name=zombieBaby1Summoner,c=1] ~~~ function lib/monsters/zombie_baby/level1
 execute @e[name=zombieBaby2Summoner,c=1] ~~~ function lib/monsters/zombie_baby/level2
@@ -97,3 +98,6 @@ execute @e[name=elderGuardianSummoner,c=1] ~~~ function lib/monsters/elder_guard
 
 ## --- BOSS | 烈焰之魂 ---
 execute @e[name=blazeKingSummoner,c=1] ~~~ function lib/monsters/blaze_king
+
+## --- BOSS | 唤魔者 ---
+execute @e[name=evokerSummoner] ~~~ function lib/monsters/evoker

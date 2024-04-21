@@ -45,6 +45,7 @@ entity.aw:text_display.name=悬浮文本
 entity.aw:skeleton_king.name=骷髅王
 entity.aw:blaze_king.name=烈焰之魂
 entity.aw:marker.name=标记
+entity.evoker_boss.name=§l§c唤魔法师
 
 ### 刷怪蛋类
 item.spawn_egg.entity.aw:npc.name=NPC 刷怪蛋

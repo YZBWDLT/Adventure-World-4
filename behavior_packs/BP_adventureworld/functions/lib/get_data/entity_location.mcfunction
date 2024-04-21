@@ -124,10 +124,11 @@ scoreboard players set @s[x=-218,y=-19,z=83,dx=28,dy=23,dz=33] position 73
 ### 7-4
 scoreboard players set @s[x=-252,y=-30,z=80,dx=33,dy=31,dz=37] position 74
 ### 7-5
+scoreboard players set @s[x=-246,y=-55,z=23,dx=42,dy=34,dz=42] position 75
 
 ### 过道区域 | 因为和7-2有冲突，所以写到后面以保证过道区域优先认为70
 scoreboard players set @s[x=-159,y=-19,z=99,dx=9,dy=4,dz=13] position 70
 scoreboard players set @s[x=-192,y=-18,z=96,dx=8,dy=2,dz=2] position 70
 scoreboard players set @s[x=-223,y=-18,z=98,dx=6,dy=2,dz=2] position 70
-
-scoreboard players set @s[x=-236,y=-64,z=96,dx=4,dy=34,dz=4] position 79
+scoreboard players set @s[x=-236,y=-64,z=96,dx=4,dy=34,dz=4] position 70
+scoreboard players set @s[x=-226,y=-20,z=43,dx=2,dy=37,dz=2] position 70
