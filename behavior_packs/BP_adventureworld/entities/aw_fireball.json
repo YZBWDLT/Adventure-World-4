@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "aw:fireball",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "runtime_identifier": "minecraft:snowball"
+        },
+
+        "components": {
+            "minecraft:collision_box": { "width": 1.0, "height": 1.0 },
+            "minecraft:projectile": { "on_hit": { "stick_in_ground": {} }, "power": 1.6, "gravity": 0.07, "inertia": 1, "liquid_inertia": 1, "uncertainty_base": 0, "uncertainty_multiplier": 0, "anchor": 2, "offset": [ 0, -1.5, 0 ] },
+            "minecraft:physics": { },
+            "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+            "minecraft:conditional_bandwidth_optimization": { "default_values": { "max_optimized_distance": 80.0, "max_dropped_ticks": 7, "use_motion_prediction_hints": true } }
+        },
+        "events": {
+        },
+
+        "component_groups": {
+        }
+    }
+}

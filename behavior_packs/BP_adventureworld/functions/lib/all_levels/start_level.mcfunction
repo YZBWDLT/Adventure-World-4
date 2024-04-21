@@ -31,6 +31,9 @@ execute @e[name=developerMode,scores={data=0}] ~~~ gamemode adventure @a
 ## --- 清除药效 ---
 effect @a clear
 
+## --- 回血 ---
+effect @a instant_health 1 4 true
+
 ## --- 失败多次后，给予药效 ---
 execute @e[name=failedTimes,scores={data=3..}] ~~~ effect @a strength 1000 1 true
 execute @e[name=failedTimes,scores={data=5..}] ~~~ effect @a health_boost 1000 4 true

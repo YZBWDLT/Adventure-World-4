@@ -11,7 +11,7 @@ execute @a[scores={isOnline=0}] ~~~ function lib/init/player_data
 execute @a[scores={isOnline=0}] ~~~ tp @s @e[family=respawner,c=1]
 
 # --- 在游戏过程中，给予中途进入的玩家物品、药水和箭 ---
-execute @e[name=developerMode,scores={data=1}] ~~~ execute @a[scores={isOnline=0}] ~~~ clear @s
+execute @e[name=developerMode,scores={data=0}] ~~~ execute @a[scores={isOnline=0}] ~~~ clear @s
 execute @a[scores={isOnline=0}] ~~~ function lib/supplier/items
 execute @a[scores={isOnline=0}] ~~~ function lib/supplier/potion
 execute @a[scores={isOnline=0}] ~~~ function lib/supplier/arrow
