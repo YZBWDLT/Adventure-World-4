@@ -46,7 +46,7 @@ function lib/get_data/player_is_alive
 ## 这样做是因为对于已经处于死亡状态的玩家，对其设置的重生点将顺延到下一次的重生，因此本次重生还是利用上一次的重生点，这可能导致很多问题
 ## 为解决这样的问题，再次/kill以使其出现在正确的重生点上
 scoreboard players add @a[tag=!isAlive,scores={time=0..19}] time 1
-kill @a[scores={time=20}]
+# kill @a[scores={time=20}]
 
 ## 当玩家重生后，设定未重生时间为0
 scoreboard players set @a[tag=isAlive] time 0
