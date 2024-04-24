@@ -36,6 +36,7 @@ tile.aw:carved_cracked_stone_bricks.name=雕刻裂纹石砖
 tile.aw:carved_mossy_stone_bricks.name=雕刻苔石砖
 tile.aw:red_chiseled_nether_bricks.name=红色雕纹下界砖块
 tile.aw:red_cracked_nether_bricks.name=红色裂纹下界砖块
+tile.aw:evocation_stone.name=唤魔之石
 
 ### 实体类
 entity.aw:hookshot.name=绳枪

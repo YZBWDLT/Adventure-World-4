@@ -34,6 +34,7 @@ item.aw:kill_monsters.name=Kill Monsters
 tile.aw:carved_stone_bricks.name=Carved Stone Bricks
 tile.aw:carved_cracked_stone_bricks.name=Carved Cracked Stone Bricks
 tile.aw:carved_mossy_stone_bricks.name=Carved Mossy Stone Bricks
+tile.aw:evocation_stone.name=Evocation Stone
 
 ### Entities
 entity.aw:hookshot.name=Hookshot

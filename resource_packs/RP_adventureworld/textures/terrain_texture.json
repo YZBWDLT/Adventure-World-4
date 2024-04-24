@@ -8,6 +8,9 @@
         "carved_mossy_stone_bricks": { "textures": [ "textures/blocks/carved_stonebrick_mossy" ] },
         "carved_cracked_stone_bricks": { "textures": [ "textures/blocks/carved_stonebrick_cracked" ] },
         "red_chiseled_nether_bricks": { "textures": [ "textures/blocks/red_chiseled_nether_bricks" ] },
-        "red_cracked_nether_bricks": { "textures": [ "textures/blocks/red_cracked_nether_bricks" ] }
+        "red_cracked_nether_bricks": { "textures": [ "textures/blocks/red_cracked_nether_bricks" ] },
+        "evocation_stone_bottom": { "textures": [ "textures/blocks/evocation_stone_bottom" ] },
+        "evocation_stone_sides": { "textures": [ "textures/blocks/evocation_stone_sides" ] },
+        "evocation_stone_top": { "textures": [ "textures/blocks/evocation_stone_top" ] }
     }
 }
