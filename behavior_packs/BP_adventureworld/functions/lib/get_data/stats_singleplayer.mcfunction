@@ -9,41 +9,6 @@ tellraw @s {"rawtext":[{"translate":"死亡次数 | §a%%s","with":{"rawtext":[{
 tellraw @s[tag=potionUsed] {"rawtext":[{"translate":"是否使用过药水 | §a是"}]}
 tellraw @s[tag=!potionUsed] {"rawtext":[{"translate":"是否使用过药水 | §a否"}]}
 
-# --- 计算最快记录 ---
-# 若当前值分钟数小，则直接取两值；
-# 若当前值分钟数与记录相等，当前值秒数小，则取秒数值；
-# 若当前值分钟数大，不取值
-
-## 比较分钟数大小，与记录值相减
-## 若 temp.playedMinute <= -1 则说明更快，将记录更改
-## 若 temp.playedMinute = 0 则还应继续比对秒数
-## 若 temp.playedMinute >= 1 则什么都不用做
-scoreboard players operation @e[name=playedMinute] temp = @e[name=playedMinute] time
-scoreboard players operation @e[name=playedSecond] temp = @e[name=playedSecond] time
-
-execute @e[name=difficulty,scores={temp=1}] ~~~ scoreboard players operation @e[name=playedMinute] temp -= bestTimeMinute1 record
-execute @e[name=difficulty,scores={temp=2}] ~~~ scoreboard players operation @e[name=playedMinute] temp -= bestTimeMinute2 record
-execute @e[name=difficulty,scores={temp=3}] ~~~ scoreboard players operation @e[name=playedMinute] temp -= bestTimeMinute3 record
-execute @e[name=difficulty,scores={temp=4}] ~~~ scoreboard players operation @e[name=playedMinute] temp -= bestTimeMinute4 record
-
-execute @e[name=difficulty,scores={temp=1}] ~~~ execute @e[name=playedMinute,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeMinute1 record = @e[name=playedMinute] time
-execute @e[name=difficulty,scores={temp=2}] ~~~ execute @e[name=playedMinute,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeMinute2 record = @e[name=playedMinute] time
-execute @e[name=difficulty,scores={temp=3}] ~~~ execute @e[name=playedMinute,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeMinute3 record = @e[name=playedMinute] time
-execute @e[name=difficulty,scores={temp=4}] ~~~ execute @e[name=playedMinute,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeMinute4 record = @e[name=playedMinute] time
-execute @e[name=difficulty,scores={temp=1}] ~~~ execute @e[name=playedMinute,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeSecond1 record = @e[name=playedSecond] time
-execute @e[name=difficulty,scores={temp=2}] ~~~ execute @e[name=playedMinute,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeSecond2 record = @e[name=playedSecond] time
-execute @e[name=difficulty,scores={temp=3}] ~~~ execute @e[name=playedMinute,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeSecond3 record = @e[name=playedSecond] time
-execute @e[name=difficulty,scores={temp=4}] ~~~ execute @e[name=playedMinute,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeSecond4 record = @e[name=playedSecond] time
-
-execute @e[name=difficulty,scores={temp=1}] ~~~ execute @e[name=playedMinute,scores={temp=0}] ~~~ scoreboard players operation @e[name=playedSecond] temp -= bestTimeMinute1 record
-execute @e[name=difficulty,scores={temp=2}] ~~~ execute @e[name=playedMinute,scores={temp=0}] ~~~ scoreboard players operation @e[name=playedSecond] temp -= bestTimeMinute2 record
-execute @e[name=difficulty,scores={temp=3}] ~~~ execute @e[name=playedMinute,scores={temp=0}] ~~~ scoreboard players operation @e[name=playedSecond] temp -= bestTimeMinute3 record
-execute @e[name=difficulty,scores={temp=4}] ~~~ execute @e[name=playedMinute,scores={temp=0}] ~~~ scoreboard players operation @e[name=playedSecond] temp -= bestTimeMinute4 record
-execute @e[name=difficulty,scores={temp=1}] ~~~ execute @e[name=playedMinute,scores={temp=0}] ~~~ execute @e[name=playedSecond,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeSecond1 record = @e[name=playedSecond] time
-execute @e[name=difficulty,scores={temp=2}] ~~~ execute @e[name=playedMinute,scores={temp=0}] ~~~ execute @e[name=playedSecond,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeSecond2 record = @e[name=playedSecond] time
-execute @e[name=difficulty,scores={temp=3}] ~~~ execute @e[name=playedMinute,scores={temp=0}] ~~~ execute @e[name=playedSecond,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeSecond3 record = @e[name=playedSecond] time
-execute @e[name=difficulty,scores={temp=4}] ~~~ execute @e[name=playedMinute,scores={temp=0}] ~~~ execute @e[name=playedSecond,scores={temp=..-1}] ~~~ scoreboard players operation bestTimeSecond4 record = @e[name=playedSecond] time
-
 # --- 结算评价 ---
 scoreboard players set @a temp 0
 
@@ -82,6 +47,9 @@ execute @a[scores={deathTimes=11..15}] ~~~ scoreboard players add @a temp 10
 ## +0       +10
 execute @a[tag=!potionUsed] ~~~ scoreboard players add @a temp 10
 
+## 作弊标记
+execute @a[tag=cheated] ~~~ scoreboard players set @s temp -1
+
 tellraw @s {"rawtext":[{"translate":"§l===== 综合评价 =====\n"}]}
 tellraw @s[scores={temp=120..}] {"rawtext":[{"translate":"评价等级 | §bS \n还是PVE大佬？！！"}]}
 tellraw @s[scores={temp=95..119}] {"rawtext":[{"translate":"评价等级 | §aA \n太赞啦！你的PVE有一手！"}]}
@@ -90,6 +58,7 @@ tellraw @s[scores={temp=60..74}] {"rawtext":[{"translate":"评价等级 | §eC \
 tellraw @s[scores={temp=50..59}] {"rawtext":[{"translate":"评价等级 | §6D \n这个地图可能对你稍微有些挑战性...多练练这张地图来提升你的PVE吧！"}]}
 tellraw @s[scores={temp=40..49}] {"rawtext":[{"translate":"评价等级 | §cE \n您的PVE水平还有待精进呀，勇气贤者sama~"}]}
 tellraw @s[scores={temp=0..39}] {"rawtext":[{"translate":"评价等级 | §4F \n......qwq"}]}
+tellraw @s[scores={temp=-1}] {"rawtext":[{"translate":"评价等级 | §7F- \n别以为我不知道！你作弊了！！(╯°□°)╯︵┻━┻"}]}
 
 tellraw @s {"rawtext":[{"translate":"§l===== 记录数据 =====\n"}]}
 tellraw @s {"rawtext":[{"translate":"通关次数 | §a%%s","with":{"rawtext":[{"score":{"objective":"record","name":"mapCompletedTimes"}}]}}]}

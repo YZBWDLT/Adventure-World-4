@@ -18,7 +18,7 @@ function lib/get_data/achievements
 
 ## 显示统计数据
 function lib/get_data/difficulty
-scoreboard players operation @e[name=difficulty] temp = @e[name=difficulty] data
+function lib/get_data/get_best_time
 execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a ~~~ function lib/get_data/stats_singleplayer
 execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a ~~~ function lib/get_data/stats_multiplayer
 
