@@ -5,7 +5,7 @@
             "identifier": "aw:wild_sword",
             "render_controllers": [ "controller.render.default" ],
             "materials": { "default": "entity_alphatest" },
-            "textures": { "default": "textures/new_entities/wild_sword" },
+            "textures": { "default": "textures/entity/wild_sword" },
             "geometry": { "default": "geometry.wild_sword" },
 
             "scripts": {

@@ -4,7 +4,7 @@
         "description": {
             "identifier": "aw:marker",
             "materials": { "default": "entity_alphatest" },
-            "textures": { "default": "textures/new_entities/marker" },
+            "textures": { "default": "textures/entity/marker" },
             "geometry": { "default": "geometry.marker" },
             "render_controllers": [ "controller.render.default" ]
         }

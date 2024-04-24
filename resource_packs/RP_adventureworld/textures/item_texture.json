@@ -2,14 +2,14 @@
     "resource_pack_name": "vanilla",
     "texture_name": "atlas.items",
     "texture_data": {
-        "hookshot": { "textures": "textures/new_items/hookshot" },
-        "quiver": { "textures": "textures/new_items/quiver" },
-        "enable_crosshair": { "textures": "textures/new_items/enable_crosshair" },
+        "hookshot": { "textures": "textures/items/hookshot" },
+        "quiver": { "textures": "textures/items/quiver" },
+        "enable_crosshair": { "textures": "textures/items/enable_crosshair" },
 
 
-        "normal_sword": { "textures": "textures/new_items/normal_sword" },
-        "steel_sword": { "textures": "textures/new_items/steel_sword" },
-        "wild_sword": { "textures": "textures/new_items/wild_sword" },
+        "normal_sword": { "textures": "textures/items/normal_sword" },
+        "steel_sword": { "textures": "textures/items/steel_sword" },
+        "wild_sword": { "textures": "textures/items/wild_sword" },
 
 
         "aw_diamond_helmet": { "textures": "textures/items/diamond_helmet" },
@@ -21,16 +21,16 @@
         "aw_iron_leggings": { "textures": "textures/items/iron_leggings" },
         "aw_iron_boots": { "textures": "textures/items/iron_boots" },
 
-        "potion_health": { "textures": "textures/new_items/potions/potion_health" },
-        "potion_growth": { "textures": "textures/new_items/potions/potion_growth" },
-        "potion_thrill": { "textures": "textures/new_items/potions/potion_thrill" },
-        "potion_turtle": { "textures": "textures/new_items/potions/potion_turtle" },
-        "potion_rebirth": { "textures": "textures/new_items/potions/potion_rebirth" },
-        "potion_purification": { "textures": "textures/new_items/potions/potion_purification" },
-        "potion_hibernation": { "textures": "textures/new_items/potions/potion_hibernation" },
+        "potion_health": { "textures": "textures/items/potions/potion_health" },
+        "potion_growth": { "textures": "textures/items/potions/potion_growth" },
+        "potion_thrill": { "textures": "textures/items/potions/potion_thrill" },
+        "potion_turtle": { "textures": "textures/items/potions/potion_turtle" },
+        "potion_rebirth": { "textures": "textures/items/potions/potion_rebirth" },
+        "potion_purification": { "textures": "textures/items/potions/potion_purification" },
+        "potion_hibernation": { "textures": "textures/items/potions/potion_hibernation" },
         "aw_glass_bottle": { "textures": "textures/items/potion_bottle_empty" },
 
-        "acoustic_stone_crystal": { "textures": "textures/new_items/acoustic_stone_crystal" }
+        "acoustic_stone_crystal": { "textures": "textures/items/acoustic_stone_crystal" }
 
     }
 }

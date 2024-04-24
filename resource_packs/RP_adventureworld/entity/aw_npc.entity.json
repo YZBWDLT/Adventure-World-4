@@ -5,14 +5,14 @@
             "identifier": "aw:npc",
             "materials": { "default": "entity_alphatest" },
             "textures": {
-                "npc_0": "textures/new_entities/npc/0",
-                "npc_1": "textures/new_entities/npc/1",
-                "npc_2": "textures/new_entities/npc/2",
-                "npc_3": "textures/new_entities/npc/3",
-                "miyunxi": "textures/new_entities/npc/miyunxi",
-                "linan": "textures/new_entities/npc/linan",
-                "zhangyu": "textures/new_entities/npc/zhangyu",
-                "tianying": "textures/new_entities/npc/tianying"
+                "npc_0": "textures/entity/npc/0",
+                "npc_1": "textures/entity/npc/1",
+                "npc_2": "textures/entity/npc/2",
+                "npc_3": "textures/entity/npc/3",
+                "miyunxi": "textures/entity/npc/miyunxi",
+                "linan": "textures/entity/npc/linan",
+                "zhangyu": "textures/entity/npc/zhangyu",
+                "tianying": "textures/entity/npc/tianying"
             },
             "geometry": {
                 "male": "geometry.manikin_male",
