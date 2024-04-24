@@ -104,6 +104,7 @@ scoreboard players set @a hookshot -1
 scoreboard players set @a killAmount 0
 scoreboard players set @a time 0
 tag @a remove potionUsed
+tag @a remove cheated
 
 ## 常规变量值
 scoreboard players set @e[name=monsterAmount] data 0

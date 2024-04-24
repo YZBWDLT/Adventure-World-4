@@ -23,6 +23,9 @@ execute @e[name=soundPlayer,scores={active=!0}] ~~~ function system/sound_contro
 ## NPC对话 | 当强制视角对话正在启用时，不启用该命令
 execute @e[name=dialogue,scores={active=!2}] ~~~ execute @e[type=aw:npc,family=interacted] ~~~ function system/npc_interact_tester
 
+## 防作弊控制器
+function system/anticheating
+
 # --- 物品函数 ---
 # 这些函数是部分物品的特殊功能。
 
