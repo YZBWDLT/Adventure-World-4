@@ -18,8 +18,8 @@ execute @e[name=timeline,scores={temp2=13}] ~~~ execute @a ~~~ playsound mob.gha
 ## 伤害判定
 execute @e[name=timeline,scores={temp2=12}] ~~~ scoreboard players set @a temp 0
 execute @e[name=timeline,scores={temp2=2}] ~~~ scoreboard players set @e[family=monster,family=!evoker] temp 0
-execute @e[name=timeline,scores={temp2=12}] ~~~ execute @a ~~~ detect ~ -45 ~ stained_glass -1 scoreboard players set @s[x=~,y=-44,z=~,dx=0,dy=-20,dz=0] temp 1
-execute @e[name=timeline,scores={temp2=12}] ~~~ execute @e[family=monster,family=!evoker] ~~~ detect ~ -45 ~ stained_glass -1 scoreboard players set @s[x=~,y=-44,z=~,dx=0,dy=-20,dz=0] temp 1
+execute @e[name=timeline,scores={temp2=12}] ~~~ execute @a ~~~ detect ~ -45 ~ aw:evocation_stone -1 scoreboard players set @s[x=~,y=-44,z=~,dx=0,dy=-20,dz=0] temp 1
+execute @e[name=timeline,scores={temp2=12}] ~~~ execute @e[family=monster,family=!evoker] ~~~ detect ~ -45 ~ aw:evocation_stone -1 scoreboard players set @s[x=~,y=-44,z=~,dx=0,dy=-20,dz=0] temp 1
 execute @e[name=timeline,scores={temp2=12}] ~~~ damage @e[scores={temp=0}] 15 entity_explosion
 execute @e[name=timeline,scores={temp2=12}] ~~~ execute @a ~~~ playsound random.explode @s
 execute @e[name=timeline,scores={temp2=12}] ~~~ execute @e[type=aw:fireball] ~~~ particle aw:explosion ~~~
@@ -41,8 +41,8 @@ execute @e[name=timeline,scores={temp2=3}] ~~~ execute @a ~~~ playsound mob.ghas
 ## 伤害判定
 execute @e[name=timeline,scores={temp2=2}] ~~~ scoreboard players set @a temp 0
 execute @e[name=timeline,scores={temp2=2}] ~~~ scoreboard players set @e[family=monster,family=!evoker] temp 0
-execute @e[name=timeline,scores={temp2=2}] ~~~ execute @a ~~~ detect ~ -45 ~ stained_glass -1 scoreboard players set @s[x=~,y=-44,z=~,dx=0,dy=-20,dz=0] temp 1
-execute @e[name=timeline,scores={temp2=2}] ~~~ execute @e[family=monster,family=!evoker] ~~~ detect ~ -45 ~ stained_glass -1 scoreboard players set @s[x=~,y=-44,z=~,dx=0,dy=-20,dz=0] temp 1
+execute @e[name=timeline,scores={temp2=2}] ~~~ execute @a ~~~ detect ~ -45 ~ aw:evocation_stone -1 scoreboard players set @s[x=~,y=-44,z=~,dx=0,dy=-20,dz=0] temp 1
+execute @e[name=timeline,scores={temp2=2}] ~~~ execute @e[family=monster,family=!evoker] ~~~ detect ~ -45 ~ aw:evocation_stone -1 scoreboard players set @s[x=~,y=-44,z=~,dx=0,dy=-20,dz=0] temp 1
 execute @e[name=timeline,scores={temp2=2}] ~~~ damage @e[scores={temp=0}] 15 entity_explosion
 execute @e[name=timeline,scores={temp2=2}] ~~~ execute @a ~~~ playsound random.explode @s
 execute @e[name=timeline,scores={temp2=2}] ~~~ execute @e[type=aw:fireball] ~~~ particle aw:explosion ~~~

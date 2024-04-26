@@ -32,29 +32,29 @@ execute @e[name=temp] ~~~ scoreboard players random @s temp2 1 100
 
 # --- 生成怪物 ---
 
-## 组别1：带盾僵尸 *4 | 权重 4
-execute @e[family=evoker,scores={temp=1..4}] ~~~ execute @e[name=temp] ~~~ summon aw:marker "zombie1ShieldSummoner" ~~~
+## 组别1：带盾僵尸 *4 | 权重 6
+execute @e[family=evoker,scores={temp=1..6}] ~~~ execute @e[name=temp] ~~~ summon aw:marker "zombie1ShieldSummoner" ~~~
 
-## 组别2：骷髅[3级]/流浪者[3级]/僵尸[4级]/小僵尸[4级]/僵尸猪灵[4级] *4 | 权重 4
-execute @e[family=evoker,scores={temp=5..8}] ~~~ execute @e[name=temp,scores={temp2=1..20}] ~~~ summon aw:marker "zombie4Summoner" ~~~
-execute @e[family=evoker,scores={temp=5..8}] ~~~ execute @e[name=temp,scores={temp2=21..40}] ~~~ summon aw:marker "zombieBaby4Summoner" ~~~
-execute @e[family=evoker,scores={temp=5..8}] ~~~ execute @e[name=temp,scores={temp2=41..60}] ~~~ summon aw:marker "zombifiedPiglin4Summoner" ~~~
-execute @e[family=evoker,scores={temp=5..8}] ~~~ execute @e[name=temp,scores={temp2=61..80}] ~~~ summon aw:marker "skeleton3Summoner" ~~~
-execute @e[family=evoker,scores={temp=5..8}] ~~~ execute @e[name=temp,scores={temp2=81..100}] ~~~ summon aw:marker "stray3Summoner" ~~~
+## 组别2：骷髅[3级]/流浪者[3级]/僵尸[4级]/小僵尸[4级]/僵尸猪灵[4级] *4 | 权重 8
+execute @e[family=evoker,scores={temp=7..14}] ~~~ execute @e[name=temp,scores={temp2=1..20}] ~~~ summon aw:marker "zombie4Summoner" ~~~
+execute @e[family=evoker,scores={temp=7..14}] ~~~ execute @e[name=temp,scores={temp2=21..40}] ~~~ summon aw:marker "zombieBaby4Summoner" ~~~
+execute @e[family=evoker,scores={temp=7..14}] ~~~ execute @e[name=temp,scores={temp2=41..60}] ~~~ summon aw:marker "zombifiedPiglin4Summoner" ~~~
+execute @e[family=evoker,scores={temp=7..14}] ~~~ execute @e[name=temp,scores={temp2=61..80}] ~~~ summon aw:marker "skeleton3Summoner" ~~~
+execute @e[family=evoker,scores={temp=7..14}] ~~~ execute @e[name=temp,scores={temp2=81..100}] ~~~ summon aw:marker "stray3Summoner" ~~~
 
-## 组别3：猪灵[4级]/疣猪兽[3级] *4 | 权重 4
-execute @e[family=evoker,scores={temp=9..12}] ~~~ execute @e[name=temp,scores={temp2=1..80}] ~~~ summon aw:marker "piglin4Summoner" ~~~
-execute @e[family=evoker,scores={temp=9..12}] ~~~ execute @e[name=temp,scores={temp2=81..100}] ~~~ summon aw:marker "hoglin3Summoner" ~~~
+## 组别3：猪灵[4级]/疣猪兽[3级] *4 | 权重 2
+execute @e[family=evoker,scores={temp=15..16}] ~~~ execute @e[name=temp,scores={temp2=1..80}] ~~~ summon aw:marker "piglin4Summoner" ~~~
+execute @e[family=evoker,scores={temp=15..16}] ~~~ execute @e[name=temp,scores={temp2=81..100}] ~~~ summon aw:marker "hoglin3Summoner" ~~~
 
-## 组别4：岩浆怪 *4 | 权重 4
-execute @e[family=evoker,scores={temp=13..16}] ~~~ execute @e[name=temp,scores={temp2=1..85}] ~~~ summon aw:marker "magmaCubeSmallSummoner" ~~~
-execute @e[family=evoker,scores={temp=13..16}] ~~~ execute @e[name=temp,scores={temp2=86..98}] ~~~ summon aw:marker "magmaCubeMediumSummoner" ~~~
-execute @e[family=evoker,scores={temp=13..16}] ~~~ execute @e[name=temp,scores={temp2=99..100}] ~~~ summon aw:marker "magmaCubeLargeSummoner" ~~~
+## 组别4：岩浆怪 *4 | 权重 2
+execute @e[family=evoker,scores={temp=17..18}] ~~~ execute @e[name=temp,scores={temp2=1..85}] ~~~ summon aw:marker "magmaCubeSmallSummoner" ~~~
+execute @e[family=evoker,scores={temp=17..18}] ~~~ execute @e[name=temp,scores={temp2=86..98}] ~~~ summon aw:marker "magmaCubeMediumSummoner" ~~~
+execute @e[family=evoker,scores={temp=17..18}] ~~~ execute @e[name=temp,scores={temp2=99..100}] ~~~ summon aw:marker "magmaCubeLargeSummoner" ~~~
 
-## 组别5：蜘蛛[4级]/洞穴蜘蛛[4级]/蠹虫[4级] | 权重 4
-execute @e[family=evoker,scores={temp=17..20}] ~~~ execute @e[name=temp,scores={temp2=1..33}] ~~~ summon aw:marker "spider4Summoner" ~~~
-execute @e[family=evoker,scores={temp=17..20}] ~~~ execute @e[name=temp,scores={temp2=34..66}] ~~~ summon aw:marker "caveSpider4Summoner" ~~~
-execute @e[family=evoker,scores={temp=17..20}] ~~~ execute @e[name=temp,scores={temp2=67..100}] ~~~ summon aw:marker "silverfish4Summoner" ~~~
+## 组别5：蜘蛛[4级]/洞穴蜘蛛[4级]/蠹虫[4级] | 权重 2
+execute @e[family=evoker,scores={temp=19..20}] ~~~ execute @e[name=temp,scores={temp2=1..33}] ~~~ summon aw:marker "spider4Summoner" ~~~
+execute @e[family=evoker,scores={temp=19..20}] ~~~ execute @e[name=temp,scores={temp2=34..66}] ~~~ summon aw:marker "caveSpider4Summoner" ~~~
+execute @e[family=evoker,scores={temp=19..20}] ~~~ execute @e[name=temp,scores={temp2=67..100}] ~~~ summon aw:marker "silverfish4Summoner" ~~~
 
 # --- 移除辅助实体 ---
 kill @e[name=temp]

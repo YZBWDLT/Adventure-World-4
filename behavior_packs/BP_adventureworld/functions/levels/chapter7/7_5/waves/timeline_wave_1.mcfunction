@@ -10,7 +10,7 @@ execute @e[name=timeline,scores={time=200}] ~~~ tellraw @a {"rawtext":[{"transla
 execute @e[name=timeline,scores={time=300}] ~~~ event entity @e[family=zombie] have_weak_shield
 execute @e[name=timeline,scores={time=300}] ~~~ execute @a ~~~ playsound beacon.deactivate @s ~~~ 1
 execute @e[name=timeline,scores={time=300}] ~~~ tellraw @a {"rawtext":[{"translate":"§a现在它们拥有§c【红盾】§a，在它们拥有§c【红盾】§a的情况下，它们只能受到来自旷野之剑的伤害§b并被破除盾§a的效果"}]}
-execute @e[name=timeline,scores={time=400}] ~~~ tellraw @a {"rawtext":[{"translate":"§a当这些怪物被破除盾后，它们可以受到任何类型的伤害，但§b2秒后，它们的盾将会恢复为【蓝盾】"}]}
+execute @e[name=timeline,scores={time=400}] ~~~ tellraw @a {"rawtext":[{"translate":"§a当这些怪物被破除盾后，它们可以受到任何类型的伤害，但§b2至4秒后，它们的盾将会恢复为【蓝盾】"}]}
 execute @e[name=timeline,scores={time=500}] ~~~ tellraw @a {"rawtext":[{"translate":"§a在它们失去盾的时候，尽可能地对它们造成尽量高的伤害"}]}
 execute @e[name=timeline,scores={time=600}] ~~~ function lib/states/level_complete_delay/disable
 execute @e[name=timeline,scores={time=650}] ~~~ tellraw @a {"rawtext":[{"translate":"§c将这些带盾僵尸清理掉，迎接最终的试炼"}]}

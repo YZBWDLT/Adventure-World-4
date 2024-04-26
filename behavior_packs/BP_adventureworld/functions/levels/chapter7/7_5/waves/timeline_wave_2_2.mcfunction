@@ -31,7 +31,7 @@ execute @e[name=timeline,scores={temp=0}] ~~~ kill @e[family=ravager]
 
 ## 设定各个技能所对应的技能倒计时
 ### ~ 技能1：召唤怪物 ~
-execute @e[family=evoker,scores={temp=1..60}] ~~~ scoreboard players set @e[name=timeline,scores={temp=0}] temp2 5
+execute @e[family=evoker,scores={temp=1..60}] ~~~ scoreboard players set @e[name=timeline,scores={temp=0}] temp2 15
 ### ~ 技能2：空袭 ~
 execute @e[family=evoker,scores={temp=61..80}] ~~~ scoreboard players set @e[name=timeline,scores={temp=0}] temp2 20
 ### ~ 技能3：岩浆上涨 ~
@@ -50,10 +50,6 @@ execute @e[family=evoker,scores={temp=61..80}] ~~~ execute @e[name=timeline,scor
 execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c熔岩即将淹没平台！！迅速躲到更高的地方！"}]}
 ### ~ 技能4：回血 ~
 execute @e[family=evoker,scores={temp=101..120}] ~~~ execute @e[name=timeline,scores={temp=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c唤魔法师已恢复了一些血量！"}]}
-### ~ 技能5：炙热火线 ~
-
-## 隐身
-execute @e[name=timeline,scores={temp=0}] ~~~ effect @e[family=evoker] invisibility 30 0 true
 
 
 
@@ -62,7 +58,7 @@ execute @e[name=timeline,scores={temp=0}] ~~~ effect @e[family=evoker] invisibil
 
 ## 执行特定技能
 ### ~ 技能1：召唤怪物 ~
-execute @e[family=evoker,scores={temp=1..60}] ~~~ execute @e[name=timeline,scores={temp2=5}] ~~~ function levels/chapter7/7_5/boss_skills/skill_1_2
+execute @e[family=evoker,scores={temp=1..60}] ~~~ execute @e[name=timeline,scores={temp2=15}] ~~~ function levels/chapter7/7_5/boss_skills/skill_1_2
 ### ~ 技能2：空袭 ~
 execute @e[family=evoker,scores={temp=61..80}] ~~~ execute @e[name=timeline,scores={temp2=!0}] ~~~ function levels/chapter7/7_5/boss_skills/skill_2_2
 ### ~ 技能3：岩浆上涨 ~
@@ -72,7 +68,6 @@ execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,sco
 execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp2=0}] ~~~ structure load 7_5_phase2 -246 -54 23
 ### ~ 技能4：回血 ~
 execute @e[family=evoker,scores={temp=101..120}] ~~~ execute @e[name=timeline,scores={temp2=2}] ~~~ effect @s instant_health 1 4 true
-### ~ 技能5：炙热火线 ~
 
 
 
@@ -81,9 +76,6 @@ execute @e[family=evoker,scores={temp=101..120}] ~~~ execute @e[name=timeline,sc
 
 ## 重置随机技能
 execute @e[name=timeline,scores={temp2=0}] ~~~ scoreboard players set @e[family=evoker] temp 0
-
-## 取消Boss的隐身状态
-execute @e[name=timeline,scores={temp2=0}] ~~~ effect @e[family=evoker] invisibility 0 1 true
 
 ## 生成一只劫掠兽并令Boss骑上去
 ### 获取难度，以生成合适的劫掠兽
@@ -98,7 +90,7 @@ execute @e[name=timeline,scores={temp2=0}] ~~~ ride @e[family=evoker] start_ridi
 
 ## 标题与音效提醒
 execute @e[name=timeline,scores={temp2=0}] ~~~ function lib/title
-execute @e[name=timeline,scores={temp2=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§b唤魔法师已与其坐骑一齐现身！"}]}
+execute @e[name=timeline,scores={temp2=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§b唤魔法师的盾变弱了！"}]}
 execute @e[name=timeline,scores={temp2=0}] ~~~ execute @a ~~~ playsound beacon.deactivate @s
 
 ## 将所有带盾实体都改为弱盾状态
