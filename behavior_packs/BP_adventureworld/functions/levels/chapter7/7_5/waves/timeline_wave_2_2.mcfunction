@@ -67,9 +67,9 @@ execute @e[family=evoker,scores={temp=1..60}] ~~~ execute @e[name=timeline,score
 execute @e[family=evoker,scores={temp=61..80}] ~~~ execute @e[name=timeline,scores={temp2=!0}] ~~~ function levels/chapter7/7_5/boss_skills/skill_2_2
 ### ~ 技能3：岩浆上涨 ~
 execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp2=6..10}] ~~~ execute @a ~~~ playsound bucket.fill_lava @s ~~~ 1 2 
-execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp2=5}] ~~~ structure load 7_5_phase_2_lava -246 -54 23 0_degrees none layer_by_layer 3.00
+execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp2=5}] ~~~ structure load 7_5_phase2_lava -246 -54 23 0_degrees none layer_by_layer 3.00
 execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp2=3..5}] ~~~ execute @a ~~~ playsound bucket.empty_lava @s ~~~ 1 0.75
-execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp2=0}] ~~~ structure load 7_5_phase_2 -246 -54 23
+execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp2=0}] ~~~ structure load 7_5_phase2 -246 -54 23
 ### ~ 技能4：回血 ~
 execute @e[family=evoker,scores={temp=101..120}] ~~~ execute @e[name=timeline,scores={temp2=2}] ~~~ effect @s instant_health 1 4 true
 ### ~ 技能5：炙热火线 ~
@@ -110,4 +110,4 @@ execute @e[name=timeline,scores={temp2=0}] ~~~ event entity @e[family=monster] h
 
 ## 移除temp实体和生成器
 execute @e[name=timeline,scores={temp2=-1}] ~~~ kill @e[name=temp]
-execute @e[name=timeline,scores={temp2=-1}] ~~~ kill @e[family=summoner]
+execute @e[name=timeline,scores={temp2=-1}] ~~~ kill @e[family=summoner,name=!evokerSummoner]

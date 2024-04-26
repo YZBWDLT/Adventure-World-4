@@ -20,7 +20,7 @@ execute @e[name=timeline,scores={active=4,time=19}] ~~~ execute @e[type=aw:fireb
 execute @e[name=timeline,scores={active=4,time=19}] ~~~ execute @e[type=aw:fireball] ~~~ damage @e[r=3] 15 entity_explosion
 execute @e[name=timeline,scores={active=4,time=19}] ~~~ kill @e[type=aw:fireball]
 ### 炸出第二阶段的地形
-execute @e[name=timeline,scores={active=4,time=19}] ~~~ structure load 7_5_phase_2 -246 -54 23
+execute @e[name=timeline,scores={active=4,time=19}] ~~~ structure load 7_5_phase2 -246 -54 23
 
 ## 二阶段时间线 | 共流逝20刻s
 execute @e[name=wave,scores={data=2}] ~~~ execute @e[name=timeline,scores={active=4}] ~~~ execute @e[name=tick,scores={time=8}] ~~~ function levels/chapter7/7_5/waves/timeline_wave_2_2
