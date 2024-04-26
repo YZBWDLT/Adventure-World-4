@@ -7,10 +7,10 @@ execute @e[name=timeline,scores={time=100}] ~~~ function lib/black_screen/telepo
 execute @e[name=timeline,scores={time=100}] ~~~ effect @a clear
 
 execute @e[name=timeline,scores={time=160}] ~~~ title @a title §1
-execute @e[name=timeline,scores={time=160}] ~~~ title @a subtitle §3制作 §b狂野巴豆
+execute @e[name=timeline,scores={time=160}] ~~~ title @a subtitle §3作者 §b一只卑微的量筒 狂野巴豆
 
 execute @e[name=timeline,scores={time=250}] ~~~ title @a title §1
-execute @e[name=timeline,scores={time=250}] ~~~ title @a subtitle §3联合制作 §b量筒 绿叶
+execute @e[name=timeline,scores={time=250}] ~~~ title @a subtitle §3联合作者 §bo绿叶o 文雨
 
 execute @e[name=timeline,scores={time=340}] ~~~ title @a title §1
 execute @e[name=timeline,scores={time=340}] ~~~ title @a subtitle §3出品 §b极筑工坊
