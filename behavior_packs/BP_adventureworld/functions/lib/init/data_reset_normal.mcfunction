@@ -4,7 +4,7 @@
 # --- 常加载区域 ---
 tickingarea add -82 1 -2 -82 1 -2 "commandSystem"
 tickingarea add -55 0 -55 60 0 120 "villageArea"
-tickingarea add -64 0 127 -128 0 -64 gamingArea1
+tickingarea add -64 0 127 -128 0 -64 "gamingArea1"
 tickingarea add -129 0 127 -256 0 -64 "gamingArea2"
 
 # --- 记分板 ---
@@ -64,6 +64,7 @@ summon aw:marker "hookshotAmount" -82 1 -2
 summon aw:marker "alivePlayersAmount" -82 1 -2
 summon aw:marker "maxPlayersAmount" -82 1 -2
 summon aw:marker "realDeadPlayersAmount" -82 1 -2
+summon aw:marker "arrowAmount" -82 1 -2
 ### 失败次数
 summon aw:marker "failedTimes" -82 1 -2
 summon aw:marker "allFailedTimes" -82 1 -2
@@ -112,6 +113,7 @@ scoreboard players set @e[name=hookshotAmount] data 0
 scoreboard players set @e[name=alivePlayersAmount] data 1
 scoreboard players set @e[name=maxPlayersAmount] data 1
 scoreboard players set @e[name=realDeadPlayersAmount] data 0
+scoreboard players set @e[name=arrowAmount] data 0
 scoreboard players set maxMonsterAmount data 0
 
 scoreboard players set @e[name=gameId] data 1

@@ -15,6 +15,12 @@ execute @e[name=tick,scores={time=1}] ~~~ execute @e[name=levelCompleted,scores=
 execute @e[name=tick,scores={time=18}] ~~~ execute @a ~~~ function lib/get_data/entity_location
 execute @e[name=tick,scores={time=18}] ~~~ execute @a[scores={position=20}] ~~~ function levels/chapter2/traps
 
+## 为防止陷阱无限触发，在关卡完成后应当检测箭的数目，过多则予以清除 | 在2~6章开始检测
+execute @e[name=tick,scores={time=19}] ~~~ execute @e[name=levelCompleted,scores={data=!0}] ~~~ execute @e[name=chapter,scores={data=2..6}] ~~~ function lib/get_data/arrow_amount
+execute @e[name=tick,scores={time=19}] ~~~ execute @e[name=levelCompleted,scores={data=!0}] ~~~ execute @e[name=chapter,scores={data=2..6}] ~~~ execute @e[name=arrowAmount,scores={data=50..}] ~~~ tellraw @a {"rawtext":[{"translate":"§c检测到过多数目的实体箭，现已清除"}]}
+execute @e[name=tick,scores={time=19}] ~~~ execute @e[name=levelCompleted,scores={data=!0}] ~~~ execute @e[name=chapter,scores={data=2..6}] ~~~ execute @e[name=arrowAmount,scores={data=50..}] ~~~ execute @a ~~~ function lib/supplier/arrow
+execute @e[name=tick,scores={time=19}] ~~~ execute @e[name=levelCompleted,scores={data=!0}] ~~~ execute @e[name=chapter,scores={data=2..6}] ~~~ execute @e[name=arrowAmount,scores={data=50..}] ~~~ kill @e[type=arrow]
+
 # --- 第三章清除水 ---
 execute @e[name=tick,scores={time=13}] ~~~ function levels/chapter3/water_clear
 

@@ -27,6 +27,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"active.timeline = §a%%s �
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== data记分项 ====="}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"检测实体数目的变量"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.alivePlayersAmount = §a%%s §7# 记录存活玩家数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=alivePlayersAmount]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.arrowAmount = §a%%s §7# 记录箭数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=arrowAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.hookshotAmount = §a%%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=hookshotAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§edata.maxMonsterAmount = §a%%s §7# 记录怪物数目","with":{"rawtext":[{"score":{"objective":"data","name":"maxMonsterAmount"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.maxPlayersAmount = §a%%s §7# 记录所有玩家数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=maxPlayersAmount]"}}]}}]}
