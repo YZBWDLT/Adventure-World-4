@@ -8,7 +8,6 @@ function lib/states/monster_summon_delay/enable_40ticks
 summon aw:marker "temp" -225 -48 44
 summon aw:marker "temp" -225 -48 44
 summon aw:marker "temp" -225 -48 44
-summon aw:marker "temp" -225 -48 44
 
 ## 选定位置
 execute @e[name=temp] ~~~ scoreboard players random @s temp 0 14

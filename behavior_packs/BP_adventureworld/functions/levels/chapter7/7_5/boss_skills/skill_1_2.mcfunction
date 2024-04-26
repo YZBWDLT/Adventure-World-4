@@ -11,8 +11,6 @@ summon aw:marker "temp" -225 -48 44
 summon aw:marker "temp" -225 -48 44
 summon aw:marker "temp" -225 -48 44
 summon aw:marker "temp" -225 -48 44
-summon aw:marker "temp" -225 -48 44
-summon aw:marker "temp" -225 -48 44
 
 ## 选定位置
 execute @e[name=temp] ~~~ scoreboard players random @s temp 0 14
@@ -49,11 +47,11 @@ execute @e[family=evoker,scores={temp=31..40}] ~~~ execute @e[name=temp,scores={
 execute @e[family=evoker,scores={temp=31..40}] ~~~ execute @e[name=temp,scores={temp2=61..100}] ~~~ summon aw:marker "hoglin3Summoner" ~~~
 
 ## 组别4：岩浆怪/女巫/恶魂 *4 | 权重 4
-execute @e[family=evoker,scores={temp=41..50}] ~~~ execute @e[name=temp,scores={temp2=1..35}] ~~~ summon aw:marker "magmaCubeSmallSummoner" ~~~
-execute @e[family=evoker,scores={temp=41..50}] ~~~ execute @e[name=temp,scores={temp2=35..50}] ~~~ summon aw:marker "magmaCubeMediumSummoner" ~~~
-execute @e[family=evoker,scores={temp=41..50}] ~~~ execute @e[name=temp,scores={temp2=50..55}] ~~~ summon aw:marker "magmaCubeLargeSummoner" ~~~
-execute @e[family=evoker,scores={temp=41..50}] ~~~ execute @e[name=temp,scores={temp2=56..80}] ~~~ summon aw:marker "witchSummoner" ~~~
-execute @e[family=evoker,scores={temp=41..50}] ~~~ execute @e[name=temp,scores={temp2=81..100}] ~~~ summon aw:marker "ghastSummoner" ~~~
+execute @e[family=evoker,scores={temp=41..50}] ~~~ execute @e[name=temp,scores={temp2=1..49}] ~~~ summon aw:marker "magmaCubeSmallSummoner" ~~~
+execute @e[family=evoker,scores={temp=41..50}] ~~~ execute @e[name=temp,scores={temp2=50..74}] ~~~ summon aw:marker "magmaCubeMediumSummoner" ~~~
+execute @e[family=evoker,scores={temp=41..50}] ~~~ execute @e[name=temp,scores={temp2=75..94}] ~~~ summon aw:marker "magmaCubeLargeSummoner" ~~~
+execute @e[family=evoker,scores={temp=41..50}] ~~~ execute @e[name=temp,scores={temp2=95..97}] ~~~ summon aw:marker "witchSummoner" ~~~
+execute @e[family=evoker,scores={temp=41..50}] ~~~ execute @e[name=temp,scores={temp2=98..100}] ~~~ summon aw:marker "ghastSummoner" ~~~
 
 ## 组别5：蜘蛛[4级]/洞穴蜘蛛[4级]/蠹虫[4级] | 权重 4
 execute @e[family=evoker,scores={temp=51..60}] ~~~ execute @e[name=temp,scores={temp2=1..45}] ~~~ summon aw:marker "spider4Summoner" ~~~

@@ -13,10 +13,7 @@ execute @e[name=wave,scores={data=2}] ~~~ execute @e[name=timeline,scores={activ
 
 ## 二阶段初始化
 execute @e[name=wave,scores={data=2}] ~~~ execute @e[name=timeline,scores={active=3}] ~~~ execute @e[family=evoker,scores={temp2=1}] ~~~ function levels/chapter7/7_5/waves/start_wave_2_2
-
-## 二阶段时间线 | 共流逝20刻
 execute @e[name=wave,scores={data=2}] ~~~ scoreboard players add @e[name=timeline,scores={active=4,time=0..19}] time 1
-
 ### 火球在1s后爆炸，并对附近的玩家造成伤害
 execute @e[name=timeline,scores={active=4,time=19}] ~~~ execute @e[type=aw:fireball] ~~~ particle minecraft:huge_explosion_emitter ~~~
 execute @e[name=timeline,scores={active=4,time=19}] ~~~ execute @e[type=aw:fireball] ~~~ execute @a ~~~ playsound random.explode @s ~~~ 1 0.75
@@ -25,6 +22,7 @@ execute @e[name=timeline,scores={active=4,time=19}] ~~~ kill @e[type=aw:fireball
 ### 炸出第二阶段的地形
 execute @e[name=timeline,scores={active=4,time=19}] ~~~ structure load 7_5_phase_2 -246 -54 23
 
+## 二阶段时间线 | 共流逝20刻s
 execute @e[name=wave,scores={data=2}] ~~~ execute @e[name=timeline,scores={active=4}] ~~~ execute @e[name=tick,scores={time=8}] ~~~ function levels/chapter7/7_5/waves/timeline_wave_2_2
 
 # --- 胜利判定 ---

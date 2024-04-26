@@ -9,8 +9,6 @@
 # 技能触发倒计时结束之后进入技能阶段，技能结束后进入下一轮的技能触发倒计时
 # 技能倒计时结束后，唤魔者召唤劫掠兽一齐现身并变为弱盾
 
-# ============ 以下的内容与一阶段大体相同 或略有偏差 ==================
-
 # --- 倒计时计算 ---
 
 ## 技能触发倒计时与技能倒计时 | 技能触发倒计时必须在Boss为蓝盾的情况下执行
@@ -20,7 +18,7 @@ scoreboard players remove @e[name=timeline,scores={temp2=0..}] temp2 1
 ## 技能触发倒计时的重置 | 在技能触发倒计时和技能倒计时均停止后，进行一次随机
 scoreboard players random @e[name=timeline,scores={temp=-1,temp2=..-1}] temp 2 5
 
-## 技能倒计时 | 在技能触发倒计时停止后开始计算
+
 
 # --- 执行技能前的准备 ---
 # 当技能触发倒计时结束时触发
@@ -57,14 +55,16 @@ execute @e[family=evoker,scores={temp=101..120}] ~~~ execute @e[name=timeline,sc
 ## 隐身
 execute @e[name=timeline,scores={temp=0}] ~~~ effect @e[family=evoker] invisibility 30 0 true
 
+
+
 # --- 执行技能 ---
 # 当技能触发倒计时停止后触发
 
 ## 执行特定技能
 ### ~ 技能1：召唤怪物 ~
-execute @e[name=timeline,scores={temp2=5}] ~~~ execute @e[family=evoker,scores={temp=1..60}] ~~~ function levels/chapter7/7_5/boss_skills/skill_1_2
+execute @e[family=evoker,scores={temp=1..60}] ~~~ execute @e[name=timeline,scores={temp2=5}] ~~~ function levels/chapter7/7_5/boss_skills/skill_1_2
 ### ~ 技能2：空袭 ~
-execute @e[name=timeline,scores={temp2=!0}] ~~~ execute @e[family=evoker,scores={temp=61..80}] ~~~ function levels/chapter7/7_5/boss_skills/skill_2_2
+execute @e[family=evoker,scores={temp=61..80}] ~~~ execute @e[name=timeline,scores={temp2=!0}] ~~~ function levels/chapter7/7_5/boss_skills/skill_2_2
 ### ~ 技能3：岩浆上涨 ~
 execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp2=6..10}] ~~~ execute @a ~~~ playsound bucket.fill_lava @s ~~~ 1 2 
 execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp2=5}] ~~~ structure load 7_5_phase_2_lava -246 -54 23 0_degrees none layer_by_layer 3.00
@@ -73,6 +73,8 @@ execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,sco
 ### ~ 技能4：回血 ~
 execute @e[family=evoker,scores={temp=101..120}] ~~~ execute @e[name=timeline,scores={temp2=2}] ~~~ effect @s instant_health 1 4 true
 ### ~ 技能5：炙热火线 ~
+
+
 
 # --- 执行技能完毕后 ---
 # 当技能倒计时结束后触发
@@ -101,3 +103,11 @@ execute @e[name=timeline,scores={temp2=0}] ~~~ execute @a ~~~ playsound beacon.d
 
 ## 将所有带盾实体都改为弱盾状态
 execute @e[name=timeline,scores={temp2=0}] ~~~ event entity @e[family=monster] have_weak_shield
+
+
+
+# --- 未在技能期时 ---
+
+## 移除temp实体和生成器
+execute @e[name=timeline,scores={temp2=-1}] ~~~ kill @e[name=temp]
+execute @e[name=timeline,scores={temp2=-1}] ~~~ kill @e[family=summoner]

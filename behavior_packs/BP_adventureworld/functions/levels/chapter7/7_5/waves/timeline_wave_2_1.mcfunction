@@ -18,7 +18,7 @@ scoreboard players remove @e[name=timeline,scores={temp2=0..}] temp2 1
 ## 技能触发倒计时的重置 | 在技能触发倒计时和技能倒计时均停止后，进行一次随机
 scoreboard players random @e[name=timeline,scores={temp=-1,temp2=..-1}] temp 3 10
 
-## 技能倒计时 | 在技能触发倒计时停止后开始计算
+
 
 # --- 执行技能前的准备 ---
 # 当技能触发倒计时结束时触发
@@ -39,7 +39,6 @@ execute @e[family=evoker,scores={temp=41..60}] ~~~ scoreboard players set @e[nam
 ### ~ 技能4：回血 ~
 execute @e[family=evoker,scores={temp=61..80}] ~~~ scoreboard players set @e[name=timeline,scores={temp=0}] temp2 2
 ### ~ 技能5：炙热火线 ~
-execute @e[family=evoker,scores={temp=81..100}] ~~~ scoreboard players set @e[name=timeline,scores={temp=0}] temp2 20
 
 ## 设定各个技能所对应的标题内容
 execute @e[name=timeline,scores={temp=0}] ~~~ function lib/title
@@ -52,10 +51,11 @@ execute @e[family=evoker,scores={temp=41..60}] ~~~ execute @e[name=timeline,scor
 ### ~ 技能4：回血 ~
 execute @e[family=evoker,scores={temp=61..80}] ~~~ execute @e[name=timeline,scores={temp=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c唤魔法师已恢复了一些血量！"}]}
 ### ~ 技能5：炙热火线 ~
-execute @e[family=evoker,scores={temp=81..100}] ~~~ execute @e[name=timeline,scores={temp=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c当心地上！跳过那些危险的火焰！"}]}
 
 ## 隐身
 execute @e[name=timeline,scores={temp=0}] ~~~ effect @e[family=evoker] invisibility 30 0 true
+
+
 
 # --- 执行技能 ---
 # 当技能触发倒计时停止后触发
@@ -73,6 +73,8 @@ execute @e[family=evoker,scores={temp=41..60}] ~~~ execute @e[name=timeline,scor
 ### ~ 技能4：回血 ~
 execute @e[family=evoker,scores={temp=61..80}] ~~~ execute @e[name=timeline,scores={temp2=2}] ~~~ effect @s instant_health 1 3 true
 ### ~ 技能5：炙热火线 ~
+
+
 
 # --- 执行技能完毕后 ---
 # 当技能倒计时结束后触发
@@ -101,3 +103,11 @@ execute @e[name=timeline,scores={temp2=0}] ~~~ execute @a ~~~ playsound beacon.d
 
 ## 将所有带盾实体都改为弱盾状态
 execute @e[name=timeline,scores={temp2=0}] ~~~ event entity @e[family=monster] have_weak_shield
+
+
+
+# --- 未在技能期时 ---
+
+## 移除temp实体和生成器
+execute @e[name=timeline,scores={temp2=-1}] ~~~ kill @e[name=temp]
+execute @e[name=timeline,scores={temp2=-1}] ~~~ kill @e[family=summoner]

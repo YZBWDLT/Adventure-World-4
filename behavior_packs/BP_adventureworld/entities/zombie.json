@@ -184,7 +184,7 @@
 			"have_no_shield": {
                 "minecraft:mark_variant": { "value": 0 },
                 "minecraft:timer": {
-                    "time": 1,
+                    "time": 2,
                     "looping": true,
                     "time_down_event": {
                         "event": "have_shield",
