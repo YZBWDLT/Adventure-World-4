@@ -55,8 +55,8 @@ execute @e[name=timeline,scores={time=1045}] ~~~ clear @a aw:wild_sword
 execute @e[name=timeline,scores={time=1045}] ~~~ give @a aw:wild_sword 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
 
 # === 传送玩家，启动7-1启动程序 ===
-# --- [1100~1800]对话内容 ---
-execute @e[name=timeline,scores={time=1800}] ~~~ effect @a blindness 30 0 true
+# --- [1100~1820]对话内容 ---
+execute @e[name=timeline,scores={time=1820}] ~~~ effect @a blindness 30 0 true
 
 # --- [1950]传送玩家到小黑屋 ---
 execute @e[name=timeline,scores={time=1950}] ~~~ function lib/black_screen/default

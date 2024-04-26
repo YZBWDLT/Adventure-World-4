@@ -14,3 +14,10 @@ fill -21 0 37 -23 0 37 air
 
 # --- 播放音乐 ---
 function lib/music_player
+
+# --- 移除悬浮文本 ---
+kill @e[type=aw:text_display]
+
+# --- 将田英传送过来以作准备 ---
+event entity @e[name="田英"] should_not_see_player
+tp @e[name="田英"] 33 1 -11 facing @e[name=facingPosition]
