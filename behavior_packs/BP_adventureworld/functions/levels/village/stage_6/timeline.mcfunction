@@ -29,7 +29,7 @@ execute @e[name=timeline,scores={time=1060}] ~~~ event entity @e[name="米云溪
 
 # 在对话进行到1460刻的时候，变换玩家的视角
 # 向-x变换2格，-y变换0.5格，+z变换4格，1秒（20刻）内完成，即每刻~-0.1~-0.025~0.2
-execute @e[name=timeline,scores={time=1460..1780}] ~~~ execute @e[name=facingPosition] ~~~ tp @s ~-0.1~-0.025~0.2
+execute @e[name=timeline,scores={time=1460..1480}] ~~~ execute @e[name=facingPosition] ~~~ tp @s ~-0.1~-0.025~0.2
 
 # 在对话进行到第1540刻的时候，给予玩家传声石结晶
 execute @e[name=timeline,scores={time=1540}] ~~~ give @a aw:acoustic_stone_crystal 1 0 {"item_lock": { "mode": "lock_in_inventory" }}
