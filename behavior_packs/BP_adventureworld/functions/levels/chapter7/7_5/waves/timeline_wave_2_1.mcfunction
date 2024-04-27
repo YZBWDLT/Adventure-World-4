@@ -90,7 +90,7 @@ execute @e[name=timeline,scores={temp2=0}] ~~~ ride @e[family=evoker] start_ridi
 
 ## 标题与音效提醒
 execute @e[name=timeline,scores={temp2=0}] ~~~ function lib/title
-execute @e[name=timeline,scores={temp2=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§b唤魔法师已与其坐骑一齐现身！"}]}
+execute @e[name=timeline,scores={temp2=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§b唤魔法师的盾变弱了！"}]}
 execute @e[name=timeline,scores={temp2=0}] ~~~ execute @a ~~~ playsound beacon.deactivate @s
 
 ## 将所有带盾实体都改为弱盾状态
