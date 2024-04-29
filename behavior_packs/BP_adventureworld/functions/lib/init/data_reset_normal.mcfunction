@@ -78,6 +78,7 @@ summon aw:marker "achievement" -82 1 -2
 summon aw:marker "isNetease" -82 1 -2
 summon aw:marker "developerMode" -82 1 -2
 summon aw:marker "storyMode" -82 1 -2
+summon aw:marker "score" -82 1 -2
 
 ## 记分板型标记（time&active记分板）
 ### 全局
@@ -133,6 +134,7 @@ scoreboard players set @e[name=difficulty] data 1
 scoreboard players set @e[name=difficultyAdder] data 0
 scoreboard players set @e[name=achievement] data 0
 scoreboard players set @e[name=storyMode] data 1
+scoreboard players set @e[name=score] data 0
 
 scoreboard players set @e[name=tick] time 0
 scoreboard players set @e[name=playedSecond] time 0

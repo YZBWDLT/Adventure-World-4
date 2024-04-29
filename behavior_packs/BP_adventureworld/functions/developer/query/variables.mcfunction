@@ -50,6 +50,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.maxWave = §a%%s §7#
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.randomLocation = §a%%s §7# 随机怪物刷新位置","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=randomLocation]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.randomMonster = §a%%s §7# 随机怪物种类","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=randomMonster]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.storyMode = §a%%s §7# 是否启用剧情模式，0：不启用，1：启用","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=storyMode]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.score = §a%%s §7# 地图结束后的评分，S：120+，A：95~119，B：75~94，C：60~74，D：50~59，E：40~49，F：0~39，F-：-1（仅作弊）","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=score]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.wave = §a%%s §7# 记录波数数据","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=wave]"}}]}}]}
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== record记分项 ====="}]}
