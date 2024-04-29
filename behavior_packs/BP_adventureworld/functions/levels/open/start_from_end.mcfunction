@@ -10,6 +10,7 @@ scoreboard players operation @e[name=difficultyAdder] data = nextGame.difficulty
 # --- 设置一些杂项内容 ---
 time set 6000
 kill @e[family=text_display]
+kill @e[family=npc]
 
 # --- 开始游戏 ---
 execute @e[name=storyMode,scores={data=0}] ~~~ function levels/open/combat_mode/start
