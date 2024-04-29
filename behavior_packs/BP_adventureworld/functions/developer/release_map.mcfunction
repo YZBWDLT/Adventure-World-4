@@ -11,5 +11,6 @@ execute @s[scores={temp=1}] ~~~ function levels/end/stage_3/on_exit
 execute @s[scores={temp=1}] ~~~ function levels/end/stage_4/on_exit
 
 execute @s[scores={temp=1}] ~~~ kill @e[type=aw:npc]
+execute @s[scores={temp=1}] ~~~ kill @e[type=aw:npc_author]
 execute @s[scores={temp=1}] ~~~ function lib/init/data_reset_stats
 execute @s[scores={temp=1}] ~~~ function levels/open/before_opening/start
