@@ -10,6 +10,6 @@ execute @e[name=timeline,scores={time=720}] ~~~ effect @a blindness 4 0 true
 execute @e[name=timeline,scores={time=780..800}] ~~~ execute @e[name=playerPosition] ~~~ tp @s ~~~0.05
 execute @e[name=timeline,scores={time=780..800}] ~~~ execute @e[name=facingPosition] ~~~ tp @s ~~~-0.05
 
-# --- 当运行到1000刻时，黑屏，再40刻后回到村庄，触发下一部分 ---
-execute @e[name=timeline,scores={time=1000}] ~~~ function lib/black_screen/teleport_respawner
-execute @e[name=timeline,scores={time=1040}] ~~~ function levels/end/stage_2/start
+# --- 当运行到1060刻时，黑屏，再40刻后回到村庄，触发下一部分 ---
+execute @e[name=timeline,scores={time=1060}] ~~~ function lib/black_screen/teleport_respawner
+execute @e[name=timeline,scores={time=1100}] ~~~ function levels/end/stage_2/start
