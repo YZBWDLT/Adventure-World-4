@@ -39,7 +39,7 @@ tile.aw:evocation_stone.name=Evocation Stone
 ### Entities
 entity.aw:hookshot.name=Hookshot
 entity.aw:npc.name=NPC
-entity.aw:npc.name=NPC (Netease Version)
+entity.aw:npc_author.name=Authors
 entity.aw:text_display.name=Floating Text
 entity.aw:skeleton_king.name=Skeleton King
 entity.aw:blaze_king.name=Blaze King
@@ -47,6 +47,7 @@ entity.aw:marker.name=Marker
 
 ### Spawn Eggs
 item.spawn_egg.entity.aw:npc.name=Spawn NPC
+item.spawn_egg.entity.aw:npc_author.name=Spawn Author
 item.spawn_egg.entity.aw:text_display.name=Spawn Floating Text
 item.spawn_egg.entity.aw:skeleton_king.name=Spawn Skeleton King
 item.spawn_egg.entity.aw:blaze_king.name=Spawn Blaze King

@@ -41,7 +41,7 @@ tile.aw:evocation_stone.name=唤魔之石
 ### 实体类
 entity.aw:hookshot.name=绳枪
 entity.aw:npc.name=NPC
-entity.aw:npc.name=NPC(Netease版)
+entity.aw:npc_author.name=作者NPC
 entity.aw:text_display.name=悬浮文本
 entity.aw:skeleton_king.name=骷髅王
 entity.aw:blaze_king.name=烈焰之魂
@@ -50,6 +50,7 @@ entity.evoker_boss.name=§l§c唤魔法师
 
 ### 刷怪蛋类
 item.spawn_egg.entity.aw:npc.name=NPC 刷怪蛋
+item.spawn_egg.entity.aw:npc_author.name=作者NPC 刷怪蛋
 item.spawn_egg.entity.aw:text_display.name=悬浮文本 刷怪蛋
 item.spawn_egg.entity.aw:skeleton_king.name=骷髅王 刷怪蛋
 item.spawn_egg.entity.aw:blaze_king.name=烈焰之魂 刷怪蛋

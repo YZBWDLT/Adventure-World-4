@@ -36,5 +36,8 @@ execute @s[name="赵向前"] ~~~ tellraw @p {"rawtext":[{"translate":"* §e%%s�
 ## 当玩家在关卡ID为1003~1004时与张宇对话，令张宇获取interacted标签
 execute @s[name="张宇",scores={temp=1003..1004}] ~~~ tag @s add interacted
 
+## 当玩家在关卡ID为1003~1004时与作者对话，令作者获取interacted标签
+execute @s[family=author] ~~~ tag @s add interacted
+
 # --- 重置对话状态 ---
 event entity @s interacted_reset

@@ -19,11 +19,15 @@ function lib/get_data/achievements
 ## 显示统计数据
 function lib/get_data/difficulty
 function lib/get_data/get_best_time
+execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ function lib/get_data/get_score
 execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a ~~~ function lib/get_data/stats_singleplayer
 execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a ~~~ function lib/get_data/stats_multiplayer
 
 # --- 通用函数 ---
 function levels/end/stage_3/start
+
+# --- 生成作者实体 ---
+function levels/end/stage_3/npc_author
 
 # ========== 与纯战斗模式产生不同的地方的分割线 ==========
 
