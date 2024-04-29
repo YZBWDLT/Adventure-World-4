@@ -14,7 +14,7 @@
             "minecraft:persistent": {},
             "minecraft:movement": { "value": 0 },
             "minecraft:nameable": { "allow_name_tag_renaming": true, "always_show": true },
-            "minecraft:type_family": { "family": [ "npc", "adventure_world_npc", "npc" ] },
+            "minecraft:type_family": { "family": [ "npc", "adventure_world_npc" ] },
             "minecraft:collision_box": { "height": 1.8, "width": 0.6 },
             "minecraft:interact": { "interactions": [ { "interact_text": "action.interact.chat", "on_interact": { "event": "interacted" }, "swing": true } ] },
             "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": [ { "none_of": [ { "test": "has_ability", "subject": "damager", "value": "mayfly" } ] } ] }, "deals_damage": false } ] },

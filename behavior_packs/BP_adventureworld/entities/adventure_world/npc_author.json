@@ -1,0 +1,104 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "aw:npc_author",
+            "is_experimental": false,
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "components": {
+            "minecraft:physics": { "has_collision": true, "has_gravity": true },
+            "minecraft:health": { "value": 1, "max": 1 },
+            "minecraft:knockback_resistance": { "value": 1 },
+            "minecraft:persistent": { },
+            "minecraft:movement": { "value": 0 },
+            "minecraft:nameable": { "allow_name_tag_renaming": true, "always_show": true },
+            "minecraft:type_family": { "family": [ "npc", "adventure_world_npc", "author" ] },
+            "minecraft:collision_box": { "height": 1.8, "width": 0.6 },
+            "minecraft:interact": { "interactions": [ { "interact_text": "action.interact.chat", "on_interact": { "event": "interacted" }, "swing": true } ] },
+            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": [ { "none_of": [ { "test": "has_ability", "subject": "damager", "value": "mayfly" } ] } ] }, "deals_damage": false } ] },
+            "minecraft:movement.basic": { }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "randomize": [
+                    { "add": { "component_groups": [ "should_see_player", "variant_0" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_1" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_2" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_3" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_4" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_5" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_6" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_7" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_8" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_9" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_10" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_11" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_12" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_13" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_14" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_15" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_16" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_17" ] }, "weight": 1 },
+                    { "add": { "component_groups": [ "should_see_player", "variant_18" ] }, "weight": 1 }
+                ]
+            },
+            "interacted": { "add": { "component_groups": [ "interacted" ] } },
+            "interacted_reset": { "remove": { "component_groups": [ "interacted" ] } },
+
+            "npc_yzbwdlt": { "add": { "component_groups": [ "should_see_player", "variant_0" ] } },
+            "npc_andy7343": { "add": { "component_groups": [ "should_see_player", "variant_1" ] } },
+            "npc_greeleaf": { "add": { "component_groups": [ "should_see_player", "variant_2" ] } },
+            "npc_pigeonki": { "add": { "component_groups": [ "should_see_player", "variant_3" ] } },
+            "npc_kriswenyu": { "add": { "component_groups": [ "should_see_player", "variant_4" ] } },
+            "npc_pumpkinjui": { "add": { "component_groups": [ "should_see_player", "variant_5" ] } },
+            "npc_xiaoshu512": { "add": { "component_groups": [ "should_see_player", "variant_6" ] } },
+            "npc_tuffy2020china": { "add": { "component_groups": [ "should_see_player", "variant_7" ] } },
+            "npc_animalchalk2526": { "add": { "component_groups": [ "should_see_player", "variant_8" ] } },
+            "npc_kianakasnala947": { "add": { "component_groups": [ "should_see_player", "variant_9" ] } },
+            "npc_xc13599305": { "add": { "component_groups": [ "should_see_player", "variant_10" ] } },
+            "npc_hfpa0117": { "add": { "component_groups": [ "should_see_player", "variant_11" ] } },
+            "npc_ender5207541": { "add": { "component_groups": [ "should_see_player", "variant_12" ] } },
+            "npc_rustyabyss29193": { "add": { "component_groups": [ "should_see_player", "variant_13" ] } },
+            "npc_enderlife5409": { "add": { "component_groups": [ "should_see_player", "variant_14" ] } },
+            "npc_onekitty710926": { "add": { "component_groups": [ "should_see_player", "variant_15" ] } },
+            "npc_foxlanmo": { "add": { "component_groups": [ "should_see_player", "variant_16" ] } },
+            "npc_kuanpan9527": { "add": { "component_groups": [ "should_see_player", "variant_17" ] } },
+            "npc_longlongxiaotao": { "add": { "component_groups": [ "should_see_player", "variant_18" ] } },
+
+            "should_see_player": { "add": { "component_groups": [ "should_see_player" ] } },
+            "should_not_see_player": { "remove": { "component_groups": [ "should_see_player" ] } }
+        },
+        "component_groups": {
+            "variant_0": { "minecraft:variant": { "value": 0 } },
+            "variant_1": { "minecraft:variant": { "value": 1 } },
+            "variant_2": { "minecraft:variant": { "value": 2 } },
+            "variant_3": { "minecraft:variant": { "value": 3 } },
+            "variant_4": { "minecraft:variant": { "value": 4 } },
+            "variant_5": { "minecraft:variant": { "value": 5 } },
+            "variant_6": { "minecraft:variant": { "value": 6 } },
+            "variant_7": { "minecraft:variant": { "value": 7 } },
+            "variant_8": { "minecraft:variant": { "value": 8 } },
+            "variant_9": { "minecraft:variant": { "value": 9 } },
+            "variant_10": { "minecraft:variant": { "value": 10 } },
+            "variant_11": { "minecraft:variant": { "value": 11 } },
+            "variant_12": { "minecraft:variant": { "value": 12 } },
+            "variant_13": { "minecraft:variant": { "value": 13 } },
+            "variant_14": { "minecraft:variant": { "value": 14 } },
+            "variant_15": { "minecraft:variant": { "value": 15 } },
+            "variant_16": { "minecraft:variant": { "value": 16 } },
+            "variant_17": { "minecraft:variant": { "value": 17 } },
+            "variant_18": { "minecraft:variant": { "value": 18 } },
+
+            "interacted": {
+                "minecraft:type_family": { "family": [ "npc", "adventure_world_npc", "author", "interacted" ] },
+                "minecraft:timer": { "time": 0.05, "time_down_event": { "event": "interacted_reset", "target": "self" } }
+            },
+
+            "should_see_player": {
+                "minecraft:behavior.look_at_player": { "priority": 1 }
+            }
+        }
+    }
+}
