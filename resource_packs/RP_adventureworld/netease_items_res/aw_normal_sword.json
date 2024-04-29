@@ -1,0 +1,13 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "components": {
+            "minecraft:icon": "aw_normal_sword"
+        },
+        "description": {
+            "category": "Equipment",
+            "identifier": "aw:normal_sword",
+            "register_to_create_menu": true
+        }
+    }
+}

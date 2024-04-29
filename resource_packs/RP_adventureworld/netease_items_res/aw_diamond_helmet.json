@@ -1,0 +1,13 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "components": {
+            "minecraft:icon": "aw_diamond_helmet"
+        },
+        "description": {
+            "category": "Equipment",
+            "identifier": "aw:diamond_helmet",
+            "register_to_create_menu": true
+        }
+    }
+}

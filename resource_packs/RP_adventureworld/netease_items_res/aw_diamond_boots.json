@@ -1,0 +1,13 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "components": {
+            "minecraft:icon": "aw_diamond_boots"
+        },
+        "description": {
+            "category": "Equipment",
+            "identifier": "aw:diamond_boots",
+            "register_to_create_menu": true
+        }
+    }
+}
