@@ -21,15 +21,15 @@ execute @e[name=timeline,scores={time=380}] ~~~ structure load 7_0_boomed -91 -1
 # --- [440]剑开始拔出 | [445~470]粒子效果&音效 ---
 execute @e[name=timeline,scores={time=440}] ~~~ event entity @e[type=aw:wild_sword] aw:stage_2
 execute @e[name=timeline,scores={time=445}] ~~~ execute @a ~~~ playsound random.levelup @s ~~~ 1 0.25
-execute @e[name=timeline,scores={time=445}] ~~~ particle aw:wild_sword1 -87 -39 105
-execute @e[name=timeline,scores={time=445}] ~~~ particle aw:wild_sword2 -87 -39 105
-execute @e[name=timeline,scores={time=445}] ~~~ particle aw:wild_sword3 -87 -39 105
-execute @e[name=timeline,scores={time=445}] ~~~ particle aw:wild_sword4 -87 -35 105
-execute @e[name=timeline,scores={time=450}] ~~~ particle aw:wild_sword4 -87 -30 105
-execute @e[name=timeline,scores={time=455}] ~~~ particle aw:wild_sword4 -87 -25 105
-execute @e[name=timeline,scores={time=460}] ~~~ particle aw:wild_sword4 -87 -20 105
-execute @e[name=timeline,scores={time=465}] ~~~ particle aw:wild_sword4 -87 -15 105
-execute @e[name=timeline,scores={time=470}] ~~~ particle aw:wild_sword4 -87 -10 105
+execute @e[name=timeline,scores={time=445}] ~~~ particle aw:wild_sword_particle_a -87 -39 105
+execute @e[name=timeline,scores={time=445}] ~~~ particle aw:wild_sword_particle_b -87 -39 105
+execute @e[name=timeline,scores={time=445}] ~~~ particle aw:wild_sword_particle_c -87 -39 105
+execute @e[name=timeline,scores={time=445}] ~~~ particle aw:wild_sword_particle_d -87 -35 105
+execute @e[name=timeline,scores={time=450}] ~~~ particle aw:wild_sword_particle_d -87 -30 105
+execute @e[name=timeline,scores={time=455}] ~~~ particle aw:wild_sword_particle_d -87 -25 105
+execute @e[name=timeline,scores={time=460}] ~~~ particle aw:wild_sword_particle_d -87 -20 105
+execute @e[name=timeline,scores={time=465}] ~~~ particle aw:wild_sword_particle_d -87 -15 105
+execute @e[name=timeline,scores={time=470}] ~~~ particle aw:wild_sword_particle_d -87 -10 105
 
 # --- [760-8*20=600] 播放剑拔出的音乐 ---
 execute @e[name=timeline,scores={time=600}] ~~~ execute @a ~~~ playsound aw.sword_temple_drawing_sword @s ~~~ 0.5 1

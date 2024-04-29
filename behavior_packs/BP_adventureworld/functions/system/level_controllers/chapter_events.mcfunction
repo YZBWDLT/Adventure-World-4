@@ -31,3 +31,6 @@ execute @e[name=gameId,scores={data=300..699}] ~~~ execute @e[name=playedSecond,
 # --- 地图重置 ---
 ## 当检测到玩家在重置区后，重置地图
 execute @a[x=-90,y=0,z=-16,dx=4,dy=4,dz=4,c=1] ~~~ function levels/open/start_from_end
+
+# --- 强制关闭随机刻，防止场景被破坏 ---
+gamerule randomtickspeed 0

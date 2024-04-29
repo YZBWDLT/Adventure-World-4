@@ -3,3 +3,4 @@
 
 function lib/init/gamerule
 execute @e[name=developerMode,scores={data=0}] ~~~ gamemode adventure @a
+weather clear

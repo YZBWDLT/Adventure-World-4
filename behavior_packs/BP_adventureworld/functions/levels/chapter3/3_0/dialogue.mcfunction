@@ -19,7 +19,8 @@ execute @e[name=dialogue,scores={active=2,time=1060}] ~~~ tellraw @a {"rawtext":
 execute @e[name=dialogue,scores={active=2,time=1060}] ~~~ function lib/states/dialogue/disable
 
 # --- 未锁定视角的剧情线 ---
-execute @e[name=dialogue,scores={active=1,time=1}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7据说这个地方比较容易迷路，你多留个心眼啊！"}]}
+execute @e[name=dialogue,scores={active=1,time=1}] ~~~ execute @e[name=isNetease,scores={data=0}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7据说这个地方比较容易迷路，你多留个心眼啊！"}]}
+execute @e[name=dialogue,scores={active=1,time=1}] ~~~ execute @e[name=isNetease,scores={data=1}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7据说这个地方比较容易迷路......你多留个心眼啊！"}]}
 execute @e[name=dialogue,scores={active=1,time=80}] ~~~ tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7你怎么知道我已经迷路了......"}]}
 execute @e[name=dialogue,scores={active=1,time=160}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7哦对了，这里还说【海之仙灵将赋予勇者以劈水之力】，也许存在能让你在水下游得更自在的力量哦。"}]}
 execute @e[name=dialogue,scores={active=1,time=240}] ~~~ tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7好awa，我会多加利用的！"}]}

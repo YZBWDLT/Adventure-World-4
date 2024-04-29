@@ -6,7 +6,8 @@
 ## 村庄剧情
 execute @e[name=gameId,scores={data=3..7,data=!5}] ~~~ music play aw.music.village 1 0 loop
 execute @e[name=gameId,scores={data=5}] ~~~ music play aw.music.village.time_temple 1 0 loop
-execute @e[name=gameId,scores={data=8..9}] ~~~ music play aw.music.village.sword_trial_entrance 1 0 loop
+#### ↓ 该命令中网易把8..9屏蔽了，查询得知8.9是屏蔽词，网易你脑瘫吧？你告诉我8.9有什么特殊含义？
+execute @e[name=gameId,scores={data=8..10,data=!10}] ~~~ music play aw.music.village.sword_trial_entrance 1 0 loop
 
 execute @e[name=gameId,scores={data=99}] ~~~ music play aw.music.village.sword_trial_entrance 1 0 loop
 
@@ -16,7 +17,7 @@ execute @e[name=gameId,scores={data=200..299,data=!230}] ~~~ music play aw.music
 execute @e[name=gameId,scores={data=300..399,data=!340}] ~~~ music play aw.music.temple.lake 1 0 loop
 execute @e[name=gameId,scores={data=400..599,data=!440}] ~~~ music play aw.music.temple.freeze 1 0 loop
 execute @e[name=gameId,scores={data=600..699,data=!640}] ~~~ music play aw.music.temple.mountain 1 0 loop
-execute @e[name=gameId,scores={data=709..731,data=!750}] ~~~ music play aw.music.temple.final 1 0 loop
+execute @e[name=gameId,scores={data=709..732,data=!750}] ~~~ music play aw.music.temple.final 1 0 loop
 execute @e[name=gameId,scores={data=740..751}] ~~~ music play aw.music.temple.final.level_4 1 0 loop
 
 ## 剑之神殿

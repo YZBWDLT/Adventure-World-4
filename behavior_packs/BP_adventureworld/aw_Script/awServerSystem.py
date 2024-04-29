@@ -15,16 +15,18 @@ class awServerSystem(ServerSystem):
         self.ListenForEvent(ns, sn, 'ItemReleaseUsingServerEvent', self, self.ItemReleaseUsingServerEvent)
 
     def ItemReleaseUsingServerEvent(self, args):
-        p_id = args['playerId']
-        rot = CompFactory.CreateRot(p_id).GetRot()
-        rot = (rot[0] - 0, rot[1])
-        param = {
-            'power': 1.0,
-            'gravity': 0.0,
-            'direction': serverApi.GetDirFromRot(rot)
-        }
-        projectileComp = CompFactory.CreateProjectile(p_id)
-        e_id = projectileComp.CreateProjectileEntity(p_id, 'aw:hookshot', param)
+        itemName = args['itemDict']['newItemName']
+        if itemName == 'aw:hookshot':
+            p_id = args['playerId']
+            rot = CompFactory.CreateRot(p_id).GetRot()
+            rot = (rot[0] - 0, rot[1])
+            param = {
+                'power': 1.0,
+                'gravity': 0.0,
+                'direction': serverApi.GetDirFromRot(rot)
+            }
+            projectileComp = CompFactory.CreateProjectile(p_id)
+            e_id = projectileComp.CreateProjectileEntity(p_id, 'aw:hookshot', param)
 
         # OnScriptTickServer的回调函数，会在引擎tick的时候调用，1秒30帧（被调用30次）
     def OnTickServer(self):

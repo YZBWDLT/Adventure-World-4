@@ -2,7 +2,8 @@
 # 关卡完成后执行
 
 ## --- 设置level分值 ---
-scoreboard players set @e[name=gameId] data 731
+execute @e[name=isNetease,scores={data=0}] ~~~ scoreboard players set @e[name=gameId] data 731
+execute @e[name=isNetease,scores={data=1}] ~~~ scoreboard players set @e[name=gameId] data 732
 
 ## --- tellraw提示 ---
 tellraw @a {"rawtext":[{"text":"§l§a7-3已完成！§r"}]}

@@ -22,7 +22,9 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a501 §75-0"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a601 §76-0 | §a610~611 §76-1 | §a620~621 §76-2 | §a630~631 §76-3 | §a640~641 §76-4"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a601 §76-0 | §a610~611 §76-1 | §a620~621 §76-2 | §a630~631 §76-3 | §a640~641 §76-4"}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a701 §7剑之神殿动画进行时"}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a709~711 §77-1 | §a720~721 §77-2 | §a730~731 §77-3 | §a740~741 §77-4 | §a750~751 §77-5"}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a801 §7"}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a709~711 §77-1 | §a720~721 §77-2 | §a730~732 §77-3 | §a740~741 §77-4 | §a750~751 §77-5"}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§a1001~1004 §7结束特效"}]}
+
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§7* 备注：ID为732是Netease版本独占的ID，因为众所周知的原因，732-1这个数字在Netease版本会被屏蔽，国际版仍采用732-1这个ID。"}]}
 
 scoreboard players set @s temp 0

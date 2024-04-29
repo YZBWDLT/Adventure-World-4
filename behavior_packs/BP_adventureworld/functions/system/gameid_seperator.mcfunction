@@ -25,3 +25,12 @@ scoreboard players operation @e[name=chapter] data /= "100" temp
 ## --- 移除辅助值 ---
 scoreboard players reset "10" temp
 scoreboard players reset "100" temp
+
+## --- 网易独有适配 ---
+## 解释：因为网易会把一个关键的data.gameId=731屏蔽掉，因此网易版不得不用732来代表这个状态
+## 但是末位数变成2会导致很多命令无法执行，因此人为强制把data.levelCompleted改成1
+## 谢谢你，网易，给我带来这堆麻烦的破事
+## 勿忘国耻，铭记历史
+## 但也不是你这么铭记的吧，真够恶心的。
+
+execute @e[name=isNetease,scores={data=1}] ~~~ execute @e[name=gameId,scores={data=731}] ~~~ scoreboard players set @e[name=levelCompleted] data 1
