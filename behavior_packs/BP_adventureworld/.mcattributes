@@ -1,6 +1,0 @@
-diagnostic.disable.minecraft.commands.execute.deprecated=true
-diagnostic.disable.behaviorpack.loot_table.missing=true
-diagnostic.disable.behaviorpack.mcfunction.missing=true
-diagnostic.disable.minecraft.mode.gamemodes.invalid=true
-diagnostic.disable.minecraft.commands.fill.syntax=true
-diagnostic.disable.behaviorpack.entity.component.missing=true

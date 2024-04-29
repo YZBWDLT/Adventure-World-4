@@ -10,3 +10,5 @@ diagnostic.disable.minecraft.language.duplicate=true
 diagnostic.disable.resourcepack.sound.missing=true
 diagnostic.disable.behaviorpack.block.states.invalid=true
 diagnostic.disable.minecraft.commands.structure.syntax=true
+diagnostic.disable.behaviorpack.loot_table.missing=true
+diagnostic.disable.behaviorpack.mcfunction.missing=true
