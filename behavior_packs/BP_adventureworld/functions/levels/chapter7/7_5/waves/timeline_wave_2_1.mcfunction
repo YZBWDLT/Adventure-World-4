@@ -45,7 +45,8 @@ execute @e[name=timeline,scores={temp=0}] ~~~ function lib/title
 ### ~ 技能1：召唤怪物 ~
 execute @e[family=evoker,scores={temp=1..20}] ~~~ execute @e[name=timeline,scores={temp=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c当心！即将有怪物生成！"}]}
 ### ~ 技能2：空袭 ~
-execute @e[family=evoker,scores={temp=21..40}] ~~~ execute @e[name=timeline,scores={temp=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c注意头顶！及时躲到掩体下面！"}]}
+execute @e[family=evoker,scores={temp=21..40}] ~~~ execute @e[name=timeline,scores={temp=0}] ~~~ execute @e[name=isNetease,scores={data=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c注意头顶！及时躲到掩体下面！"}]}
+execute @e[family=evoker,scores={temp=21..40}] ~~~ execute @e[name=timeline,scores={temp=1}] ~~~ execute @e[name=isNetease,scores={data=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c注意头顶！及时躲到掩体下方！"}]}
 ### ~ 技能3：岩浆上涨 ~
 execute @e[family=evoker,scores={temp=41..60}] ~~~ execute @e[name=timeline,scores={temp=0}] ~~~ titleraw @a subtitle {"rawtext":[{"translate":"§c熔岩上涨！及时躲到高处！"}]}
 ### ~ 技能4：回血 ~

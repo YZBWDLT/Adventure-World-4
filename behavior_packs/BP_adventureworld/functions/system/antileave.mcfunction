@@ -23,7 +23,8 @@ execute @a[scores={isOnline=0}] ~~~ function lib/music_player
 
 # --- 如果是网易版进入，则纠正游戏模式和游戏规则 ---
 execute @a[scores={isOnline=0}] ~~~ function lib/get_data/using_client
-execute @a[scores={isOnline=0}] ~~~ execute @e[name=isNetease,scores={data=1}] ~~~ function lib/correct_data
+execute @a[scores={isOnline=0}] ~~~ scoreboard players operation @s temp = isNetease data
+execute @a[scores={isOnline=0,temp=1}] ~~~ function lib/correct_data
 
 # --- 进行提醒 ---
 execute @a[scores={isOnline=0}] ~~~ tellraw @s {"rawtext":[{"translate":"§e检测到您重新进入游戏，已将您传送到附近的重生点"}]}

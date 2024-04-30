@@ -46,5 +46,8 @@ execute @s[name="longlongxiaotao"] ~~~ scoreboard players set @e[name=dialogue] 
 ### 获取一次玩家数目
 function lib/get_data/player_amount
 
+### 获取一次难度
+function lib/get_data/difficulty
+
 ### 取消其交互状态
 tag @s remove interacted

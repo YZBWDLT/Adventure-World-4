@@ -75,11 +75,11 @@ execute @a[c=1] ~~~ detect -18 2 86 polished_blackstone_button 10 setblock -18 2
 
 # --- 当玩家和张宇交互后 ---
 # 启用对话，状态3
-execute @e[name="张宇",tag=interacted] ~~~ scoreboard players set @e[name=dialogue] active 3
+execute @e[name=timeline,scores={time=0}] ~~~ execute @e[name="张宇",tag=interacted] ~~~ scoreboard players set @e[name=dialogue] active 3
 # 启用时间线
-execute @e[name="张宇",tag=interacted] ~~~ function lib/states/timeline/enable
+execute @e[name=timeline,scores={time=0}] ~~~ execute @e[name="张宇",tag=interacted] ~~~ function lib/states/timeline/enable
 # 移除张宇的interacted标签
-execute @e[name="张宇",tag=interacted] ~~~ tag @s remove interacted
+execute @e[name=timeline,scores={time=0}] ~~~ execute @e[name="张宇",tag=interacted] ~~~ tag @s remove interacted
 # 启用对话后第10刻，施加失明
 execute @e[name=timeline,scores={time=10}] ~~~ effect @a blindness 4 0 true
 # 启用对话后第50刻，传送到小黑屋

@@ -6,7 +6,7 @@
             "category": "Equipment"
         },
         "components": {
-            "minecraft:cooldown": { "duration": 1.5, "category": "hookshot" },
+            "minecraft:cooldown": { "duration": 1, "category": "hookshot" },
             "minecraft:display_name": { "value": "item.aw:hookshot.name" },
             "minecraft:hand_equipped": true,
             "minecraft:icon": { "texture": "hookshot" },

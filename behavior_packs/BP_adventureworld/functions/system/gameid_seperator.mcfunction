@@ -33,4 +33,4 @@ scoreboard players reset "100" temp
 ## 勿忘国耻，铭记历史
 ## 但也不是你这么铭记的吧，真够恶心的。
 
-execute @e[name=isNetease,scores={data=1}] ~~~ execute @e[name=gameId,scores={data=731}] ~~~ scoreboard players set @e[name=levelCompleted] data 1
+execute @e[name=isNetease,scores={data=1}] ~~~ execute @e[name=gameId,scores={data=732}] ~~~ scoreboard players set @e[name=levelCompleted] data 1

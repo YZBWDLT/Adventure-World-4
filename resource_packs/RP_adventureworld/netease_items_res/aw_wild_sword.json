@@ -3,7 +3,7 @@
     "minecraft:item": {
         "components": {
             "minecraft:hover_text_color": "aqua",
-            "minecraft:icon": "aw_wild_sword"
+            "minecraft:icon": "wild_sword"
         },
         "description": {
             "category": "Equipment",

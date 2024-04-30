@@ -2,5 +2,5 @@
 # 仅网易版
 
 function lib/init/gamerule
-execute @e[name=developerMode,scores={data=0}] ~~~ gamemode adventure @a
+gamemode adventure @s
 weather clear

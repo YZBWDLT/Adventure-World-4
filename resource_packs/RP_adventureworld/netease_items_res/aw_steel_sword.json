@@ -2,7 +2,7 @@
     "format_version": "1.10",
     "minecraft:item": {
         "components": {
-            "minecraft:icon": "aw_steel_sword"
+            "minecraft:icon": "steel_sword"
         },
         "description": {
             "category": "Equipment",

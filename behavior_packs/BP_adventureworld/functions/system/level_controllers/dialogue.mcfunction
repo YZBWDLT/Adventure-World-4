@@ -62,6 +62,7 @@ execute @e[name=gameId,scores={data=711}] ~~~ function levels/chapter7/7_1/dialo
 execute @e[name=gameId,scores={data=721}] ~~~ function levels/chapter7/7_2/dialogue
 execute @e[name=isNetease,scores={data=0}] ~~~ execute @e[name=gameId,scores={data=731}] ~~~ function levels/chapter7/7_3/dialogue
 execute @e[name=isNetease,scores={data=1}] ~~~ execute @e[name=gameId,scores={data=732}] ~~~ function levels/chapter7/7_3/dialogue
+execute @e[name=gameId,scores={data=740..741}] ~~~ function levels/chapter7/7_4/dialogue
 
 execute @e[name=gameId,scores={data=1001}] ~~~ function levels/end/stage_1/dialogue
 execute @e[name=gameId,scores={data=1002}] ~~~ function levels/end/stage_2/dialogue

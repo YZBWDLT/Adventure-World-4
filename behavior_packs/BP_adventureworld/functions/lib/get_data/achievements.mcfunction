@@ -3,7 +3,7 @@
 # --- 单人时 ---
 
 # 神剑的恩惠 - 通过剑之试炼
-execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ scoreboard players set achievement.singlePlayer.completeMap record 1
+execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ scoreboard players set achievement.singlePlayer_completeMap record 1
 execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ tellraw @a {"rawtext":[{"translate":"你已获得成就 §b[神剑的恩惠]§f ！"}]}
 
 # 让田英睡觉去吧！ - 不死亡通过剑之试炼
@@ -32,7 +32,7 @@ execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a[tag=!potionUsed
 
 # --- 多人时 ---
 # 齐心协力 - 通过剑之试炼
-execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ scoreboard players set achievement.multiPlayer.completeMap record 1
+execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ scoreboard players set achievement.multiPlayer_completeMap record 1
 execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ tellraw @a {"rawtext":[{"translate":"你们已获得成就 §b[齐心协力]§f ！"}]}
 
 # 人多力量大 - 不团灭通过剑之试炼
