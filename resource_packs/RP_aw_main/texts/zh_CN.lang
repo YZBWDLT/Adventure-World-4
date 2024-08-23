@@ -1,9 +1,9 @@
 ## 下面为Addon专属内容的键文本翻译。作者 一只卑微的量筒。
 
 ### 物品类
-item.aw:normal_sword.name=普通剑
-item.aw:steel_sword.name=钢剑
-item.aw:wild_sword.name=旷野之剑
+item.aw:normal_sword=普通剑
+item.aw:steel_sword=钢剑
+item.aw:wild_sword=旷野之剑
 item.aw:diamond_helmet=钻石头盔
 item.aw:diamond_chestplate=钻石胸甲
 item.aw:diamond_leggings=钻石护腿

@@ -1,9 +1,9 @@
 ## Below are key text translations of exclusive content of Addon. By YZBWDLT. 
 
 ### Items
-item.aw:normal_sword.name=Normal Sword
-item.aw:steel_sword.name=Steel Sword
-item.aw:wild_sword.name=§eWild Sword
+item.aw:normal_sword=Normal Sword
+item.aw:steel_sword=Steel Sword
+item.aw:wild_sword=Wild Sword
 item.aw:diamond_helmet=Diamond Helmet
 item.aw:diamond_chestplate=Diamond Chestplate
 item.aw:diamond_leggings=Diamond Leggings
