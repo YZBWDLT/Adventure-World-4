@@ -1,7 +1,7 @@
 {
     "format_version": 2,
     "header": {
-        "name": "冒险小世界：剑之试炼 资源包（音乐）",
+        "name": "冒险小世界：剑之试炼 资源包（音乐包）",
         "description": "一款专门为地图《冒险小世界：剑之试炼》打造的附加包，本包为资源包（音乐）部分。",
         "uuid": "b2ea7ed0-6e54-44b7-91b0-54b01fece004",
         "min_engine_version": [ 1, 18, 0 ],
