@@ -39,7 +39,7 @@ summon aw:text_display "§a查看制作者名单" -25 7 -51
 function lib/show_achievements
 
 ## 重置讲台并显示悬浮文本
-structure load lecture_with_book -27 1 -45
+structure load aw:lecture_with_book -27 1 -45
 summon aw:text_display "§b米云溪的翻译手稿" -27 1.0 -44.9
 
 # --- 重置房间（张宇商店） ---

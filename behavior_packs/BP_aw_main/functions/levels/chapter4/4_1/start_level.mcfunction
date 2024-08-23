@@ -8,7 +8,7 @@ scoreboard players set @e[name=gameId] data 410
 fill -170 17 -19 -170 19 -21 ice
 
 ## --- 加载结构 ---
-structure load 4_1_phase1 -168 16 -23
+structure load aw:4_1_phase1 -168 16 -23
 
 ## --- 设置重生点 ---
 tp @e[family=respawner] -156 17 -23

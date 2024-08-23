@@ -18,7 +18,7 @@ scoreboard players set @e[name=maxWave] data 2
 tp @a -225 15 44
 
 # --- 加载初始结构 ---
-structure load 7_5_phase1 -246 -54 23
+structure load aw:7_5_phase1 -246 -54 23
 
 # --- 启用时间线 ---
 function lib/states/timeline/enable

@@ -14,11 +14,11 @@ execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={t
 execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp3=1..5}] ~~~ execute @a ~~~ playsound bucket.fill_lava @s ~~~ 1 2 
 
 ## 在岩浆上涨剩余0秒后，按照Boss的血量生成岩浆
-execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp2=1..2,temp3=0}] ~~~ structure load 6_4_lava_1 -89 -40 21
-execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp2=3,temp3=0}] ~~~ structure load 6_4_lava_2 -89 -40 21
+execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp2=1..2,temp3=0}] ~~~ structure load aw:6_4_lava_1 -89 -40 21
+execute @e[name=tick,scores={time=5}] ~~~ execute @e[family=blaze_king,scores={temp2=3,temp3=0}] ~~~ structure load aw:6_4_lava_2 -89 -40 21
 
 ## 当岩浆停留了5秒后，移除之并重置倒计时（随机在8~20s之间）
-execute @e[family=blaze_king,scores={temp3=..-6}] ~~~ structure load 6_4_no_lava -89 -40 21
+execute @e[family=blaze_king,scores={temp3=..-6}] ~~~ structure load aw:6_4_no_lava -89 -40 21
 scoreboard players random @e[family=blaze_king,scores={temp3=..-6}] temp3 8 20
 
 # --- 胜利判定 ---

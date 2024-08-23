@@ -16,7 +16,7 @@ execute @e[name=timeline,scores={time=180}] ~~~ effect @a clear
 # --- [380]“炸开”天花板 ---
 execute @e[name=timeline,scores={time=380}] ~~~ particle aw:explosion -87 0 105
 execute @e[name=timeline,scores={time=380}] ~~~ execute @a ~~~ playsound random.explode @s
-execute @e[name=timeline,scores={time=380}] ~~~ structure load 7_0_boomed -91 -1 99
+execute @e[name=timeline,scores={time=380}] ~~~ structure load aw:7_0_boomed -91 -1 99
 
 # --- [440]剑开始拔出 | [445~470]粒子效果&音效 ---
 execute @e[name=timeline,scores={time=440}] ~~~ event entity @e[type=aw:wild_sword] aw:stage_2

@@ -18,4 +18,4 @@ scoreboard players set @e[name=maxWave] data 3
 
 ## --- 清除水并加载1阶段结构 ---
 function levels/chapter3/3_2/water_clear
-structure load 3_2_phase1 -192 -22 -1 0_degrees none false true
+structure load aw:3_2_phase1 -192 -22 -1 0_degrees none false true

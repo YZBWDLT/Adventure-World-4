@@ -16,7 +16,7 @@ function lib/all_levels/start_level
 
 ## --- 加载结构 ---
 function levels/chapter3/3_4/water_clear
-structure load 3_4_layer1_nowater -178 -16 18
+structure load aw:3_4_layer1_nowater -178 -16 18
 
 ## --- 设置本关最大波数 ---
 scoreboard players set @e[name=maxWave] data 4

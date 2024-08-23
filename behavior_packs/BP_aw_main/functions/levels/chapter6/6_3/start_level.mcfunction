@@ -18,4 +18,4 @@ function lib/all_levels/start_level
 scoreboard players set @e[name=maxWave] data 4
 
 ## --- 上涨岩浆 ---
-structure load 6_3_lava_2 -82 -40 -7
+structure load aw:6_3_lava_2 -82 -40 -7

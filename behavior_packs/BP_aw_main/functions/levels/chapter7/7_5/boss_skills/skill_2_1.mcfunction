@@ -6,7 +6,7 @@ execute @e[name=timeline,scores={temp2=20}] ~~~ function levels/chapter7/7_5/bos
 
 # --- 第一轮 ---
 ## 出现掩体
-execute @e[name=timeline,scores={temp2=20}] ~~~ structure load 7_5_shelter -238 -45 31 0_degrees none false true 10.00
+execute @e[name=timeline,scores={temp2=20}] ~~~ structure load aw:7_5_shelter -238 -45 31 0_degrees none false true 10.00
 execute @e[name=timeline,scores={temp2=20}] ~~~ execute @a ~~~ playsound random.levelup @s ~~~ 1 2
 ## 音效提醒
 execute @e[name=timeline,scores={temp2=14..19}] ~~~ function lib/title
@@ -29,7 +29,7 @@ execute @e[name=timeline,scores={temp2=10}] ~~~ fill -238 -45 31 -212 -45 57 air
 
 # --- 第二轮 ---
 ## 出现掩体
-execute @e[name=timeline,scores={temp2=9}] ~~~ structure load 7_5_shelter -238 -45 31 0_degrees none false true 3.00
+execute @e[name=timeline,scores={temp2=9}] ~~~ structure load aw:7_5_shelter -238 -45 31 0_degrees none false true 3.00
 execute @e[name=timeline,scores={temp2=9}] ~~~ execute @a ~~~ playsound random.levelup @s ~~~ 1 2
 ## 音效提醒
 execute @e[name=timeline,scores={temp2=4..8}] ~~~ function lib/title
