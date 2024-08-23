@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aw:potion_hibernation",
+            "category": "Equipment",
+            "register_to_create_menu": true
+        },
+        "components": {
+            "minecraft:max_stack_size": 16,
+            "minecraft:food": { 
+                "nutrition": 0,
+                "saturation_modifier": "poor",
+                "can_always_eat": true,
+                "using_converts_to": "aw:vice_potion_used",
+                "effects": [
+                    { "name": "regeneration", "chance" : 1.0, "duration" : 15, "amplifier" : 3 },
+                    { "name": "slowness", "chance" : 1.0, "duration" : 3, "amplifier" : 3 }
+                ]
+            },
+            "minecraft:use_duration": 16
+        }
+    }
+}

@@ -1,15 +1,15 @@
 {
     "format_version": 2,
     "header": {
-        "name": "冒险小世界：剑之试炼 资源包（中国版包）",
+        "name": "冒险小世界：剑之试炼 资源包",
         "description": "一款专门为地图《冒险小世界：剑之试炼》打造的附加包，本包为资源包部分。",
-        "uuid": "0d6dace6-e3fc-42e1-8913-038127333892",
+        "uuid": "0001ae57-8b64-4962-8e2b-03e40c44e353",
         "min_engine_version": [ 1, 18, 0 ],
-        "version": [ 4, 1, 0 ]
+        "version": [ 4, 0, 0 ]
     },
     "modules": [
         {
-            "uuid": "14e34fb7-4689-491f-8602-6f64a3b5367f",
+            "uuid": "5d0a13c9-10dd-4e00-b61e-35de8cd56a25",
             "version": [ 1, 0, 0 ],
             "type": "resources"
         }
