@@ -56,7 +56,7 @@ scoreboard players set @a[hasitem={item=aw:normal_sword,quantity=2..}] temp 1
 clear @a[scores={temp=1}] aw:normal_sword
 
 ### 绳枪
-scoreboard players set @a[hasitem={item=aw:hookshot,quantity=2..}] temp 1
+scoreboard players set @a[hasitem={item=aw:hookshot,quantity=3..}] temp 1
 clear @a[scores={temp=1}] aw:hookshot
 
 ### 启用准星

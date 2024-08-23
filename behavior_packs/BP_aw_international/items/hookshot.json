@@ -8,9 +8,10 @@
         "components": {
             "minecraft:hand_equipped": true,
             "minecraft:icon": { "texture": "hookshot" },
-            "minecraft:max_stack_size": 1,
-            "minecraft:shooter": { "ammunition": [ { "item": "aw:hookshot", "use_in_creative": true } ] },
-            "minecraft:projectile": { "minimum_critical_power": 1.0, "projectile_entity": "aw:hookshot" }
+            "minecraft:max_stack_size": 2,
+            "minecraft:throwable": { },
+            "minecraft:projectile": { "minimum_critical_power": 1, "projectile_entity": "aw:hookshot" },
+            "minecraft:cooldown": { "category": "hookshot", "duration": 1 }
         }
     }
 }

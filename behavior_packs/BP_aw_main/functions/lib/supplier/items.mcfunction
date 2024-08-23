@@ -37,7 +37,7 @@ give @s[scores={temp=111..320},hasitem={item=aw:iron_boots,quantity=0}] aw:iron_
 ## --- 绳枪 ---
 ## 1-2结束后给予，始终保留
 ## 配套给予启用准星物品
-give @s[scores={temp=121..999},hasitem={item=aw:hookshot,quantity=0}] aw:hookshot 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+give @s[scores={temp=121..999},hasitem={item=aw:hookshot,quantity=0}] aw:hookshot 2 0 {"item_lock":{"mode":"lock_in_inventory"}}
 give @s[scores={temp=121..999},hasitem={item=aw:enable_crosshair,quantity=0}] aw:enable_crosshair 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 ## --- 铁头盔 ---

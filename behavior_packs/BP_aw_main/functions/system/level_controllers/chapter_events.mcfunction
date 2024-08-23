@@ -34,3 +34,9 @@ execute @a[x=-90,y=0,z=-16,dx=4,dy=4,dz=4,c=1] ~~~ function levels/open/start_fr
 
 # --- 强制关闭随机刻，防止场景被破坏 ---
 gamerule randomtickspeed 0
+
+# --- 强制补全绳枪 ---
+## 仅在1-2通关后，7-5通关前给予，仅限国际版
+## ojng你物品组件改的好啊！throwable现在也会消耗自身，我无语死了都。这没办法了，必须得用SAPI，紧急更新，先将就这么搞吧。
+## 网易那边有E尘大大的绳枪ModAPI，比较稳定，就不魔改了
+execute @e[name=gameId,scores={data=121..751}] ~~~ execute @e[name=isNetease,scores={data=0}] ~~~ give @a[hasitem={item=aw:hookshot,quantity=0..1}] aw:hookshot 1 0 { "item_lock": { "mode": "lock_in_inventory" } }
