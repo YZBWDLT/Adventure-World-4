@@ -26,9 +26,5 @@ function lib/all_levels/bonus
 function lib/states/timeline/enable
 function lib/states/dialogue/enable
 
-# --- 移除haveNoBoss标记 ---
-kill @e[name=haveNoBoss]
-kill @e[family=random_teleporter]
-
 # --- 播放音乐 ---
 function lib/music_player

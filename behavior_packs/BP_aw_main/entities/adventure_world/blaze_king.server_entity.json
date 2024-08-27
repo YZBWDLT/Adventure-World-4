@@ -11,14 +11,13 @@
                 "animate": [
                     "controller_regeneration",
                     "controller_summon_monsters",
-                    "controller_teleport_randomly",
+                    "teleport_randomly",
                     "controller_get_health_phase"
                 ]
             },
             "animations": {
                 "controller_regeneration": "controller.animation.blaze_king.regeneration",
                 "controller_summon_monsters": "controller.animation.blaze_king.summon_monsters",
-                "controller_teleport_randomly": "controller.animation.blaze_king.teleport_randomly",
                 "controller_get_health_phase": "controller.animation.blaze_king.get_health_phase",
 
                 "regeneration": "animation.blaze_king.regeneration",

@@ -5,7 +5,7 @@
             "loop": true,
             "animation_length": 3,
             "timeline": {
-                "2.9": [
+                "2.99": [
                     "/function entities/blaze_king/regeneration"
                 ]
             }
@@ -14,7 +14,7 @@
             "loop": true,
             "animation_length": 1.0,
             "timeline": {
-                "0.0": [
+                "0.99": [
                     "/function entities/blaze_king/summon_monsters"
                 ]
             }
@@ -23,7 +23,7 @@
             "loop": true,
             "animation_length": 1.0,
             "timeline": {
-                "0.0": [
+                "0.99": [
                     "/function entities/blaze_king/teleport_randomly"
                 ]
             }
