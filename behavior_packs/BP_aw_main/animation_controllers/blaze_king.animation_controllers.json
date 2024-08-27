@@ -1,38 +1,6 @@
 {
     "format_version": "1.10.0",
     "animation_controllers": {
-        "controller.animation.blaze_king.regeneration": {
-            "initial_state": "default",
-            "states": {
-                "default": {
-                    "transitions": [
-                        { "regeneration": "query.health / query.max_health <= 1/3" }
-                    ]
-                },
-                "regeneration": {
-                    "animations": [ "regeneration" ],
-                    "transitions": [
-                        { "default": "query.health / query.max_health > 1/3" }
-                    ]
-                }
-            }
-        },
-        "controller.animation.blaze_king.summon_monsters": {
-            "initial_state": "default",
-            "states": {
-                "default": {
-                    "transitions": [
-                        { "summon_monsters": "query.health / query.max_health <= 2/3" }
-                    ]
-                },
-                "summon_monsters": {
-                    "animations": [ "summon_monsters" ],
-                    "transitions": [
-                        { "default": "query.health / query.max_health > 2/3" }
-                    ]
-                }
-            }
-        },
         "controller.animation.blaze_king.get_health_phase": {
             "initial_state": "default",
             "states": {

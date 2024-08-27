@@ -5,4 +5,4 @@
 scoreboard players remove blazeKing.randomTeleport time 1
 
 # --- 随机传送 ---
-execute if score blazeKing.randomTeleport time matches ..0 run function entities/blaze_king/teleport_randomly_2
+execute if score blazeKing.randomTeleport time matches ..0 run function levels/chapter6/6_4/events/teleport_randomly_2
