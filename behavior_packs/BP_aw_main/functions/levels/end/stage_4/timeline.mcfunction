@@ -92,6 +92,7 @@ execute @e[name=timeline,scores={time=100}] ~~~ function levels/end/stage_3/star
 # 当玩家进入神殿后，移除按钮和NPC
 execute @a[x=-18,y=-3,z=99,dx=5,dy=1,dz=3] ~~~ function levels/end/stage_4/on_exit
 execute @a[x=-18,y=-3,z=99,dx=5,dy=1,dz=3] ~~~ kill @e[type=aw:npc]
+execute @a[x=-18,y=-3,z=99,dx=5,dy=1,dz=3] ~~~ kill @e[type=aw:npc_author]
 
 # 当玩家进入神殿后进入重置房间
 execute @a[x=-18,y=-3,z=99,dx=5,dy=1,dz=3] ~~~ tp @a -88 1 -14

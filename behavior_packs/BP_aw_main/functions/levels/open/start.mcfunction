@@ -25,3 +25,7 @@ tellraw @a {"rawtext":[{"translate":"§7为保证游戏体验，请将§b设置 
 # --- 清除玩家物品 ---
 clear @a
 function lib/init/gamerule
+
+# --- 清除作者实体 ---
+kill @e[type=aw:npc_author]
+kill @e[type=aw:npc]
