@@ -1,0 +1,22 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "冒险小世界：剑之试炼 行为包（中国版包）",
+        "description": "一款专门为地图《冒险小世界：剑之试炼》打造的附加包，本包为行为包部分。",
+        "uuid": "0001e734-bdb7-437d-a7f4-197c54f15f6b",
+        "min_engine_version": [ 1, 18, 0 ],
+        "version": [ 4, 1, 0 ]
+    },
+    "modules": [
+        {
+            "uuid": "7417bdc1-6fe5-4cf3-86bf-935119dd40b8",
+            "version": [ 1, 0, 0 ],
+            "type": "data"
+        }
+    ],
+    "metadata": {
+        "authors": [
+            "YZBWDLT", "狂野巴豆"
+        ]
+    }
+}
