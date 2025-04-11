@@ -2,7 +2,7 @@
     "format_version": "1.10.0",
     "minecraft:client_entity": {
         "description": {
-            "identifier": "aw:text_display",
+            "identifier": "aw:spawner",
             "render_controllers": [ "controller.render.marker" ],
             "materials": { "default": "entity_alphatest" },
             "geometry": { "default": "geometry.zombie" },

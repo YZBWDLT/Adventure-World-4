@@ -3,10 +3,10 @@
     "minecraft:client_entity": {
         "description": {
             "identifier": "aw:marker",
+            "render_controllers": [ "controller.render.marker" ],
             "materials": { "default": "entity_alphatest" },
-            "textures": { "default": "textures/entity/marker" },
-            "geometry": { "default": "geometry.marker" },
-            "render_controllers": [ "controller.render.default" ]
+            "geometry": { "default": "geometry.zombie" },
+            "textures": { "default": "textures/entity/zombie/zombie" }
         }
     }
 }
