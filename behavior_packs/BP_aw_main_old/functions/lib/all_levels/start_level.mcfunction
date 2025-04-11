@@ -40,7 +40,7 @@ execute @e[name=failedTimes,scores={data=5..}] ~~~ effect @a health_boost 1000 4
 execute @e[name=failedTimes,scores={data=5..}] ~~~ effect @a resistance 1000 0 true
 
 ## --- 清除多余实体 ---
-kill @e[type=aw:hookshot]
+kill @e[type=aw:wind_pearl]
 kill @e[family=monster]
 
 # --- 当进入游戏时，玩家仍处于对话状态下，则中止这对话 ---

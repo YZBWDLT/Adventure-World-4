@@ -8,10 +8,10 @@ execute @e[name=tick,scores={time=18}] ~~~ kill @e[family=text_display,family=di
 
 ## 获取下一局的难度
 ## 因为加和是利用虚拟值，因此不能直接调用lib/get_data/difficulty方法
-execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ scoreboard players set @e[name=difficulty] data 1
-execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayersAmount,scores={data=2..3}] ~~~ scoreboard players set @e[name=difficulty] data 2
-execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ scoreboard players set @e[name=difficulty] data 3
-execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ scoreboard players set @e[name=difficulty] data 4
+execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayerAmount,scores={data=1}] ~~~ scoreboard players set @e[name=difficulty] data 1
+execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayerAmount,scores={data=2..3}] ~~~ scoreboard players set @e[name=difficulty] data 2
+execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayerAmount,scores={data=4..6}] ~~~ scoreboard players set @e[name=difficulty] data 3
+execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayerAmount,scores={data=7..}] ~~~ scoreboard players set @e[name=difficulty] data 4
 execute @e[name=tick,scores={time=18}] ~~~ scoreboard players operation @e[name=difficulty] data += nextGame.difficultyAdder record
 execute @e[name=tick,scores={time=18}] ~~~ scoreboard players set @e[name=difficulty,scores={data=..0}] data 1
 execute @e[name=tick,scores={time=18}] ~~~ scoreboard players set @e[name=difficulty,scores={data=5..}] data 4
@@ -92,7 +92,6 @@ execute @e[name=timeline,scores={time=100}] ~~~ function levels/end/stage_3/star
 # 当玩家进入神殿后，移除按钮和NPC
 execute @a[x=-18,y=-3,z=99,dx=5,dy=1,dz=3] ~~~ function levels/end/stage_4/on_exit
 execute @a[x=-18,y=-3,z=99,dx=5,dy=1,dz=3] ~~~ kill @e[type=aw:npc]
-execute @a[x=-18,y=-3,z=99,dx=5,dy=1,dz=3] ~~~ kill @e[type=aw:npc_author]
 
 # 当玩家进入神殿后进入重置房间
 execute @a[x=-18,y=-3,z=99,dx=5,dy=1,dz=3] ~~~ tp @a -88 1 -14

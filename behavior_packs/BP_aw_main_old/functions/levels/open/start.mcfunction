@@ -27,5 +27,4 @@ clear @a
 function lib/init/gamerule
 
 # --- 清除作者实体 ---
-kill @e[type=aw:npc_author]
 kill @e[type=aw:npc]

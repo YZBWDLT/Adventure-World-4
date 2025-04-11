@@ -19,5 +19,5 @@ function lib/music_player
 kill @e[type=aw:text_display]
 
 # --- 将田英传送过来以作准备 ---
-event entity @e[name="田英"] should_not_see_player
+event entity @e[name="田英"] "aw:see_player=false"
 tp @e[name="田英"] 33 1 -11 facing @e[name=facingPosition]

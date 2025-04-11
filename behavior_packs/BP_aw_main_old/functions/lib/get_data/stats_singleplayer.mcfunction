@@ -3,8 +3,8 @@
 tellraw @s {"rawtext":[{"translate":"§l===== 结算数据 =====\n"}]}
 tellraw @s {"rawtext":[{"translate":"难度等级 | §a%%s§8/4","with":{"rawtext":[{"score":{"objective":"temp","name":"@e[name=difficulty]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"试炼时长 | §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=playedMinute]"}},{"score":{"objective":"time","name":"@e[name=playedSecond]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"击杀数 | §a%%s","with":{"rawtext":[{"score":{"objective":"killAmount","name":"@s"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"死亡次数 | §a%%s","with":{"rawtext":[{"score":{"objective":"deathTimes","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"击杀数 | §a%%s","with":{"rawtext":[{"score":{"objective":"killCount","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"死亡次数 | §a%%s","with":{"rawtext":[{"score":{"objective":"deathCount","name":"@s"}}]}}]}
 tellraw @s[tag=potionUsed] {"rawtext":[{"translate":"是否使用过药水 | §a是"}]}
 tellraw @s[tag=!potionUsed] {"rawtext":[{"translate":"是否使用过药水 | §a否"}]}
 

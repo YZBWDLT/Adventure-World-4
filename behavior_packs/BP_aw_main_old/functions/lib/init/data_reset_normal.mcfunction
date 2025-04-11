@@ -13,29 +13,17 @@ tickingarea add -129 0 127 -256 0 -64 "gamingArea2"
 scoreboard objectives remove active
 scoreboard objectives remove data
 scoreboard objectives remove time
-scoreboard objectives remove temp
-scoreboard objectives remove temp2
-scoreboard objectives remove temp3
 
-scoreboard objectives remove isAlive
-scoreboard objectives remove deathTimes
-scoreboard objectives remove position
-scoreboard objectives remove killAmount
+scoreboard objectives remove deathCount
+scoreboard objectives remove killCount
 scoreboard objectives remove isOnline
-scoreboard objectives remove hookshot
 
 scoreboard objectives add active dummy "激活数据"
 scoreboard objectives add data dummy "后台数据"
 scoreboard objectives add time dummy "时间数据"
-scoreboard objectives add temp dummy "临时数据"
-scoreboard objectives add temp2 dummy "临时数据2"
-scoreboard objectives add temp3 dummy "临时数据3"
 
-scoreboard objectives add isAlive dummy "存活数据"
-scoreboard objectives add deathTimes dummy "死亡次数"
-scoreboard objectives add position dummy "玩家所在关卡区域ID"
-scoreboard objectives add hookshot dummy "绳枪数据"
-scoreboard objectives add killAmount dummy "击杀数据"
+scoreboard objectives add deathCount dummy "死亡次数"
+scoreboard objectives add killCount dummy "击杀数据"
 scoreboard objectives add isOnline dummy "在线数据"
 
 scoreboard objectives add record dummy "记录数据"
@@ -61,7 +49,7 @@ summon aw:marker "maxWave" -82 1 -2
 ### 实体数目
 summon aw:marker "monsterAmount" -82 1 -2
 summon aw:marker "hookshotAmount" -82 1 -2
-summon aw:marker "alivePlayersAmount" -82 1 -2
+summon aw:marker "alivePlayerAmount" -82 1 -2
 summon aw:marker "maxPlayersAmount" -82 1 -2
 summon aw:marker "realDeadPlayersAmount" -82 1 -2
 summon aw:marker "arrowAmount" -82 1 -2
@@ -100,10 +88,10 @@ summon aw:marker "soundPlayer" -82 1 -2
 ## 玩家值
 scoreboard players set @a isOnline 1
 scoreboard players set @a isAlive 2
-scoreboard players set @a deathTimes 0
+scoreboard players set @a deathCount 0
 scoreboard players set @a position 0
 scoreboard players set @a hookshot -1
-scoreboard players set @a killAmount 0
+scoreboard players set @a killCount 0
 scoreboard players set @a time 0
 tag @a remove potionUsed
 tag @a remove cheated
@@ -111,7 +99,7 @@ tag @a remove cheated
 ## 常规变量值
 scoreboard players set @e[name=monsterAmount] data 0
 scoreboard players set @e[name=hookshotAmount] data 0
-scoreboard players set @e[name=alivePlayersAmount] data 1
+scoreboard players set @e[name=alivePlayerAmount] data 1
 scoreboard players set @e[name=maxPlayersAmount] data 1
 scoreboard players set @e[name=realDeadPlayersAmount] data 0
 scoreboard players set @e[name=arrowAmount] data 0

@@ -14,8 +14,8 @@ tp @e[name=playerPosition] -12 1 88
 tp @e[name=facingPosition] -17 1 95
 
 # --- 禁止米云溪和田英看向玩家 ---
-event entity @e[name="田英"] should_not_see_player
-event entity @e[name="米云溪"] should_not_see_player
+event entity @e[name="田英"] "aw:see_player=false"
+event entity @e[name="米云溪"] "aw:see_player=false"
 
 # --- 重置重生点 ---
 tp @e[family=respawner] -16 1 82

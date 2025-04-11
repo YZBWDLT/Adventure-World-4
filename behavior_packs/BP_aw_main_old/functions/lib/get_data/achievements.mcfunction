@@ -7,8 +7,8 @@ execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ scoreboard players set ach
 execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ tellraw @a {"rawtext":[{"translate":"你已获得成就 §b[神剑的恩惠]§f ！"}]}
 
 # 让田英睡觉去吧！ - 不死亡通过剑之试炼
-execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a[scores={deathTimes=0}] ~~~ scoreboard players set achievement.singlePlayer.notDied record 1
-execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a[scores={deathTimes=0}] ~~~ tellraw @a {"rawtext":[{"translate":"你已获得成就 §b[让田英睡觉去吧！]§f ！"}]}
+execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a[scores={deathCount=0}] ~~~ scoreboard players set achievement.singlePlayer.notDied record 1
+execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @a[scores={deathCount=0}] ~~~ tellraw @a {"rawtext":[{"translate":"你已获得成就 §b[让田英睡觉去吧！]§f ！"}]}
 
 # 挑战自我 - 通过2级或更高难度的试炼
 execute @e[name=maxPlayersAmount,scores={data=1}] ~~~ execute @e[name=difficultyAdder,scores={data=1..3}] ~~~ scoreboard players set achievement.singlePlayer.difficulty2 record 1
@@ -40,12 +40,12 @@ execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @e[name=allFaile
 execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @e[name=allFailedTimes,scores={data=0}] ~~~ tellraw @a {"rawtext":[{"translate":"你们已获得成就 §b[人多力量大]§f ！"}]}
 
 # 躺赢 - 有玩家的击杀数小于50
-execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a[scores={killAmount=..50}] ~~~ scoreboard players set achievement.multiPlayer.killLessThan50 record 1
-execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a[scores={killAmount=..50},c=1] ~~~ tellraw @a {"rawtext":[{"translate":"你们已获得成就 §b[躺赢]§f ！"}]}
+execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a[scores={killCount=..50}] ~~~ scoreboard players set achievement.multiPlayer.killLessThan50 record 1
+execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a[scores={killCount=..50},c=1] ~~~ tellraw @a {"rawtext":[{"translate":"你们已获得成就 §b[躺赢]§f ！"}]}
 
 # 全靠我带飞 - 有玩家的击杀数大于200
-execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a[scores={killAmount=200..}] ~~~ scoreboard players set achievement.multiPlayer.killMoreThan200 record 1
-execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a[scores={killAmount=200..},c=1] ~~~ tellraw @a {"rawtext":[{"translate":"你们已获得成就 §b[全靠我带飞]§f ！"}]}
+execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a[scores={killCount=200..}] ~~~ scoreboard players set achievement.multiPlayer.killMoreThan200 record 1
+execute @e[name=maxPlayersAmount,scores={data=2..}] ~~~ execute @a[scores={killCount=200..},c=1] ~~~ tellraw @a {"rawtext":[{"translate":"你们已获得成就 §b[全靠我带飞]§f ！"}]}
 
 # 挑战极限 - 通过4级难度的试炼
 function lib/get_data/difficulty

@@ -1,10 +1,6 @@
 diagnostic.disable.minecraft.mode.gamemodes.invalid=true
-diagnostic.disable.minecraft.commands.execute.deprecated=true
-diagnostic.disable.minecraft.commands.summon.syntax=true
-diagnostic.disable.minecraft.commands.fill.syntax=true
 diagnostic.disable.behaviorpack.entity.component.missing=true
 diagnostic.disable.minecraft.animation.unused=true
-diagnostic.disable.minecraft.commands.enchant.syntax=true
 diagnostic.disable.minecraft.language.duplicate=true
 diagnostic.disable.minecraft.language.duplicate=true
 diagnostic.disable.resourcepack.sound.missing=true
@@ -18,3 +14,4 @@ diagnostic.disable.behaviorpack.item.components.deprecated=true
 diagnostic.disable.behaviorpack.item.component.missing=true
 diagnostic.disable.behaviorpack.block.components.deprecated=true
 diagnostic.disable.minecraft.format.path.length=true
+diagnostic.disable.behaviorpack.item.components.texture_not_found=true

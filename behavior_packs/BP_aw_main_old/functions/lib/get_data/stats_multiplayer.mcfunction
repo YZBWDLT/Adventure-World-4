@@ -7,8 +7,8 @@ function lib/get_data/difficulty
 tellraw @s {"rawtext":[{"translate":"§l===== 结算数据 =====\n"}]}
 tellraw @s {"rawtext":[{"translate":"难度等级 | §a%%s§8/4","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=difficulty]"}}]}}]}
 tellraw @s {"rawtext":[{"translate":"试炼时长 | §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=playedMinute]"}},{"score":{"objective":"time","name":"@e[name=playedSecond]"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"击杀数 | §a%%s","with":{"rawtext":[{"score":{"objective":"killAmount","name":"@s"}}]}}]}
-tellraw @s {"rawtext":[{"translate":"死亡次数 | §a%%s","with":{"rawtext":[{"score":{"objective":"deathTimes","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"击杀数 | §a%%s","with":{"rawtext":[{"score":{"objective":"killCount","name":"@s"}}]}}]}
+tellraw @s {"rawtext":[{"translate":"死亡次数 | §a%%s","with":{"rawtext":[{"score":{"objective":"deathCount","name":"@s"}}]}}]}
 
 # --- 计算最快记录 ---
 # 若当前值分钟数小，则直接取两值；
@@ -48,10 +48,10 @@ execute @e[name=difficulty,scores={data=4}] ~~~ execute @e[name=playedMinute,sco
 # --- 全体玩家数据 ---
 
 tellraw @s {"rawtext":[{"translate":"§l===== 击杀数 =====\n"}]}
-execute @a ~~~ tellraw @a {"rawtext":[{"translate":"%%s §8（击杀） §f| §a%%s","with":{"rawtext":[{"selector":"@s"},{"score":{"objective":"killAmount","name":"@s"}}]}}]}
+execute @a ~~~ tellraw @a {"rawtext":[{"translate":"%%s §8（击杀） §f| §a%%s","with":{"rawtext":[{"selector":"@s"},{"score":{"objective":"killCount","name":"@s"}}]}}]}
 
 tellraw @s {"rawtext":[{"translate":"§l===== 死亡数 =====\n"}]}
-execute @a ~~~ tellraw @a {"rawtext":[{"translate":"%%s §8（死亡） §f| §a%%s","with":{"rawtext":[{"selector":"@s"},{"score":{"objective":"deathTimes","name":"@s"}}]}}]}
+execute @a ~~~ tellraw @a {"rawtext":[{"translate":"%%s §8（死亡） §f| §a%%s","with":{"rawtext":[{"selector":"@s"},{"score":{"objective":"deathCount","name":"@s"}}]}}]}
 
 tellraw @s {"rawtext":[{"translate":"§l===== 记录数据 =====\n"}]}
 tellraw @s {"rawtext":[{"translate":"通关次数 | §a%%s","with":{"rawtext":[{"score":{"objective":"record","name":"mapCompletedTimes"}}]}}]}

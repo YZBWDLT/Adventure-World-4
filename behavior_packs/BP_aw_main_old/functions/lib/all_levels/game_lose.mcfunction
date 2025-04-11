@@ -28,7 +28,7 @@ function lib/states/timeline/disable
 ## --- 清除多余实体 ---
 kill @e[family=summoner]
 kill @e[family=monster]
-kill @e[family=hookshot]
+kill @e[type=aw:wind_pearl]
 
 # --- 将关卡完成模式改为立即完成 ---
 function lib/states/level_complete_delay/disable

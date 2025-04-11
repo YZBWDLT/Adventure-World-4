@@ -4,8 +4,8 @@
         "name": "冒险小世界：剑之试炼 行为包（主包新包）",
         "description": "一款专门为地图《冒险小世界：剑之试炼》打造的附加包，本包为行为包部分。",
         "uuid": "d81a7cef-20f3-4880-be57-87fcd0c3875d",
-        "min_engine_version": [ 1, 20, 10 ],
-        "version": [ 4, 1, 0 ]
+        "min_engine_version": [ 1, 20, 50 ],
+        "version": [ 4, 2, 0 ]
     },
     "modules": [
         {

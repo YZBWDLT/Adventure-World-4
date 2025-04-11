@@ -12,7 +12,7 @@ execute @e[name=timeline,scores={active=1,time=780}] ~~~ tp @e[name=facingPositi
 
 # 田英行走动画
 execute @e[name=timeline,scores={active=1,time=1040..1140}] ~~~ execute @e[name="田英"] ~~~ tp @s ~~~-0.1
-execute @e[name=timeline,scores={active=1,time=1140}] ~~~ event entity @e[name="田英"] should_see_player
+execute @e[name=timeline,scores={active=1,time=1140}] ~~~ event entity @e[name="田英"] "aw:see_player=true"
 
 # 时间线结束
 execute @e[name=timeline,scores={active=1,time=1141}] ~~~ function lib/states/timeline/enable_without_flowing

@@ -32,12 +32,12 @@ execute @e[name=playedMinute,scores={time=151..165}] ~~~ scoreboard players add 
 ## 0   1   2~3   4~6   7~10   11~15
 ## +60 +50 +40   +30   +20    +10
 
-execute @a[c=1,scores={deathTimes=0}] ~~~ scoreboard players add @e[name=score] data 60
-execute @a[c=1,scores={deathTimes=1}] ~~~ scoreboard players add @e[name=score] data 50
-execute @a[c=1,scores={deathTimes=2..3}] ~~~ scoreboard players add @e[name=score] data 40
-execute @a[c=1,scores={deathTimes=4..6}] ~~~ scoreboard players add @e[name=score] data 30
-execute @a[c=1,scores={deathTimes=7..10}] ~~~ scoreboard players add @e[name=score] data 20
-execute @a[c=1,scores={deathTimes=11..15}] ~~~ scoreboard players add @e[name=score] data 10
+execute @a[c=1,scores={deathCount=0}] ~~~ scoreboard players add @e[name=score] data 60
+execute @a[c=1,scores={deathCount=1}] ~~~ scoreboard players add @e[name=score] data 50
+execute @a[c=1,scores={deathCount=2..3}] ~~~ scoreboard players add @e[name=score] data 40
+execute @a[c=1,scores={deathCount=4..6}] ~~~ scoreboard players add @e[name=score] data 30
+execute @a[c=1,scores={deathCount=7..10}] ~~~ scoreboard players add @e[name=score] data 20
+execute @a[c=1,scores={deathCount=11..15}] ~~~ scoreboard players add @e[name=score] data 10
 
 # --- 使用药水加分 ---
 ## 使用过   未使用过

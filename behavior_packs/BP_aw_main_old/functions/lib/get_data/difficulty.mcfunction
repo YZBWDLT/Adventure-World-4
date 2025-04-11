@@ -12,10 +12,10 @@
 function lib/get_data/player_amount
 
 # --- 按照玩家人数设置游戏难度基值 ---
-execute @e[name=alivePlayersAmount,scores={data=1}] ~~~ scoreboard players set @e[name=difficulty] data 1
-execute @e[name=alivePlayersAmount,scores={data=2..3}] ~~~ scoreboard players set @e[name=difficulty] data 2
-execute @e[name=alivePlayersAmount,scores={data=4..6}] ~~~ scoreboard players set @e[name=difficulty] data 3
-execute @e[name=alivePlayersAmount,scores={data=7..}] ~~~ scoreboard players set @e[name=difficulty] data 4
+execute @e[name=alivePlayerAmount,scores={data=1}] ~~~ scoreboard players set @e[name=difficulty] data 1
+execute @e[name=alivePlayerAmount,scores={data=2..3}] ~~~ scoreboard players set @e[name=difficulty] data 2
+execute @e[name=alivePlayerAmount,scores={data=4..6}] ~~~ scoreboard players set @e[name=difficulty] data 3
+execute @e[name=alivePlayerAmount,scores={data=7..}] ~~~ scoreboard players set @e[name=difficulty] data 4
 
 # --- 将难度加和计算进去 ---
 scoreboard players operation @e[name=difficulty] data += @e[name=difficultyAdder] data

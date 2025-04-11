@@ -19,7 +19,7 @@ function lib/get_data/player_amount
 # 3. 不处于关卡延迟完成时间内（即关卡延迟完成时间为0）（若处于延迟时间内则证明还在等待状态）；
 # 4. 至少存在1个玩家（防止玩家退出重进后被认为是“无玩家”的）
 # 若完成上述3个条件，则此时可以认为是“完成本波”的。
-execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ function lib/wave_completed
+execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayerAmount,scores={data=1..}] ~~~ function lib/wave_completed
 
 # --- 判定玩家完成本关 / 开启下一波 ---
 # 【该模块需要基于“完成本波”的前提下执行】
@@ -27,13 +27,13 @@ execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummon
 # 1. 若当前波数大于最大波数，执行通关函数。
 # 2. 若当前波数小于最大波数，执行怪物设定函数以生成怪物生成器。
 
-execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=wave] ~~~ scoreboard players operation @s temp = @s data
-execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=wave] ~~~ scoreboard players operation @s temp -= @e[name=maxWave] data
+execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayerAmount,scores={data=1..}] ~~~ execute @e[name=wave] ~~~ scoreboard players operation @s temp = @s data
+execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayerAmount,scores={data=1..}] ~~~ execute @e[name=wave] ~~~ scoreboard players operation @s temp -= @e[name=maxWave] data
 ## 当当前波数小于或等于最大波数时，触发怪物设定函数以开启下一波
-execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=wave,scores={temp=..0}] ~~~ function levels/monster_settings_functions
-execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=wave,scores={temp=..0}] ~~~ function lib/states/monster_summon_delay/enable_40ticks
+execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayerAmount,scores={data=1..}] ~~~ execute @e[name=wave,scores={temp=..0}] ~~~ function levels/monster_settings_functions
+execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayerAmount,scores={data=1..}] ~~~ execute @e[name=wave,scores={temp=..0}] ~~~ function lib/states/monster_summon_delay/enable_40ticks
 ## 当当前波数大于最大波数时，触发通关函数
-execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayersAmount,scores={data=1..}] ~~~ execute @e[name=wave,scores={temp=1..}] ~~~ function levels/bonus_functions
+execute @e[name=monsterAmount,scores={data=0}] ~~~ execute @e[name=monsterSummonDelay,scores={active=0}] ~~~ execute @e[name=levelCompleteDelay,scores={time=0}] ~~~ execute @e[name=alivePlayerAmount,scores={data=1..}] ~~~ execute @e[name=wave,scores={temp=1..}] ~~~ function levels/bonus_functions
 
 # --- 将某些用于检测的值归零 ---
 scoreboard players reset @e[name=wave] temp

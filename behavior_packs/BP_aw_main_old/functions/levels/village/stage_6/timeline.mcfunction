@@ -4,8 +4,8 @@
 # 在对话进行到第380刻的时候，变换玩家和NPC的视角
 # 玩家的视角需要在1秒（20刻）内变换完成，此时facingPosition移动5格，即每刻移动0.25格
 execute @e[name=timeline,scores={time=380..400}] ~~~ execute @e[name=facingPosition] ~~~ tp @s ~~~-0.25
-execute @e[name=timeline,scores={time=380}] ~~~ event entity @e[name="田英"] should_see_player
-execute @e[name=timeline,scores={time=380}] ~~~ event entity @e[name="米云溪"] should_see_player
+execute @e[name=timeline,scores={time=380}] ~~~ event entity @e[name="田英"] "aw:see_player=true"
+execute @e[name=timeline,scores={time=380}] ~~~ event entity @e[name="米云溪"] "aw:see_player=true"
 
 # 在对话进行到560刻的时候，将玩家短暂传送到小黑屋2秒，暂时解除视角锁定状态
 # 2秒后传送回来，并锁定视角
@@ -15,8 +15,8 @@ execute @e[name=timeline,scores={time=560}] ~~~ function lib/black_screen/defaul
 
 execute @e[name=timeline,scores={time=561}] ~~~ tp @e[name="米云溪"] -15 1.5 105 facing -16 1 103
 execute @e[name=timeline,scores={time=561}] ~~~ tp @e[name="田英"] -17 1 109 facing -16 1 103
-execute @e[name=timeline,scores={time=561}] ~~~ event entity @e[name="田英"] should_not_see_player
-execute @e[name=timeline,scores={time=561}] ~~~ event entity @e[name="米云溪"] should_not_see_player
+execute @e[name=timeline,scores={time=561}] ~~~ event entity @e[name="田英"] "aw:see_player=false"
+execute @e[name=timeline,scores={time=561}] ~~~ event entity @e[name="米云溪"] "aw:see_player=false"
 
 execute @e[name=timeline,scores={time=562}] ~~~ tp @e[name=playerPosition] -13 1 112
 execute @e[name=timeline,scores={time=562}] ~~~ tp @e[name=facingPosition] @e[name="米云溪"]
@@ -24,8 +24,8 @@ execute @e[name=timeline,scores={time=562}] ~~~ tp @e[name=facingPosition] @e[na
 execute @e[name=timeline,scores={time=600}] ~~~ scoreboard players set @e[name=dialogue] active 2
 
 # 在对话进行到1060刻的时候，允许NPC面向玩家
-execute @e[name=timeline,scores={time=1060}] ~~~ event entity @e[name="田英"] should_see_player
-execute @e[name=timeline,scores={time=1060}] ~~~ event entity @e[name="米云溪"] should_see_player
+execute @e[name=timeline,scores={time=1060}] ~~~ event entity @e[name="田英"] "aw:see_player=true"
+execute @e[name=timeline,scores={time=1060}] ~~~ event entity @e[name="米云溪"] "aw:see_player=true"
 
 # 在对话进行到1460刻的时候，变换玩家的视角
 # 向-x变换2格，-y变换0.5格，+z变换4格，1秒（20刻）内完成，即每刻~-0.1~-0.025~0.2
