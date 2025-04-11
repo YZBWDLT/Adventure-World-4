@@ -2,9 +2,9 @@
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "aw:hookshot",
-			"materials": { "default": "entity_alphatest" },
-			"textures": { "default": "textures/entity/hookshot_entity" },
+			"identifier": "aw:wind_pearl",
+			"materials": { "default": "snowball" },
+			"textures": { "default": "textures/item/wind_pearl" },
 			"geometry": { "default": "geometry.item_sprite" },
 			"render_controllers": [ "controller.render.item_sprite" ],
 			"animations": { "flying": "animation.actor.billboard" },

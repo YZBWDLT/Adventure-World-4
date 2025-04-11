@@ -12,10 +12,9 @@ item.aw:iron_helmet=Iron Helmet
 item.aw:iron_chestplate=Iron Chestplate
 item.aw:iron_leggings=Iron Leggings
 item.aw:iron_boots=Iron Boots
-item.aw:hookshot=Hookshot
+item.aw:wind_pearl=Wind Pearl
 item.aw:quiver.name=Quiver
 item.aw:acoustic_stone_crystal.name=Acoustic Stone Crystal
-item.aw:enable_crosshair.name=Enable Crosshair
 item.aw:potion_health.name=Health Potion
 item.aw:potion_growth.name=Growth Potion
 item.aw:potion_thrill.name=Thrill Potion
@@ -25,6 +24,10 @@ item.aw:potion_purification.name=Purification Potion
 item.aw:potion_hibernation.name=Hibernation Potion
 item.aw:main_potion_used.name=Main Potion Used
 item.aw:vice_potion_used.name=Vice Potion Used
+item.aw:change_to_creative=Change To Creative Mode
+item.aw:change_to_survival=Change To Survival Mode
+item.aw:change_to_adventure=Change To Adventure Mode
+item.aw:change_to_spectator=Change To Spectator Mode
 
 item.aw:toggle_wave.name=Toggle Wave
 item.aw:summon_monsters.name=Summon Monsters
@@ -34,20 +37,23 @@ item.aw:kill_monsters.name=Kill Monsters
 tile.aw:carved_stone_bricks.name=Carved Stone Bricks
 tile.aw:carved_cracked_stone_bricks.name=Carved Cracked Stone Bricks
 tile.aw:carved_mossy_stone_bricks.name=Carved Mossy Stone Bricks
+tile.aw:red_chiseled_nether_bricks.name=Red Chiseled Nether Bricks
+tile.aw:red_cracked_nether_bricks.name=Red Cracked Nether Bricks
 tile.aw:evocation_stone.name=Evocation Stone
 
 ### Entities
-entity.aw:hookshot.name=Hookshot
+entity.aw:wind_pearl.name=Wind Pearl
 entity.aw:npc.name=NPC
-entity.aw:npc_author.name=Authors
 entity.aw:text_display.name=Floating Text
 entity.aw:skeleton_king.name=Skeleton King
 entity.aw:blaze_king.name=Blaze King
 entity.aw:marker.name=Marker
+entity.aw:wave_name.name=Wave Name
+entity.aw:spawner.name=Monster Spawner
+entity.evoker_boss.name=§l§cEVOKER BOSS
 
 ### Spawn Eggs
 item.spawn_egg.entity.aw:npc.name=Spawn NPC
-item.spawn_egg.entity.aw:npc_author.name=Spawn Author
 item.spawn_egg.entity.aw:text_display.name=Spawn Floating Text
 item.spawn_egg.entity.aw:skeleton_king.name=Spawn Skeleton King
 item.spawn_egg.entity.aw:blaze_king.name=Spawn Blaze King
