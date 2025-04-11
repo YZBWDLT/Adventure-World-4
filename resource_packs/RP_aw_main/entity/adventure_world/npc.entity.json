@@ -12,7 +12,27 @@
                 "miyunxi": "textures/entity/npc/miyunxi",
                 "linan": "textures/entity/npc/linan",
                 "zhangyu": "textures/entity/npc/zhangyu",
-                "tianying": "textures/entity/npc/tianying"
+                "tianying": "textures/entity/npc/tianying",
+                
+                "yzbwdlt": "textures/entity/npc_author/yzbwdlt",
+                "andy7343": "textures/entity/npc_author/andy7343",
+                "greeleaf": "textures/entity/npc_author/greeleaf",
+                "pigeonki": "textures/entity/npc_author/pigeonki",
+                "kriswenyu": "textures/entity/npc_author/kriswenyu",
+                "pumpkinjui": "textures/entity/npc_author/pumpkinjui",
+                "xiaoshu512": "textures/entity/npc_author/xiaoshu512",
+                "tuffy2020china": "textures/entity/npc_author/tuffy2020china",
+                "animalchalk2526": "textures/entity/npc_author/animalchalk2526",
+                "kianakasnala947": "textures/entity/npc_author/kianakasnala947",
+                "xc13599305": "textures/entity/npc_author/xc13599305",
+                "hfpa0117": "textures/entity/npc_author/hfpa0117",
+                "ender5207541": "textures/entity/npc_author/ender5207541",
+                "rustyabyss29193": "textures/entity/npc_author/rustyabyss29193",
+                "enderlife5409": "textures/entity/npc_author/enderlife5409",
+                "onekitty710926": "textures/entity/npc_author/onekitty710926",
+                "foxlanmo": "textures/entity/npc_author/foxlanmo",
+                "kuanpan9527": "textures/entity/npc_author/kuanpan9527",
+                "longlongxiaotao": "textures/entity/npc_author/longlongxiaotao"
             },
             "geometry": {
                 "male": "geometry.manikin_male",

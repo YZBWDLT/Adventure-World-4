@@ -5,7 +5,7 @@
         "description": "一款专门为地图《冒险小世界：剑之试炼》打造的附加包，本包为资源包部分。",
         "uuid": "0d6dace6-e3fc-42e1-8913-038127333892",
         "min_engine_version": [ 1, 18, 0 ],
-        "version": [ 4, 1, 0 ]
+        "version": [ 4, 1, 99 ]
     },
     "modules": [
         {

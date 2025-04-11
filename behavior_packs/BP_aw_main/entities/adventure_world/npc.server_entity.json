@@ -1,0 +1,190 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "aw:npc",
+            "is_experimental": false,
+            "is_spawnable": true,
+            "is_summonable": true,
+            "properties": {
+                "aw:npc_type": { "client_sync": true, "type": "int", "range": [0, 18], "default": 0 },
+                "aw:is_author": { "client_sync": true, "type": "bool", "default": false },
+                "aw:is_interacted": { "client_sync": true, "type": "bool", "default": false },
+                "aw:see_player": { "client_sync": false, "type": "bool", "default": false }
+            },
+            "scripts": {
+                "animate": [
+                    "interact"
+                ]
+            },
+            "animations": {
+                "interact": "controller.animation.npc.interact"
+            }
+        },
+        "components": {
+            "minecraft:physics": { "has_collision": true, "has_gravity": true },
+            "minecraft:collision_box": { "height": 1.8, "width": 0.6 },
+            "minecraft:health": { "value": 1, "max": 1 },
+            "minecraft:knockback_resistance": { "value": 1 },
+            "minecraft:persistent": { },
+            "minecraft:movement.basic": { },
+            "minecraft:movement": { "value": 0 },
+            "minecraft:nameable": { "allow_name_tag_renaming": true, "always_show": true },
+            "minecraft:damage_sensor": { "triggers": [ { "cause": "all", "deals_damage": false } ] }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_not_author" ] },
+                "set_property": { "aw:npc_type": "math.random_integer(0, 7)" }
+            },
+            "aw:is_author=false,aw:npc_type=0": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_not_author" ] },
+                "set_property": { "aw:is_author": false, "aw:npc_type": 0 }
+            },
+            "aw:is_author=false,aw:npc_type=1": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_not_author" ] },
+                "set_property": { "aw:is_author": false, "aw:npc_type": 1 }
+            },
+            "aw:is_author=false,aw:npc_type=2": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_not_author" ] },
+                "set_property": { "aw:is_author": false, "aw:npc_type": 2 }
+            },
+            "aw:is_author=false,aw:npc_type=3": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_not_author" ] },
+                "set_property": { "aw:is_author": false, "aw:npc_type": 3 }
+            },
+            "aw:is_author=false,aw:npc_type=4": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_not_author" ] },
+                "set_property": { "aw:is_author": false, "aw:npc_type": 4 }
+            },
+            "aw:is_author=false,aw:npc_type=5": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_not_author" ] },
+                "set_property": { "aw:is_author": false, "aw:npc_type": 5 }
+            },
+            "aw:is_author=false,aw:npc_type=6": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_not_author" ] },
+                "set_property": { "aw:is_author": false, "aw:npc_type": 6 }
+            },
+            "aw:is_author=false,aw:npc_type=7": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_not_author" ] },
+                "set_property": { "aw:is_author": false, "aw:npc_type": 7 }
+            },
+            "aw:is_author=true,aw:npc_type=0": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 0 }
+            },
+            "aw:is_author=true,aw:npc_type=1": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 1 }
+            },
+            "aw:is_author=true,aw:npc_type=2": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 2 }
+            },
+            "aw:is_author=true,aw:npc_type=3": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 3 }
+            },
+            "aw:is_author=true,aw:npc_type=4": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 4 }
+            },
+            "aw:is_author=true,aw:npc_type=5": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 5 }
+            },
+            "aw:is_author=true,aw:npc_type=6": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 6 }
+            },
+            "aw:is_author=true,aw:npc_type=7": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 7 }
+            },
+            "aw:is_author=true,aw:npc_type=8": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 8 }
+            },
+            "aw:is_author=true,aw:npc_type=9": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 9 }
+            },
+            "aw:is_author=true,aw:npc_type=10": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 10 }
+            },
+            "aw:is_author=true,aw:npc_type=11": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 11 }
+            },
+            "aw:is_author=true,aw:npc_type=12": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 12 }
+            },
+            "aw:is_author=true,aw:npc_type=13": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 13 }
+            },
+            "aw:is_author=true,aw:npc_type=14": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 14 }
+            },
+            "aw:is_author=true,aw:npc_type=15": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 15 }
+            },
+            "aw:is_author=true,aw:npc_type=16": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 16 }
+            },
+            "aw:is_author=true,aw:npc_type=17": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 17 }
+            },
+            "aw:is_author=true,aw:npc_type=18": {
+                "add": { "component_groups": [ "should_see_player", "interact_test", "is_author" ] },
+                "set_property": { "aw:is_author": true, "aw:npc_type": 18 }
+            },
+
+            "aw:is_interacted=true": {
+                "remove": { "component_groups": [ "interact_test" ] },
+                "add": { "component_groups": [ "interacted" ] },
+                "set_property": { "aw:is_interacted": true }
+            },
+            "aw:is_interacted=false": {
+                "remove": { "component_groups": [ "interacted" ] },
+                "add": { "component_groups": [ "interact_test" ] },
+                "set_property": { "aw:is_interacted": false }
+            },
+
+            "aw:see_player=true": {
+                "add": { "component_groups": [ "should_see_player" ] },
+                "set_property": { "aw:see_player": true }
+            },
+            "aw:see_player=false": {
+                "remove": { "component_groups": [ "should_see_player" ] },
+                "set_property": { "aw:see_player": false }
+            }
+        },
+        "component_groups": {
+
+            "is_author": {
+                "minecraft:type_family": { "family": [ "npc", "aw:npc", "author" ] }
+            },
+            "is_not_author": {
+                "minecraft:type_family": { "family": [ "npc", "aw:npc" ] }
+            },
+
+            "interact_test": {
+                "minecraft:interact": { "interactions": [ { "interact_text": "action.interact.chat", "on_interact": { "event": "aw:is_interacted=true" }, "swing": true } ] }
+            },
+            "interacted": {
+                "minecraft:timer": { "time": 0.15, "time_down_event": { "event": "aw:is_interacted=false", "target": "self" } }
+            },
+
+            "should_see_player": {
+                "minecraft:behavior.look_at_player": { "priority": 1 }
+            }
+        }
+    }
+}
