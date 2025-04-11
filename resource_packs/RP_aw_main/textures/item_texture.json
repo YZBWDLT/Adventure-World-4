@@ -2,15 +2,12 @@
     "resource_pack_name": "vanilla",
     "texture_name": "atlas.items",
     "texture_data": {
-        "hookshot": { "textures": "textures/items/hookshot" },
+        "wind_pearl": { "textures": "textures/items/wind_pearl" },
         "quiver": { "textures": "textures/items/quiver" },
-        "enable_crosshair": { "textures": "textures/items/enable_crosshair" },
-
 
         "normal_sword": { "textures": "textures/items/normal_sword" },
         "steel_sword": { "textures": "textures/items/steel_sword" },
         "wild_sword": { "textures": "textures/items/wild_sword" },
-
 
         "aw_diamond_helmet": { "textures": "textures/items/diamond_helmet" },
         "aw_diamond_chestplate": { "textures": "textures/items/diamond_chestplate" },
@@ -30,7 +27,13 @@
         "potion_hibernation": { "textures": "textures/items/potions/potion_hibernation" },
         "aw_glass_bottle": { "textures": "textures/items/potion_bottle_empty" },
 
-        "acoustic_stone_crystal": { "textures": "textures/items/acoustic_stone_crystal" }
+        "acoustic_stone_crystal": { "textures": "textures/items/acoustic_stone_crystal" },
+
+        "change_to_creative": { "textures": "textures/items/apple_golden" },
+        "change_to_survival": { "textures": "textures/items/iron_sword" },
+        "change_to_adventure": { "textures": "textures/items/map_empty" },
+        "change_to_spectator": { "textures": "textures/items/ender_eye" },
+        "none": { "textures": "textures/items/none" }
 
     }
 }
