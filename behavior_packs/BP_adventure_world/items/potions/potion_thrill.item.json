@@ -12,8 +12,7 @@
             "minecraft:food": {
                 "can_always_eat": true,
                 "nutrition": 0,
-                "saturation_modifier": 0,
-                "using_converts_to": "aw:potion_thrill_marker"
+                "saturation_modifier": 0
             },
             "minecraft:icon": "potion_thrill",
             "minecraft:use_modifiers": {

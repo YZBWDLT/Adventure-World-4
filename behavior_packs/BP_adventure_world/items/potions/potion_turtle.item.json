@@ -12,8 +12,7 @@
             "minecraft:food": {
                 "can_always_eat": true,
                 "nutrition": 0,
-                "saturation_modifier": 0,
-                "using_converts_to": "aw:potion_turtle_marker"
+                "saturation_modifier": 0
             },
             "minecraft:icon": "potion_turtle",
             "minecraft:use_modifiers": {

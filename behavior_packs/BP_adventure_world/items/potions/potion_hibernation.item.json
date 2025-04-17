@@ -12,8 +12,7 @@
             "minecraft:food": {
                 "can_always_eat": true,
                 "nutrition": 0,
-                "saturation_modifier": 0,
-                "using_converts_to": "aw:potion_hibernation_marker"
+                "saturation_modifier": 0
             },
             "minecraft:icon": "potion_hibernation",
             "minecraft:use_modifiers": {

@@ -25,15 +25,13 @@
         "potion_rebirth": { "textures": "textures/items/potions/potion_rebirth" },
         "potion_purification": { "textures": "textures/items/potions/potion_purification" },
         "potion_hibernation": { "textures": "textures/items/potions/potion_hibernation" },
-        "aw_glass_bottle": { "textures": "textures/items/potion_bottle_empty" },
 
         "acoustic_stone_crystal": { "textures": "textures/items/acoustic_stone_crystal" },
 
         "change_to_creative": { "textures": "textures/items/apple_golden" },
         "change_to_survival": { "textures": "textures/items/iron_sword" },
         "change_to_adventure": { "textures": "textures/items/map_empty" },
-        "change_to_spectator": { "textures": "textures/items/ender_eye" },
-        "none": { "textures": "textures/items/none" }
+        "change_to_spectator": { "textures": "textures/items/ender_eye" }
 
     }
 }

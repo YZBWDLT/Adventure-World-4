@@ -21,8 +21,8 @@ execute if score sound active matches 1.. if score sound time matches 0 run func
 function system/controller/player_die
 ## 物品控制器 | 控制物品的上限、补充、附魔与耐久修复，每秒运行一次
 execute if score tick time matches 1 run function system/controller/items
-## 药水控制器 | 控制药水的药效、上限和补充
-function system/controller/potions
+## 药水控制器 | 控制药水的药效、上限和补充，每秒运行一次
+execute if score tick time matches 2 run function system/controller/potions
 ## 箭控制器 | 控制箭的上限和补充，每秒运行一次
 execute if score tick time matches 3 run function system/controller/arrows
 ## 事件控制器 | 控制杂项内容的执行

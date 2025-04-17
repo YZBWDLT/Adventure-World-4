@@ -98,7 +98,7 @@ class AdventureWorld4Server(ServerSystem):
     # 当玩家使用自定义物品时，执行函数
     def playerUseItem(self, itemStack, source):
         # type: ( dict, Entity ) -> None
-        usableItems = [ "aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal" ]
+        usableItems = [ "aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal", "aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification",  ]
         if itemStack["newItemName"] in usableItems:
             source.runCommand( "/function items/{}".format(itemStack["newItemName"].split(":")[1]) )
 
