@@ -79,12 +79,7 @@
 			"minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
 			"minecraft:conditional_bandwidth_optimization": { },
 
-            "minecraft:damage_sensor": {
-				"triggers": [
-					{ "cause": "fall", "deals_damage": false },
-					{ "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } }
-				]
-			}
+            "minecraft:damage_sensor": { "triggers": [ { "cause": "fall", "deals_damage": false } ] }
 		},
 
 		"events": {

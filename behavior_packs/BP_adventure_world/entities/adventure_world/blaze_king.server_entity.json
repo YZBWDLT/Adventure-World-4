@@ -58,12 +58,7 @@
                 "on_outside_range": { "event": "switch_to_ranged", "target": "self" }
             },
 
-            "minecraft:damage_sensor": {
-                "triggers": [
-                    { "cause": "fall", "deals_damage": false },
-                    { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } }
-                ]
-            }
+            "minecraft:damage_sensor": { "triggers": [ { "cause": "fall", "deals_damage": false } ] }
 
         },
         "events": {

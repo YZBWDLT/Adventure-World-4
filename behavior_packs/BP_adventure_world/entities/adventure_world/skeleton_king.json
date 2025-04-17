@@ -44,8 +44,7 @@
 
             "minecraft:damage_sensor": {
                 "triggers": [
-                    { "on_damage": { "filters": { "test": "is_family", "subject": "damager", "value": "arrow", "operator": "==" }, "event": "extra_damage" } },
-                    { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } }
+                    { "on_damage": { "filters": { "test": "is_family", "subject": "damager", "value": "arrow", "operator": "==" }, "event": "extra_damage" } }
                 ]
             }
         },

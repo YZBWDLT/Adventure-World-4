@@ -56,9 +56,7 @@
                 ]
             },
 
-            "minecraft:variant": { "value": 2 },
-
-            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } } ] }
+            "minecraft:variant": { "value": 2 }
         },
 
         "events": {

@@ -58,9 +58,7 @@
 
 			"minecraft:health": { "value": 12, "max": 12 },
 			"minecraft:attack": { "damage": 2, "effect_name": "poison", "effect_duration": 7 },
-			"minecraft:movement": { "value": 0.3 },
-
-            "minecraft:damage_sensor": { "triggers": [ { "on_damage": { "filters": { "test": "has_damage", "value": "fatal", "subject": "self" }, "event": "kill_test", "target": "other" } } ] }
+			"minecraft:movement": { "value": 0.3 }
 
   		},
 
