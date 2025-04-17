@@ -1,11 +1,12 @@
 {
-    "format_version": "1.16.0",
+    "format_version": "1.20.50",
     "minecraft:block": {
         "description": {
-            "identifier": "aw:evocation_stone"
+            "identifier": "aw:evocation_stone",
+            "menu_category": { "category": "construction", "is_hidden_in_commands": false }
         },
         "components": {
-            "minecraft:block_light_emission": 1.0,
+            "minecraft:light_emission": 15,
             "minecraft:loot": "loot_tables/empty.json"
         }
     }

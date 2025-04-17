@@ -1,8 +1,9 @@
 {
-    "format_version": "1.16.0",
+    "format_version": "1.20.50",
     "minecraft:block": {
         "description": {
-            "identifier": "aw:carved_cracked_stone_bricks"
+            "identifier": "aw:carved_cracked_stone_bricks",
+            "menu_category": { "category": "construction", "is_hidden_in_commands": false }
         },
         "components": {
             

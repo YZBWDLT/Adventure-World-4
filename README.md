@@ -45,6 +45,10 @@
 - 移除了`aw:enable_crosshair`
 - 移除了`aw:main_potion_used`和`aw:vice_potion_used`物品
 
+#### 方块
+
+- 现在每种方块都使用`1.20.50`的格式版本
+
 #### 实体
 
 - 移除了`player.json`，现在和玩家相关的检测都通过脚本进行
