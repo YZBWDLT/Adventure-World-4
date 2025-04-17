@@ -14,7 +14,7 @@ kill @e[type=aw:text_display,family=achievement]
 # 第7条命令：显示成就的条件
 
 ## [单人] 神剑的恩惠 - 通过剑之试炼
-execute @e[name=achievement,scores={data=1}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.singlePlayer_completeMap record
+execute @e[name=achievement,scores={data=1}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.singlePlayer.finishMap record
 execute @e[name=achievement,scores={data=1}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -85 5 -3 -85 5 -3 -27 3 -45
 execute @e[name=achievement,scores={data=1}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -85 4 -3 -85 4 -3 -27 3 -45
 execute @e[name=achievement,scores={data=1}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§b[单人] §l神剑的恩惠"
@@ -77,7 +77,7 @@ execute @e[name=achievement,scores={data=7}] ~~~ execute @e[name=achievement,sco
 execute @e[name=achievement,scores={data=7}] ~~~ summon aw:text_display -27 2.1 -45 as_achievement_text_display "§a全程除了治疗药水之外，不使用其他药水通过试炼"
 
 ## [多人] 齐心协力 - 通过剑之试炼
-execute @e[name=achievement,scores={data=8}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.multiPlayer_completeMap record
+execute @e[name=achievement,scores={data=8}] ~~~ scoreboard players operation @e[name=achievement] temp = achievement.multiPlayer.finishMap record
 execute @e[name=achievement,scores={data=8}] ~~~ execute @e[name=achievement,scores={temp=0}] ~~~ clone -85 2 -3 -85 2 -3 -27 3 -45
 execute @e[name=achievement,scores={data=8}] ~~~ execute @e[name=achievement,scores={temp=1}] ~~~ clone -85 1 -3 -85 1 -3 -27 3 -45
 execute @e[name=achievement,scores={data=8}] ~~~ summon aw:text_display -27 3.3 -45 as_achievement_text_display "§b[多人] §l齐心协力"

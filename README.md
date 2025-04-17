@@ -1,6 +1,6 @@
 # 冒险小世界：剑之试炼
 
-一张Minecraft 基岩版 1.18.30的自定义PVE地图
+一张 Minecraft 基岩版 1.20.50 的自定义 PVE 地图
 
 ## 作者
 
@@ -93,6 +93,8 @@
   - `data.storyMode` -> `settings.storyMode`
   - 标签`potionUsed` -> `data.potionUsed`
   - 标签`cheated` -> `data.hasCheat`
+  - `record.achievement.singlePlayer_completeMap` -> `record.achievement.singlePlayer.finishMap`
+  - `record.achievement.multiPlayer_completeMap` -> `record.achievement.multiPlayer.finishMap`
 - **拆分**：
   - 记分板变量`isAlive.@s` -> 标签变量`spectator`，新值与旧值的对应关系为：
     - `isAlive.@s`=`0` -> `data.levelCompleted`=`0`&&`spectator`

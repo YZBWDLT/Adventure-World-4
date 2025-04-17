@@ -9,11 +9,11 @@ tellraw @s[scores={temp=0}] {"rawtext":[{"translate":"§c该功能仅限在开�
 tellraw @s[scores={temp=1}] {"rawtext":[{"text":"下文反馈格式: (记分项).(标记名) = (值)，并反馈注释\n§e*黄色：假名（即非标记实体）变量 §b*蓝色：玩家个人数据"}]}
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== 玩家个人数据记分项 ====="}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bdeathTimes.@s = §a%%s §7# 玩家死亡次数","with":{"rawtext":[{"score":{"objective":"deathTimes","name":"@s"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bdeathCount.@s = §a%%s §7# 玩家死亡次数","with":{"rawtext":[{"score":{"objective":"deathCount","name":"@s"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bhookshot.@s = §a%%s §7# 玩家发射出绳枪的时间，单位：刻","with":{"rawtext":[{"score":{"objective":"hookshot","name":"@s"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bisAlive.@s = §a%%s §7# 玩家存活状态，0：游戏时死亡，1：游戏时存活，2：未在游戏中，3：进入新的关卡区域","with":{"rawtext":[{"score":{"objective":"isAlive","name":"@s"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bisOnline.@s = §a%%s §7# 玩家是否为在线的玩家，0：不在线，1：在线","with":{"rawtext":[{"score":{"objective":"isOnline","name":"@s"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bkillAmount.@s = §a%%s §7# 玩家击杀的怪物数","with":{"rawtext":[{"score":{"objective":"killAmount","name":"@s"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bkillCount.@s = §a%%s §7# 玩家击杀的怪物数","with":{"rawtext":[{"score":{"objective":"killCount","name":"@s"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§bposition.@s = §a%%s §7# 玩家所在的关卡区域","with":{"rawtext":[{"score":{"objective":"position","name":"@s"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§btime.@s = §a%%s §7# 玩家持续未重生的时间，单位：刻","with":{"rawtext":[{"score":{"objective":"time","name":"@s"}}]}}]}
 
@@ -26,7 +26,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"active.timeline = §a%%s �
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== data记分项 ====="}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"检测实体数目的变量"}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.alivePlayersAmount = §a%%s §7# 记录存活玩家数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=alivePlayersAmount]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.alivePlayerAmount = §a%%s §7# 记录存活玩家数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=alivePlayerAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.arrowAmount = §a%%s §7# 记录箭数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=arrowAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"data.hookshotAmount = §a%%s §7# 记录绳枪数目","with":{"rawtext":[{"score":{"objective":"data","name":"@e[name=hookshotAmount]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§edata.maxMonsterAmount = §a%%s §7# 记录怪物数目","with":{"rawtext":[{"score":{"objective":"data","name":"maxMonsterAmount"}}]}}]}

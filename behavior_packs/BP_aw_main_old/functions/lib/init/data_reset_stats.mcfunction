@@ -2,7 +2,7 @@
 # 本函数仅用于重置统计性的数据
 
 # --- 单人成就 ---
-scoreboard players set achievement.singlePlayer_completeMap record 0
+scoreboard players set achievement.singlePlayer.finishMap record 0
 scoreboard players set achievement.singlePlayer.notDied record 0
 scoreboard players set achievement.singlePlayer.difficulty2 record 0
 scoreboard players set achievement.singlePlayer.difficulty3 record 0
@@ -11,7 +11,7 @@ scoreboard players set achievement.singlePlayer.speedrun record 0
 scoreboard players set achievement.singlePlayer.noPotion record 0
 
 # --- 多人成就 ---
-scoreboard players set achievement.multiPlayer_completeMap record 0
+scoreboard players set achievement.multiPlayer.finishMap record 0
 scoreboard players set achievement.multiPlayer.notDied record 0
 scoreboard players set achievement.multiPlayer.difficulty4 record 0
 scoreboard players set achievement.multiPlayer.speedrun record 0
