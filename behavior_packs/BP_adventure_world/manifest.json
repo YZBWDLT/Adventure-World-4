@@ -1,0 +1,34 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "冒险小世界：剑之试炼 行为包",
+        "description": "一款专门为地图《冒险小世界：剑之试炼》打造的附加包，本包为行为包部分。",
+        "uuid": "d81a7cef-20f3-4880-be57-87fcd0c3875d",
+        "min_engine_version": [ 1, 20, 50 ],
+        "version": [ 4, 2, 0 ]
+    },
+    "modules": [
+        {
+            "uuid": "065de538-3804-4750-893a-c5d60201cb5d",
+            "version": [ 1, 0, 0 ],
+            "type": "data"
+        },
+        {
+            "type": "script",
+            "uuid": "7938b557-aff5-4dcf-9e5f-0a573ec0e405",
+            "version": [ 1, 0, 0 ],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "metadata": {
+        "authors": [
+            "YZBWDLT", "狂野巴豆"
+        ]
+    },
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.7.0"
+        }
+    ]
+}
