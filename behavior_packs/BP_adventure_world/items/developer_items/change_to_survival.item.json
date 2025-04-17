@@ -1,5 +1,5 @@
 {
-    "format_version": "1.20.0",
+    "format_version": "1.20.50",
     "minecraft:item": {
         "description": {
             "identifier": "aw:change_to_survival"

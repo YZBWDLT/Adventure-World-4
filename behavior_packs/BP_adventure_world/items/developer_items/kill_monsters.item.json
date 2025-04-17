@@ -1,13 +1,13 @@
 {
-    "format_version": "1.16.0",
+    "format_version": "1.20.50",
     "minecraft:item": {
         "description": {
-            "identifier": "aw:kill_monsters"
+            "identifier": "aw:kill_monsters",
+            "menu_category": { "category": "items", "is_hidden_in_commands": false }
         },
         "components": {
             "minecraft:max_stack_size": 1,
-            "minecraft:food": { "can_always_eat": true, "nutrition": 0, "cooldown_time": 5, "cooldown_type": "kill_monsters" },
-            "minecraft:use_duration": 9999999
+            "minecraft:icon": "arrow"
         }
     }
 }
