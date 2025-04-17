@@ -28,6 +28,7 @@
   - 同时，移除了物品准星
 - 现在右侧的信息板不再会在玩家手持物品时，来回在物品信息和关卡信息之间闪了
 - 现在药水不再显示当前上限
+- 统一了中国版和国际版的剧情内容，不再单独做出适配。
 
 ### 底层更新
 
@@ -88,6 +89,9 @@
   - `data.allowArrowSupply`，用于标记允许补充箭
     - 为`0`时，箭控制器不会补充箭
     - 为`1`时，箭控制器补充箭，并且清除当前世界中的所有实体箭
+  - `data.allowAcousticStoneCrystal`，用于标记允许补充传声石结晶
+    - 为`0`时，物品控制器不会补充传声石结晶
+    - 为`1`时，物品控制器补充传声石结晶
 - **更名**：
   - 记分板`deathTimes` -> 记分板`deathCount`
   - 记分板`killAmount` -> 记分板`killCount`
@@ -107,27 +111,27 @@
     - `isAlive.@s`=`3` -> 被抛弃，不再使用原来的判定方法
   - `data.gameId`，因其在诸多方面（包括数值分解、屏蔽词）等方面都造成了诸多不便
     - 现在使用`data.chapter`、`data.level`和`data.levelCompleted`代替
-  - `xxx.timeline`、`xxx.dialogue` -> `xxx.timeline`、`data.npcIsInteractable`
+  - `xxx.timeline`、`xxx.dialogue` -> `xxx.timeline`、`data.allowNpcInteraction`
 - **移除**：
   - `hookshot`记分板，现在使用脚本代替。
   - `data.hookshotAmount`，现在使用脚本代替。
   - `isAlive`标签，现在用`deathState`代替。
   - `data.realDeadPlayersAmount`，因为现在可以直接使用`unless entity`检测相关玩家
+  - `temp`、`temp2`、`temp3`记分板，现在使用`data`下的各`temp.`变量代替
 
 #### 关卡 ID
 
 - 现在村庄的 ID 有下面的新的对应关系。
+  - 现在`data.level`是从`1`开始算起的，阶段是基于`data.level`判断的
+  - 合并了从见到张宇到获取传声石结晶的剧情为一个阶段
 
   | 游戏ID`data.temp.gameId` | 以前的游戏ID`data.temp.gameId` | 意义 |
   | :---: | :---: | --- |
   | `010`/`011` | `3` | |
   | `020`/`021` | `4` | |
   | `030`/`031` | `5` | |
-  | `040`/`041` | `6` | |
-  | `050`/`051` | `7` | |
-  | `060`/`061` | `8` | |
-  | `070`/`071` | `9` | |
-  | `080`/`081` | `99` | 开幕 |
+  | `040`/`041` | `6~8` | |
+  | `050`/`051` | `9`/`99` | 开幕 |
   | `1010`/`1011` | `1001` | |
   | `1020`/`1021` | `1002` | |
   | `1030`/`1031` | `1003` | |

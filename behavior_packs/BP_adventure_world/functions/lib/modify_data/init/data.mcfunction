@@ -76,11 +76,14 @@ scoreboard players set difficulty settings 1
 scoreboard players set allowPotionSupply data 0
 scoreboard players set allowArrowSupply data 0
 
+## NPC 是否能交互
+scoreboard players set allowNpcInteraction data 1
+
+## 是否启用传声石结晶
+scoreboard players set allowAcousticStoneCrystal data 0
+
 ## 是否有玩家使用过主药水或副药水
 scoreboard players set potionUsed data 0
 
 ## 是否有玩家开启了创造模式作弊
 scoreboard players set hasCheat data 0
-
-## NPC 是否能交互
-scoreboard players set npcIsInteractable data 1

@@ -1,18 +1,14 @@
 # ===== 开始关卡 =====
 # 0-1 | 醒来
-# （备注：在纯剧情的关卡里，未完成 = 过完剧情之前，已完成 = 过完剧情之后）
 
 # --- 变量设置 ---
 
 ## 设置关卡 ID
 scoreboard players set level data 1
-## 设置关卡状态为未完成
-scoreboard players set levelCompleted data 0
-## 创建 thisLevel | 本关重生点
+## 调用通用函数
+function lib/modify_data/levels/start_open
+## 标记实体位置操作 | 创建 thisLevel 作为本关重生点
 execute positioned -27 6 -48 run function lib/modify_data/markers/init
-## 启用时间线
-function lib/modify_data/states/timeline/dont_keep_value
-function lib/modify_data/states/timeline/enable_time_lapse
 
 # --- 传送玩家并模拟醒来的效果 ---
 tp @a -26 6 -50 facing -27 6 -51

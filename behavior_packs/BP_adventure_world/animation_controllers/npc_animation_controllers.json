@@ -14,7 +14,7 @@
                         { "default": "!query.property('aw:is_interacted')" }
                     ],
                     "on_entry": [
-                        "/execute if score npcIsInteractable data matches 1 run function lib/npc/interacted"
+                        "/execute if score allowNpcInteraction data matches 1 run function entities/npc/interacted"
                     ]
                 }
             }

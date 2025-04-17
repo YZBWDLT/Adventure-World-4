@@ -66,8 +66,8 @@ execute if score temp.gameId data matches 100..110 run replaceitem entity @a[has
 execute if score temp.gameId data matches 111..640 run give @a[hasitem={item=leather_boots,quantity=0}] leather_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 普通剑 | 1-0 ~ 3-4结束前
 execute if score temp.gameId data matches 100..340 run give @a[hasitem={item=aw:normal_sword,quantity=0}] aw:normal_sword 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
-### 传声石晶体 | 特定的村庄剧情/1-0 ~，仅限剧情模式 | 这里设置为8..10且!10，是防止网易将8.9判断为屏蔽词
-execute if score temp.gameId data matches 60..999 if score storyMode settings matches 1 run give @a[hasitem={item=aw:acoustic_stone_crystal,quantity=0}] aw:acoustic_stone_crystal 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+### 传声石晶体 | 允许传声石结晶时
+execute if score allowAcousticStoneCrystal data matches 1 run give @a[hasitem={item=aw:acoustic_stone_crystal,quantity=0}] aw:acoustic_stone_crystal 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 铁靴子 | 1-1结束后 ~ 3-2结束前
 execute if score temp.gameId data matches 111..320 run give @a[hasitem={item=aw:iron_boots,quantity=0}] aw:iron_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 御风珠 | 1-2结束后 ~
