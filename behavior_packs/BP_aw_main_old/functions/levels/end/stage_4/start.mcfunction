@@ -13,10 +13,10 @@ tp @e[family=respawner] -15.0 1 88
 
 # --- 调整或获取数据 ---
 ## 重置下一局的难度加和和剧情模式
-scoreboard players set nextGame.difficultyAdder record 0
-scoreboard players set nextGame.storyMode record 1
-scoreboard players operation @e[name=difficultyAdder] temp = nextGame.difficultyAdder record
-scoreboard players operation @e[name=storyMode] temp = nextGame.storyMode record
+scoreboard players set temp.difficultyAdder record 0
+scoreboard players set temp.storyMode record 1
+scoreboard players operation @e[name=difficultyAdder] temp = temp.difficultyAdder record
+scoreboard players operation @e[name=storyMode] temp = temp.storyMode record
 ## 清除多余的实体
 kill @e[family=text_display]
 ## 传送张宇到此位置

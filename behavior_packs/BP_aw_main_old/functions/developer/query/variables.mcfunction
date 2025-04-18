@@ -63,8 +63,8 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeSecond3 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeMinute4 = §a%%s §7# 难度4下的最佳时间（分钟）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeMinute4"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.bestTimeSecond4 = §a%%s §7# 难度4下的最佳时间（秒）","with":{"rawtext":[{"score":{"objective":"record","name":"bestTimeSecond4"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.mapCompletedTimes = §a%%s §7# 地图通关次数","with":{"rawtext":[{"score":{"objective":"record","name":"mapCompletedTimes"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.nextGame.difficultyAdder = §a%%s §7# 下一局启用的难度加和","with":{"rawtext":[{"score":{"objective":"record","name":"nextGame.difficultyAdder"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.nextGame.storyMode = §a%%s §7# 下一局启用的模式","with":{"rawtext":[{"score":{"objective":"record","name":"nextGame.storyMode"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.temp.difficultyAdder = §a%%s §7# 下一局启用的难度加和","with":{"rawtext":[{"score":{"objective":"record","name":"temp.difficultyAdder"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§erecord.temp.storyMode = §a%%s §7# 下一局启用的模式","with":{"rawtext":[{"score":{"objective":"record","name":"temp.storyMode"}}]}}]}
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== time记分项 ====="}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.dialogue = §a%%s §7# 剧情线，单位：刻","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=dialogue]"}}]}}]}

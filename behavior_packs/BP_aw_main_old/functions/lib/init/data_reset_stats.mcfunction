@@ -30,5 +30,5 @@ scoreboard players set bestTimeSecond4 record 59
 scoreboard players set bestTimeMinute4 record 9999
 
 # --- 下一局的设置 ---
-scoreboard players set nextGame.difficultyAdder record 0
-scoreboard players set nextGame.storyMode record 1
+scoreboard players set temp.difficultyAdder record 0
+scoreboard players set temp.storyMode record 1

@@ -12,7 +12,7 @@ execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayerAmount,sco
 execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayerAmount,scores={data=2..3}] ~~~ scoreboard players set @e[name=difficulty] data 2
 execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayerAmount,scores={data=4..6}] ~~~ scoreboard players set @e[name=difficulty] data 3
 execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=alivePlayerAmount,scores={data=7..}] ~~~ scoreboard players set @e[name=difficulty] data 4
-execute @e[name=tick,scores={time=18}] ~~~ scoreboard players operation @e[name=difficulty] data += nextGame.difficultyAdder record
+execute @e[name=tick,scores={time=18}] ~~~ scoreboard players operation @e[name=difficulty] data += temp.difficultyAdder record
 execute @e[name=tick,scores={time=18}] ~~~ scoreboard players set @e[name=difficulty,scores={data=..0}] data 1
 execute @e[name=tick,scores={time=18}] ~~~ scoreboard players set @e[name=difficulty,scores={data=5..}] data 4
 
@@ -46,10 +46,10 @@ execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=difficultyAdder,score
 execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=difficultyAdder,scores={temp=3}] ~~~ summon aw:text_display -13 0.8 87 as_difficulty_text_display "难度加和 | §43"
 
 # --- 检测切换难度 ---
-execute @a[c=1] ~~~ detect -13 2 86 polished_blackstone_button 10 scoreboard players operation @e[name=difficultyAdder] temp = nextGame.difficultyAdder record
+execute @a[c=1] ~~~ detect -13 2 86 polished_blackstone_button 10 scoreboard players operation @e[name=difficultyAdder] temp = temp.difficultyAdder record
 execute @a[c=1] ~~~ detect -13 2 86 polished_blackstone_button 10 scoreboard players add @e[name=difficultyAdder] temp 1
 execute @a[c=1] ~~~ detect -13 2 86 polished_blackstone_button 10 scoreboard players set @e[name=difficultyAdder,scores={temp=!-3..3}] temp -3
-execute @a[c=1] ~~~ detect -13 2 86 polished_blackstone_button 10 scoreboard players operation nextGame.difficultyAdder record = @e[name=difficultyAdder] temp
+execute @a[c=1] ~~~ detect -13 2 86 polished_blackstone_button 10 scoreboard players operation temp.difficultyAdder record = @e[name=difficultyAdder] temp
 execute @a[c=1] ~~~ detect -13 2 86 polished_blackstone_button 10 setblock -13 2 86 polished_blackstone_button["facing_direction":2]
 
 # --- 刷新难度显示 ---
@@ -67,10 +67,10 @@ execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=storyMode,scores={tem
 execute @e[name=tick,scores={time=18}] ~~~ execute @e[name=storyMode,scores={temp=1}] ~~~ summon aw:text_display -20 1.7 86 as_mode_text_display "§c* 当心剧透！有意玩前作正传的玩家谨慎选择"
 
 # --- 检测切换模式 ---
-execute @a[c=1] ~~~ detect -18 2 86 polished_blackstone_button 10 scoreboard players operation @e[name=storyMode] temp = nextGame.storyMode record
+execute @a[c=1] ~~~ detect -18 2 86 polished_blackstone_button 10 scoreboard players operation @e[name=storyMode] temp = temp.storyMode record
 execute @a[c=1] ~~~ detect -18 2 86 polished_blackstone_button 10 scoreboard players add @e[name=storyMode] temp 1
 execute @a[c=1] ~~~ detect -18 2 86 polished_blackstone_button 10 scoreboard players set @e[name=storyMode,scores={temp=!0..1}] temp 0
-execute @a[c=1] ~~~ detect -18 2 86 polished_blackstone_button 10 scoreboard players operation nextGame.storyMode record = @e[name=storyMode] temp
+execute @a[c=1] ~~~ detect -18 2 86 polished_blackstone_button 10 scoreboard players operation temp.storyMode record = @e[name=storyMode] temp
 execute @a[c=1] ~~~ detect -18 2 86 polished_blackstone_button 10 setblock -18 2 86 polished_blackstone_button["facing_direction":2]
 
 # --- 当玩家和张宇交互后 ---
