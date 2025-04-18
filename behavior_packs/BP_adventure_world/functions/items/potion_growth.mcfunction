@@ -20,6 +20,3 @@ playsound random.glass @s
 
 # --- 标记为使用过药水 ---
 scoreboard players set potionUsed data 1
-
-# --- 移除标记 ---
-clear @s aw:potion_growth_marker

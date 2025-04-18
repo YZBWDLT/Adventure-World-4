@@ -9,6 +9,3 @@
 
 # --- 施加药效 ---
 effect @s instant_health 1 1 true
-
-# --- 移除标记 ---
-clear @s aw:potion_health_marker
