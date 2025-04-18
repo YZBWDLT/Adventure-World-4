@@ -1,21 +1,22 @@
-# ===== 游戏开始前的初始化 =====
+# ===== 开始关卡 =====
+# 开幕 | 初始化
 
-# --- 重置游戏规则与地图数据 ---
-function lib/init/gamerule
-function lib/init/data_reset_normal
-
-# --- 调整所有玩家的游戏模式 ---
+## 游戏规则
+function lib/modify_data/init/gamerule
+## 后台数据
+function lib/modify_data/init/data
+## 玩家游戏模式
 gamemode adventure @a
-
-# --- 重置玩家的重生点和位置 ---
-tp @a 43 21 132
+## 玩家位置与重生点
+execute positioned 43 21 132 run tp @a ~~~
+execute positioned 43 21 132 run setworldspawn ~~~
+execute positioned 43 21 132 run function lib/modify_data/markers/init
+## 玩家物品
 clear @a
-setworldspawn 43 21 132
-tp @e[family=respawner] 43 21 132
-
-# --- 重置悬浮文本 ---
+## NPC
+event entity @e[type=aw:npc] "aw:remove_immediately"
+## 悬浮文本
 kill @e[family=text_display]
-
 summon aw:text_display "欢迎游玩§b§l冒险小世界：剑之试炼§r！" 43 24.8 124
 summon aw:text_display "§7为感谢各位玩家对地图§b§l冒险世界：苏醒§r§7的支持" 43 24.3 124
 summon aw:text_display "§7我们制作了此PVE地图作为外传" 43 24.0 124
@@ -32,13 +33,10 @@ summon aw:text_display "§6§l纯战斗模式" 47 29.2 86
 summon aw:text_display "§7* 跳过大多数剧情，保留同样的战斗体验" 47 28.7 86
 summon aw:text_display "§7* 流程快，适合多人或速通玩家体验" 47 28.4 86
 summon aw:text_display "§7* 无剧透风险，不涉及和正传有关的剧情" 47 28.1 86
-
-# --- 重置信标 ---
+## 信标
 setblock 43 25 86 beacon
 setblock 45 25 86 beacon
-
-# --- 调整时间为白天 ---
+## 时间
 time set 6000
-
-# --- 重置音乐 ---
+## 音乐
 music stop

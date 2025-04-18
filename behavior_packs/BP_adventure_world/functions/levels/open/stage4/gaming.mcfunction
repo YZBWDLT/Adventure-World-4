@@ -2,7 +2,6 @@
 # 0-4 | 与张宇对话&到达剑之试炼入口
 
 # --- 剧情 ---
-execute if score timeline time matches 60 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7云儿，你在这里啊！"}]}
 execute if score timeline time matches 60 run tellraw @a {"rawtext":[{"text":"* §e张宇： §7你来了林乐，我想跟你聊一件事。"}]}
 execute if score timeline time matches 140 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7您请说，是什么事？"}]}
 ## 停顿

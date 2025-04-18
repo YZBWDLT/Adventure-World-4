@@ -3,6 +3,7 @@
 # --- 游戏时时间线 ---
 
 ## 开幕
+execute if score levelCompleted data matches 0 if score level data matches 0 run function levels/open/before_stage/gaming
 
 ## 村庄剧情
 
@@ -14,7 +15,7 @@ execute if score levelCompleted data matches 0 if score level data matches 2 run
 execute if score levelCompleted data matches 0 if score level data matches 3 run function levels/open/stage3/gaming
 ### 0-4 | 与张宇对话&到达剑之试炼入口
 execute if score levelCompleted data matches 0 if score level data matches 4 run function levels/open/stage4/gaming
-### 0-5 | 进入剑之试炼神殿
+### 0-5 | 进入剑之试炼神殿（开幕时间线）
 execute if score levelCompleted data matches 0 if score level data matches 5 run function levels/open/stage5/gaming
 
 # --- 游戏后时间线 ---
@@ -27,5 +28,3 @@ execute if score levelCompleted data matches 1 if score level data matches 2 run
 execute if score levelCompleted data matches 1 if score level data matches 3 run function levels/open/stage3/after_gaming
 ### 0-4 | 与张宇对话&到达剑之试炼入口
 execute if score levelCompleted data matches 1 if score level data matches 4 run function levels/open/stage4/after_gaming
-### 0-5 | 进入剑之试炼神殿
-execute if score levelCompleted data matches 1 if score level data matches 5 run function levels/open/stage5/after_gaming

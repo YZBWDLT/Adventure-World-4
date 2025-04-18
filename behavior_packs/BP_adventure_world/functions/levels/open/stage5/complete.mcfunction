@@ -1,5 +1,5 @@
 # ===== 完成关卡 =====
-# 0-4 | 与张宇对话&到达剑之试炼入口
+# 0-5 | 进入剑之试炼神殿（开幕时间线）
 
-# 调用通用函数
-execute at @e[name="张宇"] run function lib/modify_data/levels/complete_open
+# 调用 1-0 的启动函数
+function levels/chapter1/level0/start
