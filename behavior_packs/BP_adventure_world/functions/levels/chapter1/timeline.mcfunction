@@ -1,6 +1,15 @@
 # ===== 第一章时间线 =====
 
-execute if score level data matches 0 run function levels/chapter1/level0/timeline
-execute if score level data matches 1 run function levels/chapter1/level1/timeline
-execute if score level data matches 2 run function levels/chapter1/level2/timeline
-execute if score level data matches 3 run function levels/chapter1/level3/timeline
+# --- 游戏时时间线 ---
+
+execute if score levelCompleted data matches 0 if score level data matches 0 run function levels/chapter1/level0/gaming
+execute if score levelCompleted data matches 0 if score level data matches 1 run function levels/chapter1/level1/gaming
+execute if score levelCompleted data matches 0 if score level data matches 2 run function levels/chapter1/level2/gaming
+execute if score levelCompleted data matches 0 if score level data matches 3 run function levels/chapter1/level3/gaming
+
+# --- 游戏后时间线 ---
+
+execute if score levelCompleted data matches 1 if score level data matches 0 run function levels/chapter1/level0/after_gaming
+execute if score levelCompleted data matches 1 if score level data matches 1 run function levels/chapter1/level1/after_gaming
+execute if score levelCompleted data matches 1 if score level data matches 2 run function levels/chapter1/level2/after_gaming
+execute if score levelCompleted data matches 1 if score level data matches 3 run function levels/chapter1/level3/after_gaming

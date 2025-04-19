@@ -1,5 +1,5 @@
 # ===== 关卡结束通用函数 =====
-# 开幕关卡通用的内容。用于在关卡结束时调用。
+# 试炼中关卡通用的内容。用于在关卡结束时调用。
 
 # 调用此方法时：
 # · 执行者任意
@@ -14,4 +14,4 @@ scoreboard players set levelCompleted data 1
 ## 设置标记实体 | 移除prevLevel, 新增nextLevel
 function lib/modify_data/markers/complete
 ## 结束锁视角对话
-function lib/modify_data/stop_dialogue
+execute if score storyMode settings matches 1 run function lib/modify_data/stop_dialogue

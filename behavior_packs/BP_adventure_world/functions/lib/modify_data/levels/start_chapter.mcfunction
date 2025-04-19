@@ -8,9 +8,11 @@
 # · 重置标题时间
 # · 供应物品
 # · 播放音效和音乐
-# · 时间线控制
+# · 启用时间线
+# · 剧情模式触发对话
 
 # --- 重置标题时间 ---
+
 title @a times 0 100 0
 
 # --- 供应物品 ---
@@ -28,11 +30,11 @@ function lib/modify_data/states/sound/beacon_power_0_75
 # 播放音乐 | 除第 5 章外
 execute unless score chapter data matches 5 run function lib/modify_data/play_music
 
-# --- 时间线控制 ---
-## 不保留时间值地启用时间线
+# --- 启用时间线 ---
+
 function lib/modify_data/states/timeline/dont_keep_value
 function lib/modify_data/states/timeline/enable
-## 如果为纯战斗模式，则只启用时间线而不启用时间线流逝
-execute if score storyMode settings matches 0 run function lib/modify_data/states/timeline/disable_time_lapse
-## 如果为剧情模式，则启用时间线流逝
-execute if score storyMode settings matches 1 run function lib/modify_data/states/timeline/enable_time_lapse
+
+# --- 剧情模式触发对话 ---
+
+execute if score storyMode settings matches 1 run function lib/modify_data/start_dialogue

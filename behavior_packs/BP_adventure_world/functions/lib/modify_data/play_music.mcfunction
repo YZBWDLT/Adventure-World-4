@@ -14,8 +14,7 @@ music stop
 ## 开始
 execute if score chapter data matches 0 if score level data matches 1..2 run music play aw.music.village 1 0 loop
 execute if score chapter data matches 0 if score level data matches 3 run music play aw.music.village.time_temple 1 0 loop
-execute if score chapter data matches 0 if score level data matches 4..5 run music play aw.music.village 1 0 loop
-execute if score chapter data matches 0 if score level data matches 6..8 run music play aw.music.village.sword_trial_entrance 1 0 loop
+execute if score chapter data matches 0 if score level data matches 4..5 run music play aw.music.village.sword_trial_entrance 1 0 loop
 ## 结束
 execute if score chapter data matches 10 if score level data matches 1..3 run music play aw.music.end 1 0 loop
 execute if score chapter data matches 10 if score level data matches 4 run music play aw.music.village.sword_trial_entrance 1 0 loop
