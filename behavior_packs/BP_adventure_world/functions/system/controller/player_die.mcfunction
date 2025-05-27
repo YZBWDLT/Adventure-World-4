@@ -1,10 +1,10 @@
 # ===== 死亡机制 =====
 # 判定死亡玩家并执行命令。
-# 当玩家重生后，将出生到thisLevel的位置上。
+# 当玩家重生后，将出生到本关标记的位置上。
 # 玩家的死亡可以分为在游戏时死亡和不在游戏时死亡，其中游戏时死亡则令玩家处于观战状态。
 
-# --- 将玩家的重生点设置在thisLevel标记实体上 ---
-execute as @e[tag=thisLevel] at @s run spawnpoint @a ~~~
+# --- 将玩家的重生点设置在本关标记上 ---
+execute as @e[has_property={aw:level=this}] at @s run spawnpoint @a ~~~
 
 # --- 运行死亡榜 ---
 scoreboard players set @a[scores={deathState=!2}] deathState 1

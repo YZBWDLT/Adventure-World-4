@@ -11,7 +11,7 @@
 
 ## 当前关卡完成状态
 scoreboard players set levelCompleted data 1
-## 设置标记实体 | 移除prevLevel, 新增nextLevel
+## 设置标记实体 | 移除上关标记，并新增下关标记
 function lib/modify_data/markers/complete
 ## 结束锁视角对话
 execute if score storyMode settings matches 1 run function lib/modify_data/stop_dialogue

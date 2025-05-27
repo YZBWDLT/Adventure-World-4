@@ -29,5 +29,5 @@ execute if score storyMode settings matches 0 run function levels/chapter1/level
 
 ## 传送玩家
 tp @a -117 1 -6
-## thisLevel标记
+## 本关标记
 execute positioned -117 1 -6 run function lib/modify_data/markers/init

@@ -1,15 +1,6 @@
 # ===== 标记操作 =====
-# 在开始游戏时进行的标记操作
+# 在开始游戏时进行的标记操作：将本关标记改为上关标记，下关标记改为本关标记。
+# 调用此方法时：无需修饰。
 
-# 调用此方法时：
-# · 执行者任意
-# · 执行位置任意
-# 输出结果：
-# · thisLevel -> prevLevel
-# · nextLevel -> thisLevel
-
-tag @e[tag=thisLevel] add prevLevel
-tag @e[tag=thisLevel] remove thisLevel
-
-tag @e[tag=nextLevel] add thisLevel
-tag @e[tag=nextLevel] remove nextLevel
+event entity @e[has_property={aw:level=this}] aw:set_prev_level
+event entity @e[has_property={aw:level=next}] aw:set_this_level

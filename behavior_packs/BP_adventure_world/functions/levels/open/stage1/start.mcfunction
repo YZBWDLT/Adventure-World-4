@@ -7,7 +7,7 @@
 scoreboard players set level data 1
 ## 调用通用函数
 function lib/modify_data/levels/start_open
-## 标记实体位置操作 | 创建 thisLevel 作为本关重生点
+## 标记实体位置操作 | 创建本关标记作为本关重生点
 execute positioned -27 6 -48 run function lib/modify_data/markers/init
 
 # --- 传送玩家并模拟醒来的效果 ---
