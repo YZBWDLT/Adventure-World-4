@@ -9,8 +9,6 @@ scoreboard players set @e[name=wave] data 1
 # 在【开始游戏检测器】中，“超前”进入房间的玩家的isAlive.@s=3，此时其他玩家的该变量应当均为2
 tp @a[scores={isAlive=!3}] @a[scores={isAlive=3},c=1]
 scoreboard players set @a isAlive 1
-# 更新chapter level levelCompleted的数值
-function system/gameid_seperator
 
 # --- 启用怪物延迟生成并生成怪物生成器 ---
 function lib/states/monster_summon_delay/enable_40ticks
