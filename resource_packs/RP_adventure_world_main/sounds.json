@@ -32,6 +32,11 @@
                 "events": {
                     "death": ""
                 }
+            },
+            "aw:marker": {
+                "events": {
+                    "death": { "volume": 0.0, "sound": "" }
+                }
             }
         }
     }

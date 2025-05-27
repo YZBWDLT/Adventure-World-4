@@ -5,6 +5,10 @@
 function lib/modify_data/init/gamerule
 ## 后台数据
 function lib/modify_data/init/data
+## 启用时间线
+function lib/modify_data/states/timeline/enable
+## 关闭 HUD
+scoreboard players set allowHud data 0
 ## 玩家游戏模式
 gamemode adventure @a
 ## 玩家位置与重生点

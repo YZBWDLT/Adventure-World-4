@@ -87,3 +87,6 @@ scoreboard players set potionUsed data 0
 
 ## 是否有玩家开启了创造模式作弊
 scoreboard players set hasCheat data 0
+
+## 是否显示 HUD
+scoreboard players set allowHud data 1

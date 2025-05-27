@@ -1,16 +1,8 @@
 # ===== 启用对话 =====
 # 启用锁定视角的对话时执行。
+# 调用此方法时：无需修饰。
 
-# 调用此方法时：
-# · 执行者任意
-# · 执行位置任意
-# 输出结果：
-# · 禁用玩家权限
-# · 存在多个玩家时，施加隐身
-# · 启用不保留值的时间线，并时间流逝
-# · 禁止与 NPC 的交互
-
-# --- 禁用玩家权限 ---
+# --- 禁用玩家移动与旋转视角的权限 ---
 inputpermission set @a camera disabled
 inputpermission set @a movement disabled
 
@@ -25,3 +17,6 @@ function lib/modify_data/states/timeline/enable_time_lapse
 
 # --- 禁止与 NPC 的交互 ---
 scoreboard players set allowNpcInteraction data 0
+
+# --- 禁用 HUD ---
+scoreboard players set allowHud data 0
