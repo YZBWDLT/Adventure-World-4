@@ -1,0 +1,22 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.spawner.countdown": {
+            "animation_length": 2.5,
+            "loop": true,
+            "timeline": {
+                "0.75": [ "/execute as @a at @s run playsound random.orb" ],
+                "1.00": [ "/execute as @a at @s run playsound random.orb" ],
+                "1.25": [ "/execute as @a at @s run playsound random.orb" ],
+                "1.50": [ "/execute as @a at @s run playsound random.orb" ],
+                "1.75": [ "/execute as @a at @s run playsound random.orb" ],
+                "1.80": [ "/execute as @a at @s run playsound random.orb" ],
+                "1.85": [ "/execute as @a at @s run playsound random.orb" ],
+                "1.90": [ "/execute as @a at @s run playsound random.orb" ],
+                "1.95": [ "/execute as @a at @s run playsound random.orb" ],
+                "2.00": [ "@s aw:start_spawn" ],
+                "2.05": [ "@s aw:remove_immediately" ]
+            }
+        }
+    }
+}

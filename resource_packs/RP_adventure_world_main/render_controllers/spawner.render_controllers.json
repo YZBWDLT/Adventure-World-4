@@ -1,0 +1,81 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.spawner": {
+            "materials": [
+                {
+                    "*": "material.default"
+                }
+            ],
+            "geometry": "array.geo[query.property('aw:monster_type')]",
+            "textures": [
+                "array.tex[query.property('aw:monster_type')]"
+            ],
+            "arrays": {
+                "geometries": {
+                    "array.geo": [
+                        "geometry.default",
+                        "geometry.zombie",
+                        "geometry.zombie",
+                        "geometry.husk",
+                        "geometry.husk",
+                        "geometry.piglin",
+                        "geometry.drowned",
+                        "geometry.drowned",
+                        "geometry.skeleton",
+                        "geometry.skeleton",
+                        "geometry.stray",
+                        "geometry.spider",
+                        "geometry.spider",
+                        "geometry.creeper",
+                        "geometry.guardian",
+                        "geometry.piglin",
+                        "geometry.piglin",
+                        "geometry.hoglin",
+                        "geometry.silverfish",
+                        "geometry.magma_cube",
+                        "geometry.ghast",
+                        "geometry.witch",
+                        "geometry.skeleton",
+                        "geometry.guardian",
+                        "geometry.blaze",
+                        "geometry.evoker"
+                    ]
+                },
+                "textures": {
+                    "array.tex": [
+                        "texture.default",
+                        "texture.zombie",
+                        "texture.zombie",
+                        "texture.husk",
+                        "texture.husk",
+                        "texture.zombified_piglin",
+                        "texture.drowned",
+                        "texture.drowned",
+                        "texture.skeleton",
+                        "texture.skeleton",
+                        "texture.stray",
+                        "texture.spider",
+                        "texture.cave_spider",
+                        "texture.creeper",
+                        "texture.guardian",
+                        "texture.piglin",
+                        "texture.piglin_brute",
+                        "texture.hoglin",
+                        "texture.silverfish",
+                        "texture.magma_cube",
+                        "texture.ghast",
+                        "texture.witch",
+                        "texture.skeleton",
+                        "texture.elder_guardian",
+                        "texture.blaze",
+                        "texture.evoker"
+                    ]
+                }
+            },
+            "color": {
+                "a": "0.25"
+            }
+        }
+    }
+}

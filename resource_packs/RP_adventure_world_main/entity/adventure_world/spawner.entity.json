@@ -3,10 +3,69 @@
     "minecraft:client_entity": {
         "description": {
             "identifier": "aw:spawner",
-            "render_controllers": [ "controller.render.marker" ],
+            "render_controllers": [
+                "controller.render.spawner",
+                { "controller.render.stray_clothes": "query.property('aw:monster_type')==10" }
+            ],
             "materials": { "default": "entity_alphatest" },
-            "geometry": { "default": "geometry.zombie" },
-            "textures": { "default": "textures/entity/zombie/zombie" }
+            "geometry": {
+                "default": "geometry.zombie",
+                "zombie": "geometry.zombie",
+                "husk": "geometry.zombie.husk",
+                "drowned": "geometry.zombie.drowned",
+                "skeleton": "geometry.skeleton",
+                "stray": "geometry.skeleton.stray",
+                "spider": "geometry.spider",
+                "creeper": "geometry.creeper",
+                "guardian": "geometry.guardian",
+                "piglin": "geometry.piglin",
+                "hoglin": "geometry.hoglin",
+                "silverfish": "geometry.silverfish",
+                "magma_cube": "geometry.magma_cube_v2",
+                "ghast": "geometry.ghast",
+                "witch": "geometry.villager.witch",
+                "blaze": "geometry.blaze",
+                "evoker": "geometry.evoker"
+            },
+            "textures": {
+                "default": "textures/entity/zombie/zombie",
+                "zombie": "textures/entity/zombie/zombie",
+                "husk": "textures/entity/zombie/husk",
+                "zombified_piglin": "textures/entity/piglin/zombie_piglin",
+                "drowned": "textures/entity/zombie/drowned",
+                "skeleton": "textures/entity/skeleton/skeleton",
+                "stray": "textures/entity/skeleton/stray",
+                "spider": "textures/entity/spider/spider",
+                "cave_spider": "textures/entity/spider/cave_spider",
+                "creeper": "textures/entity/creeper/creeper",
+                "guardian": "textures/entity/guardian",
+                "piglin": "textures/entity/piglin/piglin",
+                "piglin_brute": "textures/entity/piglin/piglin_brute",
+                "hoglin": "textures/entity/hoglin/hoglin",
+                "magma_cube": "textures/entity/slime/magmacube_v2",
+                "silverfish": "textures/entity/silverfish",
+                "ghast": "textures/entity/ghast/ghast",
+                "witch": "textures/entity/witch",
+                "elder_guardian": "textures/entity/guardian_elder",
+                "blaze": "textures/entity/blaze",
+                "evoker": "textures/entity/illager/evoker"
+            },
+
+            "animations": {
+                "hint_controller": "controller.animation.spawner.hint",
+                "hint_default": "animation.spawner.hint_default",
+                "hint_spider": "animation.spawner.hint_spider",
+                "spider_leg": "animation.spider.default_leg_pose",
+                "guardian_setup": "animation.guardian.setup",
+                "guardian_spikes": "animation.guardian.spikes",
+                "guardian_swim": "animation.guardian.swim",
+                "guardian_move_eye": "animation.guardian.move_eye"
+            },
+            "scripts": {
+                "animate": [
+                    "hint_controller"
+                ]
+            }
         }
     }
 }
