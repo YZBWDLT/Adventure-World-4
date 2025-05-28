@@ -1,6 +1,6 @@
 # 冒险小世界：剑之试炼
 
-一张 Minecraft 基岩版 1.20.50 的自定义 PVE 地图
+一张 Minecraft 基岩版 1.21.0 的自定义 PVE 地图
 
 ## 作者
 
@@ -29,6 +29,7 @@
 - 现在右侧的信息板不再会在玩家手持物品时，来回在物品信息和关卡信息之间闪了
 - 现在药水不再显示当前上限
 - 统一了中国版和国际版的剧情内容，不再单独做出适配。
+- 移除了一个严重违规成员的制作人表
 
 ### 底层更新
 
@@ -38,6 +39,7 @@
 - 合并了`RP_aw_main`、`RP_aw_music_pack`为`RP_adventure_world_main`
 - 更名了`RP_aw_netease`为`RP_adventure_world_netease`
 - 新增了`RP_adventure_world_international`
+- 现在`manifest.json`的最小引擎版本均为`1.21.0`
 
 #### 物品
 
@@ -67,13 +69,13 @@
 #### 标记实体
 
 - 现在所有的记分板变量都使用假名代替，移除了大量用于存储变量的标记
-- 现在使用带以下标签的标记实体：
-  - `thisLevel`：作为玩家的重生点
-  - `nextLevel`：作为玩家进入下一关的检测点
-  - `prevLevel`：作为玩家在上一关的重生点
-  - 游戏开始后，`thisLevel` -> `prevLevel`，`nextLevel` -> `thisLevel`
-  - 游戏失败后，`prevLevel` -> `thisLevel`，`thisLevel` -> `nextLevel`
-  - 游戏胜利后，删除`prevLevel`，新建`nextLevel`
+- 现在使用带以下`aw:level`实体属性的标记实体：
+  - `this`：作为玩家的重生点
+  - `next`：作为玩家进入下一关的检测点
+  - `prev`：作为玩家在上一关的重生点
+  - 游戏开始后，`this` -> `prev`，`next` -> `this`
+  - 游戏失败后，`prev` -> `this`，`this` -> `next`
+  - 游戏胜利后，删除`prev`，新建`next`
 
 #### 记分板变量
 
@@ -92,6 +94,9 @@
   - `data.allowAcousticStoneCrystal`，用于标记允许补充传声石结晶
     - 为`0`时，物品控制器不会补充传声石结晶
     - 为`1`时，物品控制器补充传声石结晶
+  - `data.allowHud`，用于标记是否启用 HUD
+    - 为`0`时，禁用 HUD
+    - 为`1`时，启用 HUD
 - **更名**：
   - 记分板`deathTimes` -> 记分板`deathCount`
   - 记分板`killAmount` -> 记分板`killCount`
@@ -149,8 +154,11 @@
   - `lib/death_message_announcer` -> `lib/modify_data/death_message`
   - `lib/music_player` -> `lib/modify_data/play_music`
   - `lib/init/gamerule` -> `lib/modify_data/init/gamerule`
-  - `developer/developer_mode` -> `settings/developer_mode`
   - `lib/scoreboard/{1}player_{2}_mode` -> `lib/modify_data/levels/info_{1}_{2}`
+  - `lib/get_data/using_client` -> `lib/get_data/client`
+  - `lib/all_levels/start_chapter` -> `lib/modify_data/levels/start_chapter`
+  - `lib/monsters/{1}/level_{2}` -> `entities/spawner/{1}_{2}`
+  - `developer/developer_mode` -> `settings/developer_mode`
   - `entities/player/using_{1}` -> `items/{1}`，现在使用脚本检测并自动执行对应函数
 - **合并**（`.mcfunction`）：
   - `system/item_limit/items`、`lib/supplier/items`、`system/equipment_tester` -> `system/controller/items`，现在通过物品控制器，每秒进行一次物品上限检测、补充和附魔
@@ -162,3 +170,6 @@
   - `system/gameid_seperator`，因为现在实际上已不再使用`data.gameId`来控制
   - `entities/hookshot/hit_planks_test`，现在使用脚本检测
   - `entities/hookshot/hookshot`，现在使用脚本检测
+  - `lib/get_data/2_digit_seperator`，因为现在实际上已不再使用`data.gameId`来控制
+  - `lib/get_data/arrow_amount`，现在由`system/controller/arrow`自行检测，不再单独抽出一个方法
+  - `lib/get_data/is_online_before`和`lib/get_data/is_online_after`，现在由`system/antileave`自行检测，不再单独抽出一个方法

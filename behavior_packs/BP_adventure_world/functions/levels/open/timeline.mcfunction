@@ -2,9 +2,6 @@
 
 # --- 游戏时时间线 ---
 
-## 开幕
-execute if score levelCompleted data matches 0 if score level data matches 0 run function levels/open/before_stage/gaming
-
 ## 村庄剧情
 
 ### 0-1 | 醒来
@@ -19,6 +16,9 @@ execute if score levelCompleted data matches 0 if score level data matches 4 run
 execute if score levelCompleted data matches 0 if score level data matches 5 run function levels/open/stage5/gaming
 
 # --- 游戏后时间线 ---
+
+## 开幕
+execute if score levelCompleted data matches 1 if score level data matches 0 run function levels/open/before_stage/gaming
 
 ### 0-1 | 醒来
 execute if score levelCompleted data matches 1 if score level data matches 1 run function levels/open/stage1/after_gaming

@@ -7,6 +7,7 @@ scoreboard players set storyMode settings 1
 ## 更换时间线状态 | 切换为状态 2，时间值 0，流逝时间
 function lib/modify_data/states/timeline/dont_keep_value
 function lib/modify_data/states/timeline/enable_time_lapse
+function lib/modify_data/start_dialogue
 scoreboard players set timeline active 2
 
 # --- 相机黑屏 ---

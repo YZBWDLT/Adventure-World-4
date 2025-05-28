@@ -5,3 +5,5 @@ diagnostic.disable.minecraft.commands.summon.syntax=true
 diagnostic.disable.molang.variable.missing=true
 diagnostic.disable.behaviorpack.entity.component.missing=true
 diagnostic.disable.behaviorpack.block.missing=true
+diagnostic.disable.resourcepack.model.bone.missing=true
+diagnostic.disable.minecraft.commands.scoreboard.syntax=true
