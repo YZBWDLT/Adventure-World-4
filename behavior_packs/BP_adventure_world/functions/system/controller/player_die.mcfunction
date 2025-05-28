@@ -4,7 +4,7 @@
 # 玩家的死亡可以分为在游戏时死亡和不在游戏时死亡，其中游戏时死亡则令玩家处于观战状态。
 
 # --- 将玩家的重生点设置在本关标记上 ---
-execute as @e[has_property={aw:level=this}] at @s run spawnpoint @a ~~~
+execute as @e[has_property={aw:level="this"}] at @s run spawnpoint @a ~~~
 
 # --- 运行死亡榜 ---
 scoreboard players set @a[scores={deathState=!2}] deathState 1
