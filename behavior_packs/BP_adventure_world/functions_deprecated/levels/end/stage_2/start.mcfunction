@@ -13,12 +13,12 @@ function lib/states/dialogue/enable_lock_camera
 function lib/states/timeline/enable
 
 # --- 生成NPC ---
-summon aw:npc -21 3 42 "aw:is_author=false,aw:npc_type=6" "张宇"
-summon aw:npc 0 2 -29 "aw:is_author=false,aw:npc_type=5" "李南"
-summon aw:npc -43 1 -34 "aw:is_author=false,aw:npc_type=0" "韩林清"
-summon aw:npc -6 1 -5 "aw:is_author=false,aw:npc_type=1" "陈琦"
-summon aw:npc -38 1 -3 "aw:is_author=false,aw:npc_type=2" "赵向前"
-summon aw:npc -2 1 18 "aw:is_author=false,aw:npc_type=3" "李晴"
+summon aw:npc -21 3 42 aw:npc_zhangyu "张宇"
+summon aw:npc 0 2 -29 aw:npc_linan "李南"
+summon aw:npc -43 1 -34 aw:npc_hanlinqing "韩林清"
+summon aw:npc -6 1 -5 aw:npc_chenqi "陈琦"
+summon aw:npc -38 1 -3 aw:npc_zhaoxiangqian "赵向前"
+summon aw:npc -2 1 18 aw:npc_liqing "李晴"
 
 kill @e[type=aw:wild_sword]
 

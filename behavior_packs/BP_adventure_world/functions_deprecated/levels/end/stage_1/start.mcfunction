@@ -19,8 +19,8 @@ function lib/states/timeline/enable
 
 # --- 生成NPC ---
 kill @e[type=aw:npc]
-summon aw:npc -14 1 83 "aw:is_author=false,aw:npc_type=7" "田英"
-summon aw:npc -17 1 83 "aw:is_author=false,aw:npc_type=4" "米云溪"
+summon aw:npc -14 1 83 aw:npc_tianying "田英"
+summon aw:npc -17 1 83 aw:npc_miyunxi "米云溪"
 
 kill @e[family=text_display]
 

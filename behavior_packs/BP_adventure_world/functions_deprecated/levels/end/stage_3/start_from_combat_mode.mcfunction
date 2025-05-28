@@ -36,7 +36,7 @@ tp @a -27 6 -48
 
 # --- 生成张宇 ---
 kill @e[type=aw:npc]
-summon aw:npc -21 3 42 "aw:is_author=false,aw:npc_type=6" "张宇"
+summon aw:npc -21 3 42 aw:npc_zhangyu "张宇"
 
 # --- 播放音乐 ---
 function lib/music_player

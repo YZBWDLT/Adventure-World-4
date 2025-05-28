@@ -98,9 +98,9 @@ execute if score timeline time matches 1880 run function levels/open/stage4/even
 # --- NPC 可见玩家 ---
 
 ## [1680] 允许 NPC 面向玩家
-execute if score timeline time matches 1680 run event entity @e[type=aw:npc] "aw:see_player=true"
+execute if score timeline time matches 1680 run event entity @e[type=aw:npc] aw:see_player
 ## [2360] 允许 NPC 面向玩家
-execute if score timeline time matches 2360 run event entity @e[type=aw:npc] "aw:see_player=true"
+execute if score timeline time matches 2360 run event entity @e[type=aw:npc] aw:see_player
 
 # --- 给予物品 ---
 

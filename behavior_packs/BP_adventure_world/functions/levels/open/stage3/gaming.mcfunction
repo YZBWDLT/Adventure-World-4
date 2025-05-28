@@ -46,7 +46,7 @@ execute if score timeline time matches 1100..1140 as @a at @s run tp @s ~~~ faci
 
 ## [1040~1140] 田英行走
 execute if score timeline time matches 1040..1140 as @e[name="田英"] at @s run tp @s ~~~-0.1
-execute if score timeline time matches 1140 run event entity @e[name="田英"] "aw:see_player=true"
+execute if score timeline time matches 1140 run event entity @e[name="田英"] aw:see_player
 
 # --- 剧情结束 ---
 execute if score timeline time matches 1420 run function levels/open/stage3/complete
