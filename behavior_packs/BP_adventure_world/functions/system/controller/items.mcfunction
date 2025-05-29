@@ -5,7 +5,7 @@
 # 重新设置物品的耐久，防止物品因为耐久过低导致损坏。
 
 # --- 掉落物清理 ---
-kill @e[type=item]
+execute if score allowRemoveItemEntity data matches 1 run kill @e[type=item]
 
 # --- 上限检测 ---
 # 如果玩家拥有下面的两种以上的物品，则清除之。

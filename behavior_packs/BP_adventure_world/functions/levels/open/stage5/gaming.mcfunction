@@ -6,10 +6,9 @@ execute if score timeline time matches 160 run title @a title §1
 execute if score timeline time matches 160 run title @a subtitle §3作者 §b一只卑微的量筒 狂野巴豆
 execute if score timeline time matches 250 run title @a title §1
 execute if score timeline time matches 250 run title @a subtitle §3联合作者 §bo绿叶o 文雨
-# [250] 相机变换：续杯黑屏
+# [110~410] 相机变换：续杯黑屏
 execute if score timeline time matches 340 run title @a title §1
 execute if score timeline time matches 340 run title @a subtitle §3出品 §b极筑工坊
-# [410] 相机变换：续杯黑屏
 execute if score timeline time matches 429 run title @a times 0 60 0
 execute if score timeline time matches 430 run title @a title ■■ ■ ■■
 execute if score timeline time matches 470 as @a at @s run playsound random.anvil_use @s ~~~ 100 0.75
@@ -25,10 +24,10 @@ execute if score timeline time matches 710 if score storyMode settings matches 0
 
 # --- 相机变换 ---
 
-## [250] 续杯黑屏
-execute if score timeline time matches 250 run camera @a fade time 0 10 0 color 0 0 0
-## [410] 续杯黑屏
-execute if score timeline time matches 250 run camera @a fade time 0 10 5 color 0 0 0
+## [110~410] 续杯黑屏
+execute if score timeline time matches 110..410 run camera @a fade time 0 10 4 color 0 0 0
+## [410~610] 如果是纯战斗模式，则继续续杯黑屏
+execute if score timeline time matches 410..610 if score storyMode settings matches 0 run camera @a fade time 0 10 4 color 0 0 0
 
 # --- 剧情结束 ---
 

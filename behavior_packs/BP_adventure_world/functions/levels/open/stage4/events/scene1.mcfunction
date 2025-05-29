@@ -15,3 +15,6 @@ tp @e[has_property={aw:level="this"}] -16 1 82 0 0
 
 # --- 播放音乐 ---
 function lib/modify_data/play_music
+
+# --- 恢复掉落物移除机制 ---
+scoreboard players set allowRemoveItemEntity data 1

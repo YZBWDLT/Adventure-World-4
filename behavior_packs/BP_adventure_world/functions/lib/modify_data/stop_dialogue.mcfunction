@@ -17,9 +17,6 @@ function lib/modify_data/states/timeline/disable_time_lapse
 # --- 启用与 NPC 的交互 ---
 scoreboard players set allowNpcInteraction data 1
 
-# --- 提示玩家可以移动 --
-tellraw @a {"rawtext":[{"text":"你现在可以移动了！"}]}
-
 # --- 恢复玩家的相机 ---
 camera @a clear
 

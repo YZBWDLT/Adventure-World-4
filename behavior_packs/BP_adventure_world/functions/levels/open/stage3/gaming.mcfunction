@@ -3,11 +3,11 @@
 
 # --- 剧情 ---
 execute if score timeline time matches 60 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7云儿，你在这里啊！"}]}
-# [140~300] 相机变换：面向时间神殿
+# [140] 相机变换：面向时间神殿
 execute if score timeline time matches 140 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7你来了~？这里就是你之前穿越时间的地方吧。"}]}
 execute if score timeline time matches 220 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7是啊，你之前对我的经历很感兴趣，等事情都解决了，我可以带着你再一起穿越看看。"}]}
 execute if score timeline time matches 300 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7嗯嗯，好呀！不过当务之急还是得先弄清空间贤者的下落啊。"}]}
-# [301] 相机变换：恢复玩家视角
+# [300] 相机变换：恢复玩家视角
 execute if score timeline time matches 380 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7唉，真愁人啊，现在一点线索都没有。你有什么发现吗？"}]}
 execute if score timeline time matches 460 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7刚才我正好发现了很奇特的东西，你来看看，或许能有些帮助。"}]}
 execute if score timeline time matches 540 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7哦？你细说。"}]}
@@ -20,7 +20,6 @@ execute if score timeline time matches 860 run tellraw @a {"rawtext":[{"text":"*
 execute if score timeline time matches 940 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7也许其他建筑上保存的文字会完整一些，之后去调查一下罢。"}]}
 execute if score timeline time matches 1020 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7那些神殿里有好多怪物的，要去也要一起去调查呀！"}]}
 # [1040~1140] 田英行走动画：田英行走
-# [1100~1140] 相机变换：面向田英
 execute if score timeline time matches 1100 run tellraw @a {"rawtext":[{"text":"* §b田英： §7（从树林里出来）喂——你们两个！聊得这么欢，是有所发现了吧？"}]}
 # [1141] 相机变换：恢复玩家视角
 execute if score timeline time matches 1180 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7......哎呀，出场好歹打个招呼呀！吓到我们了可恶！"}]}
@@ -29,18 +28,16 @@ execute if score timeline time matches 1340 run tellraw @a {"rawtext":[{"text":"
 
 # --- 相机变换 ---
 
-# [140~300] 面向时间神殿
-execute if score timeline time matches 140 run camera @a set minecraft:free pos 50 20 -15 facing 35 5 -33
-execute if score timeline time matches 140 run camera @a set minecraft:free ease 8 out_sine pos 20 6 -25 facing 35 10 -33
-# [301] 恢复玩家视角
-execute if score timeline time matches 301 run camera @a clear
+# [140] 面向时间神殿
+execute if score timeline time matches 140 run camera @a set minecraft:free ease 2 out_sine pos 50 20 -15 facing 35 5 -33
+# [300] 恢复玩家视角
+execute if score timeline time matches 300 as @a at @s anchored eyes run camera @s set minecraft:free ease 2 in_out_sine pos ^^^0.5 facing ^^^1
+execute if score timeline time matches 340 run camera @a clear
 # [620] 面向时间神殿的刻文
 execute if score timeline time matches 620 run camera @a set minecraft:free ease 2 in_out_sine pos 35 7 -33 facing 30 2 -33
 # [940] 恢复玩家视角
 execute if score timeline time matches 940 as @a at @s anchored eyes run camera @s set minecraft:free ease 2 in_out_sine pos ^^^0.5 facing ^^^1
 execute if score timeline time matches 980 run camera @a clear
-# [1100~1140] 面向田英
-execute if score timeline time matches 1100..1140 as @a at @s run tp @s ~~~ facing @e[name="田英",c=1]
 
 # --- 田英行走动画 ---
 

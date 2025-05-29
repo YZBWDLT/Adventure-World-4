@@ -13,23 +13,23 @@ item.aw:iron_chestplate=铁胸甲
 item.aw:iron_leggings=铁护腿
 item.aw:iron_boots=铁靴子
 item.aw:wind_pearl=御风珠
-item.aw:quiver.name=箭袋
-item.aw:acoustic_stone_crystal.name=传声石结晶
-item.aw:potion_health.name=治疗药水
-item.aw:potion_growth.name=生长药水
-item.aw:potion_thrill.name=亢奋药水
-item.aw:potion_turtle.name=神龟药水
-item.aw:potion_rebirth.name=重生药水
-item.aw:potion_purification.name=净化药水
-item.aw:potion_hibernation.name=休眠药水
+item.aw:quiver=箭袋
+item.aw:acoustic_stone_crystal=传声石结晶
+item.aw:potion_health=治疗药水
+item.aw:potion_growth=生长药水
+item.aw:potion_thrill=亢奋药水
+item.aw:potion_turtle=神龟药水
+item.aw:potion_rebirth=重生药水
+item.aw:potion_purification=净化药水
+item.aw:potion_hibernation=休眠药水
 item.aw:change_to_creative=改为创造模式
 item.aw:change_to_survival=改为生存模式
 item.aw:change_to_adventure=改为冒险模式
 item.aw:change_to_spectator=改为旁观模式
 
-item.aw:toggle_wave.name=调整波数
-item.aw:summon_monsters.name=生成怪物
-item.aw:kill_monsters.name=清除怪物
+item.aw:toggle_wave=调整波数
+item.aw:summon_monsters=生成怪物
+item.aw:kill_monsters=清除怪物
 
 ### 方块类
 tile.aw:carved_stone_bricks.name=雕刻石砖
@@ -46,7 +46,7 @@ entity.aw:text_display.name=悬浮文本
 entity.aw:skeleton_king.name=骷髅王
 entity.aw:blaze_king.name=烈焰之魂
 entity.aw:marker.name=标记
-entity.aw:wave_name.name=波潮名称
+entity.aw:name_marker.name=名称标记
 entity.aw:spawner.name=怪物生成器
 entity.evoker_boss.name=§l§c唤魔法师
 

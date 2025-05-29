@@ -38,9 +38,17 @@ world.afterEvents.projectileHitBlock.subscribe(event => {
 
 // 当玩家使用物品后，则触发函数
 world.afterEvents.itemUse.subscribe(event => {
-    const usableItems = ["aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal", "aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification", ];
+    const usableItems = ["aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal", ];
     if (usableItems.includes(event.itemStack.typeId)) {
-        event.source.runCommand(`function item/${event.itemStack.typeId.split(":")[1]}`);
+        event.source.runCommand(`function items/${event.itemStack.typeId.split(":")[1]}`);
+    }
+});
+
+// 当玩家使用完毕物品后，则触发函数
+world.afterEvents.itemCompleteUse.subscribe(event => {
+    const usableItems = ["aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification", ];
+    if (usableItems.includes(event.itemStack.typeId)) {
+        event.source.runCommand(`function items/${event.itemStack.typeId.split(":")[1]}`);
     }
 });
 

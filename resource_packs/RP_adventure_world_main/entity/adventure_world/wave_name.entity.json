@@ -2,7 +2,7 @@
     "format_version": "1.10.0",
     "minecraft:client_entity": {
         "description": {
-            "identifier": "aw:wave_name",
+            "identifier": "aw:name_marker",
             "render_controllers": [ "controller.render.marker" ],
             "materials": { "default": "entity_alphatest" },
             "geometry": { "default": "geometry.zombie" },

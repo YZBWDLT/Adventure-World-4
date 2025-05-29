@@ -13,9 +13,9 @@ execute if score timeline time matches 420 run tellraw @a {"rawtext":[{"text":"*
 execute if score timeline time matches 500 run tellraw @a {"rawtext":[{"text":"* §e张宇： §7碎片似乎是进入的钥匙，但只可惜，后来我发现我并没有能进去的资格。"}]}
 execute if score timeline time matches 580 run tellraw @a {"rawtext":[{"text":"* §e张宇： §7也不知怎么的，离开那个地方后，我就对武器产生了很大的兴趣，成为了一名铁匠，专门为各路勇士打造利剑。"}]}
 ## 停顿
-## [700] 相机变换：恢复视角
 execute if score timeline time matches 700 run tellraw @a {"rawtext":[{"text":"* §e张宇： §7只可惜后来......因为种种变故，我放弃了做铁匠，隐姓埋名来到这里，做了商人。"}]}
 execute if score timeline time matches 780 run tellraw @a {"rawtext":[{"text":"* §e张宇： §7这么多年过去了，看到你这个剑术天才，我想也许那个神庙是专门为你而生的。"}]}
+## [840] 相机变换：恢复视角
 execute if score timeline time matches 860 run tellraw @a {"rawtext":[{"text":"* §e张宇： §7碎片我一直留着，现在我把它给你，也告诉你前往那里的路，愿你归来能够有所收获。"}]}
 execute if score timeline time matches 940 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7好，谢谢您！我叫上朋友一起去那里看看。"}]}
 ## [1000~1060] 相机变换：逐渐黑屏
@@ -32,8 +32,6 @@ execute if score timeline time matches 1630 run tellraw @a {"rawtext":[{"text":"
 ## [1680] 相机变换：将玩家的视角从神殿转向田英
 ## [1680] NPC 可见玩家：允许 NPC 面向玩家
 execute if score timeline time matches 1680 run tellraw @a {"rawtext":[{"text":"* §b田英： §7说不定还能提供一些有助于寻找空间贤者的线索！"}]}
-## [1720] 相机变换：瞬间切到时间神殿
-## [1745] 相机变换：恢复玩家视角
 execute if score timeline time matches 1760 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7线索......对了，云儿你看看，神殿的墙壁上有没有刻字？"}]}
 ## [1860] 相机变换：逐渐黑屏
 ## [1880] 场景变换：切换场景到剑之试炼背侧
@@ -62,22 +60,18 @@ execute if score timeline time matches 3160 run tellraw @a {"rawtext":[{"text":"
 # --- 相机变换 ---
 
 ## [1] 面向张宇林乐两人
-execute if score timeline time matches 1 run camera @a set minecraft:free pos -14 8 38 facing -21 2 40
+execute if score timeline time matches 1 run camera @a set minecraft:free ease 2 out_sine pos -14 8 38 facing -21 2 40
 ## [260] 面向碎片
 execute if score timeline time matches 260 as @a at @s run camera @s set minecraft:free pos -19 5 39 facing -21 4 41
-execute if score timeline time matches 260 as @a at @s run camera @s set minecraft:free ease 30 linear pos -21 4 41 facing -21 4 41
-## [700] 恢复视角
-execute if score timeline time matches 700 run camera @s clear
+execute if score timeline time matches 260 as @a at @s run camera @s set minecraft:free ease 30 linear pos -20.0 5.0 41.0 facing -21 4.5 41
+## [840] 恢复视角
+execute if score timeline time matches 840 run camera @a clear
 ## [1000~1060] 逐渐黑屏
 execute if score timeline time matches 1000 run camera @a fade time 3 10 3 color 0 0 0
 ## [1060~1300] 持续黑屏状态
 execute if score timeline time matches 1100 run camera @a fade time 0 10 3 color 0 0 0
 ## [1680] 将玩家的视角从神殿转向米云溪
 execute if score timeline time matches 1680 as @a at @s run tp @s ~~~ facing @e[name="米云溪",c=1]
-## [1720] 瞬间切到时间神殿
-execute if score timeline time matches 1720 run camera @a set minecraft:free pos 35 7 -33 facing 30 2 -33
-## [1745] 恢复玩家视角
-execute if score timeline time matches 1745 run camera @s clear
 ## [1860] 逐渐黑屏
 execute if score timeline time matches 1860 run camera @a fade time 1 1 1 color 0 0 0
 ## [1880] 面向墙壁刻文

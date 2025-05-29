@@ -36,11 +36,11 @@ execute if score chapter data matches 0 if score level data matches 3 if entity 
 ## 米云溪
 execute if score chapter data matches 0 if score level data matches 3 if entity @s[has_property={aw:is_author=false,aw:npc_type=4}] run tellraw @p {"rawtext":[{"translate":"* §c%%s： §7田英，田英你看这里，我刚刚发现......","with":{"rawtext":[{"selector":"@s"}]}}]}
 
-# --- 村庄对话（开幕第6段，0-6） ---
+# --- 村庄对话（开幕第4段，0-4） ---
 ## 田英
-execute if score chapter data matches 0 if score level data matches 6 if entity @s[has_property={aw:is_author=false,aw:npc_type=7}] run tellraw @p {"rawtext":[{"translate":"* §b%%s： §7我们的勇气贤者从来不怕困难！","with":{"rawtext":[{"selector":"@s"}]}}]}
+execute if score chapter data matches 0 if score level data matches 4 if entity @s[has_property={aw:is_author=false,aw:npc_type=7}] run tellraw @p {"rawtext":[{"translate":"* §b%%s： §7我们的勇气贤者从来不怕困难！","with":{"rawtext":[{"selector":"@s"}]}}]}
 ## 米云溪
-execute if score chapter data matches 0 if score level data matches 6 if entity @s[has_property={aw:is_author=false,aw:npc_type=4}] run tellraw @p {"rawtext":[{"translate":"* §c%%s： §7一定要小心啊，我们在外面等你。","with":{"rawtext":[{"selector":"@s"}]}}]}
+execute if score chapter data matches 0 if score level data matches 4 if entity @s[has_property={aw:is_author=false,aw:npc_type=4}] run tellraw @p {"rawtext":[{"translate":"* §c%%s： §7一定要小心啊，我们在外面等你。","with":{"rawtext":[{"selector":"@s"}]}}]}
 
 # --- 村庄对话（结束第3段，10-3） ---
 ## 田英

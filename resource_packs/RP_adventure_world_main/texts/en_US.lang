@@ -13,23 +13,23 @@ item.aw:iron_chestplate=Iron Chestplate
 item.aw:iron_leggings=Iron Leggings
 item.aw:iron_boots=Iron Boots
 item.aw:wind_pearl=Wind Pearl
-item.aw:quiver.name=Quiver
-item.aw:acoustic_stone_crystal.name=Acoustic Stone Crystal
-item.aw:potion_health.name=Health Potion
-item.aw:potion_growth.name=Growth Potion
-item.aw:potion_thrill.name=Thrill Potion
-item.aw:potion_turtle.name=Turtle Potion
-item.aw:potion_rebirth.name=Rebirth Potion
-item.aw:potion_purification.name=Purification Potion
-item.aw:potion_hibernation.name=Hibernation Potion
+item.aw:quiver=Quiver
+item.aw:acoustic_stone_crystal=Acoustic Stone Crystal
+item.aw:potion_health=Health Potion
+item.aw:potion_growth=Growth Potion
+item.aw:potion_thrill=Thrill Potion
+item.aw:potion_turtle=Turtle Potion
+item.aw:potion_rebirth=Rebirth Potion
+item.aw:potion_purification=Purification Potion
+item.aw:potion_hibernation=Hibernation Potion
 item.aw:change_to_creative=Change To Creative Mode
 item.aw:change_to_survival=Change To Survival Mode
 item.aw:change_to_adventure=Change To Adventure Mode
 item.aw:change_to_spectator=Change To Spectator Mode
 
-item.aw:toggle_wave.name=Toggle Wave
-item.aw:summon_monsters.name=Summon Monsters
-item.aw:kill_monsters.name=Kill Monsters
+item.aw:toggle_wave=Toggle Wave
+item.aw:summon_monsters=Summon Monsters
+item.aw:kill_monsters=Kill Monsters
 
 ### Blocks
 tile.aw:carved_stone_bricks.name=Carved Stone Bricks
@@ -46,7 +46,7 @@ entity.aw:text_display.name=Floating Text
 entity.aw:skeleton_king.name=Skeleton King
 entity.aw:blaze_king.name=Blaze King
 entity.aw:marker.name=Marker
-entity.aw:wave_name.name=Wave Name
+entity.aw:name_marker.name=Name Marker
 entity.aw:spawner.name=Monster Spawner
 entity.evoker_boss.name=§l§cEVOKER BOSS
 

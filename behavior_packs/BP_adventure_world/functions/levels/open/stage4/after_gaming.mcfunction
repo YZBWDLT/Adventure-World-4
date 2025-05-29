@@ -2,12 +2,12 @@
 # 0-4 | 与张宇对话&到达剑之试炼入口
 
 # --- 检查玩家进入下一个关卡 ---
-execute as @e[has_property={aw:level="next"}] if entity @a[dx=5,dy=1,dz=3] run function levels/open/stage5/start
+execute as @e[has_property={aw:level="next"}] at @s if entity @a[dx=5,dy=0.3,dz=3] run function levels/open/stage5/start
 
 # --- 玩家入水后，触发彩蛋 ---
 
 ## 检测并触发
-execute as @a if block ~~~ water if score timeline time matches 0 run function levels/open/stage4/events/player_in_water
+execute as @a at @s if block ~~~ water if score timeline time matches 0 run function levels/open/stage4/events/player_in_water
 
 ## 剧情
 execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §b田英： §7喂喂！你在干什么！试炼入口不在水里啊！"}]}
