@@ -1,22 +1,14 @@
-# ===== 将波潮信息打印到 aw:wave_name 上 =====
-# 将波潮信息打印为 aw:wave_name 的名称。
-
-# 调用此方法时：
-# · 执行者任意
-# · 执行位置为(-83,1,-2)
-# 输出结果：
-# · 按照波潮信息和最大波潮信息，生成一个 aw:wave_name 并将波潮信息打印为 aw:wave_name 的名称
+# ===== 将波潮信息打印到 aw:name_marker 上 =====
+# 将波潮信息打印为 aw:name_marker 的名称。
+# 调用此方法时：需修饰执行位置为(-83,1,-2)（execute positioned -83 1 -2）。
 # 备注：符号标记
-# ⚀ - BOSS预告
-# ⚁ - 普通波预告
-# ⚂ - BOSS进行中
-# ⚃ - 普通波进行中
-# ⚄ - BOSS结束
-# ⚅ - 普通波结束
+# ⚀ - BOSS预告 | ⚁ - 普通波预告
+# ⚂ - BOSS进行中 | ⚃ - 普通波进行中
+# ⚄ - BOSS结束 | ⚅ - 普通波结束
 
 # --- 初始化 ---
 ## 将原有的实体移除
-event entity @e[type=aw:wave_name] aw:remove_immediately
+event entity @e[type=aw:name_marker] aw:remove_immediately
 ## 程序结束标记
 scoreboard players set temp.breakFlag data 0
 

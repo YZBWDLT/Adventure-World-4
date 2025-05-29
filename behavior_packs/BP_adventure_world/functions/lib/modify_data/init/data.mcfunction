@@ -17,8 +17,6 @@ scoreboard objectives add settings dummy "设置"
 scoreboard objectives add record dummy "记录"
 scoreboard objectives add time dummy "时间"
 
-scoreboard objectives add chapter dummy "玩家所处章节信息"
-scoreboard objectives add level dummy "玩家所处关卡信息"
 scoreboard objectives add isOnline dummy "玩家在线数据"
 scoreboard objectives add deathState dummy "死亡状态"
 scoreboard objectives add deathCount dummy "死亡次数"
@@ -57,8 +55,8 @@ scoreboard players set wave data 0
 scoreboard players set maxWave data 0
 
 ## 游玩时长
-scoreboard players set playedSecond data 0
-scoreboard players set playedMinute data 0
+scoreboard players set playedSecond time 0
+scoreboard players set playedMinute time 0
 
 ## 实体数目
 scoreboard players set playerAmount data 0
@@ -90,3 +88,6 @@ scoreboard players set hasCheat data 0
 
 ## 是否显示 HUD
 scoreboard players set allowHud data 1
+
+## 是否移除物品掉落物
+scoreboard players set allowRemoveItemEntity data 1

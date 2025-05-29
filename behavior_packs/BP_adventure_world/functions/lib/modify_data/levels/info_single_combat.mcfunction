@@ -1,83 +1,51 @@
 # ===== 信息板显示 =====
-# 用于在单人模式、纯战斗模式下显示信息板。执行者为玩家。
+# 用于在单人模式、纯战斗模式下显示信息板。
+# 调用此方法时：需修饰执行者为玩家（execute as @a）；需提前获取信息板类型（function lib/get_data/infoboard_type）。
 
-# --- 初始化 ---
-## 程序结束标记
-scoreboard players set temp.breakFlag data 0
-
-# --- 游戏状态中 ---
-# 以当前进度为准，先考虑特殊情形
-
-# §l§e冒险小世界§b：剑之试炼
-# 
-# §r§6纯战斗模式
-# §f难度 | §a%%s                     // {"score":{"objective":"settings","name":"diffuculty"}}
-# 
-# §r关卡 §a3-%%s §f| §b湖泊神殿       // {"score":{"objective":"level","name":"@s"}}
-# 
-# §r§a☠ §f怪物数： §a%%s§7/%%s       // {"score":{"objective":"data","name":"monsterAmount"}}, {"score":{"objective":"data","name":"maxMonsterAmount"}}
-# §r§c☘ §f波数 %%s                   // {"selector":"@e[type=aw:wave_name]"}
-# 
-# §r§f☀ §f击杀数： §a%%s             // {"score":{"objective":"killCount","name":"@s"}}
-# §r§c☁ §f死亡数： §a%%s             // {"score":{"objective":"deathCount","name":"@s"}}
-# 
-## §r§f游玩时长： §a%%s:%%s           // {"score":{"objective":"time","name":"playedMinute"}}, {"score":{"objective":"time","name":"playedSecond"}}
-
-## 4-4 | 不显示最大怪物数、波数和关卡，但显示剩余时间。依次显示：settings.difficulty, data.monsterAmount, time.timeline, killCount.@s, deathCount.@s, time.playedMinute, time.playedSecond
-## [{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"time","name":"timeline"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]
-execute if score levelCompleted data matches 0 if score chapter data matches 4 if score level data matches 4 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a4-4 §f| §3寒冰神殿\n\n§r§a☠ §f怪物数： §a%%s§7\n§r§f☹ §f关卡结束：  §a%%s秒\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"time","name":"timeline"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches 0 if score chapter data matches 4 if score level data matches 4 run scoreboard players set temp.breakFlag data 1
-
-## 6-4 | 不显示最大怪物数、波数和关卡。依次显示：settings.difficulty, data.monsterAmount, killCount.@s, deathCount.@s, time.playedMinute, time.playedSecond
-## [{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]
-execute if score levelCompleted data matches 0 if score chapter data matches 6 if score level data matches 4 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a6-4 §f| §7山峦神殿\n\n§r§a☠ §f怪物数： §a%%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches 0 if score chapter data matches 6 if score level data matches 4 run scoreboard players set temp.breakFlag data 1
-
-## 7-5 | 不显示最大怪物数，关卡显示为特别样式。依次显示：settings.difficulty, data.monsterAmount, (selector @e[type=aw:wave_name]), killCount.@s, deathCount.@s, time.playedMinute, time.playedSecond
-## [{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"monsterAmount"}},{"selector":"@e[type=aw:wave_name,c=1]"},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]
-execute if score levelCompleted data matches 0 if score chapter data matches 7 if score level data matches 5 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§c§l最 终 关\n\n§r§a☠ §f怪物数： §a%%s\n§r§c☘ §f波数 %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"monsterAmount"}},{"selector":"@e[type=aw:wave_name,c=1]"},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches 0 if score chapter data matches 7 if score level data matches 5 run scoreboard players set temp.breakFlag data 1
-
-## 标准情况 | 仅当 break 标记为 0 时执行。依次显示：settings.difficulty, data.level, data.monsterAmount, data.maxMonsterAmount, (selector @e[type=aw:wave_name]), killCount.@s, deathCount.@s, time.playedMinute, time.playedSecond
-## [{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"data","name":"maxMonsterAmount"}},{"selector":"@e[type=aw:wave_name,c=1]"},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]
-execute if score levelCompleted data matches 0 if score temp.breakFlag data matches 0 if score chapter data matches 1 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a1-%%s §f| §e沙漠神殿\n\n§r§a☠ §f怪物数： §a%%s§7/%%s\n§r§c☘ §f波数 %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"data","name":"maxMonsterAmount"}},{"selector":"@e[type=aw:wave_name,c=1]"},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches 0 if score temp.breakFlag data matches 0 if score chapter data matches 2 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a2-%%s §f| §a丛林神殿\n\n§r§a☠ §f怪物数： §a%%s§7/%%s\n§r§c☘ §f波数 %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"data","name":"maxMonsterAmount"}},{"selector":"@e[type=aw:wave_name,c=1]"},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches 0 if score temp.breakFlag data matches 0 if score chapter data matches 3 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a3-%%s §f| §b湖泊神殿\n\n§r§a☠ §f怪物数： §a%%s§7/%%s\n§r§c☘ §f波数 %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"data","name":"maxMonsterAmount"}},{"selector":"@e[type=aw:wave_name,c=1]"},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches 0 if score temp.breakFlag data matches 0 if score chapter data matches 4 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a4-%%s §f| §3寒冰神殿\n\n§r§a☠ §f怪物数： §a%%s§7/%%s\n§r§c☘ §f波数 %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"data","name":"maxMonsterAmount"}},{"selector":"@e[type=aw:wave_name,c=1]"},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches 0 if score temp.breakFlag data matches 0 if score chapter data matches 5 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a5-%%s §f| §f红石神殿\n\n§r§a☠ §f怪物数： §a%%s§7/%%s\n§r§c☘ §f波数 %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"data","name":"maxMonsterAmount"}},{"selector":"@e[type=aw:wave_name,c=1]"},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches 0 if score temp.breakFlag data matches 0 if score chapter data matches 6 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a6-%%s §f| §7山峦神殿\n\n§r§a☠ §f怪物数： §a%%s§7/%%s\n§r§c☘ §f波数 %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"data","name":"maxMonsterAmount"}},{"selector":"@e[type=aw:wave_name,c=1]"},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches 0 if score temp.breakFlag data matches 0 if score chapter data matches 7 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a7-%%s §f| §c封印神殿\n\n§r§a☠ §f怪物数： §a%%s§7/%%s\n§r§c☘ §f波数 %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"data","name":"monsterAmount"}},{"score":{"objective":"data","name":"maxMonsterAmount"}},{"selector":"@e[type=aw:wave_name,c=1]"},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-
-# --- 关卡完成后 ---
-# 以玩家位置为准，先考虑特殊情形
+# --- 空闲状态 ---
+# data.temp.infoboardType = 0
 
 # §l§e冒险小世界§b：剑之试炼
 # 
 # §r§6纯战斗模式
 # §f难度 | §a%%s                    // {"score":{"objective":"settings","name":"difficulty"}}
 # 
-# §r关卡 §a1-%%s §f| §e沙漠神殿      // {"score":{"objective":"level","name":"@s"}}
-# §r关卡进度 §a%%s-%%s              // {"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}}
+# §r关卡 §a%%s-%%s §f| %%s          // {"score":{"objective":"data","name":"chapter"}}, {"score":{"objective":"data","name":"level"}}, {"selector":"@e[has_property={aw:name_type=\"chapter\"}]"}
 # 
 # §r§f☀ §f击杀数： §a%%s            // {"score":{"objective":"killCount","name":"@s"}}
 # §r§c☁ §f死亡数： §a%%s            // {"score":{"objective":"deathCount","name":"@s"}}
 # 
-# §r§f游玩时长： §a%%s:%%s           // {"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}
+# §r§f游玩时长： §a%%s:%%s           // {"score":{"objective":"time","name":"playedMinute"}}, {"score":{"objective":"time","name":"playedSecond"}}
 
-## 7-0 | 不显示任何内容
-execute if score levelCompleted data matches !0 if score chapter data matches 7 if score level data matches 0 run scoreboard players set temp.breakFlag data 1
+execute if score temp.infoboardType data matches 0 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a%%s-%%s §f| %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}}, {"score":{"objective":"data","name":"chapter"}}, {"score":{"objective":"data","name":"level"}}, {"selector":"@e[has_property={aw:name_type=\"chapter\"}]"}, {"score":{"objective":"killCount","name":"@s"}}, {"score":{"objective":"deathCount","name":"@s"}}, {"score":{"objective":"time","name":"playedMinute"}}, {"score":{"objective":"time","name":"playedSecond"}} ]}}]}
 
-## 标准情况 | 仅当 break 标记为 0 时执行。依次显示：settings.difficulty, level.@s, data.chapter, data.level, killCount.@s, deathCount.@s, time.playedMinute, time.playedSecond
-## [{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"level","name":"@s"}},{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]
+# --- 战斗状态 ---
+# data.temp.infoboardType = 1（标准）、2（4-4）、3（6-4）、4（7-5）
 
-execute if score levelCompleted data matches !0 if score temp.breakFlag data matches 0 if score @s chapter matches 1 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a1-%%s §f| §e沙漠神殿\n§r关卡进度 §a%%s-%%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"level","name":"@s"}},{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches !0 if score temp.breakFlag data matches 0 if score @s chapter matches 2 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a2-%%s §f| §a丛林神殿\n§r关卡进度 §a%%s-%%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"level","name":"@s"}},{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches !0 if score temp.breakFlag data matches 0 if score @s chapter matches 3 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a3-%%s §f| §b湖泊神殿\n§r关卡进度 §a%%s-%%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"level","name":"@s"}},{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches !0 if score temp.breakFlag data matches 0 if score @s chapter matches 4 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a4-%%s §f| §3寒冰神殿\n§r关卡进度 §a%%s-%%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"level","name":"@s"}},{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches !0 if score temp.breakFlag data matches 0 if score @s chapter matches 5 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a5-%%s §f| §f红石神殿\n§r关卡进度 §a%%s-%%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"level","name":"@s"}},{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches !0 if score temp.breakFlag data matches 0 if score @s chapter matches 6 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a6-%%s §f| §7山峦神殿\n§r关卡进度 §a%%s-%%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"level","name":"@s"}},{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
-execute if score levelCompleted data matches !0 if score temp.breakFlag data matches 0 if score @s chapter matches 7 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a7-%%s §f| §c封印神殿\n§r关卡进度 §a%%s-%%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}},{"score":{"objective":"level","name":"@s"}},{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}},{"score":{"objective":"killCount","name":"@s"}},{"score":{"objective":"deathCount","name":"@s"}},{"score":{"objective":"time","name":"playedMinute"}},{"score":{"objective":"time","name":"playedSecond"}}]}}]}
+# §l§e冒险小世界§b：剑之试炼
+# 
+# §r§6纯战斗模式
+# §f难度 | §a%%s                     // {"score":{"objective":"settings","name":"difficulty"}}
+# 
+# §r关卡 §a%%s-%%s §f| %%s           // {"score":{"objective":"data","name":"chapter"}}, {"score":{"objective":"data","name":"level"}}, {"selector":"@e[has_property={aw:name_type=\"chapter\"}]"}
+# 
+# §r§a☠ §f怪物数： §a%%s§7/%%s       // {"score":{"objective":"data","name":"monsterAmount"}}, {"score":{"objective":"data","name":"maxMonsterAmount"}}
+# §r§c☘ §f波数 %%s                   // {"selector":"@e[has_property={aw:name_type=\"wave\"}]"}
+# 
+# §r§f☀ §f击杀数： §a%%s             // {"score":{"objective":"killCount","name":"@s"}}
+# §r§c☁ §f死亡数： §a%%s             // {"score":{"objective":"deathCount","name":"@s"}}
+# 
+# §r§f游玩时长： §a%%s:%%s            // {"score":{"objective":"time","name":"playedMinute"}}, {"score":{"objective":"time","name":"playedSecond"}}
 
-# --- 程序结束后的变量设置 ---
-## 移除临时变量
-scoreboard players reset temp.breakFlag data
+
+## 标准情况
+execute if score temp.infoboardType data matches 1 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a%%s-%%s §f| %%s\n\n§r§a☠ §f怪物数： §a%%s§7/%%s\n§r§c☘ §f波数 %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}}, {"score":{"objective":"data","name":"chapter"}}, {"score":{"objective":"data","name":"level"}}, {"selector":"@e[has_property={aw:name_type=\"chapter\"}]"}, {"score":{"objective":"data","name":"monsterAmount"}}, {"score":{"objective":"data","name":"maxMonsterAmount"}}, {"selector":"@e[has_property={aw:name_type=\"wave\"}]"}, {"score":{"objective":"killCount","name":"@s"}}, {"score":{"objective":"deathCount","name":"@s"}}, {"score":{"objective":"time","name":"playedMinute"}}, {"score":{"objective":"time","name":"playedSecond"}} ]}}]}
+## 4-4 | 不显示最大怪物数、波数，显示剩余时间
+execute if score temp.infoboardType data matches 2 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a%%s-%%s §f| %%s\n\n§r§a☠ §f怪物数： §a%%s\n§r§f☹ §f关卡结束：  §a%%s秒\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}}, {"score":{"objective":"data","name":"chapter"}}, {"score":{"objective":"data","name":"level"}}, {"selector":"@e[has_property={aw:name_type=\"chapter\"}]"}, {"score":{"objective":"data","name":"monsterAmount"}}, {"score":{"objective":"time","name":"timeline"}}, {"score":{"objective":"killCount","name":"@s"}}, {"score":{"objective":"deathCount","name":"@s"}}, {"score":{"objective":"time","name":"playedMinute"}}, {"score":{"objective":"time","name":"playedSecond"}} ]}}]}
+## 6-4 | 不显示最大怪物数和波数
+execute if score temp.infoboardType data matches 3 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§r关卡 §a%%s-%%s §f| %%s\n\n§r§a☠ §f怪物数： §a%%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}}, {"score":{"objective":"data","name":"chapter"}}, {"score":{"objective":"data","name":"level"}}, {"selector":"@e[has_property={aw:name_type=\"chapter\"}]"}, {"score":{"objective":"data","name":"monsterAmount"}}, {"score":{"objective":"killCount","name":"@s"}}, {"score":{"objective":"deathCount","name":"@s"}}, {"score":{"objective":"time","name":"playedMinute"}}, {"score":{"objective":"time","name":"playedSecond"}} ]}}]}
+## 7-5 | 不显示最大怪物数，关卡显示为特别样式
+execute if score temp.infoboardType data matches 4 run titleraw @s actionbar {"rawtext":[{"translate":"§l§e冒险小世界§b：剑之试炼\n\n§r§6纯战斗模式\n§f难度 | §a%%s\n\n§c§l最 终 关\n\n§r§a☠ §f怪物数： §a%%s\n§r§c☘ §f波数 %%s\n\n§r§f☀ §f击杀数： §a%%s\n§r§c☁ §f死亡数： §a%%s\n\n§r§f游玩时长： §a%%s:%%s","with":{"rawtext":[{"score":{"objective":"settings","name":"difficulty"}}, {"score":{"objective":"data","name":"monsterAmount"}}, {"selector":"@e[has_property={aw:name_type=\"wave\"}]"}, {"score":{"objective":"killCount","name":"@s"}}, {"score":{"objective":"deathCount","name":"@s"}}, {"score":{"objective":"time","name":"playedMinute"}}, {"score":{"objective":"time","name":"playedSecond"}} ]}}]}
+
+# --- 移除临时变量 ---
+scoreboard players reset temp.infoboardType data

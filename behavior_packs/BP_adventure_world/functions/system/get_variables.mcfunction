@@ -4,5 +4,3 @@
 function lib/get_data/player_amount
 ## 怪物数量
 function lib/get_data/monster_amount
-## 玩家所处位置
-execute as @a at @s run function lib/get_data/position

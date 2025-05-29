@@ -40,12 +40,14 @@ scoreboard players set @a[hasitem={item=aw:wind_pearl,location=slot.weapon.mainh
 # --- 关卡信息板 ---
 # 仅当玩家未手持特殊物品时，显示关卡信息板
 
+## 获取信息板类型
+function lib/get_data/infoboard_type
 ## 单人纯战斗模式
 execute if score storyMode settings matches 0 if score playerAmount data matches 1 as @a[scores={data=0}] at @s run function lib/modify_data/levels/info_single_combat
 ## 单人剧情模式
-execute if score storyMode settings matches 0 if score playerAmount data matches 2.. as @a[scores={data=0}] at @s run function lib/modify_data/levels/info_single_story
+execute if score storyMode settings matches 1 if score playerAmount data matches 1 as @a[scores={data=0}] at @s run function lib/modify_data/levels/info_single_story
 ## 多人纯战斗模式
-execute if score storyMode settings matches 1 if score playerAmount data matches 1 as @a[scores={data=0}] at @s run function lib/modify_data/levels/info_multi_combat
+execute if score storyMode settings matches 0 if score playerAmount data matches 2.. as @a[scores={data=0}] at @s run function lib/modify_data/levels/info_multi_combat
 ## 多人剧情模式
 execute if score storyMode settings matches 1 if score playerAmount data matches 2.. as @a[scores={data=0}] at @s run function lib/modify_data/levels/info_multi_story
 

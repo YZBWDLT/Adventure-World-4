@@ -31,8 +31,8 @@ function system/controller/events
 # --- 关卡 ---
 ## 时间线
 execute if score timeline active matches 1.. run function system/controller/timeline
-## 快捷栏
-function system/controller/infoboard
+## 快捷栏 | 仅当试炼后开启
+execute if score chapter data matches 1..7 run function system/controller/infoboard
 
 # --- 开发者模式下的更改游戏模式 ---
 execute if score developerMode settings matches 1 run function lib/modify_data/developer_gamemode
