@@ -62,7 +62,6 @@ scoreboard players set playedMinute time 0
 scoreboard players set playerAmount data 0
 scoreboard players set alivePlayerAmount data 0
 scoreboard players set monsterAmount data 0
-scoreboard players set maxMonsterAmount data 0
 
 ## 剧情模式
 scoreboard players set storyMode settings 0
