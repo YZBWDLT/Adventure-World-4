@@ -2,11 +2,11 @@
 
 # --- 剧情 ---
 
-# [0] 相机变换：划过1-1
+# [1] 相机变换：划过开始房间
 execute if score timeline time matches 60 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7喂？喂？能听得到吗？"}]}
 execute if score timeline time matches 140 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7能听到！林乐你现在在哪？"}]}
 execute if score timeline time matches 220 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7周围的环境好像沙漠诶，我刚刚拿到了武器装备，前面就要战斗了。"}]}
-# [300] 相机变换：划过1-2过道
+# [300] 相机变换：划过1-1
 execute if score timeline time matches 300 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7沙漠神殿......和所刻的文字一样，果然没错！"}]}
 execute if score timeline time matches 380 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7林乐，铭文上有关于【剑之试炼关卡设置】的描述，我来同你分享一下吧。"}]}
 execute if score timeline time matches 460 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7【沙漠神殿】"}]}
@@ -19,10 +19,10 @@ execute if score timeline time matches 820 run tellraw @a {"rawtext":[{"text":"�
 
 # --- 相机变换 ---
 
-## [0] 划过1-1
-execute if score timeline time matches 0 run camera @a set minecraft:free pos -121 7 -5 facing @a[c=1]
-execute if score timeline time matches 1 run camera @a set minecraft:free ease 15 in_out_sine pos -122 4 3 facing @a[c=1]
-## [300] 划过1-2过道
+## [1] 划过开始房间
+execute if score timeline time matches 1 run camera @a set minecraft:free pos -121 7 -5 facing @a[c=1]
+execute if score timeline time matches 2 run camera @a set minecraft:free ease 15 in_out_sine pos -122 4 3 facing @a[c=1]
+## [300] 划过1-1
 execute if score timeline time matches 300 run camera @a set minecraft:free pos -117 3.8 -7 rot 45 0
 execute if score timeline time matches 301 run camera @a set minecraft:free ease 15 out_sine pos -117 3.8 25 rot 0 0
 ## [600] 望向壁画

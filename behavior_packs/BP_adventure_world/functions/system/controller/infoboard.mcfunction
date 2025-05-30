@@ -17,10 +17,6 @@ execute if score temp.infoboardType data matches 1 if score chapter data matches
 ## 隐藏信息板（-1，7-0）
 execute if score chapter data matches 7 if score level data matches 0 run scoreboard players set temp.infoboardType data -1
 
-# --- 获取关卡进度标记 ---
-# 仅当关卡处于游玩状态时检测
-execute if score temp.infoboardType data matches 1.. if score tick time matches 1 run function lib/get_data/wave_name
-
 # --- 物品信息板 ---
 # 当玩家手持特殊物品时，显示该特殊物品的信息板
 

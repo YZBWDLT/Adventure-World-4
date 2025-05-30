@@ -22,8 +22,9 @@ scoreboard players add @a[scores={deathState=1..2}] deathTime 1
 execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. as @a[scores={death=2},tag=!spectator] run function lib/modify_data/death_message
 execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. as @a[scores={death=2},tag=!spectator] run tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！但不要着急，您在下一波就会被解救出来。"}]}
 execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. as @a[scores={death=2},tag=!spectator] run gamemode spectator @s
-### 标记死亡的玩家为旁观玩家
+### 标记死亡的玩家为旁观玩家，并设置为旁观模式
 execute if score levelCompleted data matches 0 run tag @a[scores={deathState=2}] add spectator
+gamemode spectator @a[tag=spectator]
 
 ## 如果为非游戏时死亡，则 pass
 
