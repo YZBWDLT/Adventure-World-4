@@ -15,31 +15,31 @@
                 "geometries": {
                     "array.geo": [
                         "geometry.default",
-                        "geometry.zombie",
-                        "geometry.zombie",
-                        "geometry.husk",
-                        "geometry.husk",
-                        "geometry.piglin",
-                        "geometry.drowned",
-                        "geometry.drowned",
-                        "geometry.skeleton",
-                        "geometry.skeleton",
-                        "geometry.stray",
-                        "geometry.spider",
-                        "geometry.spider",
-                        "geometry.creeper",
-                        "geometry.guardian",
-                        "geometry.piglin",
-                        "geometry.piglin",
-                        "geometry.hoglin",
-                        "geometry.silverfish",
-                        "geometry.magma_cube",
-                        "geometry.ghast",
-                        "geometry.witch",
-                        "geometry.skeleton",
-                        "geometry.guardian",
-                        "geometry.blaze",
-                        "geometry.evoker"
+                        "geometry.spawner_zombie",
+                        "geometry.spawner_zombie",
+                        "geometry.spawner_zombie",
+                        "geometry.spawner_zombie",
+                        "geometry.spawner_piglin",
+                        "geometry.spawner_drowned",
+                        "geometry.spawner_drowned",
+                        "geometry.spawner_skeleton",
+                        "geometry.spawner_skeleton",
+                        "geometry.spawner_skeleton",
+                        "geometry.spawner_spider",
+                        "geometry.spawner_spider",
+                        "geometry.spawner_creeper",
+                        "geometry.spawner_guardian",
+                        "geometry.spawner_piglin",
+                        "geometry.spawner_piglin",
+                        "geometry.spawner_hoglin",
+                        "geometry.spawner_silverfish",
+                        "geometry.spawner_magma_cube",
+                        "geometry.spawner_ghast",
+                        "geometry.spawner_witch",
+                        "geometry.spawner_skeleton",
+                        "geometry.spawner_guardian",
+                        "geometry.spawner_blaze",
+                        "geometry.spawner_evoker"
                     ]
                 },
                 "textures": {
@@ -74,8 +74,13 @@
                 }
             },
             "color": {
-                "a": "0.25"
+                "a": "1"
             }
+        },
+        "controller.render.spawner_stray_armor": {
+            "materials": [ { "*": "material.default" } ],
+            "geometry": "geometry.spawner_zombie",
+            "textures": [ "texture.spawner_stray_armor" ]
         }
     }
 }
