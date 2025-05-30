@@ -1,5 +1,5 @@
-# ===== 将波潮信息打印到 aw:name_marker 上 =====
-# 将波潮信息打印为 aw:name_marker 的名称。
+# ===== 将波潮信息打印到 aw:marker 上 =====
+# 将波潮信息打印为 aw:marker 的名称。
 # 调用此方法时：需修饰执行位置为(-83,1,-2)（execute positioned -83 1 -2）。
 # 备注：符号标记
 # ⚀ - BOSS预告 | ⚁ - 普通波预告
@@ -8,7 +8,7 @@
 
 # --- 初始化 ---
 ## 将原有的实体移除
-event entity @e[has_property={aw:name_type="wave"}] aw:remove_immediately
+event entity @e[has_property={aw:name="wave"}] aw:remove_immediately
 ## 程序结束标记
 scoreboard players set temp.breakFlag data 0
 

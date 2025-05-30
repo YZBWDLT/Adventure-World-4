@@ -46,7 +46,6 @@ entity.aw:text_display.name=Floating Text
 entity.aw:skeleton_king.name=Skeleton King
 entity.aw:blaze_king.name=Blaze King
 entity.aw:marker.name=Marker
-entity.aw:name_marker.name=Name Marker
 entity.aw:spawner.name=Monster Spawner
 entity.evoker_boss.name=§l§cEVOKER BOSS
 
