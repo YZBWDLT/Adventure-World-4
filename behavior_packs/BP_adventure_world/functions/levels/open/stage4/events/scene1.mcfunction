@@ -11,7 +11,7 @@ event entity @e[type=aw:npc] aw:ignore_player
 tp @a -12 1 88 facing -17 1 95
 
 # --- 重新设置本关标记 ---
-tp @e[has_property={aw:level="this"}] -16 1 82 0 0
+tp @e[has_property={aw:marker_type="level",aw:level="this"}] -16 1 82 0 0
 
 # --- 播放音乐 ---
 function lib/modify_data/play_music

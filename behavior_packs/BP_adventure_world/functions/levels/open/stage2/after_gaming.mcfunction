@@ -14,4 +14,4 @@ execute if score timeline time matches 3600 run tellraw @a {"rawtext":[{"transla
 execute if score timeline time matches 3600 run function lib/modify_data/states/timeline/disable_time_lapse
 
 # --- 检查玩家进入下一个关卡 ---
-execute as @e[has_property={aw:level="next"}] at @s if entity @a[r=3] run function levels/open/stage3/start
+execute as @e[has_property={aw:marker_type="level",aw:level="next"}] at @s if entity @a[r=3] run function levels/open/stage3/start

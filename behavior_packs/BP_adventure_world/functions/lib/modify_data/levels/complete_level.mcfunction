@@ -25,7 +25,7 @@ function lib/modify_data/markers/complete
 # --- 玩家复活与回血 ---
 
 ## 复活已死亡玩家
-tp @a[tag=spectator] @e[has_property={aw:level="this"},c=1]
+tp @a[tag=spectator] @e[has_property={aw:marker_type="level",aw:level="this"},c=1]
 gamemode adventure @a[tag=spectator]
 ## 将玩家回满血
 effect @a clear
