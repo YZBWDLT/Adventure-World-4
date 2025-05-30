@@ -10,6 +10,11 @@ scoreboard players set levelCompleted data 1
 scoreboard players set allowPotionSupply data 1
 ## 设置为可恢复箭
 scoreboard players set allowArrowSupply data 0
+## 时间线
+function lib/modify_data/states/timeline/dont_keep_value
+function lib/modify_data/states/timeline/enable
+## 失败次数归零
+scoreboard players set failedCount.thisLevel data 0
 
 # --- 提示玩家 ---
 
@@ -27,13 +32,12 @@ function lib/modify_data/markers/complete
 ## 复活已死亡玩家
 tp @a[tag=spectator] @e[has_property={aw:marker_type="level",aw:level="this"},c=1]
 gamemode adventure @a[tag=spectator]
+tag @a remove spectator
 ## 将玩家回满血
 effect @a clear
 effect @a instant_health 1 20 true
 
-# --- 本关失败次数归零 ---
-scoreboard players set failedCount.thisLevel data 0
-
-# --- 清除所有的怪物和生成器 ---
+# --- 清除多余实体 ---
 kill @e[family=monster]
+kill @e[type=aw:wind_pearl]
 event entity @e[type=aw:spawner] aw:remove_immediately
