@@ -63,6 +63,10 @@ scoreboard players set playerAmount data 0
 scoreboard players set alivePlayerAmount data 0
 scoreboard players set monsterAmount data 0
 
+## 失败次数
+scoreboard players set failedCount.thisLevel data 0
+scoreboard players set failedCount.allLevels data 0
+
 ## 剧情模式
 scoreboard players set storyMode settings 0
 
