@@ -1,9 +1,20 @@
 # ===== 触发关卡对话 =====
+# 当玩家使用传声石结晶后将触发该函数。
 
-# --- 变量处理 ---
-# 仅当满足以下条件的时候：
-# · 当前处于 NPC 可交互状态
-# · 当前正处于试炼状态
-# · 当前不处于游戏状态
-# 将 NPC 可交互状态改为 0，以标记为正在与 NPC 交互（正在使用传声石结晶对话）
-execute unless score levelCompleted data matches 0 if score chapter data matches 1..9 if score allowNpcInteraction data matches 1 run scoreboard players set allowNpcInteraction data 0
+# --- 获取传声石结晶的交互类型 ---
+
+## 常规状态（0）
+scoreboard players set temp.acousticStoneDialogueType data 0
+## 不可用状态（-1） | （1）未启用传声石结晶时；或（2）时间线被占用时；或（3）未处于试炼状态时；或（4）战斗状态时
+execute if score allowAcousticStoneCrystal data matches 0 run scoreboard players set temp.acousticStoneDialogueType data -1
+execute if score timeLapse data matches 1.. run scoreboard players set temp.acousticStoneDialogueType data -1
+execute unless score chapter data matches 1..9 run scoreboard players set temp.acousticStoneDialogueType data -1
+execute if score levelCompleted data matches 0 run scoreboard players set temp.acousticStoneDialogueType data -1
+
+# --- 常规状态（0） ---
+
+## 启用时间线
+execute if score temp.acousticStoneDialogueType data matches 0 run function lib/modify_data/states/timeline/enable_time_lapse
+
+# --- 移除临时变量 ---
+scoreboard players reset temp.acousticStoneDialogueType data
