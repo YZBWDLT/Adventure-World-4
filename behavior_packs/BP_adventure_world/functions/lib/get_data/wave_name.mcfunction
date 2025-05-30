@@ -8,7 +8,7 @@
 
 # --- 初始化 ---
 ## 将原有的实体移除
-event entity @e[type=aw:name_marker] aw:remove_immediately
+event entity @e[has_property={aw:name_type="wave"}] aw:remove_immediately
 ## 程序结束标记
 scoreboard players set temp.breakFlag data 0
 

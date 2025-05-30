@@ -18,7 +18,7 @@ execute positioned 43 21 132 run function lib/modify_data/markers/init
 ## 玩家物品
 clear @a
 ## NPC
-event entity @e[type=aw:npc] "aw:remove_immediately"
+event entity @e[type=aw:npc] aw:remove_immediately
 ## 悬浮文本
 kill @e[family=text_display]
 summon aw:text_display "欢迎游玩§b§l冒险小世界：剑之试炼§r！" 43 24.8 124

@@ -4,10 +4,22 @@
 
 ## 程序结束标记 | 这里标记data.@a为breakFlag，因为后面需要分别让不同玩家执行，不适合用全局变量，但是又懒得新建记分板了……
 scoreboard players set @a data 0
+## 空闲信息板（0）
+scoreboard players set temp.infoboardType data 0
+## 战斗信息板（1，标准状态）
+execute if score levelCompleted data matches 0 unless score level data matches 0 run scoreboard players set temp.infoboardType data 1
+## 战斗信息板（2，4-4）
+execute if score temp.infoboardType data matches 1 if score chapter data matches 4 if score level data matches 4 run scoreboard players set temp.infoboardType data 2
+## 战斗信息板（3，6-4）
+execute if score temp.infoboardType data matches 1 if score chapter data matches 6 if score level data matches 4 run scoreboard players set temp.infoboardType data 3
+## 战斗信息板（4，7-5）
+execute if score temp.infoboardType data matches 1 if score chapter data matches 7 if score level data matches 5 run scoreboard players set temp.infoboardType data 4
+## 隐藏信息板（-1，7-0）
+execute if score chapter data matches 7 if score level data matches 0 run scoreboard players set temp.infoboardType data -1
 
 # --- 获取关卡进度标记 ---
 # 仅当关卡处于游玩状态时检测
-execute if score tick time matches 1 if score levelCompleted data matches 0 run function lib/get_data/wave_name
+execute if score temp.infoboardType data matches 1.. if score tick time matches 1 run function lib/get_data/wave_name
 
 # --- 物品信息板 ---
 # 当玩家手持特殊物品时，显示该特殊物品的信息板
@@ -40,8 +52,6 @@ scoreboard players set @a[hasitem={item=aw:wind_pearl,location=slot.weapon.mainh
 # --- 关卡信息板 ---
 # 仅当玩家未手持特殊物品时，显示关卡信息板
 
-## 获取信息板类型
-function lib/get_data/infoboard_type
 ## 单人纯战斗模式
 execute if score storyMode settings matches 0 if score playerAmount data matches 1 as @a[scores={data=0}] at @s run function lib/modify_data/levels/info_single_combat
 ## 单人剧情模式
@@ -54,3 +64,4 @@ execute if score storyMode settings matches 1 if score playerAmount data matches
 # --- 程序结束后的变量设置 ---
 ## 移除临时变量
 scoreboard players reset @a data
+scoreboard players reset temp.infoboardType data
