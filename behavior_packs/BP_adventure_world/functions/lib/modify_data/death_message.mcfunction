@@ -1,11 +1,6 @@
 # ===== 宣布玩家死亡 =====
 # 用于在死亡时随机宣布一个死亡消息，通告该玩家已死亡。
-
-# 调用此方法时：
-# · 执行者为死亡玩家
-# · 执行位置任意
-# 输出结果：
-# · 执行死亡播报消息
+# 调用此方法时：需修饰执行者为死亡玩家（execute as @a[scores={death=2}]）
 
 scoreboard players random temp.deathMessage data 1 6
 

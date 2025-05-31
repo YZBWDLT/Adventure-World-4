@@ -1,12 +1,6 @@
 # ===== 玩家数目检测器 =====
-# 返回符合条件的玩家数目。
-
-# 调用此方法时：
-# · 执行者任意
-# · 执行位置任意
-# 输出结果：
-# · data.playerAmount=(玩家总人数)
-# · data.alivePlayerAmount=(存活的玩家总人数)
+# 返回总玩家数目（data.playerAmount）和存活的玩家数目（data.alivePlayerAmount）。
+# 调用此方法时：无需修饰。
 
 # --- 返回玩家总人数 ---
 scoreboard players set playerAmount data 0

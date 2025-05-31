@@ -1,11 +1,6 @@
 # ===== 游戏规则设定 =====
-# 用于重置游戏规则
-
-# 调用此方法时：
-# · 执行者任意
-# · 执行位置任意
-# 输出结果：
-# · 重置gamerule到正常游戏状态的默认值
+# 重置gamerule到正常游戏状态的默认值。
+# 调用此方法时：无需修饰。
 
 gamerule commandblockoutput false
 gamerule commandblocksenabled true

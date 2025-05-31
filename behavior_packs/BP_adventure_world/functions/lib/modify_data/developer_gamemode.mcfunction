@@ -1,11 +1,6 @@
 # ===== 游戏模式切换器 =====
 # 用于在玩家手持对应更改游戏模式的物品时，切换游戏模式。
-
-# 调用此方法时：
-# · 执行者任意
-# · 执行位置任意
-# 输出结果：
-# · 当玩家手持物品时，对应地变换游戏模式
+# 调用此方法时：无需修饰。
 
 # --- 给予全体玩家4种变换模式的工具 ---
 replaceitem entity @a[hasitem={item=aw:change_to_creative,quantity=0}] slot.inventory 0 aw:change_to_creative
