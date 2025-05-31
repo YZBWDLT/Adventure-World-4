@@ -19,19 +19,36 @@
 
 ## 更新日志
 
-- 全面采用新版`/execute`语法
-- 全面采用中国版脚本和国际版脚本配合函数系统
-- 现在死亡榜可以记录一切死亡的数据，而不光是仅在游戏中记录死亡数据了
-- 现在物品是每秒检测一次，并供应缺少的物品的，而不再是在特定时机检测并供应了
-- 现在钻石头盔和钻石靴子不再需要玩家手持一次，是直接给予的了
+### 游戏内容
+
+#### 玩家物品
+
 - 现在使用御风珠来代替绳枪，以和冒险世界（包括冒险世界：筑梦）系列的其他类似物品保持一致
   - 同时，移除了物品准星
-- 现在右侧的信息板不再会在玩家手持物品时，来回在物品信息和关卡信息之间闪了
+- 现在物品是每秒检测一次，并供应缺少的物品的，而不再是在特定时机检测并供应了
+- 现在钻石头盔和钻石靴子不再需要玩家手持一次，是直接给予的了
+
+#### 信息板
+
+- 现在不再尝试实时监测玩家位置，因其实用用途不大。因此，右侧信息板也不再实时返回玩家所处关卡位置
+- 现在不再在怪物生成后检查最大怪物数
+- 现在死亡榜可以记录一切死亡的数据，而不光是仅在游戏中记录死亡数据了
 - 现在药水不再显示当前上限
-- 统一了中国版和国际版的剧情内容，不再单独做出适配。
+- 现在不再会在玩家手持物品时，来回在物品信息和关卡信息之间闪了
+
+#### 观战
+
+- 移除了观战区，现在使用旁观模式进行旁观
+
+#### 剧情
+
+- 统一了中国版和国际版的剧情内容，不再单独做出适配
 - 移除了一个严重违规成员的制作人表
 
 ### 底层更新
+
+- 全面采用新版`/execute`语法
+- 全面采用中国版脚本和国际版脚本配合函数系统
 
 #### 附加包
 
@@ -39,6 +56,7 @@
 - 合并了`RP_aw_main`、`RP_aw_music_pack`为`RP_adventure_world_main`
 - 更名了`RP_aw_netease`为`RP_adventure_world_netease`
 - 新增了`RP_adventure_world_international`
+- 移除了`BP_aw_main_old`
 - 现在`manifest.json`的最小引擎版本均为`1.21.0`
 
 #### 物品
@@ -56,7 +74,7 @@
 
 - 移除了`player.json`，现在和玩家相关的检测都通过脚本进行
 - 合并了`aw:npc`和`aw:npc_author`为`aw:npc`，并使用了实体属性
-- 现在使用独立的实体`aw:spawner`生成怪物，不再使用`aw:marker`
+- 因生成器逻辑较为复杂，现在使用独立的实体`aw:spawner`生成怪物，不再使用`aw:marker`
 
 #### 脚本
 
@@ -80,28 +98,24 @@
 #### 记分板变量
 
 - **新增**
-  - `deathState`记分板，用于记录玩家的死亡状态
+  - `deathState: 0 | 1 | 2`记分板，用于记录玩家的死亡状态
     - `deathState.@s`=`0`：未处于死亡状态
     - `deathState.@s`=`1`：刚刚死亡，但还未记录死亡榜
     - `deathState.@s`=`2`：长期死亡，还未复活
   - `deathTime`记分板，用于记录玩家处于死亡状态的时长，单位：游戏刻
-  - `data.allowPotionSupply`，用于标记允许补充药水
-    - 为`0`时，药水控制器不会补充药水
-    - 为`1`时，药水控制器补充药水
-  - `data.allowArrowSupply`，用于标记允许补充箭
-    - 为`0`时，箭控制器不会补充箭
-    - 为`1`时，箭控制器补充箭，并且清除当前世界中的所有实体箭
-  - `data.allowAcousticStoneCrystal`，用于标记允许补充传声石结晶
-    - 为`0`时，物品控制器不会补充传声石结晶
-    - 为`1`时，物品控制器补充传声石结晶
-  - `data.allowHud`，用于标记是否启用 HUD
-    - 为`0`时，禁用 HUD
-    - 为`1`时，启用 HUD
+  - `data.allowPotionSupply: 0 | 1`，用于标记允许补充药水
+  - `data.allowArrowSupply: 0 | 1`，用于标记允许补充箭
+    - 为`1`时，箭控制器不但补充箭，并且清除当前世界中的所有实体箭
+  - `data.allowAcousticStoneCrystal: 0 | 1`，用于标记是否允许补充传声石结晶
+  - `data.allowHud: 0 | 1`，用于标记是否启用 HUD
+  - `data.allowRemoveItemEntity: 0 | 1`，用于标记是否移除物品掉落物
 - **更名**：
   - 记分板`deathTimes` -> 记分板`deathCount`
   - 记分板`killAmount` -> 记分板`killCount`
   - `data.maxPlayersAmount` -> `data.playerAmount`
   - `data.alivePlayersAmount` -> `data.alivePlayerAmount`
+  - `data.failedTimes` -> `data.failedCount.thisLevel`
+  - `data.allFailedTimes` -> `data.failedCount.allLevels`
   - `time.@s` -> `deathTime.@s`
   - `data.storyMode` -> `settings.storyMode`
   - 标签`potionUsed` -> `data.potionUsed`
@@ -123,6 +137,8 @@
   - `isAlive`标签，现在用`deathState`代替。
   - `data.realDeadPlayersAmount`，因为现在可以直接使用`unless entity`检测相关玩家
   - `temp`、`temp2`、`temp3`记分板，现在使用`data`下的各`temp.`变量代替
+  - `position.@s`，现在不再实时监测玩家所处位置，因其过于复杂且消耗性能
+  - `data.maxMonsterAmount`，现在不再在怪物生成后检查最大怪物数
 
 #### 关卡 ID
 
@@ -145,6 +161,30 @@
 #### 函数文件
 
 - 现在采用函数系统：主包 v3 模板。
+- 在库方法代码内采用新版注释格式，更加简短，且能够避免重复描述行为，以及对前文应使用的`/execute`命令做出进一步指导。
+  - 以前：
+
+    ```mcfunction
+    # ===== (功能) =====
+    # (功能描述)
+
+    # 调用此方法时：
+    # · 执行者(应设置的执行者)
+    # · 执行位置(应设置的执行位置)
+    # 输出结果：
+    # · (声明更改的变量的值，或输出的变量)
+
+    ```
+
+  - 现在：
+
+    ```mcfunction
+    # ===== (功能) =====
+    # (功能描述)
+    # 调用此方法时：(无需修饰)/(需修饰……为……（execute ……）)
+
+    ```
+
 - **新增**（`.mcfunction`）：
   - `items/{...}`，控制喝下药水后的行为，其中`{...}`为药水 ID
 - **更名或移动**（`.mcfunction`）：
@@ -157,6 +197,8 @@
   - `lib/scoreboard/{1}player_{2}_mode` -> `lib/modify_data/levels/info_{1}_{2}`
   - `lib/get_data/using_client` -> `lib/get_data/client`
   - `lib/all_levels/start_chapter` -> `lib/modify_data/levels/start_chapter`
+  - `lib/all_levels/bonus` -> `lib/modify_data/levels/complete_level`
+  - `lib/all_levels/game_lose` -> `lib/modify_data/levels/fail_level`
   - `lib/monsters/{1}/level_{2}` -> `entities/spawner/{1}_{2}`
   - `developer/developer_mode` -> `settings/developer_mode`
   - `entities/player/using_{1}` -> `items/{1}`，现在使用脚本检测并自动执行对应函数
@@ -173,3 +215,4 @@
   - `lib/get_data/2_digit_seperator`，因为现在实际上已不再使用`data.gameId`来控制
   - `lib/get_data/arrow_amount`，现在由`system/controller/arrow`自行检测，不再单独抽出一个方法
   - `lib/get_data/is_online_before`和`lib/get_data/is_online_after`，现在由`system/antileave`自行检测，不再单独抽出一个方法
+  - `lib/get_data/entity_location`，现在不再检测实体和玩家实时位置

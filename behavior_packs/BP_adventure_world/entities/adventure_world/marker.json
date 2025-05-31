@@ -7,7 +7,7 @@
             "is_spawnable": false,
             "is_summonable": true,
             "properties": {
-                "aw:marker_type": { "type": "enum", "values": [ "level", "spectatorAreaCorner", "name" ], "default": "level" },
+                "aw:marker_type": { "type": "enum", "values": [ "level", "name" ], "default": "level" },
                 "aw:level": { "type": "enum", "values": [ "this", "prev", "next" ], "default": "this" },
                 "aw:name": { "type": "enum", "values": [ "wave", "chapter" ], "default": "wave" }
             }
@@ -24,7 +24,6 @@
             "aw:set_this_level": { "set_property": { "aw:marker_type": "level", "aw:level": "this" } },
             "aw:set_prev_level": { "set_property": { "aw:marker_type": "level", "aw:level": "prev" } },
             "aw:set_next_level": { "set_property": { "aw:marker_type": "level", "aw:level": "next" } },
-            "aw:set_spectator_area_corner": { "set_property": { "aw:marker_type": "spectatorAreaCorner" } },
             "aw:set_wave_name": { "set_property": { "aw:marker_type": "name", "aw:name": "wave" } },
             "aw:set_chapter_name": { "set_property": { "aw:marker_type": "name", "aw:name": "chapter" } },
             "aw:remove_immediately": { "add": { "component_groups": [ "remove_immediately" ] } }
