@@ -31,18 +31,18 @@ function lib/modify_data/states/sound/random_anvil_break_0_75
 execute if score failedCount.thisLevel data matches 3 run tellraw @a {"rawtext":[{"text":"§7你（们）已经失败3次了！下一次进入关卡时将给予力量II效果。"}]}
 execute if score failedCount.thisLevel data matches 5 run tellraw @a {"rawtext":[{"text":"§7你（们）已经失败5次了！下一次进入关卡时将给予力量II、生命提升V和抗性提升I效果。\n如果还是过不去的话，请自行作弊解决吧=_="}]}
 
-# --- 回退到上关标记 ---
-function lib/modify_data/markers/fail
-
 # --- 玩家复活与回血 ---
 
 ## 复活已死亡玩家
-tp @a[tag=spectator] @e[has_property={aw:marker_type="level",aw:level="this"},c=1]
+tp @a[tag=spectator] @e[has_property={aw:marker_type="level",aw:level="prev"},c=1]
 gamemode adventure @a[tag=spectator]
 tag @a remove spectator
 ## 将玩家回满血
 effect @a clear
 effect @a instant_health 1 20 true
+
+# --- 回退到上关标记 ---
+function lib/modify_data/markers/fail
 
 # --- 清除多余实体 ---
 kill @e[family=monster]

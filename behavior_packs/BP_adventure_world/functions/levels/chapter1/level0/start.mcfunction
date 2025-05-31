@@ -22,15 +22,15 @@ fill -117 2 32 -117 2 32 sandstone ["sand_stone_type"="heiroglyphs"]
 fill -121 18 25 -121 20 27 red_sandstone ["sand_stone_type"="cut"]
 fill -121 19 26 -121 19 26 red_sandstone ["sand_stone_type"="heiroglyphs"]
 
-# --- 纯战斗模式下直接触发完成函数 ---
-execute if score storyMode settings matches 0 run function levels/chapter1/level0/completed
-
 # --- 1-0 的初始化 ---
 
 ## 传送玩家
 tp @a -117 1 -6 0 0
 ## 本关标记
+event entity @e[has_property={aw:marker_type="level"}] aw:remove_immediately
 execute positioned -117 1 -6 run function lib/modify_data/markers/init
+## 下关标记 | 仅限纯战斗模式下直接跳到完成阶段
+execute if score storyMode settings matches 0 run function levels/chapter1/level0/completed
 
 # --- 生成章节名 ---
 summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§e沙漠神殿"

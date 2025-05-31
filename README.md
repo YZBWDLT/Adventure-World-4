@@ -109,6 +109,7 @@
   - `data.allowAcousticStoneCrystal: 0 | 1`，用于标记是否允许补充传声石结晶
   - `data.allowHud: 0 | 1`，用于标记是否启用 HUD
   - `data.allowRemoveItemEntity: 0 | 1`，用于标记是否移除物品掉落物
+  - 标签`outOfBorder`，用于判断旁观模式的玩家是否越界
 - **更名**：
   - 记分板`deathTimes` -> 记分板`deathCount`
   - 记分板`killAmount` -> 记分板`killCount`
@@ -161,6 +162,8 @@
 #### 函数文件
 
 - 现在采用函数系统：主包 v3 模板。
+- 根据新版的函数系统重构了文件架构，因此有大量的文件被重命名、移除、移动或新增。这里不再对函数文件的所有具体更改详细阐述，只对其中的主要更改进行必要解释。
+- 入口文件改为了`system/main.mcfunction`，并采用了`1.21.0`的格式版本。
 - 在库方法代码内采用新版注释格式，更加简短，且能够避免重复描述行为，以及对前文应使用的`/execute`命令做出进一步指导。
   - 以前：
 
@@ -184,35 +187,3 @@
     # 调用此方法时：(无需修饰)/(需修饰……为……（execute ……）)
 
     ```
-
-- **新增**（`.mcfunction`）：
-  - `items/{...}`，控制喝下药水后的行为，其中`{...}`为药水 ID
-- **更名或移动**（`.mcfunction`）：
-  - `system/respawn_controller` -> `system/controller/player_die`
-  - `system/gamemode_switcher` -> `lib/modify_data/developer_gamemode`
-  - `system/time_controller` -> `system/timer`
-  - `lib/death_message_announcer` -> `lib/modify_data/death_message`
-  - `lib/music_player` -> `lib/modify_data/play_music`
-  - `lib/init/gamerule` -> `lib/modify_data/init/gamerule`
-  - `lib/scoreboard/{1}player_{2}_mode` -> `lib/modify_data/levels/info_{1}_{2}`
-  - `lib/get_data/using_client` -> `lib/get_data/client`
-  - `lib/all_levels/start_chapter` -> `lib/modify_data/levels/start_chapter`
-  - `lib/all_levels/bonus` -> `lib/modify_data/levels/complete_level`
-  - `lib/all_levels/game_lose` -> `lib/modify_data/levels/fail_level`
-  - `lib/monsters/{1}/level_{2}` -> `entities/spawner/{1}_{2}`
-  - `developer/developer_mode` -> `settings/developer_mode`
-  - `entities/player/using_{1}` -> `items/{1}`，现在使用脚本检测并自动执行对应函数
-- **合并**（`.mcfunction`）：
-  - `system/item_limit/items`、`lib/supplier/items`、`system/equipment_tester` -> `system/controller/items`，现在通过物品控制器，每秒进行一次物品上限检测、补充和附魔
-  - `system/item_limit/potions`、`system/item_limit/potions2`、`lib/supplier/potion` -> `system/controller/potions`，现在通过药水控制器，每秒进行一次药水上限检测和补充，并且时刻检查玩家喝下的药水
-  - `system/item_limit/arrows`、`lib/supplier/arrow` -> `system/controller/arrows`，现在通过箭控制器，每秒进行一次箭上限检测和补充
-- **拆分**（`.mcfunction`）：
-  - `system/antileave`、`lib/init/player_data` -> `system/antileave`、`lib/modify_data/rejoined_player`
-- **移除**（`.mcfunction`）：
-  - `system/gameid_seperator`，因为现在实际上已不再使用`data.gameId`来控制
-  - `entities/hookshot/hit_planks_test`，现在使用脚本检测
-  - `entities/hookshot/hookshot`，现在使用脚本检测
-  - `lib/get_data/2_digit_seperator`，因为现在实际上已不再使用`data.gameId`来控制
-  - `lib/get_data/arrow_amount`，现在由`system/controller/arrow`自行检测，不再单独抽出一个方法
-  - `lib/get_data/is_online_before`和`lib/get_data/is_online_after`，现在由`system/antileave`自行检测，不再单独抽出一个方法
-  - `lib/get_data/entity_location`，现在不再检测实体和玩家实时位置

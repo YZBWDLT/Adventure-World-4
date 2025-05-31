@@ -2,6 +2,9 @@
 # 试炼中关卡通用的内容。用于在章节开始（X-0）时调用。
 # 调用此方法时：无需修饰。
 
+# --- 关卡参数 ---
+scoreboard players set levelCompleted data 0
+
 # --- 重置标题时间 ---
 
 title @a times 0 100 0
@@ -29,3 +32,7 @@ function lib/modify_data/states/timeline/enable
 # --- 剧情模式触发对话 ---
 
 execute if score storyMode settings matches 1 run function lib/modify_data/start_dialogue
+
+# --- 移除多余实体 ---
+## 重置章节名和波数
+event entity @e[has_property={aw:marker_type="name"}] aw:remove_immediately

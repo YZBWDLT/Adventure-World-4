@@ -2,6 +2,10 @@
 # 用于在死亡时随机宣布一个死亡消息，通告该玩家已死亡。
 # 调用此方法时：需修饰执行者为死亡玩家（execute as @a[scores={death=2}]）
 
+# --- 提醒该玩家 ---
+tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！但不要着急，您在下一波就会被解救出来。"}]}
+
+# --- 对其他玩家公告 ---
 scoreboard players random temp.deathMessage data 1 6
 
 execute if score temp.deathMessage data matches 1 run tellraw @a {"rawtext":[{"translate":"§e%%s §c在试炼面前还尚未达标","with":{"rawtext":[{"selector":"@s"}]}}]}

@@ -65,3 +65,6 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 
 execute if score developerMode settings matches 1 run tellraw @s[tag=spectator] { "rawtext": [ { "translate": "spectator = §atrue §7| 玩家是否在游戏中死亡，成为旁观者" } ] }
 execute if score developerMode settings matches 1 run tellraw @s[tag=!spectator] { "rawtext": [ { "translate": "spectator = §efalse §7| 玩家是否在游戏中死亡，成为旁观者" } ] }
+
+execute if score developerMode settings matches 1 run tellraw @s[tag=outOfBorder] { "rawtext": [ { "translate": "outOfBorder = §atrue §7| 玩家是否在旁观模式下出界" } ] }
+execute if score developerMode settings matches 1 run tellraw @s[tag=!outOfBorder] { "rawtext": [ { "translate": "outOfBorder = §efalse §7| 玩家是否在旁观模式下出界" } ] }

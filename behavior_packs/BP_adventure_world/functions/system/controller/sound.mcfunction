@@ -10,8 +10,9 @@ execute if score sound active matches 2 as @a at @s run playsound random.orb @s 
 execute if score sound active matches 3 as @a at @s run playsound mob.villager.yes @s ~~~ 1 1
 ## 4 | mob.villager.no | 音调1
 execute if score sound active matches 4 as @a at @s run playsound mob.villager.no @s ~~~ 1 1
-## 5 | mob.cat.meow | 音调0.75
-execute if score sound active matches 5 as @a at @s run playsound mob.cat.meow @s ~~~ 1 0.75
+## 5 | mob.cat.meow | 音调0.75 | *仅限为`outOfBorder`玩家播放音效
+execute if score sound active matches 5 as @a[tag=outOfBorder] at @s run playsound mob.cat.meow @s ~~~ 1 0.75
+execute if score sound active matches 5 run tag @a remove outOfBorder
 ## 6 | random.anvil_break | 音调0.5
 execute if score sound active matches 6 as @a at @s run playsound random.anvil_break @s ~~~ 1 0.5
 ## 7 | random.levelup | 音调1
