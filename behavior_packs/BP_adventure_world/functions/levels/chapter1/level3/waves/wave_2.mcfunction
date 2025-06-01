@@ -4,7 +4,7 @@
 function lib/modify_data/levels/complete_wave
 
 # --- 更新波数信息 ---
-execute positioned -83 1 -2 run function lib/get_data/wave_name
+execute positioned -83 1 -2 run function lib/modify_data/levels/wave_2
 
 # --- 生成怪物生成器 ---
 
