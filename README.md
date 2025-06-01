@@ -44,6 +44,7 @@
 
 - 统一了中国版和国际版的剧情内容，不再单独做出适配
 - 移除了一个严重违规成员的制作人表
+- 更名：烈焰之魂 -> 烈焰王
 
 ### 底层更新
 
@@ -119,6 +120,9 @@
   - `data.allFailedTimes` -> `data.failedCount.allLevels`
   - `time.@s` -> `deathTime.@s`
   - `data.storyMode` -> `settings.storyMode`
+  - `data.difficulty` -> `settings.difficulty`
+  - `data.difficultyAdder` -> `settings.extraDifficulty`
+  - `data.developerMode` -> `settings.developerMode`
   - 标签`potionUsed` -> `data.potionUsed`
   - 标签`cheated` -> `data.hasCheat`
   - `record.achievement.singlePlayer_completeMap` -> `record.achievement.singlePlayer.finishMap`

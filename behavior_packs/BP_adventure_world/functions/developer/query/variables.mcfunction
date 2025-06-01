@@ -50,6 +50,7 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§l===== settings记分板 =====" } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "settings.developerMode = §a%%s §7| 开发者模式是否启用 | 0：禁用，1：启用", "with": { "rawtext": [ { "score":{ "objective": "settings", "name": "developerMode" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "settings.difficulty = §a%%s §7| 地图难度", "with": { "rawtext": [ { "score":{ "objective": "settings", "name": "difficulty" } } ] } } ] }
+execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "settings.extraDifficulty = §a%%s §7| 额外地图难度，直接累加到地图难度（基础值）上", "with": { "rawtext": [ { "score":{ "objective": "settings", "name": "extraDifficulty" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "settings.storyMode = §a%%s §7| 剧情模式是否启用 | 0：禁用，1：启用", "with": { "rawtext": [ { "score":{ "objective": "settings", "name": "storyMode" } } ] } } ] }
 
 ## time
