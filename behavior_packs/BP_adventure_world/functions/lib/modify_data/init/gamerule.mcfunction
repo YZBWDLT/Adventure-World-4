@@ -32,3 +32,4 @@ gamerule showdeathmessages false
 gamerule showtags false
 gamerule spawnradius 0
 gamerule tntexplodes false
+gamerule projectilescanbreakblocks false

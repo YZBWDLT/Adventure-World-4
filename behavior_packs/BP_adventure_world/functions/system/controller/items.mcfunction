@@ -75,7 +75,7 @@ execute if score temp.gameId data matches 121..999 run give @a[hasitem={item=aw:
 ### 铁头盔 | 1-3结束后 ~ 3-1结束前，锁定到槽位上
 execute if score temp.gameId data matches 131..310 run replaceitem entity @a[hasitem={item=aw:iron_helmet,quantity=0,location=slot.armor.head}] slot.armor.head 0 aw:iron_helmet 1 0 {"item_lock":{"mode":"lock_in_slot"}}
 ### 弓 | 2-1结束后 ~，附魔耐久III
-execute if score temp.gameId data matches 211..999 run give @a[hasitem={item=bow,quantity=0}] bow 2 0 {"item_lock":{"mode":"lock_in_inventory"}}
+execute if score temp.gameId data matches 211..999 run give @a[hasitem={item=bow,quantity=0}] bow 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 execute if score temp.gameId data matches 211.. run enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] unbreaking 3
 ### 铁护腿 | 2-2结束后 ~ 4-3结束前，锁定到槽位上
 execute if score temp.gameId data matches 221..430 run replaceitem entity @a[hasitem={item=aw:iron_leggings,quantity=0,location=slot.armor.legs}] slot.armor.legs 0 aw:iron_leggings 1 0 {"item_lock":{"mode":"lock_in_slot"}}

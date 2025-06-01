@@ -18,12 +18,12 @@ execute if score temp.gameId data matches 311..999 run scoreboard players add te
 execute if score temp.gameId data matches 321..999 run scoreboard players add temp.potionHealthLimit data 1
 execute if score temp.gameId data matches 331..999 run scoreboard players add temp.potionHealthLimit data 1
 ### 如果玩家的药水数量超出了限制数量，则清除之
-execute if score temp.potionHealthLimit data matches 1 as @a[hasitem={item=aw:potion_health,quantity=2..}] run clear @s aw:potion_health
-execute if score temp.potionHealthLimit data matches 2 as @a[hasitem={item=aw:potion_health,quantity=3..}] run clear @s aw:potion_health
-execute if score temp.potionHealthLimit data matches 3 as @a[hasitem={item=aw:potion_health,quantity=4..}] run clear @s aw:potion_health
-execute if score temp.potionHealthLimit data matches 4 as @a[hasitem={item=aw:potion_health,quantity=5..}] run clear @s aw:potion_health
-execute if score temp.potionHealthLimit data matches 5 as @a[hasitem={item=aw:potion_health,quantity=6..}] run clear @s aw:potion_health
-execute if score temp.potionHealthLimit data matches 6 as @a[hasitem={item=aw:potion_health,quantity=7..}] run clear @s aw:potion_health
+execute if score temp.potionHealthLimit data matches 1 as @a[hasitem={item=aw:potion_health,quantity=2..}] run clear @s aw:potion_health -1 1
+execute if score temp.potionHealthLimit data matches 2 as @a[hasitem={item=aw:potion_health,quantity=3..}] run clear @s aw:potion_health -1 1
+execute if score temp.potionHealthLimit data matches 3 as @a[hasitem={item=aw:potion_health,quantity=4..}] run clear @s aw:potion_health -1 1
+execute if score temp.potionHealthLimit data matches 4 as @a[hasitem={item=aw:potion_health,quantity=5..}] run clear @s aw:potion_health -1 1
+execute if score temp.potionHealthLimit data matches 5 as @a[hasitem={item=aw:potion_health,quantity=6..}] run clear @s aw:potion_health -1 1
+execute if score temp.potionHealthLimit data matches 6 as @a[hasitem={item=aw:potion_health,quantity=7..}] run clear @s aw:potion_health -1 1
 
 ## 其他药水 | 上限为 1
 clear @a[hasitem={item=aw:potion_growth,quantity=2..}] aw:potion_growth

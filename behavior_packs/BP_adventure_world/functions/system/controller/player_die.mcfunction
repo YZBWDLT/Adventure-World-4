@@ -37,5 +37,5 @@ gamemode spectator @a[tag=spectator,m=!spectator]
 # --- 其他 ---
 
 ## 为旁观者施加增益buff
-execute if score levelCompleted data matches 0 if score tick time matches 1 run effect @a[tag=spectator] fire_resistance 1 0 true
-execute if score levelCompleted data matches 0 if score tick time matches 1 run effect @a[tag=spectator] resistance 1 9 true
+execute if score levelCompleted data matches 0 if score tick time matches 1 run effect @a[tag=spectator] fire_resistance 2 0 true
+execute if score levelCompleted data matches 0 if score tick time matches 1 run effect @a[tag=spectator] resistance 2 9 true

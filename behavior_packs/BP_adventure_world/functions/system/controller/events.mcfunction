@@ -11,10 +11,6 @@ function lib/modify_data/hud
 execute if score tick time matches 5 if score levelCompleted data matches !0 run kill @e[type=aw:spawner]
 execute if score tick time matches 5 if score levelCompleted data matches !0 run kill @e[family=monster]
 
-# --- 更新陷阱 ---
-# 仅第二章后执行，每秒执行一次，检测到有玩家处于第二章过道区域时执行
-execute if score tick time matches 7 if score chapter data matches 2 run function levels/chapter2/traps
-
 # --- 清除水 ---
 # 仅第三章 3-0~3-1 时期内执行，每秒执行一次
 execute if score tick time matches 8 run function levels/chapter3/water_clear
