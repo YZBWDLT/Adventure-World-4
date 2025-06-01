@@ -13,13 +13,13 @@ execute @e[name=wave,scores={data=5}] ~~~ execute @e[name=monsterSummonDelay,sco
 ## 当dialogue启用后，人为流逝时间
 scoreboard players add @e[name=dialogue,scores={active=3..,active=!6}] time 1
 
-# --- 烈焰之魂的挣扎 ---
+# --- 烈焰王的挣扎 ---
 
-## 检测到烈焰之魂准备生成怪物时，生成2个骷髅敢死队
+## 检测到烈焰王准备生成怪物时，生成2个骷髅敢死队
 execute @e[name=tick,scores={time=6}] ~~~ execute @e[family=blaze_king,scores={temp=1}] ~~~ summon aw:marker ~~-1~-1 "aw:as_summoner" "skeletonWithSword1Summoner"
 execute @e[name=tick,scores={time=6}] ~~~ execute @e[family=blaze_king,scores={temp=1}] ~~~ summon aw:marker ~~-1~1 "aw:as_summoner" "skeletonWithSword1Summoner"
 execute @e[name=tick,scores={time=6}] ~~~ execute @e[family=blaze_king,scores={temp=1}] ~~~ function lib/states/monster_summon_delay/enable_40ticks
-## 阻止烈焰之魂传送
+## 阻止烈焰王传送
 execute @e[name=tick,scores={time=6}] ~~~ scoreboard players set @e[family=blaze_king] time 114514
 
 # --- 双重生点 ---

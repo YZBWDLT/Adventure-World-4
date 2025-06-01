@@ -4,7 +4,7 @@
 execute @e[name=dialogue,scores={active=2,time=60}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7加油，很快就能拿到旷野之剑了！"}]}
 execute @e[name=dialogue,scores={active=2,time=140}] ~~~ tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7好耶！对了云儿，我离开红石神殿了，接下来是什么地方？"}]}
 execute @e[name=dialogue,scores={active=2,time=220}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7嗯......接下来是【山峦神殿】"}]}
-execute @e[name=dialogue,scores={active=2,time=300}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7【丛山之间，巫师及毒虫势要万分当心。烈焰之魂镇守此地，熔岩之海将焚毁万物】"}]}
+execute @e[name=dialogue,scores={active=2,time=300}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7【丛山之间，巫师及毒虫势要万分当心。烈焰王镇守此地，熔岩之海将焚毁万物】"}]}
 execute @e[name=dialogue,scores={active=2,time=380}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7另外，还有一个重大发现！我找到了【空间贤者事记】！"}]}
 execute @e[name=dialogue,scores={active=2,time=460}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7【恶魔强大异常，众多源泉赋予其无穷之法力】"}]}
 execute @e[name=dialogue,scores={active=2,time=540}] ~~~ tellraw @a {"rawtext":[{"text":"* §c米云溪： §7【虽其躯体可锢于封印，然其法术终难根除之】"}]}

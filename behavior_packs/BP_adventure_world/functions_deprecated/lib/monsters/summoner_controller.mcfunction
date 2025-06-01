@@ -96,7 +96,7 @@ execute @e[name=skeletonKingSummoner,c=1] ~~~ function lib/monsters/skeleton_kin
 ## --- BOSS | 远古守卫者 ---
 execute @e[name=elderGuardianSummoner,c=1] ~~~ function lib/monsters/elder_guardian
 
-## --- BOSS | 烈焰之魂 ---
+## --- BOSS | 烈焰王 ---
 execute @e[name=blazeKingSummoner,c=1] ~~~ function lib/monsters/blaze_king
 
 ## --- BOSS | 唤魔者 ---

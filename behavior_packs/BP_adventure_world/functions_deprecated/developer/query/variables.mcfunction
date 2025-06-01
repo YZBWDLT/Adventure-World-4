@@ -75,7 +75,7 @@ tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.playedSecond = §a%%s
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.soundPlayer = §a%%s §7# 音效播放器，单位：刻","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=soundPlayer]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.tick = §a%%s §7# 每1刻加1分，每20刻归零，单位：刻","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=tick]"}}]}}]}
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.timeline = §a%%s §7# 时间线，单位不定","with":{"rawtext":[{"score":{"objective":"time","name":"@e[name=timeline]"}}]}}]}
-tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.@e[family=blaze_king] = §a%%s §7# 烈焰之魂试图随机传送的倒计时，单位：秒","with":{"rawtext":[{"score":{"objective":"time","name":"@e[family=blaze_king]"}}]}}]}
+tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"time.@e[family=blaze_king] = §a%%s §7# 烈焰王试图随机传送的倒计时，单位：秒","with":{"rawtext":[{"score":{"objective":"time","name":"@e[family=blaze_king]"}}]}}]}
 
 tellraw @s[scores={temp=1}] {"rawtext":[{"translate":"§l===== 标签类型（tag）项 ====="}]}
 
