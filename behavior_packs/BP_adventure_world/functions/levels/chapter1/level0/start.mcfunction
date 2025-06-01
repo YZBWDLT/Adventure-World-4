@@ -27,7 +27,6 @@ fill -121 19 26 -121 19 26 red_sandstone ["sand_stone_type"="heiroglyphs"]
 ## 传送玩家
 tp @a -117 1 -6 0 0
 ## 本关标记
-event entity @e[has_property={aw:marker_type="level"}] aw:remove_immediately
 execute positioned -117 1 -6 run function lib/modify_data/markers/init
 ## 下关标记 | 仅限纯战斗模式下直接跳到完成阶段
 execute if score storyMode settings matches 0 run function levels/chapter1/level0/completed
