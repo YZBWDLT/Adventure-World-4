@@ -7,8 +7,6 @@ import { Player, world } from "@minecraft/server";
 world.afterEvents.projectileHitBlock.subscribe(event => {
     /** 御风珠击中的方块信息 */
     const blockInfo = event.getBlockHit();
-    /** 御风珠击中的方块的位置 */
-    const locB = blockInfo.block.location;
     /** 御风珠的位置 */
     const locE = event.location;
     /** 扔出御风珠的玩家 @type {Player} */
@@ -18,7 +16,7 @@ world.afterEvents.projectileHitBlock.subscribe(event => {
     if (
         event.source?.typeId === "minecraft:player"
         && event.projectile.typeId === "aw:wind_pearl"
-        && event.dimension.runCommand(`execute if block ${locB.x} ${locB.y} ${locB.z} planks`).successCount === 1
+        && blockInfo.block.typeId.includes("planks")
     ) {
         /** 传送信息 */
         const teleportInfo = {

@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "aw:wind_pearl",
 			"materials": { "default": "snowball" },
-			"textures": { "default": "textures/item/wind_pearl" },
+			"textures": { "default": "textures/items/wind_pearl" },
 			"geometry": { "default": "geometry.item_sprite" },
 			"render_controllers": [ "controller.render.item_sprite" ],
 			"animations": { "flying": "animation.actor.billboard" },

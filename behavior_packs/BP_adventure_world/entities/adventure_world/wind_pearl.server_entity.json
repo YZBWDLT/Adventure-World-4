@@ -1,5 +1,5 @@
 {
-    "format_version": "1.20.50",
+    "format_version": "1.21.0",
     "minecraft:entity": {
         "description": {
             "identifier": "aw:wind_pearl",
@@ -17,7 +17,7 @@
                 "on_hit": {
                     "remove_on_hit": {},
                     "particle_on_hit": {
-                        "particle_type": "iconcrack",
+                        "particle_type": "snowballpoof",
                         "num_particles": 6,
                         "on_entity_hit": true,
                         "on_other_hit": true

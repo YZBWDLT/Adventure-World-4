@@ -38,15 +38,16 @@ class AdventureWorld4Server(ServerSystem):
         """ 基于中国版事件 ProjectileDoHitEffectEvent。等效于 SAPI 的 world.afterEvents.projectileHitBlock.subscribe()。 """
         if event["hitTargetType"] == "BLOCK":
             # ----- 获取变量 -----
-            blockLocation = (event["blockPosX"], event["blockPosY"], event["blockPosZ"])            # 方块位置
-            location = (event["x"], event["y"], event["z"])                                         # 击中位置
-            projectile = Entity( event["id"] )                                                      # 投掷物
-            source = Entity( compFactory.CreateBulletAttributes(projectile).GetSourceEntityId() )   # 投掷者
-            # dimension = compFactory.CreateDimension(projectile).GetEntityDimensionId()            # 击中维度
-            blockHitFace = event["hitFace"]                                                         # 击中面
+            blockLocation = (event["blockPosX"], event["blockPosY"], event["blockPosZ"])                # 方块位置
+            location = (event["x"], event["y"], event["z"])                                             # 击中位置
+            projectile = Entity( event["id"] )                                                          # 投掷物
+            source = Entity( compFactory.CreateBulletAttributes(projectile).GetSourceEntityId() )       # 投掷者
+            # dimension = compFactory.CreateDimension(projectile).GetEntityDimensionId()                # 击中维度
+            blockHitFace = event["hitFace"]                                                             # 击中面
+            blockTypeId = compFactory.CreateBlockInfo(levelId).GetBlockNew(blockLocation, 0)["name"]    # 方块 ID
 
             # ----- 执行函数 -----
-            self.teleportPlayerToPlanks( blockLocation, location, source, projectile, blockHitFace )
+            self.teleportPlayerToPlanks( blockTypeId, location, source, projectile, blockHitFace )
     
     def entityDie(self, event):
         # type: ( dict ) -> None
@@ -72,14 +73,14 @@ class AdventureWorld4Server(ServerSystem):
     # ========== 地图功能实现 ==========
 
     # 当玩家的御风珠砸中木板后，则传送玩家
-    def teleportPlayerToPlanks( self, locB, locE, player, projectile, blockFace ):
-        # type: ( tuple[float, float, float], tuple[float, float, float], Entity, Entity, int ) -> None
+    def teleportPlayerToPlanks( self, blockTypeId, locE, player, projectile, blockFace ):
+        # type: ( str, tuple[float, float, float], Entity, Entity, int ) -> None
 
         # 如果：扔出的玩家真实存在，且为玩家类型；御风珠扔中了任意一种木板，则……
         if (
             player.typeId == "minecraft:player"
             and projectile.typeId == "aw:wind_pearl"
-            and projectile.runCommand( "/execute if block {} {} {} planks".format(locB[0], locB[1], locB[2]) )
+            and blockTypeId.find("planks") != -1
         ):
             # 传送信息
             teleportInfo = {

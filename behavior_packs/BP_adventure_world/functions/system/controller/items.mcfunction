@@ -37,7 +37,7 @@ clear @a[hasitem={item=aw:diamond_boots,quantity=2..}] aw:diamond_boots
 ## 普通剑
 clear @a[hasitem={item=aw:normal_sword,quantity=2..}] aw:normal_sword
 ## 御风珠
-clear @a[hasitem={item=aw:wind_pearl,quantity=3..}] aw:wind_pearl
+clear @a[hasitem={item=aw:wind_pearl,quantity=17..}] aw:wind_pearl
 ## 弓
 clear @a[hasitem={item=bow,quantity=2..}] bow
 ## 箭袋
@@ -71,7 +71,7 @@ execute if score allowAcousticStoneCrystal data matches 1 run give @a[hasitem={i
 ### 铁靴子 | 1-1结束后 ~ 3-2结束前
 execute if score temp.gameId data matches 111..320 run give @a[hasitem={item=aw:iron_boots,quantity=0}] aw:iron_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 御风珠 | 1-2结束后 ~
-execute if score temp.gameId data matches 121..999 run give @a[hasitem={item=aw:wind_pearl,quantity=0}] aw:wind_pearl 2 0 {"item_lock":{"mode":"lock_in_inventory"}}
+execute if score temp.gameId data matches 121..999 run give @a[hasitem={item=aw:wind_pearl,quantity=0}] aw:wind_pearl 16 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 铁头盔 | 1-3结束后 ~ 3-1结束前，锁定到槽位上
 execute if score temp.gameId data matches 131..310 run replaceitem entity @a[hasitem={item=aw:iron_helmet,quantity=0,location=slot.armor.head}] slot.armor.head 0 aw:iron_helmet 1 0 {"item_lock":{"mode":"lock_in_slot"}}
 ### 弓 | 2-1结束后 ~，附魔耐久III
