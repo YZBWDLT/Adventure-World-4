@@ -34,9 +34,33 @@ world.afterEvents.projectileHitBlock.subscribe(event => {
     }
 });
 
+// 当玩家使用弓箭击中骷髅或骷髅王后，触发对应效果
+world.afterEvents.projectileHitEntity.subscribe(event => {
+
+    // 判断为玩家用箭击中实体
+    if (
+        event.source?.typeId === "minecraft:player"
+        && event.projectile.typeId === "minecraft:arrow"
+    ) {
+        const immediateKill = ["minecraft:skeleton", "minecraft:stray"];
+        const dealsExtraDamage = ["aw:skeleton_king"];
+        const player = event.source;
+        const hitEntity = event.getEntityHit().entity;
+        // 击中骷髅或流浪者后，直接秒杀
+        if (immediateKill.includes(hitEntity?.typeId)) {
+            hitEntity.applyDamage( 1000, { cause: "entityAttack", damagingEntity: player } );
+        }
+        // 击中骷髅王后，施加额外伤害
+        else if (dealsExtraDamage.includes(hitEntity?.typeId)) {
+            hitEntity.applyDamage( 5, { cause: "entityAttack", damagingEntity: player } );
+        }
+    }
+
+})
+
 // 当玩家使用物品后，则触发函数
 world.afterEvents.itemUse.subscribe(event => {
-    const usableItems = ["aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal", ];
+    const usableItems = ["aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal",];
     if (usableItems.includes(event.itemStack.typeId)) {
         event.source.runCommand(`function items/${event.itemStack.typeId.split(":")[1]}`);
     }
@@ -44,7 +68,7 @@ world.afterEvents.itemUse.subscribe(event => {
 
 // 当玩家使用完毕物品后，则触发函数
 world.afterEvents.itemCompleteUse.subscribe(event => {
-    const usableItems = ["aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification", ];
+    const usableItems = ["aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification",];
     if (usableItems.includes(event.itemStack.typeId)) {
         event.source.runCommand(`function items/${event.itemStack.typeId.split(":")[1]}`);
     }
@@ -60,6 +84,6 @@ world.afterEvents.entityDie.subscribe(event => {
         killer?.typeId === "minecraft:player"
         && deadEntity.runCommand("execute if entity @s[family=monster]").successCount
     ) {
-        killer.runCommand( "function entities/player/kill_monster" )
+        killer.runCommand("function entities/player/kill_monster")
     }
 });

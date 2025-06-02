@@ -5,13 +5,7 @@
             "identifier": "aw:skeleton_king",
             "is_spawnable": true,
             "is_summonable": true,
-            "is_experimental": false,
-            "animations": {
-                "controller_extra_damage": "controller.animation.skeleton_king.extra_damage"
-            },
-            "scripts": {
-                "animate": [ "controller_extra_damage" ]
-            }
+            "is_experimental": false
         },
         "components": {
             "minecraft:collision_box": { "width": 1.0, "height": 1.6 },
@@ -40,22 +34,14 @@
             "minecraft:jump.static": { },
             "minecraft:behavior.random_stroll": { "priority": 6, "speed_multiplier": 1 },
             "minecraft:behavior.look_at_player": { "priority": 7, "look_distance": 8 },
-            "minecraft:behavior.random_look_around": { "priority": 8 },
-
-            "minecraft:damage_sensor": {
-                "triggers": [
-                    { "on_damage": { "filters": { "test": "is_family", "subject": "damager", "value": "arrow", "operator": "==" }, "event": "extra_damage" } }
-                ]
-            }
+            "minecraft:behavior.random_look_around": { "priority": 8 }
         },
         "events": {
 			"minecraft:entity_spawned": { "add": { "component_groups": [ "level_1" ] } },
 			"aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
 			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
 			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
-			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } },
-            "aw:extra_damage": { "add": { "component_groups": [ "extra_damage" ] } },
-            "aw:stop_extra_damage": { "add": { "component_groups": [ "stop_extra_damage" ] } }
+			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } }
 
 		},
         "component_groups": {
@@ -78,13 +64,7 @@
 				"minecraft:health": { "value": 400, "max": 400 },
                 "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval_min" : 1.0 ,"attack_interval_max" : 1.2 , "attack_radius": 40 },
                 "minecraft:type_family": { "family": [ "level_4", "undead", "monster", "mob", "boss", "skeleton_king" ] }
-			},
-            "extra_damage": {
-                "minecraft:variant": { "value": 1 }
-            },
-            "stop_extra_damage": {
-                "minecraft:variant": { "value": 0 }
-            }
+			}
 		}
     }
 }

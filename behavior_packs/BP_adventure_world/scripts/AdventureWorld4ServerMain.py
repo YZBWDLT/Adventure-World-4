@@ -3,7 +3,7 @@
 # 将使用 SAPI 和 ModAPI 同时尝试实现
 
 import mod.server.extraServerApi as serverApi
-from quasiSapiFunc import Entity
+from sapi import Entity
 
 ServerSystem = serverApi.GetServerSystemCls()
 """继承的系统，类似于SAPI的world模块"""
@@ -27,6 +27,7 @@ class AdventureWorld4Server(ServerSystem):
 
     def subscribe(self):
         self.ListenForEvent(defaultNamespace, defaultSystemName, "ProjectileDoHitEffectEvent", self, self.projectileHitBlock)
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "ProjectileDoHitEffectEvent", self, self.projectileHitEntity)
         self.ListenForEvent(defaultNamespace, defaultSystemName, "ItemUseAfterServerEvent", self, self.itemUse)
         self.ListenForEvent(defaultNamespace, defaultSystemName, "MobDieEvent", self, self.entityDie)
 
@@ -42,13 +43,24 @@ class AdventureWorld4Server(ServerSystem):
             location = (event["x"], event["y"], event["z"])                                             # 击中位置
             projectile = Entity( event["id"] )                                                          # 投掷物
             source = Entity( compFactory.CreateBulletAttributes(projectile).GetSourceEntityId() )       # 投掷者
-            # dimension = compFactory.CreateDimension(projectile).GetEntityDimensionId()                # 击中维度
+            dimension = compFactory.CreateDimension(projectile).GetEntityDimensionId()                  # 击中维度
             blockHitFace = event["hitFace"]                                                             # 击中面
-            blockTypeId = compFactory.CreateBlockInfo(levelId).GetBlockNew(blockLocation, 0)["name"]    # 方块 ID
+            blockTypeId = compFactory.CreateBlockInfo(levelId).GetBlockNew(blockLocation, dimension)["name"]    # 方块 ID
 
             # ----- 执行函数 -----
             self.teleportPlayerToPlanks( blockTypeId, location, source, projectile, blockHitFace )
     
+    def projectileHitEntity(self, event):
+        # type: ( dict ) -> None
+        """ 基于中国版事件 ProjectileDoHitEffectEvent。等效于 SAPI 的 world.afterEvents.projectileHitEntity.subscribe()。 """
+        if event["hitTargetType"] == "ENTITY":
+            projectile = Entity( event["id"] )                                                          # 投掷物
+            dimension = compFactory.CreateDimension(projectile).GetEntityDimensionId()                  # 击中维度
+            source = Entity( compFactory.CreateBulletAttributes(projectile).GetSourceEntityId() )       # 投掷者
+
+            # ----- 执行函数 -----
+            self.playerDamageSkeleton()
+
     def entityDie(self, event):
         # type: ( dict ) -> None
         """ 基于中国版事件 MobDieEvent。等效于 SAPI 的 world.afterevents.entityDie.subscribe()。 """
@@ -94,20 +106,36 @@ class AdventureWorld4Server(ServerSystem):
             # 传送玩家
             player.teleport( teleportInfo[blockFace] )
             # 为玩家播放传送音效
-            player.runCommand( "/playsound mob.endermen.portal @s" )
+            player.runCommand( "playsound mob.endermen.portal @s" )
 
     # 当玩家使用自定义物品时，执行函数
     def playerUseItem(self, itemStack, source):
         # type: ( dict, Entity ) -> None
         usableItems = [ "aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal", "aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification",  ]
         if itemStack["newItemName"] in usableItems:
-            source.runCommand( "/function items/{}".format(itemStack["newItemName"].split(":")[1]) )
+            source.runCommand( "function items/{}".format(itemStack["newItemName"].split(":")[1]) )
 
     # 当玩家击杀怪物时，执行函数
     def playerKilledMonster( self, killer, deadEntity ):
         # type: ( Entity, Entity ) -> None
         if (
             killer.typeId == "minecraft:player"
-            and deadEntity.runCommand("/execute if entity @s[family=monster]")
+            and deadEntity.runCommand("execute if entity @s[family=monster]")
         ):
             killer.runCommand( "function entities/player/kill_monster" )
+
+    def playerDamageSkeleton( self, source, projectile, hitEntity ):
+        # type: ( Entity, Entity, Entity ) -> None
+        if (
+            source.typeId == "minecraft:player"
+            and projectile.typeId == "minecraft:arrow"
+        ):
+            immediateKill = ["minecraft:skeleton", "minecraft:stray"]
+            dealsExtraDamage = ["aw:skeleton_king"]
+            # 击中骷髅或流浪者后，直接秒杀
+            if hitEntity.typeId in immediateKill:
+                hitEntity.applyDamage( 1000, { "cause": "entity_attack", "damagingEntity": source } )
+            # 击中骷髅王后，施加额外伤害
+            elif hitEntity.typeId in dealsExtraDamage:
+                hitEntity.applyDamage( 5, { "cause": "entity_attack", "damagingEntity": source } )
+

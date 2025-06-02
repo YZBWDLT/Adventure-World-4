@@ -5,13 +5,7 @@
             "identifier": "minecraft:skeleton",
             "is_spawnable": true,
             "is_summonable": true,
-            "is_experimental": false,
-            "animations": {
-                "controller_kill_self": "controller.animation.skeleton.kill_self"
-            },
-            "scripts": {
-                "animate": [ "controller_kill_self" ]
-            }
+            "is_experimental": false
         },
 
         "components": {
@@ -47,13 +41,7 @@
             "minecraft:behavior.random_look_around": { "priority": 8 },
             "minecraft:physics": { },
             "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
-            "minecraft:conditional_bandwidth_optimization": { },
-
-            "minecraft:damage_sensor": {
-                "triggers": [
-                    { "on_damage": { "filters": { "test": "is_family", "subject": "damager", "value": "arrow", "operator": "==" }, "event": "kill_self" } }
-                ]
-            }
+            "minecraft:conditional_bandwidth_optimization": { }
         },
 
         "events": {
@@ -80,10 +68,6 @@
             "minecraft:ranged_mode": {
                 "remove": { "component_groups": [ "minecraft:melee_attack" ] },
                 "add": { "component_groups": [ "minecraft:ranged_attack" ] }
-            },
-
-            "kill_self": {
-                "add": { "component_groups": [ "kill_self" ] }
             }
         },
 
@@ -173,10 +157,6 @@
                 "minecraft:type_family": { "family": [ "skeleton", "undead", "monster", "mob", "level_5_sword" ] },
                 "minecraft:equipment": { "table": "loot_tables/equipments/netherite_sword.json" }
 			},
-
-            "kill_self": {
-                "minecraft:variant": { "value": 1 }
-            },
 
             "minecraft:ranged_attack": {
                 "minecraft:behavior.ranged_attack": { "priority": 0, "attack_interval": 3.0, "attack_radius": 40 },
