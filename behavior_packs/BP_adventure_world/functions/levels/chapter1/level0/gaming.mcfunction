@@ -30,4 +30,4 @@ execute if score timeline time matches 600 run camera @a set minecraft:free pos 
 execute if score timeline time matches 601 run camera @a set minecraft:free ease 15 out_sine pos -119 2.5 -4 facing -124 5 1
 
 # --- 剧情结束 ---
-execute if score timeline time matches 820 run function levels/chapter1/level0/completed
+execute if score timeline time matches 820 run function levels/chapter1/level0/complete

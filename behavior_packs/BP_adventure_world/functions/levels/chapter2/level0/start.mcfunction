@@ -27,7 +27,7 @@ tp @a -79 19 26 facing -73 20 55
 ## 本关标记
 execute positioned -79 19 26 run function lib/modify_data/markers/init
 ## 下关标记 | 仅限纯战斗模式下直接跳到完成阶段
-execute if score storyMode settings matches 0 run function levels/chapter2/level0/completed
+execute if score storyMode settings matches 0 run function levels/chapter2/level0/complete
 
 # --- 生成章节名 ---
 summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§a丛林神殿"

@@ -4,7 +4,7 @@
 ## 第 1 波 -> 第 2 波
 execute unless entity @e[type=aw:spawner] if score wave data matches 1 if score monsterAmount data matches 0 run function levels/chapter2/level1/waves/wave_2
 ## 第 2 波 -> 关卡结束
-execute unless entity @e[type=aw:spawner] if score wave data matches 2 if score monsterAmount data matches 0 run function levels/chapter2/level1/completed
+execute unless entity @e[type=aw:spawner] if score wave data matches 2 if score monsterAmount data matches 0 run function levels/chapter2/level1/complete
 
 # --- 检查存活玩家数目 ---
 # 如果存活玩家数目为 0，则触发关卡失败函数

@@ -2,7 +2,7 @@
 
 # --- 检查怪物是否全部清除 ---
 ## 第 1 波 -> 关卡完成
-execute unless entity @e[type=aw:spawner] if score wave data matches 1 if score monsterAmount data matches 0 run function levels/chapter1/level2/completed
+execute unless entity @e[type=aw:spawner] if score wave data matches 1 if score monsterAmount data matches 0 run function levels/chapter1/level2/complete
 
 # --- 检查存活玩家数目 ---
 # 如果存活玩家数目为 0，则触发关卡失败函数
