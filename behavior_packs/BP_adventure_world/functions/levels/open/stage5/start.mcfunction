@@ -10,8 +10,5 @@ function lib/modify_data/levels/start_open
 # 黑屏
 camera @a fade time 5 10 3 color 0 0 0
 
-# 移除 NPC
-event entity @e[type=aw:npc] aw:remove_immediately
-
 # 初始化标题时间
 title @a times 10 30 10

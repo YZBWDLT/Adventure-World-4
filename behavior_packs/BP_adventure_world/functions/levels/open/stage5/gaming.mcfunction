@@ -6,6 +6,7 @@ execute if score timeline time matches 160 run title @a title §1
 execute if score timeline time matches 160 run title @a subtitle §3作者 §b一只卑微的量筒 狂野巴豆
 execute if score timeline time matches 250 run title @a title §1
 execute if score timeline time matches 250 run title @a subtitle §3联合作者 §bo绿叶o 文雨
+# [110] 杂项：移除 NPC
 # [110~410] 相机变换：续杯黑屏
 execute if score timeline time matches 340 run title @a title §1
 execute if score timeline time matches 340 run title @a subtitle §3出品 §b极筑工坊
@@ -28,6 +29,11 @@ execute if score timeline time matches 710 if score storyMode settings matches 0
 execute if score timeline time matches 110..410 run camera @a fade time 0 10 4 color 0 0 0
 ## [410~610] 如果是纯战斗模式，则继续续杯黑屏
 execute if score timeline time matches 410..610 if score storyMode settings matches 0 run camera @a fade time 0 10 4 color 0 0 0
+
+# --- 杂项 ---
+
+## [110] 移除 NPC
+execute if score timeline time matches 110 run event entity @e[type=aw:npc] aw:remove_immediately
 
 # --- 剧情结束 ---
 
