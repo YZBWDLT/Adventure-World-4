@@ -12,8 +12,8 @@ scoreboard players set level data 0
 titleraw @a title {"rawtext":[{"translate":"§e§l沙 漠 神 殿"}]}
 ## 设置重生点 | 特别地，因为这是整个试炼的开始，所以先设置重生点以防不测
 spawnpoint @a -117 1 -6
-## 在剧情模式下传送玩家
-execute if score storyMode settings matches 1 run tp @a -117 1 -6 0 0
+## 传送玩家 | 特别地，因为这是整个试炼的开始，所以一视同仁地传送
+tp @a -117 1 -6 0 0
 
 # --- 封闭各关卡出口 ---
 ## 1-1

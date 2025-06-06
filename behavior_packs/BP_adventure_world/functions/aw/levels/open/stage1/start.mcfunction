@@ -8,6 +8,7 @@ scoreboard players set level data 1
 function aw/lib/modify_data/levels/start_open
 
 # 传送玩家
+tp @a -26 6 -50 facing -27 6 -51
 camera @a fade time 0 1 5 color 0 0 0
 
 # 在第一关设置一个初始重生点

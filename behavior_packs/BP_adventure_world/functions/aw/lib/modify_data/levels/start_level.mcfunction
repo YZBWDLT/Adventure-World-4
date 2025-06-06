@@ -38,7 +38,7 @@ execute if score developerMode settings matches 0 run gamemode adventure @a
 execute if score failedCount.thisLevel data matches 3.. run effect @a strength 3600 1 true
 execute if score failedCount.thisLevel data matches 5.. run effect @a health_boost 3600 4 true
 execute if score failedCount.thisLevel data matches 5.. run effect @a resistance 3600 0 true
-execute if score failedCount.thisLevel data matches 10.. run effect @a resistance 3600 5 true
+execute if score failedCount.thisLevel data matches 10.. run effect @a resistance 3600 4 true
 ## 将玩家回满血
 effect @a clear
 effect @a instant_health 1 20 true
