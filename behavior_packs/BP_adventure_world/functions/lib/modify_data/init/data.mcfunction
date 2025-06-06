@@ -24,6 +24,7 @@ scoreboard objectives add killCount dummy "击杀数"
 scoreboard players set @a deathCount 0
 scoreboard players add @a deathState 0
 scoreboard players set @a deathTime 0
+scoreboard players set @a killCount 0
 scoreboard players set @a isOnline 1
 
 ## 基础时间数据
