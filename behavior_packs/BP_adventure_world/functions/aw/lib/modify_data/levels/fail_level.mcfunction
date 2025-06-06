@@ -29,7 +29,8 @@ titleraw @a subtitle {"rawtext":[{"translate":"所有人已死亡！已返回上
 function aw/lib/modify_data/states/sound/random_anvil_break_0_75
 ## 如果玩家失败次数达到一定次数，通知玩家
 execute if score failedCount.thisLevel data matches 3 run tellraw @a {"rawtext":[{"text":"§7你（们）已经失败3次了！下一次进入关卡时将给予力量II效果。"}]}
-execute if score failedCount.thisLevel data matches 5 run tellraw @a {"rawtext":[{"text":"§7你（们）已经失败5次了！下一次进入关卡时将给予力量II、生命提升V和抗性提升I效果。\n如果还是过不去的话，请自行作弊解决吧=_="}]}
+execute if score failedCount.thisLevel data matches 5 run tellraw @a {"rawtext":[{"text":"§7你（们）已经失败5次了！下一次进入关卡时将给予力量II、生命提升V和抗性提升I效果。"}]}
+execute if score failedCount.thisLevel data matches 10 run tellraw @a {"rawtext":[{"text":"§7你（们）已经失败10次了！下一次进入关卡时将给予力量II、生命提升V和抗性提升V效果。"}]}
 
 # --- 玩家复活与回血 ---
 
