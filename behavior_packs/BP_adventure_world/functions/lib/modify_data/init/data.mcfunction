@@ -46,8 +46,8 @@ scoreboard players set developerMode settings 0
 scoreboard players set chapter data 0
 scoreboard players set level data 0
 scoreboard players set levelCompleted data 1
-scoreboard players set wave data 0
-scoreboard players set maxWave data 0
+scoreboard players set wave data 1
+scoreboard players set maxWave data 1
 
 ## 游玩时长
 scoreboard players set playedSecond time 0

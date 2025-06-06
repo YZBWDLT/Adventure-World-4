@@ -1,35 +1,33 @@
 # ===== 开始关卡 =====
+# 1-0 | 沙漠神殿
 
-# --- 关卡 ID ---
+# --- 关卡参数 ---
+## 关卡 ID
 scoreboard players set chapter data 1
 scoreboard players set level data 0
 
+# --- 玩家处理 ---
+
+## 播放标题 | 应先于[调用通用函数]模块
+titleraw @a title {"rawtext":[{"translate":"§e§l沙 漠 神 殿"}]}
+## 设置重生点 | 特别地，因为这是整个试炼的开始，所以先设置重生点以防不测
+spawnpoint @a -117 1 -6
+## 在剧情模式下传送玩家
+execute if score storyMode settings matches 1 run tp @a -117 1 -6 0 0
+
+# --- 封闭各关卡出口 ---
+## 1-1
+fill -118 1 32 -116 3 32 sandstone ["sand_stone_type"="cut"]
+fill -117 2 32 -117 2 32 sandstone ["sand_stone_type"="heiroglyphs"]
+## 1-3
+fill -121 18 25 -121 20 27 red_sandstone ["sand_stone_type"="cut"]
+fill -121 19 26 -121 19 26 red_sandstone ["sand_stone_type"="heiroglyphs"]
+
 # --- 调用通用函数 ---
-# 重置标题时间、供应物品、播放音效和音乐、启用时间线、剧情模式触发对话
 ## 调用前先清除玩家的物品（仅限1-0的初始化，后续的X-0不再清除物品）
 clear @a
 function lib/modify_data/levels/start_chapter
 
-# --- 标题 ---
-titleraw @a title {"rawtext":[{"text":"§e§l沙 漠 神 殿"}]}
-titleraw @a subtitle {"rawtext":[{"text":"§c1-0"}]}
-
-# --- 先行封闭各关卡出口 ---
-# 1-1出口
-fill -118 1 32 -116 3 32 sandstone ["sand_stone_type"="cut"]
-fill -117 2 32 -117 2 32 sandstone ["sand_stone_type"="heiroglyphs"]
-# 1-3出口
-fill -121 18 25 -121 20 27 red_sandstone ["sand_stone_type"="cut"]
-fill -121 19 26 -121 19 26 red_sandstone ["sand_stone_type"="heiroglyphs"]
-
-# --- 1-0 的初始化 ---
-
-## 传送玩家
-tp @a -117 1 -6 0 0
-## 本关标记
-execute positioned -117 1 -6 run function lib/modify_data/markers/init
-## 下关标记 | 仅限纯战斗模式下直接跳到完成阶段
-execute if score storyMode settings matches 0 run function levels/chapter1/level0/complete
-
 # --- 生成章节名 ---
+# 应后于[调用通用函数]模块
 summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§e沙漠神殿"

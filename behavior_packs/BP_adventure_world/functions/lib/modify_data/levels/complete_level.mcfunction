@@ -1,6 +1,6 @@
 # ===== 关卡结束通用函数 =====
 # 试炼中关卡通用的内容。用于在关卡结束时调用。
-# 调用此方法时：需修饰执行位置为下关标记位置（execute positioned (下关标记位置)）。
+# 调用此方法时：无需修饰。
 
 # --- 关卡参数 ---
 
@@ -10,7 +10,7 @@ scoreboard players set levelCompleted data 1
 scoreboard players set allowPotionSupply data 1
 ## 设置为可恢复箭
 scoreboard players set allowArrowSupply data 1
-## 时间线
+## 启用时间线 | 将原来的时间值归零
 function lib/modify_data/states/timeline/dont_keep_value
 function lib/modify_data/states/timeline/enable
 ## 失败次数归零
@@ -24,13 +24,10 @@ titleraw @a subtitle {"rawtext":[{"translate":"§a关卡已完成！"}]}
 ## 音效
 function lib/modify_data/states/sound/random_levelup_2
 
-# --- 设置下关标记 ---
-function lib/modify_data/markers/complete
-
 # --- 玩家复活与回血 ---
 
 ## 复活已死亡玩家
-tp @a[tag=spectator] @e[has_property={aw:marker_type="level",aw:level="this"},c=1]
+execute as @a[tag=spectator] run function lib/spawnpoint/teleport_after_gaming
 gamemode adventure @a[tag=spectator]
 tag @a remove spectator
 ## 将玩家回满血

@@ -1,5 +1,5 @@
 # ===== 开始游戏 =====
-# 开始游戏。必须由初次进入的玩家执行。
+# 2-2 | 必须由初次进入的玩家执行
 
 # --- 关卡参数 ---
 ## 关卡 ID
@@ -24,4 +24,3 @@ function lib/modify_data/levels/start_level
 setblock -86 -17 66 lever ["lever_direction"="up_east_west","open_bit"=false]
 setblock -89 -17 67 lever ["lever_direction"="up_east_west","open_bit"=false]
 setblock -87 -17 69 lever ["lever_direction"="up_north_south","open_bit"=false]
-

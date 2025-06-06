@@ -34,15 +34,12 @@ execute if score failedCount.thisLevel data matches 5 run tellraw @a {"rawtext":
 # --- 玩家复活与回血 ---
 
 ## 复活已死亡玩家
-tp @a[tag=spectator] @e[has_property={aw:marker_type="level",aw:level="prev"},c=1]
+function lib/spawnpoint/teleport_after_gaming
 gamemode adventure @a[tag=spectator]
 tag @a remove spectator
 ## 将玩家回满血
 effect @a clear
 effect @a instant_health 1 20 true
-
-# --- 回退到上关标记 ---
-function lib/modify_data/markers/fail
 
 # --- 清除多余实体 ---
 kill @e[family=monster]

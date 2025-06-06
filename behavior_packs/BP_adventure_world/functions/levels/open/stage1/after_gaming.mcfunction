@@ -2,4 +2,4 @@
 # 0-1 | 醒来
 
 # --- 检查玩家进入下一个关卡 ---
-execute as @e[has_property={aw:marker_type="level",aw:level="next"}] at @s if entity @a[r=2] run function levels/open/stage2/start
+execute positioned -26 1 -37 if entity @a[r=2] run function levels/open/stage2/start

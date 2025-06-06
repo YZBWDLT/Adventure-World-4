@@ -1,8 +1,12 @@
 # ===== 未完成关卡 =====
-# 2-2
+# 2-3
 
 # --- 调用通用函数 ---
 function lib/modify_data/levels/fail_level
 
 # --- 重新开放关卡 ---
-fill -70 0 68 -70 3 70 air
+fill -141 -21 60 -141 -19 62 air
+
+# --- 关卡特殊功能 ---
+## 播放音乐
+function lib/modify_data/play_music

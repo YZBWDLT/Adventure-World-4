@@ -1,4 +1,4 @@
-# ===== 第 2 波 =====
+# ===== 第 3 波 =====
 
 # --- 波潮完成通用函数 ---
 function lib/modify_data/levels/complete_wave

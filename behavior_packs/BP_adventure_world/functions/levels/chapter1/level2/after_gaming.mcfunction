@@ -1,8 +1,9 @@
 # ===== 关卡游戏后时间线 =====
+# 1-2
 
 # --- 检查玩家进入下一个关卡 ---
-execute as @e[has_property={aw:marker_type="level",aw:level="next"}] at @s positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=3,dz=1.4,tag=!spectator] run function levels/chapter1/level3/start
-execute as @e[has_property={aw:marker_type="level",aw:level="next"}] at @s positioned ~-1.2~-1~-1.2 as @e[dx=1.4,dy=3,dz=1.4,type=aw:wind_pearl] run kill @s
+execute positioned -137 12 33 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=3,dz=1.4,tag=!spectator] run function levels/chapter1/level3/start
+execute positioned -137 12 33 positioned ~-1.2~-1~-1.2 as @e[dx=1.4,dy=3,dz=1.4,type=aw:wind_pearl] run kill @s
 
 # --- 剧情 ---
 execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7云儿，我拿到你说的那个御风珠了！"}]}

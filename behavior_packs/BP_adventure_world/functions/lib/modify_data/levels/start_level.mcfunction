@@ -16,12 +16,9 @@ scoreboard players set allowArrowSupply data 0
 function lib/modify_data/states/timeline/dont_keep_value
 function lib/modify_data/states/timeline/enable
 
-# --- 设置本关标记 ---
-function lib/modify_data/markers/start
-
 # --- 提醒玩家开启关卡 ---
 function lib/modify_data/title
-titleraw @a subtitle {"rawtext":[{"translate":"§a%%s - %%s","with":{"rawtext":[{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}}]}}]}
+titleraw @a subtitle {"rawtext":[{"translate":"§c%%s-%%s","with":{"rawtext":[{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}}]}}]}
 
 # --- 传送玩家 ---
 

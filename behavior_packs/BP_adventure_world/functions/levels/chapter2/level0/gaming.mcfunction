@@ -1,4 +1,5 @@
 # ===== 关卡游戏时时间线 =====
+# 2-0 | 丛林神殿
 
 # --- 剧情 ---
 
@@ -21,4 +22,7 @@ execute if score timeline time matches 270 run camera @a set minecraft:free pos 
 execute if score timeline time matches 271 run camera @a set minecraft:free ease 14.5 in_out_sine pos -93 -15.5 75 rot 0 -150
 
 # --- 剧情结束 ---
+## 纯战斗模式下直接跳过剧情
+execute if score storyMode settings matches 0 run function levels/chapter2/level0/complete
+## [620] 结束剧情
 execute if score timeline time matches 620 run function levels/chapter2/level0/complete

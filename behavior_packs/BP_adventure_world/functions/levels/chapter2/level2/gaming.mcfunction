@@ -1,11 +1,12 @@
 # ===== 关卡游戏时时间线 =====
+# 2-2
 
 # --- 检查怪物是否全部清除 ---
 ## 第 1 波 -> 第 2 波
 execute unless entity @e[type=aw:spawner] if score wave data matches 1 if score monsterAmount data matches 0 run function levels/chapter2/level2/waves/wave_2
 ## 第 2 波 -> 第 3 波
 execute unless entity @e[type=aw:spawner] if score wave data matches 2 if score monsterAmount data matches 0 run function levels/chapter2/level2/waves/wave_3
-## 第 3 波 -> 关卡结束
+## 第 3 波 -> 关卡完成
 execute unless entity @e[type=aw:spawner] if score wave data matches 3 if score monsterAmount data matches 0 run function levels/chapter2/level2/complete
 
 # --- 检查存活玩家数目 ---
