@@ -27,7 +27,7 @@ function lib/modify_data/states/sound/random_levelup_2
 # --- 玩家复活与回血 ---
 
 ## 复活已死亡玩家
-execute as @a[tag=spectator] run function lib/spawnpoint/teleport_after_gaming
+execute as @a[tag=spectator] run function lib/spawnpoint/teleport_this_level
 gamemode adventure @a[tag=spectator]
 tag @a remove spectator
 ## 将玩家回满血

@@ -4,9 +4,14 @@
 
 # --- 提醒玩家不要出界 ---
 # 仅当玩家不在上关标记附近时执行
-execute unless entity @e[has_property={aw:marker_type="level",aw:level="prev"},r=2] run tag @s add outOfBorder
-tellraw @s[tag=outOfBorder] {"rawtext":[{"translate":"§c不要出界哦~"}]}
+
+## 播放标题
+function lib/modify_data/title
+titleraw @s subtitle {"rawtext":[{"translate":"§c不要出界哦~"}]}
+
+## 播放音效 | 这里使用outOfBorder标签标记出界玩家，以使音效控制器只对这些玩家生效，最后令音效控制器移除这个标签
+tag @s add outOfBorder
 function lib/modify_data/states/sound/mob_cat_meow
 
 # --- 传送玩家 ---
-tp @s @e[has_property={aw:marker_type="level",aw:level="this"}]
+function lib/spawnpoint/teleport_this_level

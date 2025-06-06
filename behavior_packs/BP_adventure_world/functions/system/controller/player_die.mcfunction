@@ -3,17 +3,6 @@
 # 当玩家重生后，将出生到本关标记的位置上。
 # 玩家的死亡可以分为在游戏时死亡和不在游戏时死亡，其中游戏时死亡则令玩家处于观战状态。
 
-# --- 玩家重生点设置 ---
-
-## 当在游戏状态下时，将重生点设置在上关标记上
-### 备注：这么做是为了防止玩家在游戏状态下死亡后，立即重生后立刻返回到原来的重生点
-### （也就是原this的位置，此时更改this的位置已于事无补），导致误开关卡
-### 至于生成到上一关的其他旁观玩家，由每关的旁观机制把他们拉回来
-### 这么做可能不是最好的做法，但这个重生点机制实在太让人头疼了……
-execute if score levelCompleted data matches 0 positioned as @e[has_property={aw:marker_type="level",aw:level="prev"}] run spawnpoint @a ~~~
-## 其他状态下，将重生点设置在本关标记上
-execute unless score levelCompleted data matches 0 positioned as @e[has_property={aw:marker_type="level",aw:level="this"}] run spawnpoint @a ~~~
-
 # --- 运行死亡榜 ---
 scoreboard players set @a[scores={deathState=!2}] deathState 1
 scoreboard players set @e[type=player] deathState 0

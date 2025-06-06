@@ -16,7 +16,7 @@ titleraw @a subtitle {"rawtext":[{"translate":"第 §a%%s §f波","with":{"rawte
 
 ## 释放玩家并将玩家传送到入口处
 gamemode adventure @a[tag=spectator]
-tp @a[tag=spectator] @e[has_property={aw:marker_type="level",aw:level="this"},c=1]
+execute as @a[tag=spectator] run function lib/spawnpoint/teleport_this_level
 ## 移除玩家的状态效果
 effect @a[tag=spectator] clear
 ## 给予玩家额外的治疗药水
