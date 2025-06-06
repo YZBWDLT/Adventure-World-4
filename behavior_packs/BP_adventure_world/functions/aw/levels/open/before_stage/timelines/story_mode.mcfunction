@@ -29,4 +29,4 @@ execute if score timeline time matches 600 run camera @a fade time 0 10 0 color 
 execute if score timeline time matches 750 run camera @a fade time 0 10 0 color 0 0 0
 
 # --- 剧情结束 ---
-execute if score timeline time matches 900 run function levels/open/before_stage/complete
+execute if score timeline time matches 900 run function aw/levels/open/before_stage/complete

@@ -13,7 +13,7 @@ execute if score tick time matches 1 run effect @a water_breathing 30 0 true
 # --- 检查玩家进入信标粒子以开始游戏 ---
 
 ## 启动剧情模式
-execute if entity @a[x=43,y=27,z=86,dx=0,dy=2,dz=0] run function levels/open/before_stage/events/start_story_mode
+execute if entity @a[x=43,y=27,z=86,dx=0,dy=2,dz=0] run function aw/levels/open/before_stage/events/start_story_mode
 
 ## 启动战斗模式
-execute if entity @a[x=45,y=27,z=86,dx=0,dy=2,dz=0] run function levels/open/before_stage/events/start_combat_mode
+execute if entity @a[x=45,y=27,z=86,dx=0,dy=2,dz=0] run function aw/levels/open/before_stage/events/start_combat_mode

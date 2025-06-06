@@ -16,7 +16,7 @@ fill -118 1 32 -116 3 32 sandstone ["sand_stone_type"="cut"]
 fill -117 2 32 -117 2 32 sandstone ["sand_stone_type"="heiroglyphs"]
 
 # --- 生成怪物 ---
-function levels/chapter1/level1/waves/wave_1
+function aw/levels/chapter1/level1/waves/wave_1
 
 # --- 调用通用函数 ---
 # 必须由初次进入的玩家执行

@@ -22,4 +22,4 @@ execute if score timeline time matches 700 as @a at @s anchored eyes run camera 
 
 # --- 剧情结束 ---
 # 在恢复相机后 2 秒执行
-execute if score timeline time matches 740 run function levels/open/stage2/complete
+execute if score timeline time matches 740 run function aw/levels/open/stage2/complete

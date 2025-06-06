@@ -12,7 +12,7 @@ fill -70 0 68 -70 3 70 polished_diorite
 fill -104 -17 69 -104 -15 67 polished_diorite
 
 # --- 生成怪物 ---
-function levels/chapter2/level2/waves/wave_1
+function aw/levels/chapter2/level2/waves/wave_1
 
 # --- 调用通用函数 ---
 # 必须由初次进入的玩家执行

@@ -38,6 +38,6 @@ execute if score timeline time matches 110 run event entity @e[type=aw:npc] aw:r
 # --- 剧情结束 ---
 
 ## [610] 如果是剧情模式，则结束
-execute if score timeline time matches 610 if score storyMode settings matches 1 run function levels/open/stage5/complete
+execute if score timeline time matches 610 if score storyMode settings matches 1 run function aw/levels/open/stage5/complete
 ## [810] 如果是纯战斗模式，则延迟结束
-execute if score timeline time matches 810 if score storyMode settings matches 0 run function levels/open/stage5/complete
+execute if score timeline time matches 810 if score storyMode settings matches 0 run function aw/levels/open/stage5/complete

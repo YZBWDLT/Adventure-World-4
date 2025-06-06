@@ -32,6 +32,6 @@ execute if score timeline time matches 601 run camera @a set minecraft:free ease
 
 # --- 剧情结束 ---
 ## 纯战斗模式下直接跳过剧情
-execute if score storyMode settings matches 0 run function levels/chapter1/level0/complete
+execute if score storyMode settings matches 0 run function aw/levels/chapter1/level0/complete
 ## [820] 结束剧情
-execute if score timeline time matches 820 run function levels/chapter1/level0/complete
+execute if score timeline time matches 820 run function aw/levels/chapter1/level0/complete

@@ -2,4 +2,4 @@
 # 0-3 | 到达时间神殿
 
 # --- 检查玩家进入下一个关卡 ---
-execute positioned -21 3 39 if entity @a[r=2] run function levels/open/stage4/start
+execute positioned -21 3 39 if entity @a[r=2] run function aw/levels/open/stage4/start

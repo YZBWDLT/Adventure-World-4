@@ -3,4 +3,4 @@
 # 纯战斗模式直接跳到0-5，所以该函数仅限剧情模式时间线结束后执行
 
 # --- 执行村庄第一阶段 ---
-function levels/open/stage1/start
+function aw/levels/open/stage1/start

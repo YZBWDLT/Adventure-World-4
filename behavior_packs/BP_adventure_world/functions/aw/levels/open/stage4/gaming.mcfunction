@@ -85,9 +85,9 @@ execute if score timeline time matches 2760 as @a at @s run tp @s ~~~ facing @e[
 # --- 场景变换 ---
 
 ## [1300] 切换场景到剑之试炼入口
-execute if score timeline time matches 1300 run function levels/open/stage4/events/scene1
+execute if score timeline time matches 1300 run function aw/levels/open/stage4/events/scene1
 ## [1880] 切换场景到剑之试炼背侧
-execute if score timeline time matches 1880 run function levels/open/stage4/events/scene2
+execute if score timeline time matches 1880 run function aw/levels/open/stage4/events/scene2
 
 # --- NPC 可见玩家 ---
 
@@ -99,7 +99,7 @@ execute if score timeline time matches 2360 run event entity @e[type=aw:npc] aw:
 # --- 给予物品 ---
 
 ## [2840] 给予玩家传声石结晶
-execute if score timeline time matches 2840 run function levels/open/stage4/events/enable_crystal
+execute if score timeline time matches 2840 run function aw/levels/open/stage4/events/enable_crystal
 
 # --- 剧情结束 ---
-execute if score timeline time matches 3240 run function levels/open/stage4/complete
+execute if score timeline time matches 3240 run function aw/levels/open/stage4/complete

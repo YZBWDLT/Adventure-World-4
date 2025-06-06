@@ -16,7 +16,7 @@ fill -121 18 25 -121 20 27 red_sandstone["sand_stone_type"="cut"]
 fill -121 19 26 -121 19 26 red_sandstone["sand_stone_type"="heiroglyphs"]
 
 # --- 生成怪物 ---
-function levels/chapter1/level3/waves/wave_1
+function aw/levels/chapter1/level3/waves/wave_1
 
 # --- 调用通用函数 ---
 # 必须由初次进入的玩家执行
