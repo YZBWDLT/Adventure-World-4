@@ -16,7 +16,7 @@ scoreboard players add @a[scores={deathState=1..2}] deathTime 1
 ## 如果为游戏时死亡，则……
 
 ### 如果玩家数大于等于两人，播报消息并提醒玩家在下一波复活
-execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. as @a[scores={death=2},tag=!spectator] run function lib/modify_data/death_message
+execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. as @a[scores={deathState=2},tag=!spectator] run function lib/modify_data/death_message
 ### 标记死亡的玩家为旁观玩家，并设置为旁观模式
 execute if score levelCompleted data matches 0 run tag @a[scores={deathState=2}] add spectator
 gamemode spectator @a[tag=spectator,m=!spectator]
