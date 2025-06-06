@@ -13,7 +13,7 @@
                 },
                 "is_mark_variant_1": {
                     "on_entry": [
-                        "/function entities/evoker/have_weak_shield"
+                        "/function aw/entities/evoker/have_weak_shield"
                     ],
                     "transitions": [
                         { "is_mark_variant_2": "query.mark_variant == 2" },
@@ -22,7 +22,7 @@
                 },
                 "is_mark_variant_2": {
                     "on_entry": [
-                        "/function entities/evoker/have_shield"
+                        "/function aw/entities/evoker/have_shield"
                     ],
                     "transitions": [
                         { "is_mark_variant_1": "query.mark_variant == 1" },
@@ -31,7 +31,7 @@
                 },
                 "is_mark_variant_0": {
                     "on_entry": [
-                        "/function entities/evoker/have_no_shield"
+                        "/function aw/entities/evoker/have_no_shield"
                     ],
                     "transitions": [
                         { "is_mark_variant_1": "query.mark_variant == 1" },
@@ -50,7 +50,7 @@
                 },
                 "health_one_second": {
                     "on_entry": [
-                        "/function entities/evoker/health_one_second"
+                        "/function aw/entities/evoker/health_one_second"
                     ]
                 }
             }

@@ -141,7 +141,7 @@
             "aw:interacted": {
                 "queue_command": {
                     "command": [
-                        "execute if score allowNpcInteraction data matches 1 run function entities/npc/interacted"
+                        "execute if score allowNpcInteraction data matches 1 run function aw/entities/npc/interacted"
                     ]
                 }
             },

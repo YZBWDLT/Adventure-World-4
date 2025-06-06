@@ -113,7 +113,7 @@ class AdventureWorld4Server(ServerSystem):
         # type: ( dict, Entity ) -> None
         usableItems = [ "aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal", "aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification",  ]
         if itemStack["newItemName"] in usableItems:
-            source.runCommand( "function items/{}".format(itemStack["newItemName"].split(":")[1]) )
+            source.runCommand( "function aw/items/{}".format(itemStack["newItemName"].split(":")[1]) )
 
     # 当玩家击杀怪物时，执行函数
     def playerKilledMonster( self, killer, deadEntity ):
@@ -122,7 +122,7 @@ class AdventureWorld4Server(ServerSystem):
             killer.typeId == "minecraft:player"
             and deadEntity.runCommand("execute if entity @s[family=monster]")
         ):
-            killer.runCommand( "function entities/player/kill_monster" )
+            killer.runCommand( "function aw/entities/player/kill_monster" )
 
     def playerDamageSkeleton( self, source, projectile, hitEntity ):
         # type: ( Entity, Entity, Entity ) -> None

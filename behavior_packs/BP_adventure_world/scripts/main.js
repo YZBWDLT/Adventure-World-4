@@ -62,7 +62,7 @@ world.afterEvents.projectileHitEntity.subscribe(event => {
 world.afterEvents.itemUse.subscribe(event => {
     const usableItems = ["aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal",];
     if (usableItems.includes(event.itemStack.typeId)) {
-        event.source.runCommand(`function items/${event.itemStack.typeId.split(":")[1]}`);
+        event.source.runCommand(`function aw/items/${event.itemStack.typeId.split(":")[1]}`);
     }
 });
 
@@ -70,7 +70,7 @@ world.afterEvents.itemUse.subscribe(event => {
 world.afterEvents.itemCompleteUse.subscribe(event => {
     const usableItems = ["aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification",];
     if (usableItems.includes(event.itemStack.typeId)) {
-        event.source.runCommand(`function items/${event.itemStack.typeId.split(":")[1]}`);
+        event.source.runCommand(`function aw/items/${event.itemStack.typeId.split(":")[1]}`);
     }
 });
 
@@ -84,6 +84,6 @@ world.afterEvents.entityDie.subscribe(event => {
         killer?.typeId === "minecraft:player"
         && deadEntity.runCommand("execute if entity @s[family=monster]").successCount
     ) {
-        killer.runCommand("function entities/player/kill_monster")
+        killer.runCommand("function aw/entities/player/kill_monster")
     }
 });
