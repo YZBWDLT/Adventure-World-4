@@ -35,7 +35,7 @@ execute if score failedCount.thisLevel data matches 10 run tellraw @a {"rawtext"
 # --- 玩家复活与回血 ---
 
 ## 复活已死亡玩家
-function aw/lib/spawnpoint/teleport_this_level
+function aw/lib/level_pos_data/teleport_this_level
 gamemode adventure @a[tag=spectator]
 tag @a remove spectator
 ## 将玩家回满血

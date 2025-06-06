@@ -19,7 +19,7 @@ execute if score levelCompleted data matches 0 if score playerAmount data matche
 execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. run tag @s add spectator
 
 # --- 传送玩家到本关的重生点上 ---
-function aw/lib/spawnpoint/teleport_this_level
+function aw/lib/level_pos_data/teleport_this_level
 
 # --- 重新播放音乐 ---
 tellraw @a[scores={isOnline=!0}] {"rawtext":[{"translate":"§7检测到有玩家进入游戏，为确保游戏体验，将重新播放场景音乐"}]}

@@ -14,4 +14,4 @@ tag @s add outOfBorder
 function aw/lib/modify_data/states/sound/mob_cat_meow
 
 # --- 传送玩家 ---
-function aw/lib/spawnpoint/teleport_this_level
+function aw/lib/level_pos_data/teleport_this_level
