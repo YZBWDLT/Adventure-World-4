@@ -27,7 +27,7 @@ function aw/lib/modify_data/states/sound/random_levelup_2
 # --- 玩家复活与回血 ---
 
 ## 复活已死亡玩家
-execute as @a[tag=spectator] run function aw/lib/level_pos_data/teleport_this_level
+execute as @a[tag=spectator] run function aw/lib/level_pos_data/teleport
 gamemode adventure @a[tag=spectator]
 tag @a remove spectator
 ## 将玩家回满血
