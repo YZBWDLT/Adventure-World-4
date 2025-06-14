@@ -15,4 +15,4 @@ execute if score alivePlayerAmount data matches 0 run function aw/levels/chapter
 
 # --- 阻止旁观模式的玩家出界 ---
 # 不处理正处于死亡状态的玩家
-execute as @a[tag=spectator,scores={deathState=0}] at @s unless entity @s[x=-102.0,y=-16.0,z=58.0,dx=30,dy=23,dz=19] run function aw/lib/modify_data/out_of_border
+execute as @a[tag=spectator,scores={deathState=0}] at @s unless entity @s[x=-102.0,y=-16.0,z=58.0,dx=30,dy=23,dz=19] positioned -72 1 69 run function aw/lib/modify_data/out_of_border
