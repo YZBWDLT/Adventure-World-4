@@ -1,0 +1,8 @@
+# ===== 完成关卡 =====
+# 3-0 | 湖泊神殿
+
+# 设置重生点
+spawnpoint @a -173 -20 30
+
+# 调用通用函数
+function aw/lib/modify_data/levels/complete_chapter

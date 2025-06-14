@@ -86,7 +86,7 @@ execute if score temp.gameId data matches 311..640 run clear @a[hasitem=[{item=a
 execute if score temp.gameId data matches 311..640 run loot replace entity @a[hasitem=[{item=aw:diamond_helmet,quantity=0,location=slot.armor.head}]] slot.armor.head 0 loot "diamond_helmet"
 execute if score temp.gameId data matches 641..999 run replaceitem entity @a[hasitem=[{item=aw:diamond_helmet,quantity=0,location=slot.armor.head}]] slot.armor.head 0 aw:diamond_helmet 1 0 {"item_lock":{"mode":"lock_in_slot"}}
 ### 钻石靴子 | 3-2结束后 ~，6-4结束后锁定到槽位上
-execute if score temp.gameId data matches 321..640 run loot give @a[hasitem=[{item=aw:diamond_boots,quantity=0,location=slot.armor.feet}]] loot "diamond_boots"
+execute if score temp.gameId data matches 321..640 run loot give @a[hasitem=[{item=aw:diamond_boots,quantity=0}]] loot "diamond_boots"
 execute if score temp.gameId data matches 641..999 run replaceitem entity @a[hasitem=[{item=aw:diamond_boots,quantity=0,location=slot.armor.feet}]] slot.armor.feet 0 aw:diamond_boots 1 0 {"item_lock":{"mode":"lock_in_slot"}}
 ### 箭袋 | 3-3结束后 ~，锁定到第25号物品栏槽位上，3-3结束前锁定为屏障
 execute if score temp.gameId data matches !331..999 run replaceitem entity @a[hasitem={item=barrier,quantity=0,location=slot.inventory,slot=25}] slot.inventory 25 barrier 1 0 {"item_lock":{"mode":"lock_in_slot"}}
