@@ -1,7 +1,6 @@
 # ===== 打印本关的波潮信息 =====
 # 符号具体含义请见函数aw/lib/modify_data/levels/wave_(?)。
 
-
 # --- 初始化 ---
 ## 将原有的实体移除
 event entity @e[has_property={aw:marker_type="name",aw:name="wave"}] aw:remove_immediately
