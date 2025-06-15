@@ -1,8 +1,7 @@
 # ===== 对话 =====
 
 execute @e[name=dialogue,scores={time=60}] ~~~ tellraw @a {"rawtext":[{"translate":"* §c米云溪： §7林乐，墙壁上全部文字的翻译，我已经写成书放到你家楼下了哦。"}]}
-execute @e[name=dialogue,scores={time=140}] ~~~ execute @e[name=isNetease,scores={data=0}] ~~~ tellraw @a {"rawtext":[{"translate":"* §b田英： §7欸，米云溪和你聊天的时候，是不是没有告诉你剑之试炼的设计者啊~？=P"}]}
-execute @e[name=dialogue,scores={time=140}] ~~~ execute @e[name=isNetease,scores={data=1}] ~~~ tellraw @a {"rawtext":[{"translate":"* §b田英： §7欸，米云溪之前和你聊天的时候，是不是没有告诉你剑之试炼的设计者啊~？=P"}]}
+execute @e[name=dialogue,scores={time=140}] ~~~ tellraw @a {"rawtext":[{"translate":"* §b田英： §7欸，米云溪之前和你聊天的时候，是不是没有告诉你剑之试炼的设计者啊~？=P"}]}
 execute @e[name=dialogue,scores={time=220}] ~~~ tellraw @a {"rawtext":[{"translate":"* §f林乐（我）： §7你这么一说......是啊，我只知道这个神殿是为了纪念四贤者封印恶魔而建造的。"}]}
 execute @e[name=dialogue,scores={time=300}] ~~~ tellraw @a {"rawtext":[{"translate":"* §f林乐（我）： §7等下，四贤者......不就是......？！"}]}
 execute @e[name=dialogue,scores={time=380}] ~~~ tellraw @a {"rawtext":[{"translate":"* §b田英： §7那你再猜猜，旷野之剑可是剑术天才的武器哦，你觉得以前会是谁的呢？"}]}

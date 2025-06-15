@@ -1,8 +1,7 @@
 # ===== 游戏失败 =====
 
 ## --- 降级level记分板 ---
-execute @e[name=isNetease,scores={data=0}] ~~~ scoreboard players set @e[name=gameId] data 731
-execute @e[name=isNetease,scores={data=1}] ~~~ scoreboard players set @e[name=gameId] data 732
+scoreboard players set @e[name=gameId] data 732
 
 ## --- 传送到上一个关卡的重生点并重新设置重生点 ---
 tp @a -199 -17 94
