@@ -17,4 +17,5 @@ summon aw:spawner -183 -17 11 0 0 aw:spawn_drowned_2
 summon aw:spawner -180 -21 9 0 0 aw:spawn_guardian
 
 # --- 水位上涨 ---
-function aw/levels/chapter3/level2/events/rise_water
+structure load aw:3_2_phase2 -192 -22 -1 0_degrees none layer_by_layer 4.00
+titleraw @a subtitle {"rawtext":[{"translate":"第 §a2 §f波 | §c注意！水位上涨！"}]}

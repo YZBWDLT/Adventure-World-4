@@ -15,3 +15,7 @@ summon aw:marker -83 1 -2 ~~ aw:set_wave_name "§a⚅§a⚅§b⚂"
 
 ## 骷髅王
 summon aw:spawner -154 -21 61 0 0 aw:spawn_skeleton_king
+
+# --- BOSS 专属标题 ---
+titleraw @a title {"rawtext":[{"translate":"§c§lBOSS 来 袭"}]}
+titleraw @a subtitle {"rawtext":[{"translate":"第 §c3 §f波"}]}
