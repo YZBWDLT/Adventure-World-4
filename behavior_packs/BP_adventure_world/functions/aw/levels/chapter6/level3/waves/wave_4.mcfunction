@@ -26,3 +26,7 @@ summon aw:spawner -82 -38 -3 0 0 aw:spawn_cave_spider_3
 ## 骷髅
 summon aw:spawner -78 -35 -3 0 0 aw:spawn_skeleton_4
 summon aw:spawner -71 -34 -2 0 0 aw:spawn_skeleton_4
+
+# --- 岩浆下降 ---
+structure load aw:6_3_no_lava -82 -40 -7
+titleraw @a subtitle {"rawtext":[{"translate":"第 §a4 §f波 | §c注意！岩浆下降了！"}]}

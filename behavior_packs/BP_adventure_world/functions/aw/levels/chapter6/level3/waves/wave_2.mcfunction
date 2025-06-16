@@ -20,3 +20,7 @@ summon aw:spawner -72 -37 -8 0 0 aw:spawn_witch
 ## 洞穴蜘蛛
 summon aw:spawner -79 -35 -3 0 0 aw:spawn_cave_spider_3
 summon aw:spawner -70 -34 -3 0 0 aw:spawn_cave_spider_3
+
+# --- 岩浆下降 ---
+structure load aw:6_3_lava_1 -82 -40 -7
+titleraw @a subtitle {"rawtext":[{"translate":"第 §a2 §f波 | §c注意！岩浆下降了！"}]}
