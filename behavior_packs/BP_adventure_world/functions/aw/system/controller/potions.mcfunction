@@ -52,7 +52,7 @@ execute if score allowPotionSupply data matches 1 if score temp.gameId data matc
 ## 净化药水 | 4-2给予
 execute if score allowPotionSupply data matches 1 if score temp.gameId data matches 421..999 run give @a[hasitem={item=aw:potion_purification,quantity=0}] aw:potion_purification 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ## 休眠药水 | 4-3给予
-execute if score allowPotionSupply data matches 1 if score temp.gameId data matches 431..999 run give @a[hasitem={item=aw:potion_hibernation,quantity=0}] aw:potion_turtle 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+execute if score allowPotionSupply data matches 1 if score temp.gameId data matches 431..999 run give @a[hasitem={item=aw:potion_hibernation,quantity=0}] aw:potion_hibernation 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 # --- 程序结束的变量设置 ---
 

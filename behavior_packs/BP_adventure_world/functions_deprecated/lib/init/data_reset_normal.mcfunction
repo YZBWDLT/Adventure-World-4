@@ -140,4 +140,3 @@ scoreboard players set @e[name=monsterSummonDelay] active 0
 scoreboard players set @e[name=soundPlayer] active 0
 
 # --- 获取是否为网易 ---
-function lib/get_data/using_client

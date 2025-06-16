@@ -11,17 +11,17 @@ scoreboard players set maxWave data 1
 fill -143 -31 7 -143 -29 5 ice
 fill -117 -31 7 -117 -29 5 ice
 
+# --- 调用通用函数 ---
+# 必须由初次进入的玩家执行
+function aw/lib/modify_data/levels/start_level
+titleraw @a subtitle {"rawtext":[{"translate":"§c4-4 §f| 随机位置生成随机怪物"}]}
+
 # --- 生成怪物 ---
 # （本关不分波）
 summon guardian -138 -30 -2 0 0 aw:invulnerable
 summon guardian -122 -30 -2 0 0 aw:invulnerable
 summon guardian -122 -30 14 0 0 aw:invulnerable
 summon guardian -138 -30 14 0 0 aw:invulnerable
-
-# --- 调用通用函数 ---
-# 必须由初次进入的玩家执行
-function aw/lib/modify_data/levels/start_level
-titleraw @a subtitle {"rawtext":[{"translate":"§c4-4 §f| 随机位置生成随机怪物"}]}
 
 # --- 关卡特殊功能 ---
 ## 提示玩家获胜条件
