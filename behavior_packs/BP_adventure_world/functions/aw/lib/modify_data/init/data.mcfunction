@@ -70,6 +70,9 @@ scoreboard players set storyMode settings 0
 scoreboard players set difficulty settings 1
 scoreboard players set extraDifficulty settings 0
 
+## 客户端标记
+scoreboard players set client data 0
+
 ## 是否允许补充药水和箭
 scoreboard players set allowPotionSupply data 0
 scoreboard players set allowArrowSupply data 0
