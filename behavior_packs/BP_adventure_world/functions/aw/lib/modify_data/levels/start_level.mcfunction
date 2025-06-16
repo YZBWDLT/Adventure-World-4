@@ -50,3 +50,4 @@ execute unless score timeLapse data matches 0 run function aw/lib/modify_data/st
 # --- 清除多余实体 ---
 kill @e[family=monster]
 kill @e[type=aw:wind_pearl]
+event entity @e[type=aw:text_display] aw:remove_immediately

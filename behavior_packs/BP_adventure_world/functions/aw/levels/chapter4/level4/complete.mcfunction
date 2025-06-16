@@ -19,3 +19,8 @@ fill -117 -31 7 -117 -29 5 air
 # --- 关卡特殊功能 ---
 ## 播放音乐
 function aw/lib/modify_data/play_music
+## 移除临时变量设置
+scoreboard players reset temp.remainingTime time
+scoreboard players reset temp.nextMonster time
+scoreboard players reset temp.nextMonsterType data
+scoreboard players reset temp.nextMonsterPos data

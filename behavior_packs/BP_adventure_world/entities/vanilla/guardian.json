@@ -40,6 +40,7 @@
 			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
 			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
 			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } },
+            "aw:invulnerable": { "add": { "component_groups": [ "invulnerable" ] } },
 
             "minecraft:target_too_close": {
                 "remove": { "component_groups": [ "minecraft:guardian_aggressive" ] },
@@ -72,6 +73,7 @@
                 "minecraft:attack": { "damage": 12 },
                 "minecraft:type_family": { "family": [ "level_4", "guardian", "monster", "mob" ] }
             },
+            "invulnerable": { "minecraft:damage_sensor": { "triggers": [ { "cause": "all", "deals_damage": false } ] } },
 
             "minecraft:guardian_aggressive": {
                 "minecraft:behavior.nearest_attackable_target": { "priority": 1, "entity_types": [ { "filters": { "test": "is_family", "subject": "other", "value": "player"}, "max_dist": 16 } ], "attack_interval_min": 1.0, "must_see": true },
