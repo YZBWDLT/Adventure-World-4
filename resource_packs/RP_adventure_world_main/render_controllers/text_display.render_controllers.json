@@ -1,0 +1,11 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.text_display": {
+            "materials": [ { "*": "material.default" } ],
+            "geometry": "geometry.default",
+            "textures": [ "texture.default" ],
+            "part_visibility": [ { "*": false } ]
+        }
+    }
+}

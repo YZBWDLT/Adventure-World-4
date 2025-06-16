@@ -3,7 +3,7 @@
     "minecraft:client_entity": {
         "description": {
             "identifier": "aw:text_display",
-            "render_controllers": [ "controller.render.marker" ],
+            "render_controllers": [ "controller.render.text_display" ],
             "materials": { "default": "entity_alphatest" },
             "geometry": { "default": "geometry.zombie" },
             "textures": { "default": "textures/entity/zombie/zombie" }
