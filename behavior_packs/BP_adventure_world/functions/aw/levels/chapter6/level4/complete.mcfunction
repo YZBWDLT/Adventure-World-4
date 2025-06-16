@@ -22,3 +22,5 @@ fill -76 -39 20 -74 -37 20 structure_void
 structure load aw:6_4_no_lava -89 -40 21
 ## 播放音乐
 function aw/lib/modify_data/play_music
+## 启用时间流逝
+function aw/lib/modify_data/states/timeline/enable_time_lapse

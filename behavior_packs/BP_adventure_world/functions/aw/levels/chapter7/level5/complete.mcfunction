@@ -17,3 +17,5 @@ tellraw @a {"rawtext":[{"text":"§l§c最终关卡已完成！跳入最中间的
 # --- 关卡特殊功能 ---
 ## 播放音乐
 function aw/lib/modify_data/play_music
+## 启用时间流逝
+function aw/lib/modify_data/states/timeline/enable_time_lapse
