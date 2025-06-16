@@ -1,0 +1,21 @@
+# ===== 完成关卡 =====
+# 4-4
+
+# --- 调用通用函数 ---
+function aw/lib/modify_data/levels/complete_level
+
+# --- 设置重生点 ---
+spawnpoint @a -141 -30 6
+
+# --- 获得新物品 ---
+clear @a aw:iron_chestplate
+function aw/system/controller/items
+tellraw @a {"rawtext":[{"text":"§l§a4-4已完成！§r\n§f你已获得 §e[钻石胸甲] §f！"}]}
+
+# --- 重新开放关卡 ---
+fill -143 -31 7 -143 -29 5 air
+fill -117 -31 7 -117 -29 5 air
+
+# --- 关卡特殊功能 ---
+## 播放音乐
+function aw/lib/modify_data/play_music
