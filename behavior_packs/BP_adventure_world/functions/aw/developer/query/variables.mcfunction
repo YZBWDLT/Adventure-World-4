@@ -14,6 +14,7 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bdeathCount.@s = §a%%s §7| 玩家当前死亡次数", "with": { "rawtext": [ { "score":{ "objective": "deathCount", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bdeathState.@s = §a%%s §7| 玩家当前死亡状态 | 0：未死亡，1：刚刚死亡，2：已死亡", "with": { "rawtext": [ { "score":{ "objective": "deathState", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bdeathTime.@s = §a%%s §7| 玩家持续处于死亡状态的时长 | 单位：游戏刻", "with": { "rawtext": [ { "score":{ "objective": "deathTime", "name": "@s" } } ] } } ] }
+execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bhealth.@s = §a%%s §7| 玩家生命值", "with": { "rawtext": [ { "score":{ "objective": "health", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bkillCount.@s = §a%%s §7| 玩家击杀数", "with": { "rawtext": [ { "score":{ "objective": "killCount", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bisOnline.@s = §a%%s §7| 玩家是否在线 | 0：刚进入游戏，1：在线", "with": { "rawtext": [ { "score":{ "objective": "isOnline", "name": "@s" } } ] } } ] }
 
@@ -54,6 +55,7 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 
 ## time
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§l===== time记分板 =====" } ] }
+execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "time.levelCompleteCountdown = §a%%s §7| 关卡完成倒计时，在怪物全部被消灭后还有多久完成关卡，仅在部分有岩浆怪的关卡中使用 | 单位：游戏刻", "with": { "rawtext": [ { "score": { "objective": "time", "name": "levelCompleteCountdown" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "time.sound = §a%%s §7| 音效播放器，为0时触发特定音效 | 单位：游戏刻", "with": { "rawtext": [ { "score": { "objective": "time", "name": "sound" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "time.tick = §a%%s §7| 每刻增加1分，每秒重置1次 | 单位：游戏刻", "with": { "rawtext": [ { "score": { "objective": "time", "name": "tick" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "time.timeline = §a%%s §7| 时间线，到达特定值后触发命令或函数 | 单位：游戏刻", "with": { "rawtext": [ { "score": { "objective": "time", "name": "timeline" } } ] } } ] }

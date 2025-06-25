@@ -1,5 +1,5 @@
 {
-    "format_version": "1.18.0",
+    "format_version": "1.21.0",
     "minecraft:entity": {
         "description": {
             "identifier": "aw:blaze_king",
@@ -7,13 +7,8 @@
             "is_summonable": true,
             "is_experimental": false,
             "runtime_identifier": "minecraft:blaze",
-            "scripts": {
-                "animate": [
-                    "controller_get_health_phase"
-                ]
-            },
-            "animations": {
-                "controller_get_health_phase": "controller.animation.blaze_king.get_health_phase"
+            "properties": {
+                "aw:level": { "type": "int", "range": [ 1, 4 ], "default": 1 }
             }
         },
         "components": {
@@ -37,8 +32,6 @@
             "minecraft:behavior.hurt_by_target": { "priority": 1 },
             "minecraft:behavior.random_stroll": { "priority": 4, "speed_multiplier": 1.0 },
             "minecraft:behavior.random_look_around": { "priority": 5 },
-            "minecraft:on_hurt": { "event": "minecraft:on_hurt_event", "target": "self" },
-            "minecraft:on_hurt_by_player": { "event": "minecraft:on_hurt_event", "target": "self" },
 
             "minecraft:behavior.nearest_attackable_target": {
                 "priority": 2,
@@ -70,10 +63,10 @@
                 "remove": { "component_groups": [ "melee_mode" ] },
                 "add": { "component_groups": [ "ranged_mode" ] }
             },
-			"aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
-			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
-			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
-			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } }
+			"aw:level_1": { "add": { "component_groups": [ "level_1" ] }, "set_property": { "aw:level": 1 } },
+			"aw:level_2": { "add": { "component_groups": [ "level_2" ] }, "set_property": { "aw:level": 2 } },
+			"aw:level_3": { "add": { "component_groups": [ "level_3" ] }, "set_property": { "aw:level": 3 } },
+			"aw:level_4": { "add": { "component_groups": [ "level_4" ] }, "set_property": { "aw:level": 4 } }
         },
 
         "component_groups": {

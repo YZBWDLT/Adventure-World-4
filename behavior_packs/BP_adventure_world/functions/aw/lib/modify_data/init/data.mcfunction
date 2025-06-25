@@ -26,6 +26,7 @@ scoreboard players add @a deathState 0
 scoreboard players set @a deathTime 0
 scoreboard players set @a killCount 0
 scoreboard players set @a isOnline 1
+scoreboard players set @a health 20
 
 ## 基础时间数据
 scoreboard players set tick time 0
@@ -49,6 +50,7 @@ scoreboard players set level data 0
 scoreboard players set levelCompleted data 1
 scoreboard players set wave data 1
 scoreboard players set maxWave data 1
+scoreboard players set levelCompleteCountdown time 0
 
 ## 游玩时长
 scoreboard players set playedSecond time 0

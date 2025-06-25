@@ -10,3 +10,4 @@ diagnostic.disable.minecraft.commands.scoreboard.syntax=true
 diagnostic.disable.behaviorpack.structures.missing=true
 diagnostic.disable.minecraft.commands.structure.syntax=true
 diagnostic.disable.behaviorpack.loot_table.missing=true
+diagnostic.disable.behaviorpack.blocks.missing=true

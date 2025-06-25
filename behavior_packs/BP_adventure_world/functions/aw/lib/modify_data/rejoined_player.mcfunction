@@ -5,6 +5,7 @@
 # --- 更新玩家数据 ---
 scoreboard players add @s deathCount 0
 scoreboard players add @s killCount 0
+scoreboard players set @s health 20
 tag @s remove spectator
 
 # --- 重新获取人数 ---

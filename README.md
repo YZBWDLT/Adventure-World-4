@@ -33,6 +33,8 @@
 
 - 现在当失败达到 10 次后，会提供一个抗性提升 V（无敌）的效果
 - 更名：烈焰之魂 -> 烈焰王
+- 现在仅限有中型或大型岩浆怪的波潮会启用关卡完成倒计时，而不再为有岩浆怪的关卡全关启用关卡倒计时。
+  - 这个更改会使一些关卡的进程（例如 7-1、7-2）更顺滑一些。
 
 #### 信息板
 
@@ -111,6 +113,7 @@
     - `deathState.@s`=`1`：刚刚死亡，但还未记录死亡榜
     - `deathState.@s`=`2`：长期死亡，还未复活
   - `deathTime`记分板，用于记录玩家处于死亡状态的时长，单位：游戏刻
+  - `health`记分板，用于记录玩家或实体的血量。
   - `data.allowPotionSupply: 0 | 1`，用于标记允许补充药水
   - `data.allowArrowSupply: 0 | 1`，用于标记允许补充箭
     - 为`1`时，箭控制器不但补充箭，并且清除当前世界中的所有实体箭
@@ -130,6 +133,7 @@
   - `data.difficulty` -> `settings.difficulty`
   - `data.difficultyAdder` -> `settings.extraDifficulty`
   - `data.developerMode` -> `settings.developerMode`
+  - `time.levelCompleteDelay` -> `time.levelCompleteCountdown`
   - 标签`potionUsed` -> `data.potionUsed`
   - 标签`cheated` -> `data.hasCheat`
   - `record.achievement.singlePlayer_completeMap` -> `record.achievement.singlePlayer.finishMap`
@@ -146,6 +150,7 @@
 - **移除**：
   - `hookshot`记分板，现在使用脚本代替。
   - `data.hookshotAmount`，现在使用脚本代替。
+  - `bossStage`记分板，现在使用记分板和脚本代替。
   - `isAlive`标签，现在用`deathState`代替。
   - `data.realDeadPlayersAmount`，因为现在可以直接使用`unless entity`检测相关玩家
   - `temp`、`temp2`、`temp3`记分板，现在使用`data`下的各`temp.`变量代替
