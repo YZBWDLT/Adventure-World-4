@@ -1,7 +1,7 @@
 // 使用命令或附加包难以实现的内容，使用脚本来实现
 // 将使用 SAPI 和 ModAPI 同时尝试实现
 
-import { Player, world } from "@minecraft/server";
+import { Entity, EntityHealthComponent, Player, world } from "@minecraft/server";
 
 // 当玩家的御风珠砸中木板后，则传送玩家
 world.afterEvents.projectileHitBlock.subscribe(event => {
@@ -14,7 +14,7 @@ world.afterEvents.projectileHitBlock.subscribe(event => {
 
     // 如果：扔出的玩家真实存在，且为玩家类型；御风珠扔中了任意一种木板，则……
     if (
-        event.source?.typeId === "minecraft:player"
+        player?.typeId === "minecraft:player"
         && event.projectile.typeId === "aw:wind_pearl"
         && blockInfo.block.typeId.includes("planks")
     ) {
@@ -60,7 +60,12 @@ world.afterEvents.projectileHitEntity.subscribe(event => {
 
 // 当玩家使用物品后，则触发函数
 world.afterEvents.itemUse.subscribe(event => {
-    const usableItems = ["aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal",];
+    const usableItems = [
+        "aw:toggle_wave",
+        "aw:summon_monsters",
+        "aw:kill_monsters",
+        "aw:acoustic_stone_crystal",
+    ];
     if (usableItems.includes(event.itemStack.typeId)) {
         event.source.runCommand(`function aw/items/${event.itemStack.typeId.split(":")[1]}`);
     }
@@ -68,7 +73,15 @@ world.afterEvents.itemUse.subscribe(event => {
 
 // 当玩家使用完毕物品后，则触发函数
 world.afterEvents.itemCompleteUse.subscribe(event => {
-    const usableItems = ["aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification",];
+    const usableItems = [
+        "aw:potion_health",
+        "aw:potion_growth",
+        "aw:potion_thrill",
+        "aw:potion_turtle",
+        "aw:potion_rebirth",
+        "aw:potion_hibernation",
+        "aw:potion_purification",
+    ];
     if (usableItems.includes(event.itemStack.typeId)) {
         event.source.runCommand(`function aw/items/${event.itemStack.typeId.split(":")[1]}`);
     }
@@ -87,3 +100,36 @@ world.afterEvents.entityDie.subscribe(event => {
         killer.runCommand("function aw/entities/player/kill_monster")
     }
 });
+
+// 当玩家或烈焰王血量变化后，将其血量同步到health记分板上
+world.afterEvents.entitySpawn.subscribe( event => {
+    /** 刚生成的实体 */
+    const entity = event.entity;
+    /** 该实体的血量组件 @type {EntityHealthComponent} */
+    const entityHealth = entity.getComponent("minecraft:health");
+    /** 该实体的血量最大值 */
+    const entityMaxHealth = entityHealth?.effectiveMax;
+
+    // 此处是为了防止某些实体无血量而导致报错
+    if ( entityMaxHealth !== undefined ) {
+        printHealth(entity, entityMaxHealth);
+    }
+})
+world.afterEvents.entityHealthChanged.subscribe(event => {
+    printHealth(event.entity, event.newValue);
+});
+/**
+ * @param {Entity} entity 实体
+ * @param {number} healthValue 实体当前血量值 
+*/
+function printHealth( entity, healthValue ) {
+    /** 要检查的实体 */
+    const entityTypes = [ "minecraft:player", "aw:blaze_king" ];
+
+    // 若实体在允许的实体列表中，则打印实体血量到health记分板上
+    if ( entityTypes.includes(entity.typeId) ) {
+        /** 实体血量更改后的血量（整数型） */
+        const healthValueInt = Math.ceil(healthValue);
+        entity.runCommand(`scoreboard players set @s health ${healthValueInt}`);
+    }
+}

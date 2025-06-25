@@ -3,7 +3,8 @@
 # 将使用 SAPI 和 ModAPI 同时尝试实现
 
 import mod.server.extraServerApi as serverApi
-from sapi import Entity
+import sapi
+import math
 
 ServerSystem = serverApi.GetServerSystemCls()
 """继承的系统，类似于SAPI的world模块"""
@@ -23,119 +24,145 @@ class AdventureWorld4Server(ServerSystem):
         super(AdventureWorld4Server, self).__init__(namespace, systemName)
         self.subscribe()
 
-    # ========== 事件（beforeEvents & afterEvents） ==========
+    # ===========================================================================
 
-    def subscribe(self):
-        self.ListenForEvent(defaultNamespace, defaultSystemName, "ProjectileDoHitEffectEvent", self, self.projectileHitBlock)
-        self.ListenForEvent(defaultNamespace, defaultSystemName, "ProjectileDoHitEffectEvent", self, self.projectileHitEntity)
-        self.ListenForEvent(defaultNamespace, defaultSystemName, "ItemUseAfterServerEvent", self, self.itemUse)
-        self.ListenForEvent(defaultNamespace, defaultSystemName, "MobDieEvent", self, self.entityDie)
+    def subscribe(self): # type: () -> None
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "ProjectileDoHitEffectEvent", self, self.projectileDoHit)
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "ItemUseAfterServerEvent", self, self.itemUseAfter)
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "ActorUseItemServerEvent", self, self.actorUseItem)
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "MobDieEvent", self, self.mobDie)
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "AddEntityServerEvent", self, self.addEntity)
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "HealthChangeServerEvent", self, self.healthChange)
 
-    def unsubscribe(self):
+    def unsubscribe(self): # type: () -> None
         self.UnListenAllEvents()
     
-    def projectileHitBlock(self, event):
-        # type: ( dict ) -> None
-        """ 基于中国版事件 ProjectileDoHitEffectEvent。等效于 SAPI 的 world.afterEvents.projectileHitBlock.subscribe()。 """
-        if event["hitTargetType"] == "BLOCK":
-            # ----- 获取变量 -----
-            blockLocation = (event["blockPosX"], event["blockPosY"], event["blockPosZ"])                # 方块位置
-            location = (event["x"], event["y"], event["z"])                                             # 击中位置
-            projectile = Entity( event["id"] )                                                          # 投掷物
-            source = Entity( compFactory.CreateBulletAttributes(projectile).GetSourceEntityId() )       # 投掷者
-            dimension = compFactory.CreateDimension(projectile).GetEntityDimensionId()                  # 击中维度
-            blockHitFace = event["hitFace"]                                                             # 击中面
-            blockTypeId = compFactory.CreateBlockInfo(levelId).GetBlockNew(blockLocation, dimension)["name"]    # 方块 ID
-
-            # ----- 执行函数 -----
-            self.teleportPlayerToPlanks( blockTypeId, location, source, projectile, blockHitFace )
+    def projectileDoHit(self, event): # type: ( dict ) -> None
+        if event["hitTargetType"] == "Block":
+            self.projectileHitEntity(sapi.ProjectileHitBlockAfterEvent(event))
+        else:
+            self.projectileHitEntity(sapi.ProjectileHitEntityAfterEvent(event))
     
-    def projectileHitEntity(self, event):
-        # type: ( dict ) -> None
-        """ 基于中国版事件 ProjectileDoHitEffectEvent。等效于 SAPI 的 world.afterEvents.projectileHitEntity.subscribe()。 """
-        if event["hitTargetType"] == "ENTITY":
-            projectile = Entity( event["id"] )                                                          # 投掷物
-            dimension = compFactory.CreateDimension(projectile).GetEntityDimensionId()                  # 击中维度
-            source = Entity( compFactory.CreateBulletAttributes(projectile).GetSourceEntityId() )       # 投掷者
+    def itemUseAfter(self, event): # type: ( dict ) -> None
+        self.itemUse(sapi.ItemUseAfterEvent(event))
+    
+    def actorUseItem(self, event): # type: ( dict ) -> None
+        self.itemCompleteUse(sapi.ItemCompleteUseAfterEvent(event))
+    
+    def mobDie(self, event): # type: ( dict ) -> None
+        self.entityDie(sapi.EntityDieAfterEvent(event))
 
-            # ----- 执行函数 -----
-            self.playerDamageSkeleton()
+    def addEntity(self, event): # type: ( dict ) -> None
+        self.entitySpawn(sapi.EntitySpawnAfterEvent(event))
+    
+    def healthChange(self, event): # type: ( dict ) -> None
+        self.entityHealthChanged(sapi.EntityHealthChangedAfterEvent(event))
 
-    def entityDie(self, event):
-        # type: ( dict ) -> None
-        """ 基于中国版事件 MobDieEvent。等效于 SAPI 的 world.afterevents.entityDie.subscribe()。 """
-        # --- 获取变量 ---
-        damagingEntity = Entity( event["attacker"] )
-        # cause = event["cause"]
-        deadEntity = Entity( event["id"] )
-
-        # --- 执行函数 ---
-        self.playerKilledMonster( damagingEntity, deadEntity )
-
-    def itemUse(self, event):
-        # type: ( dict ) -> None
-        """ 基于中国版事件 ItemUseAfterServerEvent。等效于 SAPI 的 world.afterevents.itemUse.subscribe()。 """
-        # --- 获取变量 ---
-        source = Entity( event["entityId"] )
-        itemStack = event["itemDict"]
-
-        # --- 执行函数 ---
-        self.playerUseItem( itemStack, source )
-
-    # ========== 地图功能实现 ==========
+    # ===========================================================================
 
     # 当玩家的御风珠砸中木板后，则传送玩家
-    def teleportPlayerToPlanks( self, blockTypeId, locE, player, projectile, blockFace ):
-        # type: ( str, tuple[float, float, float], Entity, Entity, int ) -> None
+    def projectileHitBlock(self, event): # type: ( sapi.ProjectileHitBlockAfterEvent ) -> None
+
+        # 御风珠击中的方块信息
+        blockInfo = event.getBlockHit()
+        # 御风珠的位置
+        locE = event.location
+        # 扔出御风珠的玩家
+        player = event.source
 
         # 如果：扔出的玩家真实存在，且为玩家类型；御风珠扔中了任意一种木板，则……
         if (
             player.typeId == "minecraft:player"
-            and projectile.typeId == "aw:wind_pearl"
-            and blockTypeId.find("planks") != -1
+            and event.projectile.typeId == "aw:wind_pearl"
+            and "planks" in blockInfo.block.typeId
         ):
             # 传送信息
             teleportInfo = {
-                0: ( locE[0], locE[1] - 3, locE[2] ),           ## 如果扔中底面，则传送到投中位置的下方 3 格
-                1: ( locE[0], locE[1] + 1, locE[2] ),           ## 如果扔中顶面，则传送到投中位置的上方 1 格
-                2: ( locE[0], locE[1] - 0.5, locE[2] - 0.7 ),   ## 如果扔中北面，则传送到投中位置北边 0.7 格，下方 0.5 格
-                3: ( locE[0], locE[1] - 0.5, locE[2] + 0.7 ),   ## 如果扔中南面，则传送到投中位置南边 0.7 格，下方 0.5 格
-                4: ( locE[0] - 0.7, locE[1] - 0.5, locE[2] ),   ## 如果扔中西面，则传送到投中位置西边 0.7 格，下方 0.5 格
-                5: ( locE[0] + 0.7, locE[1] - 0.5, locE[2] ),   ## 如果扔中东面，则传送到投中位置东边 0.7 格，下方 0.5 格
+                "Down": ( locE[0], locE[1] - 3, locE[2] ),              ## 如果扔中底面，则传送到投中位置的下方 3 格
+                "Up": ( locE[0], locE[1] + 1, locE[2] ),                ## 如果扔中顶面，则传送到投中位置的上方 1 格
+                "North": ( locE[0], locE[1] - 0.5, locE[2] - 0.7 ),     ## 如果扔中北面，则传送到投中位置北边 0.7 格，下方 0.5 格
+                "South": ( locE[0], locE[1] - 0.5, locE[2] + 0.7 ),     ## 如果扔中南面，则传送到投中位置南边 0.7 格，下方 0.5 格
+                "West": ( locE[0] - 0.7, locE[1] - 0.5, locE[2] ),      ## 如果扔中西面，则传送到投中位置西边 0.7 格，下方 0.5 格
+                "East": ( locE[0] + 0.7, locE[1] - 0.5, locE[2] ),      ## 如果扔中东面，则传送到投中位置东边 0.7 格，下方 0.5 格
             }
             # 传送玩家
-            player.teleport( teleportInfo[blockFace] )
+            player.teleport( teleportInfo[blockInfo.face] )
             # 为玩家播放传送音效
             player.runCommand( "playsound mob.endermen.portal @s" )
+    
+    # 当玩家使用弓箭击中骷髅或骷髅王后，触发对应效果
+    def projectileHitEntity(self, event): # type: ( sapi.ProjectileHitEntityAfterEvent ) -> None
+        if (
+            event.source.typeId == "minecraft:player"
+            and event.projectile.typeId == "minecraft:arrow"
+        ):
+            immediateKill = ["minecraft:skeleton", "minecraft:stray"]
+            dealsExtraDamage = ["aw:skeleton_king"]
+            player = event.source
+            hitEntity = event.getEntityHit().entity
 
-    # 当玩家使用自定义物品时，执行函数
-    def playerUseItem(self, itemStack, source):
-        # type: ( dict, Entity ) -> None
-        usableItems = [ "aw:toggle_wave", "aw:summon_monsters", "aw:kill_monsters", "aw:acoustic_stone_crystal", "aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification",  ]
-        if itemStack["newItemName"] in usableItems:
-            source.runCommand( "function aw/items/{}".format(itemStack["newItemName"].split(":")[1]) )
+            # 击中骷髅或流浪者后，直接秒杀
+            if ( hitEntity.typeId in immediateKill ):
+                hitEntity.applyDamage( 1000, { "cause": "entityAttack", "damagingEntity": player } )
+            # 击中骷髅王后，施加额外伤害
+            elif ( hitEntity.typeId in dealsExtraDamage ):
+                hitEntity.applyDamage( 5, { "cause": "entityAttack", "damagingEntity": player } )
+
+    # 当玩家使用物品后，则触发函数
+    def itemUse(self, event): # type: ( sapi.ItemUseAfterEvent ) -> None
+        usableItems = [
+            "aw:toggle_wave",
+            "aw:summon_monsters",
+            "aw:kill_monsters",
+            "aw:acoustic_stone_crystal",
+        ]
+        if event.itemStack.typeId in usableItems:
+            event.source.runCommand( "function aw/items/{}".format( event.itemStack.typeId.split(":")[1] ) )
+
+    # 当玩家使用完毕物品后，则触发函数
+    def itemCompleteUse(self, event): # type: ( sapi.ItemCompleteUseAfterEvent ) -> None
+        usableItems = [
+            "aw:potion_health",
+            "aw:potion_growth",
+            "aw:potion_thrill",
+            "aw:potion_turtle",
+            "aw:potion_rebirth",
+            "aw:potion_hibernation",
+            "aw:potion_purification",
+        ]
+        if event.itemStack.typeId in usableItems:
+            event.source.runCommand( "function aw/items/{}".format( event.itemStack.typeId.split(":")[1] ) )
 
     # 当玩家击杀怪物时，执行函数
-    def playerKilledMonster( self, killer, deadEntity ):
-        # type: ( Entity, Entity ) -> None
+    def entityDie(self, event): # type: ( sapi.EntityDieAfterEvent ) -> None
+        # 击杀者（预期为玩家）
+        killer = event.damageSource.damagingEntity
+        deadEntity = event.deadEntity
+        # 当击杀者为玩家并且死亡实体的种族为monster时，执行函数
         if (
             killer.typeId == "minecraft:player"
             and deadEntity.runCommand("execute if entity @s[family=monster]")
         ):
-            killer.runCommand( "function aw/entities/player/kill_monster" )
+            killer.runCommand("function aw/entities/player/kill_monster")
 
-    def playerDamageSkeleton( self, source, projectile, hitEntity ):
-        # type: ( Entity, Entity, Entity ) -> None
-        if (
-            source.typeId == "minecraft:player"
-            and projectile.typeId == "minecraft:arrow"
-        ):
-            immediateKill = ["minecraft:skeleton", "minecraft:stray"]
-            dealsExtraDamage = ["aw:skeleton_king"]
-            # 击中骷髅或流浪者后，直接秒杀
-            if hitEntity.typeId in immediateKill:
-                hitEntity.applyDamage( 1000, { "cause": "entity_attack", "damagingEntity": source } )
-            # 击中骷髅王后，施加额外伤害
-            elif hitEntity.typeId in dealsExtraDamage:
-                hitEntity.applyDamage( 5, { "cause": "entity_attack", "damagingEntity": source } )
+    # 当玩家或烈焰王血量变化后，将其血量同步到health记分板上
+    def entitySpawn(self, event): # type: ( sapi.EntitySpawnAfterEvent ) -> None
+        # 刚生成的实体
+        entity = event.entity
+        # 该实体的血量最大值
+        entityMaxHealth = entity.getHealthComponent().effectiveMax
+        # 此处是为了防止某些实体无血量而导致报错
+        if entityMaxHealth != None:
+            printHealth( entity, entityMaxHealth )
+    def entityHealthChanged(self, event): # type: ( sapi.EntityHealthChangedAfterEvent ) -> None
+        printHealth( event.entity, event.newValue )
 
+def printHealth( entity, healthValue ): # type: ( sapi.Entity, float ) -> None
+
+    # 要检查的实体
+    entityTypes = [ "minecraft:player", "aw:blaze_king" ]
+
+    # 若实体在允许的实体列表中，则打印实体血量到health记分板上
+    if entity.typeId in entityTypes:
+        healthValueInt = int(math.ceil(healthValue))
+        entity.runCommand("scoreboard players set @s health {}".format(healthValueInt))
