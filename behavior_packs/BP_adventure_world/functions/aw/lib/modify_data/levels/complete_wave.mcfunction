@@ -7,6 +7,8 @@
 scoreboard players add wave data 1
 ## 补充箭
 scoreboard players set allowArrowSupply data 1
+## 重置关卡完成倒计时
+scoreboard players set levelCompleteCountdown time 0
 
 # --- 提示玩家进入第 X 波 ---
 function aw/lib/modify_data/title

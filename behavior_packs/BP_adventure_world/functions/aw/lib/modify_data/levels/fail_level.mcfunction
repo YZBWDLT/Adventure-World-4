@@ -18,6 +18,8 @@ function aw/lib/modify_data/states/timeline/enable
 ## 增加失败次数
 scoreboard players add failedCount.allLevels data 1
 scoreboard players add failedCount.thisLevel data 1
+## 重置关卡完成倒计时
+scoreboard players set levelCompleteCountdown time 0
 
 # --- 提示玩家 ---
 

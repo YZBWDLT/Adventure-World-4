@@ -15,6 +15,8 @@ function aw/lib/modify_data/states/timeline/dont_keep_value
 function aw/lib/modify_data/states/timeline/enable
 ## 失败次数归零
 scoreboard players set failedCount.thisLevel data 0
+## 重置关卡完成倒计时
+scoreboard players set levelCompleteCountdown time 0
 
 # --- 提示玩家 ---
 
