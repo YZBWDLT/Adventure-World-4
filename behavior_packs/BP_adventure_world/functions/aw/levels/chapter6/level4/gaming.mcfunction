@@ -26,6 +26,6 @@ execute if score tick time matches 5 run function aw/levels/chapter6/level4/even
 ## 随机传送
 execute if score tick time matches 8 run function aw/levels/chapter6/level4/events/teleport
 ## 召唤怪物 | 仅当 BOSS 血量不足 2/3 时执行
-execute if score @e[type=aw:blaze_king] health < temp.bossHealthTwoThird data if score tick time matches 11 run function aw/levels/chapter4/level4/events/spawn_monster
+execute if score @e[type=aw:blaze_king,c=1] health < temp.bossHealthTwoThird data if score tick time matches 11 run function aw/levels/chapter6/level4/events/spawn_monster
 ## 回血 | 仅当 BOSS 血量不足 1/3 时执行
-execute if score @e[type=aw:blaze_king] health < temp.bossHealthOneThird data if score tick time matches 14 run function aw/levels/chapter6/level4/events/heal_boss
+execute if score @e[type=aw:blaze_king,c=1] health < temp.bossHealthOneThird data if score tick time matches 14 run function aw/levels/chapter6/level4/events/heal_boss

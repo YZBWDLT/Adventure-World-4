@@ -21,17 +21,3 @@ execute @e[name=tick,scores={time=6}] ~~~ execute @e[family=blaze_king,scores={t
 execute @e[name=tick,scores={time=6}] ~~~ execute @e[family=blaze_king,scores={temp=1}] ~~~ function lib/states/monster_summon_delay/enable_40ticks
 ## 阻止烈焰王传送
 execute @e[name=tick,scores={time=6}] ~~~ scoreboard players set @e[family=blaze_king] time 114514
-
-# --- 双重生点 ---
-# 仅当在关卡中时执行
-
-## 每秒随机设定一次重生点
-execute @e[name=tick,scores={time=0}] ~~~ scoreboard players random @e[family=respawner] temp 0 1
-## 按照temp.@s随机设定重生点
-execute @e[name=tick,scores={time=0}] ~~~ tp @e[family=respawner,scores={temp=0}] -248 -5 104
-execute @e[name=tick,scores={time=0}] ~~~ tp @e[family=respawner,scores={temp=1}] -222 -12 86
-
-## 将高位重生点上的玩家传送到低位重生点上
-tp @a[scores={isAlive=0},x=-251,y=-11,z=99,dx=12,dy=10,dz=17,rx=-85,rxm=-90] -222 -12 86 ~180 45
-## 将低位重生点上的玩家传送到高位重生点上
-tp @a[scores={isAlive=0},x=-229,y=-13,z=81,dx=10,dy=7,dz=10,rx=-85,rxm=-90] -248 -5 104 ~180 0

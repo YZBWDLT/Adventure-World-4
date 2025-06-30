@@ -1,0 +1,27 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "aw:wild_sword",
+            "is_experimental": false,
+            "is_spawnable": false,
+            "is_summonable": true,
+            "properties": {
+                "aw:state": { "type": "enum", "values": [ "drawn", "drawing", "stuck" ], "default": "drawn", "client_sync": true }
+            }
+        },
+        "components": {
+            "minecraft:damage_sensor": { "triggers": [ { "cause": "all", "deals_damage": false } ] },
+            "minecraft:physics": { "has_collision": true, "has_gravity": true }
+        },
+        "events": {
+            "aw:set_drawn": { "set_property": { "aw:state": "drawn" } },
+            "aw:set_drawing": { "set_property": { "aw:state": "drawing" } },
+            "aw:set_stuck": { "set_property": { "aw:state": "stuck" } },
+            "aw:remove_immediately": { "add": { "component_groups": [ "remove_immediately" ] } }
+        },
+        "component_groups": {
+            "remove_immediately": { "minecraft:instant_despawn": { } }
+        }
+    }
+}

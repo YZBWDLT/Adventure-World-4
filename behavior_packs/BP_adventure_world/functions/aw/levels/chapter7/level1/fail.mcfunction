@@ -8,5 +8,5 @@ function aw/lib/modify_data/levels/fail_level
 # （本关未封闭入口，因此无需重新开放）
 
 # --- 关卡特殊功能 ---
-# 重新启动 7-1
-function aw/levels/chapter7/level1/start
+# 重新启动 7-0 结束剧情（启用时间线流逝）
+function aw/lib/modify_data/states/timeline/enable_time_lapse

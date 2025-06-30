@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.wild_sword.obtain": {
+		"animation.wild_sword.drawing": {
 			"loop": "hold_on_last_frame",
 			"animation_length": 30,
 			"bones": {
@@ -14,28 +14,16 @@
 						"19.25": [180, 0, -90],
 						"19.5": [180, 90, -90],
 						"19.5833": [180, 90, -90],
-						"19.6667": {
-							"pre": [180, 90, -90],
-							"post": [90, 90, 180]
-						},
-						"19.75": {
-							"pre": [90, 90, 180],
-							"post": [90, 90, 180]
-						},
+						"19.6667": {"pre": [180, 90, -90], "post": [90, 90, 180]},
+						"19.75": [90, 90, 180],
 						"20.0": [90, -90, 180],
 						"21.0": [90, -90, 180],
 						"21.25": [0, -90, 180],
 						"21.5": [0, -90, 180],
 						"21.5833": [0, -90, 180],
-						"21.6667": {
-							"pre": [0, -90, 180],
-							"post": [89.99999, -90, 89.99999]
-						},
-						"21.75": {
-							"pre": [89.99999, -90, 89.99999],
-							"post": [89.99999, -90, 89.99999]
-						},
-						"22.0": [89.99999, 45, 89.99999],
+						"21.6667": {"pre": [0, -90, 180], "post": [90, -90, 90]},
+						"21.75": [90, -90, 90],
+						"22.0": [90, 45, 90],
 						"24.0": [89.99999, 45, 89.99999],
 						"26.0": [89.99999, 90, 89.99999]
 					},
@@ -70,59 +58,19 @@
 				"21.75": {
 					"effect": "swing_sword_2"
 				}
-			}
-		},
-		"animation.wild_sword.particle_stage_1": {
-			"animation_length": 1,
-			"loop": true,
+			},
 			"particle_effects": {
-				"0.0": {
-					"effect": "wild_sword_stage_1",
-					"locator": "particle"
-				}
-			}
-		},
-		"animation.wild_sword.particle_stage_2": {
-			"animation_length": 1,
-			"loop": false,
-			"particle_effects": {
-				"0.0": {
-					"effect": "wild_sword_stage_2",
-					"locator": "particle"
-				}
-			}
-		},
-		"animation.wild_sword.particle_stage_3_1": {
-			"animation_length": 1,
-			"loop": false,
-			"particle_effects": {
-				"0.0": {
-					"effect": "wild_sword_stage_3_1",
-					"locator": "particle2"
-				}
-			}
-		},
-		"animation.wild_sword.particle_stage_3_2": {
-			"animation_length": 1,
-			"loop": false,
-			"particle_effects": {
-				"0.0": {
-					"effect": "wild_sword_stage_3_2",
-					"locator": "particle2"
-				}
-			}
-		},
-		"animation.wild_sword.particle_stage_4": {
-			"animation_length": 1,
-			"loop": false,
-			"particle_effects": {
-				"0.0": {
+				"19.75": {
 					"effect": "wild_sword_stage_4",
-					"locator": "particle2"
+					"locator": "locator"
+				},
+				"21.75": {
+					"effect": "wild_sword_stage_4",
+					"locator": "locator"
 				}
 			}
 		},
-		"animation.wild_sword.show": {
+		"animation.wild_sword.drawn": {
 			"loop": "hold_on_last_frame",
 			"bones": {
 				"sword": {

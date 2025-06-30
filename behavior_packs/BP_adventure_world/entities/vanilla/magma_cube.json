@@ -40,6 +40,9 @@
 			},
 			"minecraft:slime_aggressive": {
 				"minecraft:movement.jump": { "jump_delay": [ 0.667, 2.0 ] }
+			},
+			"remove_immediately": {
+				"minecraft:instant_despawn": { }
 			}
 		},
 
@@ -104,6 +107,9 @@
 			},
 			"minecraft:become_aggressive": {
 				"add": { "component_groups": [ "minecraft:slime_aggressive" ] }
+			},
+			"aw:remove_immediately": {
+				"add": { "component_groups": [ "remove_immediately" ] }
 			}
 		}
 	}

@@ -96,3 +96,6 @@ scoreboard players set allowHud data 1
 
 ## 是否移除物品掉落物
 scoreboard players set allowRemoveItemEntity data 1
+
+## 是否允许在开始游戏时传送玩家
+scoreboard players set allowTpPlayerWhenStart data 1

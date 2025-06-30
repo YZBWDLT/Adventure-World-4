@@ -6,9 +6,9 @@
 				"identifier": "geometry.wild_sword",
 				"texture_width": 128,
 				"texture_height": 128,
-				"visible_bounds_width": 3,
-				"visible_bounds_height": 7,
-				"visible_bounds_offset": [0, 1.5, 0]
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 8,
+				"visible_bounds_offset": [0, 2, 0]
 			},
 			"bones": [
 				{
@@ -41,8 +41,7 @@
 						{"origin": [-0.8, -38.9, -0.8], "size": [1.6, 1.6, 1.6], "pivot": [0, -38.2, 0], "rotation": [0, -45, 0], "uv": [12, 0]}
 					],
 					"locators": {
-						"particle": [0, -17, 0],
-						"particle2": [0, -37, 0]
+						"locator": [0, -37, 0]
 					}
 				},
 				{

@@ -12,6 +12,9 @@ execute unless entity @e[type=aw:spawner] if score wave data matches 2 if score 
 ## 第 3 波 -> 关卡完成
 execute unless entity @e[type=aw:spawner] if score wave data matches 3 if score monsterAmount data matches 0 if score levelCompleteCountdown time matches ..0 run function aw/levels/chapter7/level2/complete
 
+# --- 重命名岩浆怪 ---
+function aw/lib/modify_data/rename_magma_cube
+
 # --- 检查存活玩家数目 ---
 # 如果存活玩家数目为 0，则触发关卡失败函数
 execute if score alivePlayerAmount data matches 0 run function aw/levels/chapter7/level2/fail

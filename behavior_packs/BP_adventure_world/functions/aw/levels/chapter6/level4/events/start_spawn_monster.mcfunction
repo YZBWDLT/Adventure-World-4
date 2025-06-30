@@ -24,5 +24,5 @@
 
 # --- 重置倒计时 ---
 # 当 Boss 血量剩余 1/3 以上时每 3-7 秒尝试生成，剩余 1/3 以下时每 3-5 秒尝试生成
-execute if score @e[type=aw:blaze_king] health >= temp.bossHealthOneThird run scoreboard players random temp.nextMonster time 3 10
-execute if score @e[type=aw:blaze_king] health < temp.bossHealthOneThird run scoreboard players random temp.nextMonster time 3 5
+execute if score @e[type=aw:blaze_king,c=1] health >= temp.bossHealthOneThird data run scoreboard players random temp.nextMonster time 3 10
+execute if score @e[type=aw:blaze_king,c=1] health < temp.bossHealthOneThird data run scoreboard players random temp.nextMonster time 3 5

@@ -23,10 +23,12 @@ titleraw @a subtitle {"rawtext":[{"translate":"§c%%s-%%s","with":{"rawtext":[{"
 # --- 传送玩家 ---
 
 ## 标记率先进入的玩家
-tag @s add firstEntered
+execute if score allowTpPlayerWhenStart data matches 1 run tag @s add firstEntered
 ## 将所有玩家传送到率先进入的玩家的位置
-tp @a[tag=!firstEntered] ~~~
-tag @a remove firstEntered
+execute if score allowTpPlayerWhenStart data matches 1 run tp @a[tag=!firstEntered] ~~~
+execute if score allowTpPlayerWhenStart data matches 1 run tag @a remove firstEntered
+## 若关卡禁止了传送玩家，在本次跳过传送玩家后恢复默认设置
+scoreboard players set allowTpPlayerWhenStart data 1
 
 # --- 更改玩家模式 ---
 # 备注：开发者模式不更新
