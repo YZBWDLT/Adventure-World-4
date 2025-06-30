@@ -27,19 +27,19 @@ class AdventureWorld4Server(ServerSystem):
     # ===========================================================================
 
     def subscribe(self): # type: () -> None
-        self.ListenForEvent(defaultNamespace, defaultSystemName, "ProjectileDoHitEffectEvent", self, self.projectileDoHit)
-        self.ListenForEvent(defaultNamespace, defaultSystemName, "ItemUseAfterServerEvent", self, self.itemUseAfter)
-        self.ListenForEvent(defaultNamespace, defaultSystemName, "ActorUseItemServerEvent", self, self.actorUseItem)
-        self.ListenForEvent(defaultNamespace, defaultSystemName, "MobDieEvent", self, self.mobDie)
-        self.ListenForEvent(defaultNamespace, defaultSystemName, "AddEntityServerEvent", self, self.addEntity)
-        self.ListenForEvent(defaultNamespace, defaultSystemName, "HealthChangeServerEvent", self, self.healthChange)
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "ProjectileDoHitEffectEvent", self, self.projectileDoHit)  # type: ignore
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "ItemUseAfterServerEvent", self, self.itemUseAfter)        # type: ignore
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "ActorUseItemServerEvent", self, self.actorUseItem)        # type: ignore
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "MobDieEvent", self, self.mobDie)                          # type: ignore
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "AddEntityServerEvent", self, self.addEntity)              # type: ignore
+        self.ListenForEvent(defaultNamespace, defaultSystemName, "HealthChangeServerEvent", self, self.healthChange)        # type: ignore
 
     def unsubscribe(self): # type: () -> None
         self.UnListenAllEvents()
     
     def projectileDoHit(self, event): # type: ( dict ) -> None
         if event["hitTargetType"] == "Block":
-            self.projectileHitEntity(sapi.ProjectileHitBlockAfterEvent(event))
+            self.projectileHitBlock(sapi.ProjectileHitBlockAfterEvent(event))
         else:
             self.projectileHitEntity(sapi.ProjectileHitEntityAfterEvent(event))
     
@@ -78,12 +78,12 @@ class AdventureWorld4Server(ServerSystem):
         ):
             # 传送信息
             teleportInfo = {
-                "Down": ( locE[0], locE[1] - 3, locE[2] ),              ## 如果扔中底面，则传送到投中位置的下方 3 格
-                "Up": ( locE[0], locE[1] + 1, locE[2] ),                ## 如果扔中顶面，则传送到投中位置的上方 1 格
-                "North": ( locE[0], locE[1] - 0.5, locE[2] - 0.7 ),     ## 如果扔中北面，则传送到投中位置北边 0.7 格，下方 0.5 格
-                "South": ( locE[0], locE[1] - 0.5, locE[2] + 0.7 ),     ## 如果扔中南面，则传送到投中位置南边 0.7 格，下方 0.5 格
-                "West": ( locE[0] - 0.7, locE[1] - 0.5, locE[2] ),      ## 如果扔中西面，则传送到投中位置西边 0.7 格，下方 0.5 格
-                "East": ( locE[0] + 0.7, locE[1] - 0.5, locE[2] ),      ## 如果扔中东面，则传送到投中位置东边 0.7 格，下方 0.5 格
+                "Down": sapi.Vector3( locE.x, locE.y - 3, locE.z ),              ## 如果扔中底面，则传送到投中位置的下方 3 格
+                "Up": sapi.Vector3( locE.x, locE.y + 1, locE.z ),                ## 如果扔中顶面，则传送到投中位置的上方 1 格
+                "North": sapi.Vector3( locE.x, locE.y - 0.5, locE.z - 0.7 ),     ## 如果扔中北面，则传送到投中位置北边 0.7 格，下方 0.5 格
+                "South": sapi.Vector3( locE.x, locE.y - 0.5, locE.z + 0.7 ),     ## 如果扔中南面，则传送到投中位置南边 0.7 格，下方 0.5 格
+                "West": sapi.Vector3( locE.x - 0.7, locE.y - 0.5, locE.z ),      ## 如果扔中西面，则传送到投中位置西边 0.7 格，下方 0.5 格
+                "East": sapi.Vector3( locE.x + 0.7, locE.y - 0.5, locE.z ),      ## 如果扔中东面，则传送到投中位置东边 0.7 格，下方 0.5 格
             }
             # 传送玩家
             player.teleport( teleportInfo[blockInfo.face] )

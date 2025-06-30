@@ -17,25 +17,25 @@ levelId = serverApi.GetLevelId()
 class Entity:
     """ 表示一个世界中的实体（一个生物，一个玩家，或其他类似于矿车的移动物体）。 """
 
-    def __init__(this, id): # type: ( str ) -> Entity
-        this.id = id
+    def __init__(self, id): # type: ( str ) -> None
+        self.id = id
         """实体的唯一 ID。"""
-        this.typeId = compFactory.CreateEngineType( id ).GetEngineTypeStr()
+        self.typeId = compFactory.CreateEngineType( id ).GetEngineTypeStr()
         """实体的类型 ID。"""
 
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版可用的str形式（也可以直接使用id属性）。"""
-        return this.id
+        return self.id
     
-    def runCommand( this, commandString ): # type: ( str ) -> bool
+    def runCommand( self, commandString ): # type: ( str ) -> bool
         """令实体运行命令。备注：不要带斜杠。"""
-        return compFactory.CreateCommand(levelId).SetCommand("/{}".format(commandString), this.id)
+        return compFactory.CreateCommand(levelId).SetCommand("/{}".format(commandString), self.id)
     
-    def teleport( this, location ): # type: ( Vector3 ) -> bool
+    def teleport( self, location ): # type: ( Vector3 ) -> bool
         """令实体传送到一个新的位置。"""
-        return compFactory.CreatePos(this.id).SetFootPos(location.getNeteaseData())
+        return compFactory.CreatePos(self.id).SetFootPos(location.getNeteaseData())
     
-    def applyDamage( this, amount, options ): # type: ( float, dict ) -> bool
+    def applyDamage( self, amount, options ): # type: ( float, dict ) -> bool
         """对实体造成伤害。"""
         cause = options["cause"] # type: str
         damagingEntity = options["damagingEntity"] # type: Entity
@@ -78,17 +78,17 @@ class Entity:
             "wither": "wither",                             # 凋零效果
         }
         neteaseCause = internationalToNeteaseCause[cause]
-        return compFactory.CreateHurt(this.id).Hurt(amount, neteaseCause, damagingEntity.id)
+        return compFactory.CreateHurt(self.id).Hurt(amount, neteaseCause, damagingEntity.id)
 
-    def getHealthComponent( this ):
+    def getHealthComponent( self ):
         """定义实体的生命值属性（等效于getComponent('health')，这里因为懒就不写了，日后再说 >:)）。"""
-        return EntityHealthComponent(this.id)
+        return EntityHealthComponent(self.id)
 
 class Player(Entity):
     """表示世界中的一个玩家。"""
 
-    def __init__(this, id):
-        super(Player, this).__init__(id)
+    def __init__(self, id):
+        super(Player, self).__init__(id)
 
 class ItemStack:
     """定义一叠物品。"""
@@ -98,29 +98,29 @@ class ItemStack:
     amount = 0
     """物品堆叠的数量。"""
 
-    def __init__(this, itemDict): # type: ( dict ) -> ItemStack
-        this._sourceData = itemDict
+    def __init__(self, itemDict): # type: ( dict ) -> None
+        self._sourceData = itemDict
         """（源数据）物品堆叠原始数据。"""
-        this.typeId = itemDict["newItemName"]
-        this.amount = itemDict["count"]
+        self.typeId = itemDict["newItemName"]
+        self.amount = itemDict["count"]
     
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版可用的dict形式。"""
-        return this._sourceData
+        return self._sourceData
 
 class Dimension:
     """定义一个世界的维度。"""
 
-    def __init__(this, idInt):  # type: ( int ) -> Dimension
-        this._sourceData = idInt
+    def __init__(self, idInt):  # type: ( int ) -> None
+        self._sourceData = idInt
         """（源数据）维度的数字 ID。"""
         ids = { 0: "overworld", 1: "nether", 2: "the_end" }
-        this.id = ids[idInt]
+        self.id = ids[idInt]
         """维度 ID。"""
 
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版可用的int形式。"""
-        return this._sourceData
+        return self._sourceData
 
 class Block:
     """定义一个维度中的方块"""
@@ -128,39 +128,39 @@ class Block:
     typeId = ""
     """方块的类型 ID。"""
 
-    def __init__(this, location, dimension):   # type: ( Vector3, Dimension ) -> Block
-        this.x = location.x
+    def __init__(self, location, dimension):   # type: ( Vector3, Dimension ) -> None
+        self.x = location.x
         """方块的 x 坐标。"""
-        this.y = location.y
+        self.y = location.y
         """方块的 y 坐标。"""
-        this.z = location.z
+        self.z = location.z
         """方块的 z 坐标。"""
-        this.dimension = dimension
+        self.dimension = dimension
         """方块所处的维度。"""
-        this.location = location
+        self.location = location
         """方块所处的位置。"""
-        this.typeId = compFactory.CreateBlockState(levelId).GetBlockStates(location.getNeteaseData(), dimension.getNeteaseData())["name"]
+        self.typeId = compFactory.CreateBlockState(levelId).GetBlockStates(location.getNeteaseData(), dimension.getNeteaseData())["name"]
 
 class Vector3:
     """定义一个向量。"""
 
-    def __init__(this, x, y, z):    # type: (float, float, float) -> Vector3
-        this.x = x
+    def __init__(self, x, y, z):    # type: (float, float, float) -> None
+        self.x = x
         """该向量的 x 分量。"""
-        this.y = y
+        self.y = y
         """该向量的 y 分量。"""
-        this.z = z
+        self.z = z
         """该向量的 z 分量。"""
 
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版脚本可用的tuple形式。"""
-        return (this.x, this.y, this.z)
+        return (self.x, self.y, self.z)
 
 # ===== 实体组件 =====
 
 class EntityHealthComponent:
-    def __init__(this, entityId): # type: (str) -> EntityHealthComponent
-        this.effectiveMax = compFactory.CreateAttr(entityId).GetAttrMaxValue(0)
+    def __init__(self, entityId): # type: (str) -> None
+        self.effectiveMax = compFactory.CreateAttr(entityId).GetAttrMaxValue(0)
         """实体血量的最大值。注意：可能返回 None（类似于js的undefined）。"""
 
 # ==========
@@ -168,119 +168,119 @@ class EntityHealthComponent:
 class ProjectileHitBlockAfterEvent:
     """弹射物击中方块后的相关信息。"""
 
-    def __init__(this, event):  # type: ( dict ) -> None
-        this.dimension = Dimension(compFactory.CreateDimension(event["entityId"]).GetEntityDimensionId())
+    def __init__(self, event):  # type: ( dict ) -> None
+        self.dimension = Dimension(compFactory.CreateDimension(event["entityId"]).GetEntityDimensionId())
         """弹射物击中的维度。"""
-        # this.hitVector = Vector3(0, 0, 0)
+        # self.hitVector = Vector3(0, 0, 0)
         """（目前暂无功能）击中方块时的方向向量。"""
-        this.location = Vector3(event["x"], event["y"], event["z"])
+        self.location = Vector3(event["x"], event["y"], event["z"])
         """击中方块的位置。"""
-        this.projectile = Entity(event["id"])
+        self.projectile = Entity(event["id"])
         """击中方块的弹射物。"""
-        this.source = Entity(compFactory.CreateBulletAttributes(event["entityId"]).GetSourceEntityId())
+        self.source = Entity(compFactory.CreateBulletAttributes(event["entityId"]).GetSourceEntityId())
         """弹射物的掷出者。"""
-        this._sourceData = event
+        self._sourceData = event
         """（源数据）事件数据本体"""
 
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版可用的dict形式。"""
-        return this._sourceData
+        return self._sourceData
     
-    def getBlockHit(this):
-        return BlockHitInformation(this.getNeteaseData(), this.dimension)
+    def getBlockHit(self):
+        return BlockHitInformation(self.getNeteaseData(), self.dimension)
 
 class BlockHitInformation:
     """弹射物击中的方块信息。"""
 
-    def __init__(this, event, dimension): # type: ( dict, Dimension ) -> BlockHitInformation
+    def __init__(self, event, dimension): # type: ( dict, Dimension ) -> None
         faceData = { 0: "Down", 1: "Up", 2: "North", 3: "South", 4: "West", 5: "East" }
-        this.block = Block((event["blockPosX"], event["blockPosY"], event["blockPosZ"]), dimension)
-        this.face = faceData[event["hitFace"]]
-        # this.faceLocation = None
+        self.block = Block(Vector3(event["blockPosX"], event["blockPosY"], event["blockPosZ"]), dimension)
+        self.face = faceData[event["hitFace"]]
+        # self.faceLocation = None
 
 class ProjectileHitEntityAfterEvent:
     """弹射物击中实体后的相关信息。"""
 
-    def __init__(this, event):  # type: ( dict ) -> None
-        this.dimension = Dimension(compFactory.CreateDimension(event["entityId"]).GetEntityDimensionId())
+    def __init__(self, event):  # type: ( dict ) -> None
+        self.dimension = Dimension(compFactory.CreateDimension(event["entityId"]).GetEntityDimensionId())
         """弹射物击中的维度。"""
-        # this.hitVector: Vector3
+        # self.hitVector: Vector3
         """（目前暂无功能）击中实体时的方向向量。"""
-        this.location = Vector3(event["x"], event["y"], event["z"])
+        self.location = Vector3(event["x"], event["y"], event["z"])
         """击中实体的位置。"""
-        this.projectile = Entity(event["id"])
+        self.projectile = Entity(event["id"])
         """击中实体的弹射物。"""
-        this.source = Entity(compFactory.CreateBulletAttributes(event["entityId"]).GetSourceEntityId())
+        self.source = Entity(compFactory.CreateBulletAttributes(event["entityId"]).GetSourceEntityId())
         """弹射物的掷出者。"""
-        this._sourceData = event
+        self._sourceData = event
         """（源数据）事件数据本体"""
 
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版可用的dict形式。"""
-        return this._sourceData
+        return self._sourceData
     
-    def getEntityHit(this):
-        return EntityHitInformation(this.getNeteaseData())
+    def getEntityHit(self):
+        return EntityHitInformation(self.getNeteaseData())
 
 class EntityHitInformation:
     """弹射物击中的实体信息。"""
 
-    def __init__(this, event): # type: ( dict ) -> EntityHitInformation
-        this.entity = Entity(event["targetId"])
+    def __init__(self, event): # type: ( dict ) -> None
+        self.entity = Entity(event["targetId"])
 
 class ItemUseAfterEvent:
     """当玩家右击物品时触发。"""
 
-    def __init__(this, event): # type: (dict) -> ItemUseAfterEvent
-        this._sourceData = event
-        this.itemStack = ItemStack(event["itemDict"])
+    def __init__(self, event): # type: (dict) -> None
+        self._sourceData = event
+        self.itemStack = ItemStack(event["itemDict"])
         """被使用的物品堆叠。"""
-        this.source = Player(event["entityId"])
+        self.source = Player(event["entityId"])
         """触发该事件的玩家。"""
 
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版可用的dict形式。"""
-        return this._sourceData
+        return self._sourceData
         
 class ItemCompleteUseAfterEvent:
     """当玩家蓄力完成一个可蓄力物品时触发。"""
 
-    def __init__(this, event): # type: (dict) -> ItemCompleteUseAfterEvent
-        this._sourceData = event
-        this.itemStack = ItemStack(event["itemDict"])
+    def __init__(self, event): # type: (dict) -> None
+        self._sourceData = event
+        self.itemStack = ItemStack(event["itemDict"])
         """完成蓄力使用的物品堆叠。"""
-        this.source = Player(event["entityId"])
+        self.source = Player(event["entityId"])
         """触发该事件的玩家。"""
-        # this.useDuration = Player(event["entityId"])
+        # self.useDuration = Player(event["entityId"])
         """该物品被使用过的时长（游戏刻）。"""
 
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版可用的dict形式。"""
-        return this._sourceData
+        return self._sourceData
         
 class EntityDieAfterEvent:
     """包含世界中死亡实体的数据。"""
 
-    def __init__(this, event): # type: (dict) -> EntityDieAfterEvent
-        this._sourceData = event
-        this.damageSource = EntityDamageSource(event)
+    def __init__(self, event): # type: (dict) -> None
+        self._sourceData = event
+        self.damageSource = EntityDamageSource(event)
         """提供伤害如何施加到实体上的信息。"""
-        this.deadEntity = Entity(event["id"])
+        self.deadEntity = Entity(event["id"])
         """死亡实体。"""
 
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版可用的dict形式。"""
-        return this._sourceData
+        return self._sourceData
 
 class EntityDamageSource:
     """提供伤害如何施加到实体上的信息。"""
 
-    def __init__(this, event): # type: (dict) -> EntityDamageSource
-        this.cause = event["cause"]
+    def __init__(self, event): # type: (dict) -> None
+        self.cause = event["cause"]
         """伤害类型。警告！此处使用的是网易版伤害类型！"""
-        this.damagingEntity = Entity(event["attacker"])
+        self.damagingEntity = Entity(event["attacker"])
         """造成伤害的实体。"""
-        this.damagingProjectile = Entity(event["attacker"])
+        self.damagingProjectile = Entity(event["attacker"])
         """造成伤害的弹射物。（目前暂时采用和damagingEntity一样的代码）"""
 
 class EntityHealthChangedAfterEvent:
@@ -291,27 +291,27 @@ class EntityHealthChangedAfterEvent:
     oldValue = 0.0
     """旧的生命值。"""
 
-    def __init__(this, event): # type: (dict) -> EntityHealthChangedAfterEvent
-        this._sourceData = event
-        this.entity = Entity(event["entityId"])
+    def __init__(self, event): # type: (dict) -> None
+        self._sourceData = event
+        self.entity = Entity(event["entityId"])
         """生命值变化的实体。"""
-        this.newValue = event["to"]
-        this.oldValue = event["from"]
+        self.newValue = event["to"]
+        self.oldValue = event["from"]
 
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版可用的dict形式。"""
-        return this._sourceData
+        return self._sourceData
 
 class EntitySpawnAfterEvent:
     """包含世界中刚生成的实体的数据。"""
 
-    def __init__(this, event): # type: (dict) -> EntitySpawnAfterEvent
-        this._sourceData = event
-        # this.cause: EntityInitializationCause
+    def __init__(self, event): # type: (dict) -> None
+        self._sourceData = event
+        # self.cause: EntityInitializationCause
         # """来源。"""
-        this.entity = Entity(event["id"])
+        self.entity = Entity(event["id"])
         """生成的实体。"""
 
-    def getNeteaseData(this):
+    def getNeteaseData(self):
         """获取中国版可用的dict形式。"""
-        return this._sourceData
+        return self._sourceData
