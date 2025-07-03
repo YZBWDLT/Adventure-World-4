@@ -7,8 +7,8 @@
     execute if score timeline active matches 1 if score timeline time matches 80 run fill -224 -28 111 -244 -28 85 air replace lava
     execute if score timeline active matches 1 if score timeline time matches 120 run fill -224 -29 111 -244 -29 85 air replace lava
     ## [160] 进入检查状态
-    execute if score timeline active matches 1 if score timeline time matches 160.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
     execute if score timeline active matches 1 if score timeline time matches 160.. run scoreboard players set timeline active 2
+    execute if score timeline active matches 1 if score timeline time matches 160.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
 
 # --- 等待阶段 ---
     # active.timeline == 2

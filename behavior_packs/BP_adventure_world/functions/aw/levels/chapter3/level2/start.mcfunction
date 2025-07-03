@@ -16,3 +16,7 @@ function aw/levels/chapter3/level2/waves/wave_1
 # --- 调用通用函数 ---
 # 必须由初次进入的玩家执行
 function aw/lib/modify_data/levels/start_level
+
+# --- 关卡特殊功能 ---
+## 把时间线状态改回 1
+scoreboard players set timeline active 1

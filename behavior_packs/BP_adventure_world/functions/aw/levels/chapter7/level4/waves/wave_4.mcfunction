@@ -30,3 +30,6 @@ summon aw:spawner -234 -12 104 0 0 aw:spawn_zombie_baby_4
 summon aw:spawner -228 -13 104 0 0 aw:spawn_silverfish_4
 ## 远古守卫者
 summon aw:spawner -234 -15 98 0 0 aw:spawn_elder_guardian
+
+# --- 启用时间线流逝 ---
+function aw/lib/modify_data/states/timeline/enable_time_lapse

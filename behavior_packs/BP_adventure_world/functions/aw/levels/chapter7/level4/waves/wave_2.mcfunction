@@ -26,3 +26,6 @@ summon aw:spawner -235 -16 97  0 0 aw:spawn_zombified_piglin_4
 summon aw:spawner -225 -11 113 0 0 aw:spawn_piglin_4
 ## 骷髅敢死队
 summon aw:spawner -242 -16 96  0 0 aw:spawn_skeleton_sword_2
+
+# --- 启用时间线流逝 ---
+function aw/lib/modify_data/states/timeline/enable_time_lapse

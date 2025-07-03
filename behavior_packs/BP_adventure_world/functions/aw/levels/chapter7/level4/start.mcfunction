@@ -20,6 +20,8 @@ function aw/lib/modify_data/levels/start_level
 
 # --- 关卡特殊功能 ---
 ## 添加岩浆
-fill -224 -27 111 -244 -29 85 lava[] keep
+fill -224 -27 111 -244 -29 85 lava keep
 ## 播放音乐
 function aw/lib/modify_data/play_music
+## 把时间线状态改为 1
+scoreboard players set timeline active 1

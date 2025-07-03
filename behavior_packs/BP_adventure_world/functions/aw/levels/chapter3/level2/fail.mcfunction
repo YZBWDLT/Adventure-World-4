@@ -11,3 +11,7 @@ fill -171 -21 13 -173 -19 13 structure_void
 ## 清除水
 function aw/levels/chapter3/level2/events/clear_water
 structure load aw:3_2_phase1 -192 -22 -1
+
+# --- 关卡特殊功能 ---
+## 把时间线状态改回 3，以防止玩家重过一遍剧情
+scoreboard players set timeline active 3
