@@ -25,7 +25,10 @@
                     "controller_move"
                 ],
                 "initialize": [ "variable.life_time = 0;" ],
-                "pre_animation": [ "variable.life_time = variable.life_time + 1;" ]
+                "pre_animation": [
+                    "variable.shield_type = query.property('aw:shield_type') == 'none' ? 0 : ( query.property('aw:shield_type') == 'weak' ? 1 : 2 );",
+                    "variable.life_time = variable.life_time + 1;"
+                ]
             },
             "animations": {
                 "general": "animation.evoker.general",

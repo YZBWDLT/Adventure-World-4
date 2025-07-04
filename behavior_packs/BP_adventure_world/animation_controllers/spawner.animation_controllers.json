@@ -68,7 +68,8 @@
                         { "skeleton_king": "query.property('aw:monster_type') == 22 && query.property('aw:monster_level') == 1 " },
                         { "elder_guardian": "query.property('aw:monster_type') == 23 && query.property('aw:monster_level') == 1 " },
                         { "blaze_king": "query.property('aw:monster_type') == 24 && query.property('aw:monster_level') == 1 " },
-                        { "evoker": "query.property('aw:monster_type') == 25 && query.property('aw:monster_level') == 1 " }
+                        { "evoker": "query.property('aw:monster_type') == 25 && query.property('aw:monster_level') == 1 " },
+                        { "zombie_shield": "query.property('aw:monster_type') == 26 && query.property('aw:monster_level') == 1 " }
                     ]
                 },
                 "zombie_1": { "on_entry": [ "/function aw/entities/spawner/zombie_1" ] },
@@ -133,7 +134,8 @@
                 "skeleton_king": { "on_entry": [ "/function aw/entities/spawner/skeleton_king" ] },
                 "elder_guardian": { "on_entry": [ "/function aw/entities/spawner/elder_guardian" ] },
                 "blaze_king": { "on_entry": [ "/function aw/entities/spawner/blaze_king" ] },
-                "evoker": { "on_entry": [ "/function aw/entities/spawner/evoker" ] }
+                "evoker": { "on_entry": [ "/function aw/entities/spawner/evoker" ] },
+                "zombie_shield": { "on_entry": [ "/function aw/entities/spawner/zombie_shield" ] }
             }
         }
     }

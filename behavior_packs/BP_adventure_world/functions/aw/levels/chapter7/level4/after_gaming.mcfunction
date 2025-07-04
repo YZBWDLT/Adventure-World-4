@@ -23,6 +23,9 @@
 # --- 入坑后 ---
     # active.timeline == 3，时间流逝
 
-    ## [120] 跳转到 7-5
-    execute if score timeline active matches 3 if score timeline time matches 120.. run function aw/lib/modify_data/stop_dialogue
-    execute if score timeline active matches 3 if score timeline time matches 120.. run function aw/levels/chapter7/level5/start
+    ## [120] 传送玩家
+    execute if score timeline active matches 3 if score timeline time matches 120 run tp @a -225 15 44
+
+    ## [180] 跳转到 7-5
+    execute if score timeline active matches 3 if score timeline time matches 180.. run function aw/lib/modify_data/stop_dialogue_keep
+    execute if score timeline active matches 3 if score timeline time matches 180.. run function aw/levels/chapter7/level5/start

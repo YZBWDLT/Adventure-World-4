@@ -7,7 +7,7 @@
             "is_spawnable": false,
             "is_summonable": true,
             "properties": {
-                "aw:monster_type": { "type": "int", "default": 1, "range": [ 1, 25 ], "client_sync": true },
+                "aw:monster_type": { "type": "int", "default": 1, "range": [ 1, 26 ], "client_sync": true },
                 "aw:monster_level": { "type": "int", "default": 1, "range": [ 1, 4 ], "client_sync": true },
                 "aw:start_spawn": { "type": "bool", "default": false, "client_sync": false }
             },
@@ -37,6 +37,8 @@
             "aw:spawn_zombie_2": { "set_property": { "aw:monster_type": 1, "aw:monster_level": 2 } },
             "aw:spawn_zombie_3": { "set_property": { "aw:monster_type": 1, "aw:monster_level": 3 } },
             "aw:spawn_zombie_4": { "set_property": { "aw:monster_type": 1, "aw:monster_level": 4 } },
+
+            "aw:spawn_zombie_shield": { "set_property": { "aw:monster_type": 26, "aw:monster_level": 1 } },
 
             "aw:spawn_zombie_baby_1": { "set_property": { "aw:monster_type": 2, "aw:monster_level": 1 } },
             "aw:spawn_zombie_baby_2": { "set_property": { "aw:monster_type": 2, "aw:monster_level": 2 } },

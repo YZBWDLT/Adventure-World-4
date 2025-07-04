@@ -1,0 +1,34 @@
+# ===== 开始游戏 =====
+# 7-5 | 必须由初次进入的玩家执行
+
+# --- 关卡参数 ---
+## 关卡 ID
+scoreboard players set level data 5
+## 最大波数
+scoreboard players set maxWave data 2
+
+# --- 生成怪物 ---
+function aw/levels/chapter7/level5/waves/wave_1
+
+# --- 调用通用函数 ---
+# 必须由初次进入的玩家执行
+function aw/lib/modify_data/levels/start_level
+## 重新设置副标题
+titleraw @a subtitle {"rawtext":[{"translate":"§c§l最 终 关"}]}
+
+# --- 关卡特殊功能 ---
+## 加载初始结构
+    structure load aw:7_5_phase1 -246 -54 23
+## 将时间线状态设置为 1
+    scoreboard players set timeline active 1
+## 临时变量设置
+    ### 关卡阶段，BOSS 血量在1/2以上为1，在1/2以下为2
+        scoreboard players set temp.stage data 1
+    ### 技能倒计时，正值：触发下一个技能的倒计时；0：触发技能；负值：该技能触发后等待的倒计时
+        scoreboard players random temp.skillCd time 3 10
+    ### 技能等待倒计时（技能时长），应设为负值，绝对值为实际时长
+        scoreboard players set temp.skillLength data -15
+    ### 技能类型
+        scoreboard players set temp.skillType data 0
+    ### 在召唤怪物时，采用的怪物组别
+        scoreboard players random temp.spawnMonsterGroup data 1 4

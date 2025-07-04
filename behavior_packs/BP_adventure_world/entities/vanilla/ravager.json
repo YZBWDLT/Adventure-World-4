@@ -82,10 +82,9 @@
                 "remove": { "component_groups": [ "minecraft:celebrate" ] }
             },
             "minecraft:raid_expired": {
-                "sequence": [
-                    { "filters": { "test": "has_nametag", "value": false }, "remove": { "component_groups": [ "minecraft:raid_persistence" ] } }
-                ]
+                "filters": { "test": "has_nametag", "value": false }, "remove": { "component_groups": [ "minecraft:raid_persistence" ] }
             }
+
         },
         "component_groups": {
             "minecraft:celebrate": {

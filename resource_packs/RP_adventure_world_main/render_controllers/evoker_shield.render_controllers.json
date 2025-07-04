@@ -4,7 +4,7 @@
         "controller.render.entity_shield": {
             "geometry": "geometry.shield",
             "materials": [ { "*": "material.shield" } ],
-            "textures": [ "array.shield_type[query.mark_variant]" ],
+            "textures": [ "array.shield_type[variable.shield_type]" ],
             "arrays": {
                 "textures": {
                     "array.shield_type": [
@@ -14,7 +14,7 @@
                     ]
                 }
             },
-            "part_visibility": [ { "*": "query.mark_variant >= 1" } ],
+            "part_visibility": [ { "*": "variable.shield_type >= 1" } ],
             "uv_anim": {
                 "offset": [ "(Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.01", "(Math.floor(query.life_time * 20.0) + query.frame_alpha) * 0.01" ],
                 "scale": [ 1.0, 1.0 ]

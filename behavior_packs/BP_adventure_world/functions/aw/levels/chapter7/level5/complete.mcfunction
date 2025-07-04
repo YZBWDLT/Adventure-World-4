@@ -19,3 +19,9 @@ tellraw @a {"rawtext":[{"text":"§l§c最终关卡已完成！跳入最中间的
 function aw/lib/modify_data/play_music
 ## 启用时间流逝
 function aw/lib/modify_data/states/timeline/enable_time_lapse
+## 移除临时变量
+scoreboard players reset temp.stage data
+scoreboard players reset temp.skillCd time
+scoreboard players reset temp.skillLength data
+scoreboard players reset temp.skillType data
+scoreboard players reset temp.spawnMonsterGroup data

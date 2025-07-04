@@ -124,7 +124,7 @@ world.afterEvents.entityHealthChanged.subscribe(event => {
 */
 function printHealth( entity, healthValue ) {
     /** 要检查的实体 */
-    const entityTypes = [ "minecraft:player", "aw:blaze_king" ];
+    const entityTypes = [ "minecraft:player", "aw:blaze_king", "minecraft:evocation_illager" ];
 
     // 若实体在允许的实体列表中，则打印实体血量到health记分板上
     if ( entityTypes.includes(entity.typeId) ) {

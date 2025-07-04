@@ -24,3 +24,12 @@ structure load aw:6_4_no_lava -89 -40 21
 function aw/lib/modify_data/play_music
 ## 启用时间流逝
 function aw/lib/modify_data/states/timeline/enable_time_lapse
+## 移除临时变量
+scoreboard players reset temp.bossHealthTwoThird data
+scoreboard players reset temp.bossHealthOneThird data
+scoreboard players reset temp.lavaRiseCountdown time
+scoreboard players reset temp.nextMonster time
+scoreboard players reset temp.nextMonsterType data
+scoreboard players reset temp.nextMonsterPos data
+scoreboard players reset temp.healBossCountdown time
+scoreboard players reset temp.teleportCountdown time

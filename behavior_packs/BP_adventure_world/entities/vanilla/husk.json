@@ -61,13 +61,9 @@
 
         "events": {
 			"minecraft:entity_spawned": {
-				"sequence": [
-					{
-						"randomize": [
-							{ "weight": 38, "add": { "component_groups": [ "adult_level_2" ] } },
-							{ "weight": 2, "add": { "component_groups": [ "baby_level_2" ] } }
-						]
-					}
+				"randomize": [
+					{ "weight": 38, "add": { "component_groups": [ "adult_level_2" ] } },
+					{ "weight": 2, "add": { "component_groups": [ "baby_level_2" ] } }
 				]
 			},
             "aw:level_1": { "add": { "component_groups": [ "adult_level_1" ] } },

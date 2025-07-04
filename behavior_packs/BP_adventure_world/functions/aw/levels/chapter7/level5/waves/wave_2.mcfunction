@@ -15,3 +15,10 @@ summon aw:marker -83 1 -2 ~~ aw:set_wave_name "§a⚅§b⚂"
 
 ## 唤魔者
 summon aw:spawner -225 -48 44 0 0 aw:spawn_evoker
+
+# --- 播放音乐 ---
+function aw/lib/modify_data/play_music
+
+# --- BOSS 专属标题 ---
+titleraw @a title {"rawtext":[{"translate":"§c§lBOSS 来 袭"}]}
+titleraw @a subtitle {"rawtext":[{"translate":"第 §c2 §f波"}]}

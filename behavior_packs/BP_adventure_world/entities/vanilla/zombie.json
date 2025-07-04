@@ -1,11 +1,15 @@
 {
-	"format_version": "1.17.20",
+	"format_version": "1.21.0",
 	"minecraft:entity": {
 		"description": {
 			"identifier": "minecraft:zombie",
 			"is_spawnable": true,
 			"is_summonable": true,
-			"is_experimental": false
+			"is_experimental": false,
+            "properties": {
+                "aw:could_have_shield": { "type": "bool", "default": false },
+                "aw:shield_type": { "type": "enum", "default": "none", "values": [ "none", "weak", "strong" ], "client_sync": true }
+            }
 		},
 
 		"components": {
@@ -28,6 +32,7 @@
 			"minecraft:jump.static": { },
 			"minecraft:can_climb": { },
 
+			"minecraft:behavior.nearest_attackable_target": { "priority": 2, "must_see": true, "reselect_targets": true, "within_radius": 40, "must_see_forget_duration": 10, "entity_types": [ { "filters": { "any_of": [ { "test": "is_family", "subject": "other", "value": "player" } ] }, "max_dist": 40 } ] },
 			"minecraft:behavior.equip_item": { "priority": 2 },
 			"minecraft:behavior.melee_attack": { "priority": 3 },
 			"minecraft:behavior.random_stroll": { "priority": 7, "speed_multiplier": 1 },
@@ -36,36 +41,14 @@
 			"minecraft:behavior.hurt_by_target": { "priority": 1 },
 			"minecraft:behavior.mount_pathing": { "priority": 2, "speed_multiplier": 1.25, "target_dist": 0.0, "track_target": true },
 
-			"minecraft:conditional_bandwidth_optimization": { },
-
-			"minecraft:behavior.nearest_attackable_target": {
-				"priority": 2,
-				"must_see": true,
-				"reselect_targets": true,
-				"within_radius": 40,
-				"must_see_forget_duration": 10,
-				"entity_types": [
-					{
-						"filters": {
-							"any_of": [
-								{ "test": "is_family", "subject": "other", "value": "player" }
-							]
-						},
-						"max_dist": 40
-					}
-				]
-			}
+            "minecraft:conditional_bandwidth_optimization": { }
 		},
 
 		"events": {
 			"minecraft:entity_spawned": {
-				"sequence": [
-					{
-						"randomize": [
-							{ "weight": 38, "add": { "component_groups": [ "adult_level_2" ] } },
-							{ "weight": 2, "add": { "component_groups": [ "baby_level_2" ] } }
-						]
-					}
+				"randomize": [
+					{ "weight": 38, "add": { "component_groups": [ "adult_level_2" ] } },
+					{ "weight": 2, "add": { "component_groups": [ "baby_level_2" ] } }
 				]
 			},
             "aw:level_1": { "add": { "component_groups": [ "adult_level_1" ] } },
@@ -78,25 +61,31 @@
 			"aw:level_3_baby": { "add": { "component_groups": [ "baby_level_3" ] } },
 			"aw:level_4_baby": { "add": { "component_groups": [ "baby_level_4" ] } },
 			"aw:level_5_baby": { "add": { "component_groups": [ "baby_level_5" ] } },
-			"aw:level_1_shield": { "add": { "component_groups": [ "adult_level_1", "have_shield" ] } },
+			"aw:level_1_with_shield": {
+                "add": { "component_groups": [ "adult_level_1", "have_shield" ] },
+                "set_property": { "aw:could_have_shield": true, "aw:shield_type": "strong" }
+            },
 
-			"have_no_shield": {
-                "sequence": [
-                    { "remove": { "component_groups": [ "have_weak_shield", "have_shield" ] } },
-                    { "add": { "component_groups": [ "have_no_shield" ] } }
-                ]
+			"aw:have_no_shield": {
+                "filters": { "test": "bool_property", "subject": "self", "domain": "aw:could_have_shield", "value": true },
+                "set_property": { "aw:shield_type": "none" },
+                "remove": { "component_groups": [ "have_weak_shield", "have_shield" ] },
+                "add": { "component_groups": [ "have_no_shield" ] },
+                "queue_command": { "command": [ "function aw/entities/zombie/have_no_shield" ] }
             },
-            "have_weak_shield": {
-                "sequence": [
-                    { "remove": { "component_groups": [ "have_no_shield", "have_shield" ] } },
-                    { "add": { "component_groups": [ "have_weak_shield" ] } }
-                ]
+            "aw:have_weak_shield": {
+                "filters": { "test": "bool_property", "subject": "self", "domain": "aw:could_have_shield", "value": true },
+                "set_property": { "aw:shield_type": "weak" },
+                "remove": { "component_groups": [ "have_no_shield", "have_shield" ] },
+                "add": { "component_groups": [ "have_weak_shield" ] },
+                "queue_command": { "command": [ "function aw/entities/zombie/have_weak_shield" ] }
             },
-            "have_shield": {
-                "sequence": [
-                    { "remove": { "component_groups": [ "have_weak_shield", "have_no_shield" ] } },
-                    { "add": { "component_groups": [ "have_shield" ] } }
-                ]
+            "aw:have_shield": {
+                "filters": { "test": "bool_property", "subject": "self", "domain": "aw:could_have_shield", "value": true },
+                "set_property": { "aw:shield_type": "strong" },
+                "remove": { "component_groups": [ "have_weak_shield", "have_no_shield" ] },
+                "add": { "component_groups": [ "have_shield" ] },
+                "queue_command": { "command": [ "function aw/entities/zombie/have_shield" ] }
             }
 		},
 
@@ -180,48 +169,17 @@
             },
 
 			"have_no_shield": {
-                "minecraft:mark_variant": { "value": 0 },
-                "minecraft:timer": {
-                    "time": [ 2, 4 ],
-                    "looping": true,
-                    "time_down_event": {
-                        "event": "have_shield",
-                        "target": "self"
-                    }
-                }
+                "minecraft:timer": { "time": [ 2, 4 ], "looping": true, "time_down_event": { "event": "aw:have_shield", "target": "self" } }
             },
             "have_weak_shield": {
-                "minecraft:mark_variant": { "value": 1 },
                 "minecraft:damage_sensor": {
                     "triggers": [
-                        {
-                            "on_damage": {
-                                "filters": {
-                                    "any_of": [
-                                        { "none_of": { "test": "is_family", "value": "player", "subject": "other" } },
-                                        { "none_of": { "test": "has_equipment", "domain": "hand", "value": "aw:wild_sword", "subject": "other" } }
-                                    ]
-                                }
-                            },
-                            "deals_damage": false
-                        },
-                        {
-                            "on_damage": {
-                                "filters": {
-                                    "all_of": [
-                                        { "test": "is_family", "value": "player", "subject": "other" },
-                                        { "test": "has_equipment", "domain": "hand", "value": "aw:wild_sword", "subject": "other" }
-                                    ]
-                                },
-                                "target": "self",
-                                "event": "have_no_shield"
-                            }
-                        }
+                        { "on_damage": { "filters": { "any_of": [ { "none_of": { "test": "is_family", "value": "player", "subject": "other" } }, { "none_of": { "test": "has_equipment", "domain": "hand", "value": "aw:wild_sword", "subject": "other" } } ] } }, "deals_damage": false },
+                        { "on_damage": { "filters": { "all_of": [ { "test": "is_family", "value": "player", "subject": "other" }, { "test": "has_equipment", "domain": "hand", "value": "aw:wild_sword", "subject": "other" } ] }, "target": "self", "event": "aw:have_no_shield" } }
                     ]
                 }
             },
             "have_shield": {
-                "minecraft:mark_variant": { "value": 2 },
                 "minecraft:damage_sensor": { "triggers": [ { "cause": "all", "deals_damage": false } ] }
             }
 		}

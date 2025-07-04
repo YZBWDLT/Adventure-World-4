@@ -7,3 +7,7 @@
 
 ## 烈焰王
 summon aw:spawner -75 -37 35 0 0 aw:spawn_blaze_king
+
+# --- BOSS 专属标题 ---
+titleraw @a title {"rawtext":[{"translate":"§c§lBOSS 来 袭"}]}
+titleraw @a subtitle {"rawtext":[{"translate":"§c6-4"}]}

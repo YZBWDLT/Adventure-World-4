@@ -160,7 +160,7 @@ class AdventureWorld4Server(ServerSystem):
 def printHealth( entity, healthValue ): # type: ( sapi.Entity, float ) -> None
 
     # 要检查的实体
-    entityTypes = [ "minecraft:player", "aw:blaze_king" ]
+    entityTypes = [ "minecraft:player", "aw:blaze_king", "minecraft:evocation_illager" ]
 
     # 若实体在允许的实体列表中，则打印实体血量到health记分板上
     if entity.typeId in entityTypes:
