@@ -25,3 +25,4 @@ scoreboard players reset temp.skillCd time
 scoreboard players reset temp.skillLength data
 scoreboard players reset temp.skillType data
 scoreboard players reset temp.spawnMonsterGroup data
+scoreboard players reset temp.bossHealthOneSecond data

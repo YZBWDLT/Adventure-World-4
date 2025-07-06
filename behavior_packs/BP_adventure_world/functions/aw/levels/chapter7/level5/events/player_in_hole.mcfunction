@@ -6,6 +6,7 @@ scoreboard players set timeline active 3
 
 # 黑屏
 camera @a fade time 3 3 3
+effect @a blindness 9 0 true
 
 # 启用对话状态
 function aw/lib/modify_data/start_dialogue

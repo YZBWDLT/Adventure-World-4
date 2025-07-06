@@ -5,22 +5,22 @@
     # 【技能触发倒计时】：当技能触发倒计时为 0 时，则释放技能。
     # 【技能等待倒计时】：技能触发之后，需要有一段等待时间之后才能回到技能触发倒计时，代表技能本身的冷却时间。
 
+    ## 技能等待倒计时 | 在技能触发倒计时的前面执行，防止到 0 时被直接跳过
+        execute if score temp.skillCd time matches ..0 run scoreboard players remove temp.skillCd time 1
     ## 技能触发倒计时 | 仅限在唤魔法师蓝盾时执行
         execute if score temp.skillCd time matches 1.. if entity @e[type=evocation_illager,has_property={aw:shield_type="strong"}] run scoreboard players remove temp.skillCd time 1
-    ## 技能等待倒计时
-        execute if score temp.skillCd time matches ..0 run scoreboard players remove temp.skillCd time 1
     ## 当技能等待倒计时到时后，重新刷新技能触发倒计时
         ### 一阶段时，随机为 3~10 秒
             execute if score temp.skillCd time < temp.skillLength data if score temp.stage data matches 1 run scoreboard players random temp.skillCd time 3 10
         ### 二阶段时，随机为 2~5 秒
-            execute if score temp.skillCd time < temp.skillLength data if score temp.stage data matches 1 run scoreboard players random temp.skillCd time 2 5
+            execute if score temp.skillCd time < temp.skillLength data if score temp.stage data matches 2 run scoreboard players random temp.skillCd time 2 5
 
 # --- 技能倒计时为 0 后，触发技能 ---
     ## 选定待执行的技能
         ### 一阶段时，随机为 1~4 的比重
             execute if score temp.skillCd time matches 0 if score temp.stage data matches 1 run scoreboard players random temp.skillType data 1 4
         ### 二阶段时，随机为 1~6 的比重
-            execute if score temp.skillCd time matches 0 if score temp.stage data matches 1 run scoreboard players random temp.skillType data 1 6
+            execute if score temp.skillCd time matches 0 if score temp.stage data matches 2 run scoreboard players random temp.skillType data 1 6
     ## 清除劫掠兽
         execute if score temp.skillCd time matches 0 run kill @e[type=ravager]
     ## 按照data.temp.skillType随机到的内容执行技能

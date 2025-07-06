@@ -12,9 +12,12 @@ function aw/lib/modify_data/levels/fail_level
 fill -238 -45 31 -212 -45 57 air destroy
 ## 播放音乐
 function aw/lib/modify_data/play_music
+## 将时间线状态改回 2
+scoreboard players set timeline active 2
 ## 移除临时变量
 scoreboard players reset temp.stage data
 scoreboard players reset temp.skillCd time
 scoreboard players reset temp.skillLength data
 scoreboard players reset temp.skillType data
 scoreboard players reset temp.spawnMonsterGroup data
+scoreboard players reset temp.bossHealthOneSecond data

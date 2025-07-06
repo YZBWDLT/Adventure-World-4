@@ -22,3 +22,6 @@ function aw/lib/modify_data/play_music
 # --- BOSS 专属标题 ---
 titleraw @a title {"rawtext":[{"translate":"§c§lBOSS 来 袭"}]}
 titleraw @a subtitle {"rawtext":[{"translate":"第 §c2 §f波"}]}
+
+# --- 时间线归零 ---
+function aw/lib/modify_data/states/timeline/disable_time_lapse

@@ -7,7 +7,7 @@
             "is_summonable": true,
             "is_experimental": false,
             "properties": {
-                "aw:shield_type": { "type": "enum", "default": "none", "values": [ "none", "weak", "strong" ], "client_sync": true }
+                "aw:shield_type": { "type": "enum", "default": "strong", "values": [ "none", "weak", "strong" ], "client_sync": true }
             }
         },
         "components": {
@@ -65,10 +65,22 @@
             }
         },
         "events": {
-            "aw:level_1": { "add": { "component_groups": [ "level_1", "have_shield" ] } },
-			"aw:level_2": { "add": { "component_groups": [ "level_2", "have_shield" ] } },
-			"aw:level_3": { "add": { "component_groups": [ "level_3", "have_shield" ] } },
-			"aw:level_4": { "add": { "component_groups": [ "level_4", "have_shield" ] } },
+            "aw:level_1": {
+                "set_property": { "aw:shield_type": "strong" },
+                "add": { "component_groups": [ "level_1", "have_shield" ] }
+            },
+			"aw:level_2": {
+                "set_property": { "aw:shield_type": "strong" },
+                "add": { "component_groups": [ "level_2", "have_shield" ] }
+            },
+			"aw:level_3": {
+                "set_property": { "aw:shield_type": "strong" },
+                "add": { "component_groups": [ "level_3", "have_shield" ] }
+            },
+			"aw:level_4": {
+                "set_property": { "aw:shield_type": "strong" },
+                "add": { "component_groups": [ "level_4", "have_shield" ] }
+            },
 
 			"aw:have_no_shield": {
                 "set_property": { "aw:shield_type": "none" },

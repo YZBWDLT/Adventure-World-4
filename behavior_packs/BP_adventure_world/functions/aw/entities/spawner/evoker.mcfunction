@@ -14,7 +14,7 @@ execute if score difficulty settings matches 4 run summon minecraft:ravager ~~~ 
 ride @e[family=evoker] start_riding @e[family=ravager]
 
 ## BOSS 的 1/2 血量
-execute as @e[type=aw:blaze_king,has_property={aw:level=1}] run scoreboard players set temp.bossHealthOneSecond data 500
-execute as @e[type=aw:blaze_king,has_property={aw:level=2}] run scoreboard players set temp.bossHealthOneSecond data 625
-execute as @e[type=aw:blaze_king,has_property={aw:level=3}] run scoreboard players set temp.bossHealthOneSecond data 750
-execute as @e[type=aw:blaze_king,has_property={aw:level=4}] run scoreboard players set temp.bossHealthOneSecond data 875
+execute if score difficulty settings matches 1 run scoreboard players set temp.bossHealthOneSecond data 500
+execute if score difficulty settings matches 2 run scoreboard players set temp.bossHealthOneSecond data 625
+execute if score difficulty settings matches 3 run scoreboard players set temp.bossHealthOneSecond data 750
+execute if score difficulty settings matches 4 run scoreboard players set temp.bossHealthOneSecond data 875

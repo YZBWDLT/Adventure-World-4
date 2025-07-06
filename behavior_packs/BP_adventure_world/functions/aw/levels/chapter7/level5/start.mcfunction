@@ -11,10 +11,18 @@ scoreboard players set maxWave data 2
 function aw/levels/chapter7/level5/waves/wave_1
 
 # --- 调用通用函数 ---
-# 必须由初次进入的玩家执行
-function aw/lib/modify_data/levels/start_level
-## 重新设置副标题
-titleraw @a subtitle {"rawtext":[{"translate":"§c§l最 终 关"}]}
+    # 必须由初次进入的玩家执行
+
+    ## 禁止在本关传送玩家
+        scoreboard players set allowTpPlayerWhenStart data 0
+    ## 禁止时间流逝 | 以防在过剧情时被误判为正处于与试炼外的对话
+        function aw/lib/modify_data/states/timeline/disable_time_lapse
+    ## 调用通用函数
+        function aw/lib/modify_data/levels/start_level
+    ## 重新设置副标题
+        titleraw @a subtitle {"rawtext":[{"translate":"§c§l最 终 关"}]}
+    ## 重新启用时间流逝 | 进行第一阶段的时间线
+        function aw/lib/modify_data/states/timeline/enable_time_lapse
 
 # --- 关卡特殊功能 ---
 ## 加载初始结构

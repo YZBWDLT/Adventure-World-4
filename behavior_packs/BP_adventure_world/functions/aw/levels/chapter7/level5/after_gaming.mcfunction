@@ -23,8 +23,8 @@
     execute if score timeline active matches 1 if score timeline time matches 160 run fill -224 -54 43 -226 -54 45 air destroy
     execute if score timeline active matches 1 if score timeline time matches 161 run kill @e[type=item]
     ## [180] 进入检查状态
-    execute if score timeline active matches 1 if score timeline time matches 180.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
     execute if score timeline active matches 1 if score timeline time matches 180.. run scoreboard players set timeline active 2
+    execute if score timeline active matches 1 if score timeline time matches 180.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
 
 # --- 等待阶段 ---
     # active.timeline == 2
@@ -40,6 +40,6 @@
     # active.timeline == 3，时间流逝
 
     ## [120] 跳转到结束界面 | 如果为剧情模式，从stage1开始；如果为纯战斗模式，从stage2开始
-    execute if score timeline active matches 3 if score timeline time matches 120.. run function aw/lib/modify_data/stop_dialogue
     execute if score timeline active matches 3 if score timeline time matches 120.. if score storyMode settings matches 0 run function aw/levels/end/stage2/start
     execute if score timeline active matches 3 if score timeline time matches 120.. if score storyMode settings matches 1 run function aw/levels/end/stage1/start
+    execute if score timeline active matches 3 if score timeline time matches 120.. run function aw/lib/modify_data/stop_dialogue
