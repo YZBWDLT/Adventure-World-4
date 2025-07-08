@@ -1,0 +1,76 @@
+# ===== 关卡游戏时时间线 =====
+# 10-2 | 进行最终结算
+
+# --- 剧情 ---
+    ## 等待中 | active.timeline = 1
+    ## 主线剧情 | active.timeline = 2
+        execute if score timeline active matches 2 run function aw/levels/end/stage2/timelines/main_dialogue
+    ## 张宇剧情 | active.timeline = 3
+        execute if score timeline active matches 3 run function aw/levels/end/stage2/timelines/zhangyu_dialogue
+    ## 量筒剧情 | active.timeline = 4
+        execute if score timeline active matches 4 run function aw/levels/end/stage2/timelines/yzbwdlt_dialogue
+    ## 巴豆剧情 | active.timeline = 5
+        execute if score timeline active matches 5 run function aw/levels/end/stage2/timelines/andy7343_dialogue
+    ## 绿叶剧情 | active.timeline = 6
+        execute if score timeline active matches 6 run function aw/levels/end/stage2/timelines/greeleaf_dialogue
+    ## 文雨剧情 | active.timeline = 7
+        execute if score timeline active matches 7 run function aw/levels/end/stage2/timelines/kriswenyu_dialogue
+    ## 鸽子剧情 | active.timeline = 8
+        execute if score timeline active matches 8 run function aw/levels/end/stage2/timelines/pigeonki_dialogue
+    ## 小鼠剧情 | active.timeline = 9
+        execute if score timeline active matches 9 run function aw/levels/end/stage2/timelines/xiaoshu512_dialogue
+    ## 比翼鸟剧情 | active.timeline = 10
+        execute if score timeline active matches 10 run function aw/levels/end/stage2/timelines/kianakasnala947_dialogue
+    ## 帕剧情 | active.timeline = 11
+        execute if score timeline active matches 11 run function aw/levels/end/stage2/timelines/hfpa0117_dialogue
+    ## 星辰剧情 | active.timeline = 12
+        execute if score timeline active matches 12 run function aw/levels/end/stage2/timelines/xc13599305_dialogue
+    ## 南瓜汁剧情 | active.timeline = 13
+        execute if score timeline active matches 13 run function aw/levels/end/stage2/timelines/pumpkinjui_dialogue
+    ## 蒙德人剧情 | active.timeline = 14
+        execute if score timeline active matches 14 run function aw/levels/end/stage2/timelines/tuffy2020china_dialogue
+    ## 火卫三剧情 | active.timeline = 15
+        execute if score timeline active matches 15 run function aw/levels/end/stage2/timelines/ibukreev_dialogue
+    ## 基岩剧情 | active.timeline = 16
+        execute if score timeline active matches 16 run function aw/levels/end/stage2/timelines/ender5207541_dialogue
+    ## 绿叶剧情 | active.timeline = 17
+        execute if score timeline active matches 17 run function aw/levels/end/stage2/timelines/rustyabyss29193_dialogue
+    ## 千里剧情 | active.timeline = 18
+        execute if score timeline active matches 18 run function aw/levels/end/stage2/timelines/enderlife5409_dialogue
+    ## 水晶哥剧情 | active.timeline = 19
+        execute if score timeline active matches 19 run function aw/levels/end/stage2/timelines/onekitty710926_dialogue
+    ## 风暴剧情 | active.timeline = 20
+        execute if score timeline active matches 20 run function aw/levels/end/stage2/timelines/foxlanmo_dialogue
+    ## 宽判剧情 | active.timeline = 21
+        execute if score timeline active matches 21 run function aw/levels/end/stage2/timelines/kuanpan_9527_dialogue
+    ## 龙龙剧情 | active.timeline = 22
+        execute if score timeline active matches 22 run function aw/levels/end/stage2/timelines/longlongxiaotao_dialogue
+# --- 林乐家 ---
+    ## 若有玩家在林乐家，且上一刻无玩家在林乐家时，触发玩家进入林乐家事件
+        execute if entity @a[x=-31,y=1,z=-52,dx=8,dy=8,dz=8] if score temp.hasPlayerInHome data matches 0 run function aw/levels/end/stage2/events/on_entry/home
+    ## 若无玩家在林乐家，且上一刻有玩家在林乐家时，触发玩家离开林乐家事件
+        execute unless entity @a[x=-31,y=1,z=-52,dx=8,dy=8,dz=8] if score temp.hasPlayerInHome data matches 1 run function aw/levels/end/stage2/events/on_exit/home
+    ## 若有玩家在林乐家楼上，且上一刻无玩家在林乐家楼上时，触发玩家进入林乐家楼上事件
+        execute if entity @a[x=-31,y=6,z=-52,dx=8,dy=3,dz=8] if score temp.hasPlayerInHomeUp data matches 0 run function aw/levels/end/stage2/events/on_entry/home_up
+    ## 若无玩家在林乐家楼上，且上一刻有玩家在林乐家楼上时，触发玩家离开林乐家楼上事件
+        execute unless entity @a[x=-31,y=6,z=-52,dx=8,dy=3,dz=8] if score temp.hasPlayerInHomeUp data matches 1 run function aw/levels/end/stage2/events/on_exit/home_up
+    ## 若有玩家在林乐家楼下，且上一刻无玩家在林乐家楼下时，触发玩家进入林乐家楼下事件
+        execute if entity @a[x=-31,y=1,z=-52,dx=8,dy=3,dz=8] if score temp.hasPlayerInHomeDown data matches 0 run function aw/levels/end/stage2/events/on_entry/home_down
+    ## 若无玩家在林乐家楼下，且上一刻有玩家在林乐家楼下时，触发玩家离开林乐家楼下事件
+        execute unless entity @a[x=-31,y=1,z=-52,dx=8,dy=3,dz=8] if score temp.hasPlayerInHomeDown data matches 1 run function aw/levels/end/stage2/events/on_exit/home_down
+
+    ## 若玩家按下了楼上的制作人名单按钮，则翻页并显示制作人名单
+        execute if block -25 7 -51 birch_button ["facing_direction"=1,"button_pressed_bit"=true] run function aw/levels/end/stage2/events/button_push/credits
+    ## 若玩家按下了楼下的制作人名单按钮，则翻页并显示成就
+        ### 上一页
+            execute if block -25 2 -45 birch_button ["facing_direction"=2,"button_pressed_bit"=true] run function aw/levels/end/stage2/events/button_push/prev_achievement
+        ### 下一页
+            execute if block -29 2 -45 birch_button ["facing_direction"=2,"button_pressed_bit"=true] run function aw/levels/end/stage2/events/button_push/next_achievement
+    ## 若玩家按下了楼下的统计数据按钮，则显示统计数据
+        execute if block -26 2 -51 birch_button ["facing_direction"=1,"button_pressed_bit"=true] run function aw/levels/end/stage2/events/button_push/stats
+
+# --- 张宇商店 ---
+    ## 若有玩家在张宇商店，且上一刻无玩家在张宇商店时，触发玩家离开张宇商店事件
+        execute if entity @a[x=-26,y=3,z=36,dx=16,dy=4,dz=8] if score temp.hasPlayerInShop data matches 0 run function aw/levels/end/stage2/events/on_entry/shop
+    ## 若无玩家在张宇商店，且上一刻有玩家在张宇商店时，触发玩家离开张宇商店事件
+        execute unless entity @a[x=-26,y=3,z=36,dx=16,dy=4,dz=8] if score temp.hasPlayerInShop data matches 1 run function aw/levels/end/stage2/events/on_exit/shop

@@ -35,6 +35,7 @@
 - 更名：烈焰之魂 -> 烈焰王
 - 现在仅限有中型或大型岩浆怪的波潮会启用关卡完成倒计时，而不再为有岩浆怪的关卡全关启用关卡倒计时。
   - 这个更改会使一些关卡的进程（例如 7-1、7-2）更顺滑一些。
+- 现在在 7-5 中，当 BOSS 使用火球攻击时，不再能使用盾挡住这次伤害。
 
 #### 信息板
 
@@ -54,6 +55,16 @@
 - 重新设计了全部剧情的相机镜头
 - 统一了中国版和国际版的剧情内容，不再单独做出适配
 - 移除了一个严重违规成员的制作人表
+- 现在在结束剧情中，田英将告知玩家的死亡次数，而不再是总的关卡失败次数
+- 现在成就不再能多次获取
+- 现在最佳时间将分为单人和多人，不再共用
+  - 例如，以前如果单人模式打难度 2，花费了 70 分钟，多人打难度 2 花了 35 分钟，那么最佳时间就会是难度 2 为 35 分钟
+  - 现在同样的情况下，将分别记录为单人难度 2 花了 70 分钟和多人难度 2 花了 35 分钟。
+
+### 漏洞修复
+
+- 尝试修复了在 6-4 中的变速齿轮（TPS 疑似严重降低）问题
+- 尝试修复了玩家可能会在进入游戏时就直接被判定为死亡的问题
 
 ### 底层更新
 
@@ -140,6 +151,7 @@
   - 标签`cheated` -> `data.hasCheat`
   - `record.achievement.singlePlayer_completeMap` -> `record.achievement.singlePlayer.finishMap`
   - `record.achievement.multiPlayer_completeMap` -> `record.achievement.multiPlayer.finishMap`
+  - `record.achievement.singlePlayer.notDied` -> `record.achievement.singlePlayer.neverDied`
 - **拆分**：
   - 记分板变量`isAlive.@s` -> 标签变量`spectator`，新值与旧值的对应关系为：
     - `isAlive.@s`=`0` -> `data.levelCompleted`=`0`&&`spectator`

@@ -2,6 +2,7 @@
 # 0-5 | 进入剑之试炼神殿（开幕时间线）
 
 # 设置关卡 ID
+scoreboard players set chapter data 0
 scoreboard players set level data 5
 
 # 调用通用函数

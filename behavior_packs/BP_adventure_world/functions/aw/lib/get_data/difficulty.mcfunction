@@ -18,6 +18,6 @@ execute if score alivePlayerAmount data matches 7.. run scoreboard players set d
 scoreboard players operation difficulty settings += extraDifficulty settings
 
 # --- 排除异常数值 ---
-# 确保data.difficulty在1~4范围内
+# 确保settings.difficulty在1~4范围内
 execute if score difficulty settings matches ..0 run scoreboard players set difficulty settings 1
 execute if score difficulty settings matches 5.. run scoreboard players set difficulty settings 4

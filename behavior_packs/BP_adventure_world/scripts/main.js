@@ -1,7 +1,7 @@
 // 使用命令或附加包难以实现的内容，使用脚本来实现
 // 将使用 SAPI 和 ModAPI 同时尝试实现
 
-import { Entity, EntityHealthComponent, Player, world } from "@minecraft/server";
+import { Entity, EntityHealthComponent, Player, ScoreboardIdentity, world } from "@minecraft/server";
 
 // 当玩家的御风珠砸中木板后，则传送玩家
 world.afterEvents.projectileHitBlock.subscribe(event => {
@@ -48,15 +48,15 @@ world.afterEvents.projectileHitEntity.subscribe(event => {
         const hitEntity = event.getEntityHit().entity;
         // 击中骷髅或流浪者后，直接秒杀
         if (immediateKill.includes(hitEntity?.typeId)) {
-            hitEntity.applyDamage( 1000, { cause: "entityAttack", damagingEntity: player } );
+            hitEntity.applyDamage(1000, { cause: "entityAttack", damagingEntity: player });
         }
         // 击中骷髅王后，施加额外伤害
         else if (dealsExtraDamage.includes(hitEntity?.typeId)) {
-            hitEntity.applyDamage( 5, { cause: "entityAttack", damagingEntity: player } );
+            hitEntity.applyDamage(5, { cause: "entityAttack", damagingEntity: player });
         }
     }
 
-})
+});
 
 // 当玩家使用物品后，则触发函数
 world.afterEvents.itemUse.subscribe(event => {
@@ -102,7 +102,7 @@ world.afterEvents.entityDie.subscribe(event => {
 });
 
 // 当玩家或烈焰王血量变化后，将其血量同步到health记分板上
-world.afterEvents.entitySpawn.subscribe( event => {
+world.afterEvents.entitySpawn.subscribe(event => {
     /** 刚生成的实体 */
     const entity = event.entity;
     /** 该实体的血量组件 @type {EntityHealthComponent} */
@@ -111,23 +111,23 @@ world.afterEvents.entitySpawn.subscribe( event => {
     const entityMaxHealth = entityHealth?.effectiveMax;
 
     // 此处是为了防止某些实体无血量而导致报错
-    if ( entityMaxHealth !== undefined ) {
+    if (entityMaxHealth !== undefined) {
         printHealth(entity, entityMaxHealth);
     }
-})
+});
 world.afterEvents.entityHealthChanged.subscribe(event => {
     printHealth(event.entity, event.newValue);
 });
-/**
+/** 将实体血量打印到 health 记分板上
  * @param {Entity} entity 实体
  * @param {number} healthValue 实体当前血量值 
 */
-function printHealth( entity, healthValue ) {
+function printHealth(entity, healthValue) {
     /** 要检查的实体 */
-    const entityTypes = [ "minecraft:player", "aw:blaze_king", "minecraft:evocation_illager" ];
+    const entityTypes = ["minecraft:player", "aw:blaze_king", "minecraft:evocation_illager"];
 
     // 若实体在允许的实体列表中，则打印实体血量到health记分板上
-    if ( entityTypes.includes(entity.typeId) ) {
+    if (entityTypes.includes(entity.typeId)) {
         /** 实体血量更改后的血量（整数型） */
         const healthValueInt = Math.ceil(healthValue);
         entity.runCommand(`scoreboard players set @s health ${healthValueInt}`);
