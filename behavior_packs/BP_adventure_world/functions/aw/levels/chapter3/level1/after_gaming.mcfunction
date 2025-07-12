@@ -3,7 +3,7 @@
 
 # --- 检查玩家进入下一个关卡 ---
 execute positioned -172 -20 11 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=3,dz=1.4,tag=!spectator,scores={deathState=0}] at @s run function aw/levels/chapter3/level2/start
-execute positioned -172 -20 11 positioned ~-1.5~-1~-1.5 as @e[dx=2,dy=3,dz=2,type=aw:wind_pearl] run kill @s
+execute positioned -172 -20 11 positioned ~-2~-1~-2 as @e[dx=3,dy=3,dz=3,type=aw:wind_pearl] run kill @s
 
 # --- 检查玩家进入水迷宫出口 ---
 # 在剧情模式下（data.storyMode == 1），当检查到未曾启用过动画（active.timeline == 1），且玩家到达出口后，则开始进行动画

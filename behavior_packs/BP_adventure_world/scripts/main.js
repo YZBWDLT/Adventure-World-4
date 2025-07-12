@@ -62,7 +62,6 @@ world.afterEvents.projectileHitEntity.subscribe(event => {
 world.afterEvents.itemUse.subscribe(event => {
     const usableItems = [
         "aw:toggle_wave",
-        "aw:summon_monsters",
         "aw:kill_monsters",
         "aw:acoustic_stone_crystal",
     ];

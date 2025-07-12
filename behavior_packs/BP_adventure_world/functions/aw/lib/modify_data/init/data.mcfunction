@@ -25,8 +25,6 @@
         scoreboard objectives add deathState dummy "死亡状态"
     ## 死亡次数记分项
         scoreboard objectives add deathCount dummy "死亡次数"
-    ## 死亡时长记分项
-        scoreboard objectives add deathTime dummy "死亡时长"
     ## 击杀数记分项
         scoreboard objectives add killCount dummy "击杀数"
     ## 生命值记分项
@@ -39,8 +37,6 @@
             scoreboard players set @a deathCount 0
         ### 玩家当前死亡状态，0：存活，1：刚刚死亡（还未记录死亡榜），2：长期死亡
             scoreboard players add @a deathState 0
-        ### 玩家持续处于死亡状态的时长（单位：游戏刻）
-            scoreboard players set @a deathTime 0
         ### 玩家击杀数
             scoreboard players set @a killCount 0
         ### 玩家是否在线

@@ -24,7 +24,5 @@ scoreboard players set timeLapse data 0
 function aw/lib/modify_data/levels/start_level
 
 # --- 关卡特殊功能 ---
-## 播放音乐
-function aw/lib/modify_data/play_music
 ## 设置重生点
 spawnpoint @a -119 -16 103

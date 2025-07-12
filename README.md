@@ -62,6 +62,7 @@
 - 移除了一个严重违规成员的制作人表
 - 现在在结束剧情中，田英将告知玩家的死亡次数，而不再是总的关卡失败次数
 - 现在成就不再能多次获取
+- 现在成就必须在非作弊模式下才能获取
 - 现在最佳时间将分为单人和多人，不再共用
   - 例如，以前如果单人模式打难度 2，花费了 70 分钟，多人打难度 2 花了 35 分钟，那么最佳时间就会是难度 2 为 35 分钟
   - 现在同样的情况下，将分别记录为单人难度 2 花了 70 分钟和多人难度 2 花了 35 分钟。
@@ -129,7 +130,6 @@
     - `deathState.@s`=`0`：未处于死亡状态
     - `deathState.@s`=`1`：刚刚死亡，但还未记录死亡榜
     - `deathState.@s`=`2`：长期死亡，还未复活
-  - `deathTime`记分板，用于记录玩家处于死亡状态的时长，单位：游戏刻
   - `health`记分板，用于记录玩家或实体的血量。
   - `data.allowPotionSupply: 0 | 1`，用于标记允许补充药水
   - `data.allowArrowSupply: 0 | 1`，用于标记允许补充箭
@@ -146,7 +146,6 @@
   - `data.alivePlayersAmount` -> `data.alivePlayerAmount`
   - `data.failedTimes` -> `data.failedCount.thisLevel`
   - `data.allFailedTimes` -> `data.failedCount.allLevels`
-  - `time.@s` -> `deathTime.@s`
   - `data.storyMode` -> `settings.storyMode`
   - `data.difficulty` -> `settings.difficulty`
   - `data.difficultyAdder` -> `settings.extraDifficulty`
@@ -175,6 +174,7 @@
   - `temp`、`temp2`、`temp3`记分板，现在使用`data`下的各`temp.`变量代替
   - `position.@s`，现在不再实时监测玩家所处位置，因其过于复杂且消耗性能
   - `data.maxMonsterAmount`，现在不再在怪物生成后检查最大怪物数
+  - `time.@s`，现在不再监控玩家处于死亡状态下的时长
 
 #### 关卡 ID
 

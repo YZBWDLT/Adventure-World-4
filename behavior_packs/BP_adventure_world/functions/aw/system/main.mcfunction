@@ -29,8 +29,8 @@ execute if score tick time matches 3 run function aw/system/controller/arrows
 function aw/system/controller/events
 
 # --- 关卡 ---
-## 时间线
-execute if score timeline active matches 1.. run function aw/system/controller/timeline
+## 时间线 | 必须在有玩家时执行，防止在退出重进后产生一些奇怪问题
+execute if score playerAmount data matches 1.. if score timeline active matches 1.. run function aw/system/controller/timeline
 ## 快捷栏 | 仅当试炼后开启
 execute if score chapter data matches 1..7 run function aw/system/controller/infoboard
 

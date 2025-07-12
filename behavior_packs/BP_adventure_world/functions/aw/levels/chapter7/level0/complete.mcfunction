@@ -27,3 +27,5 @@ fill -235 -30 97 -233 -30 99 red_stained_glass
 ## 生成章节名
 kill @e[has_property={aw:marker_type="name"}]
 summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§c封印神殿"
+## 播放音乐
+function aw/lib/modify_data/play_music

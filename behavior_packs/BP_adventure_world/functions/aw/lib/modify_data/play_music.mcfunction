@@ -22,8 +22,8 @@ execute if score chapter data matches 3 run music play aw.music.temple.lake 1 0 
 execute if score chapter data matches 4..5 run music play aw.music.temple.freeze 1 0 loop
 execute if score chapter data matches 6 run music play aw.music.temple.mountain 1 0 loop
 execute if score chapter data matches 7 run music play aw.music.temple.final 1 0 loop
-## 7-0（剑之神殿）的特殊音乐
-execute if score chapter data matches 7 if score level data matches 0 run music play aw.music.temple.sword 1 0 loop
+## 7-0（剑之神殿）完成前的特殊音乐
+execute if score chapter data matches 7 if score level data matches 0 if score levelCompleted data matches 0 run music play aw.music.temple.sword 1 0 loop
 ## 7-4 ~ 7-5的特殊音乐
 execute if score chapter data matches 7 if score level data matches 4..5 run music play aw.music.temple.final.level_4 1 0 loop
 ## BOSS关的特殊音乐（7-5仅第2波播放，存在前奏）

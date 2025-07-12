@@ -28,7 +28,6 @@ item.aw:change_to_adventure=Change To Adventure Mode
 item.aw:change_to_spectator=Change To Spectator Mode
 
 item.aw:toggle_wave=Toggle Wave
-item.aw:summon_monsters=Summon Monsters
 item.aw:kill_monsters=Kill Monsters
 
 ### Blocks

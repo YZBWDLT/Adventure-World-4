@@ -6,6 +6,8 @@
     ## 调用启动函数
         scoreboard players set chapter data 10
         function aw/levels/end/stage2/start
+    ## 关闭对话状态
+        function aw/lib/modify_data/stop_dialogue
     ## 设置不启用 stage2 的主线剧情
         scoreboard players set timeline active 1
     ## 进行一部分由 stage1 进行的初始化操作

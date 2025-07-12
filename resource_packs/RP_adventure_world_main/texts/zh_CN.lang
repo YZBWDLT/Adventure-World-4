@@ -28,7 +28,6 @@ item.aw:change_to_adventure=改为冒险模式
 item.aw:change_to_spectator=改为旁观模式
 
 item.aw:toggle_wave=调整波数
-item.aw:summon_monsters=生成怪物
 item.aw:kill_monsters=清除怪物
 
 ### 方块类

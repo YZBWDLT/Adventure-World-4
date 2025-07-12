@@ -13,7 +13,6 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§l===== 玩家数据 =====" } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bdeathCount.@s = §a%%s §7| 玩家当前死亡次数", "with": { "rawtext": [ { "score":{ "objective": "deathCount", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bdeathState.@s = §a%%s §7| 玩家当前死亡状态 | 0：未死亡，1：刚刚死亡，2：已死亡", "with": { "rawtext": [ { "score":{ "objective": "deathState", "name": "@s" } } ] } } ] }
-execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bdeathTime.@s = §a%%s §7| 玩家持续处于死亡状态的时长 | 单位：游戏刻", "with": { "rawtext": [ { "score":{ "objective": "deathTime", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bhealth.@s = §a%%s §7| 玩家生命值", "with": { "rawtext": [ { "score":{ "objective": "health", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bkillCount.@s = §a%%s §7| 玩家击杀数", "with": { "rawtext": [ { "score":{ "objective": "killCount", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bisOnline.@s = §a%%s §7| 玩家是否在线 | 0：刚进入游戏，1：在线", "with": { "rawtext": [ { "score":{ "objective": "isOnline", "name": "@s" } } ] } } ] }

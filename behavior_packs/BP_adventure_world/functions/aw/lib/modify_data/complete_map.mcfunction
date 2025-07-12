@@ -5,7 +5,7 @@
 # 获取或修改数据
     ## 获取成就
         tellraw @a {"rawtext":[{"translate":"§l===== 成就获取 =====\n"}]}
-        function aw/lib/achievements/get
+        execute if score hasCheat data matches 0 run function aw/lib/achievements/get
     ## 获取最佳时间
         execute if score hasCheat data matches 0 run function aw/lib/get_data/best_time
     ## 获取分数

@@ -112,7 +112,6 @@ class AdventureWorld4Server(ServerSystem):
     def itemUse(self, event): # type: ( sapi.ItemUseAfterEvent ) -> None
         usableItems = [
             "aw:toggle_wave",
-            "aw:summon_monsters",
             "aw:kill_monsters",
             "aw:acoustic_stone_crystal",
         ]
