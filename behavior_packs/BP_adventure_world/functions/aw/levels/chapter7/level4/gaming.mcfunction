@@ -44,10 +44,10 @@ execute if score wave data matches 2 if score storyMode settings matches 1 if sc
 execute if score wave data matches 2 if score storyMode settings matches 0 if score timeline time matches 100 run tellraw @a {"rawtext":[{"text":"* §c这里发生了时空错乱，以前的怪物也开始纷纷出现在这里了！"}]}
 execute if score wave data matches 2 if score storyMode settings matches 0 if score timeline time matches 101 run function aw/lib/modify_data/states/timeline/disable_time_lapse
 
-## 第 4 波的剧情
+## 第 5 波的剧情
 
-execute if score wave data matches 4 if score storyMode settings matches 1 if score timeline time matches 100 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7天哪，这个刷怪位置...这里变得越来越反常了啊。"}]}
-execute if score wave data matches 4 if score storyMode settings matches 1 if score timeline time matches 101 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+execute if score wave data matches 5 if score storyMode settings matches 1 if score timeline time matches 100 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7天哪，这个刷怪位置...这里变得越来越反常了啊。"}]}
+execute if score wave data matches 5 if score storyMode settings matches 1 if score timeline time matches 101 run function aw/lib/modify_data/states/timeline/disable_time_lapse
 
-execute if score wave data matches 4 if score storyMode settings matches 0 if score timeline time matches 100 run tellraw @a {"rawtext":[{"text":"§7§o以防误解，烈焰王的刷怪位置没有出问题哦"}]}
-execute if score wave data matches 4 if score storyMode settings matches 0 if score timeline time matches 101 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+execute if score wave data matches 5 if score storyMode settings matches 0 if score timeline time matches 100 run tellraw @a {"rawtext":[{"text":"§7§o以防误解，烈焰王的刷怪位置没有出问题哦"}]}
+execute if score wave data matches 5 if score storyMode settings matches 0 if score timeline time matches 101 run function aw/lib/modify_data/states/timeline/disable_time_lapse

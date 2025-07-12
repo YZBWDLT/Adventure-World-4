@@ -4,12 +4,12 @@
         "controller.render.spawner": {
             "materials": [
                 {
-                    "*": "material.default"
+                    "*": "v.type == 19 ? material.magma_cube : ( v.type == 24 ? material.blaze : material.default )"
                 }
             ],
-            "geometry": "array.geo[query.property('aw:monster_type')]",
+            "geometry": "array.geo[v.type]",
             "textures": [
-                "array.tex[query.property('aw:monster_type')]"
+                "array.tex[v.type]"
             ],
             "arrays": {
                 "geometries": {

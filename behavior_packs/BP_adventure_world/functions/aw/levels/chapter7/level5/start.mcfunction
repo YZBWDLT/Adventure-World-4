@@ -25,8 +25,6 @@ function aw/levels/chapter7/level5/waves/wave_1
         function aw/lib/modify_data/states/timeline/enable_time_lapse
 
 # --- 关卡特殊功能 ---
-## 加载初始结构
-    structure load aw:7_5_phase1 -246 -54 23
 ## 将时间线状态设置为 1
     scoreboard players set timeline active 1
 ## 临时变量设置

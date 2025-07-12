@@ -10,3 +10,6 @@ effect @a blindness 9 0 true
 
 # 启用对话状态
 function aw/lib/modify_data/start_dialogue
+
+# 加载 7-5 的初始结构
+structure load aw:7_5_phase1 -246 -54 23

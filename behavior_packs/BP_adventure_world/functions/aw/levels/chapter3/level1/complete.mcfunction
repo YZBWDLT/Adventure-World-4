@@ -3,6 +3,7 @@
 
 # --- 调用通用函数 ---
 function aw/lib/modify_data/levels/complete_level
+scoreboard players set timeline active 1
 
 # --- 设置重生点 ---
 spawnpoint @a -188 -20 29

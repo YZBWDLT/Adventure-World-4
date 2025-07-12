@@ -8,8 +8,8 @@
         execute as @a at @s run tellraw @s {"rawtext":[{"translate":"击杀数 | §a%%s","with":{"rawtext":[{"score":{"objective":"killCount","name":"@s"}}]}}]}
         execute as @a at @s run tellraw @s {"rawtext":[{"translate":"死亡次数 | §a%%s","with":{"rawtext":[{"score":{"objective":"deathCount","name":"@s"}}]}}]}
     ## 单人模式
-        execute if score playerAmount data matches 1 if score potionUsed data matches 0 run tellraw @a {"rawtext":[{"translate":"是否使用过药水 | §a是"}]}
-        execute if score playerAmount data matches 1 if score potionUsed data matches 1 run tellraw @a {"rawtext":[{"translate":"是否使用过药水 | §a否"}]}
+        execute if score playerAmount data matches 1 if score potionUsed data matches 0 run tellraw @a {"rawtext":[{"translate":"是否使用过药水 | §a否"}]}
+        execute if score playerAmount data matches 1 if score potionUsed data matches 1 run tellraw @a {"rawtext":[{"translate":"是否使用过药水 | §a是"}]}
 
 # 综合评价（仅单人模式）
     execute if score playerAmount data matches 1 run tellraw @a {"rawtext":[{"translate":"§l===== 综合评价 =====\n"}]}

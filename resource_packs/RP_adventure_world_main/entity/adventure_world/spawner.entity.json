@@ -7,7 +7,11 @@
                 "controller.render.spawner",
                 { "controller.render.spawner_stray_armor": "query.property('aw:monster_type')==10" }
             ],
-            "materials": { "default": "entity_alphatest" },
+            "materials": {
+                "default": "entity_alphatest",
+                "magma_cube": "magma_cube",
+                "blaze": "blaze_body"
+            },
             "geometry": {
                 "default": "geometry.spawner_zombie",
                 "spawner_zombie": "geometry.spawner_zombie",
@@ -41,7 +45,7 @@
                 "piglin": "textures/entity/piglin/piglin",
                 "piglin_brute": "textures/entity/piglin/piglin_brute",
                 "hoglin": "textures/entity/hoglin/hoglin",
-                "magma_cube": "textures/entity/slime/magmacube_v2",
+                "magma_cube": "textures/entity/slime/magmacube",
                 "silverfish": "textures/entity/silverfish",
                 "ghast": "textures/entity/ghast/ghast",
                 "witch": "textures/entity/witch",
@@ -51,11 +55,14 @@
             },
 
             "animations": {
-                "hint_default": "animation.spawner.hint_default"
+                "spin": "animation.spawner.spin"
             },
             "scripts": {
+                "pre_animation": [
+                    "v.type = query.property('aw:monster_type');"
+                ],
                 "animate": [
-                    "hint_default"
+                    "spin"
                 ]
             }
         }
