@@ -91,8 +91,9 @@
 
 - 现在每种物品都使用`1.20.50`的格式版本
 - 将`aw:hookshot`改为了`aw:wind_pearl`
-- 移除了`aw:enable_crosshair`
+- 移除了`aw:enable_crosshair`，因现在使用御风珠
 - 移除了`aw:main_potion_used`和`aw:vice_potion_used`物品
+- 移除了`aw:summon_monsters`物品，因现在可直接调用各关卡的`waves/`函数
 
 #### 方块
 
