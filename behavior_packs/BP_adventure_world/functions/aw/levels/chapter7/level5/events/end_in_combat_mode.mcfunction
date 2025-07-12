@@ -4,6 +4,7 @@
     function aw/lib/modify_data/complete_map
 # 开启 stage2
     ## 调用启动函数
+        scoreboard players set chapter data 10
         function aw/levels/end/stage2/start
     ## 设置不启用 stage2 的主线剧情
         scoreboard players set timeline active 1

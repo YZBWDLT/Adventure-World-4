@@ -20,6 +20,6 @@ gamemode adventure @a
 ## 清除信标
 fill 43 25 86 45 25 86 air replace beacon
 ## 清除悬浮文本
-kill @e[type=aw:text_display]
+event entity @e[type=aw:text_display] aw:remove_immediately
 ## 提示玩家打开音乐
 tellraw @a {"rawtext":[{"translate":"§7为保证游戏体验，请将§b设置 - 音频 - 音乐§7调至§b100§7"}]}

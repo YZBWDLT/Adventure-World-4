@@ -21,6 +21,10 @@
     ## 楼下：米云溪的翻译手稿
         structure load aw:lecture_with_book -27 1 -45
 
+# 生成悬浮文本
+    function aw/levels/end/stage2/events/show_author_group
+    function aw/levels/end/stage2/events/on_exit/home
+
 # 临时变量设置
     ## 是否有玩家在林乐家
         scoreboard players set temp.hasPlayerInHome data 0
@@ -33,6 +37,6 @@
     ## 当前显示的制作人页数
         scoreboard players set temp.creditPage data 0
     ## 当前显示的成就页数
-        scoreboard players set temp.achievementPage data 0
+        scoreboard players set temp.achievementPage data 1
     ## 当前显示的统计页数
         scoreboard players set temp.statPage data 1

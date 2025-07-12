@@ -15,7 +15,7 @@
     summon aw:npc -14 1 89 facing @p aw:npc_zhangyu "张宇"
 
 # 传送玩家并设置重生点
-    tp @a -15.0 1 82 facing @e[c=1,name="张宇"]
+    tp @a -15.0 1 82 facing -14 1 89
     spawnpoint @a -16 1 82
 
 # 设置临时变量
@@ -31,12 +31,13 @@
         setblock -13 2 87 stonebrick ["stone_brick_type"="chiseled"]
         setblock -13 1 87 cobblestone_wall ["wall_block_type"="stone_brick"]
         setblock -13 2 86 polished_blackstone_button ["facing_direction"=2]
-        summon aw:text_display "§a更改难度" -13 1.4 87
     ## 更改模式按钮
         setblock -18 2 87 stonebrick ["stone_brick_type"="chiseled"]
         setblock -18 1 87 cobblestone_wall ["wall_block_type"="stone_brick"]
         setblock -18 2 86 polished_blackstone_button ["facing_direction"=2]
-        summon aw:text_display "§a更改模式" -18 1.4 87
+    ## 显示文本展示实体
+        function aw/levels/end/stage3/events/show_difficulty
+        function aw/levels/end/stage3/events/show_mode
     ## 各按钮介绍
         summon aw:text_display "§b与张宇交互回到村庄" -15.0 2.3 90
         summon aw:text_display "§b进入神殿以按照你的设置开始新的试炼" -15.0 2.0 90

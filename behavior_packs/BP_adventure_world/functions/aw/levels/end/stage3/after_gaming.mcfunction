@@ -9,9 +9,8 @@ execute positioned -18 -3 99 if entity @a[dx=5,dy=0.3,dz=3] run function aw/leve
         execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"translate":"* §e张宇： §7你要回去吗？"}]}
     ## 进入对话状态
         execute if score timeline time matches 1 run function aw/lib/modify_data/start_dialogue_keep
-    ## 失明并黑屏
-        execute if score timeline time matches 10 run effect @a blindness 4 0 true
-        execute if score timeline time matches 50 run camera @a fade time 1 3 1
+    ## 黑屏
+        execute if score timeline time matches 50 run camera @a fade time 1 2 1
     ## 剧情结束
         execute if score timeline time matches 100 run function aw/levels/end/stage3/events/back_to_stage2
 # --- 神殿前 ---

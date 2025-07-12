@@ -2,7 +2,7 @@
 
 # --- 倒计时 ---
 scoreboard players remove temp.lavaRiseCountdown time 1
-execute if score temp.lavaRiseCountdown time matches ..-7 run scoreboard players random temp.lavaRiseCountdown time 8 20
+execute if score temp.lavaRiseCountdown time matches ..-7 run scoreboard players random temp.lavaRiseCountdown time 15 30
 
 # --- 警告玩家岩浆即将上涨 ---
 # 剩余 5 秒时警告，当 Boss 血量剩余 1/3 以上时上涨 1 层，剩余 1/3 以下时上涨 2 层

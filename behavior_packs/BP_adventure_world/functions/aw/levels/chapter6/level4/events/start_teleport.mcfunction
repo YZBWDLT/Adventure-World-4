@@ -11,4 +11,4 @@ scoreboard players reset temp.teleportPos data
 
 execute as @a at @s run playsound mob.shulker.teleport @s ~~~ 1 0.5
 
-scoreboard players random temp.teleportCountdown time 6 10
+scoreboard players random temp.teleportCountdown time 10 15
