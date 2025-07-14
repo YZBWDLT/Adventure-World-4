@@ -41,12 +41,13 @@
 # 第 6 章
     execute if score chapter data matches 6 if score level data matches 0 run tp @s -81 -30 -28
     execute if score chapter data matches 6 if score level data matches 1 run tp @s -76 -30 -48
-    execute if score chapter data matches 6 if score level data matches 2 run tp @s -80 -18 -46
+    execute if score chapter data matches 6 if score level data matches 2 run tp @s -80 -18 -48
     execute if score chapter data matches 6 if score level data matches 3 run tp @s -75 -36 -15
     execute if score chapter data matches 6 if score level data matches 4 run tp @s -75 -38 22
 
 # 第 7 章
-    execute if score chapter data matches 7 if score level data matches 0 run tp @s -87 -39 96
+    execute if score chapter data matches 7 if score level data matches 0 if score levelCompleted data matches 0 run tp @s -87 -39 96
+    execute if score chapter data matches 7 if score level data matches 0 if score levelCompleted data matches 1 run tp @s -119 -16 103
     execute if score chapter data matches 7 if score level data matches 1 run tp @s -119 -16 103
     execute if score chapter data matches 7 if score level data matches 2 run tp @s -161 -17 110
     execute if score chapter data matches 7 if score level data matches 3 run tp @s -194 -17 97

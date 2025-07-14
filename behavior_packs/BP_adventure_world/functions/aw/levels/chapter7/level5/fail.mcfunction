@@ -14,6 +14,7 @@ fill -238 -45 31 -212 -45 57 air destroy
 function aw/lib/modify_data/play_music
 ## 将时间线状态改回 2
 scoreboard players set timeline active 2
+function aw/lib/modify_data/states/timeline/disable_time_lapse
 ## 移除临时变量
 scoreboard players reset temp.stage data
 scoreboard players reset temp.skillCd time

@@ -1,5 +1,5 @@
 # ===== 完成关卡 =====
-# (X)-(Y)
+# 6-1
 
 # --- 调用通用函数 ---
 function aw/lib/modify_data/levels/complete_level

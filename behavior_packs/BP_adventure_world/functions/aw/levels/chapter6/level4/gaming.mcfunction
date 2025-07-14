@@ -11,9 +11,9 @@ execute if score alivePlayerAmount data matches 0 run function aw/levels/chapter
 
 # --- 阻止旁观模式的玩家出界 ---
 # 不处理正处于死亡状态的玩家
-# 在该关卡上方80格的位置存在与该房间同样大小的屏障外壳，只要眼部或者脚部检查到上方80格为屏障就立刻判定为出界
-execute as @a[tag=spectator,scores={deathState=0}] at @s if block ~~80~ barrier positioned -75 -38 22 run function aw/lib/modify_data/out_of_border
+# 在该关卡上方80格的位置存在与该房间同样大小的屏障外壳，只要眼部检查到上方80格为屏障就立刻判定为出界
 execute as @a[tag=spectator,scores={deathState=0}] at @s anchored eyes if block ~~80~ barrier positioned -75 -38 22 run function aw/lib/modify_data/out_of_border
+execute as @a[tag=spectator,scores={deathState=0}] positioned -75 -36 -15 if entity @s[r=2] run tp @s -75 -38 22
 
 # --- BOSS 血量阈值设置 ---
 # （设置在生成函数 aw/entities/spawner/blaze_king中，自动输出data.temp.bossHealthTwoThird和data.temp.bossHealthOneThird）

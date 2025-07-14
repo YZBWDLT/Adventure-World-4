@@ -87,6 +87,8 @@
             scoreboard players set maxWave data 1
         ### 关卡完成倒计时，在怪物全部被消灭后还有多久完成关卡，仅在部分有岩浆怪的关卡中使用（单位：游戏刻）
             scoreboard players set levelCompleteCountdown time 0
+        ### 是否正在 X-Y（1<=X<=7, Y!=0）的游玩状态，0：未处于游玩状态，1：正处于游玩状态
+            scoreboard players set gaming data 0
 
     ## 游玩时长
         ### 玩家游玩的时长，仅限开始游戏后记录（单位：秒）

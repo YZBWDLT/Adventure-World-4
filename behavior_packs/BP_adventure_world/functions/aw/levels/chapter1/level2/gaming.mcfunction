@@ -11,4 +11,6 @@ execute if score alivePlayerAmount data matches 0 run function aw/levels/chapter
 
 # --- 阻止旁观模式的玩家出界 ---
 # 不处理正处于死亡状态的玩家
-execute as @a[tag=spectator,scores={deathState=0}] at @s unless entity @s[x=-132.0,y=6.0,z=52.0,dx=12,dy=5,dz=12] positioned -126 5 52 run function aw/lib/modify_data/out_of_border
+# 在该关卡上方80格的位置存在与该房间同样大小的屏障外壳，只要眼部检查到上方80格为屏障就立刻判定为出界
+execute as @a[tag=spectator,scores={deathState=0}] at @s anchored eyes if block ~~80~ barrier positioned -126 5 52 run function aw/lib/modify_data/out_of_border
+execute as @a[tag=spectator,scores={deathState=0}] positioned -117 2 16 if entity @s[r=2] run tp @s -126 5 52
