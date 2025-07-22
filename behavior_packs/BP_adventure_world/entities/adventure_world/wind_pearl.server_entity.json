@@ -15,6 +15,9 @@
             },
             "minecraft:projectile": {
                 "on_hit": {
+                    "impact_damage": {
+                        "knockback": true
+                    },
                     "remove_on_hit": {},
                     "particle_on_hit": {
                         "particle_type": "snowballpoof",
@@ -27,11 +30,7 @@
                 "power": 1.5,
                 "gravity": 0.03,
                 "angle_offset": 0.0,
-                "offset": [
-                    0,
-                    -0.1,
-                    0
-                ]
+                "offset": [ 0, -0.1, 0 ]
             },
             "minecraft:physics": {},
             "minecraft:pushable": {
