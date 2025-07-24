@@ -18,5 +18,5 @@ gamemode adventure @a
 fill 43 25 86 45 25 86 air replace beacon
 ## 清除悬浮文本
 event entity @e[type=aw:text_display] aw:remove_immediately
-## 提示玩家打开音乐
-tellraw @a {"rawtext":[{"translate":"§7为保证游戏体验，请将§b设置 - 音频 - 音乐§7调至§b100§7"}]}
+## 提示玩家调整设置
+tellraw @a {"rawtext":[{"translate":"§7§l为保证游戏体验，请提前进行如下设置：§r\n§7* §b音频 - 音乐§7调至§b100§r\n§7* §b辅助功能 - 文本背景不透明度§7调至§b0%%§7§o（如有的话请调整）"}]}
