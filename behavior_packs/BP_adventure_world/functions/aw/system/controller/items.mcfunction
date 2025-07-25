@@ -61,8 +61,8 @@ execute if score temp.gameId data matches 100..130 run replaceitem entity @a[has
 execute if score temp.gameId data matches 100..230 run replaceitem entity @a[hasitem={item=leather_chestplate,quantity=0,location=slot.armor.chest}] slot.armor.chest 0 leather_chestplate 1 0 {"item_lock":{"mode":"lock_in_slot"}}
 ### 皮革护腿 | 1-0 ~ 2-2结束前，锁定到槽位上
 execute if score temp.gameId data matches 100..220 run replaceitem entity @a[hasitem={item=leather_leggings,quantity=0,location=slot.armor.legs}] slot.armor.legs 0 leather_leggings 1 0 {"item_lock":{"mode":"lock_in_slot"}}
-### 皮革靴子 | 1-0 ~ 6-4结束前，在1-1结束前锁定到槽位上
-execute if score temp.gameId data matches 100..110 run replaceitem entity @a[hasitem={item=leather_boots,quantity=0,location=slot.armor.feet}] slot.armor.feet 0 leather_boots 1 0 {"item_lock":{"mode":"lock_in_slot"}}
+### 皮革靴子 | 1-0 ~ 6-4结束前
+execute if score temp.gameId data matches 100..110 run replaceitem entity @a[hasitem={item=leather_boots,quantity=0,location=slot.armor.feet}] slot.armor.feet 0 leather_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 execute if score temp.gameId data matches 111..640 run give @a[hasitem={item=leather_boots,quantity=0}] leather_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 普通剑 | 1-0 ~ 3-4结束前
 execute if score temp.gameId data matches 100..340 run give @a[hasitem={item=aw:normal_sword,quantity=0}] aw:normal_sword 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
@@ -107,11 +107,11 @@ execute if score temp.gameId data matches 611.. run enchant @a[hasitem={item=bow
 execute if score temp.gameId data matches 710..999 run give @a[hasitem={item=aw:wild_sword,quantity=0}] aw:wild_sword 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 ## 每隔1分钟，重置具有耐久度限制的非满耐久物品的耐久
-### 皮革靴子 | 1-1结束后 ~ 6-4结束前，仅限穿着时
-execute if score playedSecond time matches 0 if score temp.gameId data matches 111..640 as @a[hasitem={item=leather_boots,location=slot.armor.feet}] unless entity @s[hasitem={item=leather_boots,location=slot.armor.feet,data=0}] run replaceitem entity @s slot.armor.feet 0 leather_boots
+### 皮革靴子 | 1-0 ~ 6-4结束前，仅限穿着时
+execute if score playedSecond time matches 0 if score temp.gameId data matches 100..640 as @a[hasitem={item=leather_boots,location=slot.armor.feet}] unless entity @s[hasitem={item=leather_boots,location=slot.armor.feet,data=0}] run replaceitem entity @s slot.armor.feet 0 leather_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 盾 | 4-1结束后 ~，仅限手持时
-execute if score playedSecond time matches 0 if score temp.gameId data matches 411.. as @a[hasitem={item=shield,location=slot.weapon.offhand}] unless entity @s[hasitem={item=shield,location=slot.weapon.offhand,data=0}] run replaceitem entity @s slot.weapon.offhand 0 shield
-execute if score playedSecond time matches 0 if score temp.gameId data matches 411.. as @a[hasitem={item=shield,location=slot.weapon.mainhand}] unless entity @s[hasitem={item=shield,location=slot.weapon.mainhand,data=0}] run replaceitem entity @s slot.weapon.mainhand 0 shield
+execute if score playedSecond time matches 0 if score temp.gameId data matches 411.. as @a[hasitem={item=shield,location=slot.weapon.offhand}] unless entity @s[hasitem={item=shield,location=slot.weapon.offhand,data=0}] run replaceitem entity @s slot.weapon.offhand 0 shield 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+execute if score playedSecond time matches 0 if score temp.gameId data matches 411.. as @a[hasitem={item=shield,location=slot.weapon.mainhand}] unless entity @s[hasitem={item=shield,location=slot.weapon.mainhand,data=0}] run replaceitem entity @s slot.weapon.mainhand 0 shield 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 
 ## 移除备用变量
 scoreboard players reset temp.gameId data
