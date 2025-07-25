@@ -8,4 +8,4 @@
     function aw/lib/get_data/difficulty
 ## 游玩状态判断
     scoreboard players set gaming data 0
-    execute if score level data matches 1..7 unless score level data matches 0 if score levelCompleted data matches 0 run scoreboard players set gaming data 1
+    execute if score chapter data matches 1..7 unless score level data matches 0 if score levelCompleted data matches 0 run scoreboard players set gaming data 1
