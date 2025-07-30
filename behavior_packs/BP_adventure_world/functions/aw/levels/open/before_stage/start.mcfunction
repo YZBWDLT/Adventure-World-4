@@ -11,7 +11,8 @@ function aw/lib/modify_data/init/data
 function aw/lib/modify_data/states/timeline/enable
 
 # 关闭 HUD
-scoreboard players set allowHud data 0
+hud @a hide all
+hud @a reset touch_controls
 
 # 玩家游戏模式
 gamemode adventure @a

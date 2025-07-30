@@ -15,4 +15,4 @@ effect @a[c=1] invisibility 0 1 true
 scoreboard players set allowNpcInteraction data 0
 
 # --- 禁用 HUD ---
-scoreboard players set allowHud data 0
+hud @a hide all

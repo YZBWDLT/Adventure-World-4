@@ -13,7 +13,6 @@ scoreboard players set timeline active 2
 # --- 相机黑屏 ---
 camera @a fade time 2 10 5 color 0 0 0
 
-
 # --- 双模式的通用内容 ---
 ## 玩家模式
 gamemode adventure @a

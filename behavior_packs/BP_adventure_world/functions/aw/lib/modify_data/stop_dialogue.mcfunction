@@ -21,4 +21,4 @@ scoreboard players set allowNpcInteraction data 1
 camera @a clear
 
 # --- 禁用 HUD ---
-scoreboard players set allowHud data 1
+hud @a reset all

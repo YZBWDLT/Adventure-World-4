@@ -15,5 +15,5 @@ scoreboard players set allowNpcInteraction data 1
 # --- 恢复玩家的相机 ---
 camera @a clear
 
-# --- 禁用 HUD ---
-scoreboard players set allowHud data 1
+# --- 恢复 HUD ---
+hud @a reset all

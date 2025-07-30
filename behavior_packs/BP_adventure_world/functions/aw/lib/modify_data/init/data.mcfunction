@@ -118,8 +118,6 @@
             scoreboard players set allowAcousticStoneCrystal data 0
         ### 是否允许补充箭，0：不允许，1：允许
             scoreboard players set allowArrowSupply data 0
-        ### 是否允许显示 HUD，0：禁用，1：启用
-            scoreboard players set allowHud data 1
         ### NPC 是否允许交互，0：禁用，1：启用
             scoreboard players set allowNpcInteraction data 1
         ### 是否允许补充药水，0：不允许，1：允许
