@@ -1,6 +1,6 @@
-# ===== 重进玩家执行的命令 =====
-# 当玩家重新进入游戏后，执行的命令
-# 调用此方法时：需修饰执行者和执行位置为重进玩家及其位置（execute as @a[scores={isOnline=0}] at @s）。
+# ===== 事件：玩家进入游戏 =====
+# 当玩家进入游戏后，执行的命令
+# 调用此方法时：仅aw/system/main函数可执行，需修饰执行者和执行位置为重进玩家及其位置（execute as @a[scores={isOnline=0}] at @s）。
 
 # --- 更新玩家数据 ---
     scoreboard players add @s deathCount 0

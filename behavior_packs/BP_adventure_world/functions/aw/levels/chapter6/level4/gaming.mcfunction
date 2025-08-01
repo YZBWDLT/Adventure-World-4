@@ -22,10 +22,16 @@ execute as @a[tag=spectator,scores={deathState=0}] positioned -75 -36 -15 if ent
 # 每秒执行 1 次。BOSS 的血量值通过脚本获取。
 
 ## 岩浆涨落
-execute if score tick time matches 5 run function aw/levels/chapter6/level4/events/rise_lava
+execute if score tick time matches 5 run function aw/levels/chapter6/level4/timelines/rise_lava
 ## 随机传送
-execute if score tick time matches 8 run function aw/levels/chapter6/level4/events/teleport
+execute if score tick time matches 8 run function aw/levels/chapter6/level4/timelines/teleport
 ## 召唤怪物 | 仅当 BOSS 血量不足 2/3 时执行
-execute if score @e[type=aw:blaze_king,c=1] health < temp.bossHealthTwoThird data if score tick time matches 11 run function aw/levels/chapter6/level4/events/spawn_monster
+execute if score @e[type=aw:blaze_king,c=1] health < temp.bossHealthTwoThird data if score tick time matches 11 run function aw/levels/chapter6/level4/timelines/spawn_monster
 ## 回血 | 仅当 BOSS 血量不足 1/3 时执行
-execute if score @e[type=aw:blaze_king,c=1] health < temp.bossHealthOneThird data if score tick time matches 14 run function aw/levels/chapter6/level4/events/heal_boss
+execute if score @e[type=aw:blaze_king,c=1] health < temp.bossHealthOneThird data if score tick time matches 14 run function aw/levels/chapter6/level4/timelines/heal_boss
+
+# --- 死亡的玩家进行倒计时复活 ---
+# 每秒执行 1 次。
+
+execute if score tick time matches 11 run scoreboard players remove @a[tag=spectator,scores={temp.respawnTime=1..}] temp.respawnTime 1
+execute if score tick time matches 11 run scoreboard players remove @a[tag=spectator,scores={temp.respawnTime=1..}] temp.respawnTime 1

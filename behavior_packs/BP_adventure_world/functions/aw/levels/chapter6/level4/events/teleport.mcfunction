@@ -1,4 +1,15 @@
 # ===== 随机传送 =====
+# 在倒计时结束后执行
 
-scoreboard players remove temp.teleportCountdown time 1
-execute if score temp.teleportCountdown time matches ..0 if score monsterAmount data matches ..9 run function aw/levels/chapter6/level4/events/start_teleport
+# --- 随机位置 ---
+scoreboard players random temp.teleportPos data 1 5
+execute if score temp.teleportPos data matches 1 run tp @e[type=aw:blaze_king] -75 -37 35
+execute if score temp.teleportPos data matches 2 run tp @e[type=aw:blaze_king] -66 -39 26
+execute if score temp.teleportPos data matches 3 run tp @e[type=aw:blaze_king] -84 -39 44
+execute if score temp.teleportPos data matches 4 run tp @e[type=aw:blaze_king] -66 -37 44
+execute if score temp.teleportPos data matches 5 run tp @e[type=aw:blaze_king] -84 -37 26
+scoreboard players reset temp.teleportPos data
+
+execute as @a at @s run playsound mob.shulker.teleport @s ~~~ 1 0.5
+
+scoreboard players random temp.teleportCountdown time 10 15
