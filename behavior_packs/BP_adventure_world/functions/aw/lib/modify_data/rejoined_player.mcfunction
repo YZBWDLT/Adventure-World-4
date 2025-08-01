@@ -12,21 +12,33 @@
     ## 玩家数
         function aw/lib/get_data/player_amount
 
-# --- 多人游戏 ---
-    # 在 data.playerAmount >= 2 时进行
+# --- 移除玩家物品和药效 ---
+    execute if score playerAmount data matches 2.. run clear @s
+    effect @s clear
 
-    ## 玩家进入到正在进行中的游戏时，改为旁观者 | 在游戏中时进行
-        execute if score playerAmount data matches 2.. if score gaming data matches 1 run tellraw @s {"rawtext":[{"translate":"§e检测到您重新进入游戏，已将您调整为旁观者。在下一波开始后，您便可以参与游戏。"}]}
-        execute if score playerAmount data matches 2.. if score gaming data matches 1 run tellraw @s {"rawtext":[{"translate":"§7§l为保证游戏体验，请提前进行如下设置：§r\n§7* §b音频 - 音乐§7调至§b100§r\n§7* §b辅助功能 - 文本背景不透明度§7调至§b0%%§7§o（如有的话请调整）"}]}
-        execute if score playerAmount data matches 2.. if score gaming data matches 1 run tag @s add spectator
-    ## 传送进入的玩家到本关重生点上
-        execute if score playerAmount data matches 2.. run function aw/lib/level_pos_data/teleport
-    ## 移除玩家的药效
-        execute if score playerAmount data matches 2.. run effect @s clear
+# --- 提示玩家进行设置 ---
+    # 仅在多人时执行
+
+    execute if score playerAmount data matches 2.. run tellraw @s {"rawtext":[{"translate":"§7§l为保证游戏体验，请提前进行如下设置：§r\n§7* §b音频 - 音乐§7调至§b100§r\n§7* §b辅助功能 - 文本背景不透明度§7调至§b0%%§7§o（如有的话请调整）"}]}
 
 # --- 播放音乐 ---
     tellraw @a[scores={isOnline=!0}] {"rawtext":[{"translate":"§7检测到有玩家进入游戏，为确保游戏体验，将重新播放场景音乐"}]}
     function aw/lib/modify_data/play_music
+
+# --- 执行各关卡内部函数 ---
+
+## 开幕&村庄剧情
+    execute if score chapter data matches 0 run function aw/levels/open/player_rejoin
+## 正式关卡
+    execute if score chapter data matches 1 run function aw/levels/chapter1/player_rejoin
+    execute if score chapter data matches 2 run function aw/levels/chapter2/player_rejoin
+    execute if score chapter data matches 3 run function aw/levels/chapter3/player_rejoin
+    execute if score chapter data matches 4 run function aw/levels/chapter4/player_rejoin
+    execute if score chapter data matches 5 run function aw/levels/chapter5/player_rejoin
+    execute if score chapter data matches 6 run function aw/levels/chapter6/player_rejoin
+    execute if score chapter data matches 7 run function aw/levels/chapter7/player_rejoin
+## 结尾
+    execute if score chapter data matches 10 run function aw/levels/end/player_rejoin
 
 # --- 更正游戏规则与游戏模式 ---
 # 仅中国版，仅1人时执行，以适应中国版电脑版的要求

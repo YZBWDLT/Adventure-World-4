@@ -4,9 +4,6 @@
 # --- 全局饱和 ---
 execute if score tick time matches 4 run effect @a saturation 1 10 true
 
-# --- 控制玩家的 HUD ---
-function aw/lib/modify_data/hud
-
 # --- 清除怪物和生成器 ---
 execute if score tick time matches 5 if score levelCompleted data matches !0 run kill @e[type=aw:spawner]
 execute if score tick time matches 5 if score levelCompleted data matches !0 run kill @e[family=monster]
