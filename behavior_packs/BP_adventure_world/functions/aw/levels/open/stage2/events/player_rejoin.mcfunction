@@ -10,7 +10,7 @@ execute if score levelCompleted data matches 0 run spawnpoint @s -27 6 -48
 ## 传送玩家到剧情点
 execute if score levelCompleted data matches 0 run tp @s -26 1 -37 facing @e[name="田英",c=1]
 ## 设置玩家的相机视角
-execute if score levelCompleted data matches 0 run camera @s set minecraft:free in_out_sine pos -30 6 -35 facing -25 0 -36
+execute if score levelCompleted data matches 0 run camera @s set minecraft:free pos -30 6 -35 facing -25 0 -36
 ## 设置为隐身 | 仅限多人时运行
 execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. run effect @s invisibility 3600 0 true
 ## 设置玩家的权限
