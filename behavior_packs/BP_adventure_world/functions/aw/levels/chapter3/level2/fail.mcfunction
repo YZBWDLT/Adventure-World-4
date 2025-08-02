@@ -2,7 +2,7 @@
 # 3-2
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/fail_level
+execute positioned -188 -20 29 run function aw/lib/modify_data/levels/fail_level
 
 # --- 重新开放关卡 ---
 fill -171 -21 13 -173 -19 13 structure_void

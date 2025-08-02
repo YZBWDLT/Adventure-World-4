@@ -2,7 +2,7 @@
 # 7-1
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/fail_level
+execute positioned -119 -16 103 run function aw/lib/modify_data/levels/fail_level
 
 # --- 重新开放关卡 ---
 # （本关未封闭入口，因此无需重新开放）

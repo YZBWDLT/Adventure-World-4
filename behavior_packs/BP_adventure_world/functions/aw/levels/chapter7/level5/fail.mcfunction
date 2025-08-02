@@ -2,7 +2,7 @@
 # 7-5
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/fail_level
+execute positioned -225 -17 99 run function aw/lib/modify_data/levels/fail_level
 
 # --- 重新开放关卡 ---
 # （本关无需重新开放关卡，因为入口并未封闭）
@@ -22,3 +22,4 @@ scoreboard players reset temp.skillLength data
 scoreboard players reset temp.skillType data
 scoreboard players reset temp.spawnMonsterGroup data
 scoreboard players reset temp.bossHealthOneSecond data
+scoreboard objectives remove temp.respawnTime

@@ -2,7 +2,7 @@
 # 3-4
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/fail_level
+execute positioned -163 -20 28 run function aw/lib/modify_data/levels/fail_level
 
 # --- 关卡特殊功能 ---
 ## 重新加载结构并清除水

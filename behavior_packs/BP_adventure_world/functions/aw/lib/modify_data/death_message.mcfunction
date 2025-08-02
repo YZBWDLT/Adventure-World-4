@@ -3,7 +3,12 @@
 # 调用此方法时：需修饰执行者为死亡玩家（execute as @a[scores={death=2}]）
 
 # --- 提醒该玩家 ---
-tellraw @s {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！但不要着急，您在下一波就会被解救出来。"}]}
+# 不在 6-4 或 7-5 执行，因为这些关卡有自己的死亡消息
+tag @s add showMessage
+execute if score chapter data matches 6 if score level data matches 4 run tag @s remove showMessage
+execute if score chapter data matches 7 if score level data matches 5 if score wave data matches 2 run tag @s remove showMessage
+tellraw @s[tag=showMessage] {"rawtext":[{"translate":"§7您在刚刚的试炼中倒下了！但不要着急，您在下一波就会被解救出来。"}]}
+tag @s remove showMessage
 
 # --- 对其他玩家公告 ---
 scoreboard players random temp.deathMessage data 1 6

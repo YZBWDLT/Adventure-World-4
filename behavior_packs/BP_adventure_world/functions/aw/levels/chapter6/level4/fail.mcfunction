@@ -2,7 +2,7 @@
 # 6-4
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/fail_level
+execute positioned -75 -36 -15 run function aw/lib/modify_data/levels/fail_level
 
 # --- 重新开放关卡 ---
 fill -76 -39 20 -74 -37 20 structure_void
@@ -21,3 +21,4 @@ scoreboard players reset temp.nextMonsterType data
 scoreboard players reset temp.nextMonsterPos data
 scoreboard players reset temp.healBossCountdown time
 scoreboard players reset temp.teleportCountdown time
+scoreboard objectives remove temp.respawnTime

@@ -23,11 +23,23 @@ tellraw @a {"rawtext":[{"translate":"§a本关击杀BOSS即可获胜！"}]}
 ## 播放音乐
 function aw/lib/modify_data/play_music
 ## 临时变量设置
-scoreboard players set temp.bossHealthTwoThird data 100
-scoreboard players set temp.bossHealthOneThird data 50
-scoreboard players random temp.lavaRiseCountdown time 8 20
-scoreboard players random temp.nextMonster time 3 7
-scoreboard players set temp.nextMonsterType data 0
-scoreboard players set temp.nextMonsterPos data 0
-scoreboard players set temp.healBossCountdown time 3
-scoreboard players random temp.teleportCountdown time 6 10
+    ### BOSS 的 2/3 血量
+        scoreboard players set temp.bossHealthTwoThird data 100
+    ### BOSS 的 1/3 血量
+        scoreboard players set temp.bossHealthOneThird data 50
+    ### 岩浆涨落倒计时
+        scoreboard players random temp.lavaRiseCountdown time 8 20
+    ### 怪物生成倒计时
+        scoreboard players random temp.nextMonster time 3 7
+    ### 怪物生成类型
+        scoreboard players set temp.nextMonsterType data 0
+    ### 怪物生成位置
+        scoreboard players set temp.nextMonsterPos data 0
+    ### 血量恢复倒计时
+        scoreboard players set temp.healBossCountdown time 3
+    ### BOSS 随机传送倒计时
+        scoreboard players random temp.teleportCountdown time 6 10
+    ### 玩家重生倒计时记分项
+        scoreboard objectives add temp.respawnTime dummy "重生时间"
+    ### 玩家重生倒计时
+        scoreboard players set @a temp.respawnTime 0

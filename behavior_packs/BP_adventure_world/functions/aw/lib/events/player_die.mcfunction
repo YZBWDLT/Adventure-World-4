@@ -17,4 +17,4 @@
 # --- 特殊关卡死亡函数 ---
 
     execute if score chapter data matches 6 if score level data matches 4 run function aw/levels/chapter6/level4/events/player_die
-    execute if score chapter data matches 7 if score level data matches 5 run function aw/levels/chapter7/level5/events/player_die
+    execute if score chapter data matches 7 if score level data matches 5 if score wave data matches 2 run function aw/levels/chapter7/level5/events/player_die

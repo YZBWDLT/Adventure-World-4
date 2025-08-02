@@ -38,3 +38,7 @@ function aw/levels/chapter7/level5/waves/wave_1
         scoreboard players set temp.skillType data 0
     ### 在召唤怪物时，采用的怪物组别
         scoreboard players random temp.spawnMonsterGroup data 1 4
+    ### 玩家重生倒计时记分项
+        scoreboard objectives add temp.respawnTime dummy "重生时间"
+    ### 玩家重生倒计时
+        scoreboard players set @a temp.respawnTime 0
