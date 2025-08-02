@@ -2,10 +2,7 @@
 # 3-4
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/complete_level
-
-# --- 设置重生点 ---
-spawnpoint @a -170 -14 23
+execute positioned -170 -14 23 run function aw/lib/modify_data/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a aw:normal_sword

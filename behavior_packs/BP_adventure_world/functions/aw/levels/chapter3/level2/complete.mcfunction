@@ -2,10 +2,7 @@
 # 3-2
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/complete_level
-
-# --- 设置重生点 ---
-spawnpoint @a -172 -20 11
+execute positioned -172 -20 11 run function aw/lib/modify_data/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a aw:iron_boots

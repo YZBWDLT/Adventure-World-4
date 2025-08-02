@@ -2,10 +2,7 @@
 # 6-4
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/complete_level
-
-# --- 设置重生点 ---
-spawnpoint @a -75 -38 22
+execute positioned -75 -38 22 run function aw/lib/modify_data/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a aw:diamond_helmet
@@ -33,3 +30,4 @@ scoreboard players reset temp.nextMonsterType data
 scoreboard players reset temp.nextMonsterPos data
 scoreboard players reset temp.healBossCountdown time
 scoreboard players reset temp.teleportCountdown time
+scoreboard objectives remove temp.respawnTime

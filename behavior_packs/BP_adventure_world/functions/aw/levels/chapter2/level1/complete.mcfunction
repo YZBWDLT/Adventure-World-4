@@ -2,10 +2,7 @@
 # 2-1
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/complete_level
-
-# --- 设置重生点 ---
-spawnpoint @a -75 19 60
+execute positioned -75 19 60 run function aw/lib/modify_data/levels/complete_level
 
 # --- 获得新物品 ---
 function aw/system/controller/items

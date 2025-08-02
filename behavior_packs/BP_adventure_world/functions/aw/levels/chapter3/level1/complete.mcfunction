@@ -2,11 +2,8 @@
 # 3-1
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/complete_level
+execute positioned -188 -20 29 run function aw/lib/modify_data/levels/complete_level
 scoreboard players set timeline active 1
-
-# --- 设置重生点 ---
-spawnpoint @a -188 -20 29
 
 # --- 获得新物品 ---
 clear @a aw:iron_helmet

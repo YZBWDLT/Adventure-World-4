@@ -1,7 +1,7 @@
 # ===== 第 2 波 =====
 
 # --- 波潮完成通用函数 ---
-function aw/lib/modify_data/levels/complete_wave
+execute positioned -75 19 60 run function aw/lib/modify_data/levels/complete_wave
 
 # --- 更新波数信息 ---
 execute positioned -83 1 -2 run function aw/lib/modify_data/levels/wave_2

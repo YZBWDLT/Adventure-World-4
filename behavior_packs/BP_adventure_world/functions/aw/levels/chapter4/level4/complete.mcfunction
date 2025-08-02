@@ -2,10 +2,7 @@
 # 4-4
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/complete_level
-
-# --- 设置重生点 ---
-spawnpoint @a -141 -30 6
+execute positioned -141 -30 6 run function aw/lib/modify_data/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a aw:iron_chestplate
