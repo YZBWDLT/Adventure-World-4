@@ -5,8 +5,9 @@
 
 # --- 剧情 ---
     ## 单人模式
-        ### C~S 级
+        ### C~S 级或无评价
             execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches 60.. run tellraw @a {"rawtext":[{"translate":"* §a南瓜汁（PumpkinJui）： §7（南瓜汁为比他 PVE 更强的玩家而骄傲。）"}]}
+            execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches -2 run tellraw @a {"rawtext":[{"translate":"* §a南瓜汁（PumpkinJui）： §7（南瓜汁为比他 PVE 更强的玩家而骄傲。）"}]}
         ### F~D 级
             execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches 0..59 run tellraw @a {"rawtext":[{"translate":"* §a南瓜汁（PumpkinJui）： §7（南瓜汁终于找到了和他 PVE 水平相当的玩家，并拍了拍以示安慰。）"}]}
         ### F- 级

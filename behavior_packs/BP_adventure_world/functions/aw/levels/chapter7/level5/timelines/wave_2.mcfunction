@@ -49,5 +49,5 @@
     ## 将所有可带盾的怪物改为弱盾状态
         execute if score temp.skillCd time = temp.skillLength data run function aw/levels/chapter7/level5/events/set_weak_shield
 # --- 死亡的玩家进行倒计时复活 ---
-    # 每秒执行 1 次。由死亡状态的玩家执行。
-    execute if score tick time matches 11 as @a[tag=spectator] at @s run function aw/levels/chapter7/level5/timelines/player_respawn
+    # 由死亡状态的玩家执行。
+    execute as @a[tag=spectator] at @s run function aw/levels/chapter7/level5/timelines/player_respawn

@@ -22,6 +22,8 @@
                 execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches 0..59 if score difficulty settings matches 4 run tellraw @a[scores={deathCount=!0}] {"rawtext":[{"translate":"* §a帕（Hfpa0117）： §7你的技术已经超过很多人了，要不要试一下0死亡嘛嘿嘿~~~"}]}
         ### F- 级
             execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches -1 run tellraw @a {"rawtext":[{"translate":"* §a帕（Hfpa0117）： §7我把这张地图单人通关1、2级的难度划分为下级，3级为中下级，4级才为中上级。虽然难度没有达到我认为的上级的水准，但这于小白来说也许还是很难，不过多练练总能打出来的，所以下次试试不开创造吧，加油！"}]}
+        ### 无评价
+            execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches -2 run tellraw @a {"rawtext":[{"translate":"* §a帕（Hfpa0117）： §7和朋友玩的开心么？希望你们的友谊可以一直持续下去~ awa"}]}
     ## 多人模式
         ### 一命（失败次数为 0）
             execute if score timeline time matches 1 if score playerAmount data matches 2.. if score failedCount.allLevels data matches 0 run tellraw @a {"rawtext":[{"translate":"* §a帕（Hfpa0117）： §7你们配合的很默契诶，厉害！"}]}

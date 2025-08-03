@@ -8,9 +8,9 @@
         ### S 级
             execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches 120.. run tellraw @a {"rawtext":[{"translate":"* §a文雨（KrisWenYu）： §7哇！P......PVE大佬！我见到大佬了！......膜拜大佬！§8(1/2)"}]}
             execute if score timeline time matches 60 if score playerAmount data matches 1 if score score record matches 120.. run tellraw @a {"rawtext":[{"translate":"* §a文雨（KrisWenYu）： §7大佬喜欢咱画的贴图嘛！§8(2/2)"}]}
-        ### F~A 级
-            execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches 0..119 run tellraw @a {"rawtext":[{"translate":"* §a文雨（KrisWenYu）： §7经过这么长时间的战斗你一定累了吧，给你一个毛绒拥抱！§8(1/2)"}]}
-            execute if score timeline time matches 60 if score playerAmount data matches 1 if score score record matches 0..119 run tellraw @a {"rawtext":[{"translate":"* §a文雨（KrisWenYu）： §7喜欢咱画的贴图吗？§8(2/2)"}]}
+        ### F~A 级或无评价
+            execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches -2..119 unless score score record matches -1 run tellraw @a {"rawtext":[{"translate":"* §a文雨（KrisWenYu）： §7经过这么长时间的战斗你一定累了吧，给你一个毛绒拥抱！§8(1/2)"}]}
+            execute if score timeline time matches 60 if score playerAmount data matches 1 if score score record matches -2..119 unless score score record matches -1 run tellraw @a {"rawtext":[{"translate":"* §a文雨（KrisWenYu）： §7喜欢咱画的贴图吗？§8(2/2)"}]}
         ### F- 级
             execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches -1 run tellraw @a {"rawtext":[{"translate":"* §a文雨（KrisWenYu）： §7你作弊了？不能吧......§8(1/2)"}]}
             execute if score timeline time matches 60 if score playerAmount data matches 1 if score score record matches -1 run tellraw @a {"rawtext":[{"translate":"* §a文雨（KrisWenYu）： §7喜欢咱画的贴图吗？§8(2/2)"}]}

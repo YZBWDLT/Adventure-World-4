@@ -6,8 +6,9 @@
 # --- 剧情 ---
     ## 单人模式
         ### 难度 1~3
-            #### C~S 级
+            #### C~S 级或无评价
                 execute if score timeline time matches 1 if score playerAmount data matches 1 if score difficulty settings matches 1..3 if score score record matches 60.. run tellraw @a {"rawtext":[{"translate":"* §a小鼠（xiaoshu512）： §7还想坐牢的话尝试去把所有的成就都完成了罢awa"}]}
+                execute if score timeline time matches 1 if score playerAmount data matches 1 if score difficulty settings matches 1..3 if score score record matches -2 run tellraw @a {"rawtext":[{"translate":"* §a小鼠（xiaoshu512）： §7还想坐牢的话尝试去把所有的成就都完成了罢awa"}]}
             #### F~D 级
                 execute if score timeline time matches 1 if score playerAmount data matches 1 if score difficulty settings matches 1..3 if score score record matches 0..59 run tellraw @a {"rawtext":[{"translate":"* §a小鼠（xiaoshu512）： §7可恶，你的评分怎么这么低......哼哼哼啊啊啊啊啊啊啊！§8[原文如此]"}]}
             #### F- 级

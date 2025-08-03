@@ -21,6 +21,7 @@
     execute if score playerAmount data matches 1 if score score record matches 40..49 run tellraw @a {"rawtext":[{"translate":"评价等级 | §cE \n您的PVE水平还有待精进呀，勇气贤者sama~"}]}
     execute if score playerAmount data matches 1 if score score record matches 0..39 run tellraw @a {"rawtext":[{"translate":"评价等级 | §4F \n......qwq"}]}
     execute if score playerAmount data matches 1 if score score record matches -1 run tellraw @a {"rawtext":[{"translate":"评价等级 | §7F- \n别以为我不知道！你作弊了！！(/°□°)/︵┻━┻"}]}
+    execute if score playerAmount data matches 1 if score score record matches -2 run tellraw @a {"rawtext":[{"translate":"评价等级 | §7无评价 \n本局是在多人模式下完成的！要想获得一个评价，请试试自己独立完成一次关卡吧~"}]}
 
 # 记录数据
     ## 通用

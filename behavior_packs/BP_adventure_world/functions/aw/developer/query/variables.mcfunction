@@ -104,8 +104,14 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 ## 标签型变量
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§l===== 标签型变量 =====" } ] }
 
+execute if score developerMode settings matches 1 run tellraw @s[tag=outOfBorder] { "rawtext": [ { "translate": "outOfBorder = §atrue §7| 玩家是否在旁观模式下出界" } ] }
+execute if score developerMode settings matches 1 run tellraw @s[tag=!outOfBorder] { "rawtext": [ { "translate": "outOfBorder = §efalse §7| 玩家是否在旁观模式下出界" } ] }
+
 execute if score developerMode settings matches 1 run tellraw @s[tag=spectator] { "rawtext": [ { "translate": "spectator = §atrue §7| 玩家是否在游戏中死亡，成为旁观者" } ] }
 execute if score developerMode settings matches 1 run tellraw @s[tag=!spectator] { "rawtext": [ { "translate": "spectator = §efalse §7| 玩家是否在游戏中死亡，成为旁观者" } ] }
 
-execute if score developerMode settings matches 1 run tellraw @s[tag=outOfBorder] { "rawtext": [ { "translate": "outOfBorder = §atrue §7| 玩家是否在旁观模式下出界" } ] }
-execute if score developerMode settings matches 1 run tellraw @s[tag=!outOfBorder] { "rawtext": [ { "translate": "outOfBorder = §efalse §7| 玩家是否在旁观模式下出界" } ] }
+execute if score developerMode settings matches 1 run tellraw @s[tag=supplyArrow] { "rawtext": [ { "translate": "supplyArrow = §atrue §7| 是否为玩家提供箭" } ] }
+execute if score developerMode settings matches 1 run tellraw @s[tag=!supplyArrow] { "rawtext": [ { "translate": "supplyArrow = §efalse §7| 是否为玩家提供箭" } ] }
+
+execute if score developerMode settings matches 1 run tellraw @s[tag=supplyAllPotions] { "rawtext": [ { "translate": "supplyAllPotions = §atrue §7| 是否为玩家提供药水（全种类）" } ] }
+execute if score developerMode settings matches 1 run tellraw @s[tag=!supplyAllPotions] { "rawtext": [ { "translate": "supplyAllPotions = §efalse §7| 是否为玩家提供药水（全种类）" } ] }

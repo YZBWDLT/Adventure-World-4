@@ -33,6 +33,8 @@
             execute if score timeline time matches 120 if score playerAmount data matches 1 if score score record matches 0..59 run tellraw @a {"rawtext":[{"translate":"* §a比翼鸟（KianaKasnala947）： §7对了，我和巴豆学长的文案不知你们满不满意呢~？也欢迎大家体验冒险世界系列主线^w^~！§8(3/3)"}]}
         ### F- 级
             execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches -1 run tellraw @a {"rawtext":[{"translate":"* §a比翼鸟（KianaKasnala947）： §7太难了吗？没事的，多练一练，下次争取不用创造~"}]}
+        ### 无评价
+            execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches -2 run tellraw @a {"rawtext":[{"translate":"* §a比翼鸟（KianaKasnala947）： §7坚定不移地保持这样的友谊吧，希望在远方的新战场也能看到你们的英姿！"}]}
     ## 多人模式
         ### 难度 1
             execute if score timeline time matches 1 if score playerAmount data matches 2.. if score difficulty settings matches 1 run tellraw @a {"rawtext":[{"translate":"* §a比翼鸟（KianaKasnala947）： §7有勇无谋难成大事，智勇双全方为英雄。这句话送给你们或许正好哦。"}]}
@@ -44,11 +46,11 @@
 # --- 剧情结束 ---
     ## 单人模式
         ## 非 F- 级：维持 120 刻
-            execute if score playerAmount data matches 1 unless score score record matches -1 if score timeline time matches 121 run scoreboard players set timeline active 1
-            execute if score playerAmount data matches 1 unless score score record matches -1 if score timeline time matches 121 run function aw/lib/modify_data/states/timeline/disable_time_lapse
-        ## F- 级：维持 1 刻
-            execute if score playerAmount data matches 1 if score score record matches -1 if score timeline time matches 2 run scoreboard players set timeline active 1
-            execute if score playerAmount data matches 1 if score score record matches -1 if score timeline time matches 2 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+            execute if score playerAmount data matches 1 if score score record matches 0.. if score timeline time matches 121 run scoreboard players set timeline active 1
+            execute if score playerAmount data matches 1 if score score record matches 0.. if score timeline time matches 121 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+        ## F- 级或无评价：维持 1 刻
+            execute if score playerAmount data matches 1 if score score record matches ..-1 if score timeline time matches 2 run scoreboard players set timeline active 1
+            execute if score playerAmount data matches 1 if score score record matches ..-1 if score timeline time matches 2 run function aw/lib/modify_data/states/timeline/disable_time_lapse
     ## 多人模式：维持 1 刻
         execute if score playerAmount data matches 2.. if score timeline time matches 2 run scoreboard players set timeline active 1
         execute if score playerAmount data matches 2.. if score timeline time matches 2 run function aw/lib/modify_data/states/timeline/disable_time_lapse

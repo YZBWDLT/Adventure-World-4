@@ -15,6 +15,8 @@
             execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches 0..39 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7能坚持玩完已经很不错了呢，继续加油吧！"}]}
         ### F- 级
             execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches -1 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7看来还得多练习一下呢~"}]}
+        ### 无评价
+            execute if score timeline time matches 1 if score playerAmount data matches 1 if score score record matches -2 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7期待你通关最高难度的那一刻。"}]}
     ## 多人模式
         execute if score timeline time matches 1 if score playerAmount data matches 2.. run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7期待你通关最高难度的那一刻。"}]}
 

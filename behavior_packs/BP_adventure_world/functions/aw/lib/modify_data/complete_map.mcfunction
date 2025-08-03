@@ -9,8 +9,11 @@
         execute if score hasCheat data matches 0 run function aw/lib/get_data/best_time
     ## 获取分数
         execute if score playerAmount data matches 1 run function aw/lib/get_data/score
+        execute if score playerAmount data matches 2.. run scoreboard players set score record -2
     ## 增加一次通关记录
         execute if score hasCheat data matches 0 run scoreboard players add mapCompletedTimes record 1
+    ## 如果有玩家开启了创造，警告之
+        execute if score hasCheat data matches 1 run tellraw @a {"rawtext":[{"translate":"§8因为你（们）本次有人开启了创造，因此本次不会获得任何成就和纪录！"}]}
 
 # 播放标题
     titleraw @a times 20 100 20
