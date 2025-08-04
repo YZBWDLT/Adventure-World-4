@@ -6,9 +6,9 @@
     ## 设置关卡为已完成
         scoreboard players set levelCompleted data 1
     ## 设置为可恢复药水
-        scoreboard players set allowPotionSupply data 1
+        tag @a add supplyAllPotions
     ## 设置为可恢复箭
-        scoreboard players set allowArrowSupply data 1
+        tag @a add supplyArrow
     ## 启用时间线 | 将原来的时间值归零
         function aw/lib/modify_data/states/timeline/dont_keep_value
         function aw/lib/modify_data/states/timeline/enable

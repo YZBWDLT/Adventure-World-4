@@ -8,8 +8,8 @@
         "components": {
             "minecraft:icon": "wind_pearl",
             "minecraft:max_stack_size": 16,
-            "minecraft:throwable": { },
-            "minecraft:projectile": { "minimum_critical_power": 1, "projectile_entity": "aw:wind_pearl" },
+            "minecraft:throwable": { "do_swing_animation": true },
+            "minecraft:projectile": { "projectile_entity": "aw:wind_pearl" },
             "minecraft:cooldown": { "category": "wind_pearl", "duration": 0.3 }
         }
     }

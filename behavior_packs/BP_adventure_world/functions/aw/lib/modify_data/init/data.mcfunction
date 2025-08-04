@@ -116,12 +116,8 @@
     ## 状态标记变量
         ### 是否启用传声石结晶，0：禁用，1：启用
             scoreboard players set allowAcousticStoneCrystal data 0
-        ### 是否允许补充箭，0：不允许，1：允许
-            scoreboard players set allowArrowSupply data 0
         ### NPC 是否允许交互，0：禁用，1：启用
             scoreboard players set allowNpcInteraction data 1
-        ### 是否允许补充药水，0：不允许，1：允许
-            scoreboard players set allowPotionSupply data 0
         ### 是否允许移除掉落物实体，0：不允许，1：允许
             scoreboard players set allowRemoveItemEntity data 1
         ### 是否允许在开始游戏时传送玩家，0：不允许，1：允许

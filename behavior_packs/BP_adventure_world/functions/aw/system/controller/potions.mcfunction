@@ -33,15 +33,12 @@
         clear @a[hasitem={item=aw:potion_hibernation,quantity=2..}] aw:potion_hibernation -1 1
 
 # --- 药水补充 ---
-# 仅当 data.allowPotionSupply == 1 时，或玩家拥有 supplyAllPotions 标签时补充药水。
-    ## 为 supplyAllPotions 的玩家补充药水
-        execute as @a[tag=supplyAllPotions] run function aw/lib/events/supply_potion
-    ## 当 data.allowPotionSupply == 1 时，为所有玩家补充药水
-        execute as @a if score allowPotionSupply data matches 1 run function aw/lib/events/supply_potion
+# 仅当玩家拥有 supplyAllPotions 标签时补充药水。
+    execute as @a[tag=supplyAllPotions] run function aw/lib/events/supply_potion
 
 # --- 程序结束的变量设置 ---
     ## 销毁临时变量
         scoreboard players reset temp.gameId data
         scoreboard players reset temp.potionHealthLimit data
-    ## 重新设置为禁止补充药水
-        scoreboard players set allowPotionSupply data 0
+    ## 移除检测用的标签
+        tag @a remove supplyAllPotions
