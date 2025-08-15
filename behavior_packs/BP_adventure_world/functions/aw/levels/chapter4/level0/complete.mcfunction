@@ -5,4 +5,4 @@
 spawnpoint @a -173 18 -8
 
 # 调用通用函数
-function aw/lib/modify_data/levels/complete_chapter
+function aw/lib/events/levels/complete_chapter

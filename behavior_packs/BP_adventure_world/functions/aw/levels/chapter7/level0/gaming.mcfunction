@@ -54,7 +54,7 @@ execute if score timeline time matches 60 run tp @a -79 -39 105 facing -87 -37 1
 execute if score timeline time matches 120 run title @a title §f§l剑 之 神 殿
 execute if score timeline time matches 120 run title @a subtitle §k7§r-§k0
 execute if score timeline time matches 120 as @a at @s run playsound beacon.power @s ~~~ 1 0.75 1
-execute if score timeline time matches 120 run function aw/lib/modify_data/stop_dialogue_keep
+execute if score timeline time matches 120 run function aw/lib/events/stop_dialogue_keep
 
 ## [180] 移除玩家的失明效果
 execute if score timeline time matches 180 run effect @a blindness 0 1 true
@@ -114,9 +114,9 @@ execute if score storyMode settings matches 1 if score timeline time matches 182
 
 ## [纯战斗1450, 剧情1950] 黑屏并锁定玩家行动
 execute if score storyMode settings matches 0 if score timeline time matches 1450 run camera @a fade time 2 7 2
-execute if score storyMode settings matches 0 if score timeline time matches 1450 run function aw/lib/modify_data/start_dialogue_keep
+execute if score storyMode settings matches 0 if score timeline time matches 1450 run function aw/lib/events/start_dialogue_keep
 execute if score storyMode settings matches 1 if score timeline time matches 1950 run camera @a fade time 2 7 2
-execute if score storyMode settings matches 1 if score timeline time matches 1950 run function aw/lib/modify_data/start_dialogue_keep
+execute if score storyMode settings matches 1 if score timeline time matches 1950 run function aw/lib/events/start_dialogue_keep
 
 # --- 剧情结束 ---
 

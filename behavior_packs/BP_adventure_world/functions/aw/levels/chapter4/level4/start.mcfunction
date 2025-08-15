@@ -13,7 +13,7 @@ fill -117 -31 7 -117 -29 5 ice
 
 # --- 调用通用函数 ---
 # 必须由初次进入的玩家执行
-function aw/lib/modify_data/levels/start_level
+function aw/lib/events/levels/start_level
 titleraw @a subtitle {"rawtext":[{"translate":"§c4-4 §f| 随机位置生成随机怪物"}]}
 
 # --- 生成怪物 ---
@@ -27,7 +27,7 @@ summon guardian -138 -30 14 0 0 aw:invulnerable
 ## 提示玩家获胜条件
 tellraw @a {"rawtext":[{"translate":"§c本关怪物将在不同位置随机生成，守卫者不可击杀！坚持3分钟即可获胜！"}]}
 ## 播放音乐
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
 ## 临时变量设置
 scoreboard players set temp.remainingTime time 180
 scoreboard players random temp.nextMonster time 3 10

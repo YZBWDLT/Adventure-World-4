@@ -9,7 +9,7 @@
     # 当玩家在 X-Y 游戏时死亡，则进行死亡逻辑判断
 
     ## 如果玩家数大于等于 2 人，播报消息并提醒玩家在下一波复活
-        execute if score gaming data matches 1 if score playerAmount data matches 2.. run function aw/lib/modify_data/death_message
+        execute if score gaming data matches 1 if score playerAmount data matches 2.. run function aw/lib/events/show_death_message
     ## 标记死亡的玩家为旁观玩家，并设置为旁观模式
         execute if score gaming data matches 1 run tag @s add spectator
         execute if score gaming data matches 1 run gamemode spectator @s

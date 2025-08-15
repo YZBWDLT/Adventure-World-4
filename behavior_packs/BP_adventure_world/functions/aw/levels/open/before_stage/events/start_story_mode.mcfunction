@@ -5,9 +5,9 @@
 ## 设置为剧情模式
 scoreboard players set storyMode settings 1
 ## 更换时间线状态 | 切换为状态 2，时间值 0，流逝时间
-function aw/lib/modify_data/states/timeline/dont_keep_value
-function aw/lib/modify_data/states/timeline/enable_time_lapse
-function aw/lib/modify_data/start_dialogue
+function aw/lib/modify_data/timeline/dont_keep_value
+function aw/lib/modify_data/timeline/enable_time_lapse
+function aw/lib/events/start_dialogue
 scoreboard players set timeline active 2
 
 # --- 相机黑屏 ---

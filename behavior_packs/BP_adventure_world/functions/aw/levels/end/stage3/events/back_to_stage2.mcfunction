@@ -12,11 +12,11 @@
         summon aw:npc -21 3 42 facing @p aw:npc_zhangyu "张宇"
         tp @a -22 3 38
     ## 播放音乐
-        function aw/lib/modify_data/play_music
+        function aw/lib/events/play_music
 # 移除stage4的按钮
     fill -13 2 86 -18 1 87 air
 # 结束对话状态
-    function aw/lib/modify_data/stop_dialogue
+    function aw/lib/events/stop_dialogue
 # 销毁临时变量
     scoreboard players reset temp.difficulty settings
     scoreboard players reset temp.extraDifficulty settings

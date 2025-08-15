@@ -3,7 +3,7 @@
 # 设定技能时长
     scoreboard players set temp.skillLength data -2
 # 设定标题
-    function aw/lib/modify_data/title
+    function aw/lib/events/show_empty_title
     titleraw @a subtitle {"rawtext":[{"translate":"§c唤魔法师已恢复了一些血量！"}]}
 # 恢复血量
     ## 一阶段时，恢复 32 血量（瞬间治疗 V）

@@ -24,14 +24,14 @@
     execute if score timeline active matches 1 if score timeline time matches 161 run kill @e[type=item]
     ## [180] 进入检查状态
     execute if score timeline active matches 1 if score timeline time matches 180.. run scoreboard players set timeline active 2
-    execute if score timeline active matches 1 if score timeline time matches 180.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
+    execute if score timeline active matches 1 if score timeline time matches 180.. run function aw/lib/modify_data/timeline/disable_time_lapse
 
 # --- 等待阶段 ---
     # active.timeline == 2
 
     ## 传声石结晶剧情
     execute if score timeline active matches 2 if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §7§kabcdefghijklmnopqrstuvwxyz"}]}
-    execute if score timeline active matches 2 if score timeline time matches 80.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
+    execute if score timeline active matches 2 if score timeline time matches 80.. run function aw/lib/modify_data/timeline/disable_time_lapse
 
     ## 检查玩家进入坑中
     execute if score timeline active matches 2 positioned -225 -62 44 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=2,dz=1.4,tag=!spectator,scores={deathState=0}] at @s run function aw/levels/chapter7/level5/events/player_in_hole
@@ -42,4 +42,4 @@
     ## [120] 跳转到结束界面 | 如果为剧情模式，从stage1开始；如果为纯战斗模式，从stage2开始
     execute if score timeline active matches 3 if score timeline time matches 120.. if score storyMode settings matches 0 run function aw/levels/chapter7/level5/events/end_in_combat_mode
     execute if score timeline active matches 3 if score timeline time matches 120.. if score storyMode settings matches 1 run function aw/levels/end/stage1/start
-    execute if score timeline active matches 3 if score timeline time matches 120.. run function aw/lib/modify_data/stop_dialogue
+    execute if score timeline active matches 3 if score timeline time matches 120.. run function aw/lib/events/stop_dialogue

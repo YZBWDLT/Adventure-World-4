@@ -2,7 +2,7 @@
 # 6-4
 
 # --- 调用通用函数 ---
-execute positioned -75 -38 22 run function aw/lib/modify_data/levels/complete_level
+execute positioned -75 -38 22 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a aw:diamond_helmet
@@ -18,9 +18,9 @@ fill -76 -39 20 -74 -37 20 structure_void
 ## 清除残余岩浆
 structure load aw:6_4_no_lava -89 -40 21
 ## 播放音乐
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
 ## 启用时间流逝
-function aw/lib/modify_data/states/timeline/enable_time_lapse
+function aw/lib/modify_data/timeline/enable_time_lapse
 ## 移除临时变量
 scoreboard players reset temp.bossHealthTwoThird data
 scoreboard players reset temp.bossHealthOneThird data

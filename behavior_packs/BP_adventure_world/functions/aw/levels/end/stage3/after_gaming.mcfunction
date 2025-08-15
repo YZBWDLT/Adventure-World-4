@@ -8,7 +8,7 @@ execute positioned -18 -3 99 if entity @a[dx=5,dy=0.3,dz=3] run function aw/leve
     ## 剧情
         execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"translate":"* §e张宇： §7你要回去吗？"}]}
     ## 进入对话状态
-        execute if score timeline time matches 1 run function aw/lib/modify_data/start_dialogue_keep
+        execute if score timeline time matches 1 run function aw/lib/events/start_dialogue_keep
     ## 黑屏
         execute if score timeline time matches 50 run camera @a fade time 1 2 1
     ## 剧情结束

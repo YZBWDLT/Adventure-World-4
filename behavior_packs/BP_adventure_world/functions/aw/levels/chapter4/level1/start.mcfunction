@@ -15,7 +15,7 @@ function aw/levels/chapter4/level1/waves/wave_1
 
 # --- 调用通用函数 ---
 # 必须由初次进入的玩家执行
-function aw/lib/modify_data/levels/start_level
+function aw/lib/events/levels/start_level
 
 # --- 关卡特殊功能 ---
 ## 复原关卡结构

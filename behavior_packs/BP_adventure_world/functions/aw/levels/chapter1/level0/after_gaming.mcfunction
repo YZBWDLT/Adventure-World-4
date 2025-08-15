@@ -7,4 +7,4 @@ execute positioned -117 2 16 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=3,dz=1.4,t
 # --- 剧情 ---
 execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7云儿，能听得到吗？"}]}
 execute if score timeline time matches 80 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7听得到，记得保持联系啊！"}]}
-execute if score timeline time matches 160.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
+execute if score timeline time matches 160.. run function aw/lib/modify_data/timeline/disable_time_lapse

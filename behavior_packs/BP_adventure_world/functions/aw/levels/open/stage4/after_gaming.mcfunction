@@ -14,4 +14,4 @@ execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* �
 execute if score timeline time matches 80 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7水下没有刻字。不过谢谢你，研究刻字的事全盘交给我就好啦。"}]}
 
 ## 剧情结束后 | 这里保留值，防止上面的检测time.timeline=0被重复触发
-execute if score timeline time matches 81 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+execute if score timeline time matches 81 run function aw/lib/modify_data/timeline/disable_time_lapse

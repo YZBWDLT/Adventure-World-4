@@ -2,7 +2,7 @@
 # 2-2
 
 # --- 调用通用函数 ---
-execute positioned -72 1 69 run function aw/lib/modify_data/levels/complete_level
+execute positioned -72 1 69 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a leather_leggings

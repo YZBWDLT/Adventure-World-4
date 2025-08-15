@@ -12,8 +12,8 @@
     ## 设置为可恢复箭
         tag @a add supplyArrow
     ## 时间线
-        function aw/lib/modify_data/states/timeline/dont_keep_value
-        function aw/lib/modify_data/states/timeline/enable
+        function aw/lib/modify_data/timeline/dont_keep_value
+        function aw/lib/modify_data/timeline/enable
     ## 增加失败次数
         scoreboard players add failedCount.allLevels data 1
         scoreboard players add failedCount.thisLevel data 1
@@ -26,7 +26,7 @@
         titleraw @a title {"rawtext":[{"translate":"§c§l关 卡 失 败"}]}
         titleraw @a subtitle {"rawtext":[{"translate":"所有人已死亡！已返回上一个重生点。"}]}
     ## 音效
-        function aw/lib/modify_data/states/sound/random_anvil_break_0_75
+        function aw/lib/modify_data/sound/random_anvil_break_0_75
     ## 复活已死亡玩家到重生点
         execute as @a[tag=spectator] run function aw/lib/events/respawn_player
     ## 回血

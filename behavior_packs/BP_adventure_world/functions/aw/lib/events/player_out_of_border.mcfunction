@@ -6,12 +6,12 @@
 # 仅当玩家不在上关标记附近时执行
 
 ## 播放标题
-function aw/lib/modify_data/title
+function aw/lib/events/show_empty_title
 titleraw @s subtitle {"rawtext":[{"translate":"§c不要出界哦~"}]}
 
 ## 播放音效 | 这里使用outOfBorder标签标记出界玩家，以使音效控制器只对这些玩家生效，最后令音效控制器移除这个标签
 tag @s add outOfBorder
-function aw/lib/modify_data/states/sound/mob_cat_meow
+function aw/lib/modify_data/sound/mob_cat_meow
 
 # --- 传送玩家 ---
 tp @s ~~~

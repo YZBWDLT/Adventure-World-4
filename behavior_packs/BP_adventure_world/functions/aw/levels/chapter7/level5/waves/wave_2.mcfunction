@@ -1,7 +1,7 @@
 # ===== 第 2 波 =====
 
 # --- 波潮完成通用函数 ---
-execute positioned -225 -47 44 run function aw/lib/modify_data/levels/complete_wave
+execute positioned -225 -47 44 run function aw/lib/events/levels/complete_wave
 
 # --- 更新波数信息 ---
 # 符号具体含义请见函数aw/lib/modify_data/levels/wave_(?)
@@ -17,11 +17,11 @@ summon aw:marker -83 1 -2 ~~ aw:set_wave_name "§a⚅§b⚂"
 summon aw:spawner -225 -48 44 0 0 aw:spawn_evoker
 
 # --- 播放音乐 ---
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
 
 # --- BOSS 专属标题 ---
 titleraw @a title {"rawtext":[{"translate":"§c§lBOSS 来 袭"}]}
 titleraw @a subtitle {"rawtext":[{"translate":"第 §c2 §f波"}]}
 
 # --- 时间线归零 ---
-function aw/lib/modify_data/states/timeline/disable_time_lapse
+function aw/lib/modify_data/timeline/disable_time_lapse

@@ -24,7 +24,7 @@ fill -156 -18 5 -158 -18 7 ice replace water
 fill -117 -31 7 -117 -29 5 ice
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/start_chapter
+function aw/lib/events/levels/start_chapter
 
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块

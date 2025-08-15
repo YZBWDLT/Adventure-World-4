@@ -2,7 +2,7 @@
 # 7-5
 
 # --- 调用通用函数 ---
-execute positioned -225 -47 44 run function aw/lib/modify_data/levels/complete_level
+execute positioned -225 -47 44 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 function aw/system/controller/items
@@ -13,9 +13,9 @@ tellraw @a {"rawtext":[{"text":"§l§c最终关卡已完成！跳入最中间的
 
 # --- 关卡特殊功能 ---
 ## 播放音乐
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
 ## 启用时间流逝
-function aw/lib/modify_data/states/timeline/enable_time_lapse
+function aw/lib/modify_data/timeline/enable_time_lapse
 ## 移除临时变量
 scoreboard players reset temp.stage data
 scoreboard players reset temp.skillCd time

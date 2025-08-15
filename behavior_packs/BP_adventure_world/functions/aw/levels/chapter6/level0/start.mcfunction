@@ -23,7 +23,7 @@ fill -74 -32 -23 -77 -32 -22 obsidian keep
 fill -74 -39 8 -76 -37 8 deepslate_bricks
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/start_chapter
+function aw/lib/events/levels/start_chapter
 
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块

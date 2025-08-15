@@ -6,7 +6,7 @@
     scoreboard players set level data 1
 
 # 调用通用函数
-    function aw/lib/modify_data/levels/start_open
+    function aw/lib/events/levels/start_open
 
 # 生成实体
     ## NPC
@@ -34,4 +34,4 @@
     event entity @e[type=aw:text_display] aw:remove_immediately
 
 # 播放音乐
-    function aw/lib/modify_data/play_music
+    function aw/lib/events/play_music

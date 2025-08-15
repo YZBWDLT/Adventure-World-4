@@ -11,7 +11,7 @@ event entity @e[type=aw:npc] aw:ignore_player
 tp @a -12 1 88 facing -17 1 95
 
 # --- 播放音乐 ---
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
 
 # --- 恢复掉落物移除机制 ---
 scoreboard players set allowRemoveItemEntity data 1

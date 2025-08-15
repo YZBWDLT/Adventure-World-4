@@ -21,7 +21,7 @@ scoreboard players set allowTpPlayerWhenStart data 0
 ## 禁止时间流逝 | 以防在过剧情时被误判为正处于与试炼外的对话
 scoreboard players set timeLapse data 0
 
-function aw/lib/modify_data/levels/start_level
+function aw/lib/events/levels/start_level
 
 # --- 关卡特殊功能 ---
 ## 设置重生点

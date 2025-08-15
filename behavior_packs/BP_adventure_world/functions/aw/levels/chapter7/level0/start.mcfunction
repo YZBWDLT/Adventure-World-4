@@ -7,11 +7,11 @@
         scoreboard players set level data 0
 
 # --- 调用通用函数 ---
-    function aw/lib/modify_data/levels/start_chapter
+    function aw/lib/events/levels/start_chapter
     ## 移除标题
         title @a clear
     ## 移除音效
-        function aw/lib/modify_data/states/sound/reset
+        function aw/lib/modify_data/sound/reset
 
 # --- 关卡特殊功能 ---
     ## 设置玩家的重生点
@@ -25,4 +25,4 @@
     ## 相机黑屏
         camera @a fade time 2 5 2
     ## 对任何模式（包括纯战斗模式）的玩家启用对话和剧情
-        function aw/lib/modify_data/start_dialogue
+        function aw/lib/events/start_dialogue

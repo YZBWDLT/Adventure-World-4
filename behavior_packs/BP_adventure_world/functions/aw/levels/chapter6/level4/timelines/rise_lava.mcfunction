@@ -8,7 +8,7 @@ execute if score temp.lavaRiseCountdown time matches ..-7 run scoreboard players
 # 剩余 5 秒时警告，当 Boss 血量剩余 1/3 以上时上涨 1 层，剩余 1/3 以下时上涨 2 层
 
 ## 标题
-execute if score temp.lavaRiseCountdown time matches 5 run function aw/lib/modify_data/title
+execute if score temp.lavaRiseCountdown time matches 5 run function aw/lib/events/show_empty_title
 execute if score temp.lavaRiseCountdown time matches 5 if score @e[type=aw:blaze_king,c=1] health >= temp.bossHealthOneThird data run titleraw @a subtitle {"rawtext":[{"translate":"§6岩浆即将上涨，请尽快躲到高处！"}]}
 execute if score temp.lavaRiseCountdown time matches 5 if score @e[type=aw:blaze_king,c=1] health < temp.bossHealthOneThird data run titleraw @a subtitle {"rawtext":[{"translate":"§c岩浆即将上涨2层，请尽快躲到高处！！！"}]}
 ## 粒子

@@ -11,4 +11,4 @@ execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* �
 execute if score timeline time matches 80 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7你怎么知道我已经迷路了......"}]}
 execute if score timeline time matches 160 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7哦对了，这里还说【海之仙灵将赋予勇者以劈水之力】，也许存在能让你在水下游得更自在的力量哦。"}]}
 execute if score timeline time matches 240 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7好awa，我会多加利用的！"}]}
-execute if score timeline time matches 320.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
+execute if score timeline time matches 320.. run function aw/lib/modify_data/timeline/disable_time_lapse

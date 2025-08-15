@@ -14,7 +14,7 @@ titleraw @a title {"rawtext":[{"translate":"§f§l红 石 神 殿"}]}
 execute if score storyMode settings matches 1 run tp @a -95 -31 -6 180 0
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/start_chapter
+function aw/lib/events/levels/start_chapter
 
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块

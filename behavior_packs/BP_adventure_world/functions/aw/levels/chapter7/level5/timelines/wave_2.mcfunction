@@ -44,7 +44,7 @@
         execute if score temp.skillCd time = temp.skillLength data run function aw/entities/spawner/ravager
         execute if score temp.skillCd time = temp.skillLength data run ride @e[type=evocation_illager,c=1] start_riding @e[type=ravager,c=1]
     ## 提醒玩家
-        execute if score temp.skillCd time = temp.skillLength data run function aw/lib/modify_data/title
+        execute if score temp.skillCd time = temp.skillLength data run function aw/lib/events/show_empty_title
         execute if score temp.skillCd time = temp.skillLength data run titleraw @a subtitle {"rawtext":[{"translate":"§b唤魔法师的盾变弱了！"}]}
     ## 将所有可带盾的怪物改为弱盾状态
         execute if score temp.skillCd time = temp.skillLength data run function aw/levels/chapter7/level5/events/set_weak_shield

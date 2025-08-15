@@ -33,4 +33,4 @@ execute if score sound active matches 13 as @a at @s run playsound random.anvil_
 execute if score sound active matches 14 as @a at @s run playsound beacon.power @s ~~~ 1 1 1
 
 # --- 重置音效播放器 ---
-function aw/lib/modify_data/states/sound/reset
+function aw/lib/modify_data/sound/reset

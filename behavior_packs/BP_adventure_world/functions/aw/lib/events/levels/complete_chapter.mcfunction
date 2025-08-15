@@ -7,4 +7,4 @@
 ## 当前关卡完成状态
 scoreboard players set levelCompleted data 1
 ## 结束锁视角对话
-function aw/lib/modify_data/stop_dialogue
+function aw/lib/events/stop_dialogue

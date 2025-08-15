@@ -1,7 +1,7 @@
 # ===== 剧情：鸽子 =====
 
 # --- 若未启用时间流逝，则启用 ---
-    execute if score timeLapse data matches 0 run function aw/lib/modify_data/states/timeline/enable_time_lapse
+    execute if score timeLapse data matches 0 run function aw/lib/modify_data/timeline/enable_time_lapse
 
 # --- 剧情 ---
     execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"translate":"* §a鸽子（PigeonKI）： §7作者们的配合超级有默契的！有可能的话，我很希望他们能多多合作awa§8(1/2)"}]}
@@ -9,4 +9,4 @@
 
 # --- 剧情结束 ---
     execute if score timeline time matches 61 run scoreboard players set timeline active 1
-    execute if score timeline time matches 61 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+    execute if score timeline time matches 61 run function aw/lib/modify_data/timeline/disable_time_lapse

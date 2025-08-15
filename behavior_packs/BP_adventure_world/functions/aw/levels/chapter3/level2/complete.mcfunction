@@ -2,7 +2,7 @@
 # 3-2
 
 # --- 调用通用函数 ---
-execute positioned -172 -20 11 run function aw/lib/modify_data/levels/complete_level
+execute positioned -172 -20 11 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a aw:iron_boots

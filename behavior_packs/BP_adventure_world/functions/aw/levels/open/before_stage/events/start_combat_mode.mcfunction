@@ -9,7 +9,7 @@ scoreboard players set storyMode settings 0
 function aw/levels/open/stage5/start
 
 # --- 播放音乐 ---
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
 
 # --- 双模式的通用内容 ---
 ## 玩家模式

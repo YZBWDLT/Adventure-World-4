@@ -16,12 +16,12 @@ function aw/levels/chapter7/level4/waves/wave_1
 
 # --- 调用通用函数 ---
 # 必须由初次进入的玩家执行
-function aw/lib/modify_data/levels/start_level
+function aw/lib/events/levels/start_level
 
 # --- 关卡特殊功能 ---
 ## 添加岩浆
 fill -224 -27 111 -244 -29 85 lava keep
 ## 播放音乐
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
 ## 把时间线状态改为 1
 scoreboard players set timeline active 1

@@ -17,4 +17,4 @@ execute if score timeline active matches 2 run function aw/levels/chapter3/level
 
 execute if score timeline active matches !2 if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7哎呦我的天，究竟是谁设计的啊？这回去的水道真是又臭又长的啊。(///￣皿￣)○～"}]}
 execute if score timeline active matches !2 if score timeline time matches 80 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7嘻嘻，你猜猜看~？"}]}
-execute if score timeline active matches !2 if score timeline time matches 160.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
+execute if score timeline active matches !2 if score timeline time matches 160.. run function aw/lib/modify_data/timeline/disable_time_lapse

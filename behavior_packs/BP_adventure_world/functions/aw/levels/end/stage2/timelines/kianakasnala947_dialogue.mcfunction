@@ -1,7 +1,7 @@
 # ===== 剧情：比翼鸟 =====
 
 # --- 若未启用时间流逝，则启用 ---
-    execute if score timeLapse data matches 0 run function aw/lib/modify_data/states/timeline/enable_time_lapse
+    execute if score timeLapse data matches 0 run function aw/lib/modify_data/timeline/enable_time_lapse
 
 # --- 剧情 ---
     ## 单人模式
@@ -47,10 +47,10 @@
     ## 单人模式
         ## 非 F- 级：维持 120 刻
             execute if score playerAmount data matches 1 if score score record matches 0.. if score timeline time matches 121 run scoreboard players set timeline active 1
-            execute if score playerAmount data matches 1 if score score record matches 0.. if score timeline time matches 121 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+            execute if score playerAmount data matches 1 if score score record matches 0.. if score timeline time matches 121 run function aw/lib/modify_data/timeline/disable_time_lapse
         ## F- 级或无评价：维持 1 刻
             execute if score playerAmount data matches 1 if score score record matches ..-1 if score timeline time matches 2 run scoreboard players set timeline active 1
-            execute if score playerAmount data matches 1 if score score record matches ..-1 if score timeline time matches 2 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+            execute if score playerAmount data matches 1 if score score record matches ..-1 if score timeline time matches 2 run function aw/lib/modify_data/timeline/disable_time_lapse
     ## 多人模式：维持 1 刻
         execute if score playerAmount data matches 2.. if score timeline time matches 2 run scoreboard players set timeline active 1
-        execute if score playerAmount data matches 2.. if score timeline time matches 2 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+        execute if score playerAmount data matches 2.. if score timeline time matches 2 run function aw/lib/modify_data/timeline/disable_time_lapse

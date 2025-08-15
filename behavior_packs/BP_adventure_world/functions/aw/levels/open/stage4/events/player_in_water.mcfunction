@@ -1,6 +1,6 @@
 # ===== 玩家入水后 =====
 
 # 启用时间线流逝
-function aw/lib/modify_data/states/timeline/enable_time_lapse
+function aw/lib/modify_data/timeline/enable_time_lapse
 # 停用时间值的复原
-function aw/lib/modify_data/states/timeline/keep_value
+function aw/lib/modify_data/timeline/keep_value

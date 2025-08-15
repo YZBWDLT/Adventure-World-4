@@ -2,7 +2,7 @@
 # 4-4
 
 # --- 调用通用函数 ---
-execute positioned -141 -30 6 run function aw/lib/modify_data/levels/complete_level
+execute positioned -141 -30 6 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a aw:iron_chestplate
@@ -15,7 +15,7 @@ fill -117 -31 7 -117 -29 5 air
 
 # --- 关卡特殊功能 ---
 ## 播放音乐
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
 ## 移除临时变量设置
 scoreboard players reset temp.remainingTime time
 scoreboard players reset temp.nextMonster time

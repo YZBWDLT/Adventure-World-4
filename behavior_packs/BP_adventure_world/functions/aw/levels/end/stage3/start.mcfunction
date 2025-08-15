@@ -5,7 +5,7 @@
     scoreboard players set level data 3
 
 # 调用通用函数
-    function aw/lib/modify_data/levels/start_open
+    function aw/lib/events/levels/start_open
 
 # 设置时间线状态为 1
     scoreboard players set timeline active 1
@@ -43,4 +43,4 @@
         summon aw:text_display "§b进入神殿以按照你的设置开始新的试炼" -15.0 2.0 90
         summon aw:text_display "§c进入后不能再中途更改" -15.0 1.7 90
 # 播放音乐
-    function aw/lib/modify_data/play_music
+    function aw/lib/events/play_music

@@ -3,7 +3,7 @@
 # 设定技能时长
     scoreboard players set temp.skillLength data -20
 # 设定标题
-    function aw/lib/modify_data/title
+    function aw/lib/events/show_empty_title
     titleraw @a subtitle {"rawtext":[{"translate":"§c注意头顶！及时躲到掩体下方！"}]}
 # 设定火球位置标记
     summon aw:marker "fireballPos" -245 -35 25

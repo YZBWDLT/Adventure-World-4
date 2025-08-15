@@ -73,4 +73,4 @@
 
 # --- 村庄对话（结束第3段，10-3） ---
     ## 张宇
-        execute if score chapter data matches 10 if score level data matches 3 if entity @s[has_property={aw:is_author=false,aw:npc_type=6}] run function aw/lib/modify_data/states/timeline/enable_time_lapse
+        execute if score chapter data matches 10 if score level data matches 3 if entity @s[has_property={aw:is_author=false,aw:npc_type=6}] run function aw/lib/modify_data/timeline/enable_time_lapse

@@ -10,8 +10,8 @@
     ## 设置为可恢复箭
         tag @a add supplyArrow
     ## 启用时间线 | 将原来的时间值归零
-        function aw/lib/modify_data/states/timeline/dont_keep_value
-        function aw/lib/modify_data/states/timeline/enable
+        function aw/lib/modify_data/timeline/dont_keep_value
+        function aw/lib/modify_data/timeline/enable
     ## 失败次数归零
         scoreboard players set failedCount.thisLevel data 0
     ## 重置关卡完成倒计时
@@ -19,10 +19,10 @@
 
 # --- 玩家 ---
     ## 标题
-        function aw/lib/modify_data/title
+        function aw/lib/events/show_empty_title
         titleraw @a subtitle {"rawtext":[{"translate":"§a关卡已完成！"}]}
     ## 音效
-        function aw/lib/modify_data/states/sound/random_levelup_2
+        function aw/lib/modify_data/sound/random_levelup_2
     ## 设置重生点
         spawnpoint @a ~~~
     ## 复活已死亡玩家到重生点

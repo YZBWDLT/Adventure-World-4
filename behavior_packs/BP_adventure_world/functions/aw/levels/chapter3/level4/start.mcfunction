@@ -16,8 +16,8 @@ function aw/levels/chapter3/level4/waves/wave_1
 
 # --- 调用通用函数 ---
 # 必须由初次进入的玩家执行
-function aw/lib/modify_data/levels/start_level
+function aw/lib/events/levels/start_level
 
 # --- 关卡特殊功能 ---
 ## 播放音乐
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music

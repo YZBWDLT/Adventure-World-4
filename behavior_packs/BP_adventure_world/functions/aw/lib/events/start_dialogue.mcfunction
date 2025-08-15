@@ -12,8 +12,8 @@ execute if score playerAmount data matches 2.. run effect @a invisibility 3600 0
 effect @a[c=1] invisibility 0 1 true
 
 # --- 启用不保留值的时间线，并时间流逝 ---
-function aw/lib/modify_data/states/timeline/dont_keep_value
-function aw/lib/modify_data/states/timeline/enable_time_lapse
+function aw/lib/modify_data/timeline/dont_keep_value
+function aw/lib/modify_data/timeline/enable_time_lapse
 
 # --- 禁止与 NPC 的交互 ---
 scoreboard players set allowNpcInteraction data 0

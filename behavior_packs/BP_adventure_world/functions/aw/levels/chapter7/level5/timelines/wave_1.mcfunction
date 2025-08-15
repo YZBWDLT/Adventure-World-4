@@ -16,4 +16,4 @@
         execute if score timeline time matches 250 run function aw/levels/chapter7/level5/events/set_weak_shield
 
     ## [701] 剧情结束
-        execute if score timeline time matches 701 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+        execute if score timeline time matches 701 run function aw/lib/modify_data/timeline/disable_time_lapse

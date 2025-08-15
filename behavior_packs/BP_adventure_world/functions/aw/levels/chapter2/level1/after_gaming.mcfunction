@@ -9,4 +9,4 @@ execute positioned -72 1 69 positioned ~-2~-1~-2 as @e[dx=3,dy=3,dz=3,type=aw:wi
 execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7云儿，我怎么总感觉等会会有点危险啊。"}]}
 execute if score timeline time matches 80 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7嗯......铭文这里有一段描述，【梯由机关所控，追求尽善者终将一无所得】......我看不太明白，也许之后会有一些机关......？"}]}
 execute if score timeline time matches 160 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7【追求尽善者终将一无所得】......？行，我先记着这句话。"}]}
-execute if score timeline time matches 240.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
+execute if score timeline time matches 240.. run function aw/lib/modify_data/timeline/disable_time_lapse

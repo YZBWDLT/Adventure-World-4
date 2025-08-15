@@ -23,7 +23,7 @@
 
 # --- 播放音乐 ---
     tellraw @a[scores={isOnline=!0}] {"rawtext":[{"translate":"§7检测到有玩家进入游戏，为确保游戏体验，将重新播放场景音乐"}]}
-    function aw/lib/modify_data/play_music
+    function aw/lib/events/play_music
 
 # --- 给予玩家药水 ---
     tag @s add supplyAllPotions

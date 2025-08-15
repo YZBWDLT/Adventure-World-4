@@ -6,7 +6,7 @@
             execute if score temp.stage data matches 1 if score temp.skillCd time matches 0 run structure load aw:7_5_shelter -238 -45 31 0_degrees none false true false 10.00
             execute if score temp.stage data matches 1 if score temp.skillCd time matches 0 as @a at @s run playsound random.levelup @s ~~~ 1 2
         ### [1s~6s] 在攻击前提醒玩家
-            execute if score temp.stage data matches 1 if score temp.skillCd time matches -6..-1 run function aw/lib/modify_data/title
+            execute if score temp.stage data matches 1 if score temp.skillCd time matches -6..-1 run function aw/lib/events/show_empty_title
             execute if score temp.stage data matches 1 if score temp.skillCd time matches -6..-1 run titleraw @a subtitle {"rawtext":[{"translate":"§c第 1 次攻击"}]}
             execute if score temp.stage data matches 1 if score temp.skillCd time matches -6..-1 as @a at @s run playsound random.orb @s ~~~
         ### [7s] 发动攻击
@@ -21,7 +21,7 @@
             execute if score temp.stage data matches 1 if score temp.skillCd time matches -11 run structure load aw:7_5_shelter -238 -45 31 0_degrees none false true false 3.00
             execute if score temp.stage data matches 1 if score temp.skillCd time matches -11 as @a at @s run playsound random.levelup @s ~~~ 1 2
         ### [12s~16s] 在攻击前提醒玩家
-            execute if score temp.stage data matches 1 if score temp.skillCd time matches -16..-12 run function aw/lib/modify_data/title
+            execute if score temp.stage data matches 1 if score temp.skillCd time matches -16..-12 run function aw/lib/events/show_empty_title
             execute if score temp.stage data matches 1 if score temp.skillCd time matches -16..-12 run titleraw @a subtitle {"rawtext":[{"translate":"§c第 2 次攻击"}]}
             execute if score temp.stage data matches 1 if score temp.skillCd time matches -16..-12 as @a at @s run playsound random.orb @s ~~~
         ### [17s] 发动攻击
@@ -38,7 +38,7 @@
             execute if score temp.stage data matches 2 if score temp.skillCd time matches 0 run structure load aw:7_5_shelter -238 -45 31 0_degrees none false true false 8.00
             execute if score temp.stage data matches 2 if score temp.skillCd time matches 0 as @a at @s run playsound random.levelup @s ~~~ 1 2
         ### [1s~3s] 在攻击前提醒玩家
-            execute if score temp.stage data matches 2 if score temp.skillCd time matches -3..-1 run function aw/lib/modify_data/title
+            execute if score temp.stage data matches 2 if score temp.skillCd time matches -3..-1 run function aw/lib/events/show_empty_title
             execute if score temp.stage data matches 2 if score temp.skillCd time matches -3..-1 run titleraw @a subtitle {"rawtext":[{"translate":"§c第 1 次攻击"}]}
             execute if score temp.stage data matches 2 if score temp.skillCd time matches -3..-1 as @a at @s run playsound random.orb @s ~~~
         ### [4s] 发动攻击
@@ -53,7 +53,7 @@
             execute if score temp.stage data matches 2 if score temp.skillCd time matches -7 run structure load aw:7_5_shelter -238 -45 31 0_degrees none false true false 5.00
             execute if score temp.stage data matches 2 if score temp.skillCd time matches -7 as @a at @s run playsound random.levelup @s ~~~ 1 2
         ### [8s~10s] 在攻击前提醒玩家
-            execute if score temp.stage data matches 2 if score temp.skillCd time matches -10..-8 run function aw/lib/modify_data/title
+            execute if score temp.stage data matches 2 if score temp.skillCd time matches -10..-8 run function aw/lib/events/show_empty_title
             execute if score temp.stage data matches 2 if score temp.skillCd time matches -10..-8 run titleraw @a subtitle {"rawtext":[{"translate":"§c第 2 次攻击"}]}
             execute if score temp.stage data matches 2 if score temp.skillCd time matches -10..-8 as @a at @s run playsound random.orb @s ~~~
         ### [11s] 发动攻击
@@ -68,7 +68,7 @@
             execute if score temp.stage data matches 2 if score temp.skillCd time matches -14 run structure load aw:7_5_shelter -238 -45 31 0_degrees none false true false 2.00
             execute if score temp.stage data matches 2 if score temp.skillCd time matches -14 as @a at @s run playsound random.levelup @s ~~~ 1 2
         ### [15s~16s] 在攻击前提醒玩家
-            execute if score temp.stage data matches 2 if score temp.skillCd time matches -16..-15 run function aw/lib/modify_data/title
+            execute if score temp.stage data matches 2 if score temp.skillCd time matches -16..-15 run function aw/lib/events/show_empty_title
             execute if score temp.stage data matches 2 if score temp.skillCd time matches -16..-15 run titleraw @a subtitle {"rawtext":[{"translate":"§c第 3 次攻击"}]}
             execute if score temp.stage data matches 2 if score temp.skillCd time matches -16..-15 as @a at @s run playsound random.orb @s ~~~
         ### [17s] 发动攻击

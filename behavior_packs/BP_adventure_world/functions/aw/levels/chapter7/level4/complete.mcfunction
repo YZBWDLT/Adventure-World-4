@@ -2,7 +2,7 @@
 # 7-4
 
 # --- 调用通用函数 ---
-execute positioned -225 -17 99 run function aw/lib/modify_data/levels/complete_level
+execute positioned -225 -17 99 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 function aw/system/controller/items
@@ -14,4 +14,4 @@ fill -235 -30 97 -233 -30 99 structure_void
 
 # --- 关卡特殊功能 ---
 ## 启用时间流逝
-function aw/lib/modify_data/states/timeline/enable_time_lapse
+function aw/lib/modify_data/timeline/enable_time_lapse

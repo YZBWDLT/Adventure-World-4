@@ -25,7 +25,7 @@ fill -164 -21 26 -162 -19 26 prismarine
 fill -168 -15 24 -168 -13 22 prismarine
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/start_chapter
+function aw/lib/events/levels/start_chapter
 
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块

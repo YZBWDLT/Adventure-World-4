@@ -16,4 +16,4 @@ function aw/levels/chapter7/level2/waves/wave_1
 
 # --- 调用通用函数 ---
 # 必须由初次进入的玩家执行
-function aw/lib/modify_data/levels/start_level
+function aw/lib/events/levels/start_level

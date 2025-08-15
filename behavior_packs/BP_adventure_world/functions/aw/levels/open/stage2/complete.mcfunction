@@ -5,10 +5,10 @@
 spawnpoint @a -26 1 -37
 
 # 调用通用函数
-function aw/lib/modify_data/levels/complete_open
+function aw/lib/events/levels/complete_open
 
 # 启用时间线流逝
-function aw/lib/modify_data/states/timeline/enable_time_lapse
+function aw/lib/modify_data/timeline/enable_time_lapse
 
 # 提示玩家可以和 NPC 交互
 tellraw @a {"rawtext":[{"translate":"§7小提示：右键NPC可以与他们交互哦！"}]}

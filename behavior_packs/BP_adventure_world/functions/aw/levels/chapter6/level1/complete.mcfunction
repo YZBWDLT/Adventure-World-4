@@ -2,7 +2,7 @@
 # 6-1
 
 # --- 调用通用函数 ---
-execute positioned -76 -30 -48 run function aw/lib/modify_data/levels/complete_level
+execute positioned -76 -30 -48 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 function aw/system/controller/items

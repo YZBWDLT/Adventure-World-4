@@ -2,7 +2,7 @@
 # 7-5
 
 # --- 调用通用函数 ---
-execute positioned -225 -17 99 run function aw/lib/modify_data/levels/fail_level
+execute positioned -225 -17 99 run function aw/lib/events/levels/fail_level
 
 # --- 重新开放关卡 ---
 # （本关无需重新开放关卡，因为入口并未封闭）
@@ -11,10 +11,10 @@ execute positioned -225 -17 99 run function aw/lib/modify_data/levels/fail_level
 ## 移除已经安放的掩体
 fill -238 -45 31 -212 -45 57 air destroy
 ## 播放音乐
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
 ## 将时间线状态改回 2
 scoreboard players set timeline active 2
-function aw/lib/modify_data/states/timeline/disable_time_lapse
+function aw/lib/modify_data/timeline/disable_time_lapse
 ## 移除临时变量
 scoreboard players reset temp.stage data
 scoreboard players reset temp.skillCd time

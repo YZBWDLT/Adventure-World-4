@@ -22,7 +22,7 @@ fill -104 -17 69 -104 -15 67 polished_diorite
 fill -167 -21 60 -167 -19 62 polished_diorite
 
 # --- 调用通用函数 ---
-function aw/lib/modify_data/levels/start_chapter
+function aw/lib/events/levels/start_chapter
 
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块

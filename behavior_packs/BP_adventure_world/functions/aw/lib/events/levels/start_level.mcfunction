@@ -12,11 +12,11 @@
     ## 设置为可恢复箭
         tag @a add supplyArrow
     ## 时间线
-        function aw/lib/modify_data/states/timeline/dont_keep_value
-        function aw/lib/modify_data/states/timeline/enable
+        function aw/lib/modify_data/timeline/dont_keep_value
+        function aw/lib/modify_data/timeline/enable
 
 # --- 提醒玩家开启关卡 ---
-    function aw/lib/modify_data/title
+    function aw/lib/events/show_empty_title
     titleraw @a subtitle {"rawtext":[{"translate":"§c%%s-%%s","with":{"rawtext":[{"score":{"objective":"data","name":"chapter"}},{"score":{"objective":"data","name":"level"}}]}}]}
 
 # --- 传送玩家 ---
@@ -44,7 +44,7 @@
 
 # --- 若进入时正处于对话状态，则停止对话 ---
     execute unless score timeLapse data matches 0 run tellraw @a {"rawtext":[{"translate":"§7与试炼外的对话已被中断"}]}
-    execute unless score timeLapse data matches 0 run function aw/lib/modify_data/states/timeline/disable_time_lapse
+    execute unless score timeLapse data matches 0 run function aw/lib/modify_data/timeline/disable_time_lapse
 
 # --- 清除多余实体 ---
     kill @e[family=monster]

@@ -11,7 +11,7 @@
         scoreboard players set levelCompleteCountdown time 0
 
 # --- 提示玩家进入第 X 波 ---
-    function aw/lib/modify_data/title
+    function aw/lib/events/show_empty_title
     titleraw @a subtitle {"rawtext":[{"translate":"第 §a%%s §f波","with":{"rawtext":[{"score":{"objective":"data","name":"wave"}}]}}]}
 
 # --- 释放玩家 ---

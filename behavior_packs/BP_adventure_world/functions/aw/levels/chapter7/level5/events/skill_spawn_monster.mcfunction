@@ -3,7 +3,7 @@
 # 设定技能时长
     scoreboard players set temp.skillLength data -15
 # 设定标题
-    function aw/lib/modify_data/title
+    function aw/lib/events/show_empty_title
     titleraw @a subtitle {"rawtext":[{"translate":"§c当心！即将有怪物生成！"}]}
 # 召唤怪物
     ## 准备生成器，一阶段生成 3 个，二阶段生成 5 个

@@ -17,4 +17,4 @@ summon aw:spawner -218 -49 51 0 0 aw:spawn_zombie_shield
 summon aw:spawner -218 -49 37 0 0 aw:spawn_zombie_shield
 
 # --- 启用时间流逝 ---
-function aw/lib/modify_data/states/timeline/enable_time_lapse
+function aw/lib/modify_data/timeline/enable_time_lapse

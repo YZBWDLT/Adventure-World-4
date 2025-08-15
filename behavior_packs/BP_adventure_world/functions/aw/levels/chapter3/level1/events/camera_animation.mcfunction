@@ -34,4 +34,4 @@ execute if score timeline time matches 541 as @a at @s run camera @s set minecra
 # --- 剧情结束 ---
 execute if score timeline time matches 780.. run event entity @e[type=aw:npc] aw:remove_immediately
 execute if score timeline time matches 780.. run scoreboard players set timeline active 3
-execute if score timeline time matches 780.. run function aw/lib/modify_data/stop_dialogue
+execute if score timeline time matches 780.. run function aw/lib/events/stop_dialogue

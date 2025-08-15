@@ -2,7 +2,7 @@
 # 3-1
 
 # --- 调用通用函数 ---
-execute positioned -188 -20 29 run function aw/lib/modify_data/levels/complete_level
+execute positioned -188 -20 29 run function aw/lib/events/levels/complete_level
 scoreboard players set timeline active 1
 
 # --- 获得新物品 ---

@@ -2,7 +2,7 @@
 # 2-3
 
 # --- 调用通用函数 ---
-execute positioned -143 -20 61 run function aw/lib/modify_data/levels/complete_level
+execute positioned -143 -20 61 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a leather_chestplate
@@ -15,4 +15,4 @@ fill -167 -21 60 -167 -19 62 air
 
 # --- 关卡特殊功能 ---
 ## 播放音乐
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music

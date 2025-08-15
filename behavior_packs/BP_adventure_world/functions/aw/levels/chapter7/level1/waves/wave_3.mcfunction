@@ -1,10 +1,10 @@
 # ===== 第 3 波 =====
 
 # --- 波潮完成通用函数 ---
-execute positioned -119 -16 103 run function aw/lib/modify_data/levels/complete_wave
+execute positioned -119 -16 103 run function aw/lib/events/levels/complete_wave
 
 # --- 更新波数信息 ---
-execute positioned -83 1 -2 run function aw/lib/modify_data/levels/wave_3
+execute positioned -83 1 -2 run function aw/lib/events/levels/wave_3
 
 # --- 生成怪物生成器 ---
 

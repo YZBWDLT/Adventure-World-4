@@ -2,7 +2,7 @@
 # 1-3
 
 # --- 调用通用函数 ---
-execute positioned -137 12 33 run function aw/lib/modify_data/levels/complete_level
+execute positioned -137 12 33 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a leather_helmet

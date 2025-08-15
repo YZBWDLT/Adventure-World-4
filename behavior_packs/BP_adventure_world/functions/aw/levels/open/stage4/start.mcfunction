@@ -5,13 +5,13 @@
 scoreboard players set level data 4
 
 # 调用通用函数
-function aw/lib/modify_data/levels/start_open
+function aw/lib/events/levels/start_open
 
 # 传送玩家
 tp @a -21 3 39 facing @e[name="张宇",c=1]
 
 # 播放音乐
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
 
 # 移除悬浮文本
 event entity @e[type=aw:text_display] aw:remove_immediately

@@ -2,7 +2,7 @@
 # 从一阶段转为二阶段的时间线
 
 ## [0] 如果时间线还未启用，则启用时间线
-    execute if score timeLapse data matches 0 run function aw/lib/modify_data/states/timeline/enable_time_lapse
+    execute if score timeLapse data matches 0 run function aw/lib/modify_data/timeline/enable_time_lapse
 ## [1] 初始化
     ### 摄像机震动
         execute if score timeline time matches 1 run camerashake add @a[tag=!spectator] 1 2 rotational
@@ -12,7 +12,7 @@
         execute if score timeline time matches 1 run summon aw:fireball -217 -45 51
         execute if score timeline time matches 1 run summon aw:fireball -219 -45 36
     ### 提示玩家
-        execute if score timeline time matches 1 run function aw/lib/modify_data/title
+        execute if score timeline time matches 1 run function aw/lib/events/show_empty_title
         execute if score timeline time matches 1 run titleraw @a subtitle {"rawtext":[{"translate":"§c唤魔法师已被激怒！"}]}
         execute if score timeline time matches 1 run execute as @a at @s run playsound smithing_table.use @s
 ## [19] 火球爆炸
@@ -29,4 +29,4 @@
     ### 更改阶段
         execute if score timeline time matches 20.. run scoreboard players set temp.stage data 2
     ### 结束时间线流逝
-        execute if score timeline time matches 20.. run function aw/lib/modify_data/states/timeline/disable_time_lapse
+        execute if score timeline time matches 20.. run function aw/lib/modify_data/timeline/disable_time_lapse

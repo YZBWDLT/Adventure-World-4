@@ -7,4 +7,4 @@
 ## 当前关卡完成状态
 scoreboard players set levelCompleted data 0
 ## 启用对话
-function aw/lib/modify_data/start_dialogue
+function aw/lib/events/start_dialogue

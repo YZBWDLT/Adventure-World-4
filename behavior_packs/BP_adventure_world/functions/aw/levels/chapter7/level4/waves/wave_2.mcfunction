@@ -1,7 +1,7 @@
 # ===== 第 2 波 =====
 
 # --- 波潮完成通用函数 ---
-execute positioned -225 -17 99 run function aw/lib/modify_data/levels/complete_wave
+execute positioned -225 -17 99 run function aw/lib/events/levels/complete_wave
 
 # --- 更新波数信息 ---
 # 符号具体含义请见函数aw/lib/modify_data/levels/wave_(?)
@@ -28,4 +28,4 @@ summon aw:spawner -225 -11 113 0 0 aw:spawn_piglin_4
 summon aw:spawner -242 -16 96  0 0 aw:spawn_skeleton_sword_2
 
 # --- 启用时间线流逝 ---
-function aw/lib/modify_data/states/timeline/enable_time_lapse
+function aw/lib/modify_data/timeline/enable_time_lapse

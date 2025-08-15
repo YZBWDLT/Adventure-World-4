@@ -8,7 +8,7 @@ function aw/lib/modify_data/init/gamerule
 function aw/lib/modify_data/init/data
 
 # 启用时间线
-function aw/lib/modify_data/states/timeline/enable
+function aw/lib/modify_data/timeline/enable
 
 # 关闭 HUD
 hud @a hide all

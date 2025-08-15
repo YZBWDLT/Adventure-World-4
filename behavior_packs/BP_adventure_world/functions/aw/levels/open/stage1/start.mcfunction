@@ -5,7 +5,7 @@
 scoreboard players set level data 1
 
 # 调用通用函数
-function aw/lib/modify_data/levels/start_open
+function aw/lib/events/levels/start_open
 
 # 传送玩家
 tp @a -26 6 -50 facing -27 6 -51
@@ -29,4 +29,4 @@ summon aw:npc -25 1 -34 facing @p aw:npc_tianying "田英"
 fill -21 0 37 -23 0 37 border_block
 
 # 播放音乐
-function aw/lib/modify_data/play_music
+function aw/lib/events/play_music
