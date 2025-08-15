@@ -28,6 +28,7 @@
     ## 复活已死亡玩家到重生点
         execute as @a[tag=spectator] run function aw/lib/events/respawn_player
     ## 回血
+        effect @a clear
         effect @a instant_health 1 20 true
 
 # --- 清除多余实体 ---

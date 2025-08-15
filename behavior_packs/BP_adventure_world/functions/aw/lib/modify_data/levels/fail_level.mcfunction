@@ -30,6 +30,7 @@
     ## 复活已死亡玩家到重生点
         execute as @a[tag=spectator] run function aw/lib/events/respawn_player
     ## 回血
+        effect @a clear
         effect @a instant_health 1 20 true
     ## 如果失败次数达到一定次数，进行通知
         execute if score failedCount.thisLevel data matches 3 run tellraw @a {"rawtext":[{"text":"§7你（们）已经失败3次了！下一次进入关卡时将给予力量II效果。"}]}
