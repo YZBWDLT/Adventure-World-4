@@ -8,6 +8,12 @@
     scoreboard players set @s health 20
     tag @s remove spectator
 
+    ## 检查是否跨局游戏，如果是则清空击杀数和死亡数，并重置游戏 ID
+        scoreboard players add @s gameId 0
+        execute unless score @s gameId = gameId data run scoreboard players set @s deathCount 0
+        execute unless score @s gameId = gameId data run scoreboard players set @s killCount 0
+        execute unless score @s gameId = gameId data run scoreboard players operation @s gameId = gameId data
+
 # --- 获取变量 ---
     ## 玩家数
         function aw/lib/get_data/player_amount

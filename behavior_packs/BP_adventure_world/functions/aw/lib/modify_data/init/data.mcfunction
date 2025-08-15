@@ -29,8 +29,13 @@
         scoreboard objectives add killCount dummy "击杀数"
     ## 生命值记分项
         scoreboard objectives add health dummy "生命值"
+    ## 游戏 ID 记分项
+        scoreboard objectives add gameId dummy "游戏 ID"
 
 # --- 数据变量重置 ---
+
+    ## 本局游戏 ID，与玩家的 gameId.@s 一致时则为本次游戏
+        scoreboard players random gameId data 1000 9999
 
     ## 玩家数据
         ### 玩家当前死亡次数，0：刚进入游戏，1：在线
@@ -43,6 +48,8 @@
             scoreboard players set @a isOnline 1
         ### 玩家生命值
             scoreboard players set @a health 20
+        ### 玩家当前的游戏 ID，与 data.gameId 一致时则为本次游戏
+            execute as @a run scoreboard players operation @s gameId = gameId data
 
     ## 基础时间数据
         ### 每刻增加 1 分，每秒重置 1 次（单位：游戏刻）

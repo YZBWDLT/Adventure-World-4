@@ -16,6 +16,7 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bhealth.@s = §a%%s §7| 玩家生命值", "with": { "rawtext": [ { "score":{ "objective": "health", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bkillCount.@s = §a%%s §7| 玩家击杀数", "with": { "rawtext": [ { "score":{ "objective": "killCount", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bisOnline.@s = §a%%s §7| 玩家是否在线 | 0：刚进入游戏，1：在线", "with": { "rawtext": [ { "score":{ "objective": "isOnline", "name": "@s" } } ] } } ] }
+execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bgameId.@s = §a%%s §7| 玩家当前的游戏 ID，与 data.gameId 一致时则为本次游戏", "with": { "rawtext": [ { "score":{ "objective": "gameId", "name": "@s" } } ] } } ] }
 
 ## active
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§l===== active记分板 =====" } ] }
@@ -33,6 +34,7 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "data.client = §a%%s §7| 当前使用的客户端 | 0：国际版，1：中国版", "with": { "rawtext": [ { "score":{ "objective": "data", "name": "client" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "data.failedCount.allLevels = §a%%s §7| 总失败次数", "with": { "rawtext": [ { "score":{ "objective": "data", "name": "failedCount.allLevels" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "data.failedCount.thisLevel = §a%%s §7| 本关的失败次数", "with": { "rawtext": [ { "score":{ "objective": "data", "name": "failedCount.thisLevel" } } ] } } ] }
+execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "data.gameId = §a%%s §7| 本局游戏 ID，与玩家的 gameId.@s 一致时则为本次游戏", "with": { "rawtext": [ { "score":{ "objective": "data", "name": "gameId" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "data.gaming = §a%%s §7| 是否正在 X-Y（1<=X<=7, Y!=0）的游玩状态 | 0：未处于游玩状态，1：正处于游玩状态", "with": { "rawtext": [ { "score":{ "objective": "data", "name": "gaming" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "data.hasCheat = §a%%s §7| 是否有玩家启用了创造模式作弊 | 0：无，1：有", "with": { "rawtext": [ { "score":{ "objective": "data", "name": "hasCheat" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "data.keepValue = §a%%s §7| 进行时间线设置时是否保留原有的时间线值 | 0：不保留，1：保留", "with": { "rawtext": [ { "score":{ "objective": "data", "name": "keepValue" } } ] } } ] }
