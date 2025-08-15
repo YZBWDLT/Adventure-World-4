@@ -21,6 +21,9 @@
     ## 楼下：米云溪的翻译手稿
         structure load aw:lecture_with_book -27 1 -45
 
+# 开放商店（因为此时有可能底下因为开发者模式的问题还埋着边界方块）
+    fill -21 0 37 -23 0 37 air
+
 # 生成悬浮文本
     function aw/levels/end/stage2/events/show_author_group
     function aw/levels/end/stage2/events/on_exit/home
