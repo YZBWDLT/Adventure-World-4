@@ -10,10 +10,10 @@ execute if score storyMode settings matches 0 if score timeline time matches 380
 
 execute if score storyMode settings matches 0 if score timeline time matches 1100 run tellraw @a {"rawtext":[{"translate":"* 随着剑的消失，你惊奇的发现剑很识趣地替换掉了你手里的钢剑。"}]}
 execute if score storyMode settings matches 0 if score timeline time matches 1200 run tellraw @a {"rawtext":[{"translate":"* 它告诉了你它的名字 - §e旷野之剑§r。"}]}
-## [1300] 剑拔出后：剧情结束后，施加失明效果
+## [1300] 剑拔出后：剧情结束后，施加失明效果和漂浮效果
 execute if score storyMode settings matches 0 if score timeline time matches 1300 run tellraw @a {"rawtext":[{"translate":"* 你感觉身体再次变轻，听到了一个声音......"}]}
 ## [1450] 剑拔出后：黑屏并锁定玩家行动
-## [1600] 剧情结束：剧情结束
+## [1600] 剧情结束：剧情结束并移除漂浮
 
 # 剧情模式
 ## [1~439] 剑拔出时：释放未拔剑的粒子
@@ -39,11 +39,11 @@ execute if score storyMode settings matches 1 if score timeline time matches 150
 execute if score storyMode settings matches 1 if score timeline time matches 1580 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7但接下来......最后的......我们相信你......"}]}
 execute if score storyMode settings matches 1 if score timeline time matches 1660 run tellraw @a {"rawtext":[{"text":"* §c§kABGHIrjafasfJK"}]}
 execute if score storyMode settings matches 1 if score timeline time matches 1740 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7最后......【封......殿】......"}]}
-## [1820] 剑拔出后：剧情结束后，施加失明效果
+## [1820] 剑拔出后：剧情结束后，施加失明效果和漂浮效果
 execute if score storyMode settings matches 1 if score timeline time matches 1820 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7【取得神剑者，仍......认可方能使用，此乃最终之试炼】......"}]}
 execute if score storyMode settings matches 1 if score timeline time matches 1900 run tellraw @a {"rawtext":[{"text":"* §c§kABCDyryfgudjEFGHIJK"}]}
 ## [1950] 剑拔出后：黑屏并锁定玩家行动
-## [2100] 剧情结束：剧情结束
+## [2100] 剧情结束：剧情结束并移除漂浮
 
 # --- 动画开幕 ---
 
@@ -106,9 +106,11 @@ execute if score timeline time matches 1040 run give @a aw:wild_sword 1 0 {"item
 
 # --- 剑拔出后 ---
 
-## [纯战斗1300, 剧情1820] 剧情结束后，施加失明效果
+## [纯战斗1300, 剧情1820] 剧情结束后，施加失明效果和漂浮效果
 execute if score storyMode settings matches 0 if score timeline time matches 1300 run effect @a blindness 30 0 true
+execute if score storyMode settings matches 0 if score timeline time matches 1300 run effect @a levitation 30 0 true
 execute if score storyMode settings matches 1 if score timeline time matches 1820 run effect @a blindness 30 0 true
+execute if score storyMode settings matches 1 if score timeline time matches 1820 run effect @a levitation 30 0 true
 
 ## [纯战斗1450, 剧情1950] 黑屏并锁定玩家行动
 execute if score storyMode settings matches 0 if score timeline time matches 1450 run camera @a fade time 2 7 2
@@ -117,6 +119,9 @@ execute if score storyMode settings matches 1 if score timeline time matches 195
 execute if score storyMode settings matches 1 if score timeline time matches 1950 run function aw/lib/modify_data/start_dialogue_keep
 
 # --- 剧情结束 ---
-## [纯战斗1600, 剧情2100] 剧情结束
+
+## [纯战斗1600, 剧情2100] 剧情结束并移除漂浮
+execute if score storyMode settings matches 0 if score timeline time matches 1600 run effect @a levitation 0 1 true
 execute if score storyMode settings matches 0 if score timeline time matches 1600 run function aw/levels/chapter7/level0/complete
+execute if score storyMode settings matches 1 if score timeline time matches 2100 run effect @a levitation 0 1 true
 execute if score storyMode settings matches 1 if score timeline time matches 2100 run function aw/levels/chapter7/level0/complete
