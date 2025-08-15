@@ -5,6 +5,8 @@
     tag @e[family=monster,type=!evocation_illager] add dealFireballDamage
     #                                                                               ↓ 保证实体在下方才行
     execute as @e[tag=dealFireballDamage] at @s if block ~ -45 ~ aw:evocation_stone if entity @s[y=-44,dy=-20] run tag @s remove dealFireballDamage
+# 检查本次游戏是否为玩家第 10 次及以后重开，如果是则阻止玩家受到此伤害
+    execute if score failedCount.thisLevel data matches 10.. run tag @a remove dealFireballDamage
 # 若有dealFireballDamage标签，则直接施加伤害（一阶段为 8 伤害，二阶段为 16 伤害）
     execute if score temp.stage data matches 1 run damage @e[tag=dealFireballDamage] 8 override
     execute if score temp.stage data matches 2 run damage @e[tag=dealFireballDamage] 16 override
