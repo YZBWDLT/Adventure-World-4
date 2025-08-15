@@ -30,5 +30,5 @@
         execute if score @e[type=aw:blaze_king,c=1] health < temp.bossHealthOneThird data if score tick time matches 14 run function aw/levels/chapter6/level4/timelines/heal_boss
 
 # --- 死亡的玩家进行倒计时复活 ---
-    # 每秒执行 1 次。由死亡状态的玩家执行。
-    execute if score tick time matches 11 as @a[tag=spectator] at @s run function aw/levels/chapter6/level4/timelines/player_respawn
+    # 每秒执行 1 次。仅限多人状态下执行，由死亡状态的玩家执行。
+    execute if score tick time matches 11 if score playerAmount data matches 2.. as @a[tag=spectator] at @s run function aw/levels/chapter6/level4/timelines/player_respawn
