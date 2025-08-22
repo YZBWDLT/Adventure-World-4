@@ -47,12 +47,14 @@ entity.aw:blaze_king.name=Blaze King
 entity.aw:marker.name=Marker
 entity.aw:spawner.name=Monster Spawner
 entity.evoker_boss.name=§l§cEVOKER BOSS
+entity.aw:billboard.name=Billboard
 
 ### Spawn Eggs
 item.spawn_egg.entity.aw:npc.name=Spawn NPC
 item.spawn_egg.entity.aw:text_display.name=Spawn Floating Text
 item.spawn_egg.entity.aw:skeleton_king.name=Spawn Skeleton King
 item.spawn_egg.entity.aw:blaze_king.name=Spawn Blaze King
+item.spawn_egg.entity.aw:billboard.name=Billboard Spawn Egg
 
 ### Text Translations
 action.interact.chat=Chat

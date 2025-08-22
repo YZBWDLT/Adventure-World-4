@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "aw:billboard",
+            "render_controllers": [ "controller.render.billboard" ],
+            "geometry": { "default": "geometry.billboard" },
+            "materials": { "default": "entity_alphatest" },
+            "textures": { "default": "textures/entity/billboard" },
+
+            "scripts": {
+                "animate": [
+                    "scale_down_picture"
+                ]
+            },
+            "animations": {
+                "scale_down_picture": "animation.billboard.scale_down_picture"
+            },
+
+            "spawn_egg": {
+                "base_color": "#e7e7e7",
+                "overlay_color": "#0cebee"
+            }
+        }
+    }
+}

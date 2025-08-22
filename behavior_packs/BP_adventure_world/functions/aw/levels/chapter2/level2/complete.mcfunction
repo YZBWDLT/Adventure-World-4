@@ -6,7 +6,7 @@ execute positioned -72 1 69 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a leather_leggings
-function aw/system/controller/items
+function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§a2-2已完成！§r\n§f你已获得 §b[铁护腿] §f！"}]}
 
 # --- 重新开放关卡 ---

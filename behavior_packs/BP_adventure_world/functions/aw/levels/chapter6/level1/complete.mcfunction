@@ -5,7 +5,7 @@
 execute positioned -76 -30 -48 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
-function aw/system/controller/items
+function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§a6-1已完成！§r\n§f你已获得 §e[力量弓] §f！\n§7手持弓可获取附魔"}]}
 
 # --- 重新开放关卡 ---

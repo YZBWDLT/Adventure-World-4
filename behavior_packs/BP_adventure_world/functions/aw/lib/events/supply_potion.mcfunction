@@ -1,6 +1,6 @@
 # ===== 事件：供应药水 =====
 # 为玩家供应药水
-# 调用此方法时：只能由aw/system/controller/potions执行，需修饰执行者为应补充药水的玩家（execute as @a[...]）。
+# 调用此方法时：只能由aw/system/potions执行，需修饰执行者为应补充药水的玩家（execute as @a[...]）。
 
 ## 治疗药水 | 给予有X瓶药水的玩家L-X瓶，使其达到上限值
 execute if score temp.potionHealthLimit data matches 1..6 run give @s[hasitem={item=aw:potion_health,quantity=0}] aw:potion_health 1 0 {"item_lock":{"mode":"lock_in_inventory"}}

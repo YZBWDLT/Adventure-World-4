@@ -6,7 +6,7 @@ execute positioned -141 -30 6 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a aw:iron_chestplate
-function aw/system/controller/items
+function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§a4-4已完成！§r\n§f你已获得 §e[钻石胸甲] §f！"}]}
 
 # --- 重新开放关卡 ---

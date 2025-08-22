@@ -28,5 +28,9 @@ summon aw:npc -25 1 -34 facing @p aw:npc_tianying "田英"
 # 封锁商店
 fill -21 0 37 -23 0 37 border_block
 
+# 生成公告板
+summon aw:billboard -20 1 -38 270 0
+execute as @e[type=aw:billboard,rym=-92,ry=-88] at @s positioned ~~~-2 run fill ~~~~~3~4 barrier
+
 # 播放音乐
 function aw/lib/events/play_music

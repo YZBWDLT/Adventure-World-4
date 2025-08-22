@@ -18,3 +18,6 @@
     fill -29 3 -45 -28 3 -45 bookshelf
     structure load aw:lecture_no_book -27 1 -45
     setblock -25 7 -51 air
+# 移除公告板
+    execute as @e[type=aw:billboard,rym=-92,ry=-88] at @s positioned ~~~-2 run fill ~~~~~3~4 air
+    event entity @e[type=aw:billboard] aw:remove_immediately

@@ -5,7 +5,7 @@
 execute positioned -225 -47 44 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
-function aw/system/controller/items
+function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§c最终关卡已完成！跳入最中间的洞，结束试炼！§r"}]}
 
 # --- 重新开放关卡 ---

@@ -8,7 +8,7 @@ execute positioned -75 -38 22 run function aw/lib/events/levels/complete_level
 clear @a aw:diamond_helmet
 clear @a aw:diamond_boots
 clear @a leather_boots
-function aw/system/controller/items
+function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§a6-4已完成！"}]}
 
 # --- 重新开放关卡 ---

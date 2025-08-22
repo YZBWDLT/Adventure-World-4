@@ -28,7 +28,7 @@
 
 # --- 控制器 ---
     ## 音效控制器 | 激活且倒计时为0时执行
-        execute if score sound active matches 1.. if score sound time matches 0 run function aw/system/controller/sound
+        execute if score sound active matches 1.. if score sound time matches 0 run function aw/system/sound
     ## 玩家死亡 | 控制死亡榜和玩家死亡后运行的命令
         scoreboard players set @a[scores={deathState=!2}] deathState 1
         scoreboard players set @e[type=player] deathState 0
@@ -36,11 +36,11 @@
         scoreboard players set @a[scores={deathState=1}] deathState 2
 
     ## 物品控制器 | 控制物品的上限、补充、附魔与耐久修复，每秒运行一次
-        execute if score tick time matches 1 run function aw/system/controller/items
+        execute if score tick time matches 1 run function aw/system/items
     ## 药水控制器 | 控制药水的药效、上限和补充，每秒运行一次
-        execute if score tick time matches 2 run function aw/system/controller/potions
+        execute if score tick time matches 2 run function aw/system/potions
     ## 箭控制器 | 控制箭的上限和补充，每秒运行一次
-        execute if score tick time matches 3 run function aw/system/controller/arrows
+        execute if score tick time matches 3 run function aw/system/arrows
     ## 事件控制器 | 控制杂项内容的执行
         ### 全局饱和
             execute if score tick time matches 4 run effect @a saturation 1 10 true
@@ -54,7 +54,7 @@
 
 # --- 关卡 ---
     ## 时间线 | 必须在有玩家时执行，防止在退出重进后产生一些奇怪问题
-        execute if score playerAmount data matches 1.. if score timeline active matches 1.. run function aw/system/controller/timeline
+        execute if score playerAmount data matches 1.. if score timeline active matches 1.. run function aw/system/timeline
     ## 信息板 | 仅当试炼后开启
-        execute if score chapter data matches 1..7 run function aw/system/controller/infoboard
+        execute if score chapter data matches 1..7 run function aw/system/infoboard
 

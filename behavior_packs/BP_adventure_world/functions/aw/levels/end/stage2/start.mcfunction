@@ -10,6 +10,10 @@
 # 生成作者 NPC
     function aw/levels/end/stage2/events/spawn_authors
 
+# 生成公告板
+    summon aw:billboard -20 1 -38 270 0
+    execute as @e[type=aw:billboard,rym=-92,ry=-88] at @s positioned ~~~-2 run fill ~~~~~3~4 barrier
+
 # 林乐家相关
     ## 楼下：成就按钮
         setblock -25 2 -45 birch_button ["facing_direction"=2,"button_pressed_bit"=false]

@@ -6,7 +6,7 @@ execute positioned -156 -11 14 run function aw/lib/events/levels/complete_level
 
 # --- 获得新物品 ---
 clear @a aw:iron_leggings
-function aw/system/controller/items
+function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§a4-3已完成！§r\n§f你已获得 §d[休眠药水] §e[钻石护腿] §f！\n§7温馨提示，不要混用生长药水和休眠药水"}]}
 
 # --- 重新开放关卡 ---

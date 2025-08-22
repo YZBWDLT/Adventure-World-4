@@ -47,12 +47,14 @@ entity.aw:blaze_king.name=烈焰王
 entity.aw:marker.name=标记
 entity.aw:spawner.name=怪物生成器
 entity.evoker_boss.name=§l§c唤魔法师
+entity.aw:billboard.name=公告板
 
 ### 刷怪蛋类
 item.spawn_egg.entity.aw:npc.name=NPC 刷怪蛋
 item.spawn_egg.entity.aw:text_display.name=悬浮文本 刷怪蛋
 item.spawn_egg.entity.aw:skeleton_king.name=骷髅王 刷怪蛋
 item.spawn_egg.entity.aw:blaze_king.name=烈焰王 刷怪蛋
+item.spawn_egg.entity.aw:billboard.name=公告板 刷怪蛋
 
 ### 文本翻译类
 action.interact.chat=聊天
