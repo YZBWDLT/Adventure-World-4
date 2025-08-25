@@ -35,27 +35,54 @@
                 "longlongxiaotao": "textures/entity/npc_author/longlongxiaotao"
             },
             "geometry": {
-                "male": "geometry.manikin_male",
-                "female": "geometry.manikin_female"
+                "default": "geometry.aw_npc.default",
+                "slim": "geometry.aw_npc.slim"
             },
             "render_controllers": [ "controller.render.aw_npc" ],
             "spawn_egg": { "base_color": "#e8b211", "overlay_color": "#47f118" },
-            "animations": {
-                "bob": "animation.player.bob",
-                "look_at_target_default": "animation.humanoid.look_at_target.default",
-                "move": "animation.humanoid.move",
-
-                "controller_move": "controller.animation.humanoid.move"
-            },
             "scripts": {
                 "scale": "0.9375",
-                "animate": [
-                    "bob", "look_at_target_default", "controller_move"
-                ],
                 "pre_animation": [
-                    "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+                    "variable.geometry = query.property('aw:geometry') == 'slim' ? 1 : 0;",
+                    "variable.skin = query.property('aw:skin');",
+                    
+                    "variable.state = query.property('aw:state');",
+                    "variable.is_sitting = variable.state == 'sit' || variable.state == 'sit_raising_head';",
+                    "variable.is_walking = query.is_moving;",
+                    "variable.anim = query.property('aw:animation');",
+                    "variable.speak_mode = query.property('aw:speak_mode');"
+                ],
+                "animate": [
+                    "state_controller",
+                    "animation_controller"
                 ]
-            }
+            },
+            "animations": {
+                "state_controller": "controller.animation.aw_npc.state",
+                "animation_controller": "controller.animation.aw_npc.animation",
+
+                "stand_basic": "animation.aw_npc.stand",
+                "stand_walk": "animation.aw_npc.stand.walk",
+                "sit_basic": "animation.aw_npc.sit",
+                "sit_raising_head": "animation.aw_npc.sit.raise_head",
+                "lie_basic": "animation.aw_npc.lie",
+
+                "wave_hand_standing": "animation.aw_npc.stand.wave_hand",
+                "wave_hand_sitting": "animation.aw_npc.sit.wave_hand",
+                "speaking1": "animation.aw_npc.speaking1",
+                "speaking2": "animation.aw_npc.speaking2",
+                "speaking3": "animation.aw_npc.speaking3",
+                "speaking4": "animation.aw_npc.speaking4",
+                "applause": "animation.aw_npc.applause",
+                "place_block": "animation.aw_npc.place_block",
+                "look_around": "animation.aw_npc.look_around",
+                "nod": "animation.aw_npc.nod",
+                "shake_head": "animation.aw_npc.shake_head",
+                "bad_smile_standing": "animation.aw_npc.stand.bad_smile",
+                "bad_smile_sitting": "animation.aw_npc.sit.bad_smile"
+
+            },
+            "enable_attachables": true
         }
     }
 }

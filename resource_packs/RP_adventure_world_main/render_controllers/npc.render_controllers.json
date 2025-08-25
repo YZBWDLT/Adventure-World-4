@@ -2,9 +2,9 @@
     "format_version": "1.10.0",
     "render_controllers": {
         "controller.render.aw_npc": {
-            "geometry": "query.property('aw:is_author') ? array.author[query.property('aw:npc_type')] : array.not_author[query.property('aw:npc_type')]",
+            "textures": [ "query.property('aw:is_author') ? array.author[query.property('aw:skin')] : array.not_author[query.property('aw:skin')]" ],
             "materials": [ { "*": "material.default" } ],
-            "textures": [ "query.property('aw:is_author') ? array.author[query.property('aw:npc_type')] : array.not_author[query.property('aw:npc_type')]" ],
+            "geometry": "array.models[variable.geometry]",
             "arrays": {
                 "textures": {
                     "array.author": [
@@ -40,36 +40,9 @@
                     ]
                 },
                 "geometries": {
-                    "array.author": [
-                        "geometry.male",
-                        "geometry.male",
-                        "geometry.male",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.male",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.male",
-                        "geometry.female",
-                        "geometry.male",
-                        "geometry.male"
-                    ],
-                    "array.not_author": [
-                        "geometry.male",
-                        "geometry.male",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.female",
-                        "geometry.male",
-                        "geometry.male",
-                        "geometry.male"
+                    "array.models": [
+                        "geometry.default",
+                        "geometry.slim"
                     ]
                 }
             }

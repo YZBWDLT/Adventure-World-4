@@ -7,137 +7,78 @@
             "is_spawnable": true,
             "is_summonable": true,
             "properties": {
-                "aw:npc_type": { "client_sync": true, "type": "int", "range": [0, 18], "default": 0 },
-                "aw:is_author": { "client_sync": true, "type": "bool", "default": false },
-                "aw:see_player": { "client_sync": false, "type": "bool", "default": false }
+                "aw:skin": { "type": "int", "range": [ 0, 18 ], "default": 0, "client_sync": true },
+                "aw:geometry": { "type": "enum", "values": [ "default", "slim" ], "default": "default", "client_sync": true },
+                
+                "aw:state": { "type": "enum", "values": [ "stand", "sit", "lie", "sit_raising_head" ], "default": "stand", "client_sync": true },
+                "aw:animation": { "type": "enum", "values": [  "none", "wave_hand", "speak", "applause", "place_block", "look_around", "nod", "shake_head", "bad_smile" ], "default": "none", "client_sync": true },
+                "aw:speak_mode": { "type": "int", "range": [ 1, 4 ], "default": 1, "client_sync": true },
+
+                "aw:is_author": { "type": "bool", "default": false, "client_sync": true },
+                "aw:see_player": { "type": "bool", "default": false, "client_sync": false }
             }
         },
         "components": {
             "minecraft:physics": { "has_collision": true, "has_gravity": true },
             "minecraft:collision_box": { "height": 1.8, "width": 0.6 },
-            "minecraft:health": { "value": 1, "max": 1 },
+            "minecraft:type_family": { "family": [ "npc" ] },
             "minecraft:knockback_resistance": { "value": 1 },
             "minecraft:persistent": { },
-            "minecraft:movement.basic": { },
-            "minecraft:movement": { "value": 0 },
+            "minecraft:health": { "value": 20, "max": 20 },
             "minecraft:nameable": { "allow_name_tag_renaming": true, "always_show": true },
             "minecraft:damage_sensor": { "triggers": [ { "cause": "all", "deals_damage": false } ] },
+            "minecraft:equipment": { "slot_drop_chance": [ { "slot": "slot.weapon.mainhand", "drop_chance": 0 } ] },
+
+            "minecraft:movement.basic": { },
+            "minecraft:movement": { "value": 0 },
             "minecraft:interact": { "interactions": [ { "interact_text": "action.interact.chat", "on_interact": { "event": "aw:interacted" }, "swing": true } ] }
         },
         "events": {
-            "minecraft:entity_spawned": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:npc_type": "math.random_integer(0, 7)" }
-            },
-            "aw:npc_hanlinqing": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": false, "aw:npc_type": 0 }
-            },
-            "aw:npc_chenqi": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": false, "aw:npc_type": 1 }
-            },
-            "aw:npc_zhaoxiangqian": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": false, "aw:npc_type": 2 }
-            },
-            "aw:npc_liqing": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": false, "aw:npc_type": 3 }
-            },
-            "aw:npc_miyunxi": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": false, "aw:npc_type": 4 }
-            },
-            "aw:npc_linan": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": false, "aw:npc_type": 5 }
-            },
-            "aw:npc_zhangyu": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": false, "aw:npc_type": 6 }
-            },
-            "aw:npc_tianying": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": false, "aw:npc_type": 7 }
-            },
-            "aw:author_yzbwdlt": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 0 }
-            },
-            "aw:author_andy7343": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 1 }
-            },
-            "aw:author_greeleaf": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 2 }
-            },
-            "aw:author_pigeonki": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 3 }
-            },
-            "aw:author_kriswenyu": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 4 }
-            },
-            "aw:author_pumpkinjui": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 5 }
-            },
-            "aw:author_xiaoshu512": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 6 }
-            },
-            "aw:author_tuffy2020china": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 7 }
-            },
-            "aw:author_ibukreev": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 8 }
-            },
-            "aw:author_kianakasnala947": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 9 }
-            },
-            "aw:author_xc13599305": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 10 }
-            },
-            "aw:author_hfpa0117": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 11 }
-            },
-            "aw:author_ender5207541": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 12 }
-            },
-            "aw:author_rustyabyss29193": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 13 }
-            },
-            "aw:author_enderlife5409": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 14 }
-            },
-            "aw:author_onekitty710926": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 15 }
-            },
-            "aw:author_foxlanmo": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 16 }
-            },
-            "aw:author_kuanpan_9527": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 17 }
-            },
-            "aw:author_longlongxiaotao": {
-                "add": { "component_groups": [ "should_see_player" ] },
-                "set_property": { "aw:is_author": true, "aw:npc_type": 18 }
-            },
+            "minecraft:entity_spawned": { "add": { "component_groups": [ "should_see_player" ] } },
 
+            "aw:npc_hanlinqing": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 0, "aw:geometry": "slim" } },
+            "aw:npc_chenqi": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 1, "aw:geometry": "default" } },
+            "aw:npc_zhaoxiangqian": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 2, "aw:geometry": "slim" } },
+            "aw:npc_liqing": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 3, "aw:geometry": "slim" } },
+            "aw:npc_miyunxi": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 4, "aw:geometry": "slim" } },
+            "aw:npc_linan": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 5, "aw:geometry": "default" } },
+            "aw:npc_zhangyu": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 6, "aw:geometry": "default" } },
+            "aw:npc_tianying": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 7, "aw:geometry": "default" } },
+            "aw:author_yzbwdlt": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 0, "aw:geometry": "default" } },
+            "aw:author_andy7343": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 1, "aw:geometry": "default" } },
+            "aw:author_greeleaf": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 2, "aw:geometry": "default" } },
+            "aw:author_pigeonki": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 3, "aw:geometry": "slim" } },
+            "aw:author_kriswenyu": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 4, "aw:geometry": "slim" } },
+            "aw:author_pumpkinjui": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 5, "aw:geometry": "default" } },
+            "aw:author_xiaoshu512": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 6, "aw:geometry": "slim" } },
+            "aw:author_tuffy2020china": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 7, "aw:geometry": "slim" } },
+            "aw:author_ibukreev": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 8, "aw:geometry": "slim" } },
+            "aw:author_kianakasnala947": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 9, "aw:geometry": "slim" } },
+            "aw:author_xc13599305": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 10, "aw:geometry": "slim" } },
+            "aw:author_hfpa0117": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 11, "aw:geometry": "slim" } },
+            "aw:author_ender5207541": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 12, "aw:geometry": "slim" } },
+            "aw:author_rustyabyss29193": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 13, "aw:geometry": "slim" } },
+            "aw:author_enderlife5409": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 14, "aw:geometry": "slim" } },
+            "aw:author_onekitty710926": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 15, "aw:geometry": "default" } },
+            "aw:author_foxlanmo": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 16, "aw:geometry": "slim" } },
+            "aw:author_kuanpan_9527": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 17, "aw:geometry": "default" } },
+            "aw:author_longlongxiaotao": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 18, "aw:geometry": "default" } },
+
+            "aw:state_stand": { "set_property": { "aw:state": "stand" } },
+            "aw:state_sit": { "set_property": { "aw:state": "sit" } },
+            "aw:state_sit_raising_head": { "set_property": { "aw:state": "sit_raising_head" } },
+            "aw:state_lie": { "set_property": { "aw:state": "lie" } },
+
+            "aw:animation_no_animation": { "set_property": { "aw:animation": "none" }, "remove": { "component_groups": [ "0.5_seconds", "1.5_seconds", "2_seconds", "4_seconds" ] } },
+            "aw:animation_wave_hand": { "set_property": { "aw:animation": "wave_hand" }, "add": { "component_groups": [ "1.5_seconds" ] } },
+            "aw:animation_speak": { "set_property": { "aw:animation": "speak", "aw:speak_mode": "math.random_integer(1, 4)" }, "add": { "component_groups": [ "2_seconds" ] } },
+            "aw:animation_applause": { "set_property": { "aw:animation": "applause" }, "add": { "component_groups": [ "2_seconds" ] } },
+            "aw:animation_place_block": { "set_property": { "aw:animation": "place_block" }, "add": { "component_groups": [ "1.5_seconds" ] } },
+            "aw:animation_look_around": { "set_property": { "aw:animation": "look_around" }, "add": { "component_groups": [ "2_seconds" ] } },
+            "aw:animation_nod": { "set_property": { "aw:animation": "nod" }, "add": { "component_groups": [ "0.5_seconds" ] } },
+            "aw:animation_shake_head": { "set_property": { "aw:animation": "shake_head" }, "add": { "component_groups": [ "0.5_seconds" ] } },
+            "aw:animation_bad_smile": { "set_property": { "aw:animation": "bad_smile" }, "add": { "component_groups": [ "2_seconds" ] } },
+            
             "aw:interacted": {
                 "queue_command": {
                     "command": [
@@ -155,19 +96,15 @@
                 "set_property": { "aw:see_player": false }
             },
 
-            "aw:remove_immediately": {
-                "add": { "component_groups": [ "remove_immediately" ] }
-            }
+            "aw:remove_immediately": { "add": { "component_groups": [ "remove_immediately" ] } }
         },
         "component_groups": {
-
-            "should_see_player": {
-                "minecraft:behavior.look_at_player": { "priority": 0 }
-            },
-
-            "remove_immediately": {
-                "minecraft:instant_despawn": { }
-            }
+            "should_see_player": { "minecraft:behavior.look_at_player": { "priority": 0 } },
+            "remove_immediately": { "minecraft:instant_despawn": { } },
+            "0.5_seconds": { "minecraft:timer": { "time": 0.5, "looping": false, "time_down_event": { "event": "aw:animation_no_animation", "target": "self" } } },
+            "1.5_seconds": { "minecraft:timer": { "time": 1.5, "looping": false, "time_down_event": { "event": "aw:animation_no_animation", "target": "self" } } },
+            "2_seconds": { "minecraft:timer": { "time": 2.0, "looping": false, "time_down_event": { "event": "aw:animation_no_animation", "target": "self" } } },
+            "4_seconds": { "minecraft:timer": { "time": 4.0, "looping": false, "time_down_event": { "event": "aw:animation_no_animation", "target": "self" } } }
         }
     }
 }

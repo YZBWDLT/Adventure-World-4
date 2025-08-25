@@ -1,0 +1,135 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.aw_npc.state": {
+            "initial_state": "stand",
+            "states": {
+                "stand": {
+                    "animations": [ "stand_basic" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "sit": "variable.is_sitting" },
+                        { "lie": "variable.state == 'lie'" },
+                        { "walk": "variable.is_walking" }
+                    ]
+                },
+                "sit": {
+                    "animations": [ "sit_basic" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "stand": "variable.state == 'stand'" },
+                        { "sit_raising_head": "variable.state == 'sit_raising_head'" },
+                        { "lie": "variable.state == 'lie'" }
+                    ]
+                },
+                "sit_raising_head": {
+                    "animations": [ "sit_basic", "sit_raising_head" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "sit": "variable.state != 'sit_raising_head'" }
+                    ]
+                },
+                "lie": {
+                    "animations": [ "lie_basic" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "stand": "variable.state == 'stand'" },
+                        { "sit": "variable.is_sitting" }
+                    ]
+                },
+                "walk": {
+                    "animations": [ "stand_walk" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "stand": "!variable.is_walking" }
+                    ]
+                }
+            }
+        },
+        "controller.animation.aw_npc.animation": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "wave_hand": "variable.anim == 'wave_hand'" },
+                        { "speak": "variable.anim == 'speak'" },
+                        { "applause": "variable.anim == 'applause'" },
+                        { "place_block": "variable.anim == 'place_block'" },
+                        { "look_around": "variable.anim == 'look_around'" },
+                        { "nod": "variable.anim == 'nod'" },
+                        { "shake_head": "variable.anim == 'shake_head'" },
+                        { "bad_smile": "variable.anim == 'bad_smile'" }
+                    ]
+                },
+                "wave_hand": {
+                    "animations": [
+                        { "wave_hand_standing": "variable.state == 'stand'" },
+                        { "wave_hand_sitting": "variable.is_sitting" }
+                    ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                },
+                "speak": {
+                    "animations": [
+                        { "speaking1": "variable.speak_mode == 1" },
+                        { "speaking2": "variable.speak_mode == 2" },
+                        { "speaking3": "variable.speak_mode == 3" },
+                        { "speaking4": "variable.speak_mode == 4" }
+                    ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                },
+                "applause": {
+                    "animations": [ "applause" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                },
+                "place_block": {
+                    "animations": [ "place_block" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                },
+                "look_around": {
+                    "animations": [ "look_around" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                },
+                "nod": {
+                    "animations": [ "nod" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                },
+                "shake_head": {
+                    "animations": [ "shake_head" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                },
+                "bad_smile": {
+                    "animations": [
+                        { "bad_smile_standing": "variable.state == 'stand'" },
+                        { "bad_smile_sitting": "variable.is_sitting" }
+                    ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                }
+            }
+        }
+    }
+}

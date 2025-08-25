@@ -11,7 +11,7 @@
     scoreboard players set timeline active 1
 
 # 将张宇“传送”过来
-    event entity @e[type=aw:npc,has_property={aw:is_author=false,aw:npc_type=6}] aw:remove_immediately
+    event entity @e[type=aw:npc,has_property={aw:is_author=false,aw:skin=6}] aw:remove_immediately
     summon aw:npc -14 1 89 facing @p aw:npc_zhangyu "张宇"
 
 # 传送玩家并设置重生点
