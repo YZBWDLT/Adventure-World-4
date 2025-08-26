@@ -10,11 +10,16 @@ execute if score timeline time matches 1..1149 run tp @s -15.0 1 88 facing @e[ty
 execute if score timeline time matches 1150.. run tp @s -26 1 -37 facing -25 1 -34
 ## 设置玩家的相机视角
     ## [1] 切换视角
-        execute if score timeline time matches 1..1009 run camera @s set minecraft:free pos -20 6 91 facing -15.0 1 85
-    ## [1100] 还原视角并黑屏
-        execute if score timeline time matches 1100..1180 run camera @s fade time 1 3 1
-    ## [1200] 切换视角
-        execute if score timeline time matches 1200.. run camera @s set minecraft:free pos -30 6 -35 facing -25 0 -36
+        execute if score timeline time matches 1..749 run camera @s set minecraft:free pos -20 6 91 facing -15.0 1 85
+    ## [750~900] 令林乐看见大海，视角低速移动
+        execute if score timeline time matches 750..800 run camera @s set minecraft:free pos -5 2 175 rot 0 45
+        execute if score timeline time matches 801..930 run camera @s set minecraft:free pos -50 2 220 rot 0 45
+    ## [750] 为玩家提供迷雾效果，改为雷暴和夜晚
+        execute if score timeline time matches 750..929 run fog @s push aw:raining oceanRainingFog
+    ## [900] 黑屏以转场回试炼入口场景
+        execute if score timeline time matches 931..1399 run camera @s set minecraft:free pos -20 6 91 facing -15.0 1 85
+    ## [1400] 切换视角
+        execute if score timeline time matches 1400.. run camera @s set minecraft:free pos -30 6 -35 facing -25 0 -36
 
 ## 设置为隐身 | 仅限多人时运行
 execute if score playerAmount data matches 2.. run effect @s invisibility 3600 0 true

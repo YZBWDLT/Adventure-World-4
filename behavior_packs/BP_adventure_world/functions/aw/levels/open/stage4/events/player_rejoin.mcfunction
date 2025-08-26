@@ -12,25 +12,23 @@
     execute if score levelCompleted data matches 0 if score timeline time matches 1300..1879 run tp @s -12 1 88 facing -17 1 95
     execute if score levelCompleted data matches 0 if score timeline time matches 1880.. run tp @s -13 1 112 facing @e[name="米云溪",c=1]
 ## 设置玩家的相机视角
-    ### [1] 面向张宇林乐两人
-        execute if score levelCompleted data matches 0 if score timeline time matches 1..259 run camera @s set minecraft:free pos -14 8 38 facing -21 2 40
-    ### [260] 面向碎片
-        execute if score levelCompleted data matches 0 if score timeline time matches 260..840 run camera @s set minecraft:free pos -19 5 39 facing -21 4 41
-        execute if score levelCompleted data matches 0 if score timeline time matches 260..840 run camera @s set minecraft:free ease 30 linear pos -20.0 5.0 41.0 facing -21 4.5 41
-    ### [1000~1060] 逐渐黑屏
-        execute if score levelCompleted data matches 0 if score timeline time matches 1000..1060 run camera @s fade time 3 10 3 color 0 0 0
-    ### [1060~1300] 持续黑屏状态
-        execute if score levelCompleted data matches 0 if score timeline time matches 1100..1300 run camera @s fade time 0 10 3 color 0 0 0
-    ### [1680] 将玩家的视角从神殿转向米云溪
-        execute if score levelCompleted data matches 0 if score timeline time matches 1680..1859 run tp @s ~~~ facing @e[name="米云溪",c=1]
+    ### [1] 面向两人
+        execute if score timeline time matches 1..839 run camera @s set minecraft:free pos -18 6 38 facing -21 4 41
+    ### [840] 面向两人
+        execute if score timeline time matches 840..999 run camera @s set minecraft:free pos -18 6 38 facing -21 4 41
+    ### [1000~1060] 逐渐黑屏，并在黑屏后改回玩家视角
+        execute if score timeline time matches 1000..1300 run camera @s fade time 0 10 3 color 0 0 0
+    ### [1301] 切换远景
+        execute if score timeline time matches 1301..1859 run camera @s set minecraft:free pos -5 10 80 facing -17 1 95
     ### [1860] 逐渐黑屏
-        execute if score levelCompleted data matches 0 if score timeline time matches 1860..1880 run camera @s fade time 1 1 1 color 0 0 0
+        execute if score timeline time matches 1860..1880 run camera @s fade time 1 1 1 color 0 0 0
     ### [1880] 面向墙壁刻文
-        execute if score levelCompleted data matches 0 if score timeline time matches 1880..2279 run camera @s set minecraft:free pos -18 4 106 facing -16 3 103
-    ### [2760] 将玩家的视角从神殿转向田英
-        execute if score levelCompleted data matches 0 if score timeline time matches 2760.. as @s at @s run tp @s ~~~ facing @e[name="田英",c=1]
+        execute if score timeline time matches 1880..2279 run camera @s set minecraft:free pos -18 4 106 facing -16 3 103
+    ### [2280] 面向三人
+        execute if score timeline time matches 2280..3199 run camera @s set minecraft:free pos -17 5 114 facing -14 1 108
+    ### [3200] 恢复玩家视角
 ## 设置为隐身 | 仅限多人时运行
-execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. run effect @s invisibility 3600 0 true
+    execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. run effect @s invisibility 3600 0 true
 ## 设置玩家的权限
     execute if score levelCompleted data matches 0 run inputpermission set @s camera disabled
     execute if score levelCompleted data matches 0 run inputpermission set @s movement disabled

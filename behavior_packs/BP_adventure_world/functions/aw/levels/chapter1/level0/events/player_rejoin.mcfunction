@@ -13,13 +13,10 @@ execute if score playerAmount data matches 2.. run tp @s -117 1 -6 0 0
 ## 设置玩家的相机视角
     ## [1] 划过开始房间
     execute if score levelCompleted data matches 0 if score timeline time matches 1..299 run camera @s set minecraft:free pos -121 7 -5 facing @s
-    execute if score levelCompleted data matches 0 if score timeline time matches 2..299 run camera @s set minecraft:free ease 15 in_out_sine pos -122 4 3 facing @s
     ## [300] 划过1-1
     execute if score levelCompleted data matches 0 if score timeline time matches 300..599 run camera @s set minecraft:free pos -117 3.8 -7 rot 45 0
-    execute if score levelCompleted data matches 0 if score timeline time matches 301..599 run camera @s set minecraft:free ease 15 out_sine pos -117 3.8 25 rot 0 0
     ## [600] 望向壁画
     execute if score levelCompleted data matches 0 if score timeline time matches 600.. run camera @s set minecraft:free pos -119 2.5 -4 facing -124 1 -3
-    execute if score levelCompleted data matches 0 if score timeline time matches 601.. run camera @s set minecraft:free ease 15 out_sine pos -119 2.5 -4 facing -124 5 1
 ## 设置为隐身 | 仅限多人时运行
 execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. run effect @s invisibility 3600 0 true
 ## 设置玩家的权限

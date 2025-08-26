@@ -13,8 +13,6 @@ execute if score levelCompleted data matches 0 run spawnpoint @s -141 -30 6
 ## 设置玩家的相机视角
     ## [1] 5-0 视角
     execute if score levelCompleted data matches 0 if score timeline time matches 1.. run camera @s set minecraft:free pos -89 -23 -19 facing -101 -30 -7
-    execute if score levelCompleted data matches 0 if score timeline time matches 2.. run camera @s set minecraft:free ease 45 linear pos -101 -23 -19 facing -89 -30 -7
-
 ## 设置为隐身 | 仅限多人时运行
 execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. run effect @s invisibility 3600 0 true
 ## 设置玩家的权限
