@@ -13,3 +13,6 @@ fill -81 -19 -50 -79 -17 -50 air
 fill -72 -19 -30 -70 -17 -30 air
 ## 开启 6-3 的入口
 fill -74 -32 -23 -77 -32 -22 air replace obsidian
+
+# --- 初始化 6-3 的岩浆 ---
+structure load aw:6_3_lava_2 -82 -40 -7
