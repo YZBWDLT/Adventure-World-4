@@ -5,8 +5,8 @@
 
 ## [1] 相机视角：4-1 视角
 execute if score timeline time matches 60 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7云儿，我现在是在啥地方啊？要被冻成冰块了qwq。"}]}
-execute if score timeline time matches 140 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7大概是进入【寒冰神殿】了吧？"}]}
-execute if score timeline time matches 220 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7【寒冰骷髅以冰霜之箭透人肌骨，唯革履可踏过三尺细雪】"}]}
+execute if score timeline time matches 140 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7大概是进入【§d寒冰神殿§7】了吧？"}]}
+execute if score timeline time matches 220 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7【§d寒冰骷髅以冰霜之箭透人肌骨，唯革履可踏过三尺细雪§7】"}]}
 execute if score timeline time matches 300 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7怪不得......除了这些还有什么发现吗？"}]}
 ## [380] 相机视角：4-2 和 4-3 过道视角
 execute if score timeline time matches 380 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7有的，铭文上还记载着【旷野之剑事记】。"}]}

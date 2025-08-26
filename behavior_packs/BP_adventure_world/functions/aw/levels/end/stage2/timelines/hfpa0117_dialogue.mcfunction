@@ -30,6 +30,8 @@
         ### 非一命（失败次数不为 0）
             execute if score timeline time matches 1 if score playerAmount data matches 2.. unless score failedCount.allLevels data matches 0 run tellraw @a {"rawtext":[{"translate":"* §a帕（Hfpa0117）： §7和朋友玩的开心么？希望你们的友谊可以一直持续下去~ awa"}]}
 
+    execute if score timeline time matches 1 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=11,aw:animation="none"}] aw:animation_speak
+
 # --- 剧情结束 ---
     execute if score timeline time matches 2 run scoreboard players set timeline active 1
     execute if score timeline time matches 2 run function aw/lib/modify_data/timeline/disable_time_lapse

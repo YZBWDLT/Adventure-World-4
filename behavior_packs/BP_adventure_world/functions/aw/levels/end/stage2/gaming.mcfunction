@@ -7,44 +7,26 @@
         execute if score timeline active matches 2 run function aw/levels/end/stage2/timelines/main_dialogue
     ## 张宇剧情 | active.timeline = 3
         execute if score timeline active matches 3 run function aw/levels/end/stage2/timelines/zhangyu_dialogue
-    ## 量筒剧情 | active.timeline = 4
+    ## YZBWDLT | active.timeline = 4
         execute if score timeline active matches 4 run function aw/levels/end/stage2/timelines/yzbwdlt_dialogue
-    ## 巴豆剧情 | active.timeline = 5
+    ## Andy7343 | active.timeline = 5
         execute if score timeline active matches 5 run function aw/levels/end/stage2/timelines/andy7343_dialogue
-    ## 绿叶剧情 | active.timeline = 6
+    ## GreeLeaf | active.timeline = 6
         execute if score timeline active matches 6 run function aw/levels/end/stage2/timelines/greeleaf_dialogue
-    ## 文雨剧情 | active.timeline = 7
+    ## KrisWenYu | active.timeline = 7
         execute if score timeline active matches 7 run function aw/levels/end/stage2/timelines/kriswenyu_dialogue
-    ## 鸽子剧情 | active.timeline = 8
+    ## PigeonKI | active.timeline = 8
         execute if score timeline active matches 8 run function aw/levels/end/stage2/timelines/pigeonki_dialogue
-    ## 小鼠剧情 | active.timeline = 9
+    ## xiaoshu512 | active.timeline = 9
         execute if score timeline active matches 9 run function aw/levels/end/stage2/timelines/xiaoshu512_dialogue
-    ## 比翼鸟剧情 | active.timeline = 10
+    ## KianaKasnala947 | active.timeline = 10
         execute if score timeline active matches 10 run function aw/levels/end/stage2/timelines/kianakasnala947_dialogue
-    ## 帕剧情 | active.timeline = 11
+    ## Hfpa0117 | active.timeline = 11
         execute if score timeline active matches 11 run function aw/levels/end/stage2/timelines/hfpa0117_dialogue
-    ## 星辰剧情 | active.timeline = 12
+    ## xc13599305 | active.timeline = 12
         execute if score timeline active matches 12 run function aw/levels/end/stage2/timelines/xc13599305_dialogue
-    ## 南瓜汁剧情 | active.timeline = 13
+    ## PumpkinJui | active.timeline = 13
         execute if score timeline active matches 13 run function aw/levels/end/stage2/timelines/pumpkinjui_dialogue
-    ## 蒙德人剧情 | active.timeline = 14
-        execute if score timeline active matches 14 run function aw/levels/end/stage2/timelines/tuffy2020china_dialogue
-    ## 火卫三剧情 | active.timeline = 15
-        execute if score timeline active matches 15 run function aw/levels/end/stage2/timelines/ibukreev_dialogue
-    ## 基岩剧情 | active.timeline = 16
-        execute if score timeline active matches 16 run function aw/levels/end/stage2/timelines/ender5207541_dialogue
-    ## 绿叶剧情 | active.timeline = 17
-        execute if score timeline active matches 17 run function aw/levels/end/stage2/timelines/rustyabyss29193_dialogue
-    ## 千里剧情 | active.timeline = 18
-        execute if score timeline active matches 18 run function aw/levels/end/stage2/timelines/enderlife5409_dialogue
-    ## 水晶哥剧情 | active.timeline = 19
-        execute if score timeline active matches 19 run function aw/levels/end/stage2/timelines/onekitty710926_dialogue
-    ## 风暴剧情 | active.timeline = 20
-        execute if score timeline active matches 20 run function aw/levels/end/stage2/timelines/foxlanmo_dialogue
-    ## 宽判剧情 | active.timeline = 21
-        execute if score timeline active matches 21 run function aw/levels/end/stage2/timelines/kuanpan_9527_dialogue
-    ## 龙龙剧情 | active.timeline = 22
-        execute if score timeline active matches 22 run function aw/levels/end/stage2/timelines/longlongxiaotao_dialogue
 # --- 林乐家 ---
     ## 若有玩家在林乐家，且上一刻无玩家在林乐家时，触发玩家进入林乐家事件
         execute if entity @a[x=-31,y=1,z=-52,dx=8,dy=8,dz=8] if score temp.hasPlayerInHome data matches 0 run function aw/levels/end/stage2/events/on_entry/home

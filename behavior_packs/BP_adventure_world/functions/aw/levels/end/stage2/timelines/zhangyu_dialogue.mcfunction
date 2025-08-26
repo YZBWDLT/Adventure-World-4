@@ -8,6 +8,8 @@
     execute if score timeline time matches 1 run function aw/lib/events/start_dialogue_keep
     execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"translate":"* §e张宇： §7你要再来一次试炼吗？"}]}
 
+    execute if score timeline time matches 1 run event entity @e[type=aw:npc,has_property={aw:is_author=false,aw:skin=6,aw:animation="none"}] aw:animation_speak
+
 # --- 触发 stage3 的重开阶段 ---
     execute if score timeline time matches 50 run camera @a fade time 1 3 1
 

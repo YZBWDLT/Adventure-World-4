@@ -6,6 +6,7 @@
     tickingarea add -55 0 -55 60 0 120 "villageArea"
     tickingarea add -64 0 127 -128 0 -64 "gamingArea1"
     tickingarea add -129 0 127 -256 0 -64 "gamingArea2"
+    tickingarea add 1 0 169 -91 0 261 "oceanArea"
 
 # --- 记分板重置 ---
     ## 激活状态记分项

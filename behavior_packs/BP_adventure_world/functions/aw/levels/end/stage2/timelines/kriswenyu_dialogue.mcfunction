@@ -18,6 +18,9 @@
         execute if score timeline time matches 1 if score playerAmount data matches 2.. run tellraw @a {"rawtext":[{"translate":"* §a文雨（KrisWenYu）： §7经过这么长时间的战斗你一定累了吧，给你一个毛绒拥抱！§8(1/2)"}]}
         execute if score timeline time matches 60 if score playerAmount data matches 2.. run tellraw @a {"rawtext":[{"translate":"* §a文雨（KrisWenYu）： §7喜欢咱画的贴图吗？§8(2/2)"}]}
 
+    execute if score timeline time matches 1 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=4,aw:animation="none"}] aw:animation_speak
+    execute if score timeline time matches 60 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=4,aw:animation="none"}] aw:animation_speak
+
 # --- 剧情结束 ---
     execute if score timeline time matches 61 run scoreboard players set timeline active 1
     execute if score timeline time matches 61 run function aw/lib/modify_data/timeline/disable_time_lapse

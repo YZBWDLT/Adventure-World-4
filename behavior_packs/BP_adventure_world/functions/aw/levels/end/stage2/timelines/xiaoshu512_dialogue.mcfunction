@@ -25,6 +25,10 @@
             execute if score timeline time matches 60 if score playerAmount data matches 2.. if score difficulty settings matches 4 run tellraw @a {"rawtext":[{"translate":"* §a小鼠（xiaoshu512）： §7不知道这难度对你们来说是洒洒水还是汗流浃背awa§8(2/3)"}]}
             execute if score timeline time matches 120 if score playerAmount data matches 2.. if score difficulty settings matches 4 run tellraw @a {"rawtext":[{"translate":"* §a小鼠（xiaoshu512）： §7一起期待下一部作品吧！咕咕咕咕咕咕§8(3/3)"}]}
 
+    execute if score timeline time matches 1 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=6,aw:animation="none"}] aw:animation_speak
+    execute if score timeline time matches 60 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=6,aw:animation="none"}] aw:animation_speak
+    execute if score timeline time matches 120 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=6,aw:animation="none"}] aw:animation_speak
+
 # --- 剧情结束 ---
     ## 难度 1~3：维持 1 刻
         execute if score timeline time matches 2 if score difficulty settings matches 1..3 run scoreboard players set timeline active 1

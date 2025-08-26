@@ -66,6 +66,7 @@
                 "sit_basic": "animation.aw_npc.sit",
                 "sit_raising_head": "animation.aw_npc.sit.raise_head",
                 "lie_basic": "animation.aw_npc.lie",
+                "sleep_basic": "animation.aw_npc.sleep",
 
                 "wave_hand_standing": "animation.aw_npc.stand.wave_hand",
                 "wave_hand_sitting": "animation.aw_npc.sit.wave_hand",
@@ -79,7 +80,10 @@
                 "nod": "animation.aw_npc.nod",
                 "shake_head": "animation.aw_npc.shake_head",
                 "bad_smile_standing": "animation.aw_npc.stand.bad_smile",
-                "bad_smile_sitting": "animation.aw_npc.sit.bad_smile"
+                "bad_smile_sitting": "animation.aw_npc.sit.bad_smile",
+                "confuse": "animation.aw_npc.confuse",
+                "point": "animation.aw_npc.point",
+                "think": "animation.aw_npc.think"
 
             },
             "enable_attachables": true

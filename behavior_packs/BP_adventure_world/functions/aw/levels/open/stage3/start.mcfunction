@@ -10,6 +10,9 @@ function aw/lib/events/levels/start_open
 # 传送玩家
 tp @a 36 1 -22 facing @e[name="米云溪",c=1]
 
+# 使米云溪面向玩家
+execute as @e[name="米云溪"] at @s run tp @s ~~~ facing @p
+
 # 播放音乐
 function aw/lib/events/play_music
 

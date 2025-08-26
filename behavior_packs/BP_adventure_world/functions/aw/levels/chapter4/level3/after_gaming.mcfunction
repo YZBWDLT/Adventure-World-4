@@ -6,9 +6,9 @@ execute positioned -141 -30 6 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=3,dz=1.4,
 execute positioned -141 -30 6 positioned ~-2~-1~-2 as @e[dx=3,dy=3,dz=3,type=aw:wind_pearl] run kill @s
 
 # --- 剧情 ---
-execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7看起来，这里就是寒冰神殿的最后一部分了。云儿，等会我会遇到什么样的守关怪物呢？"}]}
-execute if score timeline time matches 80 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7嗯......接下来比较特殊，应该会源源不断地出现怪物。镇守在这里的，是守卫者......"}]}
-execute if score timeline time matches 160 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7这样啊？不过没关系，任何怪物都将被我绳之以法=p"}]}
-execute if score timeline time matches 240 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7不不不，你听我说完嘛。铭文写着【守卫者于此地获不死之身】，它们是不会受到伤害的。不要恋战，坚持住就是胜利！"}]}
-execute if score timeline time matches 320 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7什么？还有无法受到伤害的怪......好吧，撤回我上一句说的话qwq。"}]}
+execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7看起来，这里就是寒冰神殿的最后一部分了。云儿，等会我会遇到什么样的守关怪物呢？§8(1/5)"}]}
+execute if score timeline time matches 80 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7嗯......接下来比较特殊，应该会§d源源不断地出现怪物§7。镇守在这里的，是§d守卫者§7......§8(2/5)"}]}
+execute if score timeline time matches 160 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7这样啊？不过没关系，任何怪物都将被我绳之以法=p§8(3/5)"}]}
+execute if score timeline time matches 240 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7不不不，你听我说完嘛。铭文写着【守卫者于此地获不死之身】，它们是§d不会受到伤害§7的。不要恋战，坚持住就是胜利！§8(4/5)"}]}
+execute if score timeline time matches 320 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7什么？还有无法受到伤害的怪......好吧，撤回我上一句说的话qwq。§8(5/5)"}]}
 execute if score timeline time matches 400.. run function aw/lib/modify_data/timeline/disable_time_lapse

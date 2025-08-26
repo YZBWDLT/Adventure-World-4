@@ -5,6 +5,6 @@
 execute positioned -117 2 16 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=3,dz=1.4,tag=!spectator,scores={deathState=0}] at @s run function aw/levels/chapter1/level1/start
 
 # --- 剧情 ---
-execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7云儿，能听得到吗？"}]}
-execute if score timeline time matches 80 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7听得到，记得保持联系啊！"}]}
+execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7云儿，能听得到吗？§8(1/2)"}]}
+execute if score timeline time matches 80 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7听得到，记得保持联系啊！§8(2/2)"}]}
 execute if score timeline time matches 160.. run function aw/lib/modify_data/timeline/disable_time_lapse

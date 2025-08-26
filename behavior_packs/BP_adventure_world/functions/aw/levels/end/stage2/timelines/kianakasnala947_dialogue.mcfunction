@@ -43,6 +43,10 @@
         ### 难度 4
             execute if score timeline time matches 1 if score playerAmount data matches 2.. if score difficulty settings matches 4 run tellraw @a {"rawtext":[{"translate":"* §a比翼鸟（KianaKasnala947）： §7出神入化......出神入化......这样的默契我想真的是世上难得的了！"}]}
 
+    execute if score timeline time matches 1 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=9,aw:animation="none"}] aw:animation_speak
+    execute if score timeline time matches 60 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=9,aw:animation="none"}] aw:animation_speak
+    execute if score timeline time matches 120 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=9,aw:animation="none"}] aw:animation_speak
+
 # --- 剧情结束 ---
     ## 单人模式
         ## 非 F- 级：维持 120 刻

@@ -20,6 +20,8 @@
     ## 多人模式
         execute if score timeline time matches 1 if score playerAmount data matches 2.. run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7期待你通关最高难度的那一刻。"}]}
 
+    execute if score timeline time matches 1 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=10,aw:animation="none"}] aw:animation_speak
+
 # --- 剧情结束 ---
     execute if score timeline time matches 2 run scoreboard players set timeline active 1
     execute if score timeline time matches 2 run function aw/lib/modify_data/timeline/disable_time_lapse

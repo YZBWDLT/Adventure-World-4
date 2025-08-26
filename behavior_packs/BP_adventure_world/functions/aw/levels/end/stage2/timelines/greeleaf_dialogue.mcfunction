@@ -8,6 +8,10 @@
     execute if score timeline time matches 60 run tellraw @a {"rawtext":[{"translate":"* §a绿叶（GreeLeaf）： §7本次o绿叶o和各位大佬强强联合做出了此图，希望你喜欢~§8(2/3)"}]}
     execute if score timeline time matches 120 run tellraw @a {"rawtext":[{"translate":"* §a绿叶（GreeLeaf）： §7咕咕咕，咕咕咕~~§8(3/3)"}]}
 
+    execute if score timeline time matches 1 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=2,aw:animation="none"}] aw:animation_speak
+    execute if score timeline time matches 60 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=2,aw:animation="none"}] aw:animation_speak
+    execute if score timeline time matches 120 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=2,aw:animation="none"}] aw:animation_speak
+
 # --- 剧情结束 ---
     execute if score timeline time matches 121 run scoreboard players set timeline active 1
     execute if score timeline time matches 121 run function aw/lib/modify_data/timeline/disable_time_lapse

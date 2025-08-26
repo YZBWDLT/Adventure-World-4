@@ -3,7 +3,7 @@
 	"geometry.aw_npc.default": {
 		"texturewidth": 64,
 		"textureheight": 64,
-		"visible_bounds_width": 3,
+		"visible_bounds_width": 4,
 		"visible_bounds_height": 3,
 		"visible_bounds_offset": [0, 1.5, 0],
 		"bones": [

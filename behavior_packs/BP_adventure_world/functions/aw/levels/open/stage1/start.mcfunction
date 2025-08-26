@@ -24,6 +24,7 @@ summon aw:npc 33 1 -23 facing @p aw:npc_miyunxi "米云溪"
 summon aw:npc 0 2 -29 facing @p aw:npc_linan "李南"
 summon aw:npc -21 3 42 facing @p aw:npc_zhangyu "张宇"
 summon aw:npc -25 1 -34 facing @p aw:npc_tianying "田英"
+event entity @e[name="张宇"] aw:state_sit
 
 # 封锁商店
 fill -21 0 37 -23 0 37 border_block

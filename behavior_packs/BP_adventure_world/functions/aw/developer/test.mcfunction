@@ -1,6 +1,9 @@
-#
-tellraw @a {"rawtext":[{"translate":"data:temp.stage = %%s","with":{"rawtext":[{"score":{"objective":"data","name":"temp.stage"}}]}}]}
-tellraw @a {"rawtext":[{"translate":"time:temp.skillCd = %%s","with":{"rawtext":[{"score":{"objective":"time","name":"temp.skillCd"}}]}}]}
-tellraw @a {"rawtext":[{"translate":"data:temp.skillLength = %%s","with":{"rawtext":[{"score":{"objective":"data","name":"temp.skillLength"}}]}}]}
-tellraw @a {"rawtext":[{"translate":"data:temp.skillType = %%s","with":{"rawtext":[{"score":{"objective":"data","name":"temp.skillType"}}]}}]}
-tellraw @a {"rawtext":[{"translate":"data:temp.spawnMonsterGroup = %%s","with":{"rawtext":[{"score":{"objective":"data","name":"temp.spawnMonsterGroup"}}]}}]}
+fill 0 -29 170 -30 -29 200 gravel
+fill -30 -29 170 -60 -29 200 gravel
+fill -60 -29 170 -90 -29 200 gravel
+fill 0 -29 200 -30 -29 230 gravel
+fill -30 -29 200 -60 -29 230 gravel
+fill -60 -29 200 -90 -29 230 gravel
+fill 0 -29 230 -30 -29 260 gravel
+fill -30 -29 230 -60 -29 260 gravel
+fill -60 -29 230 -90 -29 260 gravel

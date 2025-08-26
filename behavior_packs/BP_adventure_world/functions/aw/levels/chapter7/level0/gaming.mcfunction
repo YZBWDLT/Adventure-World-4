@@ -17,7 +17,7 @@ execute if score storyMode settings matches 0 if score timeline time matches 130
 
 # 剧情模式
 ## [1~439] 剑拔出时：释放未拔剑的粒子
-## [60] 动画开幕：将玩家传送到剑之神殿
+## [60] 动画开幕：将玩家传送到剑之神殿，并移除玩家的漂浮效果
 ## [120] 动画开幕：播放标题和音效，解除视角锁定
 ## [180] 动画开幕：移除玩家的失明效果
 execute if score storyMode settings matches 1 if score timeline time matches 180 run tellraw @a {"rawtext":[{"translate":"* 当我再次睁开眼时，发现自己身处纯白色的神殿之中......"}]}
@@ -47,8 +47,9 @@ execute if score storyMode settings matches 1 if score timeline time matches 190
 
 # --- 动画开幕 ---
 
-## [60] 将玩家传送到剑之神殿
+## [60] 将玩家传送到剑之神殿，并移除玩家的漂浮效果
 execute if score timeline time matches 60 run tp @a -79 -39 105 facing -87 -37 105
+execute if score timeline time matches 60 run effect @a levitation 0 1 true
 
 ## [120] 播放标题和音效，解除视角锁定
 execute if score timeline time matches 120 run title @a title §f§l剑 之 神 殿

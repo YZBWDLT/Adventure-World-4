@@ -14,6 +14,9 @@
 # 10：星辰，11：帕，12：基岩，13：烟雨，14：千里，15：水晶哥，16：风暴，17：宽判，18：龙龙
 
 # --- 全情况 ---
+    ## 播放动画
+        execute if entity @s[has_property={aw:is_author=false,aw:skin=0..3}] run event entity @s[has_property={aw:animation="none"}] aw:animation_speak
+        execute if entity @s[has_property={aw:is_author=false,aw:skin=5}] run event entity @s[has_property={aw:animation="none"}] aw:animation_speak
     ## 李南
         execute if entity @s[has_property={aw:is_author=false,aw:skin=5}] run tellraw @p {"rawtext":[{"translate":"* §e%%s： §7林乐啊，你从小就喜欢剑术，现在看你真的成为了英雄，我为你感到骄傲。","with":{"rawtext":[{"selector":"@s"}]}}]}
     ## 韩林清
@@ -25,52 +28,11 @@
     ## 赵向前
         execute if entity @s[has_property={aw:is_author=false,aw:skin=2}] run tellraw @p {"rawtext":[{"translate":"* §e%%s： §7今天我要工作，收拾个村庄这么多事，哎呦真干不过来了。","with":{"rawtext":[{"selector":"@s"}]}}]}
 
-# --- 村庄对话（开幕第2段，0-2） ---
-    ## 田英
-        execute if score chapter data matches 0 if score level data matches 2 if entity @s[has_property={aw:is_author=false,aw:skin=7}] run tellraw @p {"rawtext":[{"translate":"* §b%%s： §7没听清楚位置？在后山的时间神殿。","with":{"rawtext":[{"selector":"@s"}]}}]}
-
-# --- 村庄对话（开幕第3段，0-3） ---
-    ## 田英
-        execute if score chapter data matches 0 if score level data matches 3 if entity @s[has_property={aw:is_author=false,aw:skin=7}] run tellraw @p {"rawtext":[{"translate":"* §b%%s： §7商店的老板要找你，你自己住的村子，肯定知道在哪。","with":{"rawtext":[{"selector":"@s"}]}}]}
-    ## 米云溪
-        execute if score chapter data matches 0 if score level data matches 3 if entity @s[has_property={aw:is_author=false,aw:skin=4}] run tellraw @p {"rawtext":[{"translate":"* §c%%s： §7田英，田英你看这里，我刚刚发现......","with":{"rawtext":[{"selector":"@s"}]}}]}
-
-# --- 村庄对话（开幕第4段，0-4） ---
-    ## 田英
-        execute if score chapter data matches 0 if score level data matches 4 if entity @s[has_property={aw:is_author=false,aw:skin=7}] run tellraw @p {"rawtext":[{"translate":"* §b%%s： §7我们的勇气贤者从来不怕困难！","with":{"rawtext":[{"selector":"@s"}]}}]}
-    ## 米云溪
-        execute if score chapter data matches 0 if score level data matches 4 if entity @s[has_property={aw:is_author=false,aw:skin=4}] run tellraw @p {"rawtext":[{"translate":"* §c%%s： §7一定要小心啊，我们在外面等你。","with":{"rawtext":[{"selector":"@s"}]}}]}
-
-# --- 村庄对话（结束第2段，10-2） ---
-    ## 田英
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=false,aw:skin=7}] run tellraw @p {"rawtext":[{"translate":"* §b%%s： §7如果你还有点意犹未尽，你可以再去问问张宇老板§8（和他交互）§7。","with":{"rawtext":[{"selector":"@s"}]}}]}
-    ## 米云溪
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=false,aw:skin=4}] run tellraw @p {"rawtext":[{"translate":"* §c%%s： §7我们在你家布置了很多新东西哦！记得去看看。","with":{"rawtext":[{"selector":"@s"}]}}]}
-    ## 张宇
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=false,aw:skin=6}] run scoreboard players set timeline active 3
-    ## 其他作者
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=0}] run scoreboard players set timeline active 4
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=1}] run scoreboard players set timeline active 5
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=2}] run scoreboard players set timeline active 6
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=4}] run scoreboard players set timeline active 7
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=3}] run scoreboard players set timeline active 8
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=6}] run scoreboard players set timeline active 9
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=9}] run scoreboard players set timeline active 10
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=11}] run scoreboard players set timeline active 11
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=10}] run scoreboard players set timeline active 12
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=5}] run scoreboard players set timeline active 13
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=7}] run scoreboard players set timeline active 14
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=8}] run scoreboard players set timeline active 15
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=12}] run scoreboard players set timeline active 16
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=13}] run scoreboard players set timeline active 17
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=14}] run scoreboard players set timeline active 18
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=15}] run scoreboard players set timeline active 19
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=16}] run scoreboard players set timeline active 20
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=17}] run scoreboard players set timeline active 21
-        execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true,aw:skin=18}] run scoreboard players set timeline active 22
-        ### 如果为作者，则重置timeline时间，以不串对话
-            execute if score chapter data matches 10 if score level data matches 2 if entity @s[has_property={aw:is_author=true}] run scoreboard players set timeline time 0
-
-# --- 村庄对话（结束第3段，10-3） ---
-    ## 张宇
-        execute if score chapter data matches 10 if score level data matches 3 if entity @s[has_property={aw:is_author=false,aw:skin=6}] run function aw/lib/modify_data/timeline/enable_time_lapse
+# --- 关卡内对话 ---
+    ## 村庄对话（0-X）
+        execute if score chapter data matches 0 if score level data matches 2 run function aw/levels/open/stage2/events/interact_with_npc
+        execute if score chapter data matches 0 if score level data matches 3 run function aw/levels/open/stage3/events/interact_with_npc
+        execute if score chapter data matches 0 if score level data matches 4 run function aw/levels/open/stage4/events/interact_with_npc
+    ## 结束对话（10-X）
+        execute if score chapter data matches 10 if score level data matches 2 run function aw/levels/end/stage2/events/interact_with_npc
+        execute if score chapter data matches 10 if score level data matches 3 run function aw/levels/end/stage3/events/interact_with_npc

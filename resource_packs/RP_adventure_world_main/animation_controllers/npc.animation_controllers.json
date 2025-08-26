@@ -10,7 +10,8 @@
                     "transitions": [
                         { "sit": "variable.is_sitting" },
                         { "lie": "variable.state == 'lie'" },
-                        { "walk": "variable.is_walking" }
+                        { "walk": "variable.is_walking" },
+                        { "sleep": "variable.state == 'sleep'" }
                     ]
                 },
                 "sit": {
@@ -19,7 +20,8 @@
                     "transitions": [
                         { "stand": "variable.state == 'stand'" },
                         { "sit_raising_head": "variable.state == 'sit_raising_head'" },
-                        { "lie": "variable.state == 'lie'" }
+                        { "lie": "variable.state == 'lie'" },
+                        { "sleep": "variable.state == 'sleep'" }
                     ]
                 },
                 "sit_raising_head": {
@@ -34,7 +36,8 @@
                     "blend_transition": 0.1,
                     "transitions": [
                         { "stand": "variable.state == 'stand'" },
-                        { "sit": "variable.is_sitting" }
+                        { "sit": "variable.is_sitting" },
+                        { "sleep": "variable.state == 'sleep'" }
                     ]
                 },
                 "walk": {
@@ -42,6 +45,15 @@
                     "blend_transition": 0.1,
                     "transitions": [
                         { "stand": "!variable.is_walking" }
+                    ]
+                },
+                "sleep": {
+                    "animations": [ "sleep_basic" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "stand": "variable.state == 'stand'" },
+                        { "sit": "variable.state == 'sit'" },
+                        { "lie": "variable.state == 'lie'" }
                     ]
                 }
             }
@@ -59,7 +71,10 @@
                         { "look_around": "variable.anim == 'look_around'" },
                         { "nod": "variable.anim == 'nod'" },
                         { "shake_head": "variable.anim == 'shake_head'" },
-                        { "bad_smile": "variable.anim == 'bad_smile'" }
+                        { "bad_smile": "variable.anim == 'bad_smile'" },
+                        { "confuse": "variable.anim == 'confuse'" },
+                        { "point": "variable.anim == 'point'" },
+                        { "think": "variable.anim == 'think'" }
                     ]
                 },
                 "wave_hand": {
@@ -124,6 +139,27 @@
                         { "bad_smile_standing": "variable.state == 'stand'" },
                         { "bad_smile_sitting": "variable.is_sitting" }
                     ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                },
+                "confuse": {
+                    "animations": [ "confuse" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                },
+                "point": {
+                    "animations": [ "point" ],
+                    "blend_transition": 0.1,
+                    "transitions": [
+                        { "default": "variable.anim == 'none'" }
+                    ]
+                },
+                "think": {
+                    "animations": [ "think" ],
                     "blend_transition": 0.1,
                     "transitions": [
                         { "default": "variable.anim == 'none'" }

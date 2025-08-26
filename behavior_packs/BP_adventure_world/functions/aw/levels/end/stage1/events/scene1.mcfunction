@@ -14,6 +14,7 @@
     summon aw:npc -6 1 -5 facing @p aw:npc_chenqi "陈琦"
     summon aw:npc -38 1 -3 facing @p aw:npc_zhaoxiangqian "赵向前"
     summon aw:npc -2 1 18 facing @p aw:npc_liqing "李晴"
+    event entity @e[name="张宇"] aw:state_sit
 
 # 清除多余实体
     event entity @e[type=aw:wild_sword] aw:remove_immediately

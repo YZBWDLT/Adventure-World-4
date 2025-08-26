@@ -18,6 +18,7 @@
         ### 生成张宇
             event entity @e[type=aw:npc,has_property={aw:is_author=false}] aw:remove_immediately
             summon aw:npc -21 3 42 facing @p aw:npc_zhangyu "张宇"
+            event entity @e[name="张宇"] aw:state_sit
         ### 播放音乐
             function aw/lib/events/play_music
         ### 提示玩家已通关
