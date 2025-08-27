@@ -132,3 +132,8 @@ function printHealth(entity, healthValue) {
         entity.runCommand(`scoreboard players set @s health ${healthValueInt}`);
     }
 }
+
+// world.afterEvents.entityHitEntity.subscribe(event=>{
+//     world.sendMessage(`hitEntity = ${event.hitEntity.typeId}`);
+//     world.sendMessage(`damagingEntity = ${event.damagingEntity.typeId}`);
+// })
