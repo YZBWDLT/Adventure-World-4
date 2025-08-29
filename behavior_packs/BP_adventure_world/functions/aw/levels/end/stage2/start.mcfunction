@@ -31,6 +31,7 @@
 # 生成悬浮文本
     function aw/levels/end/stage2/events/show_author_group
     function aw/levels/end/stage2/events/on_exit/home
+    function aw/levels/end/stage2/events/on_exit/shop
 
 # 临时变量设置
     ## 是否有玩家在林乐家
