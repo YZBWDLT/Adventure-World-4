@@ -37,6 +37,9 @@
         execute if score failedCount.thisLevel data matches 5 run tellraw @a {"rawtext":[{"text":"§7你（们）已经失败5次了！下一次进入关卡时将给予力量II、生命提升V和抗性提升I效果。"}]}
         execute if score failedCount.thisLevel data matches 10 run tellraw @a {"rawtext":[{"text":"§7你（们）已经失败10次了！下一次进入关卡时将给予力量II、生命提升V和抗性提升V效果。"}]}
 
+# --- 开门 ---
+    event entity @e[type=aw:door] aw:open_door
+
 # --- 清除多余实体 ---
     kill @e[family=monster]
     kill @e[type=aw:wind_pearl]

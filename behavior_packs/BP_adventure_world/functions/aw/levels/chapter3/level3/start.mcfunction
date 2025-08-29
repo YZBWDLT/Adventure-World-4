@@ -7,9 +7,6 @@ scoreboard players set level data 3
 ## 最大波数
 scoreboard players set maxWave data 3
 
-# --- 封闭关卡 ---
-fill -162 -21 26 -164 -19 26 prismarine
-
 # --- 生成怪物 ---
 function aw/levels/chapter3/level3/waves/wave_1
 

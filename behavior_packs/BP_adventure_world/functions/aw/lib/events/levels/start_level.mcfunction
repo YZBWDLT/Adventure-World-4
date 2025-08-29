@@ -28,6 +28,9 @@
     ## 若关卡禁止了传送玩家，在本次跳过传送玩家后恢复默认设置
         scoreboard players set allowTpPlayerWhenStart data 1
 
+# --- 关门 ---
+    event entity @e[type=aw:door] aw:close_door
+
 # --- 更改玩家模式 ---
 # 备注：开发者模式不更新
     execute if score developerMode settings matches 0 run gamemode adventure @a

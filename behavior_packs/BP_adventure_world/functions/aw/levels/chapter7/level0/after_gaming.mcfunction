@@ -12,8 +12,6 @@ execute if score storyMode settings matches 1 if score timeline time matches 200
 
 # --- 功能 ---
 
-## [1] 先行封闭 7-1 出口
-execute if score timeline time matches 1 run fill -150 -18 102 -150 -16 100 nether_brick
 ## [50] 显示封印神殿的标题
 execute if score timeline time matches 50 run titleraw @a times 0 100 0
 execute if score timeline time matches 50 run titleraw @a title {"rawtext":[{"translate":"§c§l封 印 神 殿"}]}

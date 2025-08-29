@@ -31,6 +31,9 @@
         effect @a clear
         effect @a instant_health 1 20 true
 
+# --- 开门 ---
+    event entity @e[type=aw:door] aw:open_door
+
 # --- 清除多余实体 ---
     kill @e[family=monster]
     kill @e[type=aw:wind_pearl]

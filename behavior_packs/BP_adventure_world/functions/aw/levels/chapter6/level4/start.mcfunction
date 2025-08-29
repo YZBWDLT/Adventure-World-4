@@ -7,9 +7,6 @@ scoreboard players set level data 4
 ## 最大波数
 scoreboard players set maxWave data 1
 
-# --- 封闭关卡 ---
-fill -76 -39 20 -74 -37 20 deepslate_bricks
-
 # --- 生成怪物 ---
 function aw/levels/chapter6/level4/waves/wave_1
 

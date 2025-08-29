@@ -4,5 +4,6 @@
 # --- 调用通用函数 ---
 execute positioned -156 8 -1 run function aw/lib/events/levels/fail_level
 
-# --- 重新开放关卡 ---
-fill -155 -12 16 -157 -10 16 air
+# --- 关卡特殊功能 ---
+## 开放 4-3 出口
+fill -156 -18 5 -158 -18 7 air replace ice

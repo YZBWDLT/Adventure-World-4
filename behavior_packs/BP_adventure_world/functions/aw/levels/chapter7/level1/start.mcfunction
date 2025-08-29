@@ -7,9 +7,6 @@ scoreboard players set level data 1
 ## 最大波数
 scoreboard players set maxWave data 3
 
-# --- 封闭关卡 ---
-fill -150 -18 102 -150 -16 100 nether_brick
-
 # --- 生成怪物 ---
 function aw/levels/chapter7/level1/waves/wave_1
 

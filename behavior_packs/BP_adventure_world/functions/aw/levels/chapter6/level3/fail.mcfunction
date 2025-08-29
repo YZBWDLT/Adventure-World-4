@@ -4,8 +4,5 @@
 # --- 调用通用函数 ---
 execute positioned -80 -18 -48 run function aw/lib/events/levels/fail_level
 
-# --- 重新开放关卡 ---
-fill -76 -37 -17 -74 -35 -17 air
-
 # --- 初始化 6-3 的岩浆 ---
 structure load aw:6_3_lava_2 -82 -40 -7

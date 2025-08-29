@@ -7,10 +7,6 @@ scoreboard players set level data 3
 ## 最大波数
 scoreboard players set maxWave data 3
 
-# --- 封闭关卡 ---
-fill -141 -21 60 -141 -19 62 polished_diorite
-fill -167 -21 60 -167 -19 62 polished_diorite
-
 # --- 生成怪物 ---
 function aw/levels/chapter2/level3/waves/wave_1
 
