@@ -7,10 +7,6 @@ scoreboard players set level data 2
 ## 最大波数
 scoreboard players set maxWave data 1
 
-# --- 封闭关卡 ---
-fill -127 5 50 -125 7 50 sandstone["sand_stone_type"="cut"]
-fill -126 6 50 -126 6 50 sandstone["sand_stone_type"="heiroglyphs"]
-
 # --- 生成怪物 ---
 function aw/levels/chapter1/level2/waves/wave_1
 

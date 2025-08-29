@@ -7,10 +7,6 @@ scoreboard players set level data 4
 ## 最大波数
 scoreboard players set maxWave data 1
 
-# --- 封闭关卡 ---
-fill -143 -31 7 -143 -29 5 ice
-fill -117 -31 7 -117 -29 5 ice
-
 # --- 调用通用函数 ---
 # 必须由初次进入的玩家执行
 function aw/lib/events/levels/start_level

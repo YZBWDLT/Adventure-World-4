@@ -16,14 +16,14 @@
     event entity @e[type=aw:text_display,x=-13,y=0,z=87,dy=5] aw:remove_immediately
 # --- 显示标题 ---
     summon aw:text_display "§a§l更改难度" -13 1.4 87
-# --- 显示难度加和 ---
-    execute if score temp.extraDifficulty settings matches -3 run summon aw:text_display "难度加和 | §b-3" -13 0.8 87
-    execute if score temp.extraDifficulty settings matches -2 run summon aw:text_display "难度加和 | §b-2" -13 0.8 87
-    execute if score temp.extraDifficulty settings matches -1 run summon aw:text_display "难度加和 | §a-1" -13 0.8 87
-    execute if score temp.extraDifficulty settings matches 0 run summon aw:text_display "难度加和 | §a0" -13 0.8 87
-    execute if score temp.extraDifficulty settings matches 1 run summon aw:text_display "难度加和 | §e1" -13 0.8 87
-    execute if score temp.extraDifficulty settings matches 2 run summon aw:text_display "难度加和 | §c2" -13 0.8 87
-    execute if score temp.extraDifficulty settings matches 3 run summon aw:text_display "难度加和 | §43" -13 0.8 87
+# --- 显示额外难度 ---
+    execute if score temp.extraDifficulty settings matches -3 run summon aw:text_display "额外难度 | §b-3" -13 0.8 87
+    execute if score temp.extraDifficulty settings matches -2 run summon aw:text_display "额外难度 | §b-2" -13 0.8 87
+    execute if score temp.extraDifficulty settings matches -1 run summon aw:text_display "额外难度 | §a-1" -13 0.8 87
+    execute if score temp.extraDifficulty settings matches 0 run summon aw:text_display "额外难度 | §a0" -13 0.8 87
+    execute if score temp.extraDifficulty settings matches 1 run summon aw:text_display "额外难度 | §e1" -13 0.8 87
+    execute if score temp.extraDifficulty settings matches 2 run summon aw:text_display "额外难度 | §c2" -13 0.8 87
+    execute if score temp.extraDifficulty settings matches 3 run summon aw:text_display "额外难度 | §43" -13 0.8 87
 # --- 显示各难度描述 ---
     ### 难度 1
         execute if score temp.difficulty settings matches 1 run summon aw:text_display "§a1 标准" -13 1.1 87

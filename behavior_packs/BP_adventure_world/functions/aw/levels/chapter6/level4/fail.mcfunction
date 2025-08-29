@@ -4,9 +4,6 @@
 # --- 调用通用函数 ---
 execute positioned -75 -36 -15 run function aw/lib/events/levels/fail_level
 
-# --- 重新开放关卡 ---
-fill -76 -39 20 -74 -37 20 structure_void
-
 # --- 关卡特殊功能 ---
 ## 清除残余岩浆
 structure load aw:6_4_no_lava -89 -40 21

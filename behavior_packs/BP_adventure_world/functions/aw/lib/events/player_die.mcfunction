@@ -3,7 +3,8 @@
 # 调用此方法时：仅aw/system/main函数可执行，需修饰执行者和执行位置为重进玩家及其位置（execute as @a[scores={deathState=1}] at @s）。
 
 # --- 记录死亡榜次数 ---
-    scoreboard players add @s deathCount 1
+# 仅在试炼时记录
+    execute if score chapter data matches 1..7 run scoreboard players add @s deathCount 1
 
 # --- 玩家死亡后改为旁观模式，并播报死亡消息 ---
     # 当玩家在 X-Y 游戏时死亡，则进行死亡逻辑判断

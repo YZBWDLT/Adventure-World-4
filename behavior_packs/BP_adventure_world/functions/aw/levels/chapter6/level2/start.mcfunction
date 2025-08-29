@@ -7,10 +7,6 @@ scoreboard players set level data 2
 ## 最大波数
 scoreboard players set maxWave data 3
 
-# --- 封闭关卡 ---
-fill -81 -19 -50 -79 -17 -50 purple_stained_glass
-fill -72 -19 -30 -70 -17 -30 purple_stained_glass
-
 # --- 生成怪物 ---
 function aw/levels/chapter6/level2/waves/wave_1
 

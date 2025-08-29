@@ -7,10 +7,6 @@ scoreboard players set level data 1
 ## 最大波数
 scoreboard players set maxWave data 2
 
-# --- 封闭关卡 ---
-fill -75 -31 -46 -77 -29 -46 dripstone_block
-fill -82 -31 -62 -82 -29 -64 dripstone_block
-
 # --- 生成怪物 ---
 function aw/levels/chapter6/level1/waves/wave_1
 

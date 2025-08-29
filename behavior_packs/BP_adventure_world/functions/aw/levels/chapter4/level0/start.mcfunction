@@ -13,18 +13,24 @@ titleraw @a title {"rawtext":[{"translate":"§3§l寒 冰 神 殿"}]}
 ## 在剧情模式下传送玩家
 execute if score storyMode settings matches 1 run tp @a -173 17 -8 facing -167 18 -15
 
-# --- 封闭各关卡出口 ---
-## 4-2 入口
-fill -155 7 -3 -157 9 -3 ice
-## 4-2
-fill -155 7 16 -157 9 16 ice
-## 4-3
-fill -156 -18 5 -158 -18 7 ice replace water
-## 4-4
-fill -117 -31 7 -117 -29 5 ice
-
 # --- 调用通用函数 ---
 function aw/lib/events/levels/start_chapter
+
+# --- 生成各关的门 ---
+## 4-1
+summon aw:door -170 17 -20 90 0 aw:set_frost_door
+## 4-2
+summon aw:door -156 7 -3 0 0 aw:set_frost_door "4-2"
+summon aw:door -156 7 16 0 0 aw:set_frost_door "4-2"
+## 4-3
+summon aw:door -156 -12 16 0 0 aw:set_frost_door
+## 4-4
+summon aw:door -143 -31 6 90 0 aw:set_frost_door
+summon aw:door -117 -31 6 90 0 aw:set_frost_door
+## 封闭 4-2
+event entity @e[type=aw:door,name="4-2"] aw:close_door
+## 用我超！冰！封闭 4-3 出口（
+fill -156 -18 5 -158 -18 7 ice replace water
 
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块

@@ -10,6 +10,3 @@ structure load aw:3_4_layer1_nowater -178 -16 18
 function aw/levels/chapter3/level4/events/clear_water
 ## 播放音乐
 function aw/lib/events/play_music
-
-# --- 重新开放关卡 ---
-fill -168 -15 22 -168 -13 24 structure_void

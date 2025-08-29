@@ -8,8 +8,8 @@ execute positioned -80 -18 -48 run function aw/lib/events/levels/complete_level
 function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§a6-2已完成！§r"}]}
 
-# --- 重新开放关卡 ---
-fill -81 -19 -50 -79 -17 -50 air
-fill -72 -19 -30 -70 -17 -30 air
+# --- 关卡特殊功能 ---
 ## 开启 6-3 的入口
 fill -74 -32 -23 -77 -32 -22 air replace obsidian
+## 初始化 6-3 的岩浆
+structure load aw:6_3_lava_2 -82 -40 -7

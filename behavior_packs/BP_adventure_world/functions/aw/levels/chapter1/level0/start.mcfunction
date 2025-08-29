@@ -15,18 +15,20 @@
     ## 传送玩家 | 特别地，因为这是整个试炼的开始，所以一视同仁地传送
         tp @a -117 1 -6 0 0
 
-# --- 封闭各关卡出口 ---
-    ## 1-1
-        fill -118 1 32 -116 3 32 sandstone ["sand_stone_type"="cut"]
-        fill -117 2 32 -117 2 32 sandstone ["sand_stone_type"="heiroglyphs"]
-    ## 1-3
-        fill -121 18 25 -121 20 27 red_sandstone ["sand_stone_type"="cut"]
-        fill -121 19 26 -121 19 26 red_sandstone ["sand_stone_type"="heiroglyphs"]
-
 # --- 调用通用函数 ---
     ## 调用前先清除玩家的物品（仅限1-0的初始化，后续的X-0不再清除物品）
         clear @a
         function aw/lib/events/levels/start_chapter
+
+# --- 生成各关的门 ---
+    ## 1-1
+        summon aw:door -117 1 14 0 0 aw:set_desert_door
+        summon aw:door -117 1 32 0 0 aw:set_desert_door
+    ## 1-2
+        summon aw:door -126 5 50 0 0 aw:set_desert_door
+    ## 1-3
+        summon aw:door -139 11 33 90 0 aw:set_desert_door
+        summon aw:door -121 18 26 90 0 aw:set_desert_door
 
 # --- 生成章节名 ---
     # 备注：应后于[调用通用函数]模块

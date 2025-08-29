@@ -13,17 +13,23 @@ titleraw @a title {"rawtext":[{"translate":"§7§l山 峦 神 殿"}]}
 ## 在剧情模式下传送玩家
 execute if score storyMode settings matches 1 run tp @a -81 -31 -28
 
-# --- 封闭各关卡出口 ---
-## 6-1
-fill -82 -31 -62 -82 -29 -64 dripstone_block
-## 6-2
-fill -72 -19 -30 -70 -17 -30 purple_stained_glass
-## 6-3
-fill -74 -32 -23 -77 -32 -22 obsidian keep
-fill -74 -39 8 -76 -37 8 deepslate_bricks
-
 # --- 调用通用函数 ---
 function aw/lib/events/levels/start_chapter
+
+# --- 生成各关的门 ---
+## 6-1
+summon aw:door -76 -31 -46 0 0 aw:set_hill_door
+summon aw:door -82 -31 -63 90 0 aw:set_hill_door
+## 6-2
+summon aw:door -80 -19 -50 0 0 aw:set_hill_door
+summon aw:door -71 -19 -30 0 0 aw:set_hill_door
+## 6-3
+summon aw:door -75 -37 -17 0 0 aw:set_hill_door
+summon aw:door -75 -39 8 0 0 aw:set_hill_door
+## 6-4
+summon aw:door -75 -39 20 0 0 aw:set_hill_door
+## 额外生成封堵 6-3 的黑曜石
+fill -74 -32 -23 -77 -32 -22 obsidian keep
 
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块

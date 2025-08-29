@@ -1,28 +1,37 @@
 # ===== 完成关卡 =====
 # 7-0 | 剑之神殿 -> 封印神殿
 
-# 设置重生点 | 设置到 7-1，防卡关
+# --- 设置重生点 ---
+# 设置到 7-1，以防卡关
 spawnpoint @a -119 -16 103
 
-# 调用通用函数
+# --- 调用通用函数 ---
 function aw/lib/events/levels/complete_chapter
 
-# 关卡特殊功能
+# --- 关卡特殊功能 ---
+# 因为这里关卡结束的同时是另一个章节的“开始”，所以这里会涉及部分章节开始通用函数的命令
 
 ## 传送玩家到重生点
 tp @a -119 -16 103
-## 解除玩家行动限制
-function aw/lib/events/stop_dialogue
 ## 启用时间线流逝
 function aw/lib/modify_data/timeline/enable_time_lapse
-## 封闭各关卡出口
-### 7-1
-fill -150 -18 102 -150 -16 100 nether_brick
-### 7-2
-fill -184 -18 98 -184 -16 96 nether_brick
-### 7-3
-fill -217 -18 98 -217 -16 100 nether_brick
-### 7-4
+## 封闭各关卡门口
+### 开启以前的门并全部移除
+execute as @e[type=aw:door] at @s run fill ~-3~~-3~3~4~3 structure_void replace barrier
+event entity @e[type=aw:door] aw:remove_immediately
+### 召唤门
+#### 7-1
+summon aw:door -151 -18 101 90 0 aw:set_final_door
+#### 7-2
+summon aw:door -159 -18 110 90 0 aw:set_final_door
+summon aw:door -184 -18 97 90 0 aw:set_final_door
+#### 7-3
+summon aw:door -192 -18 97 90 0 aw:set_final_door
+summon aw:door -217 -18 99 90 0 aw:set_final_door
+#### 7-4
+summon aw:door -223 -18 99 90 0 aw:set_final_door
+### 关闭门（包括 7-4 出口）
+event entity @e[type=aw:door] aw:close_door
 fill -235 -30 97 -233 -30 99 red_stained_glass
 ## 生成章节名
 kill @e[has_property={aw:marker_type="name"}]

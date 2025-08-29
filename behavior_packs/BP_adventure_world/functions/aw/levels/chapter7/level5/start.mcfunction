@@ -27,6 +27,9 @@ function aw/levels/chapter7/level5/waves/wave_1
 # --- 关卡特殊功能 ---
 ## 将时间线状态设置为 1
     scoreboard players set timeline active 1
+## 打开并移除 7-4 之前的门
+    execute as @e[type=aw:door] at @s run fill ~-3~~-3~3~4~3 structure_void replace barrier
+    event entity @e[type=aw:door] aw:remove_immediately
 ## 临时变量设置
     ### 关卡阶段，BOSS 血量在1/2以上为1，在1/2以下为2
         scoreboard players set temp.stage data 1

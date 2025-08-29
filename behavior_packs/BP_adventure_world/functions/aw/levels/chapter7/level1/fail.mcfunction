@@ -4,8 +4,8 @@
 # --- 调用通用函数 ---
 execute positioned -119 -16 103 run function aw/lib/events/levels/fail_level
 
-# --- 重新开放关卡 ---
-# （本关未封闭入口，因此无需重新开放）
+# --- 重新封闭关卡 ---
+event entity @e[type=aw:door] aw:close_door
 
 # --- 关卡特殊功能 ---
 # 重新启动 7-0 结束剧情（启用时间线流逝）
