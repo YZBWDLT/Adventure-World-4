@@ -1,12 +1,6 @@
 # ===== 喝下药水 =====
 # 当玩家喝下生长药水后，执行的命令
 
-# 调用此方法时：
-# · 执行者为喝下生长药水的玩家
-# · 执行位置为该玩家的位置
-# 输出结果：
-# data.potionUsed=1
-
 # --- 施加药效 ---
 effect @s health_boost 1200 4 true
 effect @s regeneration 1200 0 true

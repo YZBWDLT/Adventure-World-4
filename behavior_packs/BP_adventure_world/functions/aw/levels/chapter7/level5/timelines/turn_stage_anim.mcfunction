@@ -14,7 +14,7 @@
     ### 提示玩家
         execute if score timeline time matches 1 run function aw/lib/events/show_empty_title
         execute if score timeline time matches 1 run titleraw @a subtitle {"rawtext":[{"translate":"§c唤魔法师已被激怒！"}]}
-        execute if score timeline time matches 1 run execute as @a at @s run playsound smithing_table.use @s
+        execute if score timeline time matches 1 as @a at @s run playsound smithing_table.use @s
 ## [19] 火球爆炸
     ### 爆炸粒子和音效
         execute if score timeline time matches 19 as @e[type=aw:fireball] at @s run particle minecraft:huge_explosion_emitter ~~~
