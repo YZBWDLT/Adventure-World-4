@@ -44,3 +44,5 @@
         summon aw:text_display "§c进入后不能再中途更改" -15.0 1.7 90
 # 播放音乐
     function aw/lib/events/play_music
+# 为所有玩家施加隐身（防止其他所有玩家看着显示的那名玩家的大脸 qwq）
+    effect @a invisibility 3600 0 true
