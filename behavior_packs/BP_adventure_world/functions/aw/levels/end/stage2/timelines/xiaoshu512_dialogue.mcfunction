@@ -31,8 +31,8 @@
 
 # --- 剧情结束 ---
     ## 难度 1~3：维持 1 刻
-        execute if score timeline time matches 2 if score difficulty settings matches 1..3 run scoreboard players set timeline active 1
-        execute if score timeline time matches 2 if score difficulty settings matches 1..3 run function aw/lib/modify_data/timeline/disable_time_lapse
+        execute if score timeline time matches 2.. if score difficulty settings matches 1..3 run scoreboard players set timeline active 1
+        execute if score timeline time matches 2.. if score difficulty settings matches 1..3 run function aw/lib/modify_data/timeline/disable_time_lapse
     ## 难度 4：维持 120 刻
-        execute if score timeline time matches 121 if score difficulty settings matches 4 run scoreboard players set timeline active 1
-        execute if score timeline time matches 121 if score difficulty settings matches 4 run function aw/lib/modify_data/timeline/disable_time_lapse
+        execute if score timeline time matches 121.. if score difficulty settings matches 4 run scoreboard players set timeline active 1
+        execute if score timeline time matches 121.. if score difficulty settings matches 4 run function aw/lib/modify_data/timeline/disable_time_lapse

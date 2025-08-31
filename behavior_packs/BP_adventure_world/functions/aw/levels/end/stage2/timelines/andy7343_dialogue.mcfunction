@@ -13,5 +13,5 @@
     execute if score timeline time matches 120 run event entity @e[type=aw:npc,has_property={aw:is_author=true,aw:skin=1,aw:animation="none"}] aw:animation_speak
 
 # --- 剧情结束 ---
-    execute if score timeline time matches 121 run scoreboard players set timeline active 1
-    execute if score timeline time matches 121 run function aw/lib/modify_data/timeline/disable_time_lapse
+    execute if score timeline time matches 121.. run scoreboard players set timeline active 1
+    execute if score timeline time matches 121.. run function aw/lib/modify_data/timeline/disable_time_lapse

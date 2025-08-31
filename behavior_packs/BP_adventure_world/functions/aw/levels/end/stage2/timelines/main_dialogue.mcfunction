@@ -9,5 +9,5 @@
     execute if score timeline time matches 300 run tellraw @a {"rawtext":[{"translate":"* §f林乐（我）： §7好吧......qwq"}]}
 
 # --- 剧情结束 ---
-    execute if score timeline time matches 301 run scoreboard players set timeline active 1
-    execute if score timeline time matches 301 run function aw/lib/modify_data/timeline/disable_time_lapse
+    execute if score timeline time matches 301.. run scoreboard players set timeline active 1
+    execute if score timeline time matches 301.. run function aw/lib/modify_data/timeline/disable_time_lapse

@@ -14,4 +14,4 @@
     execute if score timeline time matches 50 run camera @a fade time 1 3 1
 
 # --- 剧情结束 ---
-    execute if score timeline time matches 100 run function aw/levels/end/stage2/complete
+    execute if score timeline time matches 100.. run function aw/levels/end/stage2/complete
