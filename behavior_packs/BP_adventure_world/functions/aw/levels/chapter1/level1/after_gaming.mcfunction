@@ -2,7 +2,7 @@
 # 1-1
 
 # --- 检查玩家进入下一个关卡 ---
-execute positioned -126 5 52 positioned ~-0.91~-1~-0.91 as @a[dx=0.82,dy=3,dz=0.82,tag=!spectator,scores={deathState=0}] at @s run function aw/levels/chapter1/level2/start
+execute positioned -126 5 52 positioned ~-0.95~-1~-0.95 as @a[dx=0.9,dy=3,dz=0.9,tag=!spectator,scores={deathState=0}] at @s run function aw/levels/chapter1/level2/start
 
 # --- 剧情 ---
 execute if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7切~就两个僵尸而已，十分轻松嘛。§8(1/2)"}]}
