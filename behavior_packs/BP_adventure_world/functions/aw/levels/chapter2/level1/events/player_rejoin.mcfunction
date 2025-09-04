@@ -3,8 +3,8 @@
 
 # --- 通用 ---
 
-## 传送玩家到重生点处
-tp @s -75 19 60
+## 传送玩家到重生点处 | 仅限多人模式下运行
+execute if score playerAmount data matches 2.. run tp @s -75 19 60
 
 # --- 完成关卡前 ---
 

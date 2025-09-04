@@ -3,8 +3,8 @@
 
 # --- 通用 ---
 
-## 传送玩家到重生点处
-tp @s -119 -16 103
+## 传送玩家到重生点处 | 仅限多人模式下运行
+execute if score playerAmount data matches 2.. run tp @s -119 -16 103
 ## 设置玩家的重生点
 spawnpoint @s -119 -16 103
 
