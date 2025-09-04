@@ -42,4 +42,3 @@
     ## [120] 跳转到结束界面 | 如果为剧情模式，从stage1开始；如果为纯战斗模式，从stage2开始
     execute if score timeline active matches 3 if score timeline time matches 120.. if score storyMode settings matches 0 run function aw/levels/chapter7/level5/events/end_in_combat_mode
     execute if score timeline active matches 3 if score timeline time matches 120.. if score storyMode settings matches 1 run function aw/levels/end/stage1/start
-    execute if score timeline active matches 3 if score timeline time matches 120.. run function aw/lib/events/stop_dialogue
