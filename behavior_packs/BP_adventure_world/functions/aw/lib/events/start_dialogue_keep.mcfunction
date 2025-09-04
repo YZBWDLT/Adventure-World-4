@@ -6,10 +6,13 @@
 inputpermission set @a camera disabled
 inputpermission set @a movement disabled
 
-# --- 存在多个玩家时，施加隐身 ---
-# 只保留一个玩家显示
+# --- 为玩家添加药效 ---
+
+## 隐身 | 存在多个玩家时，施加隐身，只保留一个玩家显示
 execute if score playerAmount data matches 2.. run effect @a invisibility 3600 0 true
 effect @a[c=1] invisibility 0 1 true
+## 抗性提升 V | 以防止玩家在过剧情时死亡
+effect @a resistance 3600 4 true
 
 # --- 禁止与 NPC 的交互 ---
 scoreboard players set allowNpcInteraction data 0

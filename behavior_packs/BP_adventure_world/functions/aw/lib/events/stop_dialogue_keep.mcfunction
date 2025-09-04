@@ -6,8 +6,12 @@
 inputpermission set @a camera enabled
 inputpermission set @a movement enabled
 
-# --- 存在多个玩家时，施加隐身 ---
+# --- 为玩家移除药效 ---
+
+## 隐身
 effect @a invisibility 0 1 true
+## 抗性提升
+effect @a resistance 0 10 true
 
 # --- 启用与 NPC 的交互 ---
 scoreboard players set allowNpcInteraction data 1

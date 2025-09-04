@@ -6,8 +6,12 @@
 inputpermission set @a camera enabled
 inputpermission set @a movement enabled
 
-# --- 存在多个玩家时，施加隐身 ---
+# --- 为玩家移除药效 ---
+
+## 隐身
 effect @a invisibility 0 1 true
+## 抗性提升
+effect @a resistance 0 10 true
 
 # --- 启用不保留值的时间线，时间不再流逝 ---
 function aw/lib/modify_data/timeline/dont_keep_value
