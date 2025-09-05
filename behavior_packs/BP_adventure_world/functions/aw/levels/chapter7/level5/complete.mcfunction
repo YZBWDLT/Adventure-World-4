@@ -12,7 +12,7 @@ tellraw @a {"rawtext":[{"text":"§l§c最终关卡已完成！跳入最中间的
 # （本关不存在出入口）
 
 # --- 生成引导点 ---
-summon aw:destination (下一关重生点)
+summon aw:destination -225 -47 44
 
 # --- 关卡特殊功能 ---
 ## 播放音乐

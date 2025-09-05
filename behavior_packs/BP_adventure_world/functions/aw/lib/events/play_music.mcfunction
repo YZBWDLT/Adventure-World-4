@@ -16,20 +16,34 @@ execute if score chapter data matches 10 if score level data matches 3 run music
 
 # --- 关卡 ---
 ## 普通关卡
-execute if score chapter data matches 1 run music play aw.music.temple.desert 1 0 loop
-execute if score chapter data matches 2 run music play aw.music.temple.jungle 1 0 loop
-execute if score chapter data matches 3 run music play aw.music.temple.lake 1 0 loop
+execute if score chapter data matches 1 run music play aw.music.temple.desert.prelude 1 0
+execute if score chapter data matches 1 run music queue aw.music.temple.desert 1 0 loop
+
+execute if score chapter data matches 2 run music play aw.music.temple.jungle.prelude 1 0
+execute if score chapter data matches 2 run music queue aw.music.temple.jungle 1 0 loop
+
+execute if score chapter data matches 3 run music play aw.music.temple.lake.prelude 1 0
+execute if score chapter data matches 3 run music queue aw.music.temple.lake 1 0 loop
+
 execute if score chapter data matches 4..5 run music play aw.music.temple.freeze 1 0 loop
-execute if score chapter data matches 6 run music play aw.music.temple.mountain 1 0 loop
+
+execute if score chapter data matches 6 run music play aw.music.temple.mountain.prelude 1 0
+execute if score chapter data matches 6 run music queue aw.music.temple.mountain 1 0 loop
+
 execute if score chapter data matches 7 run music play aw.music.temple.final 1 0 loop
+
 ## 7-0（剑之神殿）完成前的特殊音乐
 execute if score chapter data matches 7 if score level data matches 0 if score levelCompleted data matches 0 run music play aw.music.temple.sword 1 0 loop
+
 ## 7-4 ~ 7-5的特殊音乐
-execute if score chapter data matches 7 if score level data matches 4..5 run music play aw.music.temple.final.level_4 1 0 loop
+execute if score chapter data matches 7 if score level data matches 4..5 run music play aw.music.temple.final.level_4.prelude 1 0
+execute if score chapter data matches 7 if score level data matches 4..5 run music queue aw.music.temple.final.level_4 1 0 loop
+
 ## BOSS关的特殊音乐（7-5仅第2波播放，存在前奏）
 execute if score chapter data matches 2 if score level data matches 3 if score levelCompleted data matches 0 run music play aw.music.boss.skeleton_king 1 0 loop
 execute if score chapter data matches 3 if score level data matches 4 if score levelCompleted data matches 0 run music play aw.music.boss.elder_guardian 1 0 loop
 execute if score chapter data matches 4 if score level data matches 4 if score levelCompleted data matches 0 run music play aw.music.boss.random_monster 1 0 loop
 execute if score chapter data matches 6 if score level data matches 4 if score levelCompleted data matches 0 run music play aw.music.boss.blaze_king 1 0 loop
-execute if score chapter data matches 7 if score level data matches 5 if score levelCompleted data matches 0 if score wave data matches 2 run music play aw.music.boss.final_prelude 1 0 play_once
+
+execute if score chapter data matches 7 if score level data matches 5 if score levelCompleted data matches 0 if score wave data matches 2 run music play aw.music.boss.final_prelude 1 0
 execute if score chapter data matches 7 if score level data matches 5 if score levelCompleted data matches 0 if score wave data matches 2 run music queue aw.music.boss.final 1 0 loop
