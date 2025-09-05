@@ -7,6 +7,9 @@
 spawnpoint @s -27 7 -48
 ## 传送玩家到重生点 | 仅限多人时运行
 execute if score playerAmount data matches 2.. run tp @s -27 7 -48
+## 重显示外部 NPC 和展示文本 | 仅限多人时运行
+execute if score playerAmount data matches 2.. run effect @e[type=aw:npc] invisibility 0 1 true
+execute if score playerAmount data matches 2.. run effect @e[type=aw:text_display] invisibility 0 1 true
 
 # --- 和张宇对话时 ---
 

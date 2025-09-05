@@ -1,5 +1,9 @@
 # ===== 玩家进入林乐的家楼下时 =====
 
+# 隐藏外部 NPC 和展示文本 | 仅限单人模式下执行
+    execute if score playerAmount data matches 1 run effect @e[type=aw:npc] invisibility 3600 0 true
+    execute if score playerAmount data matches 1 run effect @e[type=aw:text_display] invisibility 3600 0 true
+
 # 更改状态变量
     scoreboard players set temp.hasPlayerInHomeDown data 1
 
