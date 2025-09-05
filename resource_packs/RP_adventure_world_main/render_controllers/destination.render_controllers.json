@@ -1,0 +1,10 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.destination": {
+            "textures": [ "texture.default" ],
+            "materials": [ { "*": "material.default" } ],
+            "geometry": "geometry.default"
+        }
+    }
+}

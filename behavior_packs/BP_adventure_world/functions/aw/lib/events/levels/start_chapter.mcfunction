@@ -37,3 +37,5 @@
         kill @e[type=aw:wind_pearl]
     ## 重置章节名和波数
         kill @e[has_property={aw:marker_type="name"}]
+    ## 移除残留的引导点
+        event entity @e[type=aw:destination] aw:remove_immediately

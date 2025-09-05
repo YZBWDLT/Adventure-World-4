@@ -4,6 +4,9 @@
 # --- 调用通用函数 ---
 execute positioned -188 -20 29 run function aw/lib/events/levels/fail_level
 
+# --- 生成引导点 ---
+summon aw:destination -172 -20 11
+
 # --- 关卡特殊功能 ---
 ## 清除水
 function aw/levels/chapter3/level2/events/clear_water

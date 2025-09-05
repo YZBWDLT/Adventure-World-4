@@ -4,7 +4,7 @@
 # --- 通用 ---
 
 ## 传送玩家到重生点处 | 仅限多人模式下运行
-execute if score playerAmount data matches 2.. run tp @s -126 5 52
+execute if score playerAmount data matches 2.. run tp @s -126 6 52
 
 # --- 完成关卡前 ---
 
@@ -18,4 +18,4 @@ execute if score levelCompleted data matches 0 if score playerAmount data matche
 # --- 完成关卡后 ---
 
 ## 设置玩家的重生点
-execute if score levelCompleted data matches 1 run spawnpoint @s -126 5 52
+execute if score levelCompleted data matches 1 run spawnpoint @s -126 6 52

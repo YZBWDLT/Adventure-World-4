@@ -11,6 +11,9 @@ tellraw @a {"rawtext":[{"text":"§l§c最终关卡已完成！跳入最中间的
 # --- 重新开放关卡 ---
 # （本关不存在出入口）
 
+# --- 生成引导点 ---
+summon aw:destination (下一关重生点)
+
 # --- 关卡特殊功能 ---
 ## 播放音乐
 function aw/lib/events/play_music

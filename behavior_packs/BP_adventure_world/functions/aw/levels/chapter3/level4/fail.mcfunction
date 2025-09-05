@@ -4,6 +4,9 @@
 # --- 调用通用函数 ---
 execute positioned -163 -20 28 run function aw/lib/events/levels/fail_level
 
+# --- 生成引导点 ---
+summon aw:destination -170 -14 23
+
 # --- 关卡特殊功能 ---
 ## 重新加载结构并清除水
 structure load aw:3_4_layer1_nowater -178 -16 18

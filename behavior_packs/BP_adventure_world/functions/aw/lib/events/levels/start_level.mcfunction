@@ -53,3 +53,4 @@
     kill @e[family=monster]
     kill @e[type=aw:wind_pearl]
     event entity @e[type=aw:text_display] aw:remove_immediately
+    event entity @e[type=aw:destination] aw:remove_immediately

@@ -48,6 +48,7 @@ entity.aw:marker.name=Marker
 entity.aw:spawner.name=Monster Spawner
 entity.evoker_boss.name=§l§cEVOKER BOSS
 entity.aw:billboard.name=Billboard
+entity.aw:destination.name=Destination
 
 ### Spawn Eggs
 item.spawn_egg.entity.aw:npc.name=Spawn NPC

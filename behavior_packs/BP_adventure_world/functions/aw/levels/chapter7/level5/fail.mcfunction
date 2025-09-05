@@ -7,6 +7,10 @@ execute positioned -225 -17 99 run function aw/lib/events/levels/fail_level
 # --- 重新开放关卡 ---
 # （本关无需重新开放关卡，因为入口并未封闭）
 
+# --- 生成引导点 ---
+# 生成到 7-4 的井的位置
+summon aw:destination -234 -30 98
+
 # --- 关卡特殊功能 ---
 ## 移除已经安放的掩体
 fill -238 -45 31 -212 -45 57 air destroy

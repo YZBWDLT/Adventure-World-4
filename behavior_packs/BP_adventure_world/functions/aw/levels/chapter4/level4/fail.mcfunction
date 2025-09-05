@@ -4,6 +4,9 @@
 # --- 调用通用函数 ---
 execute positioned -156 -11 14 run function aw/lib/events/levels/fail_level
 
+# --- 生成引导点 ---
+summon aw:destination -141 -30 6
+
 # --- 关卡特殊功能 ---
 ## 播放音乐
 function aw/lib/events/play_music

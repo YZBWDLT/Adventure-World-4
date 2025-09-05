@@ -17,4 +17,4 @@ execute if score alivePlayerAmount data matches 0 run function aw/levels/chapter
 execute as @a[tag=spectator,scores={deathState=0}] at @s anchored eyes if block ~~80~ barrier positioned -137 12 33 run function aw/lib/events/player_out_of_border
 # 阻止部分因网络波动的玩家意外在上一关以冒险模式重生（#110，见https://github.com/YZBWDLT/Adventure-World-4/issues/110）
 # 无论何种情况，玩家实际上在上一关的位置都是不符合预期的
-execute as @a positioned -126 5 52 if entity @s[r=2] run tp @s -137 12 33
+execute as @a positioned -126 6 52 if entity @s[r=2] run tp @s -137 12 33

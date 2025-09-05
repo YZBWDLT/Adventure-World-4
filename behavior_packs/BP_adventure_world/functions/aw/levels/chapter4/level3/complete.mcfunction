@@ -9,6 +9,9 @@ clear @a aw:iron_leggings
 function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§a4-3已完成！§r\n§f你已获得 §d[休眠药水] §e[钻石护腿] §f！\n§7温馨提示，不要混用生长药水和休眠药水"}]}
 
+# --- 生成引导点 ---
+summon aw:destination -141 -30 6
+
 # --- 关卡特殊功能 ---
 ## 开放 4-3 出口
 fill -156 -18 5 -158 -18 7 air replace ice

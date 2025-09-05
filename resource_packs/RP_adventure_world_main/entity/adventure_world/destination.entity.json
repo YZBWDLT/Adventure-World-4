@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "aw:destination",
+            "render_controllers": [ "controller.render.destination" ],
+            "materials": { "default": "destination" },
+            "geometry": { "default": "geometry.destination" },
+            "textures": { "default": "textures/entity/destination" },
+
+            "scripts": {
+                "pre_animation": [
+                    "variable.state=query.property('aw:stage');"
+                ],
+                "animate": [ "controller", "face_player" ],
+                "scale": "1+5*query.camera_distance_range_lerp(10, 50)"
+            },
+            "animations": {
+                "controller": "controller.animation.destination.general",
+                "appear": "animation.destination.appear",
+                "hold": "animation.destination.hold",
+                "face_player": "animation.actor.billboard"
+            }
+        }
+    }
+}

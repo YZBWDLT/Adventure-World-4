@@ -7,3 +7,6 @@ execute positioned -168 18 -20 run function aw/lib/events/levels/complete_level
 # --- 获得新物品 ---
 function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§a4-1已完成！§r\n§f你已获得 §d[重生药水] §e[脊柱之盾] §f！\n§a你刚刚获得了一瓶副药水！它们一般搭配主药水使用，注意合理分配！\n§7提示：手持物品时的§f☹§7代表该效果是短时的"}]}
+
+# --- 生成引导点 ---
+summon aw:destination -156 8 -1

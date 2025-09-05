@@ -48,6 +48,7 @@ entity.aw:marker.name=标记
 entity.aw:spawner.name=怪物生成器
 entity.evoker_boss.name=§l§c唤魔法师
 entity.aw:billboard.name=公告板
+entity.aw:destination.name=引导点
 
 ### 刷怪蛋类
 item.spawn_egg.entity.aw:npc.name=NPC 刷怪蛋

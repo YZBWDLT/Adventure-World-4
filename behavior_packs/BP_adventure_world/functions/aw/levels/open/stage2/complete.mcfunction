@@ -12,3 +12,6 @@ function aw/lib/modify_data/timeline/enable_time_lapse
 
 # 提示玩家可以和 NPC 交互
 tellraw @a {"rawtext":[{"translate":"§7小提示：右键NPC可以与他们交互哦！"}]}
+
+# 生成引导点
+summon aw:destination 9 2 26

@@ -6,3 +6,6 @@ spawnpoint @a -95 -30 -6
 
 # 调用通用函数
 function aw/lib/events/levels/complete_chapter
+
+# 生成引导点
+summon aw:destination -81 -30 -28

@@ -11,6 +11,9 @@ loot replace entity @a[hasitem=[{item=aw:diamond_boots,quantity=0,location=slot.
 function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§a3-2已完成！§r\n§f你已获得 §a[治疗药水] §e[钻石靴子] §f！"}]}
 
+# --- 生成引导点 ---
+summon aw:destination -163 -20 28
+
 # --- 关卡特殊功能 ---
 ## 重新封闭 3-4
 event entity @e[type=aw:door,name="3-4"] aw:close_door

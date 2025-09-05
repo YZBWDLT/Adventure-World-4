@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.destination.general": {
+            "initial_state": "appear",
+			"states": {
+				"appear": {
+					"animations": [ "appear" ],
+					"transitions": [
+						{ "hold": "v.state=='hold'" }
+					]
+				},
+				"hold": {
+					"animations": [ "hold" ],
+					"transitions": [
+						{ "appear": "v.state=='appear'" }
+					]
+				}
+			}
+		}
+	}
+}

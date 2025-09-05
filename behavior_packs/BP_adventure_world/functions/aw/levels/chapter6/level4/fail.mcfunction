@@ -4,6 +4,9 @@
 # --- 调用通用函数 ---
 execute positioned -75 -36 -15 run function aw/lib/events/levels/fail_level
 
+# --- 生成引导点 ---
+summon aw:destination -75 -38 22
+
 # --- 关卡特殊功能 ---
 ## 清除残余岩浆
 structure load aw:6_4_no_lava -89 -40 21

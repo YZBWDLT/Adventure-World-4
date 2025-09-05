@@ -7,3 +7,6 @@ execute positioned -119 -16 103 run function aw/lib/events/levels/complete_level
 # --- 获得新物品 ---
 function aw/system/items
 tellraw @a {"rawtext":[{"text":"§l§a7-1已完成！§r"}]}
+
+# --- 生成引导点 ---
+summon aw:destination -161 -17 110
