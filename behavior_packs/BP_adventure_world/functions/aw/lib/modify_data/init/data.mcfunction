@@ -29,7 +29,8 @@
     ## 击杀数记分项
         scoreboard objectives add killCount dummy "击杀数"
     ## 生命值记分项
-        scoreboard objectives add health dummy "生命值"
+        scoreboard objectives add health dummy "§c❤"
+        scoreboard objectives setdisplay belowname health
     ## 游戏 ID 记分项
         scoreboard objectives add gameId dummy "游戏 ID"
 

@@ -101,37 +101,45 @@ world.afterEvents.entityDie.subscribe(event => {
 });
 
 // 当玩家或烈焰王血量变化后，将其血量同步到health记分板上
-world.afterEvents.entitySpawn.subscribe(event => {
-    /** 刚生成的实体 */
-    const entity = event.entity;
+/** 要检查的实体 */
+const entityTypes = ["minecraft:player", "aw:blaze_king", "minecraft:evocation_illager"];
+/** 获取实体的最大血量值
+ * @param {Entity} entity 
+ */
+function getMaxHealth(entity) {
     /** 该实体的血量组件 @type {EntityHealthComponent} */
     const entityHealth = entity.getComponent("minecraft:health");
     /** 该实体的血量最大值 */
-    const entityMaxHealth = entityHealth?.effectiveMax;
-
-    // 此处是为了防止某些实体无血量而导致报错
-    if (entityMaxHealth !== undefined) {
-        printHealth(entity, entityMaxHealth);
-    }
-});
-world.afterEvents.entityHealthChanged.subscribe(event => {
-    printHealth(event.entity, event.newValue);
-});
+    return entityHealth?.effectiveMax;
+}
 /** 将实体血量打印到 health 记分板上
  * @param {Entity} entity 实体
  * @param {number} healthValue 实体当前血量值 
 */
 function printHealth(entity, healthValue) {
-    /** 要检查的实体 */
-    const entityTypes = ["minecraft:player", "aw:blaze_king", "minecraft:evocation_illager"];
-
+    /** 实体血量更改后的血量（整数型） */
+    const healthValueInt = Math.ceil(healthValue);
+    entity.runCommand(`scoreboard players set @s health ${healthValueInt}`);
+}
+world.afterEvents.entitySpawn.subscribe(event => {
+    /** 刚生成的实体 */
+    const entity = event.entity;
     // 若实体在允许的实体列表中，则打印实体血量到health记分板上
     if (entityTypes.includes(entity.typeId)) {
-        /** 实体血量更改后的血量（整数型） */
-        const healthValueInt = Math.ceil(healthValue);
-        entity.runCommand(`scoreboard players set @s health ${healthValueInt}`);
+        printHealth(entity, getMaxHealth(entity));
     }
-}
+});
+world.afterEvents.entityHealthChanged.subscribe(event => {
+    /** 刚生成的实体 */
+    const entity = event.entity;
+    // 若实体在允许的实体列表中，则打印实体血量到health记分板上
+    if (entityTypes.includes(entity.typeId)) {
+        const entityMaxHealth = getMaxHealth(entity);
+        /** 实际的血量值 */
+        const healthValue = event.newValue > entityMaxHealth ? entityMaxHealth : event.newValue;
+        printHealth(entity, healthValue);
+    }
+});
 
 // world.afterEvents.entityHitEntity.subscribe(event=>{
 //     world.sendMessage(`hitEntity = ${event.hitEntity.typeId}`);

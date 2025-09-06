@@ -8,3 +8,5 @@
 scoreboard players set levelCompleted data 0
 ## 启用对话
 function aw/lib/events/start_dialogue
+## 移除引导点
+event entity @e[type=aw:destination] aw:remove_immediately

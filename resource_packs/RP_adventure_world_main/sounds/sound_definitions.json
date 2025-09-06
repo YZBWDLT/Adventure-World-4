@@ -22,16 +22,33 @@
             "category": "ui"
         },
 
+        "aw.music.village.prelude": {
+            "sounds": [
+                { "name": "sounds/adventure_world/music/village_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+            ],
+            "category": "music"
+        },
         "aw.music.village": {
             "sounds": [
-                { "name": "sounds/adventure_world/music/village_1", "volume": 0.2, "load_on_low_memory": true, "stream": true },
-                { "name": "sounds/adventure_world/music/village_2", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+                { "name": "sounds/adventure_world/music/village", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+            ],
+            "category": "music"
+        },
+        "aw.music.village.time_temple.prelude": {
+            "sounds": [
+                { "name": "sounds/adventure_world/music/village_time_temple_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
             ],
             "category": "music"
         },
         "aw.music.village.time_temple": {
             "sounds": [
                 { "name": "sounds/adventure_world/music/village_time_temple", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+            ],
+            "category": "music"
+        },
+        "aw.music.village.sword_trial_entrance.prelude": {
+            "sounds": [
+                { "name": "sounds/adventure_world/music/village_sword_trial_entrance_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
             ],
             "category": "music"
         },
@@ -42,12 +59,19 @@
             "category": "music"
         },
 
+        "aw.music.end.prelude": {
+            "sounds": [
+                { "name": "sounds/adventure_world/music/end_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+            ],
+            "category": "music"
+        },
         "aw.music.end": {
             "sounds": [
                 { "name": "sounds/adventure_world/music/end", "volume": 0.2, "load_on_low_memory": true, "stream": true }
             ],
             "category": "music"
         },
+
         "aw.music.temple.desert.prelude": {
             "sounds": [
                 { "name": "sounds/adventure_world/music/desert_temple_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
@@ -126,9 +150,22 @@
             ],
             "category": "music"
         },
+
+        "aw.music.boss.skeleton_king.prelude": {
+            "sounds": [
+                { "name": "sounds/adventure_world/music/boss_skeleton_king_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+            ],
+            "category": "music"
+        },
         "aw.music.boss.skeleton_king": {
             "sounds": [
                 { "name": "sounds/adventure_world/music/boss_skeleton_king", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+            ],
+            "category": "music"
+        },
+        "aw.music.boss.elder_guardian.prelude": {
+            "sounds": [
+                { "name": "sounds/adventure_world/music/boss_elder_guardian_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
             ],
             "category": "music"
         },
@@ -138,9 +175,21 @@
             ],
             "category": "music"
         },
+        "aw.music.boss.random_monster.prelude": {
+            "sounds": [
+                { "name": "sounds/adventure_world/music/boss_random_monster_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+            ],
+            "category": "music"
+        },
         "aw.music.boss.random_monster": {
             "sounds": [
                 { "name": "sounds/adventure_world/music/boss_random_monster", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+            ],
+            "category": "music"
+        },
+        "aw.music.boss.blaze_king.prelude": {
+            "sounds": [
+                { "name": "sounds/adventure_world/music/boss_blaze_king_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
             ],
             "category": "music"
         },
@@ -150,15 +199,15 @@
             ],
             "category": "music"
         },
-        "aw.music.boss.final": {
+        "aw.music.boss.final.prelude": {
             "sounds": [
-                { "name": "sounds/adventure_world/music/boss_final", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+                { "name": "sounds/adventure_world/music/boss_final_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
             ],
             "category": "music"
         },
-        "aw.music.boss.final_prelude": {
+        "aw.music.boss.final": {
             "sounds": [
-                { "name": "sounds/adventure_world/music/boss_final_prelude", "volume": 0.2, "load_on_low_memory": true, "stream": true }
+                { "name": "sounds/adventure_world/music/boss_final", "volume": 0.2, "load_on_low_memory": true, "stream": true }
             ],
             "category": "music"
         }
