@@ -144,7 +144,7 @@ class AdventureWorld4Server(ServerSystem):
         ):
             killer.runCommand("function aw/entities/player/kill_monster")
 
-    # 当玩家或烈焰王血量变化后，将其血量同步到health记分板上
+    # 当玩家或烈焰之魂血量变化后，将其血量同步到health记分板上
     def entitySpawn(self, event): # type: ( sapi.EntitySpawnAfterEvent ) -> None
         # 刚生成的实体
         entity = event.entity

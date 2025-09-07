@@ -1,5 +1,5 @@
 # ===== 生成怪物 =====
-# 烈焰王
+# 烈焰之魂
 
 execute if score difficulty settings matches 1 run summon aw:blaze_king ~~~ 0 0 aw:level_1
 execute if score difficulty settings matches 2 run summon aw:blaze_king ~~~ 0 0 aw:level_2

@@ -5,7 +5,7 @@
 
 # --- 生成怪物生成器 ---
 
-## 烈焰王
+## 烈焰之魂
 summon aw:spawner -75 -37 35 0 0 aw:spawn_blaze_king
 
 # --- BOSS 专属标题 ---

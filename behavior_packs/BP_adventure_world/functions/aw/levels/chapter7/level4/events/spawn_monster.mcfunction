@@ -1,4 +1,4 @@
-# ===== 烈焰王生成怪物 =====
+# ===== 烈焰之魂生成怪物 =====
 
 # --- 倒计时 ---
 scoreboard players remove temp.nextMonster time 1

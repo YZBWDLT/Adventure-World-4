@@ -31,7 +31,7 @@ execute as @a[tag=spectator,scores={deathState=0}] at @s anchored eyes if block 
 # 无论何种情况，玩家实际上在上一关的位置都是不符合预期的
 execute as @a positioned -194 -17 97 if entity @s[r=2] run tp @s -225 -17 99
 
-# --- 烈焰王生成怪物 ---
+# --- 烈焰之魂生成怪物 ---
 # 仅当 BOSS 血量不足 2/3 时执行
 execute if score @e[type=aw:blaze_king,c=1] health < temp.bossHealthTwoThird data if score tick time matches 11 run function aw/levels/chapter7/level4/events/spawn_monster
 
@@ -51,5 +51,5 @@ execute if score wave data matches 2 if score storyMode settings matches 0 if sc
 execute if score wave data matches 5 if score storyMode settings matches 1 if score timeline time matches 100 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7天哪，这个刷怪位置...这里变得越来越反常了啊。"}]}
 execute if score wave data matches 5 if score storyMode settings matches 1 if score timeline time matches 101 run function aw/lib/modify_data/timeline/disable_time_lapse
 
-execute if score wave data matches 5 if score storyMode settings matches 0 if score timeline time matches 100 run tellraw @a {"rawtext":[{"text":"§7§o以防误解，烈焰王的刷怪位置没有出问题哦"}]}
+execute if score wave data matches 5 if score storyMode settings matches 0 if score timeline time matches 100 run tellraw @a {"rawtext":[{"text":"§7§o以防误解，烈焰之魂的刷怪位置没有出问题哦"}]}
 execute if score wave data matches 5 if score storyMode settings matches 0 if score timeline time matches 101 run function aw/lib/modify_data/timeline/disable_time_lapse

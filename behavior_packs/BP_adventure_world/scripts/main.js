@@ -100,7 +100,7 @@ world.afterEvents.entityDie.subscribe(event => {
     }
 });
 
-// 当玩家或烈焰王血量变化后，将其血量同步到health记分板上
+// 当玩家或烈焰之魂血量变化后，将其血量同步到health记分板上
 /** 要检查的实体 */
 const entityTypes = ["minecraft:player", "aw:blaze_king", "minecraft:evocation_illager"];
 /** 获取实体的最大血量值

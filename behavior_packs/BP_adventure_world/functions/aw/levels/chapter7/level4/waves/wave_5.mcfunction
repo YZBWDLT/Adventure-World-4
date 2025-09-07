@@ -13,7 +13,7 @@ summon aw:marker -83 1 -2 ~~ aw:set_wave_name "§a⚅§a⚄§a⚅§a⚄§b⚂"
 
 # --- 生成怪物生成器 ---
 
-## 烈焰王
+## 烈焰之魂
 summon aw:spawner -239 -16 108 0 0 aw:spawn_blaze_king
 
 # --- 启用时间线流逝 ---
