@@ -21,6 +21,7 @@
     # [940] 相机变换：面向两人
     execute if score timeline time matches 940 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7也许其他建筑上保存的文字会完整一些，之后去调查一下吧。"}]}
     execute if score timeline time matches 1020 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7那些§d神殿里有好多怪物§7的，要去也要一起去调查呀！"}]}
+    # [1040] NPC 动作：解除田英隐身
     # [1040~1140] NPC 动作：田英行走
     # [1080] 相机变换：面向田英
     execute if score timeline time matches 1100 run tellraw @a {"rawtext":[{"text":"* §b田英： §7喂——你们两个！聊得这么欢，是有所发现了吧？"}]}
@@ -35,6 +36,8 @@
         execute if score timeline time matches 460 run event entity @e[type=aw:npc,has_property={aw:skin=4,aw:is_author=false}] aw:animation_speak
         execute if score timeline time matches 620 run event entity @e[type=aw:npc,has_property={aw:skin=4,aw:is_author=false}] aw:animation_speak
         execute if score timeline time matches 1020 run event entity @e[type=aw:npc,has_property={aw:skin=4,aw:is_author=false}] aw:animation_speak
+    ## [1040] 解除田英隐身
+        execute if score timeline time matches 1040 run effect @e[type=aw:npc,has_property={aw:skin=7,aw:is_author=false}] invisibility 0 1 true
     ## [1040~1140] 田英行走（aw:skin==7）
         execute if score timeline time matches 1040..1140 as @e[type=aw:npc,has_property={aw:skin=7,aw:is_author=false}] at @s run tp @s ~~~-0.1
         execute if score timeline time matches 1140 run event entity @e[type=aw:npc,has_property={aw:skin=7,aw:is_author=false}] aw:see_player

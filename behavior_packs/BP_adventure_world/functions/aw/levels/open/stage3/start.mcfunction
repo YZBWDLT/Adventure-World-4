@@ -19,7 +19,9 @@ function aw/lib/events/play_music
 # 移除悬浮文本
 event entity @e[type=aw:text_display] aw:remove_immediately
 
-# 将田英传送过来以作准备（实质上是移除再新建，以防止玩家看到突然瞬移过来的名字）
+# 将田英传送过来以作准备，并给予隐身（#118）
+# （实质上是移除再新建，以防止玩家看到突然瞬移过来的名字）
 event entity @e[name="田英"] aw:remove_immediately
 summon aw:npc 33 1 -11 facing @e[name="米云溪"] aw:npc_tianying "田英"
 event entity @e[name="田英"] aw:ignore_player
+effect @e[name="田英"] invisibility 3600 0 true
