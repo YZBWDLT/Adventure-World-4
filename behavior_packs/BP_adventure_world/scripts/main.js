@@ -134,9 +134,10 @@ world.afterEvents.entityHealthChanged.subscribe(event => {
     const entity = event.entity;
     // 若实体在允许的实体列表中，则打印实体血量到health记分板上
     if (entityTypes.includes(entity.typeId)) {
-        const entityMaxHealth = getMaxHealth(entity);
-        /** 实际的血量值 */
-        const healthValue = event.newValue > entityMaxHealth ? entityMaxHealth : event.newValue;
+        /** 该实体最大血量值 */ const entityMaxHealth = getMaxHealth(entity);
+        /** 该实体当前实际的血量值，控制在 0 ~ max 之间 */ const healthValue = event.newValue;
+        if ( healthValue > entityMaxHealth ) healthValue = entityMaxHealth;
+        else if ( healthValue < 0 ) healthValue = 0;
         printHealth(entity, healthValue);
     }
 });
