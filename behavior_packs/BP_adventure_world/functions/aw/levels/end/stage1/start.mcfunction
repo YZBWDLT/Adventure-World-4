@@ -5,6 +5,13 @@
     scoreboard players set chapter data 10
     scoreboard players set level data 1
 
+# 清除玩家的物品和药效
+    ## 移除传声石结晶的使用权限
+        scoreboard players set allowAcousticStoneCrystal data 0
+    ## 清除玩家的物品和药效
+        clear @a
+        effect @a clear
+
 # 调用通用函数
     function aw/lib/events/levels/start_open
 
@@ -19,13 +26,6 @@
 
 # 传送玩家
     tp @a -15.0 1 88 facing @e[type=aw:wild_sword,c=1]
-
-# 清除玩家的物品和药效
-    ## 移除传声石结晶的使用权限
-        scoreboard players set allowAcousticStoneCrystal data 0
-    ## 清除玩家的物品和药效
-        clear @a
-        effect @a clear
 
 # 重新设置重生点
     spawnpoint @a -15 2 88
