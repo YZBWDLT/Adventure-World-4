@@ -10,3 +10,6 @@ effect @a blindness 9 0 true
 
 # 启用对话状态
 function aw/lib/events/start_dialogue
+
+# 移除引导点
+event entity @e[type=aw:destination] aw:remove_immediately
