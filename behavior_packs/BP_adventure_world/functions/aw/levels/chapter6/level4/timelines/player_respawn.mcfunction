@@ -10,4 +10,6 @@
 # 倒计时结束后，复活玩家
     titleraw @s[scores={temp.respawnTime=..0}] title {"rawtext":[{"translate":"§1"}]}
     titleraw @s[scores={temp.respawnTime=..0}] subtitle {"rawtext":[{"translate":"§a您已被解救！"}]}
+    give @s[scores={temp.respawnTime=..0}] aw:potion_health 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+    tellraw @s[scores={temp.respawnTime=..0}] {"rawtext":[{"translate":"§7您已被释放并给予一瓶治疗药水，注意安全！"}]}
     execute as @s[scores={temp.respawnTime=..0}] positioned -75 -38 22 run function aw/lib/events/respawn_player
