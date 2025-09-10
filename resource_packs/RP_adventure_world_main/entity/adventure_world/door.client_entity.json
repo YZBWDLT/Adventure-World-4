@@ -12,7 +12,7 @@
                 "lake": "textures/entity/door/lake",
                 "frost": "textures/entity/door/frost",
                 "redstone": "textures/entity/door/redstone",
-                "hill": "textures/entity/door/hill",
+                "mountain": "textures/entity/door/mountain",
                 "final": "textures/entity/door/final"
             },
 

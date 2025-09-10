@@ -7,5 +7,6 @@ execute unless score developerMode settings matches 1 run tellraw @s { "rawtext"
 # --- 开启开发者模式时 ---
 
 execute if score developerMode settings matches 1 run kill @e[family=monster]
+execute if score developerMode settings matches 1 run kill @e[type=aw:spawner]
 execute if score developerMode settings matches 1 run tellraw @s {"rawtext":[{"translate":"已清除所有怪物"}]}
 execute if score developerMode settings matches 1 run playsound random.orb @s ~~~

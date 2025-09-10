@@ -34,6 +34,10 @@
     # 备注：应后于[调用通用函数]模块
     summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§e沙漠神殿"
 
+# --- 添加迷雾 ---
+fog @a remove gameFog
+fog @a push aw:desert_temple gameFog
+
 # --- 关卡特殊功能 ---
     ## 若处于剧情模式下且未启用传声石结晶，则启用之
         execute if score storyMode settings matches 1 if score allowAcousticStoneCrystal data matches 0 run scoreboard players set allowAcousticStoneCrystal data 1

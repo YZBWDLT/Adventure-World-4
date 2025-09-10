@@ -7,7 +7,7 @@
     scoreboard players add @s killCount 0
     scoreboard players set @s health 20
     tag @s remove spectator
-    function aw/lib/modify_data/init/fog
+    fog @s remove gameFog
 
     ## 检查是否跨局游戏，如果是则清空击杀数和死亡数，并重置游戏 ID
         scoreboard players add @s gameId 0

@@ -100,14 +100,14 @@
         execute if score timeline time matches 1400 run camera @a set minecraft:free ease 2 in_out_sine pos -30 6 -35 facing -25 0 -36
 # --- 海洋特效 ---
     ## [750] 为玩家提供迷雾效果，改为雷暴和夜晚
-        execute if score timeline time matches 750 run fog @a push aw:raining oceanRainingFog
+        execute if score timeline time matches 750 run fog @a push aw:raining gameFog
         execute if score timeline time matches 750 run weather thunder
         execute if score timeline time matches 750 run time set 18000
     ## [800~900] 时而劈下几道闪电
         execute if score timeline time matches 820 run summon lightning_bolt -30 -28 210
         execute if score timeline time matches 880 run summon lightning_bolt -65 -28 220
     ## [930] 解除全部特效
-        execute if score timeline time matches 930 run fog @a pop oceanRainingFog
+        execute if score timeline time matches 930 run fog @a pop gameFog
         execute if score timeline time matches 930 run weather clear
         execute if score timeline time matches 930 run time set 6000
 

@@ -36,6 +36,10 @@ fill -156 -18 5 -158 -18 7 ice replace water
 # 应后于[调用通用函数]模块
 summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§3寒冰神殿"
 
+# --- 添加迷雾 ---
+fog @a remove gameFog
+fog @a push aw:frost_temple gameFog
+
 # --- 关卡特殊功能 ---
 ## 初始化 4-1
 structure load aw:4_1_phase1 -168 16 -23

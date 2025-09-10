@@ -19,3 +19,7 @@ function aw/lib/events/levels/start_chapter
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块
 summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§f红石神殿"
+
+# --- 添加迷雾 ---
+fog @a remove gameFog
+fog @a push aw:redstone_temple gameFog

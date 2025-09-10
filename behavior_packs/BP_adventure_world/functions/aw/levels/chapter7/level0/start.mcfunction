@@ -26,3 +26,5 @@
         camera @a fade time 2 5 2
     ## 对任何模式（包括纯战斗模式）的玩家启用对话和剧情
         function aw/lib/events/start_dialogue
+    ## 移除迷雾
+        fog @a remove gameFog

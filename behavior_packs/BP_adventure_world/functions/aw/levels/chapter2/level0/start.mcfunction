@@ -30,3 +30,7 @@ summon aw:door -167 -21 61 90 0 aw:set_forest_door
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块
 summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§a丛林神殿"
+
+# --- 添加迷雾 ---
+fog @a remove gameFog
+fog @a push aw:forest_temple gameFog

@@ -15,7 +15,7 @@ execute if score timeline time matches 1150.. run tp @s -26 1 -37 facing -25 1 -
         execute if score timeline time matches 750..800 run camera @s set minecraft:free pos -5 2 175 rot 0 45
         execute if score timeline time matches 801..930 run camera @s set minecraft:free pos -50 2 220 rot 0 45
     ## [750] 为玩家提供迷雾效果，改为雷暴和夜晚
-        execute if score timeline time matches 750..929 run fog @s push aw:raining oceanRainingFog
+        execute if score timeline time matches 750..929 run fog @s push aw:raining gameFog
     ## [900] 黑屏以转场回试炼入口场景
         execute if score timeline time matches 931..1399 run camera @s set minecraft:free pos -20 6 91 facing -15.0 1 85
     ## [1400] 切换视角

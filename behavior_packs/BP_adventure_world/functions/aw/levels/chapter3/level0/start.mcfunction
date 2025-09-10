@@ -34,3 +34,7 @@ event entity @e[type=aw:door,name="3-4"] aw:close_door
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块
 summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§b湖泊神殿"
+
+# --- 添加迷雾 ---
+fog @a remove gameFog
+fog @a push aw:lake_temple gameFog

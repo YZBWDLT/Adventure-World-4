@@ -29,7 +29,7 @@
             "aw:set_lake_door": { "set_property": { "aw:type": 3 } },
             "aw:set_frost_door": { "set_property": { "aw:type": 4 } },
             "aw:set_redstone_door": { "set_property": { "aw:type": 5 } },
-            "aw:set_hill_door": { "set_property": { "aw:type": 6 } },
+            "aw:set_mountain_door": { "set_property": { "aw:type": 6 } },
             "aw:set_final_door": { "set_property": { "aw:type": 7 } },
 
             "aw:remove_immediately": { "add": { "component_groups": [ "remove_immediately" ] } }

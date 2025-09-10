@@ -38,3 +38,6 @@ kill @e[has_property={aw:marker_type="name"}]
 summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§c封印神殿"
 ## 播放音乐
 function aw/lib/events/play_music
+## 添加迷雾
+fog @a remove gameFog
+fog @a push aw:final_temple gameFog

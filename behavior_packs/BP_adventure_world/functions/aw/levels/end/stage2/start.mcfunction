@@ -33,6 +33,9 @@
     function aw/levels/end/stage2/events/on_exit/home
     function aw/levels/end/stage2/events/on_exit/shop
 
+# 移除迷雾
+    fog @a remove gameFog
+
 # 临时变量设置
     ## 是否有玩家在林乐家
         scoreboard players set temp.hasPlayerInHome data 0

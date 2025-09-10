@@ -35,3 +35,6 @@
 
 # 播放音乐
     function aw/lib/events/play_music
+
+# 移除迷雾
+    fog @a remove gameFog
