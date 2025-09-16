@@ -13,7 +13,7 @@
     ## 当玩家在上一关重生点时，回到本关
         execute as @a positioned -75 -36 -15 if entity @s[r=2] run tp @s -75 -38 22
     ## 阻止玩家关门时跑出房间
-        execute as @a at @s if block ~~80~ positioned -75 -38 22 run function aw/lib/events/player_out_of_border
+        execute as @a at @s if block ~~80~ structure_void positioned -75 -38 22 run function aw/lib/events/player_out_of_border
 
 # --- 检查存活玩家数目 ---
     # 如果存活玩家数目为 0，则触发关卡失败函数
