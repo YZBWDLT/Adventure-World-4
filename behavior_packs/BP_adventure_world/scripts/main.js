@@ -1,7 +1,7 @@
 // 使用命令或附加包难以实现的内容，使用脚本来实现
 // 将使用 SAPI 和 ModAPI 同时尝试实现
 
-import { Entity, EntityHealthComponent, Player, ScoreboardIdentity, world } from "@minecraft/server";
+import { Entity, EntityHealthComponent, Player, world } from "@minecraft/server";
 
 // 当玩家的御风珠砸中木板后，则传送玩家
 world.afterEvents.projectileHitBlock.subscribe(event => {
@@ -60,11 +60,7 @@ world.afterEvents.projectileHitEntity.subscribe(event => {
 
 // 当玩家使用物品后，则触发函数
 world.afterEvents.itemUse.subscribe(event => {
-    const usableItems = [
-        "aw:toggle_wave",
-        "aw:kill_monsters",
-        "aw:acoustic_stone_crystal",
-    ];
+    const usableItems = ["aw:toggle_wave", "aw:kill_monsters", "aw:acoustic_stone_crystal",];
     if (usableItems.includes(event.itemStack.typeId)) {
         event.source.runCommand(`function aw/items/${event.itemStack.typeId.split(":")[1]}`);
     }
@@ -72,15 +68,7 @@ world.afterEvents.itemUse.subscribe(event => {
 
 // 当玩家使用完毕物品后，则触发函数
 world.afterEvents.itemCompleteUse.subscribe(event => {
-    const usableItems = [
-        "aw:potion_health",
-        "aw:potion_growth",
-        "aw:potion_thrill",
-        "aw:potion_turtle",
-        "aw:potion_rebirth",
-        "aw:potion_hibernation",
-        "aw:potion_purification",
-    ];
+    const usableItems = ["aw:potion_health", "aw:potion_growth", "aw:potion_thrill", "aw:potion_turtle", "aw:potion_rebirth", "aw:potion_hibernation", "aw:potion_purification",];
     if (usableItems.includes(event.itemStack.typeId)) {
         event.source.runCommand(`function aw/items/${event.itemStack.typeId.split(":")[1]}`);
     }
@@ -136,8 +124,8 @@ world.afterEvents.entityHealthChanged.subscribe(event => {
     if (entityTypes.includes(entity.typeId)) {
         /** 该实体最大血量值 */ const entityMaxHealth = getMaxHealth(entity);
         /** 该实体当前实际的血量值，控制在 0 ~ max 之间 */ let healthValue = event.newValue;
-        if ( healthValue > entityMaxHealth ) healthValue = entityMaxHealth;
-        else if ( healthValue < 0 ) healthValue = 0;
+        if (healthValue > entityMaxHealth) healthValue = entityMaxHealth;
+        else if (healthValue < 0) healthValue = 0;
         printHealth(entity, healthValue);
     }
 });
