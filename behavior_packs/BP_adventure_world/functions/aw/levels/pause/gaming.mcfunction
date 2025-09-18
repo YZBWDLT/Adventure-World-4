@@ -11,3 +11,7 @@ execute if score temp.pauseTimeline time matches 100..199 run function aw/levels
 # --- 玩家选择退出试炼时的时间线 ---
 # （200 <= time.temp.pauseTimeline < 300）
 execute if score temp.pauseTimeline time matches 200..299 run function aw/levels/pause/timelines/quit
+
+# --- 禁止使用御风珠和箭 ---
+kill @e[type=aw:wind_pearl]
+kill @e[type=arrow]

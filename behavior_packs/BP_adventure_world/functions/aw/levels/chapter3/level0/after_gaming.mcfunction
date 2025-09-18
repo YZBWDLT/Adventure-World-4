@@ -2,7 +2,7 @@
 # 3-0 | 湖泊神殿
 
 # --- 检查玩家进入下一个关卡 ---
-execute positioned -188 -20 29 positioned ~-2.4~-1~-2.4 as @a[tag=!spectator,scores={deathState=0}] if entity @s[dx=3.8,dy=3,dz=3.8] unless entity @s[x=-186,y=-21,z=28,dz=2,dy=2] at @s run function aw/levels/chapter3/level1/start
+execute positioned -188 -20 29 positioned ~-2.4~-1~-2.4 if score pausing data matches 0 as @a[tag=!spectator,scores={deathState=0}] if entity @s[dx=3.8,dy=3,dz=3.8] unless entity @s[x=-186,y=-21,z=28,dz=2,dy=2] at @s run function aw/levels/chapter3/level1/start
 # 因3-1要依靠相关检测，所以仅本关不清除御风珠
 # execute positioned -188 -20 29 positioned ~-2~-1~-2 as @e[dx=3,dy=3,dz=3,type=aw:wind_pearl] run kill @s
 
