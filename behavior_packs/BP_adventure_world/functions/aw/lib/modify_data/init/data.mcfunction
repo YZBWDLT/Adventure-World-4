@@ -98,6 +98,8 @@
             scoreboard players set levelCompleteCountdown time 0
         ### 是否正在 X-Y（1<=X<=7, Y!=0）的游玩状态，0：未处于游玩状态，1：正处于游玩状态
             scoreboard players set gaming data 0
+        ### 是否正在暂停游戏，0：未暂停，1：暂停
+            scoreboard players set pausing data 0
 
     ## 游玩时长
         ### 玩家游玩的时长，仅限开始游戏后记录（单位：秒）
@@ -125,6 +127,8 @@
     ## 状态标记变量
         ### 是否启用传声石结晶，0：禁用，1：启用
             scoreboard players set allowAcousticStoneCrystal data 0
+        ### 是否启用退出，0：禁用，1：启用
+            scoreboard players set allowQuit data 1
         ### NPC 是否允许交互，0：禁用，1：启用
             scoreboard players set allowNpcInteraction data 1
         ### 是否允许移除掉落物实体，0：不允许，1：允许

@@ -6,6 +6,7 @@ diagnostic.disable.minecraft.commands.hud.syntax=true
 diagnostic.disable.behaviorpack.block.missing=true
 diagnostic.disable.behaviorpack.blocks.missing=true
 diagnostic.disable.behaviorpack.block.states.missing=true
+diagnostic.disable.behaviorpack.items.missing=true
 diagnostic.disable.behaviorpack.item.components.texture_not_found=true
 diagnostic.disable.behaviorpack.entity.component.missing=true
 diagnostic.disable.behaviorpack.mcstructure.missing=true
@@ -15,3 +16,9 @@ diagnostic.disable.behaviorpack.loot_table.missing=true
 diagnostic.disable.resourcepack.model.bone.missing=true
 
 diagnostic.disable.molang.variable.missing=true
+diagnostic.disable.molang.variable.undefined=true
+diagnostic.disable.molang.identifier.invalid=true
+diagnostic.disable.molang.geometry.undefined=true
+diagnostic.disable.molang.v.undefined=true
+diagnostic.disable.molang.array.undefined=true
+diagnostic.disable.molang.texture.undefined=true

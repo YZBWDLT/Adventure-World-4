@@ -13,3 +13,6 @@ function aw/lib/events/start_dialogue
 
 # 加载 7-5 的初始结构
 structure load aw:7_5_phase1 -246 -54 23
+
+# 禁止玩家此时使用退出试炼
+scoreboard players set allowQuit data 0

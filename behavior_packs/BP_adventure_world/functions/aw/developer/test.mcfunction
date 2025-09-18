@@ -1,9 +1,10 @@
-## 3-1
-summon aw:door -198 -21 29 0 0 aw:set_lake_door
-## 3-2
-summon aw:door -172 -21 13 0 0 aw:set_lake_door
-## 3-3
-summon aw:door -163 -21 26 0 0 aw:set_lake_door
-## 3-4
-summon aw:door -168 -15 23 90 0 aw:set_lake_door
-summon aw:door -173 17 18 0 0 aw:set_lake_door
+    event entity @e[type=aw:text_display] aw:remove_immediately
+    summon aw:text_display "§c§l离开试炼吗？" -95 -13.0 -11
+    
+ summon aw:text_display "§c警告！你们的进度将不会保存。" -95 -13.50 -11
+ summon aw:text_display "§f§l所有玩家§r§f走到对应选项处以作出选择" -95 -13.75 -11
+ summon aw:text_display "如果有玩家滥用§f§l退出试炼§r§f，在聊天栏使用命令" -95 -14.25 -11
+ summon aw:text_display "§b/tag (玩家名) add cannotQuit§f以剥夺其退出权利" -95 -14.50 -11
+
+    summon aw:text_display "§a§l继续试炼" -99.0 -13 -17.0
+    summon aw:text_display "§c§l退出试炼" -89.0 -13 -17.0

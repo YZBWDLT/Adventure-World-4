@@ -63,3 +63,9 @@ execute if score chapter data matches 6 if score level data matches 4 if score l
 
 execute if score chapter data matches 7 if score level data matches 5 if score levelCompleted data matches 0 if score wave data matches 2 run music play aw.music.boss.final.prelude 1 0
 execute if score chapter data matches 7 if score level data matches 5 if score levelCompleted data matches 0 if score wave data matches 2 run music queue aw.music.boss.final 1 0 loop
+
+# --- 暂停 ---
+
+## 当暂停时，直接播放剑之神殿入口的音乐
+execute if score pausing data matches 1 run music play aw.music.village.sword_trial_entrance.prelude 1 0
+execute if score pausing data matches 1 run music queue aw.music.village.sword_trial_entrance 1 0 loop

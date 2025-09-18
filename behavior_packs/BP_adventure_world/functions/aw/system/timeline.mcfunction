@@ -15,3 +15,6 @@ execute if score chapter data matches 6 run function aw/levels/chapter6/timeline
 execute if score chapter data matches 7 run function aw/levels/chapter7/timeline
 ## 结尾
 execute if score chapter data matches 10 run function aw/levels/end/timeline
+
+## 暂停
+execute if score pausing data matches 1 run function aw/levels/pause/gaming

@@ -27,6 +27,7 @@
         "potion_hibernation": { "textures": "textures/items/potions/potion_hibernation" },
 
         "acoustic_stone_crystal": { "textures": "textures/items/acoustic_stone_crystal" },
+        "quit": { "textures": "textures/items/quit" },
 
         "change_to_creative": { "textures": "textures/items/apple_golden" },
         "change_to_survival": { "textures": "textures/items/iron_sword" },

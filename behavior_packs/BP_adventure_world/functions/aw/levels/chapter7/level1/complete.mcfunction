@@ -10,3 +10,7 @@ tellraw @a {"rawtext":[{"text":"§l§a7-1已完成！§r"}]}
 
 # --- 生成引导点 ---
 summon aw:destination -161 -17 110
+
+# --- 关卡特殊功能 ---
+## 重新允许玩家此时使用退出试炼
+scoreboard players set allowQuit data 1

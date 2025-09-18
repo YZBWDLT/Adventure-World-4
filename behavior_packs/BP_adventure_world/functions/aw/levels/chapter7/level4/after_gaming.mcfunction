@@ -17,8 +17,8 @@
     execute if score timeline active matches 2 if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §7§kabcdefghijklmnopqrstuvwxyz"}]}
     execute if score timeline active matches 2 if score timeline time matches 80.. run function aw/lib/modify_data/timeline/disable_time_lapse
 
-    ## 检查玩家进入坑中
-    execute if score timeline active matches 2 positioned -234 -63 98 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=2,dz=1.4,tag=!spectator,scores={deathState=0}] at @s run function aw/levels/chapter7/level4/events/player_in_hole
+    ## 检查玩家进入坑中 | 当玩家暂停后，阻止检查
+    execute if score timeline active matches 2 positioned -234 -63 98 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=2,dz=1.4,tag=!spectator,scores={deathState=0}] at @s if score pausing data matches 0 run function aw/levels/chapter7/level4/events/player_in_hole
 
 # --- 入坑后 ---
     # active.timeline == 3，时间流逝

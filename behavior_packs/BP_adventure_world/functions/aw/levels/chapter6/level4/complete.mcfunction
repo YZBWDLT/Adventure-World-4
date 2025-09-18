@@ -28,3 +28,5 @@ scoreboard players reset temp.nextMonsterPos data
 scoreboard players reset temp.healBossCountdown time
 scoreboard players reset temp.teleportCountdown time
 scoreboard objectives remove temp.respawnTime
+## 禁止玩家此时使用退出试炼
+scoreboard players set allowQuit data 0

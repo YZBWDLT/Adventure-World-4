@@ -15,6 +15,7 @@ item.aw:iron_boots=Iron Boots
 item.aw:wind_pearl=Wind Pearl
 item.aw:quiver=Quiver
 item.aw:acoustic_stone_crystal=Acoustic Stone Crystal
+item.aw:quit=Quit Trial
 item.aw:potion_health=Health Potion
 item.aw:potion_growth=Growth Potion
 item.aw:potion_thrill=Thrill Potion
@@ -60,3 +61,4 @@ item.spawn_egg.entity.aw:billboard.name=Billboard Spawn Egg
 
 ### Text Translations
 action.interact.chat=Chat
+action.interact.quit=Quit

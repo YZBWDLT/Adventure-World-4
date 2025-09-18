@@ -49,6 +49,8 @@
     execute if score chapter data matches 7 run function aw/levels/chapter7/player_rejoin
 ## 结尾
     execute if score chapter data matches 10 run function aw/levels/end/player_rejoin
+## 暂停时
+    execute if score pausing data matches 1 run function aw/levels/pause/events/player_rejoin
 
 # --- 更正游戏规则与游戏模式 ---
 # 仅中国版，仅1人时执行，以适应中国版电脑版的要求

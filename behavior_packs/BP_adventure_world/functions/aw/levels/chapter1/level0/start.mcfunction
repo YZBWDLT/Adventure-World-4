@@ -41,3 +41,6 @@ fog @a push aw:desert_temple gameFog
 # --- 关卡特殊功能 ---
     ## 若处于剧情模式下且未启用传声石结晶，则启用之
         execute if score storyMode settings matches 1 if score allowAcousticStoneCrystal data matches 0 run scoreboard players set allowAcousticStoneCrystal data 1
+    ## 允许玩家此时使用退出试炼
+        scoreboard players set allowQuit data 1
+

@@ -7,7 +7,8 @@
 # 设置为游戏状态
     scoreboard players set levelCompleted data 0
 
-# 生成作者 NPC
+# 生成 NPC
+    execute if score storyMode settings matches 1 run function aw/levels/end/stage1/events/spawn_npc
     function aw/levels/end/stage2/events/spawn_authors
 
 # 生成公告板

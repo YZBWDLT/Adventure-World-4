@@ -60,7 +60,7 @@ world.afterEvents.projectileHitEntity.subscribe(event => {
 
 // 当玩家使用物品后，则触发函数
 world.afterEvents.itemUse.subscribe(event => {
-    const usableItems = ["aw:toggle_wave", "aw:kill_monsters", "aw:acoustic_stone_crystal",];
+    const usableItems = ["aw:toggle_wave", "aw:kill_monsters", "aw:acoustic_stone_crystal", "aw:quit",];
     if (usableItems.includes(event.itemStack.typeId)) {
         event.source.runCommand(`function aw/items/${event.itemStack.typeId.split(":")[1]}`);
     }
