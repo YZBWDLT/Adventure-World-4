@@ -12,7 +12,7 @@
     ## 如果玩家数大于等于 2 人，播报消息并提醒玩家在下一波复活
         execute if score gaming data matches 1 if score playerAmount data matches 2.. run function aw/lib/events/show_death_message
     ## 标记死亡的玩家为旁观玩家，并设置为旁观模式
-        execute if score gaming data matches 1 run tag @s add spectator
+        execute if score gaming data matches 1 run scoreboard players set @s[scores={spectator=!2}] spectator 1
         execute if score gaming data matches 1 run gamemode spectator @s
 
 # --- 特殊关卡死亡函数 ---

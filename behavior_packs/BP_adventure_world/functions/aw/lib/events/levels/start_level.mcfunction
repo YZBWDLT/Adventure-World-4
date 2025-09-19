@@ -34,6 +34,7 @@
 # --- 更改玩家模式 ---
 # 备注：开发者模式不更新
     execute if score developerMode settings matches 0 run gamemode adventure @a
+    gamemode spectator @a[scores={spectator=2}]
 
 # --- 玩家回血与药效提供 ---
     ## 将玩家回满血

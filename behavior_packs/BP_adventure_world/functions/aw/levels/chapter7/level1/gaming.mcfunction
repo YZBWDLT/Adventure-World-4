@@ -19,7 +19,7 @@ function aw/lib/events/rename_magma_cube
 # 详细原理可以见我们给出的地图文档，文档链接见主函数（aw/system/main）
 
 ## 阻止旁观玩家出界
-execute as @a[tag=spectator,scores={deathState=0}] at @s anchored eyes if block ~~80~ barrier positioned -119 -16 103 run function aw/lib/events/player_out_of_border
+execute as @a[scores={deathState=0,spectator=!0}] at @s anchored eyes if block ~~80~ barrier positioned -119 -16 103 run function aw/lib/events/player_out_of_border
 
 # --- 检查存活玩家数目 ---
 # 如果存活玩家数目为 0，则触发关卡失败函数

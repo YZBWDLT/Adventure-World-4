@@ -33,6 +33,8 @@
         scoreboard objectives setdisplay belowname health
     ## 游戏 ID 记分项
         scoreboard objectives add gameId dummy "游戏 ID"
+    ## 旁观者记分项
+        scoreboard objectives add spectator dummy "旁观者状态"
 
 # --- 数据变量重置 ---
 
@@ -40,18 +42,20 @@
         scoreboard players random gameId data 1000 9999
 
     ## 玩家数据
-        ### 玩家当前死亡次数，0：刚进入游戏，1：在线
+        ### 玩家当前死亡次数
             scoreboard players set @a deathCount 0
         ### 玩家当前死亡状态，0：存活，1：刚刚死亡（还未记录死亡榜），2：长期死亡
             scoreboard players add @a deathState 0
         ### 玩家击杀数
             scoreboard players set @a killCount 0
-        ### 玩家是否在线
+        ### 玩家是否在线，0：刚进入游戏，1：在线
             scoreboard players set @a isOnline 1
         ### 玩家生命值
             scoreboard players set @a health 20
         ### 玩家当前的游戏 ID，与 data.gameId 一致时则为本次游戏
             execute as @a run scoreboard players operation @s gameId = gameId data
+        ### 玩家当前的旁观状态，0：未旁观，1：旁观中，2：启用主动旁观
+            scoreboard players set @a spectator 0
 
     ## 基础时间数据
         ### 每刻增加 1 分，每秒重置 1 次（单位：游戏刻）

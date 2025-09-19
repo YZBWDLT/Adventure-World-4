@@ -51,6 +51,9 @@
             gamerule randomtickspeed 0
         ### 开发者模式下的更改游戏模式
             execute if score developerMode settings matches 1 run function aw/lib/modify_data/developer_gamemode
+        ### 若从多人模式转变回单人模式，将处于主动旁观模式的玩家调整为正常玩家并提醒
+            execute if score playerAmount data matches 1 if score levelCompleted data matches !0 run tellraw @a[scores={spectator=2}] {"rawtext":[{"translate":"§c游戏已变为单人模式，你的主动旁观已自动取消"}]}
+            execute if score playerAmount data matches 1 if score levelCompleted data matches !0 run scoreboard players set @a[scores={spectator=2}] spectator 0
 
 # --- 关卡 ---
     ## 时间线 | 必须在有玩家时执行，防止在退出重进后产生一些奇怪问题

@@ -34,7 +34,7 @@
     execute if score timeline active matches 2 if score timeline time matches 80.. run function aw/lib/modify_data/timeline/disable_time_lapse
 
     ## 检查玩家进入坑中
-    execute if score timeline active matches 2 positioned -225 -62 44 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=2,dz=1.4,tag=!spectator,scores={deathState=0}] at @s run function aw/levels/chapter7/level5/events/player_in_hole
+    execute if score timeline active matches 2 positioned -225 -62 44 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=2,dz=1.4,scores={deathState=0,spectator=!1}] at @s run function aw/levels/chapter7/level5/events/player_in_hole
 
 # --- 入坑后 ---
     # active.timeline == 3，时间流逝

@@ -1,6 +1,6 @@
 # ===== 玩家出界时 =====
 # 当玩家在旁观模式出界时，阻止玩家出界并传送到本关标记处。
-# 调用此方法时：需指定执行者为出界旁观存活玩家，执行位置为本关重生点位置（execute as @a[tag=spectator,scores={deathState=0}] at @s unless entity @s[x=?,y=?,z=?,dx=?,dy=?,dz=?] positioned (本关重生点)）。
+# 调用此方法时：需指定执行者为出界旁观存活玩家，执行位置为本关重生点位置（execute as @a[scores={deathState=0,spectator=!0}] at @s unless entity @s[x=?,y=?,z=?,dx=?,dy=?,dz=?] positioned (本关重生点)）。
 
 # --- 提醒玩家不要出界 ---
 # 仅当玩家不在上关标记附近时执行

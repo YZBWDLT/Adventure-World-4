@@ -16,6 +16,7 @@ item.aw:wind_pearl=御风珠
 item.aw:quiver=箭袋
 item.aw:acoustic_stone_crystal=传声石结晶
 item.aw:quit=退出试炼
+item.aw:spectate=主动旁观模式
 item.aw:potion_health=治疗药水
 item.aw:potion_growth=生长药水
 item.aw:potion_thrill=亢奋药水
@@ -62,3 +63,4 @@ item.spawn_egg.entity.aw:billboard.name=公告板 刷怪蛋
 ### 文本翻译类
 action.interact.chat=聊天
 action.interact.quit=退出
+action.interact.spectate=成为旁观者

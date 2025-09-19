@@ -28,6 +28,7 @@
 
         "acoustic_stone_crystal": { "textures": "textures/items/acoustic_stone_crystal" },
         "quit": { "textures": "textures/items/quit" },
+        "spectate": { "textures": "textures/items/spectate" },
 
         "change_to_creative": { "textures": "textures/items/apple_golden" },
         "change_to_survival": { "textures": "textures/items/iron_sword" },

@@ -26,7 +26,7 @@
     ## 设置重生点
         spawnpoint @a ~~~
     ## 复活已死亡玩家到重生点
-        execute as @a[tag=spectator] run function aw/lib/events/respawn_player
+        execute as @a[scores={spectator=!0}] run function aw/lib/events/respawn_player
     ## 回血
         effect @a clear
         effect @a instant_health 1 20 true

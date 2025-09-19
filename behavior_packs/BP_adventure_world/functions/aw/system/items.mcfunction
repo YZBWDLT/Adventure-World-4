@@ -50,6 +50,9 @@ clear @a[hasitem={item=shield,quantity=2..}] shield
 clear @a[hasitem={item=aw:wild_sword,quantity=2..}] aw:wild_sword
 ## 退出试炼
 clear @a[hasitem={item=aw:quit,quantity=2..}] aw:quit
+## 主动旁观模式
+execute if score playerAmount data matches 1 run clear @a[hasitem={item=aw:spectate}] aw:spectate
+execute if score playerAmount data matches 2.. run clear @a[hasitem={item=aw:spectate,quantity=2..}] aw:spectate
 
 # --- 供应缺少的物品 ---
 
@@ -72,6 +75,8 @@ execute if score temp.gameId data matches 100..340 run give @a[hasitem={item=aw:
 execute if score allowAcousticStoneCrystal data matches 1 run give @a[hasitem={item=aw:acoustic_stone_crystal,quantity=0}] aw:acoustic_stone_crystal 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 退出试炼 | 二周目后，试炼过程中
 execute if score mapCompletedTimes record matches 2.. if score chapter data matches 1..7 run give @a[hasitem={item=aw:quit,quantity=0}] aw:quit 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+### 主动旁观模式 | 多人模式下，试炼过程中
+execute if score playerAmount data matches 2.. if score chapter data matches 1..7 run give @a[hasitem={item=aw:spectate,quantity=0}] aw:spectate 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 铁靴子 | 1-1结束后 ~ 3-2结束前
 execute if score temp.gameId data matches 111..320 run give @a[hasitem={item=aw:iron_boots,quantity=0}] aw:iron_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 御风珠 | 1-2结束后 ~

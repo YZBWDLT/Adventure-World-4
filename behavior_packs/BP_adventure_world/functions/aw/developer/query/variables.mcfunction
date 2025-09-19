@@ -17,6 +17,7 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bkillCount.@s = §a%%s §7| 玩家击杀数", "with": { "rawtext": [ { "score":{ "objective": "killCount", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bisOnline.@s = §a%%s §7| 玩家是否在线 | 0：刚进入游戏，1：在线", "with": { "rawtext": [ { "score":{ "objective": "isOnline", "name": "@s" } } ] } } ] }
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bgameId.@s = §a%%s §7| 玩家当前的游戏 ID，与 data.gameId 一致时则为本次游戏", "with": { "rawtext": [ { "score":{ "objective": "gameId", "name": "@s" } } ] } } ] }
+execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§bspectator.@s = §a%%s §7| 玩家当前的旁观状态，0：未旁观，1：旁观中，2：启用主动旁观", "with": { "rawtext": [ { "score":{ "objective": "spectator", "name": "@s" } } ] } } ] }
 
 ## active
 execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ { "translate": "§l===== active记分板 =====" } ] }
@@ -108,9 +109,6 @@ execute if score developerMode settings matches 1 run tellraw @s { "rawtext": [ 
 
 execute if score developerMode settings matches 1 run tellraw @s[tag=outOfBorder] { "rawtext": [ { "translate": "outOfBorder = §atrue §7| 玩家是否在旁观模式下出界" } ] }
 execute if score developerMode settings matches 1 run tellraw @s[tag=!outOfBorder] { "rawtext": [ { "translate": "outOfBorder = §efalse §7| 玩家是否在旁观模式下出界" } ] }
-
-execute if score developerMode settings matches 1 run tellraw @s[tag=spectator] { "rawtext": [ { "translate": "spectator = §atrue §7| 玩家是否在游戏中死亡，成为旁观者" } ] }
-execute if score developerMode settings matches 1 run tellraw @s[tag=!spectator] { "rawtext": [ { "translate": "spectator = §efalse §7| 玩家是否在游戏中死亡，成为旁观者" } ] }
 
 execute if score developerMode settings matches 1 run tellraw @s[tag=supplyArrow] { "rawtext": [ { "translate": "supplyArrow = §atrue §7| 是否为玩家提供箭" } ] }
 execute if score developerMode settings matches 1 run tellraw @s[tag=!supplyArrow] { "rawtext": [ { "translate": "supplyArrow = §efalse §7| 是否为玩家提供箭" } ] }

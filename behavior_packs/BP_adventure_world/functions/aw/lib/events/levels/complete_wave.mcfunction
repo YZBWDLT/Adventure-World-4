@@ -16,7 +16,7 @@
 
 # --- 释放玩家 ---
     ## 给予玩家额外的治疗药水
-        give @a[tag=spectator] aw:potion_health 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
-        tellraw @a[tag=spectator] {"rawtext":[{"translate":"§7您已被释放并给予一瓶治疗药水，注意安全！"}]}
+        give @a[scores={spectator=1}] aw:potion_health 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+        tellraw @a[scores={spectator=1}] {"rawtext":[{"translate":"§7您已被释放并给予一瓶治疗药水，注意安全！"}]}
     ## 复活旁观玩家
-        execute as @a[tag=spectator] run function aw/lib/events/respawn_player
+        execute as @a[scores={spectator=1}] run function aw/lib/events/respawn_player

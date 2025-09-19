@@ -5,7 +5,7 @@
     execute if score timeLapse data matches 0 run function aw/lib/modify_data/timeline/enable_time_lapse
 ## [1] 初始化
     ### 摄像机震动
-        execute if score timeline time matches 1 run camerashake add @a[tag=!spectator] 1 2 rotational
+        execute if score timeline time matches 1 run camerashake add @a[scores={spectator=0}] 1 2 rotational
     ### 召唤 4 个火球
         execute if score timeline time matches 1 run summon aw:fireball -232 -45 37
         execute if score timeline time matches 1 run summon aw:fireball -232 -45 51

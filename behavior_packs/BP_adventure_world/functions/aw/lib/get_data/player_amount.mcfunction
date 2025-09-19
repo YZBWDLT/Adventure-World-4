@@ -9,6 +9,6 @@ execute as @a run scoreboard players add playerAmount data 1
 # --- 返回存活的玩家总人数 ---
 scoreboard players set alivePlayerAmount data 0
 ## 如果在游戏中，返回非旁观者的玩家人数
-execute if score levelCompleted data matches 0 as @a[tag=!spectator] run scoreboard players add alivePlayerAmount data 1
+execute if score levelCompleted data matches 0 as @a[scores={spectator=0}] run scoreboard players add alivePlayerAmount data 1
 ## 如果不在游戏中，返回所有玩家人数
 execute unless score levelCompleted data matches 0 run scoreboard players operation alivePlayerAmount data = playerAmount data
