@@ -6,4 +6,4 @@ effect @s weakness 3 4 true
 effect @s instant_health 1 9 true
 
 # --- 标记为使用过药水 ---
-scoreboard players set potionUsed data 1
+execute if score isSingleLevel data matches 0 run scoreboard players set potionUsed data 1

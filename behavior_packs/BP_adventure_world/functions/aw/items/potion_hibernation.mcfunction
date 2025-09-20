@@ -6,4 +6,4 @@ effect @s regeneration 15 3 true
 effect @s slowness 3 3 true
 
 # --- 标记为使用过药水 ---
-scoreboard players set potionUsed data 1
+execute if score isSingleLevel data matches 0 run scoreboard players set potionUsed data 1

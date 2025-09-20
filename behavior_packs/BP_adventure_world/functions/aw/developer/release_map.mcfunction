@@ -10,7 +10,7 @@ execute if score developerMode settings matches 1 run fill -29 3 -45 -25 1 -45 a
 execute if score developerMode settings matches 1 run fill -29 3 -45 -28 3 -45 bookshelf
 execute if score developerMode settings matches 1 run structure load aw:lecture_no_book -27 1 -45
 execute if score developerMode settings matches 1 run setblock -25 7 -51 air
-execute if score developerMode settings matches 1 run fill -13 2 86 -18 1 87 air
+execute if score developerMode settings matches 1 run fill -11 1 85 -20 2 87 air
 ## 清除所有 NPC
 execute if score developerMode settings matches 1 run event entity @e[type=aw:npc] aw:remove_immediately
 ## 重置所有的统计数据

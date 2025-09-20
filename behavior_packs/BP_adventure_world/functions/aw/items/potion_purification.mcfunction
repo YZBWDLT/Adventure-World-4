@@ -6,4 +6,4 @@ effect @s absorption 60 2 true
 effect @s poison 0 10 true
 
 # --- 标记为使用过药水 ---
-scoreboard players set potionUsed data 1
+execute if score isSingleLevel data matches 0 run scoreboard players set potionUsed data 1

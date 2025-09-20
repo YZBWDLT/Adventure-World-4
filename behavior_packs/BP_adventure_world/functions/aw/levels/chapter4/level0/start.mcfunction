@@ -9,7 +9,7 @@ scoreboard players set level data 0
 # --- 玩家处理 ---
 
 ## 播放标题 | 应先于[调用通用函数]模块
-titleraw @a title {"rawtext":[{"translate":"§3§l寒 冰 神 殿"}]}
+titleraw @a title {"rawtext":[{"translate":"§9§l寒 冰 神 殿"}]}
 ## 在剧情模式下传送玩家
 execute if score storyMode settings matches 1 run tp @a -173 17 -8 facing -167 18 -15
 
@@ -34,7 +34,7 @@ fill -156 -18 5 -158 -18 7 ice replace water
 
 # --- 生成章节名 ---
 # 应后于[调用通用函数]模块
-summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§3寒冰神殿"
+summon aw:marker -83 1 -2 0 0 aw:set_chapter_name "§9寒冰神殿"
 
 # --- 添加迷雾 ---
 fog @a remove gameFog

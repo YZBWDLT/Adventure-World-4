@@ -15,3 +15,6 @@ execute if score temp.pauseTimeline time matches 200..299 run function aw/levels
 # --- 禁止使用御风珠和箭 ---
 kill @e[type=aw:wind_pearl]
 kill @e[type=arrow]
+
+# --- 阻止玩家死亡 ---
+execute if score tick time matches 15 run effect @a resistance 5 5 true

@@ -7,5 +7,6 @@
 
 tellraw @a {"rawtext":[{"translate":"* §e张宇： §7你要回去吗？"}]}
 event entity @s aw:animation_speak
+scoreboard players set timeline active 1
 function aw/lib/events/start_dialogue_keep
 function aw/lib/modify_data/timeline/enable_time_lapse

@@ -12,4 +12,4 @@ execute positioned -83 1 -2 run function aw/lib/events/levels/wave_2
 summon aw:spawner -75 21 60 0 0 aw:spawn_spider_1
 summon aw:spawner -75 21 68 0 0 aw:spawn_spider_2
 ## 骷髅
-summon aw:spawner -75 18 70 0 0 aw:spawn_skeleton_2
+summon aw:spawner -75 18 68 0 0 aw:spawn_skeleton_2

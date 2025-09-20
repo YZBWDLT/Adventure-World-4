@@ -38,3 +38,7 @@
     kill @e[family=monster]
     kill @e[type=aw:wind_pearl]
     event entity @e[type=aw:spawner] aw:remove_immediately
+
+# --- 单关卡试炼下，直接退出 ---
+    execute if score isSingleLevel data matches 1 run scoreboard players set pausing data 1
+    execute if score isSingleLevel data matches 1 run function aw/levels/pause/events/choose_quit

@@ -17,8 +17,8 @@ execute if score levelCompleted data matches 1 if score level data matches 3 run
 execute if score levelCompleted data matches 1 if score level data matches 4 run function aw/levels/chapter3/level4/after_gaming
 
 # --- 在关卡开放之前清除水 ---
-execute if score playedSecond time matches 1 if score chapter data matches 3 if score level data matches 0..1 run function aw/levels/chapter3/level2/events/clear_water
-execute if score playedSecond time matches 1 if score chapter data matches 3 if score level data matches 0..3 run function aw/levels/chapter3/level4/events/clear_water
+execute if score tick time matches 17 if score chapter data matches 3 if score level data matches 0..1 run function aw/levels/chapter3/level2/events/clear_water
+execute if score tick time matches 17 if score chapter data matches 3 if score level data matches 0..3 run function aw/levels/chapter3/level4/events/clear_water
 
 # --- 气泡粒子 ---
 execute if score tick time matches 9 run particle aw:bubble_bottom -176 -24 24

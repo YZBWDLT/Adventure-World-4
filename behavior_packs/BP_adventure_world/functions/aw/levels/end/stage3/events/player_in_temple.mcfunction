@@ -1,17 +1,11 @@
 # ===== 玩家进入神殿 =====
 
-# 恢复所有数据设置
-    function aw/lib/modify_data/init/data
-# 触发开幕时的选择函数
-    execute if score temp.storyMode settings matches 0 run function aw/levels/open/before_stage/events/start_combat_mode
-    execute if score temp.storyMode settings matches 1 run function aw/levels/open/before_stage/events/start_story_mode
+# 如果选择全流程，则触发开始全流程
+execute if score temp.level settings matches 0 run function aw/levels/end/stage3/events/start_open
 
-# 移除 stage4 的按钮
-    fill -13 2 86 -18 1 87 air
-# 应用设置变量
-    scoreboard players operation extraDifficulty settings = temp.extraDifficulty settings
-    scoreboard players operation storyMode settings = temp.storyMode settings
-# 销毁临时变量
-    scoreboard players reset temp.extraDifficulty settings
-    scoreboard players reset temp.difficulty settings
-    scoreboard players reset temp.storyMode settings
+# 否则，触发开始单关卡
+execute if score temp.level settings matches !0 run function aw/levels/end/stage3/events/start_single_level
+
+# 其他内容
+## 移除 stage4 的按钮
+fill -11 1 85 -20 2 87 air

@@ -14,11 +14,12 @@
         tp @a -22 3 38
     ## 播放音乐
         function aw/lib/events/play_music
-# 移除stage4的按钮
-    fill -13 2 86 -18 1 87 air
+# 移除 stage4 的按钮
+    fill -11 1 85 -20 2 87 air
 # 结束对话状态
     function aw/lib/events/stop_dialogue
 # 销毁临时变量
     scoreboard players reset temp.difficulty settings
     scoreboard players reset temp.extraDifficulty settings
     scoreboard players reset temp.storyMode settings
+    scoreboard players reset temp.level settings

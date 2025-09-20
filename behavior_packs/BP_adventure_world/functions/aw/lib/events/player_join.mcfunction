@@ -30,8 +30,8 @@
     ## 提示玩家进行设置
     execute if score playerAmount data matches 2.. run tellraw @s {"rawtext":[{"translate":"§7§l为保证游戏体验，请提前进行如下设置：§r\n§7* §b音频 - 音乐§7调至§b100§r\n§7* §b辅助功能 - 文本背景不透明度§7调至§b0%%§7§o（如有的话请调整）"}]}
     ## 试炼下提示所有玩家可主动旁观
-    execute if score chapter data matches 1..7 if score playerAmount data matches 2 run tellraw @a {"rawtext":[{"translate":"§a您现在可以使用「主动旁观模式」了！右键（手机版长按）使用此物品会在进入关卡后直接开启旁观模式。"}]}
-    execute if score chapter data matches 1..7 if score playerAmount data matches 3.. run tellraw @s {"rawtext":[{"translate":"§a您现在可以使用「主动旁观模式」了！右键（手机版长按）使用此物品会在进入关卡后直接开启旁观模式。"}]}
+    execute if score chapter data matches 1..7 if score isSingleLevel data matches 0 if score playerAmount data matches 2 run tellraw @a {"rawtext":[{"translate":"§a您现在可以使用「主动旁观模式」了！右键（手机版长按）使用此物品会在进入关卡后直接开启旁观模式。"}]}
+    execute if score chapter data matches 1..7 if score isSingleLevel data matches 0 if score playerAmount data matches 3.. run tellraw @s {"rawtext":[{"translate":"§a您现在可以使用「主动旁观模式」了！右键（手机版长按）使用此物品会在进入关卡后直接开启旁观模式。"}]}
 
 # --- 播放音乐 ---
     tellraw @a[scores={isOnline=!0}] {"rawtext":[{"translate":"§7检测到有玩家进入游戏，为确保游戏体验，将重新播放场景音乐"}]}

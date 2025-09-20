@@ -7,4 +7,4 @@
 # --- 设置文本展示实体 ---
     function aw/levels/end/stage3/events/show_difficulty
 # --- 恢复按钮 ---
-    setblock -13 2 86 polished_blackstone_button ["facing_direction"=2,"button_pressed_bit"=false]
+    setblock -12 2 85 polished_blackstone_button ["facing_direction"=4,"button_pressed_bit"=false]

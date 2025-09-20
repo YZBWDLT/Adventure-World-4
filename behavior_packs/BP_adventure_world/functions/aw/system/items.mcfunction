@@ -73,10 +73,10 @@ execute if score temp.gameId data matches 111..640 run give @a[hasitem={item=lea
 execute if score temp.gameId data matches 100..340 run give @a[hasitem={item=aw:normal_sword,quantity=0}] aw:normal_sword 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 传声石晶体 | 允许传声石结晶时
 execute if score allowAcousticStoneCrystal data matches 1 run give @a[hasitem={item=aw:acoustic_stone_crystal,quantity=0}] aw:acoustic_stone_crystal 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
-### 退出试炼 | 二周目后，试炼过程中
-execute if score mapCompletedTimes record matches 2.. if score chapter data matches 1..7 run give @a[hasitem={item=aw:quit,quantity=0}] aw:quit 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
-### 主动旁观模式 | 多人模式下，试炼过程中
-execute if score playerAmount data matches 2.. if score chapter data matches 1..7 run give @a[hasitem={item=aw:spectate,quantity=0}] aw:spectate 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+### 退出试炼 | 二周目后，试炼过程中，非单关卡试炼
+execute if score mapCompletedTimes record matches 2.. if score chapter data matches 1..7 if score isSingleLevel data matches 0 run give @a[hasitem={item=aw:quit,quantity=0}] aw:quit 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+### 主动旁观模式 | 多人模式下，试炼过程中，非单关卡试炼
+execute if score playerAmount data matches 2.. if score chapter data matches 1..7 if score isSingleLevel data matches 0 run give @a[hasitem={item=aw:spectate,quantity=0}] aw:spectate 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 铁靴子 | 1-1结束后 ~ 3-2结束前
 execute if score temp.gameId data matches 111..320 run give @a[hasitem={item=aw:iron_boots,quantity=0}] aw:iron_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 御风珠 | 1-2结束后 ~
@@ -105,13 +105,13 @@ execute if score temp.gameId data matches 341..640 run give @a[hasitem={item=aw:
 ### 盾 | 4-1结束后 ~，耐久度不满的时候每分钟重新设置一次耐久
 execute if score temp.gameId data matches 411..999 run give @a[hasitem={item=shield,quantity=0}] shield 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 火焰弓 | 4-2结束后 ~，施加附魔火矢
-execute if score temp.gameId data matches 421.. run enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] flame 1
+execute if score temp.gameId data matches 421..999 run enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] flame 1
 ### 钻石护腿 | 2-2结束后 ~ 4-3结束前，锁定到槽位上
 execute if score temp.gameId data matches 431..999 run replaceitem entity @a[hasitem={item=aw:diamond_leggings,quantity=0,location=slot.armor.legs}] slot.armor.legs 0 aw:diamond_leggings 1 0 {"item_lock":{"mode":"lock_in_slot"}}
 ### 钻石胸甲 | 2-3结束后 ~ 4-4结束前，锁定到槽位上
 execute if score temp.gameId data matches 441..999 run replaceitem entity @a[hasitem={item=aw:diamond_chestplate,quantity=0,location=slot.armor.chest}] slot.armor.chest 0 aw:diamond_chestplate 1 0 {"item_lock":{"mode":"lock_in_slot"}}
 ### 力量弓 | 6-1结束后 ~，施加附魔力量V
-execute if score temp.gameId data matches 611.. run enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] power 5
+execute if score temp.gameId data matches 611..999 run enchant @a[hasitem={item=bow,location=slot.weapon.mainhand}] power 5
 ### 旷野之剑 | 7-1结束前 ~，
 execute if score temp.gameId data matches 710..999 run give @a[hasitem={item=aw:wild_sword,quantity=0}] aw:wild_sword 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 

@@ -14,9 +14,9 @@
     ## 时间线
         function aw/lib/modify_data/timeline/dont_keep_value
         function aw/lib/modify_data/timeline/enable
-    ## 增加失败次数
-        scoreboard players add failedCount.allLevels data 1
-        scoreboard players add failedCount.thisLevel data 1
+    ## 增加失败次数 | 仅全流程时执行
+        execute if score isSingleLevel data matches 0 run scoreboard players add failedCount.allLevels data 1
+        execute if score isSingleLevel data matches 0 run scoreboard players add failedCount.thisLevel data 1
     ## 重置关卡完成倒计时
         scoreboard players set levelCompleteCountdown time 0
 
@@ -44,3 +44,7 @@
     kill @e[family=monster]
     kill @e[type=aw:wind_pearl]
     event entity @e[type=aw:spawner] aw:remove_immediately
+
+# --- 单关卡试炼下，直接退出 ---
+    execute if score isSingleLevel data matches 1 run scoreboard players set pausing data 1
+    execute if score isSingleLevel data matches 1 run function aw/levels/pause/events/choose_quit

@@ -6,7 +6,7 @@
 ## 设置玩家的重生点
 spawnpoint @s -16 1 82
 ## 传送玩家到重生点 | 仅限多人时运行
-execute if score playerAmount data matches 2.. run tp @s -15.0 1 82 facing -14 1 89
+execute if score playerAmount data matches 2.. run tp @s -15.0 1 82 facing -11 1 81
 
 # --- 完成剧情前 ---
 
