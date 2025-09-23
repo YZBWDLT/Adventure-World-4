@@ -7,6 +7,9 @@ function aw/lib/modify_data/timeline/enable_time_lapse
 # 传送所有玩家，防止其淹死在水里
 tp @a -184 -21 29 facing -169 -20 29
 
+# 移除迷雾
+fog @a remove gameFog
+
 # 启用对话状态
 event entity @e[type=aw:npc] aw:remove_immediately
 summon aw:npc -15 1.5 105 facing -16 1 103 aw:npc_miyunxi "米云溪"

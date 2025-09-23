@@ -18,4 +18,4 @@ function aw/lib/events/levels/start_level
 ## 把时间线状态改回 1
 scoreboard players set timeline active 1
 ## 加载 3-2 初始状态
-structure load aw:3_2_phase1 -192 -22 -1 0_degrees none layer_by_layer 4.00
+structure load aw:3_2_phase1 -192 -22 -1

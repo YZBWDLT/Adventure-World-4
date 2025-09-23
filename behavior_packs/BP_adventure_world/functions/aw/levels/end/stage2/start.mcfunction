@@ -37,6 +37,9 @@
 # 移除迷雾
     fog @a remove gameFog
 
+# 设置玩家重生点到林乐家
+    spawnpoint @a -27 7 -48
+
 # 临时变量设置
     ## 是否有玩家在林乐家
         scoreboard players set temp.hasPlayerInHome data 0

@@ -10,7 +10,7 @@ execute if score timeline time matches 300 run tellraw @a {"rawtext":[{"text":"*
 execute if score timeline time matches 380 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7【在此修建剑之神殿，设置剑之试炼】"}]}
 ## [460] 相机视角：逐渐黑屏，到520完全黑屏
 execute if score timeline time matches 460 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7【剑术不精者无资格入内】"}]}
-## [540] 相机视角：镜头给到米云溪
+## [540] 相机视角：镜头给到玩家，并恢复迷雾
 execute if score timeline time matches 540 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7原来这里的修建和§d过去的我们还有关系§7呢。"}]}
 execute if score timeline time matches 620 run tellraw @a {"rawtext":[{"text":"* §f林乐（我）： §7那么，这把剑的传承人非我莫属了！"}]}
 execute if score timeline time matches 700 run tellraw @a {"rawtext":[{"text":"* §c米云溪： §7没想到你还有这么自恋的一面呐~理论上其他人也有获得这把剑的资格哦。不过我相信你的实力！"}]}
@@ -27,9 +27,10 @@ execute if score timeline time matches 221 run camera @a set minecraft:free ease
 # [460] 逐渐黑屏，到520完全黑屏
 execute if score timeline time matches 460 run camera @a fade time 3 1 2
 
-# [540] 镜头给到玩家
+# [540] 镜头给到玩家，并恢复迷雾
 execute if score timeline time matches 540 as @a at @s run camera @s set minecraft:free pos -181 -16 31 facing @s
 execute if score timeline time matches 541 as @a at @s run camera @s set minecraft:free ease 30 linear pos ~~~
+execute if score timeline time matches 540 run fog @a push aw:lake_temple gameFog
 
 # --- 剧情结束 ---
 execute if score timeline time matches 780.. run event entity @e[type=aw:npc] aw:remove_immediately

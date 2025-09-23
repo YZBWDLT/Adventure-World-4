@@ -22,4 +22,3 @@
     scoreboard players reset temp.difficulty settings
     scoreboard players reset temp.extraDifficulty settings
     scoreboard players reset temp.storyMode settings
-    scoreboard players reset temp.level settings

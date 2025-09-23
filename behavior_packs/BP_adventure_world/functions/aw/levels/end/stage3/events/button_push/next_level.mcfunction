@@ -1,8 +1,8 @@
 # ===== 按下按钮：下一关 =====
 
 # --- 变量设置 ---
-    scoreboard players add temp.level settings 1
-    execute if score temp.level settings matches !0..23 run scoreboard players set temp.level settings 0
+    scoreboard players add level settings 1
+    execute if score level settings matches !0..23 run scoreboard players set level settings 0
 # --- 设置文本展示实体 ---
     function aw/levels/end/stage3/events/show_level
 # --- 恢复按钮 ---

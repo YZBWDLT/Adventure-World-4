@@ -74,7 +74,7 @@ execute if score temp.gameId data matches 100..340 run give @a[hasitem={item=aw:
 ### 传声石晶体 | 允许传声石结晶时
 execute if score allowAcousticStoneCrystal data matches 1 run give @a[hasitem={item=aw:acoustic_stone_crystal,quantity=0}] aw:acoustic_stone_crystal 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 退出试炼 | 二周目后，试炼过程中，非单关卡试炼
-execute if score mapCompletedTimes record matches 2.. if score chapter data matches 1..7 if score isSingleLevel data matches 0 run give @a[hasitem={item=aw:quit,quantity=0}] aw:quit 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+execute if score mapCompletedTimes record matches 1.. if score chapter data matches 1..7 if score isSingleLevel data matches 0 run give @a[hasitem={item=aw:quit,quantity=0}] aw:quit 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 主动旁观模式 | 多人模式下，试炼过程中，非单关卡试炼
 execute if score playerAmount data matches 2.. if score chapter data matches 1..7 if score isSingleLevel data matches 0 run give @a[hasitem={item=aw:spectate,quantity=0}] aw:spectate 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
 ### 铁靴子 | 1-1结束后 ~ 3-2结束前

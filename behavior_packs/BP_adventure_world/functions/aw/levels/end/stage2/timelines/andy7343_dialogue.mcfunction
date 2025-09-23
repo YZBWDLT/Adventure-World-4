@@ -1,4 +1,4 @@
-# ===== 剧情：量筒 =====
+# ===== 剧情：巴豆 =====
 
 # --- 若未启用时间流逝，则启用 ---
     execute if score timeLapse data matches 0 run function aw/lib/modify_data/timeline/enable_time_lapse

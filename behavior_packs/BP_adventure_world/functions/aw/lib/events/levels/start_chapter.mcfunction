@@ -30,12 +30,7 @@
         kill @e[family=monster]
     ## 移除残留的生成器
         event entity @e[type=aw:spawner] aw:remove_immediately
-    ## 打开并移除上一章的门，防止因特殊情况存在门未打开的情况导致卡关
-        execute as @e[type=aw:door] at @s run fill ~-3~~-3~3~4~3 structure_void replace barrier
-        event entity @e[type=aw:door] aw:remove_immediately
     ## 移除正在掷出的御风珠，防止过剧情时出现问题
         kill @e[type=aw:wind_pearl]
-    ## 重置章节名和波数
-        kill @e[has_property={aw:marker_type="name"}]
     ## 移除残留的引导点
         event entity @e[type=aw:destination] aw:remove_immediately

@@ -6,7 +6,7 @@
     scoreboard players add @s deathCount 0
     scoreboard players add @s killCount 0
     scoreboard players set @s health 20
-    scoreboard players set @s[scores={spectator=!2}] spectator 0
+    scoreboard players add @s spectator 0
     fog @s remove gameFog
 
     ## 检查是否跨局游戏，如果是则清空击杀数和死亡数，并重置游戏 ID
@@ -14,8 +14,11 @@
         execute unless score @s gameId = gameId data run scoreboard players set @s deathCount 0
         execute unless score @s gameId = gameId data run scoreboard players set @s killCount 0
         execute unless score @s gameId = gameId data run scoreboard players operation @s gameId = gameId data
-    
-    ## 更新玩家游戏模式，若玩家启用了主动旁观就先设置为冒险（游戏内会自动设置为旁观）
+    ## 如果玩家未启用主动旁观，则移除其旁观者身份（若在游戏中，关卡内会直接设置其为旁观者的）
+        scoreboard players set @s[scores={spectator=!2}] spectator 0
+    ## 如果此时正在进行单关卡试炼，则移除其旁观者身份（若在游戏中，关卡内会直接设置其为旁观者的）
+        execute if score isSingleLevel data matches 1 run scoreboard players set @s spectator 0
+    ## 更新玩家游戏模式，若玩家启用了主动旁观就先设置为冒险（若在游戏中，关卡内会直接设置其为旁观模式的）
         gamemode adventure @s[scores={spectator=2}]
 
 # --- 获取变量 ---

@@ -25,8 +25,6 @@
         scoreboard players set temp.extraDifficulty settings 0
     # 剧情模式设置
         scoreboard players set temp.storyMode settings 0
-    # 关卡设置
-        scoreboard players set temp.level settings 0
 # 显示按钮和文本展示实体
     event entity @e[type=aw:text_display] aw:remove_immediately
     ## 更改难度按钮

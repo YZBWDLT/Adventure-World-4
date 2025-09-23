@@ -86,6 +86,8 @@
             scoreboard players set difficulty settings 1
         ### 额外地图难度，直接累加到地图难度（基础值）上
             scoreboard players set extraDifficulty settings 0
+        ### 二周目的关卡设置
+            scoreboard players set level settings 0
 
     ## 关卡数据相关
         ### 当前正在进行的章节数，0：开始前&村庄，1-7：游戏章节，10：结束后的村庄
