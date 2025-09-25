@@ -9,9 +9,15 @@
         execute if score hasCheat data matches 0 run function aw/lib/get_data/best_time
     ## 获取分数
         execute if score playerAmount data matches 1 run function aw/lib/get_data/score
-        execute if score playerAmount data matches 2.. run scoreboard players set score record -2
     ## 增加一次通关记录
         execute if score hasCheat data matches 0 run scoreboard players add mapCompletedTimes record 1
+    ## 记录通关时的数据
+        scoreboard players operation difficulty record = difficulty settings
+        scoreboard players operation playerAmount record = playerAmount data
+        scoreboard players operation failedCount record = failedCount.allLevels data
+        scoreboard players operation potionUsed record = potionUsed data
+        scoreboard players operation playedMinute record = playedMinute time
+        scoreboard players operation playedSecond record = playedSecond time
     ## 如果有玩家开启了创造，警告之
         execute if score hasCheat data matches 1 run tellraw @a {"rawtext":[{"translate":"§8本次游戏有人开启了创造模式，因此本次不会获得任何成就和纪录！"}]}
 

@@ -29,10 +29,17 @@
                 "ender5207541": "textures/entity/npc_author/ender5207541",
                 "rustyabyss29193": "textures/entity/npc_author/rustyabyss29193",
                 "enderlife5409": "textures/entity/npc_author/enderlife5409",
-                "onekitty710926": "textures/entity/npc_author/onekitty710926",
-                "foxlanmo": "textures/entity/npc_author/foxlanmo",
+                "yiyishi54188": "textures/entity/npc_author/yiyishi54188",
+                "freeorange114": "textures/entity/npc_author/freeorange114",
                 "kuanpan9527": "textures/entity/npc_author/kuanpan9527",
-                "longlongxiaotao": "textures/entity/npc_author/longlongxiaotao"
+                "longlongxiaotao": "textures/entity/npc_author/longlongxiaotao",
+                "unhandyshark856": "textures/entity/npc_author/unhandyshark856",
+                "tck1122": "textures/entity/npc_author/tck1122",
+                "lanos212": "textures/entity/npc_author/lanos212",
+                "neptuneexe1591": "textures/entity/npc_author/neptuneexe1591",
+                "commandblock228": "textures/entity/npc_author/commandblock228",
+                "xiaomluoch": "textures/entity/npc_author/xiaomluoch",
+                "wang9800": "textures/entity/npc_author/wang9800"
             },
             "geometry": {
                 "default": "geometry.aw_npc.default",

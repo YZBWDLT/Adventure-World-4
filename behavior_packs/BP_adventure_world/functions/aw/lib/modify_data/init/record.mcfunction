@@ -32,19 +32,25 @@
         ### 全靠我带飞
             scoreboard players set achievement.multiPlayer.killMoreThan200 record 0
 # 统计
-    ## 地图通关次数
-        scoreboard players set mapCompletedTimes record 0
-    ## 分数
+    ## 通关数据
+        ### 地图通关次数
+            scoreboard players set mapCompletedTimes record 0
+        ### 通关时是否有玩家使用过主药水或副药水，0：没有，1：有
+            scoreboard players set potionUsed record 0
+        ### 通关时的难度
+            scoreboard players set difficulty record 1
+        ### 通关时是否有人作弊，0：无，1：有
+            scoreboard players set hasCheat record 0
+        ### 通关时的玩家人数
+            scoreboard players set playerAmount record 1
+        ### 通关时的失败次数
+            scoreboard players set failedCount record 0
+        ### 通关时的游玩分钟数
+            scoreboard players set playedMinute record 1
+        ### 通关时的游玩秒数
+            scoreboard players set playedSecond record 0
         ### 本次试炼的分数
             scoreboard players set score record 0
-        ### 最佳分数（难度 1）
-            scoreboard players set bestScore.difficulty1 record 0
-        ### 最佳分数（难度 2）
-            scoreboard players set bestScore.difficulty2 record 0
-        ### 最佳分数（难度 3）
-            scoreboard players set bestScore.difficulty3 record 0
-        ### 最佳分数（难度 4）
-            scoreboard players set bestScore.difficulty4 record 0
     ## 最佳时间
         ## 单人模式的最佳游戏时间（难度 1，单位：秒）
             scoreboard players set bestTime.singlePlayer.difficulty1.second record 59

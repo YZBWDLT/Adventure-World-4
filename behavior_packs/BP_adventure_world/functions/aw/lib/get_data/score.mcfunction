@@ -47,9 +47,3 @@
 # 若作弊则直接改分数为 -1
 
     execute if score hasCheat data matches 1 run scoreboard players set score record -1
-
-# 标记最佳分数
-    execute if score difficulty settings matches 1 if score score record > bestScore.difficulty1 record run scoreboard players operation bestScore.difficulty1 record = score record
-    execute if score difficulty settings matches 2 if score score record > bestScore.difficulty2 record run scoreboard players operation bestScore.difficulty2 record = score record
-    execute if score difficulty settings matches 3 if score score record > bestScore.difficulty3 record run scoreboard players operation bestScore.difficulty3 record = score record
-    execute if score difficulty settings matches 4 if score score record > bestScore.difficulty4 record run scoreboard players operation bestScore.difficulty4 record = score record

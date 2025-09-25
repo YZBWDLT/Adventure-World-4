@@ -55,3 +55,5 @@
         scoreboard players set temp.achievementPage data 1
     ## 当前显示的统计页数
         scoreboard players set temp.statPage data 1
+    ## 作者 NPC 交互使用的条件
+        scoreboard players set temp.condition data 1

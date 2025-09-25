@@ -7,7 +7,7 @@
             "is_spawnable": true,
             "is_summonable": true,
             "properties": {
-                "aw:skin": { "type": "int", "range": [ 0, 18 ], "default": 0, "client_sync": true },
+                "aw:skin": { "type": "int", "range": [ 0, 25 ], "default": 0, "client_sync": true },
                 "aw:geometry": { "type": "enum", "values": [ "default", "slim" ], "default": "default", "client_sync": true },
                 
                 "aw:state": { "type": "enum", "values": [ "stand", "sit", "lie", "sit_raising_head", "sleep" ], "default": "stand", "client_sync": true },
@@ -59,10 +59,17 @@
             "aw:author_ender5207541": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 12, "aw:geometry": "slim" } },
             "aw:author_rustyabyss29193": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 13, "aw:geometry": "slim" } },
             "aw:author_enderlife5409": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 14, "aw:geometry": "slim" } },
-            "aw:author_onekitty710926": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 15, "aw:geometry": "default" } },
-            "aw:author_foxlanmo": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 16, "aw:geometry": "slim" } },
+            "aw:author_yiyishi54188": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 15, "aw:geometry": "default" } },
+            "aw:author_freeorange114": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 16, "aw:geometry": "slim" } },
             "aw:author_kuanpan_9527": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 17, "aw:geometry": "default" } },
             "aw:author_longlongxiaotao": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 18, "aw:geometry": "default" } },
+            "aw:author_unhandyshark856": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 19, "aw:geometry": "slim" } },
+            "aw:author_tck1122": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 20, "aw:geometry": "slim" } },
+            "aw:author_lanos212": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 21, "aw:geometry": "default" } },
+            "aw:author_neptune_exe1591": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 22, "aw:geometry": "default" } },
+            "aw:author_commandblock228": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 23, "aw:geometry": "default" } },
+            "aw:author_xiaomluoch": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 24, "aw:geometry": "slim" } },
+            "aw:author_wang9800": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 25, "aw:geometry": "default" } },
 
             "aw:state_stand": { "set_property": { "aw:state": "stand" } },
             "aw:state_sit": { "set_property": { "aw:state": "sit" } },

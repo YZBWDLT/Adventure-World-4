@@ -8,25 +8,21 @@
     ## 张宇剧情 | active.timeline = 3
         execute if score timeline active matches 3 run function aw/levels/end/stage2/timelines/zhangyu_dialogue
     ## YZBWDLT | active.timeline = 4
-        execute if score timeline active matches 4 run function aw/levels/end/stage2/timelines/yzbwdlt_dialogue
+        execute if score timeline active matches 4 run function aw/levels/end/stage2/timelines/dialogue/yzbwdlt
     ## Andy7343 | active.timeline = 5
-        execute if score timeline active matches 5 run function aw/levels/end/stage2/timelines/andy7343_dialogue
+        execute if score timeline active matches 5 run function aw/levels/end/stage2/timelines/dialogue/andy7343
     ## GreeLeaf | active.timeline = 6
-        execute if score timeline active matches 6 run function aw/levels/end/stage2/timelines/greeleaf_dialogue
+        execute if score timeline active matches 6 run function aw/levels/end/stage2/timelines/dialogue/greeleaf
     ## KrisWenYu | active.timeline = 7
-        execute if score timeline active matches 7 run function aw/levels/end/stage2/timelines/kriswenyu_dialogue
+        execute if score timeline active matches 7 run function aw/levels/end/stage2/timelines/dialogue/kriswenyu
     ## PigeonKI | active.timeline = 8
-        execute if score timeline active matches 8 run function aw/levels/end/stage2/timelines/pigeonki_dialogue
+        execute if score timeline active matches 8 run function aw/levels/end/stage2/timelines/dialogue/pigeonki
     ## xiaoshu512 | active.timeline = 9
-        execute if score timeline active matches 9 run function aw/levels/end/stage2/timelines/xiaoshu512_dialogue
+        execute if score timeline active matches 9 run function aw/levels/end/stage2/timelines/dialogue/xiaoshu512
     ## KianaKasnala947 | active.timeline = 10
-        execute if score timeline active matches 10 run function aw/levels/end/stage2/timelines/kianakasnala947_dialogue
-    ## Hfpa0117 | active.timeline = 11
-        execute if score timeline active matches 11 run function aw/levels/end/stage2/timelines/hfpa0117_dialogue
-    ## xc13599305 | active.timeline = 12
-        execute if score timeline active matches 12 run function aw/levels/end/stage2/timelines/xc13599305_dialogue
-    ## PumpkinJui | active.timeline = 13
-        execute if score timeline active matches 13 run function aw/levels/end/stage2/timelines/pumpkinjui_dialogue
+        execute if score timeline active matches 10 run function aw/levels/end/stage2/timelines/dialogue/kianakasnala947
+    ## freeorange114 | active.timeline = 11
+        execute if score timeline active matches 11 run function aw/levels/end/stage2/timelines/dialogue/freeorange114
 # --- 林乐家 ---
     ## 若有玩家在林乐家，且上一刻无玩家在林乐家时，触发玩家进入林乐家事件
         execute if entity @a[x=-31,y=1,z=-52,dx=8,dy=8,dz=8] if score temp.hasPlayerInHome data matches 0 run function aw/levels/end/stage2/events/on_entry/home
