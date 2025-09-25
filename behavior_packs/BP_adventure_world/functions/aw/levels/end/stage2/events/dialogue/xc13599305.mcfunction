@@ -7,7 +7,7 @@ scoreboard players set temp.condition data 1
 # 留言二（难度4）
 execute if score difficulty record matches 4 run scoreboard players set temp.condition data 2
 # 留言三（单人，F评级）
-execute if score playerAmount record matches 1 if score score record matches 0..39 run scoreboard players set temp.condition data 3
+execute if score playerAmount record matches 1 if score score record matches 0..30 run scoreboard players set temp.condition data 3
 # 留言四（难度4，死亡次数=0）
 execute if score difficulty record matches 4 if score failedCount record matches 0 run scoreboard players set temp.condition data 4
 # 留言五（作弊）

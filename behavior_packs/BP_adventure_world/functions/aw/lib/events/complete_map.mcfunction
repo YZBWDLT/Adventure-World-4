@@ -18,6 +18,7 @@
         scoreboard players operation potionUsed record = potionUsed data
         scoreboard players operation playedMinute record = playedMinute time
         scoreboard players operation playedSecond record = playedSecond time
+        scoreboard players operation hasCheat record = hasCheat data
     ## 如果有玩家开启了创造，警告之
         execute if score hasCheat data matches 1 run tellraw @a {"rawtext":[{"translate":"§8本次游戏有人开启了创造模式，因此本次不会获得任何成就和纪录！"}]}
 

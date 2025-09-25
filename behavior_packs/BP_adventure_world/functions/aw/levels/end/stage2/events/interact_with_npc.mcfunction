@@ -48,7 +48,7 @@
         execute if entity @s[has_property={aw:is_author=true,aw:skin=14}] run tellraw @a {"rawtext":[{"translate":"* §a千里（EnderLife5409）： §7你的经历会被记载在某张羊皮纸上，其中所记载的一切将永远不会重现，但在世界另一角，溺尸嘶吼着又拾起了三叉戟，另一个冒险世界，风云再起！"}]}
     ## yiyishi54188
         execute if entity @s[has_property={aw:is_author=true,aw:skin=15}] run function aw/levels/end/stage2/events/dialogue/yiyishi54188
-    ## freeorange114
+    ## freeorange114 | active.timeline = 11
         execute if entity @s[has_property={aw:is_author=true,aw:skin=16}] run scoreboard players set timeline active 11
     ## kuanpan 9527
         execute if entity @s[has_property={aw:is_author=true,aw:skin=17}] run tellraw @a {"rawtext":[{"translate":"* §a宽判（kuanpan 9527）： §7我PVE真是太菜了。"}]}
@@ -56,8 +56,8 @@
         execute if entity @s[has_property={aw:is_author=true,aw:skin=18}] run function aw/levels/end/stage2/events/dialogue/longlongxiaotao
     ## UnhandyShark856
         execute if entity @s[has_property={aw:is_author=true,aw:skin=19}] run function aw/levels/end/stage2/events/dialogue/unhandyshark856
-    ## tck1122
-        execute if entity @s[has_property={aw:is_author=true,aw:skin=20}] run tellraw @a {"rawtext":[{"translate":"* §a小飞侠（tck1122）： §7§8§o该作者目前还未留言。若在正式发布前该作者仍未留言，则正式版将会移除。"}]}
+    ## tck1122 | active.timeline = 12
+        execute if entity @s[has_property={aw:is_author=true,aw:skin=20}] run scoreboard players set timeline active 12
     ## lanos212
         execute if entity @s[has_property={aw:is_author=true,aw:skin=21}] run function aw/levels/end/stage2/events/dialogue/lanos212
     ## Neptune exe1591

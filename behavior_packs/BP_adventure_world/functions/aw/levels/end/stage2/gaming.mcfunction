@@ -23,6 +23,8 @@
         execute if score timeline active matches 10 run function aw/levels/end/stage2/timelines/dialogue/kianakasnala947
     ## freeorange114 | active.timeline = 11
         execute if score timeline active matches 11 run function aw/levels/end/stage2/timelines/dialogue/freeorange114
+    ## tck1122 | active.timeline = 12
+        execute if score timeline active matches 12 run function aw/levels/end/stage2/timelines/dialogue/tck1122
 # --- 林乐家 ---
     ## 若有玩家在林乐家，且上一刻无玩家在林乐家时，触发玩家进入林乐家事件
         execute if entity @a[x=-31,y=1,z=-52,dx=8,dy=8,dz=8] if score temp.hasPlayerInHome data matches 0 run function aw/levels/end/stage2/events/on_entry/home

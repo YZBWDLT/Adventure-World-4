@@ -14,9 +14,9 @@ execute if score timeline time matches 1 if score playerAmount record matches 1 
 ### 留言三（难度4，单人）
 execute if score timeline time matches 1 if score playerAmount record matches 1 if score difficulty record matches 4 run scoreboard players set temp.condition data 3
 ### 留言四（单人，F~D评级）
-execute if score timeline time matches 1 if score playerAmount record matches 1 if score score record matches 0..59 run scoreboard players set temp.condition data 4
+execute if score timeline time matches 1 if score playerAmount record matches 1 if score score record matches 0..60 run scoreboard players set temp.condition data 4
 ### 留言五（单人，S评级）
-execute if score timeline time matches 1 if score playerAmount record matches 1 if score score record matches 120.. run scoreboard players set temp.condition data 5
+execute if score timeline time matches 1 if score playerAmount record matches 1 if score score record matches 106.. run scoreboard players set temp.condition data 5
 ### 留言六（多人）
 execute if score timeline time matches 1 if score playerAmount record matches 2.. run scoreboard players set temp.condition data 6
 ### 留言七（难度2~3，多人）

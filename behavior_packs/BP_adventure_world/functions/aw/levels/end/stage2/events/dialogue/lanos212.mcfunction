@@ -4,8 +4,8 @@
 
 # 留言一（默认）
 scoreboard players set temp.condition data 1
-# 留言二（通关分钟数<=30）
-execute if score playedMinute record matches ..30 run scoreboard players set temp.condition data 2
+# 留言二（通关分钟数<30）
+execute if score playedMinute record matches ..29 run scoreboard players set temp.condition data 2
 
 # --- 剧情 ---
 

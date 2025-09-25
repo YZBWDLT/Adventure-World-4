@@ -8,7 +8,7 @@ execute if score timeLapse data matches 0 run function aw/lib/modify_data/timeli
 ## 留言一（默认）
 execute if score timeline time matches 1 run scoreboard players set temp.condition data 1
 ## 留言二（单人，S 级评价）
-execute if score timeline time matches 1 if score playerAmount record matches 1 if score score record matches 120.. run scoreboard players set temp.condition data 2
+execute if score timeline time matches 1 if score playerAmount record matches 1 if score score record matches 106.. run scoreboard players set temp.condition data 2
 ## 留言三（作弊）
 execute if score timeline time matches 1 if score hasCheat record matches 1 run scoreboard players set temp.condition data 3
 

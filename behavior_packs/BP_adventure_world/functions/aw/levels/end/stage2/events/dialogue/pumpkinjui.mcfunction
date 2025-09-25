@@ -5,7 +5,7 @@
 # 留言一（默认）
 scoreboard players set temp.condition data 1
 # 留言二（单人，评级F~D）
-execute if score playerAmount record matches 1 if score score record matches 0..59 run scoreboard players set temp.condition data 2
+execute if score playerAmount record matches 1 if score score record matches 0..60 run scoreboard players set temp.condition data 2
 # 留言三（作弊）
 execute if score hasCheat record matches 1 run scoreboard players set temp.condition data 3
 

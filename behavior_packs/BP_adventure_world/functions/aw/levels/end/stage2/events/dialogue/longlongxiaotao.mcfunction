@@ -4,13 +4,13 @@
 
 # 留言一（默认）
 scoreboard players set temp.condition data 1
-# 留言二（难度4）
+# 留言二（难度1~2，死亡次数=0）
 execute if score difficulty record matches 1..2 if score failedCount record matches 0 run scoreboard players set temp.condition data 2
-# 留言三（单人，F评级）
+# 留言三（难度1~2，死亡次数>=0）
 execute if score difficulty record matches 1..2 if score failedCount record matches 1.. run scoreboard players set temp.condition data 3
-# 留言四（难度4，死亡次数=0）
+# 留言四（难度3~4，死亡次数=0）
 execute if score difficulty record matches 3..4 if score failedCount record matches 0 run scoreboard players set temp.condition data 4
-# 留言五（作弊）
+# 留言五（难度3~4，死亡次数>=0）
 execute if score difficulty record matches 3..4 if score failedCount record matches 1.. run scoreboard players set temp.condition data 5
 
 # --- 剧情 ---

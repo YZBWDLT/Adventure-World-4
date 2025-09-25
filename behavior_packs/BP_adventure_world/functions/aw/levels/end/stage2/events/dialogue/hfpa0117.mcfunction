@@ -7,7 +7,7 @@ scoreboard players set temp.condition data 1
 # 留言二（单人，难度1，死亡次数=0或难度2，3或S评分）
 execute if score playerAmount record matches 1 if score difficulty record matches 1 if entity @a[scores={deathCount=0}] run scoreboard players set temp.condition data 2
 execute if score playerAmount record matches 1 if score difficulty record matches 2..3 run scoreboard players set temp.condition data 2
-execute if score playerAmount record matches 1 if score score record matches 120.. run scoreboard players set temp.condition data 2
+execute if score playerAmount record matches 1 if score score record matches 106.. run scoreboard players set temp.condition data 2
 # 留言三（单人，难度2或3，不使用药水）
 execute if score playerAmount record matches 1 if score difficulty record matches 2..3 if score potionUsed record matches 0 run scoreboard players set temp.condition data 3
 # 留言四（单人，难度4，死亡次数≥1）

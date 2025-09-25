@@ -8,7 +8,7 @@ execute if score timeLapse data matches 0 run function aw/lib/modify_data/timeli
 ## 留言一（默认）
 scoreboard players set temp.condition data 1
 ## 留言二（难度1~3，单人，F~D评级）
-execute if score difficulty record matches 1..3 if score playerAmount record matches 1 if score score record matches 0..59 run scoreboard players set temp.condition data 2
+execute if score difficulty record matches 1..3 if score playerAmount record matches 1 if score score record matches 0..60 run scoreboard players set temp.condition data 2
 ## 留言三（作弊）
 execute if score hasCheat record matches 1 run scoreboard players set temp.condition data 3
 ## 留言四（难度4，单人通关，非留言三）
