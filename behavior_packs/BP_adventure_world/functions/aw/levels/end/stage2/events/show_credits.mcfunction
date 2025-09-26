@@ -65,7 +65,7 @@
         execute if score temp.creditPage data matches 8 run summon aw:text_display "§b星辰§7（xc13599305）" -25 9.7 -51
         execute if score temp.creditPage data matches 8 run summon aw:text_display "§b命令块§7（CommandBlock228）" -25 9.4 -51
         execute if score temp.creditPage data matches 8 run summon aw:text_display "§b王牌§7（wang9800）" -25 9.1 -51
-        execute if score temp.creditPage data matches 8 run summon aw:text_display "§b残梦§7（xiaomluoch）" -25 8.8 -51
+        execute if score temp.creditPage data matches 8 run summon aw:text_display "§b残梦§7（XiaomLuoch）" -25 8.8 -51
         execute if score temp.creditPage data matches 8 run summon aw:text_display "§b十三酱§7（Rss and L53）" -25 8.5 -51
         execute if score temp.creditPage data matches 8 run summon aw:text_display "§b小面包§7（Xiaomianbao2007）" -25 8.2 -51
         execute if score temp.creditPage data matches 8 run summon aw:text_display "§bjiou§7（jioujoiu）" -25 7.9 -51
