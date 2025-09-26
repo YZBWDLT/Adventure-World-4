@@ -19,3 +19,5 @@ function aw/lib/events/levels/start_level
 function aw/lib/events/play_music
 ## 加载初始结构
 structure load aw:3_4_layer1_nowater -178 -16 18
+## 设置临时变量
+scoreboard players set temp.playerHurt data 0

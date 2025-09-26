@@ -19,6 +19,8 @@ summon aw:destination -225 -47 44
 function aw/lib/events/play_music
 ## 启用时间流逝
 function aw/lib/modify_data/timeline/enable_time_lapse
+## 获取成就：(1) 无作弊，(2) 成就未获取，(3) 玩家未被点燃 -> 闪避点满
+execute if score hasCheat data matches 0 if score achievement.notFired record matches 0 if score temp.playerFired data matches 0 run function aw/lib/achievements/levels/not_fired
 ## 移除临时变量
 scoreboard players reset temp.stage data
 scoreboard players reset temp.skillCd time
@@ -27,3 +29,5 @@ scoreboard players reset temp.skillType data
 scoreboard players reset temp.spawnMonsterGroup data
 scoreboard players reset temp.bossHealthOneSecond data
 scoreboard objectives remove temp.respawnTime
+scoreboard players reset temp.playerFired data
+scoreboard objectives remove temp.exploded

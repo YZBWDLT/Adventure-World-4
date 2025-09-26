@@ -40,3 +40,5 @@ function aw/lib/events/play_music
         scoreboard objectives add temp.respawnTime dummy "重生时间"
     ### 玩家重生倒计时
         scoreboard players set @a temp.respawnTime 0
+    ### 关卡倒计时（成就用）
+        scoreboard players set temp.levelCountdown time 60

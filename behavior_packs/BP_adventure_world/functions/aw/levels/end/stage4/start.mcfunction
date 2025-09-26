@@ -17,6 +17,8 @@
         scoreboard players set isSingleLevel data 1
     ## 撤销玩家的主动旁观
         scoreboard players set @a spectator 0
+    ## 重新设置为未作弊情况
+        scoreboard players set hasCheat data 0
     ## 阻止在关卡额外传送玩家
         scoreboard players set allowTpPlayerWhenStart data 0
     ## 将失败次数归零

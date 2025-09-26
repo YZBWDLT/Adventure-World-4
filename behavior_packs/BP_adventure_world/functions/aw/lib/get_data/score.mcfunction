@@ -18,14 +18,14 @@
     # 时长 | 60  | 60-75 | 75-90 | 90-105 | 105-120 | 120-135 | 135-150 | 150-165 |
     # 加分 | +40 | +35   | +30   | +25    | +20     | +15     | +10     | +5      |
 
-    execute if score playedMinute time matches ..60 run scoreboard players add score record 40
-    execute if score playedMinute time matches 61..75 run scoreboard players add score record 35
-    execute if score playedMinute time matches 76..90 run scoreboard players add score record 30
-    execute if score playedMinute time matches 91..105 run scoreboard players add score record 25
-    execute if score playedMinute time matches 106..120 run scoreboard players add score record 20
-    execute if score playedMinute time matches 121..135 run scoreboard players add score record 15
-    execute if score playedMinute time matches 136..150 run scoreboard players add score record 10
-    execute if score playedMinute time matches 151..165 run scoreboard players add score record 5
+    execute if score playedMinute time matches ..59 run scoreboard players add score record 40
+    execute if score playedMinute time matches 60..74 run scoreboard players add score record 35
+    execute if score playedMinute time matches 75..89 run scoreboard players add score record 30
+    execute if score playedMinute time matches 90..104 run scoreboard players add score record 25
+    execute if score playedMinute time matches 105..119 run scoreboard players add score record 20
+    execute if score playedMinute time matches 120..134 run scoreboard players add score record 15
+    execute if score playedMinute time matches 135..149 run scoreboard players add score record 10
+    execute if score playedMinute time matches 150..164 run scoreboard players add score record 5
 
 # 死亡次数加分
     # 死亡 | 0   | 1   | 2-3 | 4-6 | 7-10 | 11-15 |

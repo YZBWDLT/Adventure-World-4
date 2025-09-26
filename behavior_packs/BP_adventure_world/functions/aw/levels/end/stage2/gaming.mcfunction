@@ -54,3 +54,7 @@
         execute if entity @a[x=-26,y=3,z=36,dx=16,dy=4,dz=8] if score temp.hasPlayerInShop data matches 0 run function aw/levels/end/stage2/events/on_entry/shop
     ## 若无玩家在张宇商店，且上一刻有玩家在张宇商店时，触发玩家离开张宇商店事件
         execute unless entity @a[x=-26,y=3,z=36,dx=16,dy=4,dz=8] if score temp.hasPlayerInShop data matches 1 run function aw/levels/end/stage2/events/on_exit/shop
+
+# --- 获取成就 ---
+    ## (1) 无作弊，(2) 成就未获取，(3) 位于(35,25,-38)的位置有玩家 -> 还是跑酷大佬
+        execute if score hasCheat data matches 0 if score achievement.parkour record matches 0 if entity @a[x=35,y=25,z=-38,dx=0,dy=0,dz=0] run function aw/lib/achievements/levels/parkour

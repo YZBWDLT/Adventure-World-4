@@ -24,3 +24,6 @@ execute as @a at @s if block ~~80~ structure_void positioned -156 -11 14 run fun
 # --- 检查存活玩家数目 ---
 # 如果存活玩家数目为 0，则触发关卡失败函数
 execute if score alivePlayerAmount data matches 0 run function aw/levels/chapter4/level3/fail
+
+# --- 检查玩家穿着靴子 ---
+execute if entity @a[hasitem={item=leather_boots,location=slot.armor.feet}] run scoreboard players set temp.playerEquippedLeatherBoots data 1

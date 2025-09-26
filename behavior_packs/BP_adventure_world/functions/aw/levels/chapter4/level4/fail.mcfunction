@@ -15,3 +15,4 @@ scoreboard players reset temp.remainingTime time
 scoreboard players reset temp.nextMonster time
 scoreboard players reset temp.nextMonsterType data
 scoreboard players reset temp.nextMonsterPos data
+scoreboard players reset temp.playerKilledMonster data

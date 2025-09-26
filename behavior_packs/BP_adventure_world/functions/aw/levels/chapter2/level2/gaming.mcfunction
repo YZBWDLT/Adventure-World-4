@@ -22,3 +22,8 @@ execute as @a at @s if block ~~80~ structure_void positioned -72 1 69 run functi
 # --- 检查存活玩家数目 ---
 # 如果存活玩家数目为 0，则触发关卡失败函数
 execute if score alivePlayerAmount data matches 0 run function aw/levels/chapter2/level2/fail
+
+# --- 检查玩家是否拉下拉杆 ---
+execute if block -86 -17 66 lever ["lever_direction"="up_east_west","open_bit"=true] run scoreboard players set temp.usedLever data 1
+execute if block -89 -17 67 lever ["lever_direction"="up_east_west","open_bit"=true] run scoreboard players set temp.usedLever data 1
+execute if block -87 -17 69 lever ["lever_direction"="up_north_south","open_bit"=true] run scoreboard players set temp.usedLever data 1

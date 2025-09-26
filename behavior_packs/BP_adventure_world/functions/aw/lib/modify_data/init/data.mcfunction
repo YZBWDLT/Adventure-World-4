@@ -108,6 +108,8 @@
             scoreboard players set pausing data 0
         ### 是否为单关卡试炼，0：全流程，1：单关卡
             scoreboard players set isSingleLevel data 0
+        ### 射杀的骷髅或流浪者数量
+            scoreboard players set skeletonShotAmount data 0
 
     ## 游玩时长
         ### 玩家游玩的时长，仅限开始游戏后记录（单位：秒）

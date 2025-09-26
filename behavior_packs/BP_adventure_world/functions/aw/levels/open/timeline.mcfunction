@@ -28,3 +28,7 @@ execute if score levelCompleted data matches 1 if score level data matches 2 run
 execute if score levelCompleted data matches 1 if score level data matches 3 run function aw/levels/open/stage3/after_gaming
 ### 0-4 | 与张宇对话&到达剑之试炼入口
 execute if score levelCompleted data matches 1 if score level data matches 4 run function aw/levels/open/stage4/after_gaming
+
+# --- 获取成就 ---
+## (1) 无作弊，(2) 成就未获取，(3) 位于(35,25,-38)的位置有玩家 -> 还是跑酷大佬
+execute if score hasCheat data matches 0 if score achievement.parkour record matches 0 if entity @a[x=35,y=25,z=-38,dx=0,dy=0,dz=0] run function aw/lib/achievements/levels/parkour

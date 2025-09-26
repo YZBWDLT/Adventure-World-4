@@ -17,3 +17,5 @@ function aw/lib/events/levels/start_level
 # --- 关卡特殊功能 ---
 ## 播放音乐
 function aw/lib/events/play_music
+## 设置临时变量
+scoreboard players set temp.playerHurt data 0

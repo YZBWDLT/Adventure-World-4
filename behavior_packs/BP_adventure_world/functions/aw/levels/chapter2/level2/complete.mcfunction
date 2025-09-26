@@ -15,3 +15,7 @@ summon aw:destination -143 -20 61
 # --- 关卡特殊功能 ---
 ## 提示玩家
 tellraw @a {"rawtext":[{"translate":"§a非常好！使用弓可以对强力的骷髅类怪物造成致命伤害。"}]}
+## 获取成就：(1) 无作弊，(2) 成就未获取，(3) 未拉下拉杆 -> 别问，问就是陷阱
+execute if score hasCheat data matches 0 if score achievement.noTrap record matches 0 if score temp.usedLever data matches 0 run function aw/lib/achievements/levels/no_trap
+## 移除临时变量
+scoreboard players reset temp.usedLever data

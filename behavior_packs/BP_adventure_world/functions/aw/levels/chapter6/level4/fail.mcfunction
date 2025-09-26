@@ -22,3 +22,4 @@ scoreboard players reset temp.nextMonsterPos data
 scoreboard players reset temp.healBossCountdown time
 scoreboard players reset temp.teleportCountdown time
 scoreboard objectives remove temp.respawnTime
+scoreboard players reset temp.levelCountdown time

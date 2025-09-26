@@ -16,6 +16,9 @@ execute if score levelCompleted data matches 0 if score playerAmount data matche
 execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. run gamemode spectator @s
 ## 设置玩家的重生时间 | 仅限多人模式下运行
 execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. run function aw/levels/chapter7/level5/events/player_die
+## 重置玩家被砸次数
+execute if score levelCompleted data matches 0 if score playerAmount data matches 2.. run scoreboard players add @s temp.exploded 0
+
 
 # --- 完成关卡后 ---
 

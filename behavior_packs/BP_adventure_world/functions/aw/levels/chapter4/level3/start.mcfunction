@@ -17,3 +17,5 @@ function aw/lib/events/levels/start_level
 # --- 关卡特殊功能 ---
 ## 封闭 4-3 出口
 fill -156 -18 5 -158 -18 7 ice replace water
+## 设置临时变量
+scoreboard players set temp.playerEquippedLeatherBoots data 0

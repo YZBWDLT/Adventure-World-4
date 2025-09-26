@@ -36,3 +36,6 @@
 # --- 死亡的玩家进行倒计时复活 ---
     # 每秒执行 1 次。仅限多人状态下执行，由死亡状态的玩家执行。
         execute if score tick time matches 11 if score playerAmount data matches 2.. as @a[scores={spectator=1}] at @s run function aw/levels/chapter6/level4/timelines/player_respawn
+
+# --- 关卡倒计时 ---
+    execute if score tick time matches 13 if score temp.levelCountdown time matches 0.. run scoreboard players remove temp.levelCountdown time 1

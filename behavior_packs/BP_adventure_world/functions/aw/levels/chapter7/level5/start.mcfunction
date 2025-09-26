@@ -44,3 +44,9 @@ function aw/levels/chapter7/level5/waves/wave_1
         scoreboard objectives add temp.respawnTime dummy "重生时间"
     ### 玩家重生倒计时
         scoreboard players set @a temp.respawnTime 0
+    ### 玩家被点燃
+        scoreboard players set temp.playerFired data 0
+    ### 玩家被砸次数记分项
+        scoreboard objectives add temp.exploded dummy "玩家被砸次数"
+    ### 玩家被砸次数
+        scoreboard players set @a temp.exploded 0

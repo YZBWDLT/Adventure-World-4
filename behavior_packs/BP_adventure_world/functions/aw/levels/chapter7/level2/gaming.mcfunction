@@ -28,3 +28,7 @@ execute as @a at @s if block ~~80~ structure_void positioned -161 -17 110 run fu
 # --- 检查存活玩家数目 ---
 # 如果存活玩家数目为 0，则触发关卡失败函数
 execute if score alivePlayerAmount data matches 0 run function aw/levels/chapter7/level2/fail
+
+# --- 触发成就 ---
+## (1) 无作弊，(2) 成就未获取，(3) 位于(-168,-8,94)的诡异木按钮(方向参数：2)被按下 -> 躲这里不错
+execute if score hasCheat data matches 0 if score achievement.findButton2 record matches 0 if block -168 -8 94 warped_button ["facing_direction"=2,"button_pressed_bit"=true] run function aw/lib/achievements/levels/find_button_2

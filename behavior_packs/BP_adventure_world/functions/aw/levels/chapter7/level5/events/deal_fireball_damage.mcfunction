@@ -14,3 +14,9 @@
     execute as @a at @s run playsound random.explode @s
     execute as @e[type=aw:fireball] at @s run particle aw:explosion ~~~
     kill @e[type=aw:fireball]
+# 对被伤害的玩家记录被砸次数
+    scoreboard players add @a[tag=dealFireballDamage] temp.exploded 1
+# 被砸三次的玩家触发成就：(1) 无作弊，(2) 成就未获取，(3) 有被砸3次的玩家 -> 躲这里不错
+    execute if score hasCheat data matches 0 if score achievement.explode3Times record matches 0 if entity @a[scores={temp.exploded=3..}] run function aw/lib/achievements/levels/explode_3_times
+# 移除判定标签
+    tag @e remove dealFireballDamage

@@ -49,6 +49,7 @@ world.afterEvents.projectileHitEntity.subscribe(event => {
         // 击中骷髅或流浪者后，直接秒杀
         if (immediateKill.includes(hitEntity?.typeId)) {
             hitEntity.applyDamage(1000, { cause: "entityAttack", damagingEntity: player });
+            player.runCommand("scoreboard players add skeletonShotAmount data 1");
         }
         // 击中骷髅王后，施加额外伤害
         else if (dealsExtraDamage.includes(hitEntity?.typeId)) {
@@ -129,6 +130,13 @@ world.afterEvents.entityHealthChanged.subscribe(event => {
         printHealth(entity, healthValue);
     }
 });
+
+// 当玩家受伤后，触发函数
+world.afterEvents.entityHurt.subscribe(event => {
+    if (event.hurtEntity.typeId === "minecraft:player") {
+        event.hurtEntity.runCommand("function aw/entities/player/hurt")
+    }
+})
 
 // world.afterEvents.entityHitEntity.subscribe(event=>{
 //     world.sendMessage(`hitEntity = ${event.hitEntity.typeId}`);

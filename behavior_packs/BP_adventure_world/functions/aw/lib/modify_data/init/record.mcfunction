@@ -6,18 +6,14 @@
     ## 单人
         ### 神剑的恩惠
             scoreboard players set achievement.singlePlayer.finishMap record 0
+        ### 出神入化
+            scoreboard players set achievement.singlePlayer.getSGrade record 0
         ### 让田英睡觉去吧！
             scoreboard players set achievement.singlePlayer.neverDied record 0
-        ### 挑战自我
-            scoreboard players set achievement.singlePlayer.difficulty2 record 0
-        ### 举步维艰
-            scoreboard players set achievement.singlePlayer.difficulty3 record 0
-        ### 这不可能！
-            scoreboard players set achievement.singlePlayer.difficulty4 record 0
+        ### 狙击手的对决
+            scoreboard players set achievement.singlePlayer.sniperDuel record 0
         ### 别挡道，我很急！
             scoreboard players set achievement.singlePlayer.speedrun record 0
-        ### 纯天然
-            scoreboard players set achievement.singlePlayer.noPotion record 0
     ## 多人
         ### 齐心协力
             scoreboard players set achievement.multiPlayer.finishMap record 0
@@ -29,8 +25,35 @@
             scoreboard players set achievement.multiPlayer.speedrun record 0
         ### 躺赢
             scoreboard players set achievement.multiPlayer.killLessThan50 record 0
-        ### 全靠我带飞
-            scoreboard players set achievement.multiPlayer.killMoreThan200 record 0
+    ## 关卡
+        ### 别问，问就是陷阱
+            scoreboard players set achievement.noTrap record 0
+        ### 全身而退
+            scoreboard players set achievement.noHurt1 record 0
+        ### 全身而退 II
+            scoreboard players set achievement.noHurt2 record 0
+        ### 身轻如燕
+            scoreboard players set achievement.noLeatherBoots record 0
+        ### 我以为挂机池呢
+            scoreboard players set achievement.noMonsterKilled record 0
+        ### 太亢奋了
+            scoreboard players set achievement.killBossRapidly record 0
+        ### 闪避点满
+            scoreboard players set achievement.notFired record 0
+        ### 出师未捷身先死
+            scoreboard players set achievement.failAtFirst record 0
+        ### 让开，这里归我了！
+            scoreboard players set achievement.layInCoffin record 0
+        ### 骷髅王的宝藏
+            scoreboard players set achievement.getTreasure record 0
+        ### 躲这里不错
+            scoreboard players set achievement.findButton1 record 0
+        ### 上房揭瓦
+            scoreboard players set achievement.findButton2 record 0
+        ### 耐砸王
+            scoreboard players set achievement.explode3Times record 0
+        ### 还是跑酷大佬
+            scoreboard players set achievement.parkour record 0
 # 统计
     ## 通关数据
         ### 地图通关次数

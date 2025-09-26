@@ -29,3 +29,4 @@ scoreboard players set temp.remainingTime time 180
 scoreboard players random temp.nextMonster time 3 10
 scoreboard players set temp.nextMonsterType data 0
 scoreboard players set temp.nextMonsterPos data 0
+scoreboard players set temp.playerKilledMonster data 0

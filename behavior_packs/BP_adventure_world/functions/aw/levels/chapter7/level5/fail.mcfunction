@@ -27,5 +27,7 @@ scoreboard players reset temp.skillType data
 scoreboard players reset temp.spawnMonsterGroup data
 scoreboard players reset temp.bossHealthOneSecond data
 scoreboard objectives remove temp.respawnTime
+scoreboard players reset temp.playerFired data
+scoreboard objectives remove temp.exploded
 ## 重新允许玩家此时使用退出试炼
 scoreboard players set allowQuit data 1

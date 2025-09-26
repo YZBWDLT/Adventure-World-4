@@ -18,6 +18,8 @@ structure load aw:6_4_no_lava -89 -40 21
 function aw/lib/events/play_music
 ## 启用时间流逝
 function aw/lib/modify_data/timeline/enable_time_lapse
+## 获取成就：(1) 无作弊，(2) 成就未获取，(3) 玩家未杀死怪物 -> 我以为挂机池呢
+execute if score hasCheat data matches 0 if score achievement.killBossRapidly record matches 0 if score temp.levelCountdown time matches 0.. run function aw/lib/achievements/levels/kill_boss_rapidly
 ## 移除临时变量
 scoreboard players reset temp.bossHealthTwoThird data
 scoreboard players reset temp.bossHealthOneThird data
@@ -28,5 +30,6 @@ scoreboard players reset temp.nextMonsterPos data
 scoreboard players reset temp.healBossCountdown time
 scoreboard players reset temp.teleportCountdown time
 scoreboard objectives remove temp.respawnTime
+scoreboard players reset temp.levelCountdown time
 ## 禁止玩家此时使用退出试炼
 scoreboard players set allowQuit data 0

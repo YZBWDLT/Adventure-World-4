@@ -30,7 +30,7 @@ execute if score temp.breakFlag data matches 0 if score allowQuit data matches 0
 execute if score temp.breakFlag data matches 0 if score allowQuit data matches 0 run scoreboard players set temp.breakFlag data 1
 
 # 否则，触发暂停功能，并在多人下通告全体谁使用了暂停
-execute if score temp.breakFlag data matches 0 if score playerAmount data matches 2.. run tellraw @a {"rawtext":[{"translate":"§a%%s 使用了退出试炼，请全体玩家进行选择……","with":{"rawtext":[{"selector":"@s"}]}}]}
+execute if score temp.breakFlag data matches 0 if score playerAmount data matches 2.. run tellraw @a {"rawtext":[{"translate":"§a%%s 使用了退出试炼，请全体玩家进行选择......","with":{"rawtext":[{"selector":"@s"}]}}]}
 execute if score temp.breakFlag data matches 0 run function aw/levels/pause/start
 
 # 移除临时变量

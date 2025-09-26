@@ -30,3 +30,8 @@ execute if score wave data matches 2 if score tick time matches 8 run function a
 
 # --- 当 BOSS 血量在 1/2 以下时，触发第 2 波二阶段，并播放相应动画 ---
 execute if score wave data matches 2 if score temp.stage data matches 1 if score @e[type=evocation_illager,c=1] health < temp.bossHealthOneSecond data run function aw/levels/chapter7/level5/timelines/turn_stage_anim
+
+# --- 检查玩家进入火或岩浆 ---
+execute as @a at @s if block ~~~ fire run scoreboard players set temp.playerFired data 1
+execute as @a at @s if block ~~~ lava run scoreboard players set temp.playerFired data 1
+execute as @a at @s if block ~~~ flowing_lava run scoreboard players set temp.playerFired data 1
