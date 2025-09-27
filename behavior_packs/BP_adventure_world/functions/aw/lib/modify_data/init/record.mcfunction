@@ -107,3 +107,5 @@
             scoreboard players set bestTime.multiPlayer.difficulty4.second record 59
         ## 多人模式的最佳游戏时间（难度 4，单位：分钟）
             scoreboard players set bestTime.multiPlayer.difficulty4.minute record 9999
+    ## 成就数量
+        scoreboard players set achievement record 0

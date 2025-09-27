@@ -9,6 +9,7 @@ execute unless score developerMode settings matches 1 run tellraw @s { "rawtext"
 execute if score developerMode settings matches 1 run fill -29 3 -45 -25 1 -45 air
 execute if score developerMode settings matches 1 run fill -29 3 -45 -28 3 -45 bookshelf
 execute if score developerMode settings matches 1 run structure load aw:lecture_no_book -27 1 -45
+execute if score developerMode settings matches 1 run structure load aw:floor_1 -29 0 -50
 execute if score developerMode settings matches 1 run setblock -25 7 -51 air
 execute if score developerMode settings matches 1 run fill -11 1 85 -20 2 87 air
 ## 清除所有 NPC

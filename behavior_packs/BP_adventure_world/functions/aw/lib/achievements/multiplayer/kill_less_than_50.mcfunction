@@ -5,3 +5,5 @@
     tellraw @a {"rawtext":[{"translate":"你们已获得成就 §b[躺赢]§f ！"}]}
 # 调整记录
     scoreboard players set achievement.multiPlayer.killLessThan50 record 1
+# 添加成就完成记录
+    scoreboard players add achievement record 1

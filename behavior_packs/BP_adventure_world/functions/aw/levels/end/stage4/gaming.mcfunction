@@ -26,11 +26,12 @@
 
 # --- 玩家准备阶段 ---
 
-## [120] 提示玩家准备，显示物品栏 HUD，并给予玩家所有物品
+# [120] 提示玩家准备，显示物品栏 HUD，并给予玩家所有物品
 
     execute if score timeline time matches 120 run tellraw @a {"rawtext":[{"translate":"§a请提前准备，试炼将在 15 秒后开始"}]}
     execute if score timeline time matches 120 run function aw/levels/end/stage4/events/supply_items
     execute if score timeline time matches 120 run hud @a reset hotbar
+    execute if score timeline time matches 120 run hud @a reset progress_bar
 
 # [420] 解禁玩家，触发关卡
     execute if score timeline time matches 420 run function aw/lib/events/stop_dialogue_keep

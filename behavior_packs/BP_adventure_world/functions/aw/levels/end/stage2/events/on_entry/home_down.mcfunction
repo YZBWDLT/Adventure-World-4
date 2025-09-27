@@ -12,8 +12,13 @@
     summon aw:text_display "§a下一个 §l→" -29 1 -45
 
     summon aw:text_display "§a查看统计数据" -26 1 -51
+    summon aw:text_display "§a查看评分细则" -28 1 -51
 
     summon aw:text_display "§b米云溪的" -27 1.0 -44.9
     summon aw:text_display "§b翻译手稿" -27 0.75 -44.9
+
+    execute if score achievement record matches 0..11 run summon aw:text_display "§7加油完成更多成就吧！" -27 3 -52
+    execute if score achievement record matches 12..23 run summon aw:text_display "§f加油！你已经完成一半成就了！" -27 3 -52
+    execute if score achievement record matches 24 run summon aw:text_display "§e恭喜！你已完成了所有成就！" -27 3 -52
 
     function aw/levels/end/stage2/events/show_achievement

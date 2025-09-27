@@ -48,6 +48,8 @@
             execute if block -29 2 -45 birch_button ["facing_direction"=2,"button_pressed_bit"=true] run function aw/levels/end/stage2/events/button_push/next_achievement
     ## 若玩家按下了楼下的统计数据按钮，则显示统计数据
         execute if block -26 2 -51 birch_button ["facing_direction"=1,"button_pressed_bit"=true] run function aw/levels/end/stage2/events/button_push/stats
+    ## 若玩家按下了楼下的评分细则按钮，则显示评分细则
+        execute positioned -28 2 -51 if block -28 2 -51 birch_button ["facing_direction"=1,"button_pressed_bit"=true] run function aw/levels/end/stage2/events/button_push/grade_standard
 
 # --- 张宇商店 ---
     ## 若有玩家在张宇商店，且上一刻无玩家在张宇商店时，触发玩家离开张宇商店事件
@@ -58,3 +60,7 @@
 # --- 获取成就 ---
     ## (1) 无作弊，(2) 成就未获取，(3) 位于(35,25,-38)的位置有玩家 -> 还是跑酷大佬
         execute if score hasCheat data matches 0 if score achievement.parkour record matches 0 if entity @a[x=35,y=25,z=-38,dx=0,dy=0,dz=0] run function aw/lib/achievements/levels/parkour
+
+# --- 当玩家完成了全部 24 个成就后，发射场内的烟花 ---
+    # 每秒执行 1 次
+        execute if score tick time matches 15 if score achievement record matches 24 run function aw/levels/end/stage2/timelines/launch_dispenser

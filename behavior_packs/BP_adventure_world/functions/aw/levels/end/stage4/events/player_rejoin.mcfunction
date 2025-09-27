@@ -22,3 +22,4 @@ inputpermission set @s movement disabled
 # 设置玩家的 HUD，120刻后重新显示物品栏
 hud @s hide all
 execute if score timeline time matches 120.. run hud @s reset hotbar
+execute if score timeline time matches 120.. run hud @s reset progress_bar

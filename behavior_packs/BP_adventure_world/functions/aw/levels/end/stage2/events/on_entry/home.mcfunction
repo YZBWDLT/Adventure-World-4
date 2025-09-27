@@ -5,3 +5,8 @@
 
 # 移除门口的文本展示实体
     event entity @e[type=aw:text_display,x=-27,y=2,z=-39,r=1.5] aw:remove_immediately
+
+# 当玩家成就达到对应数量后，加载对应结构
+    execute if score achievement record matches 0..11 run structure load aw:floor_1 -29 0 -50
+    execute if score achievement record matches 12..23 run structure load aw:floor_2 -29 0 -50
+    execute if score achievement record matches 24 run structure load aw:floor_3 -29 0 -50

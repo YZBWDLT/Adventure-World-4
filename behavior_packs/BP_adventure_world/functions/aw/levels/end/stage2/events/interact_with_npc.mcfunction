@@ -63,7 +63,7 @@
     ## Neptune exe1591
         execute if entity @s[has_property={aw:is_author=true,aw:skin=22}] run tellraw @a {"rawtext":[{"translate":"* §a海王星（Neptune exe1591）： §7一把下来击杀数0，硫化银还是太强了（"}]}
     ## CommandBlock228
-        execute if entity @s[has_property={aw:is_author=true,aw:skin=23}] run tellraw @a {"rawtext":[{"translate":"* §a命令块（CommandBlock228）： §7把字刻在石头上会有奇效。§8[原文如此]"}]}
+        execute if entity @s[has_property={aw:is_author=true,aw:skin=23}] run tellraw @a {"rawtext":[{"translate":"* §a命令块（CommandBlock228）： §7现在已经有两个巨作向我们说明了把字刻在石头上的重要性和有效性。"}]}
     ## XiaomLuoch
         execute if entity @s[has_property={aw:is_author=true,aw:skin=24}] run tellraw @a {"rawtext":[{"translate":"* §a残梦（XiaomLuoch）： §7作为手残党好羡慕大家的PVE实力awa，你也一定很厉害吧！"}]}
     ## wang9800

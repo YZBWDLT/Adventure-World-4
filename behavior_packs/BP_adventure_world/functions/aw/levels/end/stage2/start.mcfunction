@@ -21,6 +21,8 @@
         setblock -29 2 -45 birch_button ["facing_direction"=2,"button_pressed_bit"=false]
     ## 楼下：统计按钮
         setblock -26 2 -51 birch_button ["facing_direction"=1,"button_pressed_bit"=false]
+    ## 楼下：评分细则按钮
+        setblock -28 2 -51 birch_button ["facing_direction"=1,"button_pressed_bit"=false]
     ## 楼上：制作人员名单按钮
         setblock -25 7 -51 birch_button ["facing_direction"=1,"button_pressed_bit"=false]
     ## 楼下：米云溪的翻译手稿
@@ -57,3 +59,5 @@
         scoreboard players set temp.statPage data 1
     ## 作者 NPC 交互使用的条件
         scoreboard players set temp.condition data 1
+    ## 当前在发射的烟花
+        scoreboard players set temp.currentDispenser data 1

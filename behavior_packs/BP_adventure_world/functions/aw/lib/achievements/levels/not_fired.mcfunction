@@ -7,3 +7,5 @@
     scoreboard players set achievement.notFired record 1
 # 播放音效
     function aw/lib/modify_data/sound/random_levelup
+# 添加成就完成记录
+    scoreboard players add achievement record 1
