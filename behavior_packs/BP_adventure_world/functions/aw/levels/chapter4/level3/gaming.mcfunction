@@ -26,4 +26,4 @@ execute as @a at @s if block ~~80~ structure_void positioned -156 -11 14 run fun
 execute if score alivePlayerAmount data matches 0 run function aw/levels/chapter4/level3/fail
 
 # --- 检查玩家穿着靴子 ---
-execute if entity @a[hasitem={item=leather_boots,location=slot.armor.feet}] run scoreboard players set temp.playerEquippedLeatherBoots data 1
+execute if entity @a[hasitem={item=leather_boots,location=slot.armor.feet},scores={spectator=!2}] run scoreboard players set temp.playerEquippedLeatherBoots data 1

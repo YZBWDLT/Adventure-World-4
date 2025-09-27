@@ -25,3 +25,7 @@ summon aw:spawner -175 -10 23 0 0 aw:spawn_guardian
 # --- 水位上涨 ---
 structure load aw:3_4_layer3 -178 6 18 0_degrees none layer_by_layer 5.00
 titleraw @a subtitle {"rawtext":[{"translate":"第 §a4 §f波 | §c注意！水位上涨！"}]}
+
+# --- 获取成就 ---
+## (1) 无作弊，(2) 成就未获取，(3) 玩家未受伤 -> 全身而退 II
+execute if score hasCheat data matches 0 if score achievement.noHurt2 record matches 0 if score temp.playerHurt data matches 0 run function aw/lib/achievements/levels/no_hurt_2

@@ -55,7 +55,7 @@
             "aw:author_ibukreev": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 8, "aw:geometry": "slim" } },
             "aw:author_kianakasnala947": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 9, "aw:geometry": "slim" } },
             "aw:author_xc13599305": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 10, "aw:geometry": "slim" } },
-            "aw:author_hfpa0117": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 11, "aw:geometry": "default" } },
+            "aw:author_hfpa0117": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 11, "aw:geometry": "slim" } },
             "aw:author_ender5207541": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 12, "aw:geometry": "slim" } },
             "aw:author_rustyabyss29193": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 13, "aw:geometry": "slim" } },
             "aw:author_enderlife5409": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 14, "aw:geometry": "slim" } },
