@@ -37,7 +37,7 @@ summon aw:text_display "§a§l向前走，进入信标柱以开始游戏" 43 23.
 
 summon aw:text_display "§7§l为保证游戏体验，请提前进行如下设置：" 43 26.0 108
 summon aw:text_display "§7* §b音频 - 音乐§7调至§b100§7" 43 25.3 108
-summon aw:text_display "§7* §b辅助功能 - 文本背景不透明度§7调至§b0%§7§o（如有的话请调整）" 43 25.0 108
+summon aw:text_display "§7* §b可访问性 - 文本背景不透明度§7调至§b0%§7§o（如有的话请调整）" 43 25.0 108
 
 summon aw:text_display "§b§l剧情模式" 41 29.2 86
 summon aw:text_display "§7* 承接前作剧情，除战斗外也有较长剧情流程" 41 28.7 86

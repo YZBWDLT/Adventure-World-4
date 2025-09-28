@@ -119,10 +119,11 @@
         execute if score temp.creditPage data matches 12 run summon aw:text_display "§b小意§7（xiaoyia666）" -25 7.3 -51
         execute if score temp.creditPage data matches 12 run summon aw:text_display "§712/13 | 括号内为 XBoxID | 不按贡献排序" -25 7.0 -51
     ## 第 13 页
-        execute if score temp.creditPage data matches 13 run summon aw:text_display "§a§l--- 特别鸣谢 ---" -25 8.5 -51
-        execute if score temp.creditPage data matches 13 run summon aw:text_display "§7xhduoduobaby【感谢你一年来无偿为我们提供服务器做地图！！帮大忙了！】" -25 8.2 -51
-        execute if score temp.creditPage data matches 13 run summon aw:text_display "§b晨风§7（ChenfengAB）【感谢你帮忙投稿！】" -25 7.9 -51
-        execute if score temp.creditPage data matches 13 run summon aw:text_display "§bProjectXero§7【再次感谢你帮忙找屏蔽词！】" -25 7.6 -51
-        execute if score temp.creditPage data matches 13 run summon aw:text_display "§bE尘§7（E1cheng）【感谢你在最后的时刻帮我改好绳枪！】" -25 7.3 -51
+        execute if score temp.creditPage data matches 13 run summon aw:text_display "§a§l--- 特别鸣谢 ---" -25 8.8 -51
+        execute if score temp.creditPage data matches 13 run summon aw:text_display "§7xhduoduobaby【感谢你一年来无偿为我们提供服务器做地图！！帮大忙了！】" -25 8.5 -51
+        execute if score temp.creditPage data matches 13 run summon aw:text_display "§b晨风§7（ChenfengAB）【感谢你帮忙投稿！】" -25 8.2 -51
+        execute if score temp.creditPage data matches 13 run summon aw:text_display "§bProjectXero§7【再次感谢你帮忙找屏蔽词！】" -25 7.9 -51
+        execute if score temp.creditPage data matches 13 run summon aw:text_display "§bE尘§7（E1cheng）【感谢你在最后的时刻帮我改好绳枪！】" -25 7.6 -51
+        execute if score temp.creditPage data matches 13 run summon aw:text_display "§b萝卜§7【感谢你的 ModSAPI，方便我们同步到中国版！】" -25 7.6 -51
         execute if score temp.creditPage data matches 13 run summon aw:text_display "§713/13 | 括号内为 XBoxID | 不按贡献排序" -25 7.0 -51
 

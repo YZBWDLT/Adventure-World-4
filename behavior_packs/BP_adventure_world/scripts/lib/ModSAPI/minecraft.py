@@ -46,16 +46,6 @@ class SAPIS(ServerSystem):
         self.ListenForEvent(serverApi.GetEngineNamespace(), serverApi.GetEngineSystemName(), "CustomCommandTriggerServerEvent", self, self.customCommand)
         self.ListenForEvent("SAPI", "SAPI_C", "ActionFormResponse", self, self.responseActionForm)
         self.ListenForEvent("SAPI", "SAPI_C", "ModalFormResponse", self, self.responseModalForm)
-    
-    def debug(self, data):
-        global world
-        msg = data['message']
-        if msg.find('debug ') == 0:
-            msg = msg[6:]
-            if not world:
-                world = getWorld()
-            print(msg)
-            exec(compile(msg, "<string>", "exec"))
 
     @staticmethod
     def Init(__data):

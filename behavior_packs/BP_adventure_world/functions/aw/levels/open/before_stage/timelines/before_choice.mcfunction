@@ -17,3 +17,6 @@ execute if entity @a[x=43,y=27,z=86,dx=0,dy=2,dz=0] run function aw/levels/open/
 
 ## 启动战斗模式
 execute if entity @a[x=45,y=27,z=86,dx=0,dy=2,dz=0] run function aw/levels/open/before_stage/events/start_combat_mode
+
+## 调整游戏规则
+function aw/lib/modify_data/init/gamerule

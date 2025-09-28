@@ -52,6 +52,7 @@ def projectileHitEntityFunction(event):
         # 击中骷髅或流浪者后，直接秒杀
         if hitEntity and hitEntity.typeId in immediateKill:
             hitEntity.applyDamage(1000, {"cause": "entityAttack", "damagingEntity": player})
+            player.runCommand("scoreboard players add skeletonShotAmount data 1")
             event.projectile.remove() # [独有] 防止箭穿过骷髅
         # 击中骷髅王后，施加额外伤害
         elif hitEntity and hitEntity.typeId in dealsExtraDamage:
