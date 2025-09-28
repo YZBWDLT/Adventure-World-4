@@ -1,0 +1,94 @@
+{
+    "format_version": "1.18.20",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "minecraft:piglin_brute",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },  
+        "components": {
+            "minecraft:is_hidden_when_invisible": { },
+            "minecraft:collision_box": { "width": 0.6, "height": 1.9 },
+            "minecraft:type_family": { "family": [ "piglin", "adult_piglin", "piglin_brute", "monster" ] },
+            "minecraft:conditional_bandwidth_optimization": { },
+            "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+                        "cause": "lava",
+                        "damage_per_tick": 4
+                    }
+                ]
+            },
+            "minecraft:navigation.walk": { "can_path_over_water": true, "can_open_doors": true },
+            "minecraft:annotation.open_door": { },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:nameable": { "always_show": true },
+            "minecraft:despawn": {},
+            "minecraft:behavior.hurt_by_target": { "priority": 1 },
+            "minecraft:behavior.random_stroll": { "priority": 7, "speed_multiplier": 0.6 },
+            "minecraft:behavior.look_at_player": { "priority": 8, "look_distance": 8 },
+            "minecraft:behavior.random_look_around": { "priority": 9 },
+            "minecraft:physics": {},
+            "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+            "minecraft:follow_range": { "value": 64 },
+            "minecraft:behavior.melee_attack": { "priority": 4, "speed_multiplier": 1, "track_target": true },
+            "minecraft:attack": { "damage": 4 },
+            "minecraft:equipment": { "table": "loot_tables/entities/piglin_brute_gear.json" },
+            "minecraft:variant": { "value": 1 },
+            "minecraft:angry": {
+                "duration": 9999,
+                "broadcast_anger": true,
+                "broadcast_range": 16,
+                "broadcast_targets": [ "piglin" ],
+                "filters": { "all_of": [ { "test": "is_family", "subject": "other", "operator": "!=", "value": "piglin" } ] },
+                "angry_sound": "angry",
+                "sound_interval": { "range_min": 2.0, "range_max": 5.0 }
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 1,
+                "entity_types": [
+                    { "filters": { "test": "is_family", "subject": "other", "value": "player" }, "max_dist": 16 },
+                    { "filters": { "test": "is_family", "subject": "other", "value": "villager" }, "max_dist": 16 }
+                ]
+            }
+        },
+  
+        "events": {
+            "minecraft:entity_spawned": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_1": { "add": { "component_groups": [ "level_1" ] } },
+			"aw:level_2": { "add": { "component_groups": [ "level_2" ] } },
+			"aw:level_3": { "add": { "component_groups": [ "level_3" ] } },
+			"aw:level_4": { "add": { "component_groups": [ "level_4" ] } }
+        },
+        "component_groups": {
+			"level_1": {
+                "minecraft:attack": { "damage": 10 },
+                "minecraft:health": { "value": 200, "max": 200 },
+                "minecraft:movement": { "value": 0.32 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_axe/leather_armor.json" }
+			},
+			"level_2": {
+                "minecraft:attack": { "damage": 12 },
+                "minecraft:health": { "value": 300, "max": 300 },
+                "minecraft:movement": { "value": 0.35 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_axe/iron_armor.json" }
+			},
+			"level_3": {
+                "minecraft:attack": { "damage": 14 },
+                "minecraft:health": { "value": 400, "max": 400 },
+                "minecraft:movement": { "value": 0.38 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_axe/diamond_armor.json" }
+			},
+            "level_4": {
+                "minecraft:attack": { "damage": 16 },
+                "minecraft:health": { "value": 500, "max": 500 },
+                "minecraft:movement": { "value": 0.40 },
+                "minecraft:equipment": { "table": "loot_tables/equipments/armor_with_axe/netherite_armor.json" }
+			}
+        }
+    }
+}

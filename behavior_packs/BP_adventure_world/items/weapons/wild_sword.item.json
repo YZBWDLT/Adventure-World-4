@@ -1,0 +1,20 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aw:wild_sword",
+            "menu_category": { "category": "equipment", "group": "itemGroup.name.sword", "is_hidden_in_commands": false }
+        },
+        "components": {
+            "minecraft:damage": { "value": 25 },
+            "minecraft:enchantable": { "slot": "sword", "value": 10 },
+            "minecraft:can_destroy_in_creative": false,
+            "minecraft:digger": { "destroy_speeds": [ { "block": "minecraft:web", "speed": 15 }, { "block": "minecraft:bamboo", "speed": 30 } ], "use_efficiency": true },
+            "minecraft:icon": "wild_sword",
+            "minecraft:max_stack_size": 1,
+            "minecraft:glint": true,
+            "minecraft:hand_equipped": true,
+            "minecraft:hover_text_color": "yellow"
+        }
+    }
+}

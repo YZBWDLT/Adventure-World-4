@@ -1,0 +1,43 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "aw:door",
+            "is_experimental": false,
+            "is_spawnable": false,
+            "is_summonable": true,
+            "properties": {
+                "aw:is_open": { "type": "bool", "default": true, "client_sync": true },
+                "aw:type": { "type": "int", "range": [ 1, 7 ], "default": 1, "client_sync": true }
+            }
+        },
+        "components": {
+            "minecraft:physics": { },
+            "minecraft:collision_box": { "height": 0, "width": 0 },
+            "minecraft:type_family": { "family": [ "inanimate", "door" ] },
+            "minecraft:persistent": { },
+            "minecraft:nameable": { },
+            "minecraft:damage_sensor": { "triggers": [ { "cause": "all", "deals_damage": false } ] },
+            "minecraft:knockback_resistance": { "value": 1, "max": 1 }
+        },
+        "events": {
+            "aw:open_door": { "set_property": { "aw:is_open": true }, "queue_command": { "command": [ "function aw/entities/door/open" ] } },
+            "aw:close_door": { "set_property": { "aw:is_open": false }, "queue_command": { "command": [ "function aw/entities/door/close" ] } },
+
+            "aw:set_desert_door": { "set_property": { "aw:type": 1 } },
+            "aw:set_forest_door": { "set_property": { "aw:type": 2 } },
+            "aw:set_lake_door": { "set_property": { "aw:type": 3 } },
+            "aw:set_frost_door": { "set_property": { "aw:type": 4 } },
+            "aw:set_redstone_door": { "set_property": { "aw:type": 5 } },
+            "aw:set_mountain_door": { "set_property": { "aw:type": 6 } },
+            "aw:set_final_door": { "set_property": { "aw:type": 7 } },
+
+            "aw:remove_immediately": { "add": { "component_groups": [ "remove_immediately" ] } }
+        },
+        "component_groups": {
+            "remove_immediately": {
+                "minecraft:instant_despawn": { }
+            }
+        }
+    }
+}

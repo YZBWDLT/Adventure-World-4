@@ -1,1 +1,0 @@
-damage @s 5 entity_attack entity @p

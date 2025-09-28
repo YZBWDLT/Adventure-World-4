@@ -1,0 +1,35 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "aw:door",
+            "render_controllers": [ "controller.render.door" ],
+            "materials": { "default": "entity_alphatest" },
+            "geometry": { "default": "geometry.door" },
+            "textures": {
+                "desert": "textures/entity/door/desert",
+                "forest": "textures/entity/door/forest",
+                "lake": "textures/entity/door/lake",
+                "frost": "textures/entity/door/frost",
+                "redstone": "textures/entity/door/redstone",
+                "mountain": "textures/entity/door/mountain",
+                "final": "textures/entity/door/final"
+            },
+
+            "scripts": {
+                "pre_animation": [
+                    "variable.type=query.property('aw:type');",
+                    "variable.is_open=query.property('aw:is_open');"
+                ],
+                "animate": [
+                    "controller_open"
+                ]
+            },
+            "animations": {
+                "controller_open": "controller.animation.door.open",
+                "open": "animation.door.open",
+                "close": "animation.door.close"
+            }
+        }
+    }
+}

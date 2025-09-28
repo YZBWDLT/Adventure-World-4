@@ -1,0 +1,121 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "aw:npc",
+            "is_experimental": false,
+            "is_spawnable": true,
+            "is_summonable": true,
+            "properties": {
+                "aw:skin": { "type": "int", "range": [ 0, 24 ], "default": 0, "client_sync": true },
+                "aw:geometry": { "type": "enum", "values": [ "default", "slim" ], "default": "default", "client_sync": true },
+                
+                "aw:state": { "type": "enum", "values": [ "stand", "sit", "lie", "sit_raising_head", "sleep" ], "default": "stand", "client_sync": true },
+                "aw:animation": { "type": "enum", "values": [  "none", "wave_hand", "speak", "applause", "place_block", "look_around", "nod", "shake_head", "bad_smile", "confuse", "point", "think" ], "default": "none", "client_sync": true },
+                "aw:speak_mode": { "type": "int", "range": [ 1, 4 ], "default": 1, "client_sync": true },
+
+                "aw:is_author": { "type": "bool", "default": false, "client_sync": true },
+                "aw:see_player": { "type": "bool", "default": false, "client_sync": false }
+            }
+        },
+        "components": {
+            "minecraft:physics": { "has_collision": true, "has_gravity": true },
+            "minecraft:collision_box": { "height": 1.8, "width": 0.6 },
+            "minecraft:type_family": { "family": [ "npc" ] },
+            "minecraft:knockback_resistance": { "value": 1 },
+            "minecraft:persistent": { },
+            "minecraft:health": { "value": 20, "max": 20 },
+            "minecraft:nameable": { "allow_name_tag_renaming": true, "always_show": true },
+            "minecraft:damage_sensor": { "triggers": [ { "cause": "all", "deals_damage": false } ] },
+            "minecraft:equipment": { "slot_drop_chance": [ { "slot": "slot.weapon.mainhand", "drop_chance": 0 } ] },
+
+            "minecraft:movement.basic": { },
+            "minecraft:movement": { "value": 0 },
+            "minecraft:interact": { "interactions": [ { "interact_text": "action.interact.chat", "on_interact": { "event": "aw:interacted" }, "swing": true } ] }
+        },
+        "events": {
+            "minecraft:entity_spawned": { "add": { "component_groups": [ "should_see_player" ] } },
+
+            "aw:npc_hanlinqing": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 0, "aw:geometry": "slim" } },
+            "aw:npc_chenqi": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 1, "aw:geometry": "default" } },
+            "aw:npc_zhaoxiangqian": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 2, "aw:geometry": "slim" } },
+            "aw:npc_liqing": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 3, "aw:geometry": "slim" } },
+            "aw:npc_miyunxi": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 4, "aw:geometry": "slim" } },
+            "aw:npc_linan": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 5, "aw:geometry": "default" } },
+            "aw:npc_zhangyu": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 6, "aw:geometry": "default" } },
+            "aw:npc_tianying": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": false, "aw:skin": 7, "aw:geometry": "default" } },
+            "aw:author_yzbwdlt": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 0, "aw:geometry": "default" } },
+            "aw:author_andy7343": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 1, "aw:geometry": "default" } },
+            "aw:author_greeleaf": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 2, "aw:geometry": "default" } },
+            "aw:author_pigeonki": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 3, "aw:geometry": "slim" } },
+            "aw:author_kriswenyu": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 4, "aw:geometry": "slim" } },
+            "aw:author_pumpkinjui": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 5, "aw:geometry": "default" } },
+            "aw:author_xiaoshu512": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 6, "aw:geometry": "slim" } },
+            "aw:author_tuffy2020china": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 7, "aw:geometry": "slim" } },
+            "aw:author_ibukreev": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 8, "aw:geometry": "slim" } },
+            "aw:author_kianakasnala947": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 9, "aw:geometry": "slim" } },
+            "aw:author_xc13599305": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 10, "aw:geometry": "slim" } },
+            "aw:author_hfpa0117": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 11, "aw:geometry": "slim" } },
+            "aw:author_ender5207541": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 12, "aw:geometry": "slim" } },
+            "aw:author_rustyabyss29193": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 13, "aw:geometry": "slim" } },
+            "aw:author_enderlife5409": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 14, "aw:geometry": "slim" } },
+            "aw:author_yiyishi54188": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 15, "aw:geometry": "default" } },
+            "aw:author_freeorange114": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 16, "aw:geometry": "slim" } },
+            "aw:author_kuanpan_9527": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 17, "aw:geometry": "default" } },
+            "aw:author_longlongxiaotao": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 18, "aw:geometry": "default" } },
+            "aw:author_unhandyshark856": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 19, "aw:geometry": "slim" } },
+            "aw:author_tck1122": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 20, "aw:geometry": "slim" } },
+            "aw:author_lanos212": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 21, "aw:geometry": "default" } },
+            "aw:author_neptune_exe1591": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 22, "aw:geometry": "default" } },
+            "aw:author_commandblock228": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 23, "aw:geometry": "default" } },
+            "aw:author_xiaomluoch": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 24, "aw:geometry": "slim" } },
+
+            "aw:state_stand": { "set_property": { "aw:state": "stand" } },
+            "aw:state_sit": { "set_property": { "aw:state": "sit" } },
+            "aw:state_sit_raising_head": { "set_property": { "aw:state": "sit_raising_head" } },
+            "aw:state_lie": { "set_property": { "aw:state": "lie" } },
+            "aw:state_sleep": { "set_property": { "aw:state": "sleep" } },
+
+            "aw:animation_no_animation": { "set_property": { "aw:animation": "none" }, "remove": { "component_groups": [ "0.5_seconds", "1.5_seconds", "2_seconds", "4_seconds" ] } },
+            "aw:animation_wave_hand": { "set_property": { "aw:animation": "wave_hand" }, "add": { "component_groups": [ "1.5_seconds" ] } },
+            "aw:animation_speak": { "set_property": { "aw:animation": "speak", "aw:speak_mode": "math.random_integer(1, 4)" }, "add": { "component_groups": [ "2_seconds" ] } },
+            "aw:animation_applause": { "set_property": { "aw:animation": "applause" }, "add": { "component_groups": [ "2_seconds" ] } },
+            "aw:animation_place_block": { "set_property": { "aw:animation": "place_block" }, "add": { "component_groups": [ "1.5_seconds" ] } },
+            "aw:animation_look_around": { "set_property": { "aw:animation": "look_around" }, "add": { "component_groups": [ "2_seconds" ] } },
+            "aw:animation_nod": { "set_property": { "aw:animation": "nod" }, "add": { "component_groups": [ "0.5_seconds" ] } },
+            "aw:animation_shake_head": { "set_property": { "aw:animation": "shake_head" }, "add": { "component_groups": [ "0.5_seconds" ] } },
+            "aw:animation_bad_smile": { "set_property": { "aw:animation": "bad_smile" }, "add": { "component_groups": [ "2_seconds" ] } },
+            "aw:animation_confuse": { "set_property": { "aw:animation": "confuse" }, "add": { "component_groups": [ "2.75_seconds" ] } },
+            "aw:animation_point": { "set_property": { "aw:animation": "point" }, "add": { "component_groups": [ "2_seconds" ] } },
+            "aw:animation_think": { "set_property": { "aw:animation": "think" }, "add": { "component_groups": [ "2.75_seconds" ] } },
+
+            "aw:interacted": {
+                "queue_command": {
+                    "command": [
+                        "execute if score allowNpcInteraction data matches 1 run function aw/entities/npc/interacted"
+                    ]
+                }
+            },
+
+            "aw:see_player": {
+                "add": { "component_groups": [ "should_see_player" ] },
+                "set_property": { "aw:see_player": true }
+            },
+            "aw:ignore_player": {
+                "remove": { "component_groups": [ "should_see_player" ] },
+                "set_property": { "aw:see_player": false }
+            },
+
+            "aw:remove_immediately": { "add": { "component_groups": [ "remove_immediately" ] } }
+        },
+        "component_groups": {
+            "should_see_player": { "minecraft:behavior.look_at_player": { "priority": 0 } },
+            "remove_immediately": { "minecraft:instant_despawn": { } },
+            "0.5_seconds": { "minecraft:timer": { "time": 0.5, "looping": false, "time_down_event": { "event": "aw:animation_no_animation", "target": "self" } } },
+            "1.5_seconds": { "minecraft:timer": { "time": 1.5, "looping": false, "time_down_event": { "event": "aw:animation_no_animation", "target": "self" } } },
+            "2_seconds": { "minecraft:timer": { "time": 2.0, "looping": false, "time_down_event": { "event": "aw:animation_no_animation", "target": "self" } } },
+            "2.75_seconds": { "minecraft:timer": { "time": 2.75, "looping": false, "time_down_event": { "event": "aw:animation_no_animation", "target": "self" } } },
+            "4_seconds": { "minecraft:timer": { "time": 4.0, "looping": false, "time_down_event": { "event": "aw:animation_no_animation", "target": "self" } } }
+        }
+    }
+}

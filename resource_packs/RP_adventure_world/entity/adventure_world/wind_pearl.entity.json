@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "aw:wind_pearl",
+			"materials": { "default": "snowball" },
+			"textures": { "default": "textures/items/wind_pearl" },
+			"geometry": { "default": "geometry.item_sprite" },
+			"render_controllers": [ "controller.render.item_sprite" ],
+			"animations": { "flying": "animation.actor.billboard" },
+			"scripts": {
+				"animate": [
+					"flying"
+				]
+			}
+		}
+	}
+} 

@@ -1,0 +1,39 @@
+{
+    "resource_pack_name": "vanilla",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "wind_pearl": { "textures": "textures/items/wind_pearl" },
+        "quiver": { "textures": "textures/items/quiver" },
+
+        "normal_sword": { "textures": "textures/items/normal_sword" },
+        "steel_sword": { "textures": "textures/items/steel_sword" },
+        "wild_sword": { "textures": "textures/items/wild_sword" },
+
+        "aw_diamond_helmet": { "textures": "textures/items/diamond_helmet" },
+        "aw_diamond_chestplate": { "textures": "textures/items/diamond_chestplate" },
+        "aw_diamond_leggings": { "textures": "textures/items/diamond_leggings" },
+        "aw_diamond_boots": { "textures": "textures/items/diamond_boots" },
+        "aw_iron_helmet": { "textures": "textures/items/iron_helmet" },
+        "aw_iron_chestplate": { "textures": "textures/items/iron_chestplate" },
+        "aw_iron_leggings": { "textures": "textures/items/iron_leggings" },
+        "aw_iron_boots": { "textures": "textures/items/iron_boots" },
+
+        "potion_health": { "textures": "textures/items/potions/potion_health" },
+        "potion_growth": { "textures": "textures/items/potions/potion_growth" },
+        "potion_thrill": { "textures": "textures/items/potions/potion_thrill" },
+        "potion_turtle": { "textures": "textures/items/potions/potion_turtle" },
+        "potion_rebirth": { "textures": "textures/items/potions/potion_rebirth" },
+        "potion_purification": { "textures": "textures/items/potions/potion_purification" },
+        "potion_hibernation": { "textures": "textures/items/potions/potion_hibernation" },
+
+        "acoustic_stone_crystal": { "textures": "textures/items/acoustic_stone_crystal" },
+        "quit": { "textures": "textures/items/quit" },
+        "spectate": { "textures": "textures/items/spectate" },
+
+        "change_to_creative": { "textures": "textures/items/apple_golden" },
+        "change_to_survival": { "textures": "textures/items/iron_sword" },
+        "change_to_adventure": { "textures": "textures/items/map_empty" },
+        "change_to_spectator": { "textures": "textures/items/ender_eye" }
+
+    }
+}

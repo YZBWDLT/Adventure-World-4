@@ -1,0 +1,66 @@
+## 下面为Addon专属内容的键文本翻译。作者 一只卑微的量筒。
+
+### 物品类
+item.aw:normal_sword=普通剑
+item.aw:steel_sword=钢剑
+item.aw:wild_sword=旷野之剑
+item.aw:diamond_helmet=钻石头盔
+item.aw:diamond_chestplate=钻石胸甲
+item.aw:diamond_leggings=钻石护腿
+item.aw:diamond_boots=钻石靴子
+item.aw:iron_helmet=铁头盔
+item.aw:iron_chestplate=铁胸甲
+item.aw:iron_leggings=铁护腿
+item.aw:iron_boots=铁靴子
+item.aw:wind_pearl=御风珠
+item.aw:quiver=箭袋
+item.aw:acoustic_stone_crystal=传声石结晶
+item.aw:quit=退出试炼
+item.aw:spectate=主动旁观模式
+item.aw:potion_health=治疗药水
+item.aw:potion_growth=生长药水
+item.aw:potion_thrill=亢奋药水
+item.aw:potion_turtle=神龟药水
+item.aw:potion_rebirth=重生药水
+item.aw:potion_purification=净化药水
+item.aw:potion_hibernation=休眠药水
+item.aw:change_to_creative=改为创造模式
+item.aw:change_to_survival=改为生存模式
+item.aw:change_to_adventure=改为冒险模式
+item.aw:change_to_spectator=改为旁观模式
+
+item.aw:toggle_wave=调整波数
+item.aw:kill_monsters=清除怪物
+
+### 方块类
+tile.aw:carved_stone_bricks.name=雕刻石砖
+tile.aw:carved_cracked_stone_bricks.name=雕刻裂纹石砖
+tile.aw:carved_mossy_stone_bricks.name=雕刻苔石砖
+tile.aw:red_chiseled_nether_bricks.name=红色雕纹下界砖块
+tile.aw:red_cracked_nether_bricks.name=红色裂纹下界砖块
+tile.aw:evocation_stone.name=唤魔之石
+
+### 实体类
+entity.aw:wind_pearl.name=御风珠
+entity.aw:npc.name=NPC
+entity.aw:text_display.name=悬浮文本
+entity.aw:skeleton_king.name=骷髅王
+entity.aw:blaze_king.name=烈焰之魂
+entity.aw:marker.name=标记
+entity.aw:spawner.name=怪物生成器
+entity.evoker_boss.name=§l§c唤魔法师
+entity.aw:billboard.name=公告板
+entity.aw:door.name=门
+entity.aw:destination.name=引导点
+
+### 刷怪蛋类
+item.spawn_egg.entity.aw:npc.name=NPC 刷怪蛋
+item.spawn_egg.entity.aw:text_display.name=悬浮文本 刷怪蛋
+item.spawn_egg.entity.aw:skeleton_king.name=骷髅王 刷怪蛋
+item.spawn_egg.entity.aw:blaze_king.name=烈焰之魂 刷怪蛋
+item.spawn_egg.entity.aw:billboard.name=公告板 刷怪蛋
+
+### 文本翻译类
+action.interact.chat=聊天
+action.interact.quit=退出
+action.interact.spectate=成为旁观者

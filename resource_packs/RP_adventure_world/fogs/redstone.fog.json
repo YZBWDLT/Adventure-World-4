@@ -1,0 +1,16 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:fog_settings": {
+        "description": {
+            "identifier": "aw:redstone_temple"
+        },
+        "distance": {
+            "air": {
+                "fog_start": 20,
+                "fog_end": 40,
+                "fog_color": "#afafaf",
+                "render_distance_type": "fixed"
+            }
+        }
+    }
+}

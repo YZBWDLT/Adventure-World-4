@@ -1,0 +1,22 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "aw:diamond_helmet",
+                    "functions": [
+                        {
+                            "function": "specific_enchants",
+                            "enchants": {
+                                "id": "respiration",
+                                "level": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

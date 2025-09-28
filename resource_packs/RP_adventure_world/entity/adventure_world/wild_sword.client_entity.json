@@ -1,0 +1,32 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "aw:wild_sword",
+            "render_controllers": [ "controller.render.default" ],
+            "materials": { "default": "entity_alphatest" },
+            "textures": { "default": "textures/entity/wild_sword" },
+            "geometry": { "default": "geometry.wild_sword" },
+
+            "scripts": {
+                "scale": "0.5",
+                "animate": [
+                    { "drawing": "query.property('aw:state') == 'drawing'" },
+                    { "drawn": "query.property('aw:state') == 'drawn'" }
+                ]
+            },
+            "animations": {
+                "drawing": "animation.wild_sword.drawing",
+                "drawn": "animation.wild_sword.drawn"
+            },
+            "particle_effects": {
+                "wild_sword_stage_4": "aw:wild_sword_stage_4"
+            },
+            "sound_effects": {
+                "draw_sword": "aw.draw_sword",
+                "swing_sword_1": "aw.swing_sword_1",
+                "swing_sword_2": "aw.swing_sword_2"
+            }
+        }
+    }
+}

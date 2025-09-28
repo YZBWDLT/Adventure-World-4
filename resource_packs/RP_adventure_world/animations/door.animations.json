@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.door.open": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.5,
+			"bones": {
+				"body": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.5": [0, 50, 0]
+					}
+				}
+			}
+		},
+		"animation.door.close": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.5,
+			"bones": {
+				"body": {
+					"position": {
+						"0.0": [0, 50, 0],
+						"1.5": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

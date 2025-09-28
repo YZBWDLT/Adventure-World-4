@@ -1,8 +1,0 @@
-{
-    "aw:carved_stone_bricks": { "textures": "carved_stone_bricks", "sound": "stone" },
-    "aw:carved_cracked_stone_bricks": { "textures": "carved_cracked_stone_bricks", "sound": "stone" },
-    "aw:carved_mossy_stone_bricks": { "textures": "carved_mossy_stone_bricks", "sound": "stone" },
-    "aw:red_chiseled_nether_bricks": { "textures": "red_chiseled_nether_bricks", "sound": "nether_brick" },
-    "aw:red_cracked_nether_bricks": { "textures": "red_cracked_nether_bricks", "sound": "nether_brick" },
-    "aw:evocation_stone": { "textures": { "up": "evocation_stone_top", "side": "evocation_stone_sides", "down": "evocation_stone_bottom" }, "sound": "stone" }
-}

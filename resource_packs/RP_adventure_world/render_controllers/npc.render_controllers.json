@@ -1,0 +1,57 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.aw_npc": {
+            "textures": [ "query.property('aw:is_author') ? array.author[query.property('aw:skin')] : array.not_author[query.property('aw:skin')]" ],
+            "materials": [ { "*": "material.default" } ],
+            "geometry": "array.models[variable.geometry]",
+            "arrays": {
+                "textures": {
+                    "array.author": [
+                        "texture.yzbwdlt",
+                        "texture.andy7343",
+                        "texture.greeleaf",
+                        "texture.pigeonki",
+                        "texture.kriswenyu",
+                        "texture.pumpkinjui",
+                        "texture.xiaoshu512",
+                        "texture.tuffy2020china",
+                        "texture.animalchalk2526",
+                        "texture.kianakasnala947",
+                        "texture.xc13599305",
+                        "texture.hfpa0117",
+                        "texture.ender5207541",
+                        "texture.rustyabyss29193",
+                        "texture.enderlife5409",
+                        "texture.yiyishi54188",
+                        "texture.freeorange114",
+                        "texture.kuanpan9527",
+                        "texture.longlongxiaotao",
+                        "texture.unhandyshark856",
+                        "texture.tck1122",
+                        "texture.lanos212",
+                        "texture.neptuneexe1591",
+                        "texture.commandblock228",
+                        "texture.xiaomluoch"
+                    ],
+                    "array.not_author": [
+                        "texture.npc_0",
+                        "texture.npc_1",
+                        "texture.npc_2",
+                        "texture.npc_3",
+                        "texture.miyunxi",
+                        "texture.linan",
+                        "texture.zhangyu",
+                        "texture.tianying"
+                    ]
+                },
+                "geometries": {
+                    "array.models": [
+                        "geometry.default",
+                        "geometry.slim"
+                    ]
+                }
+            }
+        }
+    }
+}

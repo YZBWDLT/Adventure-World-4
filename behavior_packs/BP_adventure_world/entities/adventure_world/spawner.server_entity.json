@@ -1,0 +1,129 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "aw:spawner",
+            "is_experimental": false,
+            "is_spawnable": false,
+            "is_summonable": true,
+            "properties": {
+                "aw:monster_type": { "type": "int", "default": 1, "range": [ 1, 26 ], "client_sync": true },
+                "aw:monster_level": { "type": "int", "default": 1, "range": [ 1, 4 ], "client_sync": true },
+                "aw:start_spawn": { "type": "bool", "default": false, "client_sync": false }
+            },
+            "scripts": {
+                "animate": [
+                    "countdown",
+                    { "spawn": "query.property('aw:start_spawn')" }
+                ]
+            },
+            "animations": {
+                "countdown": "animation.spawner.countdown",
+                "spawn": "controller.animation.spawner.spawn_monsters"
+            }
+        },
+        "components": {
+            "minecraft:physics": { "has_collision": false, "has_gravity": false },
+            "minecraft:collision_box": { "height": 0, "width": 0 },
+            "minecraft:type_family": { "family": [ "inanimate", "spawner" ] },
+            "minecraft:knockback_resistance": { "value": 1 },
+            "minecraft:persistent": { },
+            "minecraft:health": { "value": 1, "max": 1 },
+            "minecraft:nameable": { },
+            "minecraft:damage_sensor": { "triggers": [ { "cause": "all", "deals_damage": false } ] }
+        },
+        "events": {
+            "aw:spawn_zombie_1": { "set_property": { "aw:monster_type": 1, "aw:monster_level": 1 } },
+            "aw:spawn_zombie_2": { "set_property": { "aw:monster_type": 1, "aw:monster_level": 2 } },
+            "aw:spawn_zombie_3": { "set_property": { "aw:monster_type": 1, "aw:monster_level": 3 } },
+            "aw:spawn_zombie_4": { "set_property": { "aw:monster_type": 1, "aw:monster_level": 4 } },
+
+            "aw:spawn_zombie_shield": { "set_property": { "aw:monster_type": 26, "aw:monster_level": 1 } },
+
+            "aw:spawn_zombie_baby_1": { "set_property": { "aw:monster_type": 2, "aw:monster_level": 1 } },
+            "aw:spawn_zombie_baby_2": { "set_property": { "aw:monster_type": 2, "aw:monster_level": 2 } },
+            "aw:spawn_zombie_baby_3": { "set_property": { "aw:monster_type": 2, "aw:monster_level": 3 } },
+            "aw:spawn_zombie_baby_4": { "set_property": { "aw:monster_type": 2, "aw:monster_level": 4 } },
+
+            "aw:spawn_husk": { "set_property": { "aw:monster_type": 3, "aw:monster_level": 1 } },
+            "aw:spawn_husk_baby": { "set_property": { "aw:monster_type": 4, "aw:monster_level": 1 } },
+
+            "aw:spawn_zombified_piglin_1": { "set_property": { "aw:monster_type": 5, "aw:monster_level": 1 } },
+            "aw:spawn_zombified_piglin_2": { "set_property": { "aw:monster_type": 5, "aw:monster_level": 2 } },
+            "aw:spawn_zombified_piglin_3": { "set_property": { "aw:monster_type": 5, "aw:monster_level": 3 } },
+            "aw:spawn_zombified_piglin_4": { "set_property": { "aw:monster_type": 5, "aw:monster_level": 4 } },
+
+            "aw:spawn_drowned_1": { "set_property": { "aw:monster_type": 6, "aw:monster_level": 1 } },
+            "aw:spawn_drowned_2": { "set_property": { "aw:monster_type": 6, "aw:monster_level": 2 } },
+            "aw:spawn_drowned_3": { "set_property": { "aw:monster_type": 6, "aw:monster_level": 3 } },
+
+            "aw:spawn_drowned_trident": { "set_property": { "aw:monster_type": 7, "aw:monster_level": 4 } },
+
+            "aw:spawn_skeleton_1": { "set_property": { "aw:monster_type": 8, "aw:monster_level": 1 } },
+            "aw:spawn_skeleton_2": { "set_property": { "aw:monster_type": 8, "aw:monster_level": 2 } },
+            "aw:spawn_skeleton_3": { "set_property": { "aw:monster_type": 8, "aw:monster_level": 3 } },
+            "aw:spawn_skeleton_4": { "set_property": { "aw:monster_type": 8, "aw:monster_level": 4 } },
+            
+            "aw:spawn_skeleton_sword_1": { "set_property": { "aw:monster_type": 9, "aw:monster_level": 1 } },
+            "aw:spawn_skeleton_sword_2": { "set_property": { "aw:monster_type": 9, "aw:monster_level": 2 } },
+
+            "aw:spawn_stray_1": { "set_property": { "aw:monster_type": 10, "aw:monster_level": 1 } },
+            "aw:spawn_stray_2": { "set_property": { "aw:monster_type": 10, "aw:monster_level": 2 } },
+            "aw:spawn_stray_3": { "set_property": { "aw:monster_type": 10, "aw:monster_level": 3 } },
+            "aw:spawn_stray_4": { "set_property": { "aw:monster_type": 10, "aw:monster_level": 4 } },
+
+            "aw:spawn_spider_1": { "set_property": { "aw:monster_type": 11, "aw:monster_level": 1 } },
+            "aw:spawn_spider_2": { "set_property": { "aw:monster_type": 11, "aw:monster_level": 2 } },
+            "aw:spawn_spider_3": { "set_property": { "aw:monster_type": 11, "aw:monster_level": 3 } },
+            "aw:spawn_spider_4": { "set_property": { "aw:monster_type": 11, "aw:monster_level": 4 } },
+
+            "aw:spawn_cave_spider_1": { "set_property": { "aw:monster_type": 12, "aw:monster_level": 1 } },
+            "aw:spawn_cave_spider_2": { "set_property": { "aw:monster_type": 12, "aw:monster_level": 2 } },
+            "aw:spawn_cave_spider_3": { "set_property": { "aw:monster_type": 12, "aw:monster_level": 3 } },
+            "aw:spawn_cave_spider_4": { "set_property": { "aw:monster_type": 12, "aw:monster_level": 4 } },
+
+            "aw:spawn_creeper_energy": { "set_property": { "aw:monster_type": 13, "aw:monster_level": 1 } },
+            "aw:spawn_creeper_hard": { "set_property": { "aw:monster_type": 13, "aw:monster_level": 2 } },
+            "aw:spawn_creeper_normal": { "set_property": { "aw:monster_type": 13, "aw:monster_level": 3 } },
+            "aw:spawn_creeper_speed": { "set_property": { "aw:monster_type": 13, "aw:monster_level": 4 } },
+
+            "aw:spawn_guardian": { "set_property": { "aw:monster_type": 14, "aw:monster_level": 1 } },
+
+            "aw:spawn_piglin_1": { "set_property": { "aw:monster_type": 15, "aw:monster_level": 1 } },
+            "aw:spawn_piglin_2": { "set_property": { "aw:monster_type": 15, "aw:monster_level": 2 } },
+            "aw:spawn_piglin_3": { "set_property": { "aw:monster_type": 15, "aw:monster_level": 3 } },
+            "aw:spawn_piglin_4": { "set_property": { "aw:monster_type": 15, "aw:monster_level": 4 } },
+
+            "aw:spawn_piglin_brute": { "set_property": { "aw:monster_type": 16, "aw:monster_level": 1 } },
+
+            "aw:spawn_hoglin_1": { "set_property": { "aw:monster_type": 17, "aw:monster_level": 1 } },
+            "aw:spawn_hoglin_2": { "set_property": { "aw:monster_type": 17, "aw:monster_level": 2 } },
+            "aw:spawn_hoglin_3": { "set_property": { "aw:monster_type": 17, "aw:monster_level": 3 } },
+            "aw:spawn_hoglin_4": { "set_property": { "aw:monster_type": 17, "aw:monster_level": 4 } },
+
+            "aw:spawn_silverfish_1": { "set_property": { "aw:monster_type": 18, "aw:monster_level": 1 } },
+            "aw:spawn_silverfish_2": { "set_property": { "aw:monster_type": 18, "aw:monster_level": 2 } },
+            "aw:spawn_silverfish_3": { "set_property": { "aw:monster_type": 18, "aw:monster_level": 3 } },
+            "aw:spawn_silverfish_4": { "set_property": { "aw:monster_type": 18, "aw:monster_level": 4 } },
+
+            "aw:spawn_magma_cube_small": { "set_property": { "aw:monster_type": 19, "aw:monster_level": 1 } },
+            "aw:spawn_magma_cube_middle": { "set_property": { "aw:monster_type": 19, "aw:monster_level": 2 } },
+            "aw:spawn_magma_cube_large": { "set_property": { "aw:monster_type": 19, "aw:monster_level": 3 } },
+
+            "aw:spawn_ghast": { "set_property": { "aw:monster_type": 20, "aw:monster_level": 1 } },
+            "aw:spawn_witch": { "set_property": { "aw:monster_type": 21, "aw:monster_level": 1 } },
+            "aw:spawn_skeleton_king": { "set_property": { "aw:monster_type": 22, "aw:monster_level": 1 } },
+            "aw:spawn_elder_guardian": { "set_property": { "aw:monster_type": 23, "aw:monster_level": 1 } },
+            "aw:spawn_blaze_king": { "set_property": { "aw:monster_type": 24, "aw:monster_level": 1 } },
+            "aw:spawn_evoker": { "set_property": { "aw:monster_type": 25, "aw:monster_level": 1 } },
+
+            "aw:remove_immediately": { "add": { "component_groups": [ "remove_immediately" ] } },
+            "aw:start_spawn": { "set_property": { "aw:start_spawn": true } }
+        },
+        "component_groups": {
+            "remove_immediately": {
+                "minecraft:instant_despawn": { }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.billboard.scale_down_picture": {
+			"loop": true,
+			"animation_length": 5.25,
+			"bones": {
+				"painting": {
+					"position": [33.5, -8, 1],
+					"scale": [0.01688, 0.01688, 1]
+				}
+			}
+		}
+	}
+}

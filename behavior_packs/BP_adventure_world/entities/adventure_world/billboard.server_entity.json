@@ -1,0 +1,29 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "aw:billboard",
+            "is_experimental": false,
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "components": {
+            "minecraft:physics": { },
+            "minecraft:collision_box": { "height": 0, "width": 0 },
+            "minecraft:type_family": { "family": [ "inanimate", "billboard" ] },
+            "minecraft:knockback_resistance": { "value": 1 },
+            "minecraft:persistent": { },
+            "minecraft:nameable": { },
+            "minecraft:damage_sensor": { "triggers": [ { "cause": "all", "deals_damage": false } ] },
+            "minecraft:scale": { "value": 1.5 }
+        },
+        "events": {
+            "aw:remove_immediately": { "add": { "component_groups": [ "remove_immediately" ] } }
+        },
+        "component_groups": {
+            "remove_immediately": {
+                "minecraft:instant_despawn": { }
+            }
+        }
+    }
+}

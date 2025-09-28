@@ -1,0 +1,70 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "aw:spawner",
+            "render_controllers": [
+                "controller.render.spawner",
+                { "controller.render.spawner_stray_armor": "query.property('aw:monster_type')==10" }
+            ],
+            "materials": {
+                "default": "entity_alphatest",
+                "magma_cube": "magma_cube",
+                "blaze": "blaze_body"
+            },
+            "geometry": {
+                "default": "geometry.spawner_zombie",
+                "spawner_zombie": "geometry.spawner_zombie",
+                "spawner_drowned": "geometry.spawner_drowned",
+                "spawner_skeleton": "geometry.spawner_skeleton",
+                "spawner_spider": "geometry.spawner_spider",
+                "spawner_creeper": "geometry.spawner_creeper",
+                "spawner_guardian": "geometry.spawner_guardian",
+                "spawner_piglin": "geometry.spawner_piglin",
+                "spawner_hoglin": "geometry.spawner_hoglin",
+                "spawner_silverfish": "geometry.spawner_silverfish",
+                "spawner_magma_cube": "geometry.spawner_magma_cube",
+                "spawner_ghast": "geometry.spawner_ghast",
+                "spawner_witch": "geometry.spawner_witch",
+                "spawner_blaze": "geometry.spawner_blaze",
+                "spawner_evoker": "geometry.spawner_evoker"
+            },
+            "textures": {
+                "default": "textures/entity/zombie/zombie",
+                "zombie": "textures/entity/zombie/zombie",
+                "husk": "textures/entity/zombie/husk",
+                "zombified_piglin": "textures/entity/piglin/zombie_piglin",
+                "drowned": "textures/entity/zombie/drowned",
+                "skeleton": "textures/entity/skeleton/skeleton",
+                "stray": "textures/entity/skeleton/stray",
+                "spawner_stray_armor": "textures/entity/skeleton/stray_overlay",
+                "spider": "textures/entity/spider/spider",
+                "cave_spider": "textures/entity/spider/cave_spider",
+                "creeper": "textures/entity/creeper/creeper",
+                "guardian": "textures/entity/guardian",
+                "piglin": "textures/entity/piglin/piglin",
+                "piglin_brute": "textures/entity/piglin/piglin_brute",
+                "hoglin": "textures/entity/hoglin/hoglin",
+                "magma_cube": "textures/entity/slime/magmacube",
+                "silverfish": "textures/entity/silverfish",
+                "ghast": "textures/entity/ghast/ghast",
+                "witch": "textures/entity/witch",
+                "elder_guardian": "textures/entity/guardian_elder",
+                "blaze": "textures/entity/blaze",
+                "evoker": "textures/entity/illager/evoker"
+            },
+
+            "animations": {
+                "spin": "animation.spawner.spin"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.type = query.property('aw:monster_type');"
+                ],
+                "animate": [
+                    "spin"
+                ]
+            }
+        }
+    }
+}

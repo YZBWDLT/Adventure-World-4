@@ -1,0 +1,15 @@
+# ===== 完成关卡 =====
+# 1-1
+
+# --- 调用通用函数 ---
+execute positioned -117 2 16 run function aw/lib/events/levels/complete_level
+
+# --- 获得新物品 ---
+
+## 清除玩家的铁靴子以重装备
+replaceitem entity @a slot.armor.feet 0 aw:iron_boots 1 0 {"item_lock":{"mode":"lock_in_inventory"}}
+function aw/system/items
+tellraw @a {"rawtext":[{"text":"§l§a1-1已完成！§r\n§f你已获得 §a[治疗药水] §b[铁靴子] §f！\n§7皮革靴子已自动卸下。"}]}
+
+# --- 生成引导点 ---
+summon aw:destination -126 6 52

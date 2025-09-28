@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.door.open": {
+			"states": {
+				"default": {
+					"animations": [ "close" ],
+					"transitions": [
+						{ "open": "v.is_open" }
+					]
+				},
+				"open": {
+					"animations": [ "open" ],
+					"transitions": [
+						{ "default": "!v.is_open" }
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+## Below are key text translations of exclusive content of Addon. By YZBWDLT. 
+
+### Items
+item.aw:normal_sword=Normal Sword
+item.aw:steel_sword=Steel Sword
+item.aw:wild_sword=Wild Sword
+item.aw:diamond_helmet=Diamond Helmet
+item.aw:diamond_chestplate=Diamond Chestplate
+item.aw:diamond_leggings=Diamond Leggings
+item.aw:diamond_boots=Diamond Boots
+item.aw:iron_helmet=Iron Helmet
+item.aw:iron_chestplate=Iron Chestplate
+item.aw:iron_leggings=Iron Leggings
+item.aw:iron_boots=Iron Boots
+item.aw:wind_pearl=Wind Pearl
+item.aw:quiver=Quiver
+item.aw:acoustic_stone_crystal=Acoustic Stone Crystal
+item.aw:quit=Quit Trial
+item.aw:spectate=Spectate
+item.aw:potion_health=Health Potion
+item.aw:potion_growth=Growth Potion
+item.aw:potion_thrill=Thrill Potion
+item.aw:potion_turtle=Turtle Potion
+item.aw:potion_rebirth=Rebirth Potion
+item.aw:potion_purification=Purification Potion
+item.aw:potion_hibernation=Hibernation Potion
+item.aw:change_to_creative=Change To Creative Mode
+item.aw:change_to_survival=Change To Survival Mode
+item.aw:change_to_adventure=Change To Adventure Mode
+item.aw:change_to_spectator=Change To Spectator Mode
+
+item.aw:toggle_wave=Toggle Wave
+item.aw:kill_monsters=Kill Monsters
+
+### Blocks
+tile.aw:carved_stone_bricks.name=Carved Stone Bricks
+tile.aw:carved_cracked_stone_bricks.name=Carved Cracked Stone Bricks
+tile.aw:carved_mossy_stone_bricks.name=Carved Mossy Stone Bricks
+tile.aw:red_chiseled_nether_bricks.name=Red Chiseled Nether Bricks
+tile.aw:red_cracked_nether_bricks.name=Red Cracked Nether Bricks
+tile.aw:evocation_stone.name=Evocation Stone
+
+### Entities
+entity.aw:wind_pearl.name=Wind Pearl
+entity.aw:npc.name=NPC
+entity.aw:text_display.name=Floating Text
+entity.aw:skeleton_king.name=Skeleton King
+entity.aw:blaze_king.name=Blaze King
+entity.aw:marker.name=Marker
+entity.aw:spawner.name=Monster Spawner
+entity.evoker_boss.name=§l§cEVOKER BOSS
+entity.aw:billboard.name=Billboard
+entity.aw:door.name=Door
+entity.aw:destination.name=Destination
+
+### Spawn Eggs
+item.spawn_egg.entity.aw:npc.name=Spawn NPC
+item.spawn_egg.entity.aw:text_display.name=Spawn Floating Text
+item.spawn_egg.entity.aw:skeleton_king.name=Spawn Skeleton King
+item.spawn_egg.entity.aw:blaze_king.name=Spawn Blaze King
+item.spawn_egg.entity.aw:billboard.name=Billboard Spawn Egg
+
+### Text Translations
+action.interact.chat=Chat
+action.interact.quit=Quit
+action.interact.spectate=Be An Spectator

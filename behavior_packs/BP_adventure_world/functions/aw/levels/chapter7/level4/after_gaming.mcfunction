@@ -1,0 +1,31 @@
+# ===== 关卡游戏后时间线 =====
+# 7-4
+
+# --- 岩浆下落 ---
+    # active.timeline == 1，时间流逝
+    execute if score timeline active matches 1 if score timeline time matches 40 run fill -224 -27 111 -244 -27 85 air replace lava
+    execute if score timeline active matches 1 if score timeline time matches 80 run fill -224 -28 111 -244 -28 85 air replace lava
+    execute if score timeline active matches 1 if score timeline time matches 120 run fill -224 -29 111 -244 -29 85 air replace lava
+    ## [160] 进入检查状态
+    execute if score timeline active matches 1 if score timeline time matches 160.. run scoreboard players set timeline active 2
+    execute if score timeline active matches 1 if score timeline time matches 160.. run function aw/lib/modify_data/timeline/disable_time_lapse
+
+# --- 等待阶段 ---
+    # active.timeline == 2
+
+    ## 传声石结晶剧情
+    execute if score timeline active matches 2 if score timeline time matches 1 run tellraw @a {"rawtext":[{"text":"* §7§kabcdefghijklmnopqrstuvwxyz"}]}
+    execute if score timeline active matches 2 if score timeline time matches 80.. run function aw/lib/modify_data/timeline/disable_time_lapse
+
+    ## 检查玩家进入坑中 | 当玩家暂停后，阻止检查
+    execute if score timeline active matches 2 positioned -234 -63 98 positioned ~-1.2~-1~-1.2 as @a[dx=1.4,dy=2,dz=1.4,scores={deathState=0,spectator=!1}] at @s if score pausing data matches 0 run function aw/levels/chapter7/level4/events/player_in_hole
+
+# --- 入坑后 ---
+    # active.timeline == 3，时间流逝
+
+    ## [120] 传送玩家
+    execute if score timeline active matches 3 if score timeline time matches 120 run tp @a -225 15 44
+
+    ## [180] 跳转到 7-5
+    execute if score timeline active matches 3 if score timeline time matches 180.. run function aw/lib/events/stop_dialogue_keep
+    execute if score timeline active matches 3 if score timeline time matches 180.. run function aw/levels/chapter7/level5/start

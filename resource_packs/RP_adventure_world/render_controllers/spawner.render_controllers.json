@@ -1,0 +1,86 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.spawner": {
+            "materials": [
+                {
+                    "*": "v.type == 19 ? material.magma_cube : ( v.type == 24 ? material.blaze : material.default )"
+                }
+            ],
+            "geometry": "array.geo[v.type]",
+            "textures": [
+                "array.tex[v.type]"
+            ],
+            "arrays": {
+                "geometries": {
+                    "array.geo": [
+                        "geometry.default",
+                        "geometry.spawner_zombie",
+                        "geometry.spawner_zombie",
+                        "geometry.spawner_zombie",
+                        "geometry.spawner_zombie",
+                        "geometry.spawner_piglin",
+                        "geometry.spawner_drowned",
+                        "geometry.spawner_drowned",
+                        "geometry.spawner_skeleton",
+                        "geometry.spawner_skeleton",
+                        "geometry.spawner_skeleton",
+                        "geometry.spawner_spider",
+                        "geometry.spawner_spider",
+                        "geometry.spawner_creeper",
+                        "geometry.spawner_guardian",
+                        "geometry.spawner_piglin",
+                        "geometry.spawner_piglin",
+                        "geometry.spawner_hoglin",
+                        "geometry.spawner_silverfish",
+                        "geometry.spawner_magma_cube",
+                        "geometry.spawner_ghast",
+                        "geometry.spawner_witch",
+                        "geometry.spawner_skeleton",
+                        "geometry.spawner_guardian",
+                        "geometry.spawner_blaze",
+                        "geometry.spawner_evoker"
+                    ]
+                },
+                "textures": {
+                    "array.tex": [
+                        "texture.default",
+                        "texture.zombie",
+                        "texture.zombie",
+                        "texture.husk",
+                        "texture.husk",
+                        "texture.zombified_piglin",
+                        "texture.drowned",
+                        "texture.drowned",
+                        "texture.skeleton",
+                        "texture.skeleton",
+                        "texture.stray",
+                        "texture.spider",
+                        "texture.cave_spider",
+                        "texture.creeper",
+                        "texture.guardian",
+                        "texture.piglin",
+                        "texture.piglin_brute",
+                        "texture.hoglin",
+                        "texture.silverfish",
+                        "texture.magma_cube",
+                        "texture.ghast",
+                        "texture.witch",
+                        "texture.skeleton",
+                        "texture.elder_guardian",
+                        "texture.blaze",
+                        "texture.evoker"
+                    ]
+                }
+            },
+            "color": {
+                "a": "1"
+            }
+        },
+        "controller.render.spawner_stray_armor": {
+            "materials": [ { "*": "material.default" } ],
+            "geometry": "geometry.spawner_zombie",
+            "textures": [ "texture.spawner_stray_armor" ]
+        }
+    }
+}

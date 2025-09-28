@@ -1,0 +1,63 @@
+# ===== 开始关卡 =====
+# 10-2 | 进行最终结算
+
+# 设置关卡 ID
+    scoreboard players set level data 2
+
+# 设置为游戏状态
+    scoreboard players set levelCompleted data 0
+
+# 生成 NPC
+    execute if score storyMode settings matches 1 run function aw/levels/end/stage1/events/spawn_npc
+    function aw/levels/end/stage2/events/spawn_authors
+
+# 生成公告板
+    summon aw:billboard -20 1 -38 270 0
+    execute as @e[type=aw:billboard,rym=-92,ry=-88] at @s positioned ~~~-2 run fill ~~~~~3~4 barrier
+
+# 林乐家相关
+    ## 楼下：成就按钮
+        setblock -25 2 -45 birch_button ["facing_direction"=2,"button_pressed_bit"=false]
+        setblock -29 2 -45 birch_button ["facing_direction"=2,"button_pressed_bit"=false]
+    ## 楼下：统计按钮
+        setblock -26 2 -51 birch_button ["facing_direction"=1,"button_pressed_bit"=false]
+    ## 楼下：评分细则按钮
+        setblock -28 2 -51 birch_button ["facing_direction"=1,"button_pressed_bit"=false]
+    ## 楼上：制作人员名单按钮
+        setblock -25 7 -51 birch_button ["facing_direction"=1,"button_pressed_bit"=false]
+    ## 楼下：米云溪的翻译手稿
+        structure load aw:lecture_with_book -27 1 -45
+
+# 开放商店（因为此时有可能底下因为开发者模式的问题还埋着边界方块）
+    fill -21 0 37 -23 0 37 air
+
+# 生成悬浮文本
+    function aw/levels/end/stage2/events/show_author_group
+    function aw/levels/end/stage2/events/on_exit/home
+    function aw/levels/end/stage2/events/on_exit/shop
+
+# 移除迷雾
+    fog @a remove gameFog
+
+# 设置玩家重生点到林乐家
+    spawnpoint @a -27 7 -48
+
+# 临时变量设置
+    ## 是否有玩家在林乐家
+        scoreboard players set temp.hasPlayerInHome data 0
+    ## 是否有玩家在林乐家楼上
+        scoreboard players set temp.hasPlayerInHomeUp data 0
+    ## 是否有玩家在林乐家楼下
+        scoreboard players set temp.hasPlayerInHomeDown data 0
+    ## 是否有玩家在张宇商店
+        scoreboard players set temp.hasPlayerInShop data 0
+    ## 当前显示的制作人页数
+        scoreboard players set temp.creditPage data 0
+    ## 当前显示的成就页数
+        scoreboard players set temp.achievementPage data 1
+    ## 当前显示的统计页数
+        scoreboard players set temp.statPage data 1
+    ## 作者 NPC 交互使用的条件
+        scoreboard players set temp.condition data 1
+    ## 当前在发射的烟花
+        scoreboard players set temp.currentDispenser data 1
