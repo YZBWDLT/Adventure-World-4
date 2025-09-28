@@ -7,7 +7,7 @@
             "is_spawnable": true,
             "is_summonable": true,
             "properties": {
-                "aw:skin": { "type": "int", "range": [ 0, 25 ], "default": 0, "client_sync": true },
+                "aw:skin": { "type": "int", "range": [ 0, 24 ], "default": 0, "client_sync": true },
                 "aw:geometry": { "type": "enum", "values": [ "default", "slim" ], "default": "default", "client_sync": true },
                 
                 "aw:state": { "type": "enum", "values": [ "stand", "sit", "lie", "sit_raising_head", "sleep" ], "default": "stand", "client_sync": true },
@@ -69,7 +69,6 @@
             "aw:author_neptune_exe1591": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 22, "aw:geometry": "default" } },
             "aw:author_commandblock228": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 23, "aw:geometry": "default" } },
             "aw:author_xiaomluoch": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 24, "aw:geometry": "slim" } },
-            "aw:author_wang9800": { "add": { "component_groups": [ "should_see_player" ] }, "set_property": { "aw:is_author": true, "aw:skin": 25, "aw:geometry": "default" } },
 
             "aw:state_stand": { "set_property": { "aw:state": "stand" } },
             "aw:state_sit": { "set_property": { "aw:state": "sit" } },

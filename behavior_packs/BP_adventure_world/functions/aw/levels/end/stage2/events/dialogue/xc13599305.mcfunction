@@ -16,13 +16,13 @@ execute if score hasCheat record matches 1 run scoreboard players set temp.condi
 # --- 剧情 ---
 
 # 留言一
-execute if score temp.condition data matches 1 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7期待你通关最高难度的那一刻。"}]}
+execute if score temp.condition data matches 1 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7真厉害，不愧是你。相信更高的难度对你来说也是轻轻松松吧？"}]}
 # 留言二
-execute if score temp.condition data matches 2 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7要不要挑战一下一命通关难度4呢？"}]}
+execute if score temp.condition data matches 2 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7令人羡慕的PVE技术......要不要挑战一下一命通关难度4呢？"}]}
 # 留言三
 execute if score temp.condition data matches 3 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7能坚持玩完已经很不错了呢，继续加油吧！"}]}
 # 留言四
-execute if score temp.condition data matches 4 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7你真的做到了......（震惊"}]}
+execute if score temp.condition data matches 4 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7恭喜完成本地图的最难挑战之一！像你这样厉害的人，肯定没有PVE地图可以难倒你吧~（羡慕）"}]}
 # 留言五
 execute if score temp.condition data matches 5 run tellraw @a {"rawtext":[{"translate":"* §a星辰（xc13599305）： §7看来还得多练习一下呢~"}]}
 

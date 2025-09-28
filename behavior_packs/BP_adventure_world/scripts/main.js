@@ -119,7 +119,7 @@ world.afterEvents.entitySpawn.subscribe(event => {
     }
 });
 world.afterEvents.entityHealthChanged.subscribe(event => {
-    /** 刚生成的实体 */
+    /** 血量更改的实体 */
     const entity = event.entity;
     // 若实体在允许的实体列表中，则打印实体血量到health记分板上
     if (entityTypes.includes(entity.typeId)) {
@@ -136,9 +136,4 @@ world.afterEvents.entityHurt.subscribe(event => {
     if (event.hurtEntity.typeId === "minecraft:player") {
         event.hurtEntity.runCommand("function aw/entities/player/hurt")
     }
-})
-
-// world.afterEvents.entityHitEntity.subscribe(event=>{
-//     world.sendMessage(`hitEntity = ${event.hitEntity.typeId}`);
-//     world.sendMessage(`damagingEntity = ${event.damagingEntity.typeId}`);
-// })
+});

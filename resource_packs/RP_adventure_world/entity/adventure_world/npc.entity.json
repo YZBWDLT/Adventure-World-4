@@ -1,0 +1,98 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "aw:npc",
+            "materials": { "default": "entity_alphatest" },
+            "textures": {
+                "npc_0": "textures/entity/npc/0",
+                "npc_1": "textures/entity/npc/1",
+                "npc_2": "textures/entity/npc/2",
+                "npc_3": "textures/entity/npc/3",
+                "miyunxi": "textures/entity/npc/miyunxi",
+                "linan": "textures/entity/npc/linan",
+                "zhangyu": "textures/entity/npc/zhangyu",
+                "tianying": "textures/entity/npc/tianying",
+                
+                "yzbwdlt": "textures/entity/npc_author/yzbwdlt",
+                "andy7343": "textures/entity/npc_author/andy7343",
+                "greeleaf": "textures/entity/npc_author/greeleaf",
+                "pigeonki": "textures/entity/npc_author/pigeonki",
+                "kriswenyu": "textures/entity/npc_author/kriswenyu",
+                "pumpkinjui": "textures/entity/npc_author/pumpkinjui",
+                "xiaoshu512": "textures/entity/npc_author/xiaoshu512",
+                "tuffy2020china": "textures/entity/npc_author/tuffy2020china",
+                "animalchalk2526": "textures/entity/npc_author/animalchalk2526",
+                "kianakasnala947": "textures/entity/npc_author/kianakasnala947",
+                "xc13599305": "textures/entity/npc_author/xc13599305",
+                "hfpa0117": "textures/entity/npc_author/hfpa0117",
+                "ender5207541": "textures/entity/npc_author/ender5207541",
+                "rustyabyss29193": "textures/entity/npc_author/rustyabyss29193",
+                "enderlife5409": "textures/entity/npc_author/enderlife5409",
+                "yiyishi54188": "textures/entity/npc_author/yiyishi54188",
+                "freeorange114": "textures/entity/npc_author/freeorange114",
+                "kuanpan9527": "textures/entity/npc_author/kuanpan9527",
+                "longlongxiaotao": "textures/entity/npc_author/longlongxiaotao",
+                "unhandyshark856": "textures/entity/npc_author/unhandyshark856",
+                "tck1122": "textures/entity/npc_author/tck1122",
+                "lanos212": "textures/entity/npc_author/lanos212",
+                "neptuneexe1591": "textures/entity/npc_author/neptuneexe1591",
+                "commandblock228": "textures/entity/npc_author/commandblock228",
+                "xiaomluoch": "textures/entity/npc_author/xiaomluoch"
+            },
+            "geometry": {
+                "default": "geometry.aw_npc.default",
+                "slim": "geometry.aw_npc.slim"
+            },
+            "render_controllers": [ "controller.render.aw_npc" ],
+            "spawn_egg": { "base_color": "#e8b211", "overlay_color": "#47f118" },
+            "scripts": {
+                "scale": "0.9375",
+                "pre_animation": [
+                    "variable.geometry = query.property('aw:geometry') == 'slim' ? 1 : 0;",
+                    "variable.skin = query.property('aw:skin');",
+                    
+                    "variable.state = query.property('aw:state');",
+                    "variable.is_sitting = variable.state == 'sit' || variable.state == 'sit_raising_head';",
+                    "variable.is_walking = query.is_moving;",
+                    "variable.anim = query.property('aw:animation');",
+                    "variable.speak_mode = query.property('aw:speak_mode');"
+                ],
+                "animate": [
+                    "state_controller",
+                    "animation_controller"
+                ]
+            },
+            "animations": {
+                "state_controller": "controller.animation.aw_npc.state",
+                "animation_controller": "controller.animation.aw_npc.animation",
+
+                "stand_basic": "animation.aw_npc.stand",
+                "stand_walk": "animation.aw_npc.stand.walk",
+                "sit_basic": "animation.aw_npc.sit",
+                "sit_raising_head": "animation.aw_npc.sit.raise_head",
+                "lie_basic": "animation.aw_npc.lie",
+                "sleep_basic": "animation.aw_npc.sleep",
+
+                "wave_hand_standing": "animation.aw_npc.stand.wave_hand",
+                "wave_hand_sitting": "animation.aw_npc.sit.wave_hand",
+                "speaking1": "animation.aw_npc.speaking1",
+                "speaking2": "animation.aw_npc.speaking2",
+                "speaking3": "animation.aw_npc.speaking3",
+                "speaking4": "animation.aw_npc.speaking4",
+                "applause": "animation.aw_npc.applause",
+                "place_block": "animation.aw_npc.place_block",
+                "look_around": "animation.aw_npc.look_around",
+                "nod": "animation.aw_npc.nod",
+                "shake_head": "animation.aw_npc.shake_head",
+                "bad_smile_standing": "animation.aw_npc.stand.bad_smile",
+                "bad_smile_sitting": "animation.aw_npc.sit.bad_smile",
+                "confuse": "animation.aw_npc.confuse",
+                "point": "animation.aw_npc.point",
+                "think": "animation.aw_npc.think"
+
+            },
+            "enable_attachables": true
+        }
+    }
+}

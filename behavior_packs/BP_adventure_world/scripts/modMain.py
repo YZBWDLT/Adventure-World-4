@@ -1,26 +1,32 @@
 # -*- coding: utf-8 -*-
+
 from mod.common.mod import Mod
 import mod.server.extraServerApi as serverApi
 import mod.client.extraClientApi as clientApi
+from config import *
 
-@Mod.Binding(name = "adventureWorld", version = "4.2.0")
-class AdventureWorldSwordTrial(object):
+
+@Mod.Binding(FolderName, Version)
+class Script_SAPI(object):
+
     def __init__(self):
         pass
 
     @Mod.InitServer()
-    def serverSubscribe(self):
-        serverApi.RegisterSystem("AdventureWorldSwordTrial", "AdventureWorld4Server", "scripts.AdventureWorld4ServerMain.AdventureWorld4Server")
-    
-    @Mod.DestroyServer()
-    def serverUnsubscribe(self):
-        pass
-    
+    def SAPI_Sample_ServerInit(self):
+        serverApi.RegisterSystem(NameSpace, "ModServer",
+                                 "%s.lib.Mod.Server.ModServer" % FolderName)
+        serverApi.RegisterSystem(NameSpace, "world",
+                                 "%s.lib.ModSAPI.SAPI_S.World" % FolderName)
+        serverApi.RegisterSystem(NameSpace, "system",
+                                 "%s.lib.ModSAPI.SAPI_S.System" % FolderName)
+        serverApi.RegisterSystem(NameSpace, "Base",
+                                 "%s.lib.ModSAPI.minecraft.SAPIS" % FolderName)
+
     @Mod.InitClient()
-    def clientSubscribe(self):
-        clientApi.RegisterSystem("AdventureWorldSwordTrial", "AdventureWorld4Client", "scripts.AdventureWorld4ClientMain.AdventureWorld4Client")
-    
-    @Mod.DestroyClient()
-    def clientUnsubscribe(self):
-        pass
+    def SAPI_Sample_ClientInit(self):
+        clientApi.RegisterSystem(NameSpace, "ModClient",
+                                 "%s.lib.Mod.Client.ModClient" % FolderName)
+        clientApi.RegisterSystem(NameSpace, "SAPI_C",
+                                 "%s.lib.ModSAPI.SAPI_C.SAPI_C" % FolderName)
 

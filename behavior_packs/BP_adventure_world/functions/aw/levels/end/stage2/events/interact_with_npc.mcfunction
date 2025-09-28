@@ -66,7 +66,5 @@
         execute if entity @s[has_property={aw:is_author=true,aw:skin=23}] run tellraw @a {"rawtext":[{"translate":"* §a命令块（CommandBlock228）： §7现在已经有两个巨作向我们说明了把字刻在石头上的重要性和有效性。"}]}
     ## XiaomLuoch
         execute if entity @s[has_property={aw:is_author=true,aw:skin=24}] run tellraw @a {"rawtext":[{"translate":"* §a残梦（XiaomLuoch）： §7作为手残党好羡慕大家的PVE实力awa，你也一定很厉害吧！"}]}
-    ## wang9800
-        execute if entity @s[has_property={aw:is_author=true,aw:skin=25}] run tellraw @a {"rawtext":[{"translate":"* §a王牌（wang9800）： §7§8§o该作者目前还未留言。若在正式发布前该作者仍未留言，则正式版将会移除。"}]}
     ## 对于只有一句话的测试员，直接进行说话动作
         execute if score timeline active matches !4.. run event entity @s[has_property={aw:is_author=true,aw:animation="none"}] aw:animation_speak

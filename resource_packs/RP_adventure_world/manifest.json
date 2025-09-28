@@ -1,0 +1,22 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "冒险小世界：剑之试炼 资源包",
+        "description": "一款专门为地图《冒险小世界：剑之试炼》打造的附加包，本包为资源包部分。",
+        "uuid": "a83d4abd-ec0d-4502-b286-c58f1735876a",
+        "min_engine_version": [ 1, 21, 0 ],
+        "version": [ 4, 2, 0 ]
+    },
+    "modules": [
+        {
+            "uuid": "14e34fb7-4689-491f-8602-6f64a3b5367f",
+            "version": [ 1, 0, 0 ],
+            "type": "resources"
+        }
+    ],
+    "metadata": {
+        "authors": [
+            "YZBWDLT", "狂野巴豆"
+        ]
+    }
+}
