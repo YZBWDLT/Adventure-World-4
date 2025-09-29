@@ -47,6 +47,9 @@ class SAPIS(ServerSystem):
         self.ListenForEvent("SAPI", "SAPI_C", "ActionFormResponse", self, self.responseActionForm)
         self.ListenForEvent("SAPI", "SAPI_C", "ModalFormResponse", self, self.responseModalForm)
 
+    def debug(self, data):
+        pass
+
     @staticmethod
     def Init(__data):
         global world, ActionFormData
