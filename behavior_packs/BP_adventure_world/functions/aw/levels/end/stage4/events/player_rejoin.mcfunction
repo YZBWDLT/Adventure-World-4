@@ -23,3 +23,4 @@ inputpermission set @s movement disabled
 hud @s hide all
 execute if score timeline time matches 120.. run hud @s reset hotbar
 execute if score timeline time matches 120.. run hud @s reset progress_bar
+execute if score timeline time matches 120.. run hud @s reset touch_controls

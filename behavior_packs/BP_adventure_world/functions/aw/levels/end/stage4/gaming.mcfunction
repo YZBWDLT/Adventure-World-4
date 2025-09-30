@@ -32,6 +32,7 @@
     execute if score timeline time matches 120 run function aw/levels/end/stage4/events/supply_items
     execute if score timeline time matches 120 run hud @a reset hotbar
     execute if score timeline time matches 120 run hud @a reset progress_bar
+    execute if score timeline time matches 120 run hud @a reset touch_controls
 
 # [420] 解禁玩家，触发关卡
     execute if score timeline time matches 420 run function aw/lib/events/stop_dialogue_keep
