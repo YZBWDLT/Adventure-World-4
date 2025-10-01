@@ -52,7 +52,7 @@ class Promise(Thenable):
         except Exception as e:
             reject(e)
 
-    def __resolve(promise, x, re, rej):
+    def __resolve(self, promise, x, re, rej):
         if promise == x:
             return rej(TypeError('Promise and x refer to the same object'))
 
@@ -64,46 +64,7 @@ class Promise(Thenable):
 
     def then(self, onFulfilled, onRejected):
         # type: (FunctionType, FunctionType) -> Promise
-        realFullfilled = lambda v: v if not callable(onFulfilled) else onFulfilled
-        realRejected = lambda r: r if not callable(onRejected) else onRejected
-
-        if self._state == Promise.PENDING:
-            self._onFulfilledCallbacks.append(realFullfilled)
-            self._onRejectedCallbacks.append(realRejected)
-
-        if self._state == Promise.FULFILLED:
-            promise2 = None
-            def executor(res, rej):
-                try:
-                    if not callable(onFulfilled):
-                        res(self._value)
-                    else:
-                        v = realFullfilled(self._value)
-                        Promise.__resolve(promise2, v, res, rej)
-
-                    res(self._value)
-                except Exception as e:
-                    rej(e)
-
-            promise2 = Promise(executor)
-            return promise2
-
-        if self._state == Promise.REJECTED:
-            promise2 = None
-            def executor(res, rej):
-                try:
-                    if not callable(onRejected):
-                        rej(self._reason)
-                    else:
-                        v = realRejected(self._value)
-                        Promise.__resolve(promise2, v, res, rej)
-
-                    res(self._value)
-                except Exception as e:
-                    rej(e)
-
-            promise2 = Promise(executor)
-            return promise2
+        pass
 
     def catch(self, onRejected):
         return self.then(empty_fn, onRejected)

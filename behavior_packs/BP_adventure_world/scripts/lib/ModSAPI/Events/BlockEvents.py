@@ -113,7 +113,6 @@ class PlayerBreakBlockBeforeEvent(BlockEvent):
         self.__dimension = Dimension(data['dimensionId'])
         self.__block = Block({"dimension": self.__dimension, "location": Vector3((data['x'], data['y'], data['z']))})
         self.__player = Player(data['playerId'])
-        self.__itemStack = createItemStack()
         self.__cancel = False
 
     def __str__(self):

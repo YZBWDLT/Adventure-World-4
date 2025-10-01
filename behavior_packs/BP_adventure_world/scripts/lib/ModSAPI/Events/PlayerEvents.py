@@ -184,7 +184,7 @@ class PlayerDimensionChangeAfterEvent(object):
         self.__fromDimension = Dimension(data['fromDimensionId'])
         self.__fromLocation = Vector3((data['fromX'], data['fromY'], data['fromZ']))
         self.__toDimension = Dimension(data['toDimensionId'])
-        y = SComp.CreateBlockInfo(serverApi.GetLevelId()).GetTopBlockHeight((data['toX'], data['toZ'])) or y
+        y = SComp.CreateBlockInfo(serverApi.GetLevelId()).GetTopBlockHeight((data['toX'], data['toZ'])) or self.__fromLocation.y
         self.__toLocation = Vector3((data['toX'], y, data['toZ']))
         self.__player = Player(data['playerId'])
 
